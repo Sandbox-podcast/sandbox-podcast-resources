@@ -1,0 +1,152 @@
+{
+  "category": "kinetic-type",
+  "duration_s": 17.9735,
+  "fps": 30,
+  "canvas": {
+    "w": 1920,
+    "h": 1080,
+    "aspect": "16:9"
+  },
+  "style": "Jingle de variété vif en collage typographique 2D inspiré du générique de référence fourni par Lou : lettres en cartons, aplats de couleur, contours dessinés et rebonds. Le cube en chambre d’essai signe la Bêta; rester abstrait, sans fausse interface ni affirmation ajoutée.",
+  "palette": ["#08090B", "#ED493F", "#F2CB3F", "#42BEC6", "#7164C8", "#F7F0DF"],
+  "font": "Georgia Bold",
+  "beats": [0, 54, 129, 210, 306, 390, 462, 539],
+  "sync_timing": {
+    "mainHit_s": 4.7,
+    "finale_start_s": 13,
+    "logo_reveal_start_s": 13,
+    "logo_reveal_end_s": 15.4,
+    "logo_hold_end_s": 17.9735
+  },
+  "export": "mp4",
+  "asset_needs": [],
+  "block": "caption-kinetic-slam",
+  "customize": {
+    "target_scene": "title-ignite",
+    "text": "LA BÊTA",
+    "emphasis_words": ["BÊTA"],
+    "font": "Georgia Bold",
+    "palette": ["#08090B", "#ED493F", "#F2CB3F", "#42BEC6", "#7164C8", "#F7F0DF"],
+    "accent": "BÊTA apparaît sur des cartons violets, jaunes et turquoise avec une petite rotation, puis se stabilise sur le hit.",
+    "timing": {
+      "entrance_start_s": 4.3,
+      "impact_s": 4.7,
+      "hold_through_s": 10.2
+    },
+    "layout": "Cartons de lettres centrés autour du cube suspendu; garder le cube au point focal et les bras comme cadres latéraux.",
+    "visual_motif": "La chambre géométrique s’ouvre comme une découpe de papier, le cube central s’allume et flotte légèrement; les cartes rebondissent en place avant le sceau final. Rester abstrait, sans statut, numéro ou interface fictive.",
+    "supporting_assets": {
+      "hero": {
+        "project_file": "assets/hero.png",
+        "source_file": "apps/site/public/slides/episode-001/assets/beta-hero.png",
+        "treatment": "Plein cadre avec parallax et poussée contrôlée; préserver la chambre, le cube central et les bras mécaniques."
+      },
+      "official_logo": {
+        "project_file": "assets/sandbox-logov2.png",
+        "source_file": "apps/site/public/slides/episode-001/assets/sandbox-logov2.png",
+        "treatment": "Logo entier, proportions et couleurs intactes; révélation par masque ou fondu seulement."
+      }
+    },
+    "audio_source": {
+      "project_file": "assets/music.mp3",
+      "source_file": "media/audio/suno/d996092c-e45b-4ab0-9f62-d43787b06952/la-beta.mp3",
+      "duration_s": 17.9735,
+      "handling": "Démarrer à 0 s et garder toute la piste jusqu’à sa fin; ne pas couper, boucler, accélérer, étirer ou remplacer. Caler ouverture de la chambre et impact du titre sur les attaques réelles."
+    },
+    "hand_author": [
+      {
+        "scene": "chamber-lock",
+        "treatment": "Faire ouvrir une découpe rectangulaire souple sur le visuel, puis verrouiller le cadre mécanique par un impact de couleur; pas de faux panneau de contrôle."
+      },
+      {
+        "scene": "cube-charge",
+        "treatment": "Faire monter progressivement la lumière du cube et lui donner une faible suspension verticale; conserver le dessin d’origine et limiter les reflets aux arêtes cyan."
+      },
+      {
+        "scene": "sandbox-reveal",
+        "treatment": "Refermer les formes vers un fond bleu nuit puis révéler le PNG assets/sandbox-logov2.png intact."
+      }
+    ],
+    "sign_off": {
+      "logo": "assets/sandbox-logov2.png",
+      "reveal_start_s": 13,
+      "reveal_end_s": 15.4,
+      "hold_until_s": 17.9735,
+      "lockup": "Logo seul; aucun slogan ou URL ajouté."
+    }
+  },
+  "content": {
+    "scenes": [
+      {
+        "id": "chamber-lock",
+        "start": 0,
+        "end": 1.8,
+        "text": "",
+        "emphasis_words": [],
+        "emotion": "accroche précise",
+        "motion": "Ouvrir sur la chambre du visuel assets/hero.png; un cadre lumineux se verrouille au premier accent tandis que le cube reste au centre.",
+        "beats": [0, 54]
+      },
+      {
+        "id": "cube-charge",
+        "start": 1.8,
+        "end": 4.3,
+        "text": "",
+        "emphasis_words": [],
+        "emotion": "anticipation",
+        "motion": "Le cube central gagne en lumière et flotte légèrement; les bras latéraux cadrent la montée sans se déplacer de façon mécanique excessive.",
+        "beats": [54, 129]
+      },
+      {
+        "id": "title-ignite",
+        "start": 4.3,
+        "end": 7,
+        "text": "LA BÊTA",
+        "emphasis_words": ["BÊTA"],
+        "emotion": "révélation",
+        "motion": "Faire apparaître les cartons de LA BÊTA à l’ouverture du cadre avec un rebond franc; le cube reste lisible au centre.",
+        "beats": [129, 210]
+      },
+      {
+        "id": "aperture-open",
+        "start": 7,
+        "end": 10.2,
+        "text": "LA BÊTA",
+        "emphasis_words": ["BÊTA"],
+        "emotion": "élan",
+        "motion": "Le cadre se sépare latéralement puis se stabilise autour du cube; tenir le titre devant une zone sombre et contrastée.",
+        "beats": [210, 306]
+      },
+      {
+        "id": "release",
+        "start": 10.2,
+        "end": 13,
+        "text": "LA BÊTA",
+        "emphasis_words": ["BÊTA"],
+        "emotion": "libération contrôlée",
+        "motion": "Le cube fait une courte avancée vers la caméra pendant que les bras reculent visuellement; le titre décroît avant l’entrée du logo.",
+        "beats": [306, 390]
+      },
+      {
+        "id": "sandbox-reveal",
+        "start": 13,
+        "end": 15.4,
+        "text": "",
+        "emphasis_words": [],
+        "emotion": "signature",
+        "motion": "Le cadre se referme en traits cyan sobres, puis révèle le logo Sandbox officiel, intact et sans texte ajouté.",
+        "beats": [390, 462]
+      },
+      {
+        "id": "end-hold",
+        "start": 15.4,
+        "end": 17.9735,
+        "text": "",
+        "emphasis_words": [],
+        "emotion": "résolution nette",
+        "motion": "Tenir le logo seul sur bleu nuit jusqu’à la fin exacte de la piste; coupe franche à sa fin.",
+        "beats": [462, 539]
+      }
+    ]
+  }
+}

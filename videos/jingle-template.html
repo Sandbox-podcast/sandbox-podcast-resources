@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Jingle Sandbox</title>
+    <link rel="stylesheet" href="../jingle-runtime.css" />
+    <script src="config.js"></script>
+    <script src="../jingle-runtime.js" defer></script>
+  </head>
+  <body>
+    <main id="stage">
+      <div class="image-frame"><img id="hero-image" alt="" /></div>
+      <div class="hero-wash"></div>
+      <div class="vignette"></div>
+      <div class="grid-wash"></div>
+      <div class="motif-layer" id="radar-motif">
+        <div class="radar-sweep"></div>
+        <svg viewBox="0 0 1920 1080" aria-hidden="true">
+          <g class="radar-lines">
+            <circle cx="960" cy="505" r="170" />
+            <circle cx="960" cy="505" r="315" />
+            <circle cx="960" cy="505" r="460" />
+            <path d="M500 505H1420M960 45V965M635 180l650 650M1285 180 635 830" />
+          </g>
+          <g class="radar-strong"><path d="M960 505 1328 257M960 505 680 844" /></g>
+          <g class="radar-target">
+            <circle cx="1260" cy="302" r="18" />
+            <circle cx="1260" cy="302" r="46" />
+            <path d="M1214 302h92M1260 256v92" />
+          </g>
+        </svg>
+      </div>
+      <div class="motif-layer" id="build-motif">
+        <div class="build-scaffold"></div>
+        <svg viewBox="0 0 1920 1080" aria-hidden="true">
+          <g class="build-lines">
+            <path
+              d="M494 765 960 495l466 270-466 268zM494 765V478l466-268 466 268v287M960 1033V495M494 478l466 277 466-277M705 620v274M1215 620v274M618 548v287M1302 548v287"
+            />
+            <path
+              d="m760 376 200-116 200 116-200 116zM760 376v206l200 116 200-116V376M960 492v206"
+            />
+          </g>
+          <g class="build-bold"><path d="m960 495 466 270M960 495V210M960 495 494 765" /></g>
+        </svg>
+      </div>
+      <div class="motif-layer" id="clash-motif">
+        <div class="clash-side-wash"></div>
+        <div class="clash-side-wash right"></div>
+        <div id="wave-form"></div>
+        <svg viewBox="0 0 1920 1080" aria-hidden="true">
+          <path class="clash-seam" d="M960 130v820" />
+          <path d="M930 515h30M960 515h30" stroke="rgba(244,247,250,.86)" stroke-width="4" />
+        </svg>
+      </div>
+      <div class="motif-layer" id="beta-motif">
+        <div class="beta-orbit"></div>
+        <div
+          class="beta-orbit"
+          style="top: 286px; left: 786px; width: 348px; height: 348px; border-style: dashed"
+        ></div>
+        <div class="beta-bracket tl"></div>
+        <div class="beta-bracket tr"></div>
+        <div class="beta-bracket bl"></div>
+        <div class="beta-bracket br"></div>
+        <svg viewBox="0 0 1920 1080" aria-hidden="true">
+          <g class="beta-lines">
+            <path d="M960 216v648M636 540h648M731 311l458 458M1189 311 731 769" />
+            <circle cx="960" cy="540" r="218" />
+            <circle cx="960" cy="540" r="268" stroke-dasharray="5 18" />
+          </g>
+          <g class="beta-bold">
+            <path
+              d="M960 452 1036 496v88l-76 44-76-44v-88zM960 452v88m76-44-76 44-76-44m76 132v-88"
+            />
+          </g>
+        </svg>
+      </div>
+      <div class="top-rail">
+        <div class="brand-mark">SANDBOX <span>·</span> PODCAST</div>
+        <div class="rail-rule"></div>
+        <div class="division-mark" id="division-mark">TECH · IA</div>
+      </div>
+      <div class="edge-frame"></div>
+      <section class="hero-title" id="hero-title" aria-label="Titre du jingle">
+        <div class="title-kicker">UNE SÉQUENCE SANDBOX</div>
+        <div class="title-lockup">
+          <span class="title-lead" id="title-lead">LE</span><span id="title-word"></span>
+        </div>
+        <div class="title-trail"></div>
+      </section>
+      <div class="bottom-scan"></div>
+      <div class="impact-flash"></div>
+      <section class="end-card" aria-label="Signature Sandbox">
+        <div class="final-title" id="final-title"></div>
+        <div class="final-rule"></div>
+        <div class="logo-mask"><img id="brand-logo" alt="Sandbox" /></div>
+      </section>
+    </main>
+  </body>
+</html>

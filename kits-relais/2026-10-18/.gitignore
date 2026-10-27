@@ -1,0 +1,8 @@
+production/.hyperframes/
+production/.thumbnails/
+production/node_modules/
+production/assets/source-*.mp4
+production/assets/body-*.mp4
+production/renders/
+production/__pycache__/
+*.tmp.mp4

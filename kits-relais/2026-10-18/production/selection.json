@@ -1,0 +1,70 @@
+{
+  "videos": [
+    {
+      "id": "e01-harnais",
+      "episode": 1,
+      "sourceVideoId": "GgSiPkADCz4",
+      "title": "Codex, Claude Code, OpenCode : que change le harnais ?",
+      "cover": ["Le modèle", "ne fait pas tout."],
+      "start": 2290,
+      "end": 2898,
+      "summary": "Une discussion sur les harnais de développement, leurs différences et la place de Sillage. Les objections des trois intervenants sont conservées.",
+      "chapters": [
+        [0, "La question du harnais"],
+        [139, "Changer de modèle et de fournisseur"],
+        [379, "Choisir selon son usage"]
+      ]
+    },
+    {
+      "id": "e01-jeux",
+      "episode": 1,
+      "sourceVideoId": "GgSiPkADCz4",
+      "title": "Vibe coding : pourquoi un jeu qui fonctionne n'est pas forcément amusant",
+      "cover": ["Ça fonctionne.", "Est-ce que c'est fun ?"],
+      "start": 4305.8,
+      "end": 4569,
+      "summary": "Créer un jeu avec l'IA, le tester et découvrir ce qui le rend amusant. Nicolas partage son expérience, puis le trio discute du plaisir de créer et de jouer.",
+      "chapters": [
+        [0, "Créer des jeux avec l'IA"],
+        [66, "Le plaisir de créer et celui de jouer"],
+        [144, "Tester son jeu"]
+      ]
+    },
+    {
+      "id": "e02-metiers",
+      "episode": 2,
+      "sourceVideoId": "7KVqydbGow0",
+      "title": "Artisans, restaurants, commerces : quelles tâches confier à l'IA ?",
+      "cover": ["Votre métier.", "Quelle tâche pour l'IA ?"],
+      "start": 2990.2,
+      "end": 3684.55,
+      "summary": "Des pistes pour la fidélisation, l'immobilier, les restaurants, les devis et les commerces. Il s'agit de cas d'usage discutés, pas d'une démonstration ni de gains mesurés. Informations, tarifs et documents produits restent à vérifier par les professionnels.",
+      "chapters": [
+        [0, "Partir des métiers du quotidien"],
+        [86, "Commerces et fidélisation"],
+        [171, "Immobilier"],
+        [289, "Restaurants"],
+        [407, "Artisans et devis"],
+        [464, "Aménagement et métiers créatifs"],
+        [559, "Boulangerie, pâtisserie et coiffure"]
+      ]
+    },
+    {
+      "id": "e02-tickets",
+      "episode": 2,
+      "sourceVideoId": "7KVqydbGow0",
+      "title": "Avec l'IA, faut-il encore lire les tickets ? Le débat dev et produit",
+      "cover": ["L'IA code.", "Qui lit le ticket ?"],
+      "start": 4848.2,
+      "end": 5617.6,
+      "summary": "Faut-il lire le ticket lorsque l'IA réalise le développement ? Le débat conserve les points de vue opposés, le rôle du contexte, les maquettes et les cas de bugs. Aucune position n'est présentée comme un consensus.",
+      "chapters": [
+        [0, "La question et les premières réserves"],
+        [166, "Fonctionnel et implémentation"],
+        [277, "Le contexte manque parfois au ticket"],
+        [488, "Une maquette peut-elle remplacer le ticket ?"],
+        [641, "Caractériser un bug reste un travail"]
+      ]
+    }
+  ]
+}

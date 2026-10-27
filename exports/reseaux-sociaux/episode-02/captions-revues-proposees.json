@@ -1,0 +1,726 @@
+{
+  "notice": "Propositions de textes uniquement. Ce fichier ne modifie ni les publications natives ni leurs statuts programmés.",
+  "source": "publication-queue.json; 30 clips, 4 plateformes",
+  "rows": [
+    {
+      "clip_id": "E02-007",
+      "platform": "youtube",
+      "title": "Restaurant : l’IA peut-elle répondre aux réservations pendant le service ? #Shorts",
+      "text": "Un assistant vocal relié à l’agenda pourrait prendre les réservations pendant le coup de feu. Il faut encore tester les erreurs et le passage au personnel.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3369s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-007",
+      "platform": "tiktok",
+      "title": "Restaurant : l’IA peut-elle répondre aux réservations pendant le service ?",
+      "text": "Restaurant : l’IA peut-elle répondre aux réservations pendant le service ?\n\nUn assistant vocal relié à l’agenda pourrait prendre les réservations pendant le coup de feu. Il faut encore tester les erreurs et le passage au personnel.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-007",
+      "platform": "instagram",
+      "title": "Restaurant : l’IA peut-elle répondre aux réservations pendant le service ?",
+      "text": "Restaurant : l’IA peut-elle répondre aux réservations pendant le service ?\n\nUn assistant vocal relié à l’agenda pourrait prendre les réservations pendant le coup de feu. Il faut encore tester les erreurs et le passage au personnel.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-007",
+      "platform": "x",
+      "title": "Restaurant : l’IA peut-elle répondre aux réservations pendant le service ?",
+      "text": "Restaurant : l’IA peut-elle répondre aux réservations pendant le service ?\n\nUn assistant vocal relié à l’agenda pourrait prendre les réservations pendant le coup de feu. Il faut encore tester les erreurs et le passage au personnel.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-017",
+      "platform": "youtube",
+      "title": "Coder avec l’IA : qui vérifie que le code répond au besoin ? #Shorts",
+      "text": "L’IA peut écrire le code. Il faut encore vérifier qu’il correspond à la demande et qu’il passe les tests.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=4843s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-017",
+      "platform": "tiktok",
+      "title": "Coder avec l’IA : qui vérifie que le code répond au besoin ?",
+      "text": "Coder avec l’IA : qui vérifie que le code répond au besoin ?\n\nL’IA peut écrire le code. Il faut encore vérifier qu’il correspond à la demande et qu’il passe les tests.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-017",
+      "platform": "instagram",
+      "title": "Coder avec l’IA : qui vérifie que le code répond au besoin ?",
+      "text": "Coder avec l’IA : qui vérifie que le code répond au besoin ?\n\nL’IA peut écrire le code. Il faut encore vérifier qu’il correspond à la demande et qu’il passe les tests.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-017",
+      "platform": "x",
+      "title": "Coder avec l’IA : qui vérifie que le code répond au besoin ?",
+      "text": "Coder avec l’IA : qui vérifie que le code répond au besoin ?\n\nL’IA peut écrire le code. Il faut encore vérifier qu’il correspond à la demande et qu’il passe les tests.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-003",
+      "platform": "youtube",
+      "title": "Comparer deux modèles IA sur la même tâche #Shorts",
+      "text": "Choisis une tâche qui ressemble à ton usage et garde-la identique pour les deux modèles. Un seul essai ne résume pas toutes leurs capacités.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=561s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-003",
+      "platform": "tiktok",
+      "title": "Comparer deux modèles IA sur la même tâche",
+      "text": "Comparer deux modèles IA sur la même tâche\n\nChoisis une tâche qui ressemble à ton usage et garde-la identique pour les deux modèles. Un seul essai ne résume pas toutes leurs capacités.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-003",
+      "platform": "instagram",
+      "title": "Comparer deux modèles IA sur la même tâche",
+      "text": "Comparer deux modèles IA sur la même tâche\n\nChoisis une tâche qui ressemble à ton usage et garde-la identique pour les deux modèles. Un seul essai ne résume pas toutes leurs capacités.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-003",
+      "platform": "x",
+      "title": "Comparer deux modèles IA sur la même tâche",
+      "text": "Comparer deux modèles IA sur la même tâche\n\nChoisis une tâche qui ressemble à ton usage et garde-la identique pour les deux modèles. Un seul essai ne résume pas toutes leurs capacités.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-008",
+      "platform": "youtube",
+      "title": "Artisan : transformer un vocal WhatsApp en devis #Shorts",
+      "text": "Une note vocale de chantier peut aider à préparer un devis à partir des tarifs de l’artisan. Il faut vérifier les quantités, les prix et les engagements.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3399s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-008",
+      "platform": "tiktok",
+      "title": "Artisan : transformer un vocal WhatsApp en devis",
+      "text": "Artisan : transformer un vocal WhatsApp en devis\n\nUne note vocale de chantier peut aider à préparer un devis à partir des tarifs de l’artisan. Il faut vérifier les quantités, les prix et les engagements.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-008",
+      "platform": "instagram",
+      "title": "Artisan : transformer un vocal WhatsApp en devis",
+      "text": "Artisan : transformer un vocal WhatsApp en devis\n\nUne note vocale de chantier peut aider à préparer un devis à partir des tarifs de l’artisan. Il faut vérifier les quantités, les prix et les engagements.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-008",
+      "platform": "x",
+      "title": "Artisan : transformer un vocal WhatsApp en devis",
+      "text": "Artisan : transformer un vocal WhatsApp en devis\n\nUne note vocale de chantier peut aider à préparer un devis à partir des tarifs de l’artisan. Il faut vérifier les quantités, les prix et les engagements.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-020",
+      "platform": "youtube",
+      "title": "Maquette ou ticket : comment transmettre le besoin à l’IA ? #Shorts",
+      "text": "Une maquette peut rendre une interface plus concrète. Elle ne décrit pas toujours les règles, les erreurs ou les parcours hors écran.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=5342s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-020",
+      "platform": "tiktok",
+      "title": "Maquette ou ticket : comment transmettre le besoin à l’IA ?",
+      "text": "Maquette ou ticket : comment transmettre le besoin à l’IA ?\n\nUne maquette peut rendre une interface plus concrète. Elle ne décrit pas toujours les règles, les erreurs ou les parcours hors écran.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-020",
+      "platform": "instagram",
+      "title": "Maquette ou ticket : comment transmettre le besoin à l’IA ?",
+      "text": "Maquette ou ticket : comment transmettre le besoin à l’IA ?\n\nUne maquette peut rendre une interface plus concrète. Elle ne décrit pas toujours les règles, les erreurs ou les parcours hors écran.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-020",
+      "platform": "x",
+      "title": "Maquette ou ticket : comment transmettre le besoin à l’IA ?",
+      "text": "Maquette ou ticket : comment transmettre le besoin à l’IA ?\n\nUne maquette peut rendre une interface plus concrète. Elle ne décrit pas toujours les règles, les erreurs ou les parcours hors écran.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-004",
+      "platform": "youtube",
+      "title": "Commerce : l’IA peut-elle aider à fidéliser les clients ? #Shorts",
+      "text": "Une base clients et l’historique des achats peuvent servir à préparer une relance. Le commerçant garde la main sur les destinataires et le message.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3074s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-004",
+      "platform": "tiktok",
+      "title": "Commerce : l’IA peut-elle aider à fidéliser les clients ?",
+      "text": "Commerce : l’IA peut-elle aider à fidéliser les clients ?\n\nUne base clients et l’historique des achats peuvent servir à préparer une relance. Le commerçant garde la main sur les destinataires et le message.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-004",
+      "platform": "instagram",
+      "title": "Commerce : l’IA peut-elle aider à fidéliser les clients ?",
+      "text": "Commerce : l’IA peut-elle aider à fidéliser les clients ?\n\nUne base clients et l’historique des achats peuvent servir à préparer une relance. Le commerçant garde la main sur les destinataires et le message.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-004",
+      "platform": "x",
+      "title": "Commerce : l’IA peut-elle aider à fidéliser les clients ?",
+      "text": "Commerce : l’IA peut-elle aider à fidéliser les clients ?\n\nUne base clients et l’historique des achats peuvent servir à préparer une relance. Le commerçant garde la main sur les destinataires et le message.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-015",
+      "platform": "youtube",
+      "title": "Avant de créer une application avec l’IA, précise le besoin #Shorts",
+      "text": "Demande d’abord à l’IA de poser les questions utiles. Une consigne plus claire évite des retouches, sans garantir que l’application sera juste du premier coup.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=4580s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-015",
+      "platform": "tiktok",
+      "title": "Avant de créer une application avec l’IA, précise le besoin",
+      "text": "Avant de créer une application avec l’IA, précise le besoin\n\nDemande d’abord à l’IA de poser les questions utiles. Une consigne plus claire évite des retouches, sans garantir que l’application sera juste du premier coup.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-015",
+      "platform": "instagram",
+      "title": "Avant de créer une application avec l’IA, précise le besoin",
+      "text": "Avant de créer une application avec l’IA, précise le besoin\n\nDemande d’abord à l’IA de poser les questions utiles. Une consigne plus claire évite des retouches, sans garantir que l’application sera juste du premier coup.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-015",
+      "platform": "x",
+      "title": "Avant de créer une application avec l’IA, précise le besoin",
+      "text": "Avant de créer une application avec l’IA, précise le besoin\n\nDemande d’abord à l’IA de poser les questions utiles. Une consigne plus claire évite des retouches, sans garantir que l’application sera juste du premier coup.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-023",
+      "platform": "youtube",
+      "title": "Application ancienne : faut-il repartir de zéro ? #Shorts",
+      "text": "Quand la documentation et la mémoire de l’équipe ont disparu, repartir de zéro peut sembler tentant. Les tests restent une des rares façons de vérifier ce qu’on ne veut pas casser.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=5751s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-023",
+      "platform": "tiktok",
+      "title": "Application ancienne : faut-il repartir de zéro ?",
+      "text": "Application ancienne : faut-il repartir de zéro ?\n\nQuand la documentation et la mémoire de l’équipe ont disparu, repartir de zéro peut sembler tentant. Les tests restent une des rares façons de vérifier ce qu’on ne veut pas casser.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-023",
+      "platform": "instagram",
+      "title": "Application ancienne : faut-il repartir de zéro ?",
+      "text": "Application ancienne : faut-il repartir de zéro ?\n\nQuand la documentation et la mémoire de l’équipe ont disparu, repartir de zéro peut sembler tentant. Les tests restent une des rares façons de vérifier ce qu’on ne veut pas casser.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-023",
+      "platform": "x",
+      "title": "Application ancienne : faut-il repartir de zéro ?",
+      "text": "Application ancienne : faut-il repartir de zéro ?\n\nQuand la documentation et la mémoire de l’équipe ont disparu, repartir de zéro peut sembler tentant. Les tests restent une des rares façons de vérifier ce qu’on ne veut pas casser.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-005",
+      "platform": "youtube",
+      "title": "Immobilier : un assistant IA pour répondre après la fermeture ? #Shorts",
+      "text": "Un assistant pourrait répondre aux questions sur un bien quand l’agence est fermée, puis transmettre la demande à un agent. Les réponses doivent rester liées aux informations vérifiées.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3178s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-005",
+      "platform": "tiktok",
+      "title": "Immobilier : un assistant IA pour répondre après la fermeture ?",
+      "text": "Immobilier : un assistant IA pour répondre après la fermeture ?\n\nUn assistant pourrait répondre aux questions sur un bien quand l’agence est fermée, puis transmettre la demande à un agent. Les réponses doivent rester liées aux informations vérifiées.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-005",
+      "platform": "instagram",
+      "title": "Immobilier : un assistant IA pour répondre après la fermeture ?",
+      "text": "Immobilier : un assistant IA pour répondre après la fermeture ?\n\nUn assistant pourrait répondre aux questions sur un bien quand l’agence est fermée, puis transmettre la demande à un agent. Les réponses doivent rester liées aux informations vérifiées.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-005",
+      "platform": "x",
+      "title": "Immobilier : un assistant IA pour répondre après la fermeture ?",
+      "text": "Immobilier : un assistant IA pour répondre après la fermeture ?\n\nUn assistant pourrait répondre aux questions sur un bien quand l’agence est fermée, puis transmettre la demande à un agent. Les réponses doivent rester liées aux informations vérifiées.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-018",
+      "platform": "youtube",
+      "title": "Ticket produit : décrire le besoin ou imposer la solution ? #Shorts",
+      "text": "Le besoin à résoudre et le choix technique sont deux choses différentes. Le ticket doit-il laisser plus de place à l’équipe qui développe ?\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=5082s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-018",
+      "platform": "tiktok",
+      "title": "Ticket produit : décrire le besoin ou imposer la solution ?",
+      "text": "Ticket produit : décrire le besoin ou imposer la solution ?\n\nLe besoin à résoudre et le choix technique sont deux choses différentes. Le ticket doit-il laisser plus de place à l’équipe qui développe ?\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-018",
+      "platform": "instagram",
+      "title": "Ticket produit : décrire le besoin ou imposer la solution ?",
+      "text": "Ticket produit : décrire le besoin ou imposer la solution ?\n\nLe besoin à résoudre et le choix technique sont deux choses différentes. Le ticket doit-il laisser plus de place à l’équipe qui développe ?\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-018",
+      "platform": "x",
+      "title": "Ticket produit : décrire le besoin ou imposer la solution ?",
+      "text": "Ticket produit : décrire le besoin ou imposer la solution ?\n\nLe besoin à résoudre et le choix technique sont deux choses différentes. Le ticket doit-il laisser plus de place à l’équipe qui développe ?\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-012",
+      "platform": "youtube",
+      "title": "Boulangerie : l’IA peut-elle aider à prévoir la production ? #Shorts",
+      "text": "Météo, jours fériés, événements locaux et ventes passées peuvent nourrir une prévision. Compare-la aux invendus et à une règle simple avant de t’y fier.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3551s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-012",
+      "platform": "tiktok",
+      "title": "Boulangerie : l’IA peut-elle aider à prévoir la production ?",
+      "text": "Boulangerie : l’IA peut-elle aider à prévoir la production ?\n\nMétéo, jours fériés, événements locaux et ventes passées peuvent nourrir une prévision. Compare-la aux invendus et à une règle simple avant de t’y fier.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-012",
+      "platform": "instagram",
+      "title": "Boulangerie : l’IA peut-elle aider à prévoir la production ?",
+      "text": "Boulangerie : l’IA peut-elle aider à prévoir la production ?\n\nMétéo, jours fériés, événements locaux et ventes passées peuvent nourrir une prévision. Compare-la aux invendus et à une règle simple avant de t’y fier.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-012",
+      "platform": "x",
+      "title": "Boulangerie : l’IA peut-elle aider à prévoir la production ?",
+      "text": "Boulangerie : l’IA peut-elle aider à prévoir la production ?\n\nMétéo, jours fériés, événements locaux et ventes passées peuvent nourrir une prévision. Compare-la aux invendus et à une règle simple avant de t’y fier.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-016",
+      "platform": "youtube",
+      "title": "IA : est-ce le contexte qui manque à ta demande ? #Shorts",
+      "text": "Un modèle peut répondre à côté si la demande oublie le contexte du projet. Quels détails faut-il lui donner avant de commencer ?\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=4644s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-016",
+      "platform": "tiktok",
+      "title": "IA : est-ce le contexte qui manque à ta demande ?",
+      "text": "IA : est-ce le contexte qui manque à ta demande ?\n\nUn modèle peut répondre à côté si la demande oublie le contexte du projet. Quels détails faut-il lui donner avant de commencer ?\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-016",
+      "platform": "instagram",
+      "title": "IA : est-ce le contexte qui manque à ta demande ?",
+      "text": "IA : est-ce le contexte qui manque à ta demande ?\n\nUn modèle peut répondre à côté si la demande oublie le contexte du projet. Quels détails faut-il lui donner avant de commencer ?\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-016",
+      "platform": "x",
+      "title": "IA : est-ce le contexte qui manque à ta demande ?",
+      "text": "IA : est-ce le contexte qui manque à ta demande ?\n\nUn modèle peut répondre à côté si la demande oublie le contexte du projet. Quels détails faut-il lui donner avant de commencer ?\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-019",
+      "platform": "youtube",
+      "title": "Un ticket détaillé suffit-il si l’IA ignore le contexte du produit ? #Shorts",
+      "text": "Une longue consigne peut manquer l’essentiel si elle ne décrit pas le produit. On parle du contexte qui aide l’agent à comprendre la tâche.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=5273s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-019",
+      "platform": "tiktok",
+      "title": "Un ticket détaillé suffit-il si l’IA ignore le contexte du produit ?",
+      "text": "Un ticket détaillé suffit-il si l’IA ignore le contexte du produit ?\n\nUne longue consigne peut manquer l’essentiel si elle ne décrit pas le produit. On parle du contexte qui aide l’agent à comprendre la tâche.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-019",
+      "platform": "instagram",
+      "title": "Un ticket détaillé suffit-il si l’IA ignore le contexte du produit ?",
+      "text": "Un ticket détaillé suffit-il si l’IA ignore le contexte du produit ?\n\nUne longue consigne peut manquer l’essentiel si elle ne décrit pas le produit. On parle du contexte qui aide l’agent à comprendre la tâche.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-019",
+      "platform": "x",
+      "title": "Un ticket détaillé suffit-il si l’IA ignore le contexte du produit ?",
+      "text": "Un ticket détaillé suffit-il si l’IA ignore le contexte du produit ?\n\nUne longue consigne peut manquer l’essentiel si elle ne décrit pas le produit. On parle du contexte qui aide l’agent à comprendre la tâche.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-006",
+      "platform": "youtube",
+      "title": "Menu de restaurant en 3D : utile ou gadget ? #Shorts",
+      "text": "Voir un plat avant de commander peut aider certains clients. Reste à vérifier le coût de production et l’effet sur les commandes.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3285s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-006",
+      "platform": "tiktok",
+      "title": "Menu de restaurant en 3D : utile ou gadget ?",
+      "text": "Menu de restaurant en 3D : utile ou gadget ?\n\nVoir un plat avant de commander peut aider certains clients. Reste à vérifier le coût de production et l’effet sur les commandes.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-006",
+      "platform": "instagram",
+      "title": "Menu de restaurant en 3D : utile ou gadget ?",
+      "text": "Menu de restaurant en 3D : utile ou gadget ?\n\nVoir un plat avant de commander peut aider certains clients. Reste à vérifier le coût de production et l’effet sur les commandes.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-006",
+      "platform": "x",
+      "title": "Menu de restaurant en 3D : utile ou gadget ?",
+      "text": "Menu de restaurant en 3D : utile ou gadget ?\n\nVoir un plat avant de commander peut aider certains clients. Reste à vérifier le coût de production et l’effet sur les commandes.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-026",
+      "platform": "youtube",
+      "title": "Pourquoi parler des échecs d’un produit IA ? #Shorts",
+      "text": "Les démonstrations montrent souvent le meilleur scénario. Les incidents racontent aussi ce qui se passe quand un produit entre dans la vraie vie.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=6673s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-026",
+      "platform": "tiktok",
+      "title": "Pourquoi parler des échecs d’un produit IA ?",
+      "text": "Pourquoi parler des échecs d’un produit IA ?\n\nLes démonstrations montrent souvent le meilleur scénario. Les incidents racontent aussi ce qui se passe quand un produit entre dans la vraie vie.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-026",
+      "platform": "instagram",
+      "title": "Pourquoi parler des échecs d’un produit IA ?",
+      "text": "Pourquoi parler des échecs d’un produit IA ?\n\nLes démonstrations montrent souvent le meilleur scénario. Les incidents racontent aussi ce qui se passe quand un produit entre dans la vraie vie.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-026",
+      "platform": "x",
+      "title": "Pourquoi parler des échecs d’un produit IA ?",
+      "text": "Pourquoi parler des échecs d’un produit IA ?\n\nLes démonstrations montrent souvent le meilleur scénario. Les incidents racontent aussi ce qui se passe quand un produit entre dans la vraie vie.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-029",
+      "platform": "youtube",
+      "title": "Un skill IA pour retrouver ses consignes de travail #Shorts",
+      "text": "Lou explique comment réunir des instructions dans un skill pour retrouver son cadre de travail. Le skill guide le modèle ; il ne le réentraîne pas.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=7040s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-029",
+      "platform": "tiktok",
+      "title": "Un skill IA pour retrouver ses consignes de travail",
+      "text": "Un skill IA pour retrouver ses consignes de travail\n\nLou explique comment réunir des instructions dans un skill pour retrouver son cadre de travail. Le skill guide le modèle ; il ne le réentraîne pas.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-029",
+      "platform": "instagram",
+      "title": "Un skill IA pour retrouver ses consignes de travail",
+      "text": "Un skill IA pour retrouver ses consignes de travail\n\nLou explique comment réunir des instructions dans un skill pour retrouver son cadre de travail. Le skill guide le modèle ; il ne le réentraîne pas.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-029",
+      "platform": "x",
+      "title": "Un skill IA pour retrouver ses consignes de travail",
+      "text": "Un skill IA pour retrouver ses consignes de travail\n\nLou explique comment réunir des instructions dans un skill pour retrouver son cadre de travail. Le skill guide le modèle ; il ne le réentraîne pas.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-010",
+      "platform": "youtube",
+      "title": "Paysagiste : présenter plusieurs idées d’aménagement avec l’IA #Shorts",
+      "text": "Des variantes visuelles peuvent aider à discuter d’un projet de jardin. Le paysagiste choisit les végétaux adaptés au lieu.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3463s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-010",
+      "platform": "tiktok",
+      "title": "Paysagiste : présenter plusieurs idées d’aménagement avec l’IA",
+      "text": "Paysagiste : présenter plusieurs idées d’aménagement avec l’IA\n\nDes variantes visuelles peuvent aider à discuter d’un projet de jardin. Le paysagiste choisit les végétaux adaptés au lieu.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-010",
+      "platform": "instagram",
+      "title": "Paysagiste : présenter plusieurs idées d’aménagement avec l’IA",
+      "text": "Paysagiste : présenter plusieurs idées d’aménagement avec l’IA\n\nDes variantes visuelles peuvent aider à discuter d’un projet de jardin. Le paysagiste choisit les végétaux adaptés au lieu.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-010",
+      "platform": "x",
+      "title": "Paysagiste : présenter plusieurs idées d’aménagement avec l’IA",
+      "text": "Paysagiste : présenter plusieurs idées d’aménagement avec l’IA\n\nDes variantes visuelles peuvent aider à discuter d’un projet de jardin. Le paysagiste choisit les végétaux adaptés au lieu.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-022",
+      "platform": "youtube",
+      "title": "Refonte avec l’IA : recopier l’existant ou revoir le produit ? #Shorts",
+      "text": "Recoder les mêmes écrans ne règle pas forcément les problèmes du produit. La première question porte sur les usages à conserver ou à changer.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=5661s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-022",
+      "platform": "tiktok",
+      "title": "Refonte avec l’IA : recopier l’existant ou revoir le produit ?",
+      "text": "Refonte avec l’IA : recopier l’existant ou revoir le produit ?\n\nRecoder les mêmes écrans ne règle pas forcément les problèmes du produit. La première question porte sur les usages à conserver ou à changer.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-022",
+      "platform": "instagram",
+      "title": "Refonte avec l’IA : recopier l’existant ou revoir le produit ?",
+      "text": "Refonte avec l’IA : recopier l’existant ou revoir le produit ?\n\nRecoder les mêmes écrans ne règle pas forcément les problèmes du produit. La première question porte sur les usages à conserver ou à changer.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-022",
+      "platform": "x",
+      "title": "Refonte avec l’IA : recopier l’existant ou revoir le produit ?",
+      "text": "Refonte avec l’IA : recopier l’existant ou revoir le produit ?\n\nRecoder les mêmes écrans ne règle pas forcément les problèmes du produit. La première question porte sur les usages à conserver ou à changer.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-030",
+      "platform": "youtube",
+      "title": "Dans les coulisses : notre régie de podcast avec OBS #Shorts",
+      "text": "Nicolas présente la régie de SANDBOX : OBS, les sources vidéo et les commandes partagées. Rien de magique, juste une organisation à faire tenir.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=7213s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-030",
+      "platform": "tiktok",
+      "title": "Dans les coulisses : notre régie de podcast avec OBS",
+      "text": "Dans les coulisses : notre régie de podcast avec OBS\n\nNicolas présente la régie de SANDBOX : OBS, les sources vidéo et les commandes partagées. Rien de magique, juste une organisation à faire tenir.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-030",
+      "platform": "instagram",
+      "title": "Dans les coulisses : notre régie de podcast avec OBS",
+      "text": "Dans les coulisses : notre régie de podcast avec OBS\n\nNicolas présente la régie de SANDBOX : OBS, les sources vidéo et les commandes partagées. Rien de magique, juste une organisation à faire tenir.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-030",
+      "platform": "x",
+      "title": "Dans les coulisses : notre régie de podcast avec OBS",
+      "text": "Dans les coulisses : notre régie de podcast avec OBS\n\nNicolas présente la régie de SANDBOX : OBS, les sources vidéo et les commandes partagées. Rien de magique, juste une organisation à faire tenir.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-009",
+      "platform": "youtube",
+      "title": "Menuisier : visualiser un meuble sur mesure avant fabrication #Shorts",
+      "text": "Une image peut aider le client à se projeter dans sa pièce. Le menuisier garde la main sur les dimensions et la faisabilité.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3442s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-009",
+      "platform": "tiktok",
+      "title": "Menuisier : visualiser un meuble sur mesure avant fabrication",
+      "text": "Menuisier : visualiser un meuble sur mesure avant fabrication\n\nUne image peut aider le client à se projeter dans sa pièce. Le menuisier garde la main sur les dimensions et la faisabilité.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-009",
+      "platform": "instagram",
+      "title": "Menuisier : visualiser un meuble sur mesure avant fabrication",
+      "text": "Menuisier : visualiser un meuble sur mesure avant fabrication\n\nUne image peut aider le client à se projeter dans sa pièce. Le menuisier garde la main sur les dimensions et la faisabilité.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-009",
+      "platform": "x",
+      "title": "Menuisier : visualiser un meuble sur mesure avant fabrication",
+      "text": "Menuisier : visualiser un meuble sur mesure avant fabrication\n\nUne image peut aider le client à se projeter dans sa pièce. Le menuisier garde la main sur les dimensions et la faisabilité.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-027",
+      "platform": "youtube",
+      "title": "Développeur : coder avec l’IA ne remplace pas la conception #Shorts",
+      "text": "Écrire du code n’est qu’une partie du métier. Comprendre le besoin, concevoir le produit et vérifier sa sécurité restent au programme.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=6738s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-027",
+      "platform": "tiktok",
+      "title": "Développeur : coder avec l’IA ne remplace pas la conception",
+      "text": "Développeur : coder avec l’IA ne remplace pas la conception\n\nÉcrire du code n’est qu’une partie du métier. Comprendre le besoin, concevoir le produit et vérifier sa sécurité restent au programme.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-027",
+      "platform": "instagram",
+      "title": "Développeur : coder avec l’IA ne remplace pas la conception",
+      "text": "Développeur : coder avec l’IA ne remplace pas la conception\n\nÉcrire du code n’est qu’une partie du métier. Comprendre le besoin, concevoir le produit et vérifier sa sécurité restent au programme.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-027",
+      "platform": "x",
+      "title": "Développeur : coder avec l’IA ne remplace pas la conception",
+      "text": "Développeur : coder avec l’IA ne remplace pas la conception\n\nÉcrire du code n’est qu’une partie du métier. Comprendre le besoin, concevoir le produit et vérifier sa sécurité restent au programme.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-013",
+      "platform": "youtube",
+      "title": "Pâtisserie : relier les commandes Instagram aux devis et factures #Shorts",
+      "text": "Un bot pourrait rassembler les demandes reçues sur Instagram et préparer les documents de suivi. Il faut contrôler chaque commande et chaque montant.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3598s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-013",
+      "platform": "tiktok",
+      "title": "Pâtisserie : relier les commandes Instagram aux devis et factures",
+      "text": "Pâtisserie : relier les commandes Instagram aux devis et factures\n\nUn bot pourrait rassembler les demandes reçues sur Instagram et préparer les documents de suivi. Il faut contrôler chaque commande et chaque montant.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-013",
+      "platform": "instagram",
+      "title": "Pâtisserie : relier les commandes Instagram aux devis et factures",
+      "text": "Pâtisserie : relier les commandes Instagram aux devis et factures\n\nUn bot pourrait rassembler les demandes reçues sur Instagram et préparer les documents de suivi. Il faut contrôler chaque commande et chaque montant.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-013",
+      "platform": "x",
+      "title": "Pâtisserie : relier les commandes Instagram aux devis et factures",
+      "text": "Pâtisserie : relier les commandes Instagram aux devis et factures\n\nUn bot pourrait rassembler les demandes reçues sur Instagram et préparer les documents de suivi. Il faut contrôler chaque commande et chaque montant.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-021",
+      "platform": "youtube",
+      "title": "Décrire un bug : quelles questions poser avant de le corriger ? #Shorts",
+      "text": "« Ça ne marche pas » ne dit pas encore ce qui se passe. Reproduire le problème, noter le résultat attendu et le résultat obtenu : c’est déjà mieux.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=5529s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-021",
+      "platform": "tiktok",
+      "title": "Décrire un bug : quelles questions poser avant de le corriger ?",
+      "text": "Décrire un bug : quelles questions poser avant de le corriger ?\n\n« Ça ne marche pas » ne dit pas encore ce qui se passe. Reproduire le problème, noter le résultat attendu et le résultat obtenu : c’est déjà mieux.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-021",
+      "platform": "instagram",
+      "title": "Décrire un bug : quelles questions poser avant de le corriger ?",
+      "text": "Décrire un bug : quelles questions poser avant de le corriger ?\n\n« Ça ne marche pas » ne dit pas encore ce qui se passe. Reproduire le problème, noter le résultat attendu et le résultat obtenu : c’est déjà mieux.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-021",
+      "platform": "x",
+      "title": "Décrire un bug : quelles questions poser avant de le corriger ?",
+      "text": "Décrire un bug : quelles questions poser avant de le corriger ?\n\n« Ça ne marche pas » ne dit pas encore ce qui se passe. Reproduire le problème, noter le résultat attendu et le résultat obtenu : c’est déjà mieux.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-002",
+      "platform": "youtube",
+      "title": "Faire relire un projet par un second modèle IA #Shorts",
+      "text": "Un deuxième modèle peut apporter un autre regard sur ton projet. Vérifie ses remarques : lui aussi peut se tromper.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=174s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-002",
+      "platform": "tiktok",
+      "title": "Faire relire un projet par un second modèle IA",
+      "text": "Faire relire un projet par un second modèle IA\n\nUn deuxième modèle peut apporter un autre regard sur ton projet. Vérifie ses remarques : lui aussi peut se tromper.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-002",
+      "platform": "instagram",
+      "title": "Faire relire un projet par un second modèle IA",
+      "text": "Faire relire un projet par un second modèle IA\n\nUn deuxième modèle peut apporter un autre regard sur ton projet. Vérifie ses remarques : lui aussi peut se tromper.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-002",
+      "platform": "x",
+      "title": "Faire relire un projet par un second modèle IA",
+      "text": "Faire relire un projet par un second modèle IA\n\nUn deuxième modèle peut apporter un autre regard sur ton projet. Vérifie ses remarques : lui aussi peut se tromper.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-014",
+      "platform": "youtube",
+      "title": "Coiffeur : essayer une coupe avant de passer aux ciseaux #Shorts",
+      "text": "Une simulation d’image peut aider un client à se projeter. Elle ne remplace ni l’échange avec le coiffeur ni le résultat réel.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3662s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-014",
+      "platform": "tiktok",
+      "title": "Coiffeur : essayer une coupe avant de passer aux ciseaux",
+      "text": "Coiffeur : essayer une coupe avant de passer aux ciseaux\n\nUne simulation d’image peut aider un client à se projeter. Elle ne remplace ni l’échange avec le coiffeur ni le résultat réel.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-014",
+      "platform": "instagram",
+      "title": "Coiffeur : essayer une coupe avant de passer aux ciseaux",
+      "text": "Coiffeur : essayer une coupe avant de passer aux ciseaux\n\nUne simulation d’image peut aider un client à se projeter. Elle ne remplace ni l’échange avec le coiffeur ni le résultat réel.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-014",
+      "platform": "x",
+      "title": "Coiffeur : essayer une coupe avant de passer aux ciseaux",
+      "text": "Coiffeur : essayer une coupe avant de passer aux ciseaux\n\nUne simulation d’image peut aider un client à se projeter. Elle ne remplace ni l’échange avec le coiffeur ni le résultat réel.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-025",
+      "platform": "youtube",
+      "title": "Adopter l’IA en équipe : par étapes ou tous ensemble ? #Shorts",
+      "text": "Une équipe peut tester l’IA progressivement ou changer ses habitudes d’un coup. Le bon choix dépend aussi de la formation et du travail à revoir.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=6482s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-025",
+      "platform": "tiktok",
+      "title": "Adopter l’IA en équipe : par étapes ou tous ensemble ?",
+      "text": "Adopter l’IA en équipe : par étapes ou tous ensemble ?\n\nUne équipe peut tester l’IA progressivement ou changer ses habitudes d’un coup. Le bon choix dépend aussi de la formation et du travail à revoir.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-025",
+      "platform": "instagram",
+      "title": "Adopter l’IA en équipe : par étapes ou tous ensemble ?",
+      "text": "Adopter l’IA en équipe : par étapes ou tous ensemble ?\n\nUne équipe peut tester l’IA progressivement ou changer ses habitudes d’un coup. Le bon choix dépend aussi de la formation et du travail à revoir.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-025",
+      "platform": "x",
+      "title": "Adopter l’IA en équipe : par étapes ou tous ensemble ?",
+      "text": "Adopter l’IA en équipe : par étapes ou tous ensemble ?\n\nUne équipe peut tester l’IA progressivement ou changer ses habitudes d’un coup. Le bon choix dépend aussi de la formation et du travail à revoir.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-011",
+      "platform": "youtube",
+      "title": "Fleuriste : imaginer un bouquet selon les couleurs et le budget #Shorts",
+      "text": "L’occasion, les couleurs et le budget donnent un point de départ. Le stock réel reste à vérifier avant de promettre un bouquet.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=3535s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-011",
+      "platform": "tiktok",
+      "title": "Fleuriste : imaginer un bouquet selon les couleurs et le budget",
+      "text": "Fleuriste : imaginer un bouquet selon les couleurs et le budget\n\nL’occasion, les couleurs et le budget donnent un point de départ. Le stock réel reste à vérifier avant de promettre un bouquet.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-011",
+      "platform": "instagram",
+      "title": "Fleuriste : imaginer un bouquet selon les couleurs et le budget",
+      "text": "Fleuriste : imaginer un bouquet selon les couleurs et le budget\n\nL’occasion, les couleurs et le budget donnent un point de départ. Le stock réel reste à vérifier avant de promettre un bouquet.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-011",
+      "platform": "x",
+      "title": "Fleuriste : imaginer un bouquet selon les couleurs et le budget",
+      "text": "Fleuriste : imaginer un bouquet selon les couleurs et le budget\n\nL’occasion, les couleurs et le budget donnent un point de départ. Le stock réel reste à vérifier avant de promettre un bouquet.\n\nUne piste à tester selon ton activité, pas un gain déjà mesuré.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-028",
+      "platform": "youtube",
+      "title": "Product manager : une maquette peut-elle clarifier le besoin ? #Shorts",
+      "text": "Une maquette qui montre les comportements peut aider à transmettre une demande. Elle ne remplace pas la discussion sur les règles du produit.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=6852s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-028",
+      "platform": "tiktok",
+      "title": "Product manager : une maquette peut-elle clarifier le besoin ?",
+      "text": "Product manager : une maquette peut-elle clarifier le besoin ?\n\nUne maquette qui montre les comportements peut aider à transmettre une demande. Elle ne remplace pas la discussion sur les règles du produit.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-028",
+      "platform": "instagram",
+      "title": "Product manager : une maquette peut-elle clarifier le besoin ?",
+      "text": "Product manager : une maquette peut-elle clarifier le besoin ?\n\nUne maquette qui montre les comportements peut aider à transmettre une demande. Elle ne remplace pas la discussion sur les règles du produit.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-028",
+      "platform": "x",
+      "title": "Product manager : une maquette peut-elle clarifier le besoin ?",
+      "text": "Product manager : une maquette peut-elle clarifier le besoin ?\n\nUne maquette qui montre les comportements peut aider à transmettre une demande. Elle ne remplace pas la discussion sur les règles du produit.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-024",
+      "platform": "youtube",
+      "title": "Code généré par l’IA : que faut-il encore relire ? #Shorts",
+      "text": "La confiance dans le code généré dépend de la tâche et des risques. On échange sur ce qui mérite encore une vérification humaine.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=6159s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-024",
+      "platform": "tiktok",
+      "title": "Code généré par l’IA : que faut-il encore relire ?",
+      "text": "Code généré par l’IA : que faut-il encore relire ?\n\nLa confiance dans le code généré dépend de la tâche et des risques. On échange sur ce qui mérite encore une vérification humaine.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-024",
+      "platform": "instagram",
+      "title": "Code généré par l’IA : que faut-il encore relire ?",
+      "text": "Code généré par l’IA : que faut-il encore relire ?\n\nLa confiance dans le code généré dépend de la tâche et des risques. On échange sur ce qui mérite encore une vérification humaine.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-024",
+      "platform": "x",
+      "title": "Code généré par l’IA : que faut-il encore relire ?",
+      "text": "Code généré par l’IA : que faut-il encore relire ?\n\nLa confiance dans le code généré dépend de la tâche et des risques. On échange sur ce qui mérite encore une vérification humaine.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    },
+    {
+      "clip_id": "E02-001",
+      "platform": "youtube",
+      "title": "Un forfait IA épuisé en vingt minutes : retour d’expérience #Shorts",
+      "text": "Loïc raconte son essai et les limites de son forfait. C’est un retour personnel, pas un benchmark.\n\nExtrait de SANDBOX #2, avec Lou, Loïc et Nico.\nLa discussion complète : https://www.youtube.com/watch?v=7KVqydbGow0&t=79s\n\n#IA #Tech #Sandbox"
+    },
+    {
+      "clip_id": "E02-001",
+      "platform": "tiktok",
+      "title": "Un forfait IA épuisé en vingt minutes : retour d’expérience",
+      "text": "Un forfait IA épuisé en vingt minutes : retour d’expérience\n\nLoïc raconte son essai et les limites de son forfait. C’est un retour personnel, pas un benchmark.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-001",
+      "platform": "instagram",
+      "title": "Un forfait IA épuisé en vingt minutes : retour d’expérience",
+      "text": "Un forfait IA épuisé en vingt minutes : retour d’expérience\n\nLoïc raconte son essai et les limites de son forfait. C’est un retour personnel, pas un benchmark.\n\nExtrait de SANDBOX #2. Épisode complet sur youtube.com/@SandboxFR\n#IntelligenceArtificielle #SandboxTalkShow #Tech"
+    },
+    {
+      "clip_id": "E02-001",
+      "platform": "x",
+      "title": "Un forfait IA épuisé en vingt minutes : retour d’expérience",
+      "text": "Un forfait IA épuisé en vingt minutes : retour d’expérience\n\nLoïc raconte son essai et les limites de son forfait. C’est un retour personnel, pas un benchmark.\n\nÉpisode complet : https://youtu.be/7KVqydbGow0"
+    }
+  ]
+}

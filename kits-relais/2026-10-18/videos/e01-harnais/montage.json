@@ -1,0 +1,17 @@
+{
+  "sha256": "a99e80e515dc3be12b0d43e42d8f57cc554cf932fe2c5b80ef0b10dd33a0574b",
+  "duration": 611.0,
+  "bytes": 26832332,
+  "width": 1280,
+  "height": 720,
+  "audio": true,
+  "fullDecode": "passed",
+  "id": "e01-harnais",
+  "sourceVideoId": "GgSiPkADCz4",
+  "sourceSha256": "4e52c89fc9e5dacd09f90282ed5a29b04748f4f423ea487d8dd01dcd1bee15ae",
+  "sourceStart": 2290,
+  "sourceEnd": 2898,
+  "endcardSeconds": 3,
+  "captionsReview": "automatic-transcript-to-review",
+  "publication": "not-uploaded"
+}

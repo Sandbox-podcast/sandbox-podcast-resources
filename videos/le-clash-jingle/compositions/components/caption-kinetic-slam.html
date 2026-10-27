@@ -1,0 +1,98 @@
+<template id="caption-kinetic-slam-template">
+  <div
+    data-hf-id="hf-1ex0"
+    id="caption-kinetic-slam-root"
+    class="caption-kinetic-slam-root"
+    data-composition-id="caption-kinetic-slam"
+    data-fps="30"
+    data-width="1920"
+    data-height="1080"
+  >
+    <div data-hf-id="hf-53vy" id="kt-container">
+      <h1 data-hf-id="hf-scu7" id="clash-title">
+        <span data-hf-id="hf-zu32" id="title-le" class="kt-word">LE</span>
+        <span data-hf-id="hf-4ey7" id="title-clash" class="kt-word"
+          >CL<span data-hf-id="hf-44az" class="title-accent">A</span>SH</span
+        >
+      </h1>
+    </div>
+  </div>
+  <style>
+    #caption-kinetic-slam-root {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background: transparent;
+      color: #f7f8fc;
+    }
+
+    #kt-container {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-origin: center;
+    }
+
+    #clash-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1600px;
+      margin: 0;
+      color: #f7f8fc;
+      font-family: 'League Gothic', sans-serif;
+      font-size: 286px;
+      font-weight: 400;
+      letter-spacing: 0.025em;
+      line-height: 0.86;
+      text-align: center;
+      text-shadow: 0 5px 22px rgba(4, 11, 28, 0.55);
+      white-space: nowrap;
+    }
+
+    .kt-word {
+      display: inline-block;
+      color: #f7f8fc;
+    }
+
+    #title-clash {
+      margin-left: 34px;
+    }
+
+    .title-accent {
+      color: #ec5a6c;
+    }
+  </style>
+  <script>
+    (function () {
+      const timeline = gsap.timeline({ paused: true });
+
+      timeline.fromTo(
+        '#title-le',
+        { x: -560, autoAlpha: 0 },
+        { x: 0, autoAlpha: 1, duration: 2.38, ease: 'expo.out' },
+        0,
+      );
+      timeline.fromTo(
+        '#title-clash',
+        { x: 560, autoAlpha: 0 },
+        { x: 0, autoAlpha: 1, duration: 2.3, ease: 'power4.out' },
+        0.08,
+      );
+      timeline.fromTo(
+        '#kt-container',
+        { scale: 0.88 },
+        { scale: 1.035, duration: 0.12, ease: 'power4.out' },
+        2.5,
+      );
+      timeline.to('#kt-container', { scale: 1, duration: 0.08, ease: 'power2.out' }, 2.62);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines['caption-kinetic-slam'] = timeline;
+      timeline.seek(0);
+    })();
+  </script>
+</template>

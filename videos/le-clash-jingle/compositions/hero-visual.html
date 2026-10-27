@@ -1,0 +1,105 @@
+<template id="hero-visual-template">
+  <div
+    data-hf-id="hf-zdms"
+    id="hero-visual-root"
+    class="hero-visual-root hf-catalog-directional-wipe"
+    data-composition-id="hero-visual"
+    data-fps="30"
+    data-width="1920"
+    data-height="1080"
+  >
+    <div data-hf-id="hf-hkb1" class="scene from" aria-hidden="true"></div>
+    <div data-hf-id="hf-gdq3" class="scene to">
+      <img data-hf-id="hf-rvwx" id="hero-image" src="assets/clash-hero.png" alt="" />
+    </div>
+    <div data-hf-id="hf-9k7t" id="hero-seam" class="hero-seam" aria-hidden="true"></div>
+  </div>
+  <style>
+    /* Full-frame adaptation of the installed directional-wipe clip-path behavior. */
+    #hero-visual-root {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      border-radius: 0;
+      background: #0a1022;
+      box-shadow: none;
+    }
+
+    #hero-visual-root .scene {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #hero-visual-root .from {
+      background: #0a1022;
+    }
+
+    #hero-visual-root .to {
+      overflow: hidden;
+      clip-path: inset(0 var(--hf-clip-right, 50%) 0 var(--hf-clip-left, 50%));
+      box-shadow: none;
+      transform: none;
+    }
+
+    #hero-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    #hero-seam {
+      position: absolute;
+      inset: 0 auto 0 50%;
+      width: 3px;
+      transform: translateX(-50%);
+      background: linear-gradient(
+        180deg,
+        rgba(247, 248, 252, 0),
+        rgba(247, 248, 252, 0.75) 20%,
+        rgba(247, 248, 252, 0.75) 80%,
+        rgba(247, 248, 252, 0)
+      );
+      box-shadow: 0 0 20px rgba(79, 218, 242, 0.38);
+      opacity: 0;
+    }
+  </style>
+  <script>
+    (function () {
+      const timeline = gsap.timeline({ paused: true });
+      const image = '#hero-visual-root .to';
+
+      timeline.fromTo(
+        image,
+        { '--hf-clip-left': '50%', '--hf-clip-right': '50%' },
+        {
+          '--hf-clip-left': '0%',
+          '--hf-clip-right': '0%',
+          duration: 2.5,
+          ease: 'power3.out',
+        },
+        0,
+      );
+      timeline.to('#hero-seam', { opacity: 1, duration: 0.32, ease: 'power2.out' }, 0.08);
+      timeline.to('#hero-seam', { opacity: 0, duration: 0.18, ease: 'power2.in' }, 2.28);
+      timeline.to(
+        image,
+        {
+          '--hf-clip-left': '50%',
+          '--hf-clip-right': '50%',
+          duration: 1.8,
+          ease: 'power3.inOut',
+        },
+        8.7,
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines['hero-visual'] = timeline;
+      timeline.seek(0);
+    })();
+  </script>
+</template>

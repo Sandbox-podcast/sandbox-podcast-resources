@@ -1,0 +1,200 @@
+{
+  "fps": 50,
+  "width": 1920,
+  "height": 1080,
+  "duration": 63.56,
+  "durationInFrames": 3178,
+  "audio": "public/voices/sandbox-elevenlabs-mix.wav",
+  "source": "Musique Suno séparée localement avec Demucs ; dialogues ElevenLabs v4 à quatre voix, à la demande de Lou. Cris SANDBOX et passages instrumentaux Suno conservés. Source originale archivée intacte.",
+  "timingMethod": "Parakeet TDT v3 local, timestamps de tokens à pas de 80 ms. Correction des noms et des termes techniques selon le brief. Les accents musicaux sont mesurés séparément par enveloppe RMS. Précision des paroles estimée, pas un alignement phonétique certifié.",
+  "scenes": [
+    {
+      "id": "intro",
+      "start": 0,
+      "end": 10.56,
+      "firstWord": 0.72,
+      "lastWord": 10.08,
+      "punchline": 7.84,
+      "transition": 10.56,
+      "action": "Logo scandé deux fois, ordinateur rétro, trois silhouettes, alerte et révélation des visages."
+    },
+    {
+      "id": "lou",
+      "start": 10.56,
+      "end": 16.72,
+      "firstWord": 10.56,
+      "lastWord": 16.4,
+      "punchline": 15.52,
+      "transition": 16.72,
+      "action": "Lou, tickets générés, compteur 40 puis avalanche."
+    },
+    {
+      "id": "loic",
+      "start": 16.72,
+      "end": 22.72,
+      "firstWord": 16.72,
+      "lastWord": 22.32,
+      "punchline": 20.88,
+      "transition": 22.72,
+      "action": "Loïc, ticket avalé par une machine IA, terminal, tampon NON LU."
+    },
+    {
+      "id": "nico",
+      "start": 22.72,
+      "end": 33.28,
+      "firstWord": 22.72,
+      "lastWord": 28.56,
+      "punchline": 26.88,
+      "transition": 33.28,
+      "action": "Bouton de production, serveurs rouges, zoom sur Nico, explosion et retombées sur le passage instrumental."
+    },
+    {
+      "id": "radar",
+      "start": 33.28,
+      "end": 37.84,
+      "firstWord": 33.28,
+      "lastWord": 37.68,
+      "punchline": 36.4,
+      "transition": 37.84,
+      "action": "Radar, annonces de modèles, rotation accélérée, tampon OBSOLÈTE."
+    },
+    {
+      "id": "build",
+      "start": 37.84,
+      "end": 43.04,
+      "firstWord": 37.84,
+      "lastWord": 42.16,
+      "punchline": 40.64,
+      "transition": 43.04,
+      "action": "Construction d'un SaaS, statistiques, zéro utilisateur et clic REFRESH."
+    },
+    {
+      "id": "clash",
+      "start": 43.04,
+      "end": 46.8,
+      "firstWord": 43.04,
+      "lastWord": 46.48,
+      "punchline": 45.2,
+      "transition": 46.8,
+      "action": "Ring, trois boxeurs à têtes photographiques, collision des bulles, 3 ÉGOS et 0 REMISE EN QUESTION."
+    },
+    {
+      "id": "beta",
+      "start": 46.8,
+      "end": 51.68,
+      "firstWord": 46.8,
+      "lastWord": 51.04,
+      "punchline": 49.6,
+      "transition": 51.68,
+      "action": "Laboratoire, machine absurde, 1 % de succès, explosion et éjection des trois têtes."
+    },
+    {
+      "id": "finale",
+      "start": 51.68,
+      "end": 63.56,
+      "firstWord": 51.68,
+      "lastWord": 59.68,
+      "punchline": 56.8,
+      "transition": 63.56,
+      "action": "Rappel des objets, réunion des visages, logo original, arrêt des mouvements sur la chute puis ERROR 500. Conservation de la fin sonore et du silence source."
+    }
+  ],
+  "cues": [
+    {
+      "time": 0.72,
+      "text": "SANDBOX"
+    },
+    {
+      "time": 2.16,
+      "text": "SANDBOX"
+    },
+    {
+      "time": 3.36,
+      "text": "En 2026, on a confié l'intelligence artificielle à trois mecs"
+    },
+    {
+      "time": 7.84,
+      "text": "Personne n'a pensé à les arrêter !"
+    },
+    {
+      "time": 10.56,
+      "text": "LOU !"
+    },
+    {
+      "time": 12.88,
+      "text": "Il écrit ses tickets avec l'IA"
+    },
+    {
+      "time": 14.96,
+      "text": "J'en ai fait quarante ce matin !"
+    },
+    {
+      "time": 16.72,
+      "text": "LOÏC !"
+    },
+    {
+      "time": 18.4,
+      "text": "Il fait coder les tickets par son IA"
+    },
+    {
+      "time": 20.88,
+      "text": "J'ai même pas lu le ticket !"
+    },
+    {
+      "time": 22.72,
+      "text": "NICO !"
+    },
+    {
+      "time": 24.72,
+      "text": "Il balance tout en production"
+    },
+    {
+      "time": 26.88,
+      "text": "Mais ça marchait en local !"
+    },
+    {
+      "time": 33.28,
+      "text": "LE RADAR !"
+    },
+    {
+      "time": 36.4,
+      "text": "Déjà périmée demain !"
+    },
+    {
+      "time": 37.84,
+      "text": "LE BUILD !"
+    },
+    {
+      "time": 40.64,
+      "text": "Zéro utilisateur !"
+    },
+    {
+      "time": 43.04,
+      "text": "LE CLASH !"
+    },
+    {
+      "time": 44.08,
+      "text": "Trois égos"
+    },
+    {
+      "time": 45.2,
+      "text": "Zéro remise en question !"
+    },
+    {
+      "time": 46.8,
+      "text": "LA BÊTA !"
+    },
+    {
+      "time": 48.48,
+      "text": "Des expériences que personne n'a demandées !"
+    },
+    {
+      "time": 51.68,
+      "text": "SANDBOX !"
+    },
+    {
+      "time": 56.8,
+      "text": "L'émission qui n'aurait jamais dû passer en prod."
+    }
+  ]
+}

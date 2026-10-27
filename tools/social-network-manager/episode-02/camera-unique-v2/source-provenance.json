@@ -1,0 +1,186 @@
+{
+  "revision": "camera-unique-v2",
+  "transformation": "Prettier formatting only; media and inline timing preserved",
+  "projects": [
+    {
+      "project": "e02-001-quotas",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-001-quotas/index.html",
+      "original_sha256": "d0dfd0fe7a75a756355a0664ca5988009d81fb71ab605aa1670e4421505bc6dd",
+      "versioned_sha256": "7c018c7f03f51a5c21ea8e388b5b43812e970a11b5450f7404d9d3e734735fdd"
+    },
+    {
+      "project": "e02-002-regard-neuf",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-002-regard-neuf/index.html",
+      "original_sha256": "30fc727b06d3a1a54642ae42fc2e35da6f106125e4c11b57034cb7ed33b4255a",
+      "versioned_sha256": "1d3680c3078ad1cef5a4b2176a186029020b0729028720d67706e63d54d659df"
+    },
+    {
+      "project": "e02-003-comparer-modeles",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-003-comparer-modeles/index.html",
+      "original_sha256": "0581e9bb35f6e9c14d6be5222a5d9e8b37243f2302e8c0a1b5ab45752c5857ee",
+      "versioned_sha256": "3b9e908ff139ed37fe1aa7f0bab414d0de7669f774dbb7909f69f07db690c8dd"
+    },
+    {
+      "project": "e02-004-commerce",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-004-commerce/index.html",
+      "original_sha256": "39e1817f973f8a03954fcda6874a93b0988ec0f8e9a896d4d4c8eabde5349095",
+      "versioned_sha256": "1ae976af1c7f01e51a48974a11b6a9e640ca9833c0407b1b78301589ba87de41"
+    },
+    {
+      "project": "e02-005-immobilier",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-005-immobilier/index.html",
+      "original_sha256": "bac06806587dc0231c1d29c4d3806e3622b0b6071b944661d11e497d20a75e7b",
+      "versioned_sha256": "92191b6fa52f043c131bc16a1419d948a5dfd6182fb767ee2cc720e6c76fe90f"
+    },
+    {
+      "project": "e02-006-menu-3d",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-006-menu-3d/index.html",
+      "original_sha256": "fe270e1019a7086057fea2a6804be688023bbd59e99523b5bdacd2f1c9fd2d0d",
+      "versioned_sha256": "e8ada0b4683e2daa3802d33ebc8aeaa057b5420ee14be9c74b1bc46985c2bce8"
+    },
+    {
+      "project": "e02-007-reservations",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-007-reservations/index.html",
+      "original_sha256": "6c94bcdc78640e4e9a566af2b2180e36bc9ff193ce241196f13c99fe27bb1758",
+      "versioned_sha256": "8b26801b56e3ef83c30925da54b74b2394e39caeb3b0bc73be91f1f2bbd79f4c"
+    },
+    {
+      "project": "e02-008-devis-whatsapp",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-008-devis-whatsapp/index.html",
+      "original_sha256": "73ceb4c7ead0bda086fdb64919939c634732999fcf7fb7922695564d61343ea8",
+      "versioned_sha256": "ac8243f54cdd1666d6fb606fabd44e79b68c623da930cf56d88d8e5d6b6fae1f"
+    },
+    {
+      "project": "e02-009-menuisier",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-009-menuisier/index.html",
+      "original_sha256": "93a4fce7d5d749f73112ebf5ba38a9d4ba93890f30bb6600daa970b238b05135",
+      "versioned_sha256": "2733c15a2b561466d4ad5b500a819ef7e96a8892b7c5ebb2e7f4d5f903c47dc6"
+    },
+    {
+      "project": "e02-010-paysagiste",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-010-paysagiste/index.html",
+      "original_sha256": "836f2e1e3a93a3bbc2849218ecd61c110a32da43f8da3f4c999c271b32fa3e33",
+      "versioned_sha256": "252146f2a842ca130f1f047daa3859d72c751aacffd85416c45e89a643349020"
+    },
+    {
+      "project": "e02-011-fleuriste",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-011-fleuriste/index.html",
+      "original_sha256": "969d62b7421036d288923b690e8d878c0f063e789804a05011dd083f4473fa5e",
+      "versioned_sha256": "d319e076278b1b6a3e6e9b71e55ec8335c1635ddb5a0a2cfcb60f8ad075c343d"
+    },
+    {
+      "project": "e02-012-boulanger",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-012-boulanger/index.html",
+      "original_sha256": "a1119cfdd1b14f1851edb20595964a58e2d67d0917ce8331b0b1634986469377",
+      "versioned_sha256": "2b1a1f4a036a5e69a8f8b5f77aea5fdb347bb7c915da47231988a45b67f443d9"
+    },
+    {
+      "project": "e02-013-patisserie",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-013-patisserie/index.html",
+      "original_sha256": "b0c7c76a0bf2dddb701424b8164c3cafc2d68c5e097936f327c4305ab1c5e825",
+      "versioned_sha256": "1c1520e340665f33364cffd21b8ebc083072a682492fd6d16e12b71ed7739eb6"
+    },
+    {
+      "project": "e02-014-coiffeur",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-014-coiffeur/index.html",
+      "original_sha256": "581627ee3d07a02268b86d46463db0684ad00b3c6cfefb5bec8433b9ea5f70d4",
+      "versioned_sha256": "28e8583b400bfec143b924034c07e70082a63590f47e68413725bc217ea40634"
+    },
+    {
+      "project": "e02-015-cadrer-besoin",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-015-cadrer-besoin/index.html",
+      "original_sha256": "de0424f70b57526e8e43d1b9715a7cfe8018bbf29373d2340010ec1c554cd958",
+      "versioned_sha256": "88759311873f1364b11fd7ab696b0674ae5b887c6b919264bb4a887442975f72"
+    },
+    {
+      "project": "e02-016-contexte",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-016-contexte/index.html",
+      "original_sha256": "45a857f491a3ada07aa0f310c768c997b0476352f12993c38b0a0ffa8f41e1e4",
+      "versioned_sha256": "098fea2281c16035cb55dfcf9b6262717717103a264e59c021460a5329c336f8"
+    },
+    {
+      "project": "e02-017-lire-tickets",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-017-lire-tickets/index.html",
+      "original_sha256": "02214dabe53c110734f46836ad5dd96e38e6521bee8033d7b885d24a7b484bca",
+      "versioned_sha256": "df18c2079e5852e1d2fb075f9b3a44c1ff3c86dbd93e730ccb03967425b4be77"
+    },
+    {
+      "project": "e02-018-ticket-fonctionnel",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-018-ticket-fonctionnel/index.html",
+      "original_sha256": "bca36d2f1be6b8599ba2dadb963bc634457172190d8c3f8fac7cb613c6067107",
+      "versioned_sha256": "cc1598ded8a66d39964aa6980b8fa2fb8520a2def68043719eb0b43236520355"
+    },
+    {
+      "project": "e02-019-ticket-sans-contexte",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-019-ticket-sans-contexte/index.html",
+      "original_sha256": "d832f0d81e19f283956be564fd220976c61749d36397a41ddd0a1c002da08b38",
+      "versioned_sha256": "301a48c754de2bc116792ad8c33512d9ee36e35251e4147bfcf2c6cafb617317"
+    },
+    {
+      "project": "e02-020-maquette",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-020-maquette/index.html",
+      "original_sha256": "b21fd5c2e79046ee2752701f0aee51fa6dfa713e5e14aec36e7c31680c299a4e",
+      "versioned_sha256": "fb4be855fd620ae4efe45c02263934be571c574d7b1f9ece91dc572cef6851e6"
+    },
+    {
+      "project": "e02-021-caracteriser-bug",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-021-caracteriser-bug/index.html",
+      "original_sha256": "0a3891f40181c3312d6429ecc248a5c0ae845d52acc93c32f1e02f393e5c0a82",
+      "versioned_sha256": "0e695ae2b998f2a6e82647f6f62c5945be730c340ae0e8ece444cf47385f0f23"
+    },
+    {
+      "project": "e02-022-refonte",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-022-refonte/index.html",
+      "original_sha256": "492c1e1f6fc4ffff927c51f5d9cecea76e257bf4313e29b8f93fdc0e6eee3bd2",
+      "versioned_sha256": "1ef42e428fe36302adbd78aa3ed95535ab158f4d2ba8bd4b106a68d88bbac3b2"
+    },
+    {
+      "project": "e02-023-legacy",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-023-legacy/index.html",
+      "original_sha256": "9f30130a8357a47c9099156536e362f439f2affa82d9b938e602a00efe149e6b",
+      "versioned_sha256": "9bac86e75fe1f499e4436be9db4bf39e1944dc4429adda6be88adbc8722e1720"
+    },
+    {
+      "project": "e02-024-relire-code",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-024-relire-code/index.html",
+      "original_sha256": "d2005703d4c09af2b3cc2d7b6af23ac1a2193b81f1d2a21463d38d642f0e67ed",
+      "versioned_sha256": "841b2a1d604ed6d47d9cf502281b9f017e7a464cc3463418bbd8b2b1ae04c38a"
+    },
+    {
+      "project": "e02-025-transformation",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-025-transformation/index.html",
+      "original_sha256": "0bd724393d356dc518364f9fc0baf1c93fa961e7b422629a2e89e0f1d3c41163",
+      "versioned_sha256": "2cad98856a5675a1bcd8b8a35c497cce0fabbc38394e36ab83a78d77f4d425f5"
+    },
+    {
+      "project": "e02-026-experience-echecs",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-026-experience-echecs/index.html",
+      "original_sha256": "ea30c67cb52cd47ecd47dfe53d70ef8e996c6c3f74cdd714c872eeac75c5b552",
+      "versioned_sha256": "93ab3d332b9d8aeff1b4676ed3386ce69a63b7916610e1dff5f6f649bd9558f5"
+    },
+    {
+      "project": "e02-027-metier-dev",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-027-metier-dev/index.html",
+      "original_sha256": "1ea4388b9ebfa7e68177abe6193f6f356972f78350c09f7e15af18421fe3e318",
+      "versioned_sha256": "e82f3a9f6747df1cc25982d53db94864163b4c4b860a009d3f60f1061226c491"
+    },
+    {
+      "project": "e02-028-pm-maquette",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-028-pm-maquette/index.html",
+      "original_sha256": "d0390d1ab439dcea5c8bc98fc04cda11d94cc09e6a6af5ff13da753f838ddab3",
+      "versioned_sha256": "8b64264aa9440fc4fc8121013f76efc0a94687d8889eac3ed58fe86cc55a6374"
+    },
+    {
+      "project": "e02-029-skills",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-029-skills/index.html",
+      "original_sha256": "fef6c254699237733d6367eddf7580fa00542d38966d1c3ce6e815d59890fb69",
+      "versioned_sha256": "0af99916ec776c4e56cd503f30be8d060718efe0ae53db29a58cee4007a7e9d0"
+    },
+    {
+      "project": "e02-030-regie",
+      "original_source": "exports/reseaux-sociaux/episode-02/revisions/camera-unique-v2/projects/e02-030-regie/index.html",
+      "original_sha256": "6e9b72dafb83e5f94a2163ffab32e3536347658610a2d30281f26b0705cd6f07",
+      "versioned_sha256": "61e7c1acf26929e0a4174f8ddf1470e4fa91d08932427bba613f00ff0ff7ee99"
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Un forfait IA épuisé en vingt minutes : notre retour</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 142.6909px;
+        top: 220px;
+        width: 434.6182px;
+        height: 830px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1931.6364px;
+        height: 1086.5455px;
+        left: -1457.7818px;
+        top: -156.9455px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="33.8"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LE RADAR / #02</div>
+        </div>
+        <h1>Un forfait IA épuisé en vingt minutes : notre retour</h1>
+      </header>
+      <div class="focus right">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-001-quotas-79.7-113.5.mp4"
+          playsinline
+          data-start="0"
+          data-duration="33.8"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.000"
+        data-duration="0.070"
+        data-track-index="3"
+      >
+        <span>?</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="0.070"
+        data-duration="1.960"
+        data-track-index="3"
+      >
+        <span>Moi j&#x27;ai un peu testé.</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="3.290"
+        data-duration="1.440"
+        data-track-index="3"
+      >
+        <span>A première vue c&#x27;est pas</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="4.730"
+        data-duration="0.280"
+        data-track-index="3"
+      >
+        <span>mal.</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="5.850"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>Mon seul problème avec c&#x27;est</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="7.250"
+        data-duration="1.580"
+        data-track-index="3"
+      >
+        <span>que j&#x27;ai claqué 100%</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="8.830"
+        data-duration="0.840"
+        data-track-index="3"
+      >
+        <span>en 20 minutes.</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="10.770"
+        data-duration="0.240"
+        data-track-index="3"
+      >
+        <span>Oui.</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="11.410"
+        data-duration="2.240"
+        data-track-index="3"
+      >
+        <span>Donc je vais lancer une tâche.</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="14.010"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span>Ce n&#x27;était pas la tâche</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="15.250"
+        data-duration="0.960"
+        data-track-index="3"
+      >
+        <span>la plus compliquée non plus.</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="16.370"
+        data-duration="0.740"
+        data-track-index="3"
+      >
+        <span>Je lui ai demandé de faire</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="17.110"
+        data-duration="2.520"
+        data-track-index="3"
+      >
+        <span>un petit jeu en 3JS</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="20.490"
+        data-duration="2.060"
+        data-track-index="3"
+      >
+        <span>et il a claqué 100%</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="22.550"
+        data-duration="1.640"
+        data-track-index="3"
+      >
+        <span>en 20 minutes et il m</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="24.190"
+        data-duration="0.860"
+        data-track-index="3"
+      >
+        <span>&#x27;a même pas fait le truc</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="25.050"
+        data-duration="0.360"
+        data-track-index="3"
+      >
+        <span>complet.</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="26.330"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>Après c&#x27;est peut-être lié</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="27.490"
+        data-duration="2.080"
+        data-track-index="3"
+      >
+        <span>aussi au...</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="29.570"
+        data-duration="1.980"
+        data-track-index="3"
+      >
+        <span>J&#x27;ai pas pris l&#x27;abonnement</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="31.550"
+        data-duration="0.720"
+        data-track-index="3"
+      >
+        <span>de moins cher mais j&#x27;ai</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="32.270"
+        data-duration="0.680"
+        data-track-index="3"
+      >
+        <span>pas pris le plus cher non</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="32.950"
+        data-duration="0.460"
+        data-track-index="3"
+      >
+        <span>plus en fait.</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 142.6909, top: 220.0, width: 434.6182, height: 830.0 }, 0);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1457.7818, top: -156.9455 },
+        0,
+      );
+    </script>
+  </body>
+</html>

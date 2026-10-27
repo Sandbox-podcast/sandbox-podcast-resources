@@ -1,0 +1,155 @@
+# Pile du POC 3 : LiveKit + Egress + Redis (Valkey) + stockage S3-compatible (SeaweedFS).
+# Usage (depuis ce dossier) : pnpm env:init && pnpm media:make && pnpm stack:up
+# Les secrets viennent de .local/.env, généré par `pnpm env:init` et ignoré par git.
+name: poc03
+
+services:
+  redis:
+    image: valkey/valkey:9.0.6-alpine
+    restart: unless-stopped
+
+  s3:
+    image: chrislusf/seaweedfs:3.99
+    command: server -s3 -s3.config=/etc/seaweedfs/s3.json -dir=/data
+    volumes:
+      - ./.local/s3.json:/etc/seaweedfs/s3.json:ro
+      - s3data:/data
+    ports:
+      - '8333:8333'
+    restart: unless-stopped
+
+  livekit:
+    image: livekit/livekit-server:v1.13.7
+    environment:
+      LIVEKIT_KEYS: '${LIVEKIT_API_KEY}: ${LIVEKIT_API_SECRET}'
+      # node_ip : adresse annoncée aux clients, joignable depuis le poste (Chrome) et depuis
+      # les conteneurs (Egress). TURN intégré, UDP seulement, pour tester le mode relais.
+      LIVEKIT_CONFIG: |
+        port: 7880
+        log_level: info
+        rtc:
+          tcp_port: 7881
+          udp_port: 7882
+          use_external_ip: false
+          node_ip: ${NODE_IP:-127.0.0.1}
+        redis:
+          address: redis:6379
+        turn:
+          enabled: true
+          udp_port: 3478
+          relay_range_start: 50100
+          relay_range_end: 50140
+          domain: localhost
+    ports:
+      - '7880:7880'
+      - '7881:7881'
+      - '7882:7882/udp'
+      - '3478:3478/udp'
+      - '50100-50140:50100-50140/udp'
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  egress:
+    image: livekit/egress:v1.14.1
+    environment:
+      EGRESS_CONFIG_BODY: |
+        log_level: info
+        api_key: ${LIVEKIT_API_KEY}
+        api_secret: ${LIVEKIT_API_SECRET}
+        ws_url: ws://livekit:7880
+        redis:
+          address: redis:6379
+        s3:
+          access_key: ${S3_ACCESS_KEY}
+          secret: ${S3_SECRET_KEY}
+          region: us-east-1
+          endpoint: http://s3:8333
+          bucket: ${S3_BUCKET}
+          force_path_style: true
+    # Dossier de travail sur l'hôte : les fichiers en cours d'enregistrement survivent à un crash
+    # du conteneur et peuvent être récupérés (voir src/lib/recovery.ts).
+    # Sorties locales : les fichiers terminés restent ici jusqu'à ce que notre envoyeur les ait
+    # transférés et vérifiés dans le stockage (voir src/lib/uploader.ts).
+    volumes:
+      - ./.local/egress-tmp:/home/egress/tmp
+      - ./.local/egress-out:/out
+    depends_on:
+      - redis
+      - livekit
+      - s3
+    # Pas de redémarrage automatique : Egress efface son dossier de travail au démarrage, la
+    # récupération des fichiers d'un crash doit passer avant (constaté dans S3b).
+    restart: 'no'
+
+  # Publieurs de test, lancés à la demande, par exemple :
+  #   docker compose --env-file .local/.env --profile publisher run --rm -d publisher-a
+  # Chacun publie une vidéo H.264 1080p30 et un audio Opus dans la salle ROOM, puis s'arrête.
+  publisher-a:
+    image: livekit/livekit-cli:v2.18.8
+    profiles: ['publisher']
+    environment: &publisher-env
+      LIVEKIT_URL: ws://livekit:7880
+      LIVEKIT_API_KEY: ${LIVEKIT_API_KEY}
+      LIVEKIT_API_SECRET: ${LIVEKIT_API_SECRET}
+    command: >-
+      room join --identity guest-a --fps 30 --publish /media/a.h264 --publish /media/a.ogg
+      --exit-after-publish ${ROOM:-poc3}
+    volumes:
+      - ./.local/media:/media:ro
+    depends_on:
+      - livekit
+
+  publisher-b:
+    image: livekit/livekit-cli:v2.18.8
+    profiles: ['publisher']
+    environment: *publisher-env
+    command: >-
+      room join --identity guest-b --fps 30 --publish /media/b.h264 --publish /media/b.ogg
+      --exit-after-publish ${ROOM:-poc3}
+    volumes:
+      - ./.local/media:/media:ro
+    depends_on:
+      - livekit
+
+  # POC 4 : trois publieurs identiques (médias à repères synchronisés, voir pocs/poc-04-multitrack-sync).
+  publisher-s1:
+    image: livekit/livekit-cli:v2.18.8
+    profiles: ['publisher']
+    environment: *publisher-env
+    command: >-
+      room join --identity guest-1 --fps 30 --publish /media/sync.h264 --publish /media/sync.ogg
+      --exit-after-publish ${ROOM:-poc3}
+    volumes:
+      - ./.local/media:/media:ro
+    depends_on:
+      - livekit
+
+  # POC 4 : trois publieurs identiques (médias à repères synchronisés, voir pocs/poc-04-multitrack-sync).
+  publisher-s2:
+    image: livekit/livekit-cli:v2.18.8
+    profiles: ['publisher']
+    environment: *publisher-env
+    command: >-
+      room join --identity guest-2 --fps 30 --publish /media/sync.h264 --publish /media/sync.ogg
+      --exit-after-publish ${ROOM:-poc3}
+    volumes:
+      - ./.local/media:/media:ro
+    depends_on:
+      - livekit
+
+  # POC 4 : trois publieurs identiques (médias à repères synchronisés, voir pocs/poc-04-multitrack-sync).
+  publisher-s3:
+    image: livekit/livekit-cli:v2.18.8
+    profiles: ['publisher']
+    environment: *publisher-env
+    command: >-
+      room join --identity guest-3 --fps 30 --publish /media/sync.h264 --publish /media/sync.ogg
+      --exit-after-publish ${ROOM:-poc3}
+    volumes:
+      - ./.local/media:/media:ro
+    depends_on:
+      - livekit
+
+volumes:
+  s3data:

@@ -1,0 +1,126 @@
+{
+  "downloaded_on": "2026-10-14",
+  "downloader": "sudodownloader 1.2.0",
+  "tracks": [
+    {
+      "title": "LA BETA",
+      "artist": "Nex/us (@nexus_42)",
+      "playlist_url": "https://suno.com/playlist/d996092c-e45b-4ab0-9f62-d43787b06952",
+      "song_url": "https://suno.com/song/04c1ea7d-5e06-44e6-a616-656d69639b3e",
+      "files": [
+        {
+          "role": "original",
+          "path": "d996092c-e45b-4ab0-9f62-d43787b06952/1 - LA BETA.m4a",
+          "bytes": 296711,
+          "sha256": "3c519bce9ff71471de21bf57277952e42d62850addfbc6330ff60e5d2ed8c264",
+          "duration_seconds": 17.96,
+          "codec": "opus",
+          "sample_rate": 48000,
+          "channels": 2,
+          "full_decode": "passed"
+        },
+        {
+          "role": "mp3",
+          "path": "d996092c-e45b-4ab0-9f62-d43787b06952/la-beta.mp3",
+          "bytes": 563576,
+          "sha256": "92adac3472315b87059e9b065c70a194356a58e06a0513cf0531c096074c09e5",
+          "duration_seconds": 17.9735,
+          "codec": "mp3",
+          "sample_rate": 48000,
+          "channels": 2,
+          "full_decode": "passed"
+        }
+      ]
+    },
+    {
+      "title": "Le clash",
+      "artist": "Nex/us (@nexus_42)",
+      "playlist_url": "https://suno.com/playlist/aca9f9de-105a-44a4-9bc1-1db5d580ac0c",
+      "song_url": "https://suno.com/song/37cdc52a-d915-4980-bc4a-1b02927048e1",
+      "files": [
+        {
+          "role": "original",
+          "path": "aca9f9de-105a-44a4-9bc1-1db5d580ac0c/1 - Le clash.m4a",
+          "bytes": 250486,
+          "sha256": "572e6198112b7b99814ca47ac96dbbe101c0b053267621dd3d4571ae3cbdf1e0",
+          "duration_seconds": 15.6,
+          "codec": "opus",
+          "sample_rate": 48000,
+          "channels": 2,
+          "full_decode": "passed"
+        },
+        {
+          "role": "mp3",
+          "path": "aca9f9de-105a-44a4-9bc1-1db5d580ac0c/le-clash.mp3",
+          "bytes": 469688,
+          "sha256": "e2aabb6fd8ddf56e8490195286c8420a4688f35d51385c30486819366e37752e",
+          "duration_seconds": 15.6135,
+          "codec": "mp3",
+          "sample_rate": 48000,
+          "channels": 2,
+          "full_decode": "passed"
+        }
+      ]
+    },
+    {
+      "title": "Le radar rap",
+      "artist": "Nex/us (@nexus_42)",
+      "playlist_url": "https://suno.com/playlist/bd0496fc-dcf1-497f-bf7c-068b3fcbbf80",
+      "song_url": "https://suno.com/song/5fb68722-2254-4e3f-8044-d7f7fb67e2ec",
+      "files": [
+        {
+          "role": "original",
+          "path": "bd0496fc-dcf1-497f-bf7c-068b3fcbbf80/1 - Le radar rap.m4a",
+          "bytes": 292618,
+          "sha256": "c92c256a09042252a1c302c4e8414446947538a213a5ff2e7e4c897a720b2ea9",
+          "duration_seconds": 18.4,
+          "codec": "opus",
+          "sample_rate": 48000,
+          "channels": 2,
+          "full_decode": "passed"
+        },
+        {
+          "role": "mp3",
+          "path": "bd0496fc-dcf1-497f-bf7c-068b3fcbbf80/le-radar-rap.mp3",
+          "bytes": 557432,
+          "sha256": "646763cbfae15135dd6b3845a3058fea29836a1103e4e8609ce2dcca5ca903a3",
+          "duration_seconds": 18.4135,
+          "codec": "mp3",
+          "sample_rate": 48000,
+          "channels": 2,
+          "full_decode": "passed"
+        }
+      ]
+    },
+    {
+      "title": "Générique Sandbox",
+      "artist": "Nex/us (@nexus_42)",
+      "playlist_url": "https://suno.com/playlist/76c021b3-a4dc-4890-b561-b8a775f2e623",
+      "song_url": "https://suno.com/song/e597f61c-72ad-4990-ae67-05e03144f5da",
+      "files": [
+        {
+          "role": "original",
+          "path": "76c021b3-a4dc-4890-b561-b8a775f2e623/1 - Générique Sandbox.m4a",
+          "bytes": 988538,
+          "sha256": "e74229cbd43f008a3e075aa1df060cbc0d4b934709ce4defe9d4f7671056a27a",
+          "duration_seconds": 63.56,
+          "codec": "opus",
+          "sample_rate": 48000,
+          "channels": 2,
+          "full_decode": "passed"
+        },
+        {
+          "role": "mp3",
+          "path": "76c021b3-a4dc-4890-b561-b8a775f2e623/generique-sandbox.mp3",
+          "bytes": 1882184,
+          "sha256": "75d77b74cf7c3c4493b8fa350ac45b9f6e00311e645a7bfee92f2778fa6a14ca",
+          "duration_seconds": 63.5735,
+          "codec": "mp3",
+          "sample_rate": 48000,
+          "channels": 2,
+          "full_decode": "passed"
+        }
+      ]
+    }
+  ]
+}

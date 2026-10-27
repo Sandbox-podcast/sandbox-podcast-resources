@@ -1,0 +1,17 @@
+{
+  "sha256": "24c6aaa18d3556324e11bfac17bc53148162ac7ef736d4a25cebdf8b01362947",
+  "duration": 772.4,
+  "bytes": 43601081,
+  "width": 1280,
+  "height": 720,
+  "audio": true,
+  "fullDecode": "passed",
+  "id": "e02-tickets",
+  "sourceVideoId": "7KVqydbGow0",
+  "sourceSha256": "f70b4fd2250c6b80592991f5a155bade44c9beab442ba6ad4e79f979dba43752",
+  "sourceStart": 4848.2,
+  "sourceEnd": 5617.6,
+  "endcardSeconds": 3,
+  "captionsReview": "automatic-transcript-to-review",
+  "publication": "not-uploaded"
+}

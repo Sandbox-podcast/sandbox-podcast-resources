@@ -1,0 +1,1104 @@
+{
+  "prepared_at": "2026-10-18",
+  "timezone": "Europe/Paris",
+  "scope": "Proposition locale de déplacement des sorties E02 déjà inscrites dans la file.",
+  "episode_02_target_window": {
+    "first_date": "2026-10-19",
+    "last_date": "2026-10-24",
+    "posts_per_platform_per_day": 5
+  },
+  "episode_03_expected_window": {
+    "first_date": "2026-10-25",
+    "last_date": "2026-11-01",
+    "date_confidence": "probable, selon la précision de Lou du 18 octobre"
+  },
+  "slots_by_platform": {
+    "youtube": ["09:00", "12:30", "16:00", "18:00", "20:30"],
+    "x": ["10:30", "12:30", "15:00", "17:30", "20:00"],
+    "tiktok": ["09:30", "12:30", "15:30", "18:00", "20:30"],
+    "instagram": ["10:00", "13:00", "15:00", "17:00", "20:00"]
+  },
+  "native_schedule_changed": true,
+  "entries": [
+    {
+      "clip_id": "E02-007",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-19T09:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T09:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "0UXV5Ex6638",
+      "current_url": "https://youtube.com/shorts/0UXV5Ex6638"
+    },
+    {
+      "clip_id": "E02-017",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-19T12:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "DZKIL0bqKyw",
+      "current_url": "https://youtube.com/shorts/DZKIL0bqKyw"
+    },
+    {
+      "clip_id": "E02-003",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-19T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T16:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "Lc4hn570eY0",
+      "current_url": "https://youtube.com/shorts/Lc4hn570eY0"
+    },
+    {
+      "clip_id": "E02-008",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-20T09:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T18:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "KXNJgY11fR4",
+      "current_url": "https://youtube.com/shorts/KXNJgY11fR4"
+    },
+    {
+      "clip_id": "E02-020",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-20T12:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T20:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "sA3PMqKaIRQ",
+      "current_url": "https://youtube.com/shorts/sA3PMqKaIRQ"
+    },
+    {
+      "clip_id": "E02-004",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-20T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T09:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "YDxz8mZKoLk",
+      "current_url": "https://youtube.com/shorts/YDxz8mZKoLk"
+    },
+    {
+      "clip_id": "E02-015",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-21T09:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "2-nKpriPOAc",
+      "current_url": "https://youtube.com/shorts/2-nKpriPOAc"
+    },
+    {
+      "clip_id": "E02-023",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-21T12:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T16:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "LbDAgSH6Bu0",
+      "current_url": "https://youtube.com/shorts/LbDAgSH6Bu0"
+    },
+    {
+      "clip_id": "E02-005",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-21T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T18:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "rw4VlPLmMGE",
+      "current_url": "https://youtube.com/shorts/rw4VlPLmMGE"
+    },
+    {
+      "clip_id": "E02-018",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-22T09:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T20:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "db5JMC5nWAw",
+      "current_url": "https://youtube.com/shorts/db5JMC5nWAw"
+    },
+    {
+      "clip_id": "E02-012",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-22T12:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T09:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "ohZg2mN0FP8",
+      "current_url": "https://youtube.com/shorts/ohZg2mN0FP8"
+    },
+    {
+      "clip_id": "E02-016",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-22T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "3hRy6z9TY6I",
+      "current_url": "https://youtube.com/shorts/3hRy6z9TY6I"
+    },
+    {
+      "clip_id": "E02-019",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-23T09:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T16:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "GwdRVw8O5a8",
+      "current_url": "https://youtube.com/shorts/GwdRVw8O5a8"
+    },
+    {
+      "clip_id": "E02-006",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-23T12:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T18:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "VBMQbFnmHxk",
+      "current_url": "https://youtube.com/shorts/VBMQbFnmHxk"
+    },
+    {
+      "clip_id": "E02-026",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-23T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T20:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "FAN1g37IRPA",
+      "current_url": "https://youtube.com/shorts/FAN1g37IRPA"
+    },
+    {
+      "clip_id": "E02-029",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-24T09:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T09:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "NpuAU_Ehm9o",
+      "current_url": "https://youtube.com/shorts/NpuAU_Ehm9o"
+    },
+    {
+      "clip_id": "E02-010",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-24T12:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "X06fR6ISfBo",
+      "current_url": "https://youtube.com/shorts/X06fR6ISfBo"
+    },
+    {
+      "clip_id": "E02-022",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-24T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T16:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "aAqY0BH1uCU",
+      "current_url": "https://youtube.com/shorts/aAqY0BH1uCU"
+    },
+    {
+      "clip_id": "E02-030",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-25T09:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-22T18:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "54NyXt0CmDY",
+      "current_url": "https://youtube.com/shorts/54NyXt0CmDY"
+    },
+    {
+      "clip_id": "E02-009",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-25T12:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-22T20:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "1weoOPomKkw",
+      "current_url": "https://youtube.com/shorts/1weoOPomKkw"
+    },
+    {
+      "clip_id": "E02-027",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-25T20:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T09:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "pSbxDwqhOGM",
+      "current_url": "https://youtube.com/shorts/pSbxDwqhOGM"
+    },
+    {
+      "clip_id": "E02-013",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-26T09:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "QEmH0EkTlBc",
+      "current_url": "https://youtube.com/shorts/QEmH0EkTlBc"
+    },
+    {
+      "clip_id": "E02-021",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-26T12:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T16:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "O7PV8r-Bq8M",
+      "current_url": "https://youtube.com/shorts/O7PV8r-Bq8M"
+    },
+    {
+      "clip_id": "E02-002",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-26T20:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T18:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "Mpb-xZGabuM",
+      "current_url": "https://youtube.com/shorts/Mpb-xZGabuM"
+    },
+    {
+      "clip_id": "E02-014",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-27T09:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T20:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "iHUIkUDubds",
+      "current_url": "https://youtube.com/shorts/iHUIkUDubds"
+    },
+    {
+      "clip_id": "E02-025",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-27T12:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T09:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "Wt22S5a6Zqs",
+      "current_url": "https://youtube.com/shorts/Wt22S5a6Zqs"
+    },
+    {
+      "clip_id": "E02-011",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-27T20:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "9Dgy0gC8shU",
+      "current_url": "https://youtube.com/shorts/9Dgy0gC8shU"
+    },
+    {
+      "clip_id": "E02-028",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-28T09:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T16:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "6tXk1eM-YfQ",
+      "current_url": "https://youtube.com/shorts/6tXk1eM-YfQ"
+    },
+    {
+      "clip_id": "E02-024",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-28T12:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T18:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "jLR-OzivxbM",
+      "current_url": "https://youtube.com/shorts/jLR-OzivxbM"
+    },
+    {
+      "clip_id": "E02-001",
+      "platform": "youtube",
+      "current_scheduled_local": "2026-10-28T20:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T20:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "2agV4WC1zWU",
+      "current_url": "https://youtube.com/shorts/2agV4WC1zWU"
+    },
+    {
+      "clip_id": "E02-007",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-19T11:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T09:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697941363861638422",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697941363861638422"
+    },
+    {
+      "clip_id": "E02-017",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-19T16:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697947425306070294",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697947425306070294"
+    },
+    {
+      "clip_id": "E02-003",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-19T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T15:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697945013128269078",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697945013128269078"
+    },
+    {
+      "clip_id": "E02-008",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-20T11:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T18:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697946742620278038",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697946742620278038"
+    },
+    {
+      "clip_id": "E02-020",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-20T16:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T20:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697948163549809942",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697948163549809942"
+    },
+    {
+      "clip_id": "E02-004",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-20T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T09:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697949413355916566",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697949413355916566"
+    },
+    {
+      "clip_id": "E02-015",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-21T11:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697950998920301846",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697950998920301846"
+    },
+    {
+      "clip_id": "E02-023",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-21T16:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T15:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697951416425418006",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697951416425418006"
+    },
+    {
+      "clip_id": "E02-005",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-21T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T18:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697951887877868822",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697951887877868822"
+    },
+    {
+      "clip_id": "E02-018",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-22T11:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T20:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697953401199414550",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697953401199414550"
+    },
+    {
+      "clip_id": "E02-012",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-22T16:05:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T09:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697953411056012566",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697953411056012566"
+    },
+    {
+      "clip_id": "E02-016",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-22T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697953404177468694",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697953404177468694"
+    },
+    {
+      "clip_id": "E02-019",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-23T11:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T15:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697961970271636758",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697961970271636758"
+    },
+    {
+      "clip_id": "E02-006",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-23T16:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T18:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697964126332751126",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697964126332751126"
+    },
+    {
+      "clip_id": "E02-026",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-23T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T20:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697954121839676694",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697954121839676694"
+    },
+    {
+      "clip_id": "E02-029",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-24T11:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T09:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697964716118887702",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697964716118887702"
+    },
+    {
+      "clip_id": "E02-010",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-24T16:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697966781973007638",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697966781973007638"
+    },
+    {
+      "clip_id": "E02-022",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-24T20:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T15:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697956242500652310",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697956242500652310"
+    },
+    {
+      "clip_id": "E02-030",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-25T11:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-22T18:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697965548142923010",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697965548142923010"
+    },
+    {
+      "clip_id": "E02-009",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-25T16:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-22T20:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697958312351927554",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697958312351927554"
+    },
+    {
+      "clip_id": "E02-027",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-25T20:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T09:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697958980236119318",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697958980236119318"
+    },
+    {
+      "clip_id": "E02-013",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-26T11:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697967443058216214",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697967443058216214"
+    },
+    {
+      "clip_id": "E02-021",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-26T16:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T15:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "7697968114260036886",
+      "current_url": "https://www.tiktok.com/@sandbox.talkshow/video/7697968114260036886"
+    },
+    {
+      "clip_id": "E02-002",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-26T20:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T18:00+02:00",
+      "current_status": "uploading",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-014",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-27T11:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T20:30+02:00",
+      "current_status": "queued_native_retry",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-025",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-27T16:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T09:30+02:00",
+      "current_status": "queued_native_retry",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-011",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-27T20:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T12:30+02:00",
+      "current_status": "queued_native_retry",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-028",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-28T11:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T15:30+02:00",
+      "current_status": "queued_native_retry",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-024",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-28T16:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T18:00+02:00",
+      "current_status": "queued_native_retry",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-001",
+      "platform": "tiktok",
+      "current_scheduled_local": "2026-10-28T20:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T20:30+02:00",
+      "current_status": "queued_native_retry",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-007",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-19T10:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T10:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "1136088638778331",
+      "current_url": "https://business.facebook.com/latest/posts/scheduled_posts?asset_id=1362145476982216&business_id=1606295391172453&ir_qe_exposed=1"
+    },
+    {
+      "clip_id": "E02-017",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-19T13:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T13:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "1642391494348694",
+      "current_url": "https://business.facebook.com/latest/posts/scheduled_posts?asset_id=1362145476982216&business_id=1606295391172453&ir_qe_exposed=1"
+    },
+    {
+      "clip_id": "E02-003",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-19T17:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T15:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "2373176370102206",
+      "current_url": "https://business.facebook.com/latest/posts/scheduled_posts?asset_id=1362145476982216&business_id=1606295391172453&ir_qe_exposed=1"
+    },
+    {
+      "clip_id": "E02-008",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-19T20:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T17:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "2052244282815455",
+      "current_url": "https://business.facebook.com/latest/posts/scheduled_posts?asset_id=1362145476982216&business_id=1606295391172453&ir_qe_exposed=1"
+    },
+    {
+      "clip_id": "E02-020",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-20T10:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T20:00+02:00",
+      "current_status": "needs_verification",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-004",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-20T13:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T10:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-015",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-20T17:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T13:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": "1679753910390006",
+      "current_url": "https://business.facebook.com/latest/posts/scheduled_posts?asset_id=1362145476982216&business_id=1606295391172453&ir_qe_exposed=1"
+    },
+    {
+      "clip_id": "E02-023",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-20T20:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T15:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-005",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-21T10:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T17:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-018",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-21T13:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T20:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-012",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-21T17:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T10:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-016",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-21T20:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T13:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-019",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-22T10:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T15:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-006",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-22T13:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T17:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-026",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-22T17:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T20:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-029",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-22T20:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T10:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-010",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-23T10:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T13:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-022",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-23T13:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T15:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-030",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-23T17:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T17:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-009",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-23T20:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-22T20:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-027",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-24T10:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-23T10:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-013",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-24T13:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-23T13:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-021",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-24T17:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-23T15:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-002",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-24T20:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-23T17:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-014",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-25T10:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T20:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-025",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-25T13:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T10:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-011",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-25T17:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T13:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-028",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-25T20:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T15:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-024",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-26T10:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T17:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-001",
+      "platform": "instagram",
+      "current_scheduled_local": "2026-10-26T13:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T20:00+02:00",
+      "current_status": "submitting",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-007",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-19T10:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T10:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-017",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-19T15:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-003",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-20T10:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T15:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-008",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-20T15:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T17:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-020",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-21T10:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-19T20:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-004",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-21T15:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T10:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-015",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-22T10:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-023",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-22T15:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T15:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-005",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-23T10:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T17:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-018",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-23T15:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-20T20:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-012",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-24T10:30:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T10:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-016",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-24T15:00:00+02:00",
+      "proposed_scheduled_local": "2026-10-21T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-019",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-25T10:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-21T15:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-006",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-25T15:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-21T17:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-026",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-26T10:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-21T20:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-029",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-26T15:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-22T10:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-010",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-27T10:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-22T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-022",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-27T15:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-22T15:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-030",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-28T10:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-22T17:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-009",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-28T15:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-22T20:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-027",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-29T10:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T10:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-013",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-29T15:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-021",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-30T10:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T15:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-002",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-30T15:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T17:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-014",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-31T10:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-23T20:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-025",
+      "platform": "x",
+      "current_scheduled_local": "2026-10-31T15:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T10:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-011",
+      "platform": "x",
+      "current_scheduled_local": "2026-11-01T10:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T12:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-028",
+      "platform": "x",
+      "current_scheduled_local": "2026-11-01T15:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T15:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-024",
+      "platform": "x",
+      "current_scheduled_local": "2026-11-02T10:30:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T17:30+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    },
+    {
+      "clip_id": "E02-001",
+      "platform": "x",
+      "current_scheduled_local": "2026-11-02T15:00:00+01:00",
+      "proposed_scheduled_local": "2026-10-24T20:00+02:00",
+      "current_status": "scheduled_confirmed",
+      "current_native_id": null,
+      "current_url": null
+    }
+  ]
+}

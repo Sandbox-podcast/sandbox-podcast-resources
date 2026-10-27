@@ -1,0 +1,11 @@
+{
+  "name": "episode-002-bis",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/server.test.mjs test/show.test.mjs"
+  },
+  "dependencies": {
+    "zod": "4.6.6"
+  }
+}

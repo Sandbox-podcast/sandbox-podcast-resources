@@ -1,0 +1,14 @@
+title = "Sandbox Podcast"
+
+[extend]
+useDefault = true
+
+# Faux positif du détecteur generic-api-key : ce libellé est un format vidéo
+# de l'archive, pas un secret. L'exception exige à la fois ce chemin et cette
+# ligne exacte ; toutes les autres détections restent actives.
+[[allowlists]]
+description = "Format vertical-9x16 dans le catalogue archivé"
+condition = "AND"
+paths = ['''(^|.*/)old/packages/episode-factory/src/catalog\.ts$''']
+regexTarget = "line"
+regexes = ['''^\s*\{ key: 'vertical-9x16', presetVersion: 1 \},\s*$''']

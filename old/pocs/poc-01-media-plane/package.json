@@ -1,0 +1,26 @@
+{
+  "name": "@podcast/poc-01-media-plane",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "node src/cli/build-client.ts",
+    "p1": "node src/cli/p1-publish.ts",
+    "gpu-info": "node src/cli/gpu-info.ts",
+    "encoder-support": "node src/cli/encoder-support.ts"
+  },
+  "dependencies": {
+    "@podcast/poc-03-server-recording": "workspace:*",
+    "livekit-client": "^2.22.3",
+    "livekit-server-sdk": "^2.19.1",
+    "playwright-core": "^1.63.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "exports": {
+    "./*": "./src/lib/*"
+  }
+}

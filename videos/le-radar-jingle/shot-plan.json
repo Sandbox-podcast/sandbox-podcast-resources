@@ -1,0 +1,152 @@
+{
+  "category": "kinetic-type",
+  "duration_s": 18.4135,
+  "fps": 30,
+  "canvas": {
+    "w": 1920,
+    "h": 1080,
+    "aspect": "16:9"
+  },
+  "style": "Jingle de variété vif en collage typographique 2D inspiré du générique de référence fourni par Lou : fond noir, lettres en cartons colorés, contours découpés et entrées élastiques. Le balayage du globe reste le signe propre au Radar; aucune donnée ou légende ajoutée.",
+  "palette": ["#08090B", "#ED493F", "#F2CB3F", "#42BEC6", "#7164C8", "#F7F0DF"],
+  "font": "Georgia Bold",
+  "beats": [0, 54, 138, 234, 333, 420, 474, 552],
+  "sync_timing": {
+    "mainHit_s": 4.95,
+    "finale_start_s": 14,
+    "logo_reveal_start_s": 14,
+    "logo_reveal_end_s": 15.8,
+    "logo_hold_end_s": 18.4135
+  },
+  "export": "mp4",
+  "asset_needs": [],
+  "block": "caption-kinetic-slam",
+  "customize": {
+    "target_scene": "title-slam",
+    "text": "LE RADAR",
+    "emphasis_words": ["RADAR"],
+    "font": "Georgia Bold",
+    "palette": ["#08090B", "#ED493F", "#F2CB3F", "#42BEC6", "#7164C8", "#F7F0DF"],
+    "accent": "RADAR apparaît lettre par lettre sur des cartons rouge, jaune, turquoise et violet, avec une ombre nette et un léger angle différent par carte.",
+    "timing": {
+      "entrance_start_s": 4.6,
+      "impact_s": 4.95,
+      "hold_through_s": 11.1
+    },
+    "layout": "Cartons de lettres larges au centre, devant le globe atténué; le balayage reste visible dans les espaces entre les cartes.",
+    "visual_motif": "Un balayage radar circulaire dessiné en traits épais traverse les cartons et fait apparaître quelques points abstraits, puis se resserre en un repère central. Aucun chiffre, nom de lieu ou texte supplémentaire.",
+    "supporting_assets": {
+      "hero": {
+        "project_file": "assets/hero.png",
+        "source_file": "apps/site/public/slides/episode-001/assets/radar-hero.png",
+        "treatment": "Plein cadre avec poussée caméra douce; préserver le globe, la grille circulaire et le faisceau cyan du visuel."
+      },
+      "official_logo": {
+        "project_file": "assets/sandbox-logov2.png",
+        "source_file": "apps/site/public/slides/episode-001/assets/sandbox-logov2.png",
+        "treatment": "Logo entier, proportions et couleurs intactes; révélation par masque ou fondu seulement."
+      }
+    },
+    "audio_source": {
+      "project_file": "assets/music.mp3",
+      "source_file": "media/audio/suno/bd0496fc-dcf1-497f-bf7c-068b3fcbbf80/le-radar-rap.mp3",
+      "duration_s": 18.4135,
+      "handling": "Démarrer à 0 s et garder toute la piste jusqu’à sa fin; ne pas couper, boucler, accélérer, étirer ou remplacer. Caler les accents du balayage et du titre sur les attaques réelles."
+    },
+    "hand_author": [
+      {
+        "scene": "orbit-scan",
+        "treatment": "Dessiner un secteur jaune et turquoise en rotation autour du globe, avec deux ou trois impulsions abstraites et des formes irrégulières qui répondent au mouvement; ne pas fabriquer de contenu cartographique ou de chiffres."
+      },
+      {
+        "scene": "reticle-collapse",
+        "treatment": "Faire converger les anneaux vers un point cyan au centre, sans secousse de caméra ni lueur permanente."
+      },
+      {
+        "scene": "sandbox-reveal",
+        "treatment": "Révéler le PNG assets/sandbox-logov2.png intact, puis tenir seul le logo sur fond bleu nuit."
+      }
+    ],
+    "sign_off": {
+      "logo": "assets/sandbox-logov2.png",
+      "reveal_start_s": 14,
+      "reveal_end_s": 15.8,
+      "hold_until_s": 18.4135,
+      "lockup": "Logo seul; aucun slogan ou URL ajouté."
+    }
+  },
+  "content": {
+    "scenes": [
+      {
+        "id": "signal-lock",
+        "start": 0,
+        "end": 1.8,
+        "text": "",
+        "emphasis_words": [],
+        "emotion": "accroche immédiate",
+        "motion": "Entrée depuis le bleu nuit vers le visuel assets/hero.png; le point central et le faisceau cyan s’allument au premier impact, sans titre secondaire.",
+        "beats": [0, 54]
+      },
+      {
+        "id": "orbit-scan",
+        "start": 1.8,
+        "end": 4.6,
+        "text": "",
+        "emphasis_words": [],
+        "emotion": "détection",
+        "motion": "Un secteur lumineux épais effectue un passage autour du globe; quelques points abstraits répondent par des impulsions brèves et les lettres-cartons s’éparpillent autour du centre.",
+        "beats": [54, 138]
+      },
+      {
+        "id": "title-slam",
+        "start": 4.6,
+        "end": 7.8,
+        "text": "LE RADAR",
+        "emphasis_words": ["RADAR"],
+        "emotion": "impact et découverte",
+        "motion": "Faire surgir les cartons de LE RADAR depuis plusieurs directions avec un rebond court; ne pas couvrir le centre lumineux du globe.",
+        "beats": [138, 234]
+      },
+      {
+        "id": "scan-through-title",
+        "start": 7.8,
+        "end": 11.1,
+        "text": "LE RADAR",
+        "emphasis_words": ["RADAR"],
+        "emotion": "affirmation",
+        "motion": "Tenir le titre lisible pendant qu’un dernier balayage passe derrière les lettres et allume brièvement les anneaux extérieurs.",
+        "beats": [234, 333]
+      },
+      {
+        "id": "reticle-collapse",
+        "start": 11.1,
+        "end": 14,
+        "text": "LE RADAR",
+        "emphasis_words": ["RADAR"],
+        "emotion": "concentration",
+        "motion": "Resserer les anneaux vers le point central; faire décroître le visuel et le titre ensemble vers un fond bleu nuit propre.",
+        "beats": [333, 420]
+      },
+      {
+        "id": "sandbox-reveal",
+        "start": 14,
+        "end": 15.8,
+        "text": "",
+        "emphasis_words": [],
+        "emotion": "signature",
+        "motion": "Révéler le logo Sandbox officiel depuis le point lumineux, sans le redessiner ni le recolorer.",
+        "beats": [420, 474]
+      },
+      {
+        "id": "end-hold",
+        "start": 15.8,
+        "end": 18.4135,
+        "text": "",
+        "emphasis_words": [],
+        "emotion": "résolution claire",
+        "motion": "Tenir le logo seul sur bleu nuit jusqu’à la fin exacte de la piste; coupe franche à sa fin.",
+        "beats": [474, 552]
+      }
+    ]
+  }
+}

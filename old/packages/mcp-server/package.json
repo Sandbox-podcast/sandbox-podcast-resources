@@ -1,0 +1,22 @@
+{
+  "name": "@podcast/mcp-server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "@podcast/collab": "workspace:*",
+    "@podcast/episode-factory": "workspace:*",
+    "@podcast/presentation-sandbox": "workspace:*",
+    "zod": "^4.6.5",
+    "yjs": "^13.6.33"
+  },
+  "devDependencies": {}
+}

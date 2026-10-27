@@ -1,0 +1,28 @@
+{
+  "name": "@podcast/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "env:init": "node src/cli/init-env.ts",
+    "db:up": "docker compose --env-file .local/.env up -d",
+    "db:down": "docker compose --env-file .local/.env down",
+    "migrate": "node src/cli/migrate.ts",
+    "create-user": "node src/cli/create-user.ts",
+    "start": "node src/server.ts"
+  },
+  "dependencies": {
+    "@podcast/collab": "workspace:*",
+    "@podcast/episode-factory": "workspace:*",
+    "@podcast/studio-control": "workspace:*",
+    "fastify": "^5.0.0",
+    "livekit-server-sdk": "^2.19.1",
+    "pg": "^8.13.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.0"
+  }
+}

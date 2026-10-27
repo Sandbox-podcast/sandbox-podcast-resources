@@ -1,0 +1,5 @@
+node_modules/
+dist/
+analysis/audio-16k.wav
+analysis/*.f32
+__pycache__/

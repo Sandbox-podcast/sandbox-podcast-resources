@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Faut-il encore lire les tickets quand on code avec l&#x27;IA ?</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 142.6909px;
+        top: 220px;
+        width: 434.6182px;
+        height: 830px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1931.6364px;
+        height: 1086.5455px;
+        left: -1457.7818px;
+        top: -156.9455px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="80.2"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LE CLASH / #02</div>
+        </div>
+        <h1>Faut-il encore lire les tickets quand on code avec l&#x27;IA ?</h1>
+      </header>
+      <div class="focus right">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-017-lire-tickets-4843.3-4923.5.mp4"
+          playsinline
+          data-start="0"
+          data-duration="80.2"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.160"
+        data-duration="1.620"
+        data-track-index="3"
+      >
+        <span>est ce que les développeurs ont</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="1.780"
+        data-duration="1.660"
+        data-track-index="3"
+      >
+        <span>encore besoin de lire les tickets</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="5.140"
+        data-duration="2.800"
+        data-track-index="3"
+      >
+        <span>juste pour aller</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="7.940"
+        data-duration="0.920"
+        data-track-index="3"
+      >
+        <span>un peu plus loin dans la</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="8.860"
+        data-duration="1.080"
+        data-track-index="3"
+      >
+        <span>question parce que la question a</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="9.940"
+        data-duration="1.740"
+        data-track-index="3"
+      >
+        <span>été un peu résumée en gros</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="11.680"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>c&#x27;est moi qui rédige les</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="13.140"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>questions pour les auditeurs donc en</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="14.680"
+        data-duration="2.340"
+        data-track-index="3"
+      >
+        <span>gros la question c&#x27;est dans</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="17.020"
+        data-duration="3.080"
+        data-track-index="3"
+      >
+        <span>un monde où les</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="20.100"
+        data-duration="1.300"
+        data-track-index="3"
+      >
+        <span>développeurs codent avec de l&#x27;IA</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="22.500"
+        data-duration="0.960"
+        data-track-index="3"
+      >
+        <span>est ce que vous avez besoin</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="23.460"
+        data-duration="0.800"
+        data-track-index="3"
+      >
+        <span>de lire les tickets ou est</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="24.260"
+        data-duration="0.920"
+        data-track-index="3"
+      >
+        <span>ce que juste vous copiez et</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="25.180"
+        data-duration="1.100"
+        data-track-index="3"
+      >
+        <span>collez les tickets vous le mettez</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="26.280"
+        data-duration="2.160"
+        data-track-index="3"
+      >
+        <span>dans l&#x27;IA est ce que</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="29.100"
+        data-duration="2.400"
+        data-track-index="3"
+      >
+        <span>les tickets sont rédigés par</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="31.500"
+        data-duration="0.920"
+        data-track-index="3"
+      >
+        <span>de l&#x27;IA ou ils sont</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="32.420"
+        data-duration="2.920"
+        data-track-index="3"
+      >
+        <span>rédigés par des humains il y</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="35.340"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>a plein de contexte différents mais</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="36.500"
+        data-duration="1.700"
+        data-track-index="3"
+      >
+        <span>moi la question c&#x27;est si</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="38.200"
+        data-duration="0.940"
+        data-track-index="3"
+      >
+        <span>c&#x27;est des humains qui font</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="39.140"
+        data-duration="1.260"
+        data-track-index="3"
+      >
+        <span>les tickets mais que vous vous</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="40.400"
+        data-duration="2.040"
+        data-track-index="3"
+      >
+        <span>codez avec de l&#x27;IA à</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="42.440"
+        data-duration="1.060"
+        data-track-index="3"
+      >
+        <span>quoi ça sert pour vous de</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="43.500"
+        data-duration="0.900"
+        data-track-index="3"
+      >
+        <span>lire les tickets est ce que</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="44.400"
+        data-duration="0.960"
+        data-track-index="3"
+      >
+        <span>vous avez encore besoin de lire</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="45.360"
+        data-duration="2.500"
+        data-track-index="3"
+      >
+        <span>les tickets moi</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="47.860"
+        data-duration="2.120"
+        data-track-index="3"
+      >
+        <span>je l&#x27;ai dit mais parce</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="49.980"
+        data-duration="2.560"
+        data-track-index="3"
+      >
+        <span>que j&#x27;aime bien vérifier en</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="52.540"
+        data-duration="0.780"
+        data-track-index="3"
+      >
+        <span>fait ce que fait l&#x27;IA</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="53.320"
+        data-duration="1.980"
+        data-track-index="3"
+      >
+        <span>par rapport à la demande initiale</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="55.300"
+        data-duration="1.780"
+        data-track-index="3"
+      >
+        <span>en fait si je lis pas</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="57.080"
+        data-duration="1.300"
+        data-track-index="3"
+      >
+        <span>le ticket l&#x27;IA elle me</span>
+      </div>
+      <div
+        id="caption-034"
+        class="clip caption"
+        data-start="58.380"
+        data-duration="0.920"
+        data-track-index="3"
+      >
+        <span>plonge un truc et elle me</span>
+      </div>
+      <div
+        id="caption-035"
+        class="clip caption"
+        data-start="59.300"
+        data-duration="1.140"
+        data-track-index="3"
+      >
+        <span>dit voilà je t&#x27;ai fait</span>
+      </div>
+      <div
+        id="caption-036"
+        class="clip caption"
+        data-start="60.440"
+        data-duration="1.320"
+        data-track-index="3"
+      >
+        <span>un carré vert sur un front</span>
+      </div>
+      <div
+        id="caption-037"
+        class="clip caption"
+        data-start="61.760"
+        data-duration="2.860"
+        data-track-index="3"
+      >
+        <span>bleu et c&#x27;est bon et</span>
+      </div>
+      <div
+        id="caption-038"
+        class="clip caption"
+        data-start="64.620"
+        data-duration="0.680"
+        data-track-index="3"
+      >
+        <span>ça se trouve c&#x27;était pas</span>
+      </div>
+      <div
+        id="caption-039"
+        class="clip caption"
+        data-start="65.300"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span>du tout ça en fait et</span>
+      </div>
+      <div
+        id="caption-040"
+        class="clip caption"
+        data-start="66.540"
+        data-duration="1.480"
+        data-track-index="3"
+      >
+        <span>pourtant dans l&#x27;intro tu t</span>
+      </div>
+      <div
+        id="caption-041"
+        class="clip caption"
+        data-start="68.020"
+        data-duration="3.260"
+        data-track-index="3"
+      >
+        <span>&#x27;as vu l&#x27;intro de</span>
+      </div>
+      <div
+        id="caption-042"
+        class="clip caption"
+        data-start="71.280"
+        data-duration="2.420"
+        data-track-index="3"
+      >
+        <span>Sandbox tu disais pas</span>
+      </div>
+      <div
+        id="caption-043"
+        class="clip caption"
+        data-start="73.700"
+        data-duration="0.820"
+        data-track-index="3"
+      >
+        <span>les tickets c&#x27;est vrai justement</span>
+      </div>
+      <div
+        id="caption-044"
+        class="clip caption"
+        data-start="75.620"
+        data-duration="2.680"
+        data-track-index="3"
+      >
+        <span>ouais c&#x27;est vrai</span>
+      </div>
+      <div
+        id="caption-045"
+        class="clip caption"
+        data-start="78.300"
+        data-duration="1.300"
+        data-track-index="3"
+      >
+        <span>je lis pas les tickets sauf</span>
+      </div>
+      <div
+        id="caption-046"
+        class="clip caption"
+        data-start="79.600"
+        data-duration="0.220"
+        data-track-index="3"
+      >
+        <span>là</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 142.6909, top: 220.0, width: 434.6182, height: 830.0 }, 0);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1457.7818, top: -156.9455 },
+        0,
+      );
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 49.8);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 49.8);
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 51.0);
+      tl.set(
+        '#focus',
+        { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 },
+        51.0,
+      );
+    </script>
+  </body>
+</html>

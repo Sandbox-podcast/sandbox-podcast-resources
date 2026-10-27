@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-20",
+  "tool": "image_gen intégré",
+  "identityReferences": [
+    "C:/github/sandbox-podcast/apps/site/public/team/lou-studio-lossless-v1.webp",
+    "C:/github/sandbox-podcast/apps/site/public/team/loic-studio-lossless-v1.webp",
+    "C:/github/sandbox-podcast/apps/site/public/team/nicolas-prod-2026-10-15.webp"
+  ],
+  "initialPrompts": [
+    "Use case: compositing. Asset: original premium theatrical movie one-sheet for a real tech talk show episode, portrait 2:3, ideally 1024x1536. The three supplied photos are identity references ONLY: image1 Lou, image2 Loïc, image3 Nicolas. Keep their individual facial features, hair, approximate age and recognizable likeness. Exactly these three real men, no fourth person. Re-stage and relight them as a coherent cinematic ensemble; not three cutouts, not a podcast-table screenshot, no microphones, no headphones. Natural serious thoughtful expressions. A sophisticated original cinema-poster composition with believable photographic lighting and a strong singular visual idea, bold purposeful negative space, elegant oversized film-title typography. Rich film grain, midnight navy blacks, fine art print quality, no distressed beige border, no comic font, no YouTube thumbnail styling, no stickers. Keep ALL title, episode label and names in bottom 36% ONLY; top 62% must contain only the dramatic imagery and optionally the brand SANDBOX so it can be cropped for translated artwork. The title must be extremely legible and immaculately spelled. Never invent awards, laurels, reviews, release dates, fake film credits or logos. No other text beyond the exact lines requested. Full bleed flat artwork, not a photographed poster mockup.\nEpisode 1 concept: a cerebral technological thriller about how the surrounding tools matter as much as the AI model. A large enigmatic luminous cyan geometric aperture in a vast dark architectural machine room, subtle glass and stacked interfaces without readable text. Cinematic double-exposure integration of the three hosts in the upper half: Lou central, slightly forward, Loïc and Nicolas either side, composed naturally into the light and atmospheric depth, not a horizontal row of pasted heads. Figures have realistic shoulders and proportions. A thin ivory/cyan beam leads downward through the composition. Color: icy cyan, midnight blue, ivory, small restrained warm skin accents. Dramatic confident serious visual storytelling rather than robot clichés.\nTypography in lower36%: exact brand \"SANDBOX\" small; exact episode line \"ÉPISODE 01\"; main enormous elegant condensed uppercase title across two or three balanced lines \"LE MODÈLE NE SUFFIT PAS\"; small final line \"LOU · LOÏC · NICOLAS\". Make the title occupy the lower central region at about67–88% of poster height. No subtitle.",
+    "Use case: compositing. Asset: original premium theatrical movie one-sheet for a real tech talk show episode, portrait 2:3, ideally 1024x1536. The three supplied photos are identity references ONLY: image1 Lou, image2 Loïc, image3 Nicolas. Keep their individual facial features, hair, approximate age and recognizable likeness. Exactly these three real men, no fourth person. Re-stage and relight them as a coherent cinematic ensemble; not three cutouts, not a podcast-table screenshot, no microphones, no headphones. Natural serious thoughtful expressions. A sophisticated original cinema-poster composition with believable photographic lighting and a strong singular visual idea, bold purposeful negative space, elegant oversized film-title typography. Rich film grain, midnight navy blacks, fine art print quality, no distressed beige border, no comic font, no YouTube thumbnail styling, no stickers. Keep ALL title, episode label and names in bottom 36% ONLY; top 62% must contain only the dramatic imagery and optionally the brand SANDBOX so it can be cropped for translated artwork. The title must be extremely legible and immaculately spelled. Never invent awards, laurels, reviews, release dates, fake film credits or logos. No other text beyond the exact lines requested. Full bleed flat artwork, not a photographed poster mockup.\nEpisode 2 concept: cinematic human-centered near-future drama about practical AI in everyday professions. The three recognizable hosts integrated into a beautifully lit atmospheric street-side workshop/café scene at dusk. Lou, Loïc and Nicolas as thoughtful ordinary people in dark casual clothing, not costumed workers; one foreground portrait slightly offcenter, two behind in a natural triangular composition. Warm golden window light, a workshop bench and a café counter subtly integrated below their shoulders, a slender luminous cyan reflection in the glass suggests technology without robots or floating UI. The visual should feel like a prestigious original film poster, authentic photographic depth, not a cutout montage of YouTube people. Palette: amber copper, deep navy, soft ivory title, restrained teal accents. Distinctively warmer and more human than episode1 while same typography family and premium print style.\nTypography in lower36%: exact brand \"SANDBOX\" small; exact episode line \"ÉPISODE 02\"; main enormous elegant condensed uppercase title across three balanced lines \"L’IA DANS VOTRE MÉTIER\"; small final line \"LOU · LOÏC · NICOLAS\". Title at approximately67–88% height. No subtitle."
+  ],
+  "intermediatePosters": [
+    "C:/Users/Lou/.codex/generated_images/01a158a4-3068-7a62-bc71-c5bd30744104/exec-ce2ee6a4-3f29-4d91-ada5-00050c1e379e.png",
+    "C:/Users/Lou/.codex/generated_images/01a158a4-3068-7a62-bc71-c5bd30744104/exec-192ad3ee-423b-4fdb-95d0-256b3256f7a3.png"
+  ],
+  "textFreeEditPrompts": [
+    "Use case: precise-object-edit. This image is the edit target. Produce a clean TEXT-FREE version of this exact cinematic poster artwork, same 2:3 aspect and full resolution. Preserve the three hosts' identities, facial features, poses, photographic lighting, scenery, composition, all image content in the upper60%, and the dark navy film grain atmosphere. Remove absolutely ALL typography from the image: SANDBOX, episode number, title, names, any tiny screen lettering. Inpaint these letter areas seamlessly using the existing deep dark navy texture and lighting behind them. The bottom38% must remain a beautiful dark atmospheric empty area for a live HTML title to be overlaid later. Do not fill the space with new objects or brighter detail. Keep a subtle original cyan glow near the imagery but the bottom field must be dark and quiet. Also remove the small anonymous standing silhouette at the bottom of the architecture, leaving only the three large identifiable hosts and the empty reflective steps. No text, no logos, no numbers, no credits, no labels anywhere. No other changes. This is a production image edit, not a mockup.",
+    "Use case: precise-object-edit. This image is the edit target. Produce a clean TEXT-FREE version of this exact cinematic poster artwork, same 2:3 aspect and full resolution. Preserve the three hosts' identities, facial features, poses, photographic lighting, scenery, composition, all image content in the upper60%, and the dark navy film grain atmosphere. Remove absolutely ALL typography from the image: SANDBOX, episode number, title, names, any tiny screen lettering. Inpaint these letter areas seamlessly using the existing deep dark navy texture and lighting behind them. The bottom38% must remain a beautiful dark atmospheric empty area for a live HTML title to be overlaid later. Do not fill the space with new objects or brighter detail. Keep a subtle original warm amber glow near the imagery but the bottom field must be dark and quiet.  No text, no logos, no numbers, no credits, no labels anywhere. No other changes. This is a production image edit, not a mockup."
+  ],
+  "finals": [
+    {
+      "videoId": "GgSiPkADCz4",
+      "source": "C:/Users/Lou/.codex/generated_images/01a158a4-3068-7a62-bc71-c5bd30744104/exec-9f241764-026c-46c4-9e22-a65c465506a5.png",
+      "output": "apps/site/public/images/home/replays/episode-001-cinema-v2.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 161988
+    },
+    {
+      "videoId": "7KVqydbGow0",
+      "source": "C:/Users/Lou/.codex/generated_images/01a158a4-3068-7a62-bc71-c5bd30744104/exec-2808ff8f-81d2-4d10-a225-f13efb080535.png",
+      "output": "apps/site/public/images/home/replays/episode-002-cinema-v2.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 168224
+    }
+  ],
+  "conversion": {
+    "tool": "sharp",
+    "webpQuality": 88,
+    "resize": false
+  },
+  "scope": "Décors sans texte réservés aux affiches de la salle cinéma. Titres localisés en HTML."
+}

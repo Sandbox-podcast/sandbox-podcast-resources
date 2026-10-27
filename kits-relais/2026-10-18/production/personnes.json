@@ -1,0 +1,65 @@
+{
+  "lou": {
+    "name": "Lou",
+    "github": "loukan42",
+    "photo": "lou.png",
+    "tag": "Usages, produit et jeux",
+    "headline": ["Une idée.", "Un usage concret."],
+    "clipStart": 3369.95,
+    "clipEnd": 3399.6,
+    "one": "Faire fonctionner un jeu et donner envie d'y rejouer sont deux problèmes différents.\n\nAvec Loïc et Nico, on en parle dans le premier épisode de SANDBOX. L'IA accélère la fabrication ; le plaisir de jouer demande toujours des essais. C'est un sujet qui me parle, entre jeux, produit et pédagogie.\n\nQu'est-ce qui vous fait abandonner un prototype qui fonctionne pourtant ?",
+    "oneLink": "https://youtu.be/GgSiPkADCz4?t=4307",
+    "two": "Un artisan décrit une intervention dans un vocal. Comment en faire un brouillon de devis à partir de ses propres tarifs ?\n\nDans SANDBOX #2, on explore des tâches de ce type pour les commerces, la restauration et l'artisanat. Ce sont des pistes à examiner, avec les informations et documents à vérifier par le professionnel.\n\nQuelle tâche répétitive de votre métier aimeriez-vous simplifier en premier ?",
+    "twoLink": "https://youtu.be/7KVqydbGow0?t=2990",
+    "posts": [
+      "Un jeu peut fonctionner sans donner envie d'y rejouer. Avec Loïc et Nico, on parle de ce décalage entre produire du code et créer du plaisir de jeu dans SANDBOX #1.\nhttps://youtu.be/GgSiPkADCz4?t=4307",
+      "Un vocal pour préparer un devis, un assistant pour les réservations : dans SANDBOX #2, on explore les tâches du quotidien à simplifier avec l'IA. Des pistes à vérifier, pas des gains promis.\nhttps://youtu.be/7KVqydbGow0?t=2990",
+      "Avant de demander une application à l'IA, il faut réussir à décrire le besoin. Dans SANDBOX #2, on discute de cette étape souvent oubliée.\nhttps://youtu.be/7KVqydbGow0?t=4577"
+    ],
+    "profile": "Je coanime [SANDBOX](https://www.youtube.com/@SandboxFR) avec Loïc et Nico. On y parle d'IA, de développement et d'usages concrets. Je m'intéresse notamment au produit, aux jeux et à la pédagogie.",
+    "context": "Dans l'épisode 2, Lou présente les cas d'usage métier. Dans l'épisode 1, le sujet des jeux est une discussion du trio, introduite par Nicolas ; le texte de Lou ne lui attribue pas cette présentation.",
+    "clipSourceVideoId": "7KVqydbGow0"
+  },
+  "loic": {
+    "name": "Loïc",
+    "github": "azerothl",
+    "photo": "loic.png",
+    "tag": "IA locale et open source",
+    "headline": ["Choisir ses outils.", "Garder la main."],
+    "clipStart": 5182.3,
+    "clipEnd": 5195.8,
+    "one": "Quand on choisit un agent de développement, le modèle n'est qu'une partie de la discussion. Le harnais, les outils et la possibilité de changer de fournisseur comptent aussi.\n\nAvec Lou et Nico, on confronte nos usages de Codex, Claude Code et OpenCode dans SANDBOX #1. Une discussion qui rejoint mon intérêt pour l'IA locale et l'open source.\n\nQu'est-ce qui vous ferait changer de harnais ?",
+    "oneLink": "https://youtu.be/GgSiPkADCz4?t=2290",
+    "two": "Si l'IA réalise le développement, de quel contexte le développeur a-t-il encore besoin ?\n\nDans SANDBOX #2, on débat des tickets, des maquettes et de ce qu'il faut comprendre pour vérifier le résultat. Les usages diffèrent selon les projets ; on garde nos désaccords dans l'échange.\n\nDans votre équipe, qu'est-ce qu'un ticket doit absolument contenir ?",
+    "twoLink": "https://youtu.be/7KVqydbGow0?t=4848",
+    "posts": [
+      "Codex, Claude Code, OpenCode : le choix du modèle ne règle pas celui du harnais. Avec Lou et Nico, on confronte nos usages dans SANDBOX #1.\nhttps://youtu.be/GgSiPkADCz4?t=2290",
+      "L'IA code à partir du ticket. Que doit comprendre le développeur pour vérifier le résultat ? On en débat dans SANDBOX #2, avec des avis différents selon le contexte.\nhttps://youtu.be/7KVqydbGow0?t=4848",
+      "IA locale, open source, création : je coanime SANDBOX avec Lou et Nico pour confronter ce qu'on utilise et ce qu'on construit. Les deux premiers épisodes sont sur la chaîne.\nhttps://www.youtube.com/@SandboxFR"
+    ],
+    "profile": "Je coanime [SANDBOX](https://www.youtube.com/@SandboxFR) avec Lou et Nico : IA, développement et open source. J'y partage mes questions et mes usages autour de l'IA locale et des outils de création.",
+    "context": "Les textes reprennent les thèmes documentés de Loïc. Ils ne lui attribuent pas une citation précise ni un résultat de benchmark. Ses identifiants LinkedIn et X ne sont pas présents dans la fiche locale ; le kit reste utilisable sans les inventer.",
+    "clipSourceVideoId": "7KVqydbGow0"
+  },
+  "nico": {
+    "name": "Nico",
+    "github": "MarlBurroW",
+    "photo": "nicolas-prod-2026-10-15.webp",
+    "tag": "Agents et développement",
+    "headline": ["Des agents.", "Du contexte."],
+    "clipStart": 4591.0,
+    "clipEnd": 4622.1,
+    "one": "Sillage réunit plusieurs agents de code dans un même espace de travail. Dans SANDBOX #1, je le présente à Lou et Loïc, puis on débat de ce qu'apporte cette couche au-dessus des harnais.\n\nLe dépôt et les sources sont accessibles. Je suis curieux de vos façons d'organiser les sessions, le contexte et les outils.\n\nQu'est-ce qui vous manque dans votre environnement actuel ?",
+    "oneLink": "https://youtu.be/GgSiPkADCz4?t=1550",
+    "two": "Une maquette montre un comportement. Un ticket décrit un besoin. L'IA doit ensuite intervenir dans un projet qui a déjà ses contraintes.\n\nAvec Lou et Loïc, on débat dans SANDBOX #2 de la place de ces supports, de la lecture des tickets et du contexte nécessaire pour vérifier le résultat.\n\nQu'est-ce que vous transmettez réellement à vos agents avant de les laisser coder ?",
+    "twoLink": "https://youtu.be/7KVqydbGow0?t=4848",
+    "posts": [
+      "Dans SANDBOX #1, je présente Sillage à Lou et Loïc : plusieurs agents de code dans un espace de travail. Puis on débat des harnais et du contexte.\nhttps://youtu.be/GgSiPkADCz4?t=1550",
+      "Avec l'IA, faut-il encore lire les tickets ? La discussion devient vite une question de contexte, de maquettes et de vérification. Le débat de SANDBOX #2 :\nhttps://youtu.be/7KVqydbGow0?t=4848",
+      "Sillage est open source. Si vous voulez regarder ce qu'il y a derrière la présentation de SANDBOX, le dépôt est ici :\nhttps://github.com/MarlBurroW/sillage"
+    ],
+    "profile": "Je coanime [SANDBOX](https://www.youtube.com/@SandboxFR) avec Lou et Loïc. On y confronte nos usages de l'IA et des agents de développement. J'y présente notamment [Sillage](https://github.com/MarlBurroW/sillage), mon espace de travail pour les agents de code.",
+    "context": "La présentation de Sillage est attribuée à Nicolas dans le chapitrage de l'épisode 1. Les formulations du kit restent des propositions à adapter, pas des citations de l'émission.",
+    "clipSourceVideoId": "7KVqydbGow0"
+  }
+}

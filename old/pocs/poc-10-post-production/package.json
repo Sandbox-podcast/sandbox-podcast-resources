@@ -1,0 +1,14 @@
+{
+  "name": "@podcast/poc-10-post-production",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "e2e": "node src/run-e2e.ts"
+  },
+  "dependencies": {
+    "@podcast/poc-04-multitrack-sync": "workspace:*",
+    "@podcast/post-production": "workspace:*"
+  }
+}

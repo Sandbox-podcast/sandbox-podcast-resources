@@ -1,0 +1,106 @@
+source,url,http,lecture,articles_recents,limite
+There's An AI For That,https://newsletter.theresanaiforthat.com/,403,indisponible,0,HTTP 403
+The Rundown AI,https://www.therundown.ai/,200,complete,5,
+Superhuman AI,https://www.superhuman.ai/,200,complete,6,
+TLDR AI,https://tldr.tech/ai/archives,200,complete,6,
+Techpresso,https://techpresso.co/,200,complete,6,
+The Deep View,https://www.thedeepview.com/,200,complete,6,
+The Neuron,https://www.theneurondaily.com/,200,complete,6,
+The AI Report,https://www.theaireport.ai/,200,complete,6,
+AlphaSignal,https://alphasignal.ai/,200,complete,6,
+Futurepedia,https://newsletter.futurepedia.io/,200,complete,4,
+OpenAI,https://openai.com/news/,403,indisponible,0,HTTP 403
+OpenAI API,https://developers.openai.com/api/docs/changelog,200,indisponible,0,Aucune entrée datée avec ancre publique détectée
+ChatGPT,https://help.openai.com/en/articles/6825453-chatgpt-release-notes,403,indisponible,0,HTTP 403
+Anthropic / Claude,https://www.anthropic.com/news,200,complete,6,
+Claude API,https://platform.claude.com/docs/en/release-notes/overview,200,complete,12,
+Google AI,https://blog.google/technology/ai/,200,complete,3,
+Gemini API,https://ai.google.dev/gemini-api/docs/changelog,200,complete,3,
+Google DeepMind,https://deepmind.google/blog/,200,complete,6,
+xAI / Grok,https://x.ai/news,403,indisponible,0,HTTP 403
+Meta AI,https://ai.meta.com/blog/,200,indisponible,0,Date de publication exploitable absente
+Mistral AI,https://mistral.ai/news/,200,partielle,1,Lecture partielle
+DeepSeek,https://www.deepseek.com/en/news/,200,complete,0,
+Alibaba Qwen,https://qwenlm.github.io/blog/,200,complete,0,
+Alibaba Cloud,https://www.alibabacloud.com/blog,200,indisponible,0,Date de publication exploitable absente
+Cohere,https://cohere.com/blog,200,complete,3,
+AI21 Labs,https://www.ai21.com/blog/,200,complete,3,
+MiniMax / MiniMax Audio,https://www.minimax.io/news,200,complete,0,
+ByteDance Seed,https://seed.bytedance.com/en/research/,200,partielle,0,Lecture partielle
+Liquid AI,https://www.liquid.ai/news/models,200,complete,3,
+Arcee AI,https://www.arcee.ai/blog,200,complete,0,
+Allen Institute for AI,https://allenai.org/research,200,indisponible,0,Date de publication exploitable absente
+Perplexity,https://www.perplexity.ai/en-GB/hub/blog,200,indisponible,0,Aucun article public détecté
+NVIDIA AI,https://developer.nvidia.com/blog/category/generative-ai/,200,complete,6,
+Apple ML,https://machinelearning.apple.com/,200,complete,3,
+Higgsfield,https://higgsfield.ai/blog,200,complete,0,
+Higgsfield Changelog,https://higgsfield.ai/creator-hub/changelog,200,complete,10,
+Runway News,https://runway.com/news,200,indisponible,0,Aucun article public détecté
+Runway Research,https://runway.com/research,200,complete,0,
+Midjourney,https://updates.midjourney.com/,200,complete,1,
+Midjourney Changelog,https://updates.midjourney.com/tag/changelog/,200,complete,1,
+Kling AI,https://kling.ai/blog,200,complete,6,
+Kling AI Release History,https://kling.ai/release-note/release-history,200,indisponible,0,Aucune entrée datée avec ancre publique détectée
+Pika,https://pika.art/blog,200,complete,0,
+Luma AI,https://lumalabs.ai/news,200,complete,6,
+PixVerse News,https://pixverse.ai/en/news,200,indisponible,0,Aucun article public détecté
+PixVerse Blog,https://pixverse.ai/en/blog,200,complete,6,
+Vidu AI,https://www.vidu.com/blog,200,complete,0,
+Krea AI,https://www.krea.ai/blog/,200,complete,0,
+Recraft,https://www.recraft.ai/blog,200,complete,6,
+Ideogram,https://ideogram.ai/blog/,200,complete,2,
+Black Forest Labs / FLUX,https://bfl.ai/blog,200,complete,1,
+Stability AI,https://stability.ai/news-updates,200,complete,0,
+Leonardo AI,https://leonardo.ai/news,403,indisponible,0,HTTP 403
+Hedra,https://www.hedra.com/blog,200,complete,1,
+HeyGen,https://www.heygen.com/blog,200,complete,0,
+Synthesia,https://www.synthesia.io/blog,200,complete,0,
+D-ID,https://www.d-id.com/blog/,200,complete,2,
+Captions,https://captions.ai/blog,200,complete,0,
+Photoroom,https://www.photoroom.com/blog,200,complete,3,
+Canva,https://www.canva.com/newsroom/news/,403,indisponible,0,HTTP 403
+Magnific,https://www.magnific.com/blog/,200,complete,1,
+ElevenLabs,https://elevenlabs.io/blog,200,complete,0,
+ElevenLabs Changelog,https://elevenlabs.io/docs/changelog,200,complete,16,
+Suno,https://suno.com/blog,200,partielle,1,Lecture partielle
+Udio,https://www.udio.com/blog,200,complete,0,
+SOUNDRAW,https://soundraw.io/blog,200,indisponible,0,Aucun article public détecté
+AIVA,https://www.aiva.ai/blog,200,indisponible,0,Aucun article public détecté
+Descript,https://www.descript.com/blog,200,complete,1,
+Cursor,https://cursor.com/blog,200,complete,0,
+Cursor Changelog,https://cursor.com/changelog,200,complete,3,
+Lovable,https://lovable.dev/blog,200,complete,4,
+Lovable Changelog,https://docs.lovable.dev/changelog,200,complete,8,
+Bolt.new,https://bolt.new/blog,200,complete,6,
+Replit,https://replit.com/blog,200,complete,2,
+Devin / Cognition,https://cognition.com/blog,200,complete,1,
+GitHub Copilot,https://github.blog/ai-and-ml/github-copilot/,200,complete,3,
+GitHub Copilot Changelog,https://github.blog/changelog/label/copilot/,200,complete,6,
+Vercel / v0,https://vercel.com/blog,200,complete,6,
+LangChain,https://www.langchain.com/blog,200,complete,2,
+LlamaIndex,https://www.llamaindex.ai/blog,200,indisponible,0,Date de publication exploitable absente
+Microsoft Copilot,https://www.microsoft.com/en-us/copilot/blog/,200,complete,2,
+Microsoft AI,https://news.microsoft.com/source/topics/ai/,200,partielle,0,Lecture partielle
+Google Labs,https://blog.google/technology/google-labs/,200,complete,0,
+Google Cloud AI,https://cloud.google.com/blog/products/ai-machine-learning,200,complete,4,
+AWS AI,https://aws.amazon.com/blogs/machine-learning/,200,complete,4,
+Genspark,https://www.genspark.ai/blog,200,partielle,0,Lecture partielle
+Notion AI,https://www.notion.com/releases,200,complete,1,
+Figma AI,https://www.figma.com/blog/ai/,200,complete,5,
+Hugging Face,https://huggingface.co/blog,200,complete,5,
+Hugging Face Papers,https://huggingface.co/papers,200,partielle,4,Lecture partielle
+Replicate,https://replicate.com/blog,200,complete,0,
+Together AI,https://www.together.ai/blog,200,partielle,0,Lecture partielle
+Fireworks AI,https://fireworks.ai/blog,200,complete,0,
+Modal,https://modal.com/blog,200,complete,1,
+Qdrant,https://qdrant.tech/blog/,200,complete,4,
+Pinecone,https://www.pinecone.io/blog/,200,complete,1,
+Arena,https://arena.ai/blog,200,complete,3,
+TechCrunch AI,https://techcrunch.com/category/artificial-intelligence/,200,complete,6,
+The Verge AI,https://www.theverge.com/ai-artificial-intelligence,200,complete,5,
+VentureBeat AI,https://venturebeat.com/ai/,429,indisponible,0,HTTP 429
+The Decoder,https://www.the-decoder.com/,200,partielle,1,Lecture partielle
+MIT Technology Review,https://www.technologyreview.com/topic/artificial-intelligence/,200,indisponible,0,Date de publication exploitable absente
+MarkTechPost,https://www.marktechpost.com/,403,indisponible,0,HTTP 403
+AI News,https://www.artificialintelligence-news.com/,200,complete,6,
+InfoQ AI,https://www.infoq.com/ai-ml-data-eng/,200,complete,6,

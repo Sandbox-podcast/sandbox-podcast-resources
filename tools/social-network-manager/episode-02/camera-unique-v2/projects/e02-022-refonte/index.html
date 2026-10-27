@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Faut-il tout recoder avec l&#x27;IA ou repenser le produit ?</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 142.6909px;
+        top: 220px;
+        width: 434.6182px;
+        height: 830px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1931.6364px;
+        height: 1086.5455px;
+        left: -1457.7818px;
+        top: -156.9455px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="40.3"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LE CLASH / #02</div>
+        </div>
+        <h1>Faut-il tout recoder avec l&#x27;IA ou repenser le produit ?</h1>
+      </header>
+      <div class="focus right">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-022-refonte-5661.8-5702.1.mp4"
+          playsinline
+          data-start="0"
+          data-duration="40.3"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.180"
+        data-duration="1.200"
+        data-track-index="3"
+      >
+        <span>je pense que c&#x27;est overkill</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="2.400"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>je pense que tout n&#x27;a</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="4.000"
+        data-duration="2.260"
+        data-track-index="3"
+      >
+        <span>pas besoin d&#x27;être recodé je</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="6.260"
+        data-duration="1.220"
+        data-track-index="3"
+      >
+        <span>pense que si ça fonctionne bien</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="7.480"
+        data-duration="2.640"
+        data-track-index="3"
+      >
+        <span>autant le laisser tranquille et</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="10.120"
+        data-duration="1.440"
+        data-track-index="3"
+      >
+        <span>plutôt se focus sur des nouveaux</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="11.560"
+        data-duration="2.040"
+        data-track-index="3"
+      >
+        <span>trucs que de reprendre du legacy</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="14.160"
+        data-duration="1.080"
+        data-track-index="3"
+      >
+        <span>juste pour le mettre à jour</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="15.240"
+        data-duration="2.180"
+        data-track-index="3"
+      >
+        <span>je pense justement si tu veux</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="17.420"
+        data-duration="2.640"
+        data-track-index="3"
+      >
+        <span>faire une refonte autant</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="20.060"
+        data-duration="1.840"
+        data-track-index="3"
+      >
+        <span>vraiment repenser l&#x27;ensemble du produit</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="22.660"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>plutôt que de reprendre un produit</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="24.120"
+        data-duration="2.440"
+        data-track-index="3"
+      >
+        <span>qui marchait il</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="26.560"
+        data-duration="2.360"
+        data-track-index="3"
+      >
+        <span>y a 20 ans autant vraiment</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="28.920"
+        data-duration="1.500"
+        data-track-index="3"
+      >
+        <span>repenser l&#x27;ensemble des usages du</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="30.420"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>truc et plutôt que de faire</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="32.020"
+        data-duration="1.620"
+        data-track-index="3"
+      >
+        <span>un truc un pour un faire</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="33.640"
+        data-duration="2.600"
+        data-track-index="3"
+      >
+        <span>une nouvelle version on t&#x27;aidance</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="36.240"
+        data-duration="1.080"
+        data-track-index="3"
+      >
+        <span>avec l&#x27;IA si tu veux</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="37.320"
+        data-duration="2.640"
+        data-track-index="3"
+      >
+        <span>mais redeveloppe complètement ton produit</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 142.6909, top: 220.0, width: 434.6182, height: 830.0 }, 0);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1457.7818, top: -156.9455 },
+        0,
+      );
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 19.2);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 19.2);
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 20.400000000000002);
+      tl.set(
+        '#focus',
+        { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 },
+        20.400000000000002,
+      );
+    </script>
+  </body>
+</html>

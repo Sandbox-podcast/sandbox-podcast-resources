@@ -1,0 +1,63 @@
+<template id="sandbox-lockup-template">
+  <div
+    data-hf-id="hf-dn4y"
+    id="sandbox-lockup-root"
+    class="sandbox-lockup-root"
+    data-composition-id="sandbox-lockup"
+    data-fps="30"
+    data-width="1920"
+    data-height="1080"
+  >
+    <div data-hf-id="hf-hcre" id="sandbox-lockup-mask">
+      <img
+        data-hf-id="hf-f3da"
+        id="sandbox-logo-image"
+        src="assets/sandbox-logov2.png"
+        alt="Sandbox"
+      />
+    </div>
+  </div>
+  <style>
+    #sandbox-lockup-root {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    #sandbox-lockup-mask {
+      position: absolute;
+      left: 50%;
+      bottom: 78px;
+      width: 690px;
+      height: 230px;
+      transform: translateX(-50%);
+      clip-path: inset(0 50% 0 50%);
+      overflow: hidden;
+    }
+
+    #sandbox-logo-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
+  <script>
+    (function () {
+      const timeline = gsap.timeline({ paused: true });
+
+      timeline.fromTo(
+        '#sandbox-lockup-mask',
+        { clipPath: 'inset(0 50% 0 50%)' },
+        { clipPath: 'inset(0 0% 0 0%)', duration: 0.9, ease: 'power3.out' },
+        0,
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines['sandbox-lockup'] = timeline;
+      timeline.seek(0);
+    })();
+  </script>
+</template>

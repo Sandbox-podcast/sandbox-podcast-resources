@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-19T07:15:37.208Z",
+  "clips": 30,
+  "publication_rows": 120,
+  "unique_rows": true,
+  "local_files_present": true,
+  "timezone_verified": "Europe/Paris",
+  "counts": {
+    "youtube:published_confirmed": 3,
+    "tiktok:scheduled_confirmed": 29,
+    "instagram:published_confirmed": 1,
+    "x:published_confirmed": 1,
+    "instagram:scheduled_confirmed": 29,
+    "x:scheduled_confirmed": 29,
+    "youtube:scheduled_confirmed": 27,
+    "tiktok:published_confirmed": 1
+  }
+}

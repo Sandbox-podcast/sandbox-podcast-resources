@@ -1,0 +1,9 @@
+[project]
+name = "sandbox-youtube-growth"
+version = "0.1.0"
+description = "Automatisation de la chaîne YouTube SANDBOX"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

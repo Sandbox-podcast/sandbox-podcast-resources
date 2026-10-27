@@ -1,0 +1,17 @@
+{
+  "sha256": "0b4c3578c4e6b46e91094043e9046b2241da709ae09417ec990896ce18db3b4a",
+  "duration": 266.2,
+  "bytes": 14132650,
+  "width": 1280,
+  "height": 720,
+  "audio": true,
+  "fullDecode": "passed",
+  "id": "e01-jeux",
+  "sourceVideoId": "GgSiPkADCz4",
+  "sourceSha256": "4e52c89fc9e5dacd09f90282ed5a29b04748f4f423ea487d8dd01dcd1bee15ae",
+  "sourceStart": 4305.8,
+  "sourceEnd": 4569,
+  "endcardSeconds": 3,
+  "captionsReview": "automatic-transcript-to-review",
+  "publication": "not-uploaded"
+}

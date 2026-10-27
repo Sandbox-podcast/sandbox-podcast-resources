@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Boulangers : mieux anticiper les quantités à produire</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 36px;
+        top: 447.562px;
+        width: 648px;
+        height: 374.876px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1370.9752px;
+        height: 771.1736px;
+        left: -567.6694px;
+        top: -240.9917px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="45.08"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LES MÉTIERS / #02</div>
+        </div>
+        <h1>Boulangers : mieux anticiper les quantités à produire</h1>
+      </header>
+      <div class="focus slide">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-012-boulanger-3551.2-3596.28.mp4"
+          playsinline
+          data-start="0"
+          data-duration="45.08"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.080"
+        data-duration="1.920"
+        data-track-index="3"
+      >
+        <span>ensuite pour les boulangers ça c</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="2.000"
+        data-duration="1.380"
+        data-track-index="3"
+      >
+        <span>&#x27;est intéressant le gros challenge des</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="3.380"
+        data-duration="3.780"
+        data-track-index="3"
+      >
+        <span>boulangers c&#x27;est de pas gâcher</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="7.160"
+        data-duration="2.140"
+        data-track-index="3"
+      >
+        <span>de la nourriture c&#x27;est compliqué</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="9.300"
+        data-duration="1.080"
+        data-track-index="3"
+      >
+        <span>parce que chaque jour il n</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="10.380"
+        data-duration="0.520"
+        data-track-index="3"
+      >
+        <span>&#x27;y a pas le même nombre</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="10.900"
+        data-duration="1.960"
+        data-track-index="3"
+      >
+        <span>de clients qui viennent etc et</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="12.860"
+        data-duration="1.620"
+        data-track-index="3"
+      >
+        <span>en fait les gens ils consomment</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="14.960"
+        data-duration="2.280"
+        data-track-index="3"
+      >
+        <span>en fonction de la météo en</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="17.240"
+        data-duration="1.780"
+        data-track-index="3"
+      >
+        <span>fonction des événements qui peuvent y</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="19.020"
+        data-duration="2.760"
+        data-track-index="3"
+      >
+        <span>avoir des jours fériés et des</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="21.780"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>habitudes d&#x27;achat le mercredi il</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="23.180"
+        data-duration="1.380"
+        data-track-index="3"
+      >
+        <span>va y avoir plus d&#x27;enfants</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="24.560"
+        data-duration="0.800"
+        data-track-index="3"
+      >
+        <span>donc peut-être que tu avantes</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="25.360"
+        data-duration="1.580"
+        data-track-index="3"
+      >
+        <span>plus de trucs sucrés que d</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="26.940"
+        data-duration="2.600"
+        data-track-index="3"
+      >
+        <span>&#x27;autres jours le</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="29.540"
+        data-duration="1.140"
+        data-track-index="3"
+      >
+        <span>samedi, le dimanche les gens ils</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="30.680"
+        data-duration="1.380"
+        data-track-index="3"
+      >
+        <span>vont pas au bureau donc tu</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="32.060"
+        data-duration="0.960"
+        data-track-index="3"
+      >
+        <span>avantes moins de sandwich il y</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="33.020"
+        data-duration="0.680"
+        data-track-index="3"
+      >
+        <span>a plein de trucs comme ça</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="33.700"
+        data-duration="1.280"
+        data-track-index="3"
+      >
+        <span>et en gros l&#x27;IA elle va</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="34.980"
+        data-duration="1.660"
+        data-track-index="3"
+      >
+        <span>connaître toutes tes habitudes elle va</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="36.640"
+        data-duration="1.820"
+        data-track-index="3"
+      >
+        <span>connaître tous les paramètres de météo,</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="38.640"
+        data-duration="1.220"
+        data-track-index="3"
+      >
+        <span>d&#x27;événements et tout et va</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="39.860"
+        data-duration="2.120"
+        data-track-index="3"
+      >
+        <span>pouvoir faire des prédictions sur la</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="41.980"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>quantité, les volumes de trucs que</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="43.520"
+        data-duration="1.560"
+        data-track-index="3"
+      >
+        <span>tu dois cuisiner pour le lendemain</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 36.0, top: 447.562, width: 648.0, height: 374.876 }, 0);
+      tl.set('#focus', { width: 1370.9752, height: 771.1736, left: -567.6694, top: -240.9917 }, 0);
+      tl.set(
+        '.focus',
+        { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 },
+        10.200000000000001,
+      );
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 10.200000000000001);
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 11.4);
+      tl.set(
+        '#focus',
+        { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 },
+        11.4,
+      );
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 27.0);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 27.0);
+      tl.set(
+        '.focus',
+        { left: 95.9091, top: 220.0, width: 528.1818, height: 830.0 },
+        28.200000000000003,
+      );
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1361.2, top: -156.9455 },
+        28.200000000000003,
+      );
+    </script>
+  </body>
+</html>

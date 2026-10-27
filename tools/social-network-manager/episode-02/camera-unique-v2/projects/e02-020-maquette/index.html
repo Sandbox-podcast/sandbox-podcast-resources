@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Une maquette peut-elle remplacer un ticket ? Le débat</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 36px;
+        top: 230px;
+        width: 648px;
+        height: 810px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1885.0909px;
+        height: 1060.3636px;
+        left: -265.0909px;
+        top: -153.1636px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="117.0"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LE CLASH / #02</div>
+        </div>
+        <h1>Une maquette peut-elle remplacer un ticket ? Le débat</h1>
+      </header>
+      <div class="focus main">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-020-maquette-5342.8-5459.8.mp4"
+          playsinline
+          data-start="0"
+          data-duration="117.0"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.160"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>je vois ce que vous dites</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="2.080"
+        data-duration="2.520"
+        data-track-index="3"
+      >
+        <span>mais moi je</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="4.600"
+        data-duration="0.980"
+        data-track-index="3"
+      >
+        <span>vais vous dire que je suis</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="5.580"
+        data-duration="1.180"
+        data-track-index="3"
+      >
+        <span>pas d&#x27;accord avec vous pour</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="6.760"
+        data-duration="2.260"
+        data-track-index="3"
+      >
+        <span>moi les développeurs ils ont plus</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="9.020"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>besoin de dire les tickets et</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="10.180"
+        data-duration="1.740"
+        data-track-index="3"
+      >
+        <span>pourquoi parce que pour moi à</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="11.920"
+        data-duration="2.300"
+        data-track-index="3"
+      >
+        <span>l&#x27;ère de l&#x27;IA les</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="14.220"
+        data-duration="1.980"
+        data-track-index="3"
+      >
+        <span>PO ça ne sert à rien</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="16.200"
+        data-duration="1.080"
+        data-track-index="3"
+      >
+        <span>de rédiger des tickets pour moi</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="17.280"
+        data-duration="0.580"
+        data-track-index="3"
+      >
+        <span>le PO c&#x27;est qu&#x27;il</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="17.860"
+        data-duration="3.260"
+        data-track-index="3"
+      >
+        <span>doit vous fournir un développeur même</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="21.120"
+        data-duration="1.780"
+        data-track-index="3"
+      >
+        <span>si c&#x27;est une application légitime</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="22.900"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>après moi je parle du Sass</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="24.440"
+        data-duration="1.880"
+        data-track-index="3"
+      >
+        <span>pas des projets où vous encotez</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="26.320"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>des frameworks, des trucs fous techniques</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="28.300"
+        data-duration="1.440"
+        data-track-index="3"
+      >
+        <span>mais imaginons on a un produit</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="29.740"
+        data-duration="1.440"
+        data-track-index="3"
+      >
+        <span>légitime ça fait 10 ans qu</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="31.180"
+        data-duration="1.920"
+        data-track-index="3"
+      >
+        <span>&#x27;il existe le produit étape numéro</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="33.100"
+        data-duration="1.340"
+        data-track-index="3"
+      >
+        <span>1 en tant que product manager</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="34.440"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>de ce produit, tu le recote</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="35.980"
+        data-duration="1.760"
+        data-track-index="3"
+      >
+        <span>entièrement avec l&#x27;IA pour avoir</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="37.740"
+        data-duration="2.700"
+        data-track-index="3"
+      >
+        <span>la maquette pour avoir</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="40.440"
+        data-duration="2.340"
+        data-track-index="3"
+      >
+        <span>accès à tout produit et ensuite</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="42.780"
+        data-duration="1.900"
+        data-track-index="3"
+      >
+        <span>tu veux rajouter une feature tu</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="44.680"
+        data-duration="1.220"
+        data-track-index="3"
+      >
+        <span>vibe quoi de la feature dans</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="45.900"
+        data-duration="2.180"
+        data-track-index="3"
+      >
+        <span>cette maquette une fois que ça</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="48.080"
+        data-duration="2.120"
+        data-track-index="3"
+      >
+        <span>fonctionne comme tu veux tu vas</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="50.200"
+        data-duration="1.560"
+        data-track-index="3"
+      >
+        <span>la tester avec les utilisateurs, avec</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="51.760"
+        data-duration="1.100"
+        data-track-index="3"
+      >
+        <span>tes early adopters tu fais ce</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="52.860"
+        data-duration="0.840"
+        data-track-index="3"
+      >
+        <span>que tu veux, tu la test</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="53.700"
+        data-duration="1.380"
+        data-track-index="3"
+      >
+        <span>une fois qu&#x27;elle est validée</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="55.080"
+        data-duration="0.980"
+        data-track-index="3"
+      >
+        <span>qu&#x27;elle peut partir en dev</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="56.060"
+        data-duration="2.620"
+        data-track-index="3"
+      >
+        <span>tu vas voir les développeurs tu</span>
+      </div>
+      <div
+        id="caption-034"
+        class="clip caption"
+        data-start="58.680"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>vas voir ton IA aussi tu</span>
+      </div>
+      <div
+        id="caption-035"
+        class="clip caption"
+        data-start="60.220"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>dis à ton IA arrêtis-moi</span>
+      </div>
+      <div
+        id="caption-036"
+        class="clip caption"
+        data-start="61.380"
+        data-duration="2.200"
+        data-track-index="3"
+      >
+        <span>le prompt pour que les développeurs</span>
+      </div>
+      <div
+        id="caption-037"
+        class="clip caption"
+        data-start="63.580"
+        data-duration="1.260"
+        data-track-index="3"
+      >
+        <span>puissent développer la feature qu&#x27;on</span>
+      </div>
+      <div
+        id="caption-038"
+        class="clip caption"
+        data-start="64.840"
+        data-duration="0.840"
+        data-track-index="3"
+      >
+        <span>vient de faire ensemble dans la</span>
+      </div>
+      <div
+        id="caption-039"
+        class="clip caption"
+        data-start="65.680"
+        data-duration="2.100"
+        data-track-index="3"
+      >
+        <span>maquette tu vas voir les développeurs</span>
+      </div>
+      <div
+        id="caption-040"
+        class="clip caption"
+        data-start="67.780"
+        data-duration="1.620"
+        data-track-index="3"
+      >
+        <span>tu leur montres comment elle fonctionne</span>
+      </div>
+      <div
+        id="caption-041"
+        class="clip caption"
+        data-start="69.400"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>la feature en démo, ça prend</span>
+      </div>
+      <div
+        id="caption-042"
+        class="clip caption"
+        data-start="70.940"
+        data-duration="1.300"
+        data-track-index="3"
+      >
+        <span>5 minutes la feature a montré,</span>
+      </div>
+      <div
+        id="caption-043"
+        class="clip caption"
+        data-start="72.420"
+        data-duration="1.800"
+        data-track-index="3"
+      >
+        <span>tu leur donnes le prompt que</span>
+      </div>
+      <div
+        id="caption-044"
+        class="clip caption"
+        data-start="74.220"
+        data-duration="0.820"
+        data-track-index="3"
+      >
+        <span>l&#x27;IA t&#x27;a fait pour</span>
+      </div>
+      <div
+        id="caption-045"
+        class="clip caption"
+        data-start="75.040"
+        data-duration="1.960"
+        data-track-index="3"
+      >
+        <span>développer la feature et je vois</span>
+      </div>
+      <div
+        id="caption-046"
+        class="clip caption"
+        data-start="77.000"
+        data-duration="0.880"
+        data-track-index="3"
+      >
+        <span>pas ce que tu peux bien</span>
+      </div>
+      <div
+        id="caption-047"
+        class="clip caption"
+        data-start="77.880"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>faire de plus pour les aider</span>
+      </div>
+      <div
+        id="caption-048"
+        class="clip caption"
+        data-start="79.040"
+        data-duration="1.480"
+        data-track-index="3"
+      >
+        <span>pour faire la feature parce que</span>
+      </div>
+      <div
+        id="caption-049"
+        class="clip caption"
+        data-start="80.520"
+        data-duration="0.800"
+        data-track-index="3"
+      >
+        <span>c&#x27;est pas moi vous vous</span>
+      </div>
+      <div
+        id="caption-050"
+        class="clip caption"
+        data-start="81.320"
+        data-duration="1.340"
+        data-track-index="3"
+      >
+        <span>indiquez où je vous explique les</span>
+      </div>
+      <div
+        id="caption-051"
+        class="clip caption"
+        data-start="82.660"
+        data-duration="2.160"
+        data-track-index="3"
+      >
+        <span>trucs où un humain il va</span>
+      </div>
+      <div
+        id="caption-052"
+        class="clip caption"
+        data-start="84.820"
+        data-duration="2.200"
+        data-track-index="3"
+      >
+        <span>oublier la moitié des trucs et</span>
+      </div>
+      <div
+        id="caption-053"
+        class="clip caption"
+        data-start="87.020"
+        data-duration="1.300"
+        data-track-index="3"
+      >
+        <span>au pire tu as saut tout</span>
+      </div>
+      <div
+        id="caption-054"
+        class="clip caption"
+        data-start="88.320"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>ce que je sais je l</span>
+      </div>
+      <div
+        id="caption-055"
+        class="clip caption"
+        data-start="89.480"
+        data-duration="0.820"
+        data-track-index="3"
+      >
+        <span>&#x27;ai déjà dit à mon IA</span>
+      </div>
+      <div
+        id="caption-056"
+        class="clip caption"
+        data-start="90.300"
+        data-duration="1.500"
+        data-track-index="3"
+      >
+        <span>elle l&#x27;a déjà mis dans</span>
+      </div>
+      <div
+        id="caption-057"
+        class="clip caption"
+        data-start="91.800"
+        data-duration="2.560"
+        data-track-index="3"
+      >
+        <span>le prompt quand je</span>
+      </div>
+      <div
+        id="caption-058"
+        class="clip caption"
+        data-start="94.360"
+        data-duration="1.060"
+        data-track-index="3"
+      >
+        <span>vais te filer un prompt qui</span>
+      </div>
+      <div
+        id="caption-059"
+        class="clip caption"
+        data-start="95.420"
+        data-duration="2.140"
+        data-track-index="3"
+      >
+        <span>fait un MMO tu vas pas</span>
+      </div>
+      <div
+        id="caption-060"
+        class="clip caption"
+        data-start="97.560"
+        data-duration="1.820"
+        data-track-index="3"
+      >
+        <span>t&#x27;amuser à le dire je</span>
+      </div>
+      <div
+        id="caption-061"
+        class="clip caption"
+        data-start="99.380"
+        data-duration="0.880"
+        data-track-index="3"
+      >
+        <span>suis d&#x27;accord avec toi mais</span>
+      </div>
+      <div
+        id="caption-062"
+        class="clip caption"
+        data-start="100.260"
+        data-duration="1.260"
+        data-track-index="3"
+      >
+        <span>que sur certains types de projets</span>
+      </div>
+      <div
+        id="caption-063"
+        class="clip caption"
+        data-start="101.520"
+        data-duration="2.060"
+        data-track-index="3"
+      >
+        <span>tu vois là on parle de</span>
+      </div>
+      <div
+        id="caption-064"
+        class="clip caption"
+        data-start="103.580"
+        data-duration="1.480"
+        data-track-index="3"
+      >
+        <span>projets vraiment ou tu as un</span>
+      </div>
+      <div
+        id="caption-065"
+        class="clip caption"
+        data-start="105.060"
+        data-duration="3.100"
+        data-track-index="3"
+      >
+        <span>front tout à une nuit mais</span>
+      </div>
+      <div
+        id="caption-066"
+        class="clip caption"
+        data-start="108.160"
+        data-duration="1.200"
+        data-track-index="3"
+      >
+        <span>c&#x27;est pas forcément toujours le</span>
+      </div>
+      <div
+        id="caption-067"
+        class="clip caption"
+        data-start="109.360"
+        data-duration="1.000"
+        data-track-index="3"
+      >
+        <span>cas il y a des 8,</span>
+      </div>
+      <div
+        id="caption-068"
+        class="clip caption"
+        data-start="110.480"
+        data-duration="1.040"
+        data-track-index="3"
+      >
+        <span>il y a des projets où</span>
+      </div>
+      <div
+        id="caption-069"
+        class="clip caption"
+        data-start="111.520"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>tu peux avoir un ticket qui</span>
+      </div>
+      <div
+        id="caption-070"
+        class="clip caption"
+        data-start="112.980"
+        data-duration="1.980"
+        data-track-index="3"
+      >
+        <span>traite que du back end tu</span>
+      </div>
+      <div
+        id="caption-071"
+        class="clip caption"
+        data-start="114.960"
+        data-duration="2.040"
+        data-track-index="3"
+      >
+        <span>vois il</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 0);
+      tl.set('#focus', { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 }, 0);
+    </script>
+  </body>
+</html>

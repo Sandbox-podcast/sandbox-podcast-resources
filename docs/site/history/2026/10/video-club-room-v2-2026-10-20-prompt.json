@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-20",
+  "tool": "Built-in image_gen",
+  "mode": "edit",
+  "input": "apps/site/public/video-club/room-photoreal-v1.webp",
+  "output": "apps/site/public/images/rooms/video-club-room-v2.webp",
+  "sourcePng": "C:/Users/Lou/.codex/generated_images/01a158a4-3068-7a62-bc71-c5bd30744104/exec-1c667c94-52a5-4329-ad11-5c620e1caa27.png",
+  "width": 1672,
+  "height": 941,
+  "webpQuality": 89,
+  "prompt": "Use case: lighting-weather with precise material edit. Edit the supplied video store interior photograph, preserving EXACT camera framing, image aspect ratio 1672:941, perspective, all object silhouettes and positions. This is a background plate with HTML project posters aligned onto its empty shelves: geometric alignment is critical. Keep all THREE shelving bays, every vertical bay divider, every horizontal shelf edge, every top blank sign panel at the EXACT same pixel positions and sizes as the input. Preserve the counter, CRT television, side posters, side VHS shelves, plants, ceiling fixtures, and all existing lettering exactly. Add no objects, no new lettering, no tapes or artworks inside the three empty shelving bays. Change only materials/colors/lighting: transform into a nighttime 1990s video club with a striking cold color identity, strongly different from a warm amber wood podcast studio. Shelving frames now graphite metal and dark stained wood, empty back panels deep cool navy, thin physically plausible icy CYAN BLUE light integrated under existing shelf edges strongly illuminating the empty bays. Existing SANDBOX VIDÉO CLUB and OUVERT neon become vivid raspberry RED, with a red magenta wash on ceiling and upper wall. Existing cream bay headers become muted cool silver-gray, remain blank and readable for later HTML labels. Existing warm yellow wall stripe becomes muted red-cyan detail without moving. Floor becomes anthracite dark slightly reflective textured concrete, subtle cyan and raspberry reflections. Lower overall exposure and remove amber/golden light, while keeping every shelf and project placement area easily readable. Photoreal cinematic night photography, convincing physical light, disciplined palette of cyan, graphite and raspberry red. Keep visual geometry exactly unchanged, no cropping, no zoom, no rotation, no added UI, no watermarks."
+}

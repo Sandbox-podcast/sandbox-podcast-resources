@@ -1,0 +1,16 @@
+node_modules/
+.pnpm-store/
+.npm/
+.venv/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.local/
+**/.state/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-14",
+  "provenance": "Valeurs transcrites depuis l'interface officielle PageSpeed Insights, examinée dans le navigateur. Les URL des rapports permettent de retrouver les diagnostics. Aucun JSON Lighthouse brut ni trace complète n'a été exporté.",
+  "mobile_method": "Une navigation initiale par page, Moto G Power émulé, connexion 4G lente, Lighthouse 13.5.0, HeadlessChromium 153.0.8010.36. Le cache du CDN n'est pas contrôlé. Aucun INP terrain disponible. TBT ne remplace pas INP. Deux passages de l'épisode ont été relevés ; le second n'a pas reproduit le CLS du premier.",
+  "field_data": "L'interface indique Aucune donnée sur les pages examinées. Cela ne démontre ni zéro visiteur ni de bons Core Web Vitals.",
+  "reports": [
+    {
+      "path": "/",
+      "device": "mobile",
+      "captured_local": "2026-10-14 19:05 Europe/Paris",
+      "report_url": "https://pagespeed.web.dev/analysis/https-www-sandboxpodcast-fr/fewnazij2v?form_factor=mobile",
+      "performance": 89,
+      "accessibility": 100,
+      "best_practices": 100,
+      "seo": 100,
+      "fcp_seconds_displayed": 1.7,
+      "lcp_seconds_displayed": 3.6,
+      "tbt_ms_displayed": 30,
+      "cls": 0.01,
+      "speed_index_seconds_displayed": 3.2,
+      "diagnostics": {
+        "image_savings_kib_estimated": 93,
+        "unused_js_kib_estimated": 104,
+        "render_blocking_ms_estimated": 1320
+      }
+    },
+    {
+      "path": "/",
+      "device": "desktop",
+      "captured_local": "2026-10-14 19:05 Europe/Paris",
+      "report_url": "https://pagespeed.web.dev/analysis/https-www-sandboxpodcast-fr/fewnazij2v?form_factor=desktop",
+      "method": "Émulation ordinateur, limitation personnalisée par PageSpeed, navigation initiale. Paramètres CPU détaillés non relevés.",
+      "performance": 97,
+      "accessibility": 100,
+      "best_practices": 100,
+      "seo": 100,
+      "fcp_seconds_displayed": 0.4,
+      "lcp_seconds_displayed": 0.8,
+      "tbt_ms_displayed": 60,
+      "cls": 0.012,
+      "speed_index_seconds_displayed": 1.5
+    },
+    {
+      "path": "/episodes/1",
+      "device": "mobile",
+      "captured_local": "2026-10-14 19:07 Europe/Paris",
+      "report_url": "https://pagespeed.web.dev/analysis/https-www-sandboxpodcast-fr-episodes-1/2aufxlhx5j?form_factor=mobile",
+      "performance": 84,
+      "accessibility": 100,
+      "best_practices": 100,
+      "seo": 100,
+      "fcp_seconds_displayed": 2.0,
+      "lcp_seconds_displayed": 2.9,
+      "tbt_ms_displayed": 20,
+      "cls": 0.205,
+      "speed_index_seconds_displayed": 2.0,
+      "diagnostics": {
+        "shifted_element": "main#main",
+        "image_savings_kib_estimated": 100,
+        "unused_js_kib_estimated": 104,
+        "render_blocking_ms_estimated": 1590
+      },
+      "root_cause": "Non isolée. Le déplacement de main est observé, mais ne désigne pas à lui seul la cause en amont."
+    },
+    {
+      "path": "/charts/github",
+      "device": "mobile",
+      "captured_local": "2026-10-14 19:10 Europe/Paris",
+      "report_url": "https://pagespeed.web.dev/analysis/https-www-sandboxpodcast-fr-charts-github/k9dfo3omgf?form_factor=mobile",
+      "performance": 87,
+      "accessibility": 100,
+      "best_practices": 96,
+      "seo": 100,
+      "fcp_seconds_displayed": 2.0,
+      "lcp_seconds_displayed": 3.8,
+      "tbt_ms_displayed": 0,
+      "cls": 0.007,
+      "speed_index_seconds_displayed": 2.8,
+      "diagnostics": {
+        "image_savings_kib_estimated": 62,
+        "unused_js_kib_estimated": 102,
+        "render_blocking_ms_estimated": 1590
+      }
+    },
+    {
+      "path": "/nos-projets",
+      "device": "mobile",
+      "captured_local": "2026-10-14 19:14 Europe/Paris",
+      "report_url": "https://pagespeed.web.dev/analysis/https-www-sandboxpodcast-fr-nos-projets/ys197b6xhq?form_factor=mobile",
+      "performance": 87,
+      "accessibility": 97,
+      "best_practices": 96,
+      "seo": 100,
+      "fcp_seconds_displayed": 1.7,
+      "lcp_seconds_displayed": 3.8,
+      "tbt_ms_displayed": 90,
+      "cls": 0.007,
+      "speed_index_seconds_displayed": 3.0,
+      "diagnostics": {
+        "image_savings_kib_estimated": 115,
+        "unused_js_kib_estimated": 101,
+        "render_blocking_ms_estimated": 1280,
+        "accessibility_failure": "link-in-text-block : lien Retrouver l'équipe, p.catalogNote > a, vers /about"
+      }
+    },
+    {
+      "path": "/episodes/1",
+      "device": "mobile",
+      "pass": 2,
+      "captured_local": "2026-10-14 19:21 Europe/Paris",
+      "report_url": "https://pagespeed.web.dev/analysis/https-www-sandboxpodcast-fr-episodes-1/ui2gksdkyk?form_factor=mobile",
+      "performance": 81,
+      "accessibility": 100,
+      "best_practices": 100,
+      "seo": 100,
+      "fcp_seconds_displayed": 2.4,
+      "lcp_seconds_displayed": 4.0,
+      "tbt_ms_displayed": 0,
+      "cls": 0,
+      "speed_index_seconds_displayed": 4.7,
+      "conclusion": "Le CLS 0.205 du premier passage ne se reproduit pas au second. Variabilité à examiner ; aucune correction appliquée par cet audit."
+    }
+  ],
+  "api_attempt": {
+    "status": 429,
+    "reason": "Quota PageSpeed API anonyme épuisé. Les mesures ci-dessus proviennent de l'interface officielle, qui a ensuite fonctionné."
+  }
+}

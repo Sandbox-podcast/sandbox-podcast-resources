@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Fleuristes : imaginer une création avec le client</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 95.9091px;
+        top: 220px;
+        width: 528.1818px;
+        height: 830px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1931.6364px;
+        height: 1086.5455px;
+        left: -1361.2px;
+        top: -156.9455px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="15.6"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LES MÉTIERS / #02</div>
+        </div>
+        <h1>Fleuristes : imaginer une création avec le client</h1>
+      </header>
+      <div class="focus slide">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-011-fleuriste-3535.6-3551.2.mp4"
+          playsinline
+          data-start="0"
+          data-duration="15.6"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.000"
+        data-duration="2.220"
+        data-track-index="3"
+      >
+        <span>folie après les fleuristes pareils tu</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="2.220"
+        data-duration="1.640"
+        data-track-index="3"
+      >
+        <span>t&#x27;appelles ton fleuriste, tu dis</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="3.860"
+        data-duration="1.940"
+        data-track-index="3"
+      >
+        <span>j&#x27;ai un mariage, j&#x27;ai</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="5.800"
+        data-duration="2.300"
+        data-track-index="3"
+      >
+        <span>un machin j&#x27;aimerais un bouquet</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="8.100"
+        data-duration="1.520"
+        data-track-index="3"
+      >
+        <span>de telle couleur c&#x27;est ça</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="9.620"
+        data-duration="2.440"
+        data-track-index="3"
+      >
+        <span>mon budget et ta l&#x27;IA qui</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="12.060"
+        data-duration="2.160"
+        data-track-index="3"
+      >
+        <span>va te générer toute la création</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="14.220"
+        data-duration="0.500"
+        data-track-index="3"
+      >
+        <span>florale</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 95.9091, top: 220.0, width: 528.1818, height: 830.0 }, 0);
+      tl.set('#focus', { width: 1931.6364, height: 1086.5455, left: -1361.2, top: -156.9455 }, 0);
+      tl.set(
+        '.focus',
+        { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 },
+        3.1999999999999997,
+      );
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 3.1999999999999997);
+      tl.set(
+        '.focus',
+        { left: 36.0, top: 447.562, width: 648.0, height: 374.876 },
+        4.3999999999999995,
+      );
+      tl.set(
+        '#focus',
+        { width: 1370.9752, height: 771.1736, left: -567.6694, top: -240.9917 },
+        4.3999999999999995,
+      );
+    </script>
+  </body>
+</html>

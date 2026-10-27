@@ -1,0 +1,140 @@
+{
+  "category": "kinetic-type",
+  "duration_s": 15.6135,
+  "fps": 30,
+  "canvas": {
+    "w": 1920,
+    "h": 1080,
+    "aspect": "16:9"
+  },
+  "style": "Jingle de variété vif en collage typographique 2D inspiré du générique de référence fourni par Lou : fond noir, lettres-cartons, couleurs franches, tracés irréguliers et mouvements de rebond. Le duel rouge/turquoise et les microphones gardent la signature du Clash. Utiliser toute la piste sans coupe ni changement de vitesse.",
+  "palette": ["#08090B", "#ED493F", "#F2CB3F", "#42BEC6", "#7164C8", "#F7F0DF"],
+  "font": "Georgia Bold",
+  "beats": [0, 75, 156, 261, 315, 360, 449, 468],
+  "sync_timing": {
+    "mainHit_s": 5.2,
+    "finale_start_s": 10.5,
+    "logo_reveal_start_s": 10.5,
+    "logo_reveal_end_s": 12,
+    "logo_hold_end_s": 15.6135
+  },
+  "export": "mp4",
+  "asset_needs": [],
+  "block": "caption-kinetic-slam",
+  "customize": {
+    "target_scene": "title-convergence",
+    "text": "LE CLASH",
+    "emphasis_words": ["CLASH"],
+    "font": "Georgia Bold",
+    "palette": ["#08090B", "#ED493F", "#F2CB3F", "#42BEC6", "#7164C8", "#F7F0DF"],
+    "accent": "LE CLASH s’assemble sur des cartons alternés rouges, turquoise, jaunes et violets; les deux camps gardent chacun leur couleur.",
+    "timing": {
+      "entrance_start_s": 2.5,
+      "impact_s": 5.2,
+      "hold_through_s": 8.7
+    },
+    "layout": "Cartons de lettres au centre, avec les microphones face-à-face et visibles de chaque côté du titre.",
+    "supporting_assets": {
+      "hero": {
+        "project_file": "assets/clash-hero.png",
+        "source_file": "apps/site/public/slides/episode-001/assets/clash-hero.png",
+        "treatment": "Visuel plein cadre; préserver la couture rouge/cyan et les deux microphones."
+      },
+      "official_logo": {
+        "project_file": "assets/sandbox-logov2.png",
+        "source_file": "apps/site/public/slides/episode-001/assets/sandbox-logov2.png",
+        "treatment": "Logo entier, proportions et couleurs intactes; révélation par masque seulement."
+      }
+    },
+    "audio_source": {
+      "project_file": "assets/music.mp3",
+      "source_file": "media/audio/suno/aca9f9de-105a-44a4-9bc1-1db5d580ac0c/le-clash.mp3",
+      "duration_s": 15.6135,
+      "handling": "Démarrer à 0 s et garder toute la piste jusqu’à sa fin; ne pas couper, boucler, accélérer, étirer ou remplacer. Caler les impacts visuels sur ses attaques réelles."
+    },
+    "supporting_blocks": [
+      {
+        "id": "directional-wipe",
+        "scenes": ["faceoff-hook", "split-to-navy"],
+        "use": "Révéler puis quitter le visuel en deux directions miroir, vers ou depuis la couture centrale."
+      }
+    ],
+    "hand_author": [
+      {
+        "scene": "title-convergence",
+        "treatment": "Faire entrer les lettres-cartons des deux côtés vers la couture, avec un bref rebond à l’impact; garder les microphones visibles autour du mot."
+      },
+      {
+        "scene": "sandbox-reveal",
+        "treatment": "Révéler le PNG assets/sandbox-logov2.png par masque vertical depuis la couture, puis tenir le logo intact. Ne pas reconstruire ni recolorer le lockup."
+      }
+    ],
+    "effects_not_selected": [
+      "beat-pulse-background pulse le fond plutôt que le titre; l’impact du bloc caption-kinetic-slam suffit sans impulsion supplémentaire."
+    ]
+  },
+  "content": {
+    "scenes": [
+      {
+        "id": "faceoff-hook",
+        "start": 0,
+        "end": 2.5,
+        "text": "",
+        "emphasis_words": [],
+        "emotion": "tension immédiate",
+        "motion": "Utiliser directional-wipe en deux directions miroir pour révéler les côtés du visuel assets/clash-hero.png vers la couture centrale; garder les deux microphones face-à-face, lisibles et en place.",
+        "beats": [0, 75]
+      },
+      {
+        "id": "title-convergence",
+        "start": 2.5,
+        "end": 5.2,
+        "text": "LE CLASH",
+        "emphasis_words": ["CLASH"],
+        "emotion": "impact",
+        "motion": "Faire entrer les lettres-cartons depuis les deux côtés vers l’axe central, puis les laisser rebondir une fois avant la tenue.",
+        "beats": [75, 156]
+      },
+      {
+        "id": "title-hold",
+        "start": 5.2,
+        "end": 8.7,
+        "text": "LE CLASH",
+        "emphasis_words": ["CLASH"],
+        "emotion": "affirmation",
+        "motion": "Tenue stable et très lisible du titre; aucun effet supplémentaire après le settle du slam.",
+        "beats": [156, 261]
+      },
+      {
+        "id": "split-to-navy",
+        "start": 8.7,
+        "end": 10.5,
+        "text": "LE CLASH",
+        "emphasis_words": ["CLASH"],
+        "emotion": "resserrement",
+        "motion": "Refermer la couture puis utiliser directional-wipe pour effacer le visuel partagé vers un fond bleu nuit; maintenir le titre jusqu’à l’entrée du logo.",
+        "beats": [261, 315]
+      },
+      {
+        "id": "sandbox-reveal",
+        "start": 10.5,
+        "end": 12,
+        "text": "LE CLASH",
+        "emphasis_words": ["CLASH"],
+        "emotion": "signature",
+        "motion": "Révéler par masque vertical hand-authored le logo raster assets/sandbox-logov2.png; composer le titre avec le logo en lockup propre, sans retoucher le logo.",
+        "beats": [315, 360]
+      },
+      {
+        "id": "end-hold",
+        "start": 12,
+        "end": 15.6135,
+        "text": "LE CLASH",
+        "emphasis_words": ["CLASH"],
+        "emotion": "résolution nette",
+        "motion": "Tenir le lockup titre et logo sur bleu nuit, sans mouvement parasite, jusqu’à la fin exacte du jingle fourni.",
+        "beats": [360, 468]
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "projects": [
+    {
+      "id": "le-radar",
+      "folder": "le-radar-jingle",
+      "title": "Le radar",
+      "duration": 18.4135,
+      "finaleStart": 14,
+      "outputFile": "le radar.mp4"
+    },
+    {
+      "id": "le-build",
+      "folder": "le-build-jingle",
+      "title": "Le build",
+      "duration": 18.4135,
+      "finaleStart": 13.1,
+      "outputFile": "le build.mp4"
+    },
+    {
+      "id": "le-clash",
+      "folder": "le-clash-jingle",
+      "title": "Le clash",
+      "heroFile": "clash-hero.png",
+      "duration": 15.6135,
+      "finaleStart": 10.5,
+      "outputFile": "le clash.mp4"
+    },
+    {
+      "id": "la-beta",
+      "folder": "la-beta-jingle",
+      "title": "La bêta",
+      "duration": 17.9735,
+      "finaleStart": 13,
+      "outputFile": "beta.mp4"
+    }
+  ]
+}

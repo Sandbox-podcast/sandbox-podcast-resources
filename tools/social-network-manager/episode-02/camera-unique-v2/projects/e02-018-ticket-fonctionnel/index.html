@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Un ticket doit-il expliquer le besoin ou l&#x27;implémentation ?</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 36px;
+        top: 230px;
+        width: 648px;
+        height: 810px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1885.0909px;
+        height: 1060.3636px;
+        left: -265.0909px;
+        top: -153.1636px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="82.3"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LE CLASH / #02</div>
+        </div>
+        <h1>Un ticket doit-il expliquer le besoin ou l&#x27;implémentation ?</h1>
+      </header>
+      <div class="focus main">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-018-ticket-fonctionnel-5082.2-5164.5.mp4"
+          playsinline
+          data-start="0"
+          data-duration="82.3"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.120"
+        data-duration="2.120"
+        data-track-index="3"
+      >
+        <span>ça va dépendre du contexte dans</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="2.240"
+        data-duration="2.120"
+        data-track-index="3"
+      >
+        <span>lequel tu bosse si dans ton</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="4.360"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>équipe t&#x27;as fait une réunion</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="5.760"
+        data-duration="1.180"
+        data-track-index="3"
+      >
+        <span>de 2h avant de créer ton</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="6.940"
+        data-duration="1.700"
+        data-track-index="3"
+      >
+        <span>ticket je vais pas lire ton</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="8.640"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>ticket parce que c&#x27;est des</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="10.100"
+        data-duration="1.380"
+        data-track-index="3"
+      >
+        <span>trucs qui auront été débattus pendant</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="11.480"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span>les 2h de réunion et dans</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="12.720"
+        data-duration="0.920"
+        data-track-index="3"
+      >
+        <span>ce cas là effectivement je n</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="13.640"
+        data-duration="0.600"
+        data-track-index="3"
+      >
+        <span>&#x27;ai pas besoin de dire un</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="14.240"
+        data-duration="3.340"
+        data-track-index="3"
+      >
+        <span>ticket mais si</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="17.580"
+        data-duration="1.580"
+        data-track-index="3"
+      >
+        <span>t&#x27;es dans une grosse équipe</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="19.160"
+        data-duration="1.820"
+        data-track-index="3"
+      >
+        <span>ou t&#x27;as plusieurs personnes qui</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="20.980"
+        data-duration="1.280"
+        data-track-index="3"
+      >
+        <span>rédigent les tickets t&#x27;as une</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="22.260"
+        data-duration="2.440"
+        data-track-index="3"
+      >
+        <span>séparation qui est faite à</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="24.700"
+        data-duration="1.120"
+        data-track-index="3"
+      >
+        <span>ce niveau-là et tu sais</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="25.820"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>pas exactement à quoi correspond le</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="27.360"
+        data-duration="3.080"
+        data-track-index="3"
+      >
+        <span>ticket exactement dans le détail il</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="30.440"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span>va bien falloir le lire pour</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="31.680"
+        data-duration="2.160"
+        data-track-index="3"
+      >
+        <span>savoir exactement ce que tu dois</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="33.840"
+        data-duration="1.420"
+        data-track-index="3"
+      >
+        <span>produire ou ce que même ce</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="35.260"
+        data-duration="0.960"
+        data-track-index="3"
+      >
+        <span>qu&#x27;il y a doit produire</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="36.220"
+        data-duration="2.080"
+        data-track-index="3"
+      >
+        <span>et pour moi le ticket il</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="38.300"
+        data-duration="1.320"
+        data-track-index="3"
+      >
+        <span>doit contenir le plus possible de</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="39.620"
+        data-duration="2.480"
+        data-track-index="3"
+      >
+        <span>fonctionnel là tu parlais de régex</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="42.100"
+        data-duration="3.360"
+        data-track-index="3"
+      >
+        <span>tu parlais de régex</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="45.460"
+        data-duration="0.860"
+        data-track-index="3"
+      >
+        <span>ça a tué à être fonctionnel</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="46.320"
+        data-duration="1.920"
+        data-track-index="3"
+      >
+        <span>non les régex c&#x27;est fonctionnel</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="48.740"
+        data-duration="1.840"
+        data-track-index="3"
+      >
+        <span>oui mais là les régex c</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="50.580"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span>&#x27;est technique c&#x27;est de l</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="51.820"
+        data-duration="1.860"
+        data-track-index="3"
+      >
+        <span>&#x27;implémentation pour moi un ticket il</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="53.680"
+        data-duration="1.220"
+        data-track-index="3"
+      >
+        <span>ne devrait pas contenir des régex</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="54.900"
+        data-duration="2.220"
+        data-track-index="3"
+      >
+        <span>par exemple il doit se contenter</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="57.120"
+        data-duration="2.540"
+        data-track-index="3"
+      >
+        <span>de juste parler du fonctionnel après</span>
+      </div>
+      <div
+        id="caption-034"
+        class="clip caption"
+        data-start="59.660"
+        data-duration="2.440"
+        data-track-index="3"
+      >
+        <span>commencer à implémenter c&#x27;est</span>
+      </div>
+      <div
+        id="caption-035"
+        class="clip caption"
+        data-start="62.100"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>au contexte du projet il faut</span>
+      </div>
+      <div
+        id="caption-036"
+        class="clip caption"
+        data-start="63.560"
+        data-duration="2.060"
+        data-track-index="3"
+      >
+        <span>avoir le contexte du projet pour</span>
+      </div>
+      <div
+        id="caption-037"
+        class="clip caption"
+        data-start="65.620"
+        data-duration="1.860"
+        data-track-index="3"
+      >
+        <span>pouvoir juger de comment on va</span>
+      </div>
+      <div
+        id="caption-038"
+        class="clip caption"
+        data-start="67.480"
+        data-duration="2.440"
+        data-track-index="3"
+      >
+        <span>implémenter les règles de business</span>
+      </div>
+      <div
+        id="caption-039"
+        class="clip caption"
+        data-start="69.920"
+        data-duration="4.700"
+        data-track-index="3"
+      >
+        <span>la business logic les</span>
+      </div>
+      <div
+        id="caption-040"
+        class="clip caption"
+        data-start="74.620"
+        data-duration="1.380"
+        data-track-index="3"
+      >
+        <span>fonctionnalités que tu décris dans le</span>
+      </div>
+      <div
+        id="caption-041"
+        class="clip caption"
+        data-start="76.000"
+        data-duration="3.040"
+        data-track-index="3"
+      >
+        <span>ticket etc mais il</span>
+      </div>
+      <div
+        id="caption-042"
+        class="clip caption"
+        data-start="79.040"
+        data-duration="1.000"
+        data-track-index="3"
+      >
+        <span>ne doit pas y avoir d</span>
+      </div>
+      <div
+        id="caption-043"
+        class="clip caption"
+        data-start="80.040"
+        data-duration="1.960"
+        data-track-index="3"
+      >
+        <span>&#x27;implémentation dans le ticket pour moi</span>
+      </div>
+      <div
+        id="caption-044"
+        class="clip caption"
+        data-start="82.000"
+        data-duration="0.260"
+        data-track-index="3"
+      >
+        <span>déjà</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 0);
+      tl.set('#focus', { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 }, 0);
+    </script>
+  </body>
+</html>

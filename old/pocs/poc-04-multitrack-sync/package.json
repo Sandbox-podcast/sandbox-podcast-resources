@@ -1,0 +1,20 @@
+{
+  "name": "@podcast/poc-04-multitrack-sync",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "media:make": "node src/cli/make-sync-media.ts",
+    "sync": "node src/cli/run-sync.ts",
+    "analyze": "node src/cli/analyze-sync.ts"
+  },
+  "dependencies": {
+    "@podcast/poc-03-server-recording": "workspace:*",
+    "livekit-server-sdk": "^2.19.1"
+  },
+  "exports": {
+    "./*": "./src/lib/*"
+  }
+}

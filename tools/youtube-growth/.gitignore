@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.youtube-token.json
+.state/
+output/
+.local/
+*client_secret*.json
+*client-secret*.json
+*token*.json

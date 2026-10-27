@@ -1,0 +1,63 @@
+{
+  "video_id": "GgSiPkADCz4",
+  "source_title": "SANDBOX #1",
+  "episode_url": "https://www.sandboxpodcast.fr/episodes/1",
+  "candidates": [
+    {
+      "start": 1233,
+      "end": 1262,
+      "title": "IA : quand les devs vont plus vite que les Product Owners",
+      "reason": "Le goulot d'étranglement change de place lorsque les développeurs utilisent l'IA et que les PO ne l'utilisent pas. Passage autonome, utile aux équipes produit. Conserver la condition exprimée par l'intervenant.",
+      "selected": true
+    },
+    {
+      "start": 1465,
+      "end": 1510,
+      "title": "On utilise encore l'IA comme Google",
+      "reason": "Le débat quitte la performance des modèles pour parler des usages. Le chiffre de 99 % est une formule de l'intervenant, pas une mesure. Ne pas le reprendre comme une statistique dans le titre.",
+      "selected": true
+    },
+    {
+      "start": 2669,
+      "end": 2716,
+      "title": "Codex ou OpenCode : faut-il le harnais officiel ?",
+      "reason": "Question tranchée suivie immédiatement d'un désaccord. Conserver la réponse et la réserve sur les cas d'usage pour ne pas fabriquer une polémique.",
+      "selected": true
+    },
+    {
+      "start": 4327,
+      "end": 4371,
+      "title": "Vibe coder un jeu ne le rend pas amusant",
+      "reason": "Retour d'expérience accessible au-delà des développeurs. L'IA réduit la barrière technique mais le game design reste à construire. Conserver la chute et les rires.",
+      "selected": true
+    },
+    {
+      "start": 1578,
+      "end": 1628,
+      "title": "Coder depuis son téléphone : pourquoi Nicolas a créé Sillage",
+      "reason": "Cas d'usage concret et introduction de l'outil. Réserve si le cadrage de la démonstration reste lisible sur smartphone.",
+      "selected": false
+    },
+    {
+      "start": 272,
+      "end": 312,
+      "title": "Vibe coding : on voit vite les limites du prototype",
+      "reason": "Discussion amusée du jeu de Vincent Flibustier. Garder le contexte de jeu vidéo. Une coupe trop courte pourrait faire croire à un récit d'actes réels.",
+      "selected": false
+    },
+    {
+      "start": 3866,
+      "end": 3900,
+      "title": "Les skills, c'est des Pokémon : elles évoluent",
+      "reason": "Métaphore mémorable et retour d'expérience de Lou sur les corrections qui alimentent les skills. Relire les noms avant d'incruster des sous-titres.",
+      "selected": false
+    },
+    {
+      "start": 4447,
+      "end": 4484,
+      "title": "J'ai plus aimé créer mon jeu que d'y jouer",
+      "reason": "Chute humoristique sur le plaisir de créer. Réserve car le sujet est proche de l'extrait sélectionné à 1:12:07.",
+      "selected": false
+    }
+  ]
+}

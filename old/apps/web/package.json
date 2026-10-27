@@ -1,0 +1,19 @@
+{
+  "name": "@podcast/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "node src/build.ts"
+  },
+  "dependencies": {
+    "livekit-client": "^2.22.3",
+    "@podcast/scene-quality": "workspace:*",
+    "@mediapipe/selfie_segmentation": "^0.1.1675465747"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

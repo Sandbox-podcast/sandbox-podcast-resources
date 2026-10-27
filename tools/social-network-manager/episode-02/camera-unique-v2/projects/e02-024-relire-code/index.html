@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Relire le code généré par l&#x27;IA : on en parle</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 142.6909px;
+        top: 220px;
+        width: 434.6182px;
+        height: 830px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1931.6364px;
+        height: 1086.5455px;
+        left: -1457.7818px;
+        top: -156.9455px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="30.06"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LE CLASH / #02</div>
+        </div>
+        <h1>Relire le code généré par l&#x27;IA : on en parle</h1>
+      </header>
+      <div class="focus right">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-024-relire-code-6159.24-6189.3.mp4"
+          playsinline
+          data-start="0"
+          data-duration="30.06"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.000"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>en parlant de changer de taf</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="1.460"
+        data-duration="1.360"
+        data-track-index="3"
+      >
+        <span>déjà est-ce que ton taf</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="2.820"
+        data-duration="1.780"
+        data-track-index="3"
+      >
+        <span>il va évoluer est-ce que</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="4.600"
+        data-duration="1.640"
+        data-track-index="3"
+      >
+        <span>tu relis vraiment le code qui</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="6.240"
+        data-duration="1.620"
+        data-track-index="3"
+      >
+        <span>est généré par l&#x27;IA est-ce</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="7.860"
+        data-duration="1.200"
+        data-track-index="3"
+      >
+        <span>que tu te fais des petits</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="9.060"
+        data-duration="2.900"
+        data-track-index="3"
+      >
+        <span>ateliers lecture de PR</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="11.960"
+        data-duration="2.900"
+        data-track-index="3"
+      >
+        <span>de 15 000 lignes de moins</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="14.860"
+        data-duration="1.740"
+        data-track-index="3"
+      >
+        <span>en moins parce que les lignes</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="16.600"
+        data-duration="2.320"
+        data-track-index="3"
+      >
+        <span>sont plus en plus elles sont</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="18.920"
+        data-duration="2.820"
+        data-track-index="3"
+      >
+        <span>bien meilleures elles</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="21.740"
+        data-duration="1.100"
+        data-track-index="3"
+      >
+        <span>écrivent de plus en plus en</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="22.840"
+        data-duration="2.540"
+        data-track-index="3"
+      >
+        <span>plus je leur</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="25.380"
+        data-duration="1.000"
+        data-track-index="3"
+      >
+        <span>fais de plus en plus confiance</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="26.380"
+        data-duration="1.100"
+        data-track-index="3"
+      >
+        <span>tu relis de moins en moins</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="27.480"
+        data-duration="1.040"
+        data-track-index="3"
+      >
+        <span>et ça va pas aller en</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="28.520"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>s&#x27;améliorant c</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 142.6909, top: 220.0, width: 434.6182, height: 830.0 }, 0);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1457.7818, top: -156.9455 },
+        0,
+      );
+    </script>
+  </body>
+</html>

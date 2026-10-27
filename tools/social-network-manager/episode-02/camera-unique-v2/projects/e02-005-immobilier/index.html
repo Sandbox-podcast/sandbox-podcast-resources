@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Immobilier : un assistant pour répondre quand l&#x27;agence est fermée</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 142.6909px;
+        top: 220px;
+        width: 434.6182px;
+        height: 830px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1931.6364px;
+        height: 1086.5455px;
+        left: -1457.7818px;
+        top: -156.9455px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="106.25"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LES MÉTIERS / #02</div>
+        </div>
+        <h1>Immobilier : un assistant pour répondre quand l&#x27;agence est fermée</h1>
+      </header>
+      <div class="focus right">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-005-immobilier-3178.8-3285.05.mp4"
+          playsinline
+          data-start="0"
+          data-duration="106.25"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.100"
+        data-duration="2.420"
+        data-track-index="3"
+      >
+        <span>donc agence immobilière donc là</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="2.520"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>l&#x27;idée c&#x27;est que tes</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="4.120"
+        data-duration="1.560"
+        data-track-index="3"
+      >
+        <span>agents immobiliers tu as un bien</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="5.680"
+        data-duration="2.060"
+        data-track-index="3"
+      >
+        <span>à louer tu visites ton bien,</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="7.900"
+        data-duration="1.720"
+        data-track-index="3"
+      >
+        <span>tu prends quelques photos et avec</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="9.620"
+        data-duration="1.680"
+        data-track-index="3"
+      >
+        <span>ces quelques photos et ton IA</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="11.300"
+        data-duration="2.760"
+        data-track-index="3"
+      >
+        <span>tu vas pouvoir générer visite virtuelle</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="14.060"
+        data-duration="1.880"
+        data-track-index="3"
+      >
+        <span>tu vas pouvoir générer un système</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="15.940"
+        data-duration="2.460"
+        data-track-index="3"
+      >
+        <span>qui met plusieurs styles de</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="18.400"
+        data-duration="2.460"
+        data-track-index="3"
+      >
+        <span>décours dans tes biens donc par</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="20.860"
+        data-duration="1.040"
+        data-track-index="3"
+      >
+        <span>exemple imaginons que t&#x27;as le</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="21.900"
+        data-duration="1.960"
+        data-track-index="3"
+      >
+        <span>salon et bien sur ton site</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="23.860"
+        data-duration="2.300"
+        data-track-index="3"
+      >
+        <span>internet les gens qui viennent voir</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="26.160"
+        data-duration="2.500"
+        data-track-index="3"
+      >
+        <span>tes annonces ils vont pouvoir dire</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="28.660"
+        data-duration="1.080"
+        data-track-index="3"
+      >
+        <span>ben moi j&#x27;aimerais bien voir</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="29.740"
+        data-duration="2.440"
+        data-track-index="3"
+      >
+        <span>ce salon avec un style indien</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="32.180"
+        data-duration="2.300"
+        data-track-index="3"
+      >
+        <span>avec un style bali avec un</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="34.480"
+        data-duration="1.500"
+        data-track-index="3"
+      >
+        <span>style, j&#x27;en sais rien, luxe</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="35.980"
+        data-duration="2.520"
+        data-track-index="3"
+      >
+        <span>style bois et tu vois plein</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="38.500"
+        data-duration="1.980"
+        data-track-index="3"
+      >
+        <span>de styles différents tout mobilier qui</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="40.480"
+        data-duration="3.160"
+        data-track-index="3"
+      >
+        <span>change, les peintures, les sols et</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="43.640"
+        data-duration="1.580"
+        data-track-index="3"
+      >
+        <span>puis aussi tu peux carrément faire</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="45.220"
+        data-duration="2.480"
+        data-track-index="3"
+      >
+        <span>un assistant donc en gros quand</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="47.700"
+        data-duration="0.800"
+        data-track-index="3"
+      >
+        <span>t&#x27;es sur la fiche du</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="48.500"
+        data-duration="1.580"
+        data-track-index="3"
+      >
+        <span>bien t&#x27;as un chat et</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="50.080"
+        data-duration="2.420"
+        data-track-index="3"
+      >
+        <span>en tant que visiteur de ton</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="52.500"
+        data-duration="2.080"
+        data-track-index="3"
+      >
+        <span>site, tu vas dire combien il</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="54.580"
+        data-duration="1.700"
+        data-track-index="3"
+      >
+        <span>coûte, c&#x27;est quoi la superficie</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="56.900"
+        data-duration="1.680"
+        data-track-index="3"
+      >
+        <span>il a été construit en quelle</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="58.580"
+        data-duration="0.980"
+        data-track-index="3"
+      >
+        <span>année, en gros tu peux poser</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="59.560"
+        data-duration="0.980"
+        data-track-index="3"
+      >
+        <span>toutes tes questions que tu veux</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="60.540"
+        data-duration="1.480"
+        data-track-index="3"
+      >
+        <span>et l&#x27;agent vu que dans</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="62.020"
+        data-duration="1.580"
+        data-track-index="3"
+      >
+        <span>sa base de données il va</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="63.600"
+        data-duration="2.000"
+        data-track-index="3"
+      >
+        <span>te donner toutes tes réponses donc</span>
+      </div>
+      <div
+        id="caption-034"
+        class="clip caption"
+        data-start="65.600"
+        data-duration="2.100"
+        data-track-index="3"
+      >
+        <span>tu peux vraiment automatiser quasiment le</span>
+      </div>
+      <div
+        id="caption-035"
+        class="clip caption"
+        data-start="67.700"
+        data-duration="2.100"
+        data-track-index="3"
+      >
+        <span>métier d&#x27;agent immobilier après c</span>
+      </div>
+      <div
+        id="caption-036"
+        class="clip caption"
+        data-start="69.800"
+        data-duration="2.400"
+        data-track-index="3"
+      >
+        <span>&#x27;est toujours pareil, les agents immobiliers</span>
+      </div>
+      <div
+        id="caption-037"
+        class="clip caption"
+        data-start="72.200"
+        data-duration="2.420"
+        data-track-index="3"
+      >
+        <span>vont te dire impossible qu&#x27;une</span>
+      </div>
+      <div
+        id="caption-038"
+        class="clip caption"
+        data-start="74.620"
+        data-duration="1.480"
+        data-track-index="3"
+      >
+        <span>intelligence artificielle, elle fasse une vente</span>
+      </div>
+      <div
+        id="caption-039"
+        class="clip caption"
+        data-start="76.100"
+        data-duration="1.820"
+        data-track-index="3"
+      >
+        <span>je suis d&#x27;accord, le but</span>
+      </div>
+      <div
+        id="caption-040"
+        class="clip caption"
+        data-start="77.920"
+        data-duration="0.620"
+        data-track-index="3"
+      >
+        <span>c&#x27;est pas qu&#x27;elle fasse</span>
+      </div>
+      <div
+        id="caption-041"
+        class="clip caption"
+        data-start="78.540"
+        data-duration="2.520"
+        data-track-index="3"
+      >
+        <span>la vente, c&#x27;est qu&#x27;elle</span>
+      </div>
+      <div
+        id="caption-042"
+        class="clip caption"
+        data-start="81.060"
+        data-duration="2.040"
+        data-track-index="3"
+      >
+        <span>puisse répondre 24h sur 24, 7</span>
+      </div>
+      <div
+        id="caption-043"
+        class="clip caption"
+        data-start="83.100"
+        data-duration="1.040"
+        data-track-index="3"
+      >
+        <span>jours sur 7 à vos clients</span>
+      </div>
+      <div
+        id="caption-044"
+        class="clip caption"
+        data-start="84.140"
+        data-duration="2.260"
+        data-track-index="3"
+      >
+        <span>et vous prenez le relais une</span>
+      </div>
+      <div
+        id="caption-045"
+        class="clip caption"
+        data-start="86.400"
+        data-duration="1.200"
+        data-track-index="3"
+      >
+        <span>fois que la personne, elle a</span>
+      </div>
+      <div
+        id="caption-046"
+        class="clip caption"
+        data-start="87.600"
+        data-duration="1.560"
+        data-track-index="3"
+      >
+        <span>fait sa mini visite, ses trucs</span>
+      </div>
+      <div
+        id="caption-047"
+        class="clip caption"
+        data-start="89.160"
+        data-duration="1.760"
+        data-track-index="3"
+      >
+        <span>machin sur internet elle a un</span>
+      </div>
+      <div
+        id="caption-048"
+        class="clip caption"
+        data-start="90.920"
+        data-duration="2.020"
+        data-track-index="3"
+      >
+        <span>bouton, ça redécroche vers vous et</span>
+      </div>
+      <div
+        id="caption-049"
+        class="clip caption"
+        data-start="92.940"
+        data-duration="0.680"
+        data-track-index="3"
+      >
+        <span>c&#x27;est vous qui prenez le</span>
+      </div>
+      <div
+        id="caption-050"
+        class="clip caption"
+        data-start="93.620"
+        data-duration="1.300"
+        data-track-index="3"
+      >
+        <span>relais mais moi en tant que</span>
+      </div>
+      <div
+        id="caption-051"
+        class="clip caption"
+        data-start="94.920"
+        data-duration="1.340"
+        data-track-index="3"
+      >
+        <span>consommateur, si j&#x27;ai envie de</span>
+      </div>
+      <div
+        id="caption-052"
+        class="clip caption"
+        data-start="96.260"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>visiter le truc et que vous</span>
+      </div>
+      <div
+        id="caption-053"
+        class="clip caption"
+        data-start="97.860"
+        data-duration="1.000"
+        data-track-index="3"
+      >
+        <span>êtes fermé parce que c&#x27;est</span>
+      </div>
+      <div
+        id="caption-054"
+        class="clip caption"
+        data-start="98.860"
+        data-duration="1.360"
+        data-track-index="3"
+      >
+        <span>lundi, dimanche, machin vous êtes pas</span>
+      </div>
+      <div
+        id="caption-055"
+        class="clip caption"
+        data-start="100.220"
+        data-duration="0.840"
+        data-track-index="3"
+      >
+        <span>là, que j&#x27;ai des questions</span>
+      </div>
+      <div
+        id="caption-056"
+        class="clip caption"
+        data-start="101.060"
+        data-duration="1.040"
+        data-track-index="3"
+      >
+        <span>et bien au moins j&#x27;ai</span>
+      </div>
+      <div
+        id="caption-057"
+        class="clip caption"
+        data-start="102.100"
+        data-duration="1.320"
+        data-track-index="3"
+      >
+        <span>les réponses et je vais pas</span>
+      </div>
+      <div
+        id="caption-058"
+        class="clip caption"
+        data-start="103.420"
+        data-duration="0.860"
+        data-track-index="3"
+      >
+        <span>voir sur un autre site et</span>
+      </div>
+      <div
+        id="caption-059"
+        class="clip caption"
+        data-start="104.280"
+        data-duration="0.960"
+        data-track-index="3"
+      >
+        <span>passer par une autre agence</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 142.6909, top: 220.0, width: 434.6182, height: 830.0 }, 0);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1457.7818, top: -156.9455 },
+        0,
+      );
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 9.8);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 9.8);
+      tl.set('.focus', { left: 95.9091, top: 220.0, width: 528.1818, height: 830.0 }, 11.0);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1361.2, top: -156.9455 },
+        11.0,
+      );
+      tl.set(
+        '.focus',
+        { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 },
+        28.599999999999998,
+      );
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 28.599999999999998);
+      tl.set('.focus', { left: 36.0, top: 447.562, width: 648.0, height: 374.876 }, 29.8);
+      tl.set(
+        '#focus',
+        { width: 1370.9752, height: 771.1736, left: -567.6694, top: -240.9917 },
+        29.8,
+      );
+      tl.set(
+        '.focus',
+        { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 },
+        42.199999999999996,
+      );
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 42.199999999999996);
+      tl.set('.focus', { left: 95.9091, top: 220.0, width: 528.1818, height: 830.0 }, 43.4);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1361.2, top: -156.9455 },
+        43.4,
+      );
+    </script>
+  </body>
+</html>

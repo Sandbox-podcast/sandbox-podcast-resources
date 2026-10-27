@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Comment comparer deux modèles IA sur vos vrais usages</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 36px;
+        top: 230px;
+        width: 648px;
+        height: 810px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1885.0909px;
+        height: 1060.3636px;
+        left: -265.0909px;
+        top: -153.1636px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="78.66"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LE RADAR / #02</div>
+        </div>
+        <h1>Comment comparer deux modèles IA sur vos vrais usages</h1>
+      </header>
+      <div class="focus main">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-003-comparer-modeles-561.25-639.91.mp4"
+          playsinline
+          data-start="0"
+          data-duration="78.66"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.000"
+        data-duration="1.880"
+        data-track-index="3"
+      >
+        <span>mais justement les gens ils peuvent</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="1.880"
+        data-duration="2.540"
+        data-track-index="3"
+      >
+        <span>se demander mais comment ils</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="4.420"
+        data-duration="1.760"
+        data-track-index="3"
+      >
+        <span>font la différence comment ils comparent</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="6.180"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>les modèles etc moi ce que</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="7.780"
+        data-duration="0.780"
+        data-track-index="3"
+      >
+        <span>je conseille c&#x27;est d&#x27;avoir</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="8.560"
+        data-duration="2.840"
+        data-track-index="3"
+      >
+        <span>un prompt un</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="11.400"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>truc assez simple à faire que</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="13.000"
+        data-duration="1.960"
+        data-track-index="3"
+      >
+        <span>vous gardez et à chaque fois</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="14.960"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>vous le réutilisez le même prompt</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="16.500"
+        data-duration="0.540"
+        data-track-index="3"
+      >
+        <span>à chaque fois qu&#x27;il y</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="17.040"
+        data-duration="1.760"
+        data-track-index="3"
+      >
+        <span>a un nouveau modèle et ça</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="18.800"
+        data-duration="2.340"
+        data-track-index="3"
+      >
+        <span>vous donne matière à pouvoir comparer</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="21.140"
+        data-duration="1.360"
+        data-track-index="3"
+      >
+        <span>vraiment vous voyez des trucs que</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="22.500"
+        data-duration="3.220"
+        data-track-index="3"
+      >
+        <span>je donnais au premier modèle ça</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="25.720"
+        data-duration="1.140"
+        data-track-index="3"
+      >
+        <span>me faisait des trucs pourris c</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="26.860"
+        data-duration="1.140"
+        data-track-index="3"
+      >
+        <span>&#x27;était des trucs en 3D, des</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="28.000"
+        data-duration="1.660"
+        data-track-index="3"
+      >
+        <span>petits jeux, des machins et puis</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="29.660"
+        data-duration="1.280"
+        data-track-index="3"
+      >
+        <span>j&#x27;ai vu les évolutions de</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="30.940"
+        data-duration="1.100"
+        data-track-index="3"
+      >
+        <span>ce même prompt à chaque fois</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="32.800"
+        data-duration="1.500"
+        data-track-index="3"
+      >
+        <span>à chaque sortie de modèle et</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="34.300"
+        data-duration="1.140"
+        data-track-index="3"
+      >
+        <span>ça continue à marcher parce que</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="35.440"
+        data-duration="0.860"
+        data-track-index="3"
+      >
+        <span>les modèles ils font de plus</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="36.300"
+        data-duration="1.080"
+        data-track-index="3"
+      >
+        <span>en plus de choses à chaque</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="37.380"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>fois sur ce même prompt et</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="38.980"
+        data-duration="1.040"
+        data-track-index="3"
+      >
+        <span>ça me permet de bien voir</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="40.020"
+        data-duration="2.220"
+        data-track-index="3"
+      >
+        <span>les évolutions et d&#x27;avoir une</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="42.240"
+        data-duration="2.040"
+        data-track-index="3"
+      >
+        <span>boussole en fait de comparaison pour</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="44.280"
+        data-duration="1.120"
+        data-track-index="3"
+      >
+        <span>comparer les modèles donc je pense</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="45.400"
+        data-duration="1.040"
+        data-track-index="3"
+      >
+        <span>que c&#x27;est important essayer de</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="46.440"
+        data-duration="2.420"
+        data-track-index="3"
+      >
+        <span>vous trouver un</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="48.860"
+        data-duration="1.900"
+        data-track-index="3"
+      >
+        <span>petit truc comme ça un petit</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="50.760"
+        data-duration="1.340"
+        data-track-index="3"
+      >
+        <span>prompt qui vous fait un tout</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="52.100"
+        data-duration="1.720"
+        data-track-index="3"
+      >
+        <span>petit projet pendant 10 minutes je</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="53.820"
+        data-duration="0.860"
+        data-track-index="3"
+      >
+        <span>sais pas le truc qui tourne</span>
+      </div>
+      <div
+        id="caption-034"
+        class="clip caption"
+        data-start="54.680"
+        data-duration="1.620"
+        data-track-index="3"
+      >
+        <span>pendant 10 minutes et vous regardez</span>
+      </div>
+      <div
+        id="caption-035"
+        class="clip caption"
+        data-start="56.300"
+        data-duration="2.380"
+        data-track-index="3"
+      >
+        <span>le résultat et vous pouvez comparer</span>
+      </div>
+      <div
+        id="caption-036"
+        class="clip caption"
+        data-start="58.680"
+        data-duration="1.100"
+        data-track-index="3"
+      >
+        <span>je pense que c&#x27;est une</span>
+      </div>
+      <div
+        id="caption-037"
+        class="clip caption"
+        data-start="59.780"
+        data-duration="1.760"
+        data-track-index="3"
+      >
+        <span>bonne façon de voir si le</span>
+      </div>
+      <div
+        id="caption-038"
+        class="clip caption"
+        data-start="61.540"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>modèle il vaut le coup pour</span>
+      </div>
+      <div
+        id="caption-039"
+        class="clip caption"
+        data-start="62.940"
+        data-duration="1.440"
+        data-track-index="3"
+      >
+        <span>être adopté ou pas alors c</span>
+      </div>
+      <div
+        id="caption-040"
+        class="clip caption"
+        data-start="64.380"
+        data-duration="1.280"
+        data-track-index="3"
+      >
+        <span>&#x27;est pas forcément très fiable parce</span>
+      </div>
+      <div
+        id="caption-041"
+        class="clip caption"
+        data-start="65.660"
+        data-duration="0.440"
+        data-track-index="3"
+      >
+        <span>que des fois il y a</span>
+      </div>
+      <div
+        id="caption-042"
+        class="clip caption"
+        data-start="66.100"
+        data-duration="0.900"
+        data-track-index="3"
+      >
+        <span>des modèles qui sont meilleurs pour</span>
+      </div>
+      <div
+        id="caption-043"
+        class="clip caption"
+        data-start="67.000"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>faire certaines choses donc c&#x27;est</span>
+      </div>
+      <div
+        id="caption-044"
+        class="clip caption"
+        data-start="68.600"
+        data-duration="0.860"
+        data-track-index="3"
+      >
+        <span>pas parce que le résultat il</span>
+      </div>
+      <div
+        id="caption-045"
+        class="clip caption"
+        data-start="69.460"
+        data-duration="1.560"
+        data-track-index="3"
+      >
+        <span>est plus mauvais que le modèle</span>
+      </div>
+      <div
+        id="caption-046"
+        class="clip caption"
+        data-start="71.020"
+        data-duration="1.260"
+        data-track-index="3"
+      >
+        <span>est plus mauvais pour autant tu</span>
+      </div>
+      <div
+        id="caption-047"
+        class="clip caption"
+        data-start="72.280"
+        data-duration="0.980"
+        data-track-index="3"
+      >
+        <span>vois mais ça donne quand même</span>
+      </div>
+      <div
+        id="caption-048"
+        class="clip caption"
+        data-start="73.260"
+        data-duration="2.460"
+        data-track-index="3"
+      >
+        <span>un ordre d&#x27;idées je</span>
+      </div>
+      <div
+        id="caption-049"
+        class="clip caption"
+        data-start="75.720"
+        data-duration="1.900"
+        data-track-index="3"
+      >
+        <span>pense que c&#x27;est pas mal</span>
+      </div>
+      <div
+        id="caption-050"
+        class="clip caption"
+        data-start="77.620"
+        data-duration="0.820"
+        data-track-index="3"
+      >
+        <span>d&#x27;avoir ce genre de trucs</span>
+      </div>
+      <div
+        id="caption-051"
+        class="clip caption"
+        data-start="78.440"
+        data-duration="0.220"
+        data-track-index="3"
+      >
+        <span>quoi</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 0);
+      tl.set('#focus', { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 }, 0);
+    </script>
+  </body>
+</html>

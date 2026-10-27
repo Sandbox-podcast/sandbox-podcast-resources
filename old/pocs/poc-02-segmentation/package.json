@@ -1,0 +1,20 @@
+{
+  "name": "@podcast/poc-02-segmentation",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node src/build.ts",
+    "bench": "node src/run-bench.ts"
+  },
+  "dependencies": {
+    "@mediapipe/selfie_segmentation": "^0.1.1675465747",
+    "@podcast/poc-01-media-plane": "workspace:*",
+    "@podcast/scene-quality": "workspace:*",
+    "playwright-core": "^1.63.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

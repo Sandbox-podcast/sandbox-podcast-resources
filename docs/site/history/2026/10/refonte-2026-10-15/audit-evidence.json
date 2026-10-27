@@ -1,0 +1,3069 @@
+{
+  "observedOn": "2026-10-15",
+  "scope": "État public avant refonte et inventaire local. Temps HTTP isolés, pas des Core Web Vitals.",
+  "routes": [
+    "(fr)/about/page.tsx",
+    "(fr)/admin/page.tsx",
+    "(fr)/charts/awards/edition/[id]/page.tsx",
+    "(fr)/charts/awards/page.tsx",
+    "(fr)/charts/awards/[week]/page.tsx",
+    "(fr)/charts/entity/[slug]/page.tsx",
+    "(fr)/charts/history/page.tsx",
+    "(fr)/charts/history/[week]/page.tsx",
+    "(fr)/charts/models/[task]/page.tsx",
+    "(fr)/charts/page.tsx",
+    "(fr)/charts/project/[slug]/page.tsx",
+    "(fr)/charts/rising/methodology/page.tsx",
+    "(fr)/charts/rising/page.tsx",
+    "(fr)/charts/rising/[week]/page.tsx",
+    "(fr)/charts/skills/methodology/page.tsx",
+    "(fr)/charts/skills/[platform]/page.tsx",
+    "(fr)/charts/[slug]/methodology/page.tsx",
+    "(fr)/charts/[slug]/page.tsx",
+    "(fr)/charts/[slug]/[week]/page.tsx",
+    "(fr)/confidentialite/page.tsx",
+    "(fr)/episodes/[number]/page.tsx",
+    "(fr)/latest/page.tsx",
+    "(fr)/models/[slug]/page.tsx",
+    "(fr)/moves/[chart]/[week]/[entity]/page.tsx",
+    "(fr)/nos-projets/page.tsx",
+    "(fr)/nos-projets/[slug]/page.tsx",
+    "(fr)/page.tsx",
+    "(fr)/podcast/page.tsx",
+    "(fr)/projects/[slug]/page.tsx",
+    "(fr)/search/page.tsx",
+    "(fr)/stories/[slug]/page.tsx",
+    "(fr)/time-machine/page.tsx",
+    "api/admin/charts/route.ts",
+    "api/admin/content/route.ts",
+    "api/admin/episode-thumbnail/route.ts",
+    "api/admin/host-photo/route.ts",
+    "api/admin/login/route.ts",
+    "api/admin/logout/route.ts",
+    "api/admin/password/route.ts",
+    "api/admin/session/route.ts",
+    "api/admin/translations/route.ts",
+    "api/admin/users/route.ts",
+    "api/admin/users/[id]/route.ts",
+    "api/admin/youtube-metadata/route.ts",
+    "api/awards/edition/[id]/image/route.ts",
+    "api/awards/[week]/image/route.ts",
+    "api/charts/bursts/route.ts",
+    "api/charts/history/route.ts",
+    "api/charts/project/[slug]/route.ts",
+    "api/charts/[chart]/[edition]/proof/route.ts",
+    "api/charts/[chart]/[edition]/route.ts",
+    "api/cron/[job]/route.ts",
+    "api/episode-thumbnails/[filename]/route.ts",
+    "api/host-photos/[filename]/route.ts",
+    "api/social-image/route.ts",
+    "api/youtube-thumbnail/[videoId]/route.ts",
+    "badges/awards/[edition]/route.ts",
+    "badges/github/[id]/rank.svg/route.ts",
+    "badges/github/[id]/rising-star/[edition]/route.ts",
+    "feed.xml/route.ts",
+    "[locale]/[[...path]]/page.tsx"
+  ],
+  "content": {
+    "historyEvents": 151,
+    "landmarks": 56,
+    "historySources": 156,
+    "personalProjects": 34,
+    "projectSlugs": [
+      "sillage",
+      "boostback",
+      "ballcam",
+      "point-zero",
+      "hivekeep",
+      "akasha-os",
+      "song-maker",
+      "akasha",
+      "not-my-fault",
+      "okodukai",
+      "heros-de-la-classe",
+      "politiquizz",
+      "mindodyssey",
+      "pinchchat",
+      "three-observers",
+      "aigora",
+      "mission-maison",
+      "akasha-code-studio",
+      "rbitnet",
+      "akasha-model",
+      "akasha-companion",
+      "offline-memory",
+      "llm-router",
+      "clawscope",
+      "cloudflare-dns-swarm",
+      "google-home-notification-gateway",
+      "streamdeck-uptime-kuma",
+      "raycast-uptime-kuma",
+      "teamspeak-mcp",
+      "bot-hub",
+      "bot-chronicles",
+      "cursor-chat",
+      "rust-commander",
+      "chromehue"
+    ]
+  },
+  "publicPages": [
+    {
+      "path": "/",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/",
+      "elapsedMs": 2482,
+      "bytes": 203518,
+      "title": "Sandbox — Classements IA et podcasts vidéo",
+      "h1": ["Sandbox Charts"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr\"/>",
+        "<meta property=\"og:title\" content=\"Sandbox — Classements IA et podcasts vidéo\"/>",
+        "<meta property=\"og:description\" content=\"Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/opengraph-image-35za9p?20e25ff0f693d5a3\"/>",
+        "<meta property=\"og:image:type\" content=\"image/png\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Sandbox — Classements IA et podcasts vidéo\"/>",
+        "<meta name=\"twitter:description\" content=\"Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/opengraph-image-35za9p?20e25ff0f693d5a3\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>",
+        "<meta name=\"twitter:image:type\" content=\"image/png\"/>",
+        "<meta name=\"twitter:image:width\" content=\"1200\"/>",
+        "<meta name=\"twitter:image:height\" content=\"630\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "PodcastSeries",
+            "name": "Sandbox",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "url": "https://www.sandboxpodcast.fr/",
+            "image": "https://www.sandboxpodcast.fr/api/social-image",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Derniers épisodes Sandbox",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Sandbox #1 (pilote)  Mistral Large 4, Claude Haiku 5.5, Gemini at Work, Sillage et les harnais IA",
+                "url": "https://www.sandboxpodcast.fr/episodes/1"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/charts",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/charts",
+      "elapsedMs": 1595,
+      "bytes": 188442,
+      "title": "SANDBOX CHARTS | Classements open source, skills et IA · Sandbox",
+      "h1": ["Sandbox Charts"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Classements GitHub de projets open source, skills et modèles IA. Popularité, progression, qualité et méthodes publiques.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/charts\"/>",
+        "<meta property=\"og:title\" content=\"SANDBOX CHARTS | Classements open source, skills et IA\"/>",
+        "<meta property=\"og:description\" content=\"Classements GitHub de projets open source, skills et modèles IA. Popularité, progression, qualité et méthodes publiques.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/charts\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/charts/opengraph-image-13iig5?2e4127573dbcd3e9\"/>",
+        "<meta property=\"og:image:type\" content=\"image/png\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"SANDBOX CHARTS\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"SANDBOX CHARTS | Classements open source, skills et IA\"/>",
+        "<meta name=\"twitter:description\" content=\"Classements GitHub de projets open source, skills et modèles IA. Popularité, progression, qualité et méthodes publiques.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/charts/opengraph-image-13iig5?2e4127573dbcd3e9\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"SANDBOX CHARTS\"/>",
+        "<meta name=\"twitter:image:type\" content=\"image/png\"/>",
+        "<meta name=\"twitter:image:width\" content=\"1200\"/>",
+        "<meta name=\"twitter:image:height\" content=\"630\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "SANDBOX CHARTS",
+            "url": "https://www.sandboxpodcast.fr/charts",
+            "description": "Projets open source, skills et modèles IA à suivre chaque semaine."
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://www.sandboxpodcast.fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "SANDBOX CHARTS",
+                "item": "https://www.sandboxpodcast.fr/charts"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/charts/github",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/charts/github",
+      "elapsedMs": 1778,
+      "bytes": 188280,
+      "title": "GITHUB TOP 20 · SANDBOX CHARTS · Sandbox",
+      "h1": ["Sandbox Charts"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Les projets open source qui progressent le plus vite sur GitHub.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/charts/github\"/>",
+        "<meta property=\"og:title\" content=\"GITHUB TOP 20 · SANDBOX CHARTS\"/>",
+        "<meta property=\"og:description\" content=\"Les projets open source qui progressent le plus vite sur GitHub.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/charts/github\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/charts/github/opengraph-image-1bedmo?a86a714b1e82c37e\"/>",
+        "<meta property=\"og:image:type\" content=\"image/png\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Édition SANDBOX CHARTS\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"GITHUB TOP 20 · SANDBOX CHARTS\"/>",
+        "<meta name=\"twitter:description\" content=\"Les projets open source qui progressent le plus vite sur GitHub.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/charts/github/opengraph-image-1bedmo?a86a714b1e82c37e\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Édition SANDBOX CHARTS\"/>",
+        "<meta name=\"twitter:image:type\" content=\"image/png\"/>",
+        "<meta name=\"twitter:image:width\" content=\"1200\"/>",
+        "<meta name=\"twitter:image:height\" content=\"630\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/charts/skills",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/charts/skills",
+      "elapsedMs": 1525,
+      "bytes": 194714,
+      "title": "SKILLS TOP 20 · SANDBOX CHARTS · Sandbox",
+      "h1": ["Sandbox Charts"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Les skills, agents et MCP qui gagnent du terrain.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/charts/skills\"/>",
+        "<meta property=\"og:title\" content=\"SKILLS TOP 20 · SANDBOX CHARTS\"/>",
+        "<meta property=\"og:description\" content=\"Les skills, agents et MCP qui gagnent du terrain.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/charts/skills\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/charts/skills/opengraph-image-1bedmo?a86a714b1e82c37e\"/>",
+        "<meta property=\"og:image:type\" content=\"image/png\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Édition SANDBOX CHARTS\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"SKILLS TOP 20 · SANDBOX CHARTS\"/>",
+        "<meta name=\"twitter:description\" content=\"Les skills, agents et MCP qui gagnent du terrain.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/charts/skills/opengraph-image-1bedmo?a86a714b1e82c37e\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Édition SANDBOX CHARTS\"/>",
+        "<meta name=\"twitter:image:type\" content=\"image/png\"/>",
+        "<meta name=\"twitter:image:width\" content=\"1200\"/>",
+        "<meta name=\"twitter:image:height\" content=\"630\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/charts/ai-models",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/charts/ai-models",
+      "elapsedMs": 1331,
+      "bytes": 189796,
+      "title": "MODELS TOP 20 · SANDBOX CHARTS · Sandbox",
+      "h1": ["Sandbox Charts"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Les modèles d’IA en tête actuellement.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/charts/ai-models\"/>",
+        "<meta property=\"og:title\" content=\"MODELS TOP 20 · SANDBOX CHARTS\"/>",
+        "<meta property=\"og:description\" content=\"Les modèles d’IA en tête actuellement.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/charts/ai-models\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/charts/ai-models/opengraph-image-1bedmo?a86a714b1e82c37e\"/>",
+        "<meta property=\"og:image:type\" content=\"image/png\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Édition SANDBOX CHARTS\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"MODELS TOP 20 · SANDBOX CHARTS\"/>",
+        "<meta name=\"twitter:description\" content=\"Les modèles d’IA en tête actuellement.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/charts/ai-models/opengraph-image-1bedmo?a86a714b1e82c37e\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Édition SANDBOX CHARTS\"/>",
+        "<meta name=\"twitter:image:type\" content=\"image/png\"/>",
+        "<meta name=\"twitter:image:width\" content=\"1200\"/>",
+        "<meta name=\"twitter:image:height\" content=\"630\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/charts/rising",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/charts/rising",
+      "elapsedMs": 1877,
+      "bytes": 110173,
+      "title": "SANDBOX CHARTS | Rising 20 · Sandbox",
+      "h1": ["Sandbox Charts"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Les projets open source dont l&#x27;accélération mesurée mérite votre attention.\"/>",
+        "<meta name=\"robots\" content=\"noindex, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/charts/rising\"/>",
+        "<meta property=\"og:title\" content=\"SANDBOX CHARTS | Rising 20\"/>",
+        "<meta property=\"og:description\" content=\"Les projets open source dont l&#x27;accélération mesurée mérite votre attention.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/charts/rising\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/charts/rising/opengraph-image-1q3d4p?a548002c4fecef72\"/>",
+        "<meta property=\"og:image:type\" content=\"image/png\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"SANDBOX CHARTS · RISING 20\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"SANDBOX CHARTS | Rising 20\"/>",
+        "<meta name=\"twitter:description\" content=\"Les projets open source dont l&#x27;accélération mesurée mérite votre attention.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/charts/rising/opengraph-image-1q3d4p?a548002c4fecef72\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"SANDBOX CHARTS · RISING 20\"/>",
+        "<meta name=\"twitter:image:type\" content=\"image/png\"/>",
+        "<meta name=\"twitter:image:width\" content=\"1200\"/>",
+        "<meta name=\"twitter:image:height\" content=\"630\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/charts/history",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/charts/history",
+      "elapsedMs": 1522,
+      "bytes": 35791,
+      "title": "Les archives · SANDBOX CHARTS · Sandbox",
+      "h1": ["The archives."],
+      "metadata": [
+        "<meta name=\"description\" content=\"Les éditions publiées et leurs premières places, conservées avec leur méthode de calcul.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/charts/history\"/>",
+        "<meta property=\"og:title\" content=\"Les archives · SANDBOX CHARTS\"/>",
+        "<meta property=\"og:description\" content=\"Les éditions publiées et leurs premières places, conservées avec leur méthode de calcul.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/charts/history\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Les archives · SANDBOX CHARTS\"/>",
+        "<meta name=\"twitter:description\" content=\"Les éditions publiées et leurs premières places, conservées avec leur méthode de calcul.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/charts/github/methodology",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/charts/github/methodology",
+      "elapsedMs": 358,
+      "bytes": 46302,
+      "title": "SANDBOX CHARTS · Méthode GitHub Top 20 · Sandbox",
+      "h1": ["Comment se construitle GITHUB TOP 20."],
+      "metadata": [
+        "<meta name=\"description\" content=\"Sources, score, critères et limites des éditions du classement GitHub.\"/>",
+        "<meta name=\"robots\" content=\"noindex, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/charts/github/methodology\"/>",
+        "<meta property=\"og:title\" content=\"SANDBOX CHARTS · Méthode GitHub Top 20\"/>",
+        "<meta property=\"og:description\" content=\"Sources, score, critères et limites des éditions du classement GitHub.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/charts/github/methodology\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"SANDBOX CHARTS · Méthode GitHub Top 20\"/>",
+        "<meta name=\"twitter:description\" content=\"Sources, score, critères et limites des éditions du classement GitHub.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/charts/awards",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/charts/awards",
+      "elapsedMs": 566,
+      "bytes": 46936,
+      "title": "Sandbox Badges &amp; Awards · Sandbox",
+      "h1": ["Badges &amp; Awards"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Votre rang GitHub AI et les récompenses Sandbox : catégories, progression, Rising, Skills, modèles et palmarès annuels.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/charts/awards\"/>",
+        "<meta property=\"og:title\" content=\"Sandbox Badges &amp; Awards\"/>",
+        "<meta property=\"og:description\" content=\"Votre rang GitHub AI et les récompenses Sandbox : catégories, progression, Rising, Skills, modèles et palmarès annuels.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/charts/awards\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Sandbox Badges &amp; Awards\"/>",
+        "<meta name=\"twitter:description\" content=\"Votre rang GitHub AI et les récompenses Sandbox : catégories, progression, Rising, Skills, modèles et palmarès annuels.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/time-machine",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/time-machine",
+      "elapsedMs": 67,
+      "bytes": 391734,
+      "title": "Histoire de l&#x27;IA : chronologie 1996-2026 · Sandbox",
+      "h1": ["Time Machine.Histoire de l&#x27;intelligence artificielle"],
+      "metadata": [
+        "<meta name=\"description\" content=\"98 grandes dates de l&#x27;intelligence artificielle, de 1996 à 2026. Explorez les modèles et les annonces sur une chronologie sourcée.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/time-machine\"/>",
+        "<meta property=\"og:title\" content=\"Histoire de l&#x27;IA : chronologie 1996-2026\"/>",
+        "<meta property=\"og:description\" content=\"98 grandes dates de l&#x27;intelligence artificielle, de 1996 à 2026. Explorez les modèles et les annonces sur une chronologie sourcée.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/time-machine\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/time-machine/opengraph-image-v2m4m5?1a746b11dc2acff4\"/>",
+        "<meta property=\"og:image:type\" content=\"image/png\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Histoire de l&#x27;intelligence artificielle : Sandbox Time Machine, chronologie de 1996 à 2026\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Histoire de l&#x27;IA : chronologie 1996-2026\"/>",
+        "<meta name=\"twitter:description\" content=\"98 grandes dates de l&#x27;intelligence artificielle, de 1996 à 2026. Explorez les modèles et les annonces sur une chronologie sourcée.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/time-machine/opengraph-image-v2m4m5?1a746b11dc2acff4\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Histoire de l&#x27;intelligence artificielle : Sandbox Time Machine, chronologie de 1996 à 2026\"/>",
+        "<meta name=\"twitter:image:type\" content=\"image/png\"/>",
+        "<meta name=\"twitter:image:width\" content=\"1200\"/>",
+        "<meta name=\"twitter:image:height\" content=\"630\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ],
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "CollectionPage",
+              "@id": "https://www.sandboxpodcast.fr/time-machine#page",
+              "url": "https://www.sandboxpodcast.fr/time-machine",
+              "name": "Histoire de l'IA : chronologie 1996-2026",
+              "description": "98 grandes dates de l'intelligence artificielle, de 1996 à 2026. Explorez les modèles et les annonces sur une chronologie sourcée.",
+              "inLanguage": "fr-FR",
+              "dateModified": "2026-10-15",
+              "lastReviewed": "2026-10-15",
+              "temporalCoverage": "1996/2026",
+              "isAccessibleForFree": true,
+              "publisher": {
+                "@type": "Organization",
+                "name": "Sandbox",
+                "url": "https://www.sandboxpodcast.fr/"
+              },
+              "about": {
+                "@type": "Thing",
+                "name": "Histoire de l'intelligence artificielle"
+              },
+              "mainEntity": {
+                "@id": "https://www.sandboxpodcast.fr/time-machine#chronologie"
+              },
+              "breadcrumb": {
+                "@id": "https://www.sandboxpodcast.fr/time-machine#fil-ariane"
+              }
+            },
+            {
+              "@type": "ItemList",
+              "@id": "https://www.sandboxpodcast.fr/time-machine#chronologie",
+              "name": "Les grandes dates de l'IA, de 1996 à 2026",
+              "itemListOrder": "https://schema.org/ItemListOrderAscending",
+              "numberOfItems": 98,
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-deep-blue-first-game",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-deep-blue-first-game",
+                    "name": "Deep Blue gagne une partie contre Kasparov",
+                    "description": "Deep Blue remporte une première partie contre le champion du monde, qui gagne ensuite le match.",
+                    "temporalCoverage": "1996-02",
+                    "citation": ["https://www.ibm.com/history/deep-blue"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "IBM"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-deep-blue-match",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-deep-blue-match",
+                    "name": "Deep Blue remporte le match contre Kasparov",
+                    "description": "Le calculateur d'IBM bat Garry Kasparov sur un match de six parties aux conditions de tournoi.",
+                    "temporalCoverage": "1997-05",
+                    "citation": ["https://www.ibm.com/history/deep-blue"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "IBM"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-lstm",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-lstm",
+                    "name": "LSTM donne de la mémoire aux réseaux",
+                    "description": "Hochreiter et Schmidhuber proposent une architecture récurrente capable d'apprendre des dépendances temporelles longues.",
+                    "temporalCoverage": "1997-11-15",
+                    "citation": ["https://doi.org/10.1162/neco.1997.9.8.1735"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "TU Munich / IDSIA"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-lenet-5",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-lenet-5",
+                    "name": "LeNet-5 lit les chiffres manuscrits",
+                    "description": "LeCun et ses coauteurs décrivent des réseaux convolutifs appliqués à la reconnaissance de documents et de chèques.",
+                    "temporalCoverage": "1998-11-30",
+                    "citation": ["https://ieeexplore.ieee.org/document/726791"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "AT&T Labs Research"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-darpa-grand-challenge-2005",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-darpa-grand-challenge-2005",
+                    "name": "Stanley remporte le DARPA Grand Challenge",
+                    "description": "Le véhicule autonome de Stanford termine en tête une course de 132 miles dans le désert, sans conducteur.",
+                    "temporalCoverage": "2005-10-08",
+                    "citation": ["https://www.darpa.mil/about/innovation-timeline/grand-challenge"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Stanford Racing Team / DARPA"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-deep-belief-nets",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-deep-belief-nets",
+                    "name": "Une méthode pour entraîner des réseaux profonds",
+                    "description": "Hinton, Osindero et Teh présentent un apprentissage couche par couche pour les réseaux de croyance profonds.",
+                    "temporalCoverage": "2006-07-01",
+                    "citation": [
+                      "https://direct.mit.edu/neco/article/18/7/1527/7065/A-Fast-Learning-Algorithm-for-Deep-Belief-Nets"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Université de Toronto / NUS"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 7,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-cuda-1",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-cuda-1",
+                    "name": "CUDA 1.0 ouvre le calcul sur GPU",
+                    "description": "NVIDIA rend disponibles le Toolkit et le SDK CUDA 1.0 pour programmer ses GPU au-delà du rendu graphique.",
+                    "temporalCoverage": "2007-06-26",
+                    "citation": ["https://forums.developer.nvidia.com/t/cuda-1-0-released/982"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "NVIDIA"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 8,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-imagenet",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-imagenet",
+                    "name": "ImageNet rassemble 3,2 millions d'images annotées",
+                    "description": "ImageNet présente une base d'images annotées et organisées selon une hiérarchie destinée à la recherche en vision.",
+                    "temporalCoverage": "2009",
+                    "citation": [
+                      "https://www.image-net.org/static_files/papers/imagenet_cvpr09.pdf"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Université de Princeton"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 9,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-watson-jeopardy",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-watson-jeopardy",
+                    "name": "Watson gagne Jeopardy!",
+                    "description": "Watson bat Ken Jennings et Brad Rutter dans un concours télévisé fondé sur des questions en langage naturel.",
+                    "temporalCoverage": "2011-02-16",
+                    "citation": [
+                      "https://www.paramountpressexpress.com/cbs-media-ventures/shows/jeopardy/releases/?view=27594-watson-wins-jeopardy-the-ibm-challenge"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "IBM"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 10,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-siri-iphone",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-siri-iphone",
+                    "name": "Siri arrive dans l'iPhone",
+                    "description": "Apple annonce l'intégration de Siri à l'iPhone 4S pour effectuer des actions et répondre à des demandes vocales.",
+                    "temporalCoverage": "2011-10-04",
+                    "citation": [
+                      "https://www.apple.com/newsroom/2011/10/04Apple-Launches-iPhone-4S-iOS-5-iCloud/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Apple"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 11,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-alexnet",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-alexnet",
+                    "name": "AlexNet classe les images avec un réseau entraîné sur GPU",
+                    "description": "AlexNet montre les performances d'un grand réseau convolutif entraîné sur GPU pour classifier les images d'ImageNet.",
+                    "temporalCoverage": "2012",
+                    "citation": [
+                      "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Université de Toronto"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 12,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-word2vec",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-word2vec",
+                    "name": "word2vec représente les mots par des vecteurs",
+                    "description": "Mikolov et ses coauteurs proposent des architectures efficaces pour apprendre des relations entre mots dans de grands corpus.",
+                    "temporalCoverage": "2013-01-16",
+                    "citation": ["https://arxiv.org/abs/1301.3781"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 13,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-vae",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-vae",
+                    "name": "Kingma et Welling présentent les autoencodeurs variationnels",
+                    "description": "Kingma et Welling décrivent une méthode d'apprentissage de modèles génératifs à variables latentes, à l'origine des VAE.",
+                    "temporalCoverage": "2013-12-20",
+                    "citation": ["https://arxiv.org/abs/1312.6114"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Université d'Amsterdam"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 14,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-deepface",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-deepface",
+                    "name": "DeepFace vérifie l'identité dans des images de visages",
+                    "description": "DeepFace associe alignement 3D et réseau profond pour déterminer si deux photographies montrent la même personne.",
+                    "temporalCoverage": "2014-06",
+                    "citation": [
+                      "https://www.cv-foundation.org/openaccess/content_cvpr_2014/html/Taigman_DeepFace_Closing_the_2014_CVPR_paper.html",
+                      "https://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Taigman_DeepFace_Closing_the_2014_CVPR_paper.pdf"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Facebook AI Research / Université de Tel Aviv"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 15,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gan",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gan",
+                    "name": "Les GAN opposent générateur et discriminateur",
+                    "description": "Deux réseaux apprennent en compétition : l'un produit des exemples et l'autre tente de reconnaître les exemples synthétiques.",
+                    "temporalCoverage": "2014-06-10",
+                    "citation": ["https://arxiv.org/abs/1406.2661"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Université de Montréal"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 16,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-sequence-to-sequence",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-sequence-to-sequence",
+                    "name": "Des réseaux traduisent une séquence en une autre",
+                    "description": "Sutskever, Vinyals et Le présentent un système de réseaux LSTM qui encode une phrase puis produit sa traduction.",
+                    "temporalCoverage": "2014-09-10",
+                    "citation": ["https://arxiv.org/abs/1409.3215"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 17,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-dqn-atari",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-dqn-atari",
+                    "name": "DQN apprend à jouer à Atari",
+                    "description": "Un agent combine réseau profond et apprentissage par renforcement pour jouer à 49 jeux à partir des pixels et du score.",
+                    "temporalCoverage": "2015-02-25",
+                    "citation": ["https://www.nature.com/articles/nature14236"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 18,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-tensorflow",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-tensorflow",
+                    "name": "TensorFlow devient public",
+                    "description": "Google publie TensorFlow sous licence Apache 2.0 pour entraîner et exécuter des modèles d'apprentissage automatique.",
+                    "temporalCoverage": "2015-11-09",
+                    "citation": [
+                      "https://research.google.com/pubs/archive/45166.pdf",
+                      "https://blog.tensorflow.org/2022/10/building-the-future-of-tensorflow.html"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 19,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-resnet",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-resnet",
+                    "name": "ResNet facilite les réseaux très profonds",
+                    "description": "Les connexions résiduelles permettent d'entraîner des réseaux beaucoup plus profonds pour la reconnaissance d'images.",
+                    "temporalCoverage": "2015-12-10",
+                    "citation": ["https://arxiv.org/abs/1512.03385"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Microsoft Research"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 20,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-openai-announcement",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-openai-announcement",
+                    "name": "OpenAI annonce son laboratoire de recherche",
+                    "description": "OpenAI se présente publiquement comme une organisation de recherche en IA à but non lucratif.",
+                    "temporalCoverage": "2015-12-11",
+                    "citation": ["https://openai.com/index/introducing-openai/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 21,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-alphago-lee-sedol",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-alphago-lee-sedol",
+                    "name": "AlphaGo conclut sa victoire face à Lee Sedol",
+                    "description": "AlphaGo termine la rencontre de Séoul avec quatre victoires contre une face au grand maître de go.",
+                    "temporalCoverage": "2016-03-15",
+                    "citation": [
+                      "https://blog.google/innovation-and-ai/products/alphagos-ultimate-challenge/",
+                      "https://deepmind.google/research/highlighted-research/alphago/the-challenge-match"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 22,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-wavenet",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-wavenet",
+                    "name": "WaveNet génère directement le signal audio",
+                    "description": "WaveNet produit la parole en modélisant les échantillons du signal sonore, plutôt qu'en assemblant des fragments enregistrés.",
+                    "temporalCoverage": "2016-09-08",
+                    "citation": [
+                      "https://deepmind.google/blog/wavenet-a-generative-model-for-raw-audio/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 23,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-pytorch-first-release",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-pytorch-first-release",
+                    "name": "PyTorch devient accessible aux chercheurs",
+                    "description": "PyTorch ouvre un environnement Python de calcul sur tenseurs et d'entraînement de réseaux avec des graphes dynamiques.",
+                    "temporalCoverage": "2017-01",
+                    "citation": ["https://pytorch.org/blog/a-year-in/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Équipe PyTorch / Facebook AI Research"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 24,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-transformer",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-transformer",
+                    "name": "Le Transformer traite les séquences par attention",
+                    "description": "Attention Is All You Need présente une architecture de traitement des séquences fondée sur des mécanismes d'attention.",
+                    "temporalCoverage": "2017-06-12",
+                    "citation": ["https://arxiv.org/abs/1706.03762"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 25,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-alphazero",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-alphazero",
+                    "name": "AlphaZero apprend les échecs, le shogi et le go",
+                    "description": "Un même algorithme apprend séparément trois jeux par autojeu et bat des programmes de référence dans les évaluations publiées.",
+                    "temporalCoverage": "2017-12-05",
+                    "citation": ["https://arxiv.org/abs/1712.01815"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 26,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-1",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-1",
+                    "name": "Le premier GPT est présenté",
+                    "description": "OpenAI associe préentraînement génératif et ajustement supervisé pour améliorer plusieurs tâches de compréhension du langage.",
+                    "temporalCoverage": "2018-06-11",
+                    "citation": ["https://openai.com/index/language-unsupervised/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 27,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-bert",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-bert",
+                    "name": "BERT apprend le contexte dans les deux sens",
+                    "description": "BERT préentraîne un Transformer bidirectionnel, puis l'adapte à différentes tâches de compréhension du langage.",
+                    "temporalCoverage": "2018-10-11",
+                    "citation": ["https://arxiv.org/abs/1810.04805"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 28,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-2",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-2",
+                    "name": "GPT-2 est annoncé avec une diffusion progressive",
+                    "description": "OpenAI présente GPT-2 et publie d'abord une version plus petite, avant de diffuser les versions suivantes.",
+                    "temporalCoverage": "2019-02-14",
+                    "citation": [
+                      "https://openai.com/index/better-language-models/",
+                      "https://openai.com/index/gpt-2-1-5b-release/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 29,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-t5",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-t5",
+                    "name": "T5 transforme les tâches de langage en texte vers texte",
+                    "description": "T5 traite traduction, résumé et questions-réponses dans un même format où l'entrée et la sortie sont du texte.",
+                    "temporalCoverage": "2019-10-23",
+                    "citation": ["https://arxiv.org/abs/1910.10683"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 30,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-3-paper",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-3-paper",
+                    "name": "GPT-3 apprend à partir de quelques exemples",
+                    "description": "L'article sur GPT-3 étudie un modèle de 175 milliards de paramètres capable d'effectuer des tâches à partir d'exemples dans le prompt.",
+                    "temporalCoverage": "2020-05-28",
+                    "citation": ["https://arxiv.org/abs/2005.14165"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 31,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-3-api",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-3-api",
+                    "name": "GPT-3 devient accessible par une API privée",
+                    "description": "OpenAI lance une bêta privée de son API permettant d'intégrer des modèles de la famille GPT-3 dans des applications.",
+                    "temporalCoverage": "2020-06-11",
+                    "citation": ["https://openai.com/index/openai-api/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 32,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-ddpm",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-ddpm",
+                    "name": "La diffusion génère des images par débruitage",
+                    "description": "Les DDPM apprennent à reconstruire progressivement des images à partir de bruit.",
+                    "temporalCoverage": "2020-06-19",
+                    "citation": ["https://arxiv.org/abs/2006.11239"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "UC Berkeley"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 33,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-alphafold-2",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-alphafold-2",
+                    "name": "AlphaFold 2 prédit la structure des protéines à CASP14",
+                    "description": "DeepMind annonce les résultats d'AlphaFold à CASP14 pour prédire la structure tridimensionnelle des protéines.",
+                    "temporalCoverage": "2020-11-30",
+                    "citation": [
+                      "https://deepmind.google/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 34,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-clip",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-clip",
+                    "name": "CLIP relie les images et les mots",
+                    "description": "CLIP apprend conjointement à partir d'images et de descriptions pour reconnaître des concepts visuels sans réentraînement pour chaque catégorie.",
+                    "temporalCoverage": "2021-01-05",
+                    "citation": ["https://openai.com/index/clip/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 35,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-dall-e",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-dall-e",
+                    "name": "DALL-E génère des images à partir de texte",
+                    "description": "DALL-E traduit des descriptions en images et combine des concepts visuels dans une même génération.",
+                    "temporalCoverage": "2021-01-05",
+                    "citation": ["https://openai.com/index/dall-e/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 36,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-lamda",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-lamda",
+                    "name": "Google présente LaMDA pour la conversation",
+                    "description": "LaMDA est présenté comme un modèle entraîné sur le dialogue pour suivre des conversations ouvertes sur des sujets variés.",
+                    "temporalCoverage": "2021-05-18",
+                    "citation": ["https://blog.google/innovation-and-ai/products/lamda/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 37,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-github-copilot",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-github-copilot",
+                    "name": "GitHub Copilot entre dans l'éditeur de code",
+                    "description": "La préversion technique de Copilot propose des lignes et des fonctions à partir du code environnant grâce à OpenAI Codex.",
+                    "temporalCoverage": "2021-06-29",
+                    "citation": [
+                      "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "GitHub / OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 38,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-latent-diffusion",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-latent-diffusion",
+                    "name": "La diffusion passe dans un espace latent",
+                    "description": "Les modèles de diffusion latente réduisent les coûts de génération en travaillant sur une représentation compressée des images.",
+                    "temporalCoverage": "2021-12-20",
+                    "citation": ["https://arxiv.org/abs/2112.10752"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "CompVis"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 39,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-instructgpt",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-instructgpt",
+                    "name": "InstructGPT suit les consignes humaines",
+                    "description": "OpenAI présente des modèles ajustés avec des démonstrations et des préférences humaines, devenus les modèles par défaut de son API.",
+                    "temporalCoverage": "2022-01-27",
+                    "citation": ["https://openai.com/index/instruction-following/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 40,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-chinchilla",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-chinchilla",
+                    "name": "Chinchilla rééquilibre paramètres et données",
+                    "description": "L'étude montre comment répartir le budget de calcul entre taille du modèle et quantité de données d'entraînement.",
+                    "temporalCoverage": "2022-03-29",
+                    "citation": ["https://arxiv.org/abs/2203.15556"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 41,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-palm",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-palm",
+                    "name": "PaLM pousse l'échelle à 540 milliards de paramètres",
+                    "description": "Google présente PaLM, entraîné avec Pathways, et évalue ses capacités sur des tâches de langage, de raisonnement et de code.",
+                    "temporalCoverage": "2022-04-04",
+                    "citation": [
+                      "https://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google Research"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 42,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-dall-e-2-preview",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-dall-e-2-preview",
+                    "name": "DALL-E 2 entre en préversion limitée",
+                    "description": "DALL-E 2 améliore la fidélité des images et introduit des fonctions de variation et de modification, avec un accès initial restreint.",
+                    "temporalCoverage": "2022-04-06",
+                    "citation": [
+                      "https://github.com/openai/dalle-2-preview/blob/main/system-card_04062022.md"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 43,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-imagen",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-imagen",
+                    "name": "Imagen associe langage et diffusion",
+                    "description": "Imagen combine un grand encodeur de langage avec des modèles de diffusion pour générer des images à partir de descriptions.",
+                    "temporalCoverage": "2022-05-23",
+                    "citation": ["https://arxiv.org/abs/2205.11487"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google Research"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 44,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-bloom",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-bloom",
+                    "name": "BLOOM ouvre un grand modèle multilingue à la recherche",
+                    "description": "Une collaboration internationale publie BLOOM, un modèle de 176 milliards de paramètres couvrant 46 langues naturelles et 13 langages de programmation.",
+                    "temporalCoverage": "2022-07-12",
+                    "citation": ["https://huggingface.co/blog/bloom"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "BigScience / Hugging Face"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 45,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-stable-diffusion",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-stable-diffusion",
+                    "name": "Stable Diffusion devient téléchargeable",
+                    "description": "Stable Diffusion est diffusé publiquement avec ses poids et son code, permettant la génération d'images sur du matériel local compatible.",
+                    "temporalCoverage": "2022-08-22",
+                    "citation": [
+                      "https://stability.ai/news-updates/stable-diffusion-public-release",
+                      "https://huggingface.co/blog/stable_diffusion"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "CompVis / Stability AI / LAION"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 46,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-whisper",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-whisper",
+                    "name": "Whisper ouvre la transcription multilingue",
+                    "description": "OpenAI publie les modèles et le code de Whisper pour la reconnaissance vocale et la traduction de la parole vers l'anglais.",
+                    "temporalCoverage": "2022-09-21",
+                    "citation": ["https://openai.com/index/whisper/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 47,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-chatgpt",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-chatgpt",
+                    "name": "ChatGPT ouvre l'IA conversationnelle au public",
+                    "description": "ChatGPT est lancé en préversion de recherche gratuite avec une interface de dialogue permettant les questions successives.",
+                    "temporalCoverage": "2022-11-30",
+                    "citation": ["https://openai.com/index/chatgpt/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 48,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-llama-1",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-llama-1",
+                    "name": "LLaMA ouvre une nouvelle famille de modèles",
+                    "description": "Meta publie LLaMA, une famille de modèles de langage de 7 à 65 milliards de paramètres.",
+                    "temporalCoverage": "2023-02-24",
+                    "citation": ["https://ai.meta.com/blog/large-language-model-Llama-meta-ai/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Meta"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 49,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-claude-1",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-claude-1",
+                    "name": "Anthropic présente Claude",
+                    "description": "Anthropic annonce Claude, son assistant conversationnel issu de recherches sur l'alignement.",
+                    "temporalCoverage": "2023-03-14",
+                    "citation": ["https://www.anthropic.com/news/introducing-claude"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Anthropic"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 50,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-4",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-4",
+                    "name": "GPT-4 arrive dans ChatGPT et en API",
+                    "description": "OpenAI présente GPT-4 et ouvre son accès dans ChatGPT Plus ainsi qu'en API sur liste d'attente.",
+                    "temporalCoverage": "2023-03-14",
+                    "citation": ["https://openai.com/index/gpt-4-research/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 51,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-llama-2",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-llama-2",
+                    "name": "Llama 2 ouvre l'usage commercial",
+                    "description": "Meta rend disponibles les modèles Llama 2 et Llama 2-Chat, pour la recherche et des usages commerciaux.",
+                    "temporalCoverage": "2023-07-18",
+                    "citation": ["https://ai.meta.com/blog/llama-2/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Meta"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 52,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-sdxl-1",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-sdxl-1",
+                    "name": "SDXL 1.0 est publié",
+                    "description": "Stability AI publie les poids et le code de SDXL 1.0, son modèle de génération d'images.",
+                    "temporalCoverage": "2023-07-26",
+                    "citation": ["https://github.com/Stability-AI/generative-models"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Stability AI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 53,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-rt-2",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-rt-2",
+                    "name": "RT-2 relie langage, vision et action robotique",
+                    "description": "RT-2 transpose des connaissances apprises sur le Web en commandes de contrôle robotique.",
+                    "temporalCoverage": "2023-07-28",
+                    "citation": [
+                      "https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 54,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-mistral-7b",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-mistral-7b",
+                    "name": "Mistral 7B, un modèle européen à poids ouverts",
+                    "description": "Mistral AI publie Mistral 7B, un modèle de langage de 7,3 milliards de paramètres sous licence Apache 2.0.",
+                    "temporalCoverage": "2023-09-27",
+                    "citation": ["https://mistral.ai/news/announcing-mistral-7b/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Mistral AI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 55,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-dall-e-3",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-dall-e-3",
+                    "name": "DALL·E 3 devient accessible dans ChatGPT",
+                    "description": "OpenAI ouvre DALL·E 3 aux abonnés ChatGPT Plus et Enterprise pour générer des images par conversation.",
+                    "temporalCoverage": "2023-10-19",
+                    "citation": [
+                      "https://openai.com/index/dall-e-3-is-now-available-in-chatgpt-plus-and-enterprise/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 56,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-1",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-1",
+                    "name": "Google présente la famille Gemini",
+                    "description": "Google dévoile Gemini 1.0 en trois tailles : Ultra, Pro et Nano.",
+                    "temporalCoverage": "2023-12-06",
+                    "citation": [
+                      "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 57,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-mixtral-8x7b",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-mixtral-8x7b",
+                    "name": "Mixtral diffuse l'architecture à experts",
+                    "description": "Mistral publie Mixtral 8×7B, un modèle à mélange d'experts dont les poids sont disponibles sous Apache 2.0.",
+                    "temporalCoverage": "2023-12-11",
+                    "citation": ["https://mistral.ai/news/mixtral-of-experts/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Mistral AI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 58,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-alphageometry",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-alphageometry",
+                    "name": "AlphaGeometry associe réseaux neuronaux et déduction",
+                    "description": "DeepMind publie AlphaGeometry, qui associe modèle neuronal et moteur de déduction pour résoudre des problèmes de géométrie.",
+                    "temporalCoverage": "2024-01-17",
+                    "citation": [
+                      "https://deepmind.google/blog/alphageometry-an-olympiad-level-ai-system-for-geometry/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 59,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-1-5",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-1-5",
+                    "name": "Gemini 1.5 explore le million de tokens",
+                    "description": "Google annonce Gemini 1.5 Pro, avec une fenêtre expérimentale pouvant atteindre un million de tokens.",
+                    "temporalCoverage": "2024-02-15",
+                    "citation": [
+                      "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 60,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-sora-preview",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-sora-preview",
+                    "name": "Sora montre la vidéo générée par IA",
+                    "description": "OpenAI présente les recherches derrière Sora, capable de générer des vidéos à partir de texte.",
+                    "temporalCoverage": "2024-02-15",
+                    "citation": [
+                      "https://openai.com/index/video-generation-models-as-world-simulators/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 61,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-claude-3",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-claude-3",
+                    "name": "Claude 3 introduit Haiku, Sonnet et Opus",
+                    "description": "Anthropic annonce la famille Claude 3 et rend Opus et Sonnet accessibles dans Claude et via son API.",
+                    "temporalCoverage": "2024-03-04",
+                    "citation": ["https://www.anthropic.com/news/claude-3-family"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Anthropic"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 62,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-devin",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-devin",
+                    "name": "Cognition présente l'agent de développement Devin",
+                    "description": "Cognition présente Devin, un agent de développement doté d'un terminal, d'un éditeur et d'un navigateur.",
+                    "temporalCoverage": "2024-03-12",
+                    "citation": ["https://cognition.com/blog/introducing-devin"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Cognition"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 63,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-llama-3",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-llama-3",
+                    "name": "Llama 3 renouvelle les modèles accessibles",
+                    "description": "Meta publie Llama 3 en versions de 8 et 70 milliards de paramètres.",
+                    "temporalCoverage": "2024-04-18",
+                    "citation": ["https://ai.meta.com/blog/meta-llama-3/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Meta"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 64,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-alphafold-3",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-alphafold-3",
+                    "name": "AlphaFold 3 prédit les interactions moléculaires",
+                    "description": "AlphaFold 3 étend la prédiction de structure aux interactions entre protéines, ADN, ARN et petites molécules.",
+                    "temporalCoverage": "2024-05-08",
+                    "citation": [
+                      "https://blog.google/innovation-and-ai/products/google-deepmind-isomorphic-alphafold-3-ai-model/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind / Isomorphic Labs"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 65,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-4o",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-4o",
+                    "name": "GPT-4o rapproche texte, vision et voix",
+                    "description": "OpenAI annonce GPT-4o, un modèle réunissant traitement du texte, de l'image et de l'audio.",
+                    "temporalCoverage": "2024-05-13",
+                    "citation": ["https://openai.com/index/hello-gpt-4o/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 66,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-claude-3-5-sonnet",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-claude-3-5-sonnet",
+                    "name": "Anthropic lance Claude 3.5 Sonnet",
+                    "description": "Claude 3.5 Sonnet devient disponible, avec des améliorations en code, compréhension et vision.",
+                    "temporalCoverage": "2024-06-20",
+                    "citation": [
+                      "https://aws.amazon.com/about-aws/whats-new/2024/06/anthropic-claude-3-5-sonnet-model-bedrock/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Anthropic"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 67,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-llama-3-1",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-llama-3-1",
+                    "name": "Llama 3.1 publie un modèle de 405 milliards de paramètres",
+                    "description": "Meta publie Llama 3.1, dont une version à 405 milliards de paramètres et des modèles 8B et 70B actualisés.",
+                    "temporalCoverage": "2024-07-23",
+                    "citation": ["https://ai.meta.com/blog/meta-llama-3-1/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Meta"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 68,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-ai-act-effective",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-ai-act-effective",
+                    "name": "L'AI Act entre en vigueur en Europe",
+                    "description": "Le règlement européen sur l'intelligence artificielle entre en vigueur.",
+                    "temporalCoverage": "2024-08-01",
+                    "citation": [
+                      "https://commission.europa.eu/news-and-media/news/ai-act-enters-force-2024-08-01_en"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Union européenne"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 69,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-flux-1",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-flux-1",
+                    "name": "Black Forest Labs publie FLUX.1",
+                    "description": "Black Forest Labs publie FLUX.1, une famille de modèles texte-vers-image en trois variantes.",
+                    "temporalCoverage": "2024-08-01",
+                    "citation": ["https://bfl.ai/blog/24-08-01-bfl"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Black Forest Labs"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 70,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-openai-o1-preview",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-openai-o1-preview",
+                    "name": "o1 introduit une série dédiée au raisonnement",
+                    "description": "OpenAI ouvre o1-preview et o1-mini, conçus pour consacrer davantage de calcul au raisonnement avant de répondre.",
+                    "temporalCoverage": "2024-09-12",
+                    "citation": ["https://openai.com/index/introducing-openai-o1-preview/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 71,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-nobel-physics-ai",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-nobel-physics-ai",
+                    "name": "Le Nobel de physique récompense Hopfield et Hinton",
+                    "description": "John Hopfield et Geoffrey Hinton reçoivent le Nobel de physique pour leurs travaux fondateurs sur les réseaux de neurones.",
+                    "temporalCoverage": "2024-10-08",
+                    "citation": ["https://www.kva.se/en/news/the-nobel-prize-in-physics-2024/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Académie royale des sciences de Suède"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 72,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-nobel-chemistry-alphafold",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-nobel-chemistry-alphafold",
+                    "name": "Le Nobel de chimie distingue la prédiction des protéines",
+                    "description": "Le Nobel de chimie récompense David Baker, Demis Hassabis et John Jumper.",
+                    "temporalCoverage": "2024-10-09",
+                    "citation": ["https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2024/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Académie royale des sciences de Suède"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 73,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-model-context-protocol",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-model-context-protocol",
+                    "name": "MCP ouvre un protocole de connexion pour les assistants",
+                    "description": "Anthropic publie le Model Context Protocol pour relier les assistants IA aux outils et aux sources de données.",
+                    "temporalCoverage": "2024-11-25",
+                    "citation": ["https://www.anthropic.com/news/model-context-protocol"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Anthropic"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 74,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-sora-public",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-sora-public",
+                    "name": "Sora sort de la préversion de recherche",
+                    "description": "OpenAI ouvre Sora Turbo comme produit de génération vidéo aux abonnés ChatGPT Plus et Pro dans les zones prises en charge.",
+                    "temporalCoverage": "2024-12-09",
+                    "citation": ["https://openai.com/index/sora-is-here/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 75,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-2",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-2",
+                    "name": "Google lance Gemini 2.0 Flash Experimental",
+                    "description": "Google lance Gemini 2.0 Flash Experimental et présente de nouvelles capacités multimodales et d'utilisation d'outils.",
+                    "temporalCoverage": "2024-12-11",
+                    "citation": [
+                      "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/google-gemini-ai-update-december-2024/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 76,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-deepseek-v3",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-deepseek-v3",
+                    "name": "DeepSeek-V3 publie ses poids",
+                    "description": "DeepSeek publie V3, un modèle à mélange d'experts de 671 milliards de paramètres totaux, dont 37 milliards activés.",
+                    "temporalCoverage": "2024-12-26",
+                    "citation": ["https://deepseek.com/en/news/deepseek-v3/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "DeepSeek"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 77,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-deepseek-r1",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-deepseek-r1",
+                    "name": "DeepSeek-R1 ouvre un modèle de raisonnement",
+                    "description": "DeepSeek publie R1 et ses poids sous licence MIT, avec un accès sur le Web et en API.",
+                    "temporalCoverage": "2025-01-20",
+                    "citation": ["https://deepseek.com/en/news/deepseek-r1/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "DeepSeek"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 78,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-claude-3-7-code",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-claude-3-7-code",
+                    "name": "Claude 3.7 Sonnet et Claude Code arrivent ensemble",
+                    "description": "Anthropic publie Claude 3.7 Sonnet, qui associe réponses rapides et raisonnement prolongé.",
+                    "temporalCoverage": "2025-02-24",
+                    "citation": ["https://www.anthropic.com/news/claude-3-7-sonnet"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Anthropic"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 79,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-wan-2-1",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-wan-2-1",
+                    "name": "Wan2.1 publie code et poids pour la vidéo",
+                    "description": "L'équipe Wan publie le code d'inférence et les poids de Wan2.1.",
+                    "temporalCoverage": "2025-02-25",
+                    "citation": ["https://github.com/Wan-Video/Wan2.1"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Alibaba / Wan"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 80,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-2-5",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-2-5",
+                    "name": "Gemini 2.5 intègre le raisonnement",
+                    "description": "Google ouvre Gemini 2.5 Pro Experimental, premier modèle de sa nouvelle génération avec raisonnement intégré.",
+                    "temporalCoverage": "2025-03-25",
+                    "citation": [
+                      "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 81,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-llama-4",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-llama-4",
+                    "name": "Llama 4 introduit Scout et Maverick",
+                    "description": "Meta publie Llama 4 Scout et Maverick, deux modèles nativement multimodaux à mélange d'experts.",
+                    "temporalCoverage": "2025-04-05",
+                    "citation": ["https://ai.meta.com/blog/llama-4-multimodal-intelligence/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Meta"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 82,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-qwen-3",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-qwen-3",
+                    "name": "Qwen3 publie une famille multilingue à raisonnement hybride",
+                    "description": "Qwen publie huit modèles aux poids ouverts sous Apache 2.0, avec des modes de réponse rapide et de raisonnement.",
+                    "temporalCoverage": "2025-04-29",
+                    "citation": ["https://qwenlm.github.io/blog/qwen3/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Alibaba / Qwen"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 83,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-alphaevolve",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-alphaevolve",
+                    "name": "AlphaEvolve explore la découverte d'algorithmes",
+                    "description": "DeepMind présente AlphaEvolve, un agent qui propose et améliore des algorithmes à l'aide de Gemini et d'évaluateurs automatiques.",
+                    "temporalCoverage": "2025-05-14",
+                    "citation": [
+                      "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 84,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-codex-cloud-agent",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-codex-cloud-agent",
+                    "name": "Codex ouvre un agent de développement dans le cloud",
+                    "description": "OpenAI ouvre une préversion de Codex, agent cloud capable de modifier du code et d'exécuter des tests.",
+                    "temporalCoverage": "2025-05-16",
+                    "citation": ["https://openai.com/index/introducing-codex/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 85,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-veo-3",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-veo-3",
+                    "name": "Veo 3 génère la vidéo avec son",
+                    "description": "Google présente Veo 3, capable de générer des vidéos avec dialogues, ambiances et effets sonores.",
+                    "temporalCoverage": "2025-05-20",
+                    "citation": [
+                      "https://blog.google/innovation-and-ai/products/generative-media-models-io-2025/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 86,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-claude-4",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-claude-4",
+                    "name": "Claude 4 introduit Opus 4 et Sonnet 4",
+                    "description": "Anthropic lance Claude Opus 4 et Sonnet 4, orientés vers le code, le raisonnement et les tâches longues.",
+                    "temporalCoverage": "2025-05-22",
+                    "citation": ["https://www.anthropic.com/news/claude-4"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Anthropic"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 87,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-oss",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-oss",
+                    "name": "OpenAI publie les poids de gpt-oss",
+                    "description": "OpenAI publie gpt-oss-120b et gpt-oss-20b, deux modèles de raisonnement à poids ouverts sous Apache 2.0.",
+                    "temporalCoverage": "2025-08-05",
+                    "citation": ["https://openai.com/index/introducing-gpt-oss/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 88,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-5",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-5",
+                    "name": "GPT-5 réunit réponse rapide et raisonnement",
+                    "description": "OpenAI lance GPT-5 comme système unifié capable de choisir entre réponse rapide et raisonnement approfondi.",
+                    "temporalCoverage": "2025-08-07",
+                    "citation": ["https://openai.com/index/introducing-gpt-5/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 89,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-sora-2",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-sora-2",
+                    "name": "Sora 2 associe génération vidéo et audio",
+                    "description": "OpenAI lance Sora 2, avec génération audio synchronisée et une nouvelle application.",
+                    "temporalCoverage": "2025-09-30",
+                    "citation": ["https://openai.com/index/sora-2/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 90,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-3",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-3",
+                    "name": "Gemini 3 arrive dans l'application et la recherche",
+                    "description": "Google ouvre Gemini 3 avec de nouvelles capacités de raisonnement et des réponses sous forme d'interfaces générées.",
+                    "temporalCoverage": "2025-11-18",
+                    "citation": [
+                      "https://blog.google/products-and-platforms/products/gemini/gemini-3-gemini-app/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 91,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-mistral-3",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-mistral-3",
+                    "name": "Mistral 3 publie une nouvelle génération ouverte",
+                    "description": "Mistral publie Large 3 et trois petits modèles Ministral sous licence Apache 2.0.",
+                    "temporalCoverage": "2025-12-02",
+                    "citation": ["https://mistral.ai/news/mistral-3/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Mistral AI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 92,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-3-1-pro",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gemini-3-1-pro",
+                    "name": "Gemini 3.1 Pro ouvre sa préversion",
+                    "description": "Google déploie Gemini 3.1 Pro pour les tâches complexes de raisonnement.",
+                    "temporalCoverage": "2026-02-19",
+                    "citation": [
+                      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/"
+                    ],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Google DeepMind"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 93,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-5-4",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-5-4",
+                    "name": "GPT-5.4 intègre l'utilisation native de l'ordinateur",
+                    "description": "OpenAI publie GPT-5.4 dans ChatGPT, Codex et l'API, avec des capacités natives d'utilisation de l'ordinateur.",
+                    "temporalCoverage": "2026-03-05",
+                    "citation": ["https://openai.com/index/introducing-gpt-5-4/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 94,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-5-5",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-5-5",
+                    "name": "GPT-5.5 arrive dans ChatGPT et Codex",
+                    "description": "OpenAI lance GPT-5.5 pour les tâches de code, de recherche et de travail sur ordinateur.",
+                    "temporalCoverage": "2026-04-23",
+                    "citation": ["https://openai.com/index/introducing-gpt-5-5/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 95,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-deepseek-v4-preview",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-deepseek-v4-preview",
+                    "name": "DeepSeek-V4 Preview ouvre un contexte d'un million de tokens",
+                    "description": "DeepSeek ouvre V4-Pro et V4-Flash en préversion, sur le Web et en API, avec publication des poids.",
+                    "temporalCoverage": "2026-04-24",
+                    "citation": ["https://www.deepseek.com/en/news/v4-preview/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "DeepSeek"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 96,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-claude-fable-mythos-5",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-claude-fable-mythos-5",
+                    "name": "Anthropic lance Claude Fable 5 et Mythos 5",
+                    "description": "Anthropic lance Fable 5 et Mythos 5, deux déclinaisons d'un même modèle avec des protections différentes.",
+                    "temporalCoverage": "2026-06-09",
+                    "citation": ["https://www.anthropic.com/news/claude-fable-5-mythos-5"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "Anthropic"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 97,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-6-astra",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-6-astra",
+                    "name": "OpenAI publie GPT-6 Astra",
+                    "description": "OpenAI publie GPT-6 Astra, avec des capacités renforcées de travail professionnel et d'utilisation de l'ordinateur.",
+                    "temporalCoverage": "2026-09-03",
+                    "citation": ["https://openai.com/index/safety-overview-gpt-6-astra/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 98,
+                  "item": {
+                    "@type": "CreativeWork",
+                    "@id": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-6-intelligent-ui",
+                    "url": "https://www.sandboxpodcast.fr/time-machine#ia-gpt-6-intelligent-ui",
+                    "name": "GPT-6 déploie les interfaces interactives dans ChatGPT",
+                    "description": "OpenAI déploie GPT-6 avec Intelligent UI, pour composer des réponses associant texte, éléments visuels et interactions.",
+                    "temporalCoverage": "2026-10-07",
+                    "citation": ["https://openai.com/index/gpt-6-for-everyone/"],
+                    "about": {
+                      "@type": "Thing",
+                      "name": "OpenAI"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.sandboxpodcast.fr/time-machine#fil-ariane",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Sandbox",
+                  "item": "https://www.sandboxpodcast.fr/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Histoire de l'IA",
+                  "item": "https://www.sandboxpodcast.fr/time-machine"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/podcast",
+      "status": 404,
+      "finalUrl": "https://www.sandboxpodcast.fr/podcast",
+      "elapsedMs": 198,
+      "bytes": 7509,
+      "h1": [],
+      "metadata": [
+        "<meta name=\"robots\" content=\"noindex\"/>",
+        "<meta name=\"robots\" content=\"noindex, follow\"/>"
+      ],
+      "jsonLd": []
+    },
+    {
+      "path": "/episodes",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/episodes",
+      "elapsedMs": 299,
+      "bytes": 40427,
+      "title": "Podcasts : tous les épisodes · Sandbox",
+      "h1": ["Tous les podcasts."],
+      "metadata": [
+        "<meta name=\"description\" content=\"Retrouvez les épisodes Sandbox, leurs chapitres et les ressources mentionnées pendant les émissions.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/episodes\"/>",
+        "<meta property=\"og:title\" content=\"Podcasts : tous les épisodes\"/>",
+        "<meta property=\"og:description\" content=\"Retrouvez les épisodes Sandbox, leurs chapitres et les ressources mentionnées pendant les émissions.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/episodes\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Podcasts : tous les épisodes\"/>",
+        "<meta name=\"twitter:description\" content=\"Retrouvez les épisodes Sandbox, leurs chapitres et les ressources mentionnées pendant les émissions.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/episodes/1",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/episodes/1",
+      "elapsedMs": 261,
+      "bytes": 81024,
+      "title": "Épisode 1 : Sandbox #1 (pilote)  Mistral Large 4, Claude Haiku 5.5, Gemini at Work, Sillage et les harnais IA · Sandbox",
+      "h1": [
+        "Sandbox #1 (pilote)  Mistral Large 4, Claude Haiku 5.5, Gemini at Work, Sillage et les harnais IA"
+      ],
+      "metadata": [
+        "<meta name=\"description\" content=\"Premier épisode (pilote) de Sandbox, le podcast qui teste, débat et remet les chiffres en perspective. Lou, Nicolas et Loïc passent en revue l&#x27;actualité IA et tech de la semaine, présentent un outil fait maison et racontent leurs expérimentations en cours.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/episodes/1\"/>",
+        "<meta property=\"og:title\" content=\"Épisode 1 : Sandbox #1 (pilote)  Mistral Large 4, Claude Haiku 5.5, Gemini at Work, Sillage et les harnais IA\"/>",
+        "<meta property=\"og:description\" content=\"Premier épisode (pilote) de Sandbox, le podcast qui teste, débat et remet les chiffres en perspective. Lou, Nicolas et Loïc passent en revue l&#x27;actualité IA et tech de la semaine, présentent un outil fait maison et racontent leurs expérimentations en cours.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/episodes/1\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/episodes/1/opengraph-image-y7oil4?96880b13b3f0c5df\"/>",
+        "<meta property=\"og:image:type\" content=\"image/png\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Épisode du podcast\"/>",
+        "<meta property=\"og:type\" content=\"article\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Épisode 1 : Sandbox #1 (pilote)  Mistral Large 4, Claude Haiku 5.5, Gemini at Work, Sillage et les harnais IA\"/>",
+        "<meta name=\"twitter:description\" content=\"Premier épisode (pilote) de Sandbox, le podcast qui teste, débat et remet les chiffres en perspective. Lou, Nicolas et Loïc passent en revue l&#x27;actualité IA et tech de la semaine, présentent un outil fait maison et racontent leurs expérimentations en cours.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/episodes/1/opengraph-image-y7oil4?96880b13b3f0c5df\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Épisode du podcast\"/>",
+        "<meta name=\"twitter:image:type\" content=\"image/png\"/>",
+        "<meta name=\"twitter:image:width\" content=\"1200\"/>",
+        "<meta name=\"twitter:image:height\" content=\"630\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "PodcastEpisode",
+            "name": "Sandbox #1 (pilote)  Mistral Large 4, Claude Haiku 5.5, Gemini at Work, Sillage et les harnais IA",
+            "episodeNumber": 1,
+            "description": "Quatre séquences : Le Radar (l'actu), Le Build (un outil qu'on a construit), Le Clash (on débat) et La Bêta (nos tests du moment).\n\n\n🔗 SOURCES DU RADAR\n• Impulsion IA, 12 mesures (ministère du Travail) : https://travail-emploi.gouv.fr/impulsion-ia-12-mesures-pour-impulser-anticiper-et-dialoguer-face-la-transformation-du-monde-du-travail-par-lintelligence-artificielle\n• Émeutes lycées simulator, le jeu vibe-codé de Vincent Flibustier : https://emeutes-2eyfvtil.manus.game/\n• Google Labs Playground : https://labs.google/playground\n• Mistral Large 4 : https://mistral.ai/news/mistral-large-4/\n• Claude Haiku 5.5 (Anthropic) : https://www.anthropic.com/claude-haiku-5-5\n• Claude Haiku 5.5 sur Artificial Analysis : https://artificialanalysis.ai/changelog\n• Claude Startups : https://claude.com/fr/programs/startups\n   – Avenant startups : https://www.anthropic.com/legal/startup-program-addendum\n   – Conditions commerciales : https://www.anthropic.com/legal/commercial-terms\n   – Conditions par service (ZDR) : https://www.anthropic.com/legal/service-specific-terms\n• Gemini at Work 2026 (Google Cloud) : https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026\n\n🛠️ LE BUILD : SILLAGE\n• Le site et le film de présentation : https://marlburrow.github.io/sillage/\n• Le dépôt GitHub (open source, MIT) : https://github.com/MarlBurroW/sillage\n\n🧪 LA BÊTA\n• Power Rush, le jeu de Nicolas : https://powerrush.marlburrow.dev\n",
+            "datePublished": "2026-10-12T19:40:00.000Z",
+            "timeRequired": "PT1H18M22S",
+            "url": "https://www.sandboxpodcast.fr/episodes/1",
+            "inLanguage": "fr",
+            "partOfSeries": {
+              "@type": "PodcastSeries",
+              "name": "Sandbox",
+              "url": "https://www.sandboxpodcast.fr"
+            },
+            "keywords": "Agents, Coding, Open source",
+            "associatedMedia": {
+              "@id": "https://www.sandboxpodcast.fr/episodes/1#video"
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "@id": "https://www.sandboxpodcast.fr/episodes/1#video",
+            "name": "Sandbox #1 (pilote)  Mistral Large 4, Claude Haiku 5.5, Gemini at Work, Sillage et les harnais IA",
+            "description": "Premier épisode (pilote) de Sandbox, le podcast qui teste, débat et remet les chiffres en perspective. Lou, Nicolas et Loïc passent en revue l'actualité IA et tech de la semaine, présentent un outil fait maison et racontent leurs expérimentations en cours.",
+            "thumbnailUrl": "https://www.sandboxpodcast.fr/api/youtube-thumbnail/GgSiPkADCz4",
+            "uploadDate": "2026-10-12T19:40:00.000Z",
+            "duration": "PT1H18M22S",
+            "embedUrl": "https://www.youtube-nocookie.com/embed/GgSiPkADCz4",
+            "mainEntityOfPage": "https://www.sandboxpodcast.fr/episodes/1",
+            "hasPart": [
+              {
+                "@type": "Clip",
+                "name": "Dans cet épisode (extraits)",
+                "startOffset": 0,
+                "endOffset": 62,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=0#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Intro : le format Sandbox (Radar, Build, Clash, Bêta)",
+                "startOffset": 62,
+                "endOffset": 111,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=62#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Radar · Impulsion IA 2027 : 80 M€ pour former à l’IA",
+                "startOffset": 111,
+                "endOffset": 219,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=111#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Radar · Vibe coder l’actualité (Vincent Flibustier)",
+                "startOffset": 219,
+                "endOffset": 383,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=219#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Radar · Google Playground : créer un jeu à partir d’un prompt",
+                "startOffset": 383,
+                "endOffset": 555,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=383#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Radar · Mistral Large 4, le « chonk »",
+                "startOffset": 555,
+                "endOffset": 936,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=555#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Radar · Claude Haiku 5.5 : 10× moins cher",
+                "startOffset": 936,
+                "endOffset": 1073,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=936#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Radar · Claude Startups : crédits et conditions",
+                "startOffset": 1073,
+                "endOffset": 1263,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=1073#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Radar · Gemini at Work 2026 : l’intégration avant le modèle ?",
+                "startOffset": 1263,
+                "endOffset": 1550,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=1263#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Build · Sillage, une brique au-dessus des harnais (Nicolas)",
+                "startOffset": 1550,
+                "endOffset": 2237,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=1550#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Clash · Sillage est-il un harnais ? Codex, Claude Code, OpenCode",
+                "startOffset": 2237,
+                "endOffset": 2905,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=2237#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Clash · Contexte, mémoire et « context rot »",
+                "startOffset": 2905,
+                "endOffset": 3172,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=2905#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Le Clash · Dispatch, orchestration et interfaces",
+                "startOffset": 3172,
+                "endOffset": 3545,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=3172#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "La Bêta · Lou : une chaîne YouTube Lo-Fi 100 % IA et des skills",
+                "startOffset": 3545,
+                "endOffset": 4137,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=3545#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "La Bêta · Loïc : Nemotron 3.5, Strata, Qwen Image 2.1",
+                "startOffset": 4137,
+                "endOffset": 4304,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=4137#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "La Bêta · Nicolas : jeux vidéo vibe-codés et Power Rush",
+                "startOffset": 4304,
+                "endOffset": 4661,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=4304#episode-video"
+              },
+              {
+                "@type": "Clip",
+                "name": "Conclusion",
+                "startOffset": 4661,
+                "endOffset": 4702,
+                "url": "https://www.sandboxpodcast.fr/episodes/1?t=4661#episode-video"
+              }
+            ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://www.sandboxpodcast.fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Podcasts",
+                "item": "https://www.sandboxpodcast.fr/episodes"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Épisode 1",
+                "item": "https://www.sandboxpodcast.fr/episodes/1"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/nos-projets",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/nos-projets",
+      "elapsedMs": 211,
+      "bytes": 120786,
+      "title": "Nos projets · Sandbox",
+      "h1": ["Nos projets"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Les applications, jeux et outils créés par l&#x27;équipe Sandbox. Découvrez leurs captures, leurs vidéos et les projets open source.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/nos-projets\"/>",
+        "<meta property=\"og:title\" content=\"Nos projets\"/>",
+        "<meta property=\"og:description\" content=\"Les applications, jeux et outils créés par l&#x27;équipe Sandbox. Découvrez leurs captures, leurs vidéos et les projets open source.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/nos-projets\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Nos projets\"/>",
+        "<meta name=\"twitter:description\" content=\"Les applications, jeux et outils créés par l&#x27;équipe Sandbox. Découvrez leurs captures, leurs vidéos et les projets open source.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/nos-projets/sillage",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/nos-projets/sillage",
+      "elapsedMs": 192,
+      "bytes": 66277,
+      "title": "Sillage : Un espace de travail pour vos agents de code. · Sandbox",
+      "h1": ["Sillage"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Sillage réunit Claude Code, Codex et OpenCode dans un espace de travail à héberger sur sa machine ou son serveur. Les agents utilisent leurs outils natifs et vos comptes. Le navigateur donne accès aux conversations, aux projets et aux demandes de permission, depuis un ordinateur comme depuis un téléphone.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/nos-projets/sillage\"/>",
+        "<meta property=\"og:title\" content=\"Sillage : Un espace de travail pour vos agents de code.\"/>",
+        "<meta property=\"og:description\" content=\"Sillage réunit Claude Code, Codex et OpenCode dans un espace de travail à héberger sur sa machine ou son serveur. Les agents utilisent leurs outils natifs et vos comptes. Le navigateur donne accès aux conversations, aux projets et aux demandes de permission, depuis un ordinateur comme depuis un téléphone.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/nos-projets/sillage\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/nos-projets/sillage/board.webp\"/>",
+        "<meta property=\"og:image:alt\" content=\"Présentation de Sillage\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Sillage : Un espace de travail pour vos agents de code.\"/>",
+        "<meta name=\"twitter:description\" content=\"Sillage réunit Claude Code, Codex et OpenCode dans un espace de travail à héberger sur sa machine ou son serveur. Les agents utilisent leurs outils natifs et vos comptes. Le navigateur donne accès aux conversations, aux projets et aux demandes de permission, depuis un ordinateur comme depuis un téléphone.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/nos-projets/sillage/board.webp\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Présentation de Sillage\"/>"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Nos projets",
+              "item": "https://www.sandboxpodcast.fr/nos-projets"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Sillage",
+              "item": "https://www.sandboxpodcast.fr/nos-projets/sillage"
+            }
+          ]
+        },
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/about",
+      "elapsedMs": 168,
+      "bytes": 43157,
+      "title": "Retrouvez l’équipe Sandbox · Sandbox",
+      "h1": ["Retrouvez-nous."],
+      "metadata": [
+        "<meta name=\"description\" content=\"Les profils GitHub, LinkedIn et X des animateurs Sandbox.\"/>",
+        "<meta name=\"robots\" content=\"index, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/about\"/>",
+        "<meta property=\"og:title\" content=\"Retrouvez l’équipe Sandbox\"/>",
+        "<meta property=\"og:description\" content=\"Les profils GitHub, LinkedIn et X des animateurs Sandbox.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/about\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Retrouvez l’équipe Sandbox\"/>",
+        "<meta name=\"twitter:description\" content=\"Les profils GitHub, LinkedIn et X des animateurs Sandbox.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/search?q=sillage",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/search?q=sillage",
+      "elapsedMs": 190,
+      "bytes": 36438,
+      "title": "Rechercher dans les podcasts et classements · Sandbox",
+      "h1": ["Recherche"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Recherchez un épisode, une ressource, un sujet ou un classement Sandbox.\"/>",
+        "<meta name=\"robots\" content=\"noindex, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/search\"/>",
+        "<meta property=\"og:title\" content=\"Rechercher dans les podcasts et classements\"/>",
+        "<meta property=\"og:description\" content=\"Recherchez un épisode, une ressource, un sujet ou un classement Sandbox.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/search\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"fr_FR\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Rechercher dans les podcasts et classements\"/>",
+        "<meta name=\"twitter:description\" content=\"Recherchez un épisode, une ressource, un sujet ou un classement Sandbox.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/en",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/en",
+      "elapsedMs": 1957,
+      "bytes": 424936,
+      "title": "Sandbox — Classements IA et podcasts vidéo · Sandbox",
+      "h1": ["Sandbox Charts"],
+      "metadata": [
+        "<meta name=\"description\" content=\"Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.\"/>",
+        "<meta name=\"robots\" content=\"noindex, follow, max-video-preview:-1, max-image-preview:large\"/>",
+        "<link rel=\"canonical\" href=\"https://www.sandboxpodcast.fr/en\"/>",
+        "<meta property=\"og:title\" content=\"Sandbox — Classements IA et podcasts vidéo\"/>",
+        "<meta property=\"og:description\" content=\"Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.\"/>",
+        "<meta property=\"og:url\" content=\"https://www.sandboxpodcast.fr/en\"/>",
+        "<meta property=\"og:site_name\" content=\"Sandbox\"/>",
+        "<meta property=\"og:locale\" content=\"en\"/>",
+        "<meta property=\"og:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta property=\"og:image:width\" content=\"1200\"/>",
+        "<meta property=\"og:image:height\" content=\"630\"/>",
+        "<meta property=\"og:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>",
+        "<meta property=\"og:type\" content=\"website\"/>",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\"/>",
+        "<meta name=\"twitter:title\" content=\"Sandbox — Classements IA et podcasts vidéo\"/>",
+        "<meta name=\"twitter:description\" content=\"Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.\"/>",
+        "<meta name=\"twitter:image\" content=\"https://www.sandboxpodcast.fr/api/social-image\"/>",
+        "<meta name=\"twitter:image:alt\" content=\"Sandbox : podcasts et classements tech\"/>"
+      ],
+      "jsonLd": [
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "PodcastSeries",
+            "name": "Sandbox",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "url": "https://www.sandboxpodcast.fr/",
+            "image": "https://www.sandboxpodcast.fr/api/social-image",
+            "inLanguage": "fr"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Derniers épisodes Sandbox",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Sandbox #1 (pilote)  Mistral Large 4, Claude Haiku 5.5, Gemini at Work, Sillage et les harnais IA",
+                "url": "https://www.sandboxpodcast.fr/episodes/1"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "description": "Explorez les podcasts vidéo Sandbox sur l’IA, le développement et l’open source. Retrouvez les sources de chaque épisode et nos classements tech hebdomadaires.",
+            "inLanguage": "en"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sandbox",
+            "url": "https://www.sandboxpodcast.fr",
+            "logo": "https://www.sandboxpodcast.fr/sandbox-logo.png"
+          }
+        ]
+      ]
+    },
+    {
+      "path": "/confidentialite",
+      "status": 404,
+      "finalUrl": "https://www.sandboxpodcast.fr/confidentialite",
+      "elapsedMs": 217,
+      "bytes": 7525,
+      "h1": [],
+      "metadata": [
+        "<meta name=\"robots\" content=\"noindex\"/>",
+        "<meta name=\"robots\" content=\"noindex, follow\"/>"
+      ],
+      "jsonLd": []
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/sitemap.xml",
+      "elapsedMs": 2389,
+      "bytes": 9641,
+      "h1": [],
+      "metadata": [],
+      "jsonLd": [],
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n<url>\n<loc>https://www.sandboxpodcast.fr/</loc>\n<priority>1</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts</loc>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/history</loc>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/history/2026-W41</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/history/2026-10-12</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/history/2026-10-11</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/history/2026-10-10</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/github</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/github/2026-10-10</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/0xplaygrounds-rig-810861466</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/1jehuang-jcode-1128204614</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/berriai-litellm-671269505</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/codewhale-hq-codewhale-1137711311</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/composiohq-composio-762304524</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/ekkolearnai-ekko-studio-1207639951</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/elizaos-eliza-826170402</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/esengine-deepseek-reasonix-1216785679</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/krillinai-opencreator-904490600</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/langgenius-dify-626805178</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/lmcache-lmcache-807305060</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/mastra-ai-mastra-839037098</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/mintplex-labs-anything-llm-649170660</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/neuml-txtai-286301447</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/openchamber-openchamber-1054790989</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/scrapegraphai-scrapegraph-ai-749126547</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/strands-agents-harness-sdk-983715534</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/the-vibe-company-quivr-640079149</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/tinyhumansai-openhuman-1161163182</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/project/topoteretes-cognee-679343504</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/skills</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/skills/2026-10-10</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/ai-models</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/ai-models/2026-W41</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/ai-models/2026-10-12</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/ai-models/2026-10-11</loc>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/charts/awards</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/episodes</loc>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/episodes/1</loc>\n<lastmod>2026-10-12T19:40:00.000Z</lastmod>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/topics</loc>\n<priority>0.5</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/topics/agents</loc>\n<priority>0.4</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/topics/coding</loc>\n<priority>0.4</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/topics/open-source</loc>\n<priority>0.4</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/about</loc>\n<priority>0.4</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/time-machine</loc>\n<lastmod>2026-10-15</lastmod>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets</loc>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/sillage</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/boostback</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/ballcam</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/point-zero</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/hivekeep</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/akasha-os</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/song-maker</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/akasha</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/not-my-fault</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/okodukai</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/heros-de-la-classe</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/politiquizz</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/mindodyssey</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/pinchchat</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/three-observers</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/aigora</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/mission-maison</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/akasha-code-studio</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/rbitnet</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/akasha-model</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/akasha-companion</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/offline-memory</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/llm-router</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/clawscope</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/cloudflare-dns-swarm</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/google-home-notification-gateway</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/streamdeck-uptime-kuma</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/raycast-uptime-kuma</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/teamspeak-mcp</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/bot-hub</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/bot-chronicles</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/cursor-chat</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/rust-commander</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n<url>\n<loc>https://www.sandboxpodcast.fr/nos-projets/chromehue</loc>\n<lastmod>2026-10-13</lastmod>\n<priority>0.6</priority>\n</url>\n</urlset>\n"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "finalUrl": "https://www.sandboxpodcast.fr/robots.txt",
+      "elapsedMs": 180,
+      "bytes": 113,
+      "h1": [],
+      "metadata": [],
+      "jsonLd": [],
+      "body": "User-Agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/admin\n\nSitemap: https://www.sandboxpodcast.fr/sitemap.xml\n"
+    }
+  ]
+}

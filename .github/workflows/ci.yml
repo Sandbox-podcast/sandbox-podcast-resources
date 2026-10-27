@@ -1,0 +1,58 @@
+name: Resource checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python-pipelines:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/social-network-manager/episode-02/camera-unique-v2/requirements-qa.txt
+      - run: python -m unittest discover -s kits-relais/2026-10-18/production -p test_monter.py -v
+      - run: python -m unittest discover -s tools/social-network-manager/episode-02/camera-unique-v2 -p test_pipeline.py -v
+      - run: python tools/social-network-manager/episode-02/camera-unique-v2/pipeline.py check
+  media-projects:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: node --test brand/youtube/assets.test.mjs videos/jingle-assets.test.mjs
+      - run: npm ci --prefix experiments/episode-002-bis
+      - run: npm test --prefix experiments/episode-002-bis
+      - run: npm ci --prefix videos/sandbox-intro
+      - run: npm test --prefix videos/sandbox-intro
+
+
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Gitleaks
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            test -n "$BASE_SHA"
+            test -n "$HEAD_SHA"
+            docker run --rm -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:latest \
+              detect --config /repo/.gitleaks.toml --source /repo --log-opts="$BASE_SHA..$HEAD_SHA" --redact --verbose
+          else
+            docker run --rm -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:latest \
+              detect --config /repo/.gitleaks.toml --source /repo --redact --verbose
+          fi

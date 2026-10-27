@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Faire relire son projet par un autre modèle IA</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 142.6909px;
+        top: 220px;
+        width: 434.6182px;
+        height: 830px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1931.6364px;
+        height: 1086.5455px;
+        left: -1457.7818px;
+        top: -156.9455px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="54.4"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LE RADAR / #02</div>
+        </div>
+        <h1>Faire relire son projet par un autre modèle IA</h1>
+      </header>
+      <div class="focus right">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-002-regard-neuf-174.4-228.8.mp4"
+          playsinline
+          data-start="0"
+          data-duration="54.4"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.070"
+        data-duration="1.340"
+        data-track-index="3"
+      >
+        <span>Il s&#x27;est arrêté au milieu.</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="1.670"
+        data-duration="0.660"
+        data-track-index="3"
+      >
+        <span>Je l&#x27;avais testé un petit</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="2.330"
+        data-duration="1.000"
+        data-track-index="3"
+      >
+        <span>peu avant pour lui poser des</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="3.330"
+        data-duration="1.420"
+        data-track-index="3"
+      >
+        <span>questions un peu plus pointues sur</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="4.750"
+        data-duration="1.820"
+        data-track-index="3"
+      >
+        <span>du code, sur un projet existant.</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="6.810"
+        data-duration="2.260"
+        data-track-index="3"
+      >
+        <span>Et c&#x27;est plutôt pas mal.</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="9.350"
+        data-duration="1.260"
+        data-track-index="3"
+      >
+        <span>Les résultats étaient plutôt pas mal</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="10.610"
+        data-duration="0.200"
+        data-track-index="3"
+      >
+        <span>en fait.</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="10.810"
+        data-duration="1.300"
+        data-track-index="3"
+      >
+        <span>Ils donnaient pas mal d&#x27;informations</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="12.110"
+        data-duration="3.040"
+        data-track-index="3"
+      >
+        <span>qui étaient assez intéressantes.</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="16.830"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>Je trouvais justement qu&#x27;il avait</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="18.290"
+        data-duration="2.800"
+        data-track-index="3"
+      >
+        <span>des tags qui</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="21.090"
+        data-duration="1.360"
+        data-track-index="3"
+      >
+        <span>étaient un peu différentes de celles</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="22.450"
+        data-duration="2.520"
+        data-track-index="3"
+      >
+        <span>de SOL6</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="24.970"
+        data-duration="0.780"
+        data-track-index="3"
+      >
+        <span>.1 par exemple.</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="26.170"
+        data-duration="1.200"
+        data-track-index="3"
+      >
+        <span>Tu vois sur lesquelles je posais</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="27.370"
+        data-duration="0.480"
+        data-track-index="3"
+      >
+        <span>mon question.</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="28.310"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>Ils n&#x27;avaient pas du tout</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="29.850"
+        data-duration="2.620"
+        data-track-index="3"
+      >
+        <span>les mêmes tags sur le repos</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="32.470"
+        data-duration="0.420"
+        data-track-index="3"
+      >
+        <span>lui-même.</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="33.450"
+        data-duration="0.740"
+        data-track-index="3"
+      >
+        <span>Ils n&#x27;avaient pas les mêmes</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="34.190"
+        data-duration="0.500"
+        data-track-index="3"
+      >
+        <span>angles en fait.</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="35.650"
+        data-duration="1.020"
+        data-track-index="3"
+      >
+        <span>En gros je lui ai demandé</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="36.670"
+        data-duration="1.000"
+        data-track-index="3"
+      >
+        <span>est-ce qu&#x27;il y a</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="37.670"
+        data-duration="2.180"
+        data-track-index="3"
+      >
+        <span>des points d&#x27;amélioration possible par</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="39.850"
+        data-duration="0.760"
+        data-track-index="3"
+      >
+        <span>rapport au projet.</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="41.510"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span>Il m&#x27;a sorti pas mal</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="42.750"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>de trucs qui étaient intéressants et</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="44.350"
+        data-duration="2.520"
+        data-track-index="3"
+      >
+        <span>qui n&#x27;avaient pas sorti sol</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="46.870"
+        data-duration="0.320"
+        data-track-index="3"
+      >
+        <span>en fait.</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="47.950"
+        data-duration="1.480"
+        data-track-index="3"
+      >
+        <span>Il est plutôt pas mal en</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="49.430"
+        data-duration="0.540"
+        data-track-index="3"
+      >
+        <span>ce niveau-là.</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="50.170"
+        data-duration="2.500"
+        data-track-index="3"
+      >
+        <span>Je pense au niveau code, ça</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="52.670"
+        data-duration="0.900"
+        data-track-index="3"
+      >
+        <span>a l&#x27;air d&#x27;être un</span>
+      </div>
+      <div
+        id="caption-034"
+        class="clip caption"
+        data-start="53.570"
+        data-duration="0.460"
+        data-track-index="3"
+      >
+        <span>bon modèle.</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 142.6909, top: 220.0, width: 434.6182, height: 830.0 }, 0);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1457.7818, top: -156.9455 },
+        0,
+      );
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 7.4);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 7.4);
+      tl.set('.focus', { left: 95.9091, top: 220.0, width: 528.1818, height: 830.0 }, 8.6);
+      tl.set('#focus', { width: 1931.6364, height: 1086.5455, left: -1361.2, top: -156.9455 }, 8.6);
+      tl.set(
+        '.focus',
+        { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 },
+        34.199999999999996,
+      );
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 34.199999999999996);
+      tl.set('.focus', { left: 142.6909, top: 220.0, width: 434.6182, height: 830.0 }, 35.4);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1457.7818, top: -156.9455 },
+        35.4,
+      );
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 44.6);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 44.6);
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 45.800000000000004);
+      tl.set(
+        '#focus',
+        { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 },
+        45.800000000000004,
+      );
+    </script>
+  </body>
+</html>

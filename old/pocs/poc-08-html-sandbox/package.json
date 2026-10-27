@@ -1,0 +1,17 @@
+{
+  "name": "@podcast/poc-08-html-sandbox",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@podcast/presentation-sandbox": "workspace:*",
+    "playwright-core": "^1.63.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 4,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "duplicate_media_discovery_risk",
+        "severity": "warning",
+        "message": "Detected 2 matching img entries with the same source/start/duration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\github\\sandbox-podcast\\videos\\le-clash-jingle\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"hero-visual\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#hero-visual",
+        "dataAttributes": {},
+        "sourceFile": "C:\\github\\sandbox-podcast\\videos\\le-clash-jingle\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"hero-visual\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"title-clip\"> is a timeline element that contains nested <div id=\"kt-container\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#title-clip",
+        "dataAttributes": {},
+        "sourceFile": "C:\\github\\sandbox-podcast\\videos\\le-clash-jingle\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"title-clip\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"logo-clip\"> is a timeline element that contains nested <div id=\"brand-content\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#logo-clip",
+        "dataAttributes": {},
+        "sourceFile": "C:\\github\\sandbox-podcast\\videos\\le-clash-jingle\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"logo-clip\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 15,
+    "samples": [0.833, 2.5, 4.167, 5.833, 7.5, 9.167, 10.833, 12.5, 14.167],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": false,
+    "errorCount": 1,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.52:1; WCAG AA requires 3:1.",
+        "text": "A",
+        "fg": "rgb(233,60,82)",
+        "bg": "rgb(127,26,39)",
+        "ratio": 2.52,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(236,90,108)",
+        "large": true,
+        "selector": "div > section:nth-of-type(2) > div > h1 > span:nth-of-type(2) > span",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 997.453125,
+          "y": 368.015625,
+          "width": 79.796875,
+          "height": 343
+        },
+        "time": 7.5,
+        "times": [4.167, 7.5]
+      }
+    ],
+    "enabled": true,
+    "samples": [0.833, 4.167, 7.5, 10.833, 14.167],
+    "checked": 12,
+    "passed": 10
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

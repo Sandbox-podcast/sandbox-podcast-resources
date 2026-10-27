@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Le piège du ticket IA rédigé sans le contexte du projet</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 36px;
+        top: 230px;
+        width: 648px;
+        height: 810px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1885.0909px;
+        height: 1060.3636px;
+        left: -265.0909px;
+        top: -153.1636px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="66.3"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LE CLASH / #02</div>
+        </div>
+        <h1>Le piège du ticket IA rédigé sans le contexte du projet</h1>
+      </header>
+      <div class="focus main">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-019-ticket-sans-contexte-5273.1-5339.4.mp4"
+          playsinline
+          data-start="0"
+          data-duration="66.3"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.000"
+        data-duration="2.260"
+        data-track-index="3"
+      >
+        <span>arriver tu vois des PO qui</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="2.260"
+        data-duration="2.280"
+        data-track-index="3"
+      >
+        <span>se servent de l&#x27;IA pour</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="4.540"
+        data-duration="1.440"
+        data-track-index="3"
+      >
+        <span>rédiger les tickets et que le</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="5.980"
+        data-duration="2.600"
+        data-track-index="3"
+      >
+        <span>ticket sans le contexte projet</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="8.580"
+        data-duration="0.900"
+        data-track-index="3"
+      >
+        <span>parce qu&#x27;en général les PO</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="9.480"
+        data-duration="1.200"
+        data-track-index="3"
+      >
+        <span>ils ont pas le ripo du</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="10.680"
+        data-duration="1.800"
+        data-track-index="3"
+      >
+        <span>projet du coup tu vois il</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="12.480"
+        data-duration="2.440"
+        data-track-index="3"
+      >
+        <span>va dire il faut rajouter</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="14.920"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>cette fonctionnalité et son IA elle</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="16.460"
+        data-duration="1.100"
+        data-track-index="3"
+      >
+        <span>va quand même rôder des trucs</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="17.560"
+        data-duration="1.960"
+        data-track-index="3"
+      >
+        <span>inventer des trucs et du coup</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="19.520"
+        data-duration="1.860"
+        data-track-index="3"
+      >
+        <span>ça risque de contraindre le ticket</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="21.380"
+        data-duration="2.400"
+        data-track-index="3"
+      >
+        <span>il va être super complet risque</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="23.780"
+        data-duration="2.740"
+        data-track-index="3"
+      >
+        <span>de contraindre le IA</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="26.520"
+        data-duration="1.900"
+        data-track-index="3"
+      >
+        <span>qui va implémenter parce qu&#x27;il</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="28.420"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>y aura des trucs qui sont</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="29.960"
+        data-duration="2.320"
+        data-track-index="3"
+      >
+        <span>pas forcément faisables facilement par le</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="32.280"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span>projet ou qui sont un petit</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="33.520"
+        data-duration="2.420"
+        data-track-index="3"
+      >
+        <span>peu inventés pour rien avoir avec</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="35.940"
+        data-duration="1.620"
+        data-track-index="3"
+      >
+        <span>le projet parce que le PO</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="37.560"
+        data-duration="0.800"
+        data-track-index="3"
+      >
+        <span>il n&#x27;aura pas été assez</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="38.360"
+        data-duration="2.560"
+        data-track-index="3"
+      >
+        <span>précis sur l&#x27;architecture</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="40.920"
+        data-duration="1.640"
+        data-track-index="3"
+      >
+        <span>du projet tu vois et du</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="42.560"
+        data-duration="0.880"
+        data-track-index="3"
+      >
+        <span>coup tu peux avoir des trucs</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="45.100"
+        data-duration="1.700"
+        data-track-index="3"
+      >
+        <span>qui te foutent la merde après</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="46.800"
+        data-duration="1.920"
+        data-track-index="3"
+      >
+        <span>côté implementation donc il y a</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="48.720"
+        data-duration="2.280"
+        data-track-index="3"
+      >
+        <span>vraiment un travail quand même au</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="51.000"
+        data-duration="1.660"
+        data-track-index="3"
+      >
+        <span>moment de la rédaction des tickets</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="52.660"
+        data-duration="1.820"
+        data-track-index="3"
+      >
+        <span>il faut un travail de contextualisation</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="54.480"
+        data-duration="1.440"
+        data-track-index="3"
+      >
+        <span>du projet il faut vraiment que</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="55.920"
+        data-duration="2.560"
+        data-track-index="3"
+      >
+        <span>le PO il est vraiment une</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="58.480"
+        data-duration="2.900"
+        data-track-index="3"
+      >
+        <span>brique d&#x27;instruction</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="62.160"
+        data-duration="3.080"
+        data-track-index="3"
+      >
+        <span>de connaissance du projet pour rédiger</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="65.240"
+        data-duration="0.500"
+        data-track-index="3"
+      >
+        <span>des bons tickets</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 0);
+      tl.set('#focus', { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 }, 0);
+    </script>
+  </body>
+</html>

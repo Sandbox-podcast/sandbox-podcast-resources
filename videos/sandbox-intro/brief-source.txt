@@ -1,0 +1,783 @@
+# MISSION : RÉALISATION DU GÉNÉRIQUE OFFICIEL SANDBOX
+
+Tu es un directeur artistique, réalisateur de motion design,
+animateur 2D/3D et monteur vidéo senior.
+
+Tu travailles pour SANDBOX, une émission hebdomadaire française
+consacrée à l'intelligence artificielle, au développement logiciel,
+aux expérimentations et aux nouvelles technologies.
+
+MISSION :
+Créer et exporter un véritable générique vidéo professionnel,
+entièrement animé et parfaitement synchronisé avec la bande-son
+Suno que je vais fournir.
+
+IMPORTANT :
+Je ne veux pas un storyboard, une maquette ou une démonstration.
+
+JE VEUX LE FICHIER VIDÉO FINAL EN MP4.
+
+Tu dois prendre en charge l'ensemble du travail :
+direction artistique, création des assets, animations,
+synchronisation, montage, rendu et contrôle qualité.
+
+Ne t'arrête pas après avoir écrit le code.
+Exécute le projet et produis réellement la vidéo.
+
+==================================================
+1. CONTEXTE
+==================================================
+
+Nom de l'émission : SANDBOX
+
+Site officiel :
+https://www.sandboxpodcast.fr/
+
+Référence de générique :
+https://www.youtube.com/watch?v=9JbFTE5LLbI
+
+Animateurs :
+- Lou : Product Manager
+- Loïc : Développeur
+- Nico : Développeur
+
+Séquences :
+- LE RADAR : actualités IA et technologie
+- LE BUILD : projets personnels et retours d'expérience
+- LE CLASH : débats, provocations et désaccords
+- LA BÊTA : expérimentations et projets à tester
+
+Positionnement :
+Une émission sérieuse sur le fond, mais décalée sur la forme.
+
+Les trois animateurs parlent de technologie sans se prendre
+au sérieux.
+
+L'humour repose sur leur quotidien :
+- Les Product Managers qui écrivent leurs tickets avec l'IA.
+- Les développeurs qui ne lisent plus les tickets.
+- Le vibe coding.
+- Les SaaS sans utilisateurs.
+- Le code qui fonctionne en local mais plante en production.
+- Les débats interminables entre PM et développeurs.
+- Les expérimentations plus ou moins inutiles.
+
+L'identité visuelle doit être immédiatement reconnaissable.
+
+==================================================
+2. FICHIERS SOURCES
+==================================================
+
+Je vais fournir un fichier audio Suno contenant le générique.
+
+Tu dois également exploiter les ressources du projet :
+- Logo SANDBOX
+- Photos de Lou
+- Photos de Loïc
+- Photos de Nico
+- Identité graphique du podcast
+- Éventuels autres assets disponibles
+
+Commence par analyser les fichiers présents.
+
+Si les trois photos ou le logo sont absents, identifie précisément
+les ressources manquantes. Tu peux préparer le projet avec des
+emplacements provisoires, mais ne remplace jamais nos visages
+par des personnes inventées.
+
+Les photos originales doivent servir de référence pour conserver
+nos véritables visages.
+
+Ne modifie pas la bande-son Suno.
+
+Cette bande-son est la référence absolue pour :
+- La durée
+- Le rythme
+- Les dialogues
+- Les transitions
+- Les silences
+- Les effets sonores
+- Les moments humoristiques
+
+La durée finale doit correspondre exactement à celle du fichier audio.
+
+==================================================
+3. DIRECTION ARTISTIQUE
+==================================================
+
+Référence créative :
+Un mélange entre les génériques humoristiques des émissions
+TV françaises des années 90 et un motion design contemporain
+de très haute qualité.
+
+Ambiance :
+- Burger Quiz
+- Jeu télévisé absurde
+- Animations cartoon
+- Humour potache
+- Culture geek
+- Collages photographiques
+- Typographie cinétique
+- Motion design 2D et 2.5D
+
+ATTENTION :
+Ne pas reproduire les éléments graphiques exacts de Burger Quiz.
+
+Il faut construire une identité SANDBOX originale.
+
+Direction visuelle :
+- Fond sombre
+- Blanc
+- Bleu SANDBOX
+- Accent bleu triangulaire du logo
+- Quelques couleurs complémentaires pour les gags
+- Typographies massives
+- Illustrations cartoon expressives
+- Éléments graphiques très contrastés
+- Animations fluides
+- Transitions rapides
+
+Éviter :
+- Le néon cyberpunk générique
+- Les particules IA omniprésentes
+- Les images stock
+- Les illustrations corporate
+- Les interfaces futuristes clichées
+- Les personnages génériques générés par IA
+- Les transitions PowerPoint
+- Les longues séquences statiques
+
+Je veux un rendu professionnel, mais volontairement absurde.
+
+Le spectateur doit comprendre immédiatement que
+SANDBOX ne se prend pas au sérieux.
+
+==================================================
+4. ANIMATION DES TROIS ANIMATEURS
+==================================================
+
+Utiliser les vraies photos fournies.
+
+Détourer proprement les visages.
+
+Créer plusieurs animations à partir des visages :
+- Rotation
+- Zoom
+- Rebond
+- Déformation cartoon légère
+- Tremblement
+- Apparition explosive
+- Déplacement dans l'espace
+- Collision avec des objets
+- Réactions visuelles
+- Mouvements synchronisés avec la musique
+
+Créer des compositions originales.
+
+Exemples :
+La tête de Lou peut apparaître sur un personnage qui jongle
+avec des tickets.
+
+La tête de Loïc peut apparaître sur un développeur entouré
+de terminaux et d'agents IA.
+
+La tête de Nico peut apparaître sur un personnage paniqué
+devant une infrastructure qui explose.
+
+Les trois têtes doivent rester identifiables.
+
+Ne pas transformer nos visages en personnages différents.
+
+Privilégier des animations de photos détourées plutôt que
+des visages IA approximatifs.
+
+==================================================
+5. STORYBOARD
+==================================================
+
+IMPORTANT :
+Les timings ci-dessous sont indicatifs.
+
+Tu dois écouter et analyser le véritable fichier Suno pour
+déterminer précisément les timings.
+
+Chaque animation doit correspondre aux paroles réellement
+présentes dans la bande-son.
+
+Ne jamais caler arbitrairement une animation sur une phrase
+qui n'est pas encore prononcée.
+
+------------------------------------------
+SCÈNE 1 : INTRODUCTION
+------------------------------------------
+
+Audio :
+"En 2026, on a confié l'intelligence artificielle à trois mecs..."
+
+Visuel :
+Apparition d'un énorme ordinateur rétro.
+
+À l'écran :
+"INITIALISATION SANDBOX"
+
+Des câbles, des boutons et des voyants s'animent.
+
+Trois silhouettes apparaissent progressivement.
+
+L'ordinateur semble prendre une décision catastrophique.
+
+Audio :
+"Personne n'a pensé à les arrêter !"
+
+Visuel :
+Alerte générale.
+
+Les trois visages apparaissent brutalement.
+
+Explosion cartoon.
+
+Transition musicale.
+
+------------------------------------------
+SCÈNE 2 : LOU
+------------------------------------------
+
+Audio :
+"LOU ! Product Manager !
+Il écrit ses tickets avec l'IA !"
+
+Visuel :
+La tête de Lou arrive depuis le haut de l'écran.
+
+Apparition d'un faux outil de gestion de projet.
+
+Des dizaines de tickets sont générés automatiquement.
+
+Les tickets envahissent progressivement tout l'écran.
+
+Afficher un compteur :
+1... 5... 12... 28... 40 !
+
+Audio :
+"J'en ai fait quarante ce matin !"
+
+Visuel :
+Zoom brutal sur Lou.
+
+Texte géant :
+"40 TICKETS"
+
+Lou semble particulièrement fier.
+
+Une montagne de tickets s'effondre sur lui.
+
+------------------------------------------
+SCÈNE 3 : LOÏC
+------------------------------------------
+
+Audio :
+"LOÏC ! Développeur !
+Il fait coder les tickets par son IA !"
+
+Visuel :
+La tête de Loïc apparaît sur un développeur.
+
+Un ticket arrive devant lui.
+
+Il l'envoie immédiatement dans un terminal IA.
+
+Des lignes de code défilent à toute vitesse.
+
+Audio :
+"J'ai même pas lu le ticket !"
+
+Visuel :
+Le ticket apparaît avec le tampon :
+"NON LU"
+
+Loïc affiche un énorme sourire.
+
+Un bras robotique prend le ticket et le fait disparaître.
+
+Transition scratch.
+
+------------------------------------------
+SCÈNE 4 : NICO
+------------------------------------------
+
+Audio :
+"NICO ! Développeur !
+Il balance tout en production !"
+
+Visuel :
+La tête de Nico apparaît devant un immense bouton rouge.
+
+Texte :
+"DEPLOY TO PRODUCTION"
+
+Nico appuie sur le bouton.
+
+Animation d'un déploiement.
+
+Les serveurs commencent à trembler.
+
+Tout devient rouge.
+
+Des messages apparaissent :
+"ERROR 500"
+"CRITICAL FAILURE"
+"PRODUCTION DOWN"
+
+Audio :
+"MAIS ÇA MARCHAIT EN LOCAL !"
+
+Visuel :
+Zoom gigantesque sur la tête paniquée de Nico.
+
+Explosion cartoon de toute l'infrastructure.
+
+La tête de Nico est projetée hors de l'écran.
+
+Écran noir pendant une fraction de seconde.
+
+------------------------------------------
+SCÈNE 5 : LE RADAR
+------------------------------------------
+
+Audio :
+"LE RADAR !
+Toute l'actualité de l'IA...
+Déjà périmée demain !"
+
+Visuel :
+Un gigantesque radar rotatif.
+
+Le balayage révèle successivement :
+- Des robots
+- Des modèles IA
+- Des logos technologiques stylisés
+- Des annonces de nouveaux modèles
+- Des notifications d'actualité
+
+Tout défile de plus en plus rapidement.
+
+Un gros tampon apparaît :
+"OBSOLETE"
+
+Puis le titre :
+"LE RADAR"
+
+Le radar tourne tellement vite qu'il explose.
+
+------------------------------------------
+SCÈNE 6 : LE BUILD
+------------------------------------------
+
+Audio :
+"LE BUILD !
+Encore un SaaS vibe-codé...
+Zéro utilisateuuuuur !"
+
+Visuel :
+Une application SaaS se construit automatiquement.
+
+Interfaces, graphiques, boutons et dashboards
+apparaissent à toute vitesse.
+
+L'application devient magnifique.
+
+Apparition d'un tableau de statistiques.
+
+Compteur :
+"UTILISATEURS ACTIFS : 0"
+
+Le compteur reste désespérément à zéro.
+
+Un curseur clique sur :
+"REFRESH"
+
+Toujours zéro.
+
+La tête de Lou peut apparaître en train d'admirer
+fièrement son application.
+
+Gros titre :
+"LE BUILD"
+
+------------------------------------------
+SCÈNE 7 : LE CLASH
+------------------------------------------
+
+Audio :
+"LE CLASH !
+Trois égos...
+Zéro remise en question !"
+
+Visuel :
+Un ring de boxe cartoon apparaît.
+
+Lou d'un côté.
+
+Loïc et Nico de l'autre.
+
+Les trois visages sont montés sur des corps de
+boxeurs volontairement ridicules.
+
+Une cloche retentit.
+
+Les personnages se disputent.
+
+Bulles de dialogue :
+"C'EST PAS DANS LE TICKET !"
+"ÇA MARCHE EN LOCAL !"
+"C'EST UNE FEATURE !"
+
+Les bulles se percutent.
+
+Un énorme panneau apparaît :
+"3 ÉGOS"
+"0 REMISE EN QUESTION"
+
+Gros titre :
+"LE CLASH"
+
+------------------------------------------
+SCÈNE 8 : LA BÊTA
+------------------------------------------
+
+Audio :
+"LA BÊTA !
+Des expériences que personne n'a demandées !"
+
+Visuel :
+Un laboratoire cartoon.
+
+Les trois animateurs portent des blouses scientifiques.
+
+Ils bricolent une machine totalement absurde.
+
+La machine mélange :
+- Un robot
+- Du code
+- Une fusée
+- Un SaaS
+- Une intelligence artificielle
+
+Les voyants clignotent.
+
+Un compteur affiche :
+"PROBABILITÉ DE SUCCÈS : 1 %"
+
+La machine explose.
+
+Les trois têtes sont projetées dans des directions différentes.
+
+Gros titre :
+"LA BÊTA"
+
+------------------------------------------
+SCÈNE 9 : FINAL
+------------------------------------------
+
+Audio :
+"SAAAANDBOOOOOX !"
+
+Visuel :
+Montée musicale spectaculaire.
+
+Toutes les séquences précédentes reviennent
+sous forme d'éléments graphiques.
+
+Les trois visages se rejoignent au centre.
+
+Explosion de cuivres.
+
+Le logo SANDBOX officiel apparaît en très grand.
+
+Respecter strictement le logo original,
+notamment son A triangulaire bleu.
+
+Créer une animation mémorable du logo.
+
+Audio :
+"L'émission qui n'aurait jamais dû passer en prod."
+
+Visuel :
+Arrêt brutal de toutes les animations.
+
+Le logo SANDBOX reste à l'écran.
+
+La phrase apparaît progressivement :
+
+"L'ÉMISSION QUI N'AURAIT
+JAMAIS DÛ PASSER EN PROD."
+
+Petit message :
+"ERROR 500"
+
+Fin immédiate.
+
+==================================================
+6. SYNCHRONISATION AUDIO
+==================================================
+
+C'est une priorité absolue.
+
+Analyse le fichier audio avant toute animation.
+
+Utilise les outils adaptés :
+- FFprobe
+- FFmpeg
+- Librosa ou équivalent
+- Transcription audio avec timestamps si disponible
+- Analyse des silences
+- Détection des changements de rythme
+- Détection des impacts musicaux
+
+Construis une timeline détaillée.
+
+Pour chaque séquence, identifie :
+- Début
+- Fin
+- Première parole
+- Dernière parole
+- Effet sonore
+- Transition musicale
+- Moment de punchline
+
+Utilise les paroles présentes dans le fichier audio comme
+source de vérité.
+
+Le script textuel est une aide, pas une obligation de timing.
+
+Si Suno a légèrement modifié les dialogues ou leur ordre,
+adapte le montage à l'audio réel.
+
+Je veux que les animations semblent avoir été créées
+spécifiquement pour cette bande-son.
+
+Les apparitions des visages doivent correspondre à l'annonce
+des animateurs.
+
+Les textes doivent apparaître exactement sur les punchlines.
+
+Les explosions doivent correspondre aux effets musicaux.
+
+Le logo final doit correspondre au final musical.
+
+==================================================
+7. TECHNOLOGIES
+==================================================
+
+Utilise de préférence :
+
+REMOTION
+- React
+- TypeScript
+- SVG
+- CSS animations
+- Interpolations
+- Animations par images clés
+
+FFMPEG
+- Analyse audio
+- Conversion
+- Encodage
+- Export MP4
+
+Outils complémentaires si nécessaires :
+- Sharp
+- Canvas
+- Libraries de motion design
+- Audio analysis
+- Background removal
+
+Tu peux utiliser GPT Image 2.5 Sunburst pour générer
+les illustrations et décors nécessaires, si cette API
+est disponible et autorisée dans le projet.
+
+Pour les textes, interfaces, compteurs et éléments
+devant rester parfaitement lisibles, privilégie
+des composants SVG ou React.
+
+Pour les éléments humains, utilise exclusivement
+les photos fournies.
+
+N'utilise pas d'API payante supplémentaire sans autorisation.
+
+Le projet doit rester modifiable.
+
+Ne génère pas uniquement des images fixes.
+
+Je veux de véritables animations.
+
+==================================================
+8. QUALITÉ VISUELLE
+==================================================
+
+Ce générique sera utilisé sur YouTube et dans
+une émission professionnelle.
+
+Qualité attendue :
+- Animations fluides
+- Typographies propres
+- Illustrations cohérentes
+- Détourages impeccables
+- Textes lisibles
+- Transitions dynamiques
+- Effets visuels maîtrisés
+- Rythme élevé
+- Direction artistique homogène
+
+Chaque scène doit être intéressante visuellement.
+
+Éviter les plans statiques trop longs.
+
+Utiliser des mouvements de caméra 2.5D :
+- Zoom
+- Panoramique
+- Rotation
+- Parallaxe
+- Shake
+- Travelling simulé
+
+Ajouter des microanimations aux éléments secondaires.
+
+Prévoir un contraste suffisant pour une lecture
+sur téléphone et ordinateur.
+
+Les effets doivent servir les blagues.
+
+Ne surcharge pas les compositions inutilement.
+
+==================================================
+9. EXPORT
+==================================================
+
+Format principal :
+1920 x 1080
+16:9
+30 FPS minimum
+MP4 H.264
+Audio AAC
+Qualité élevée
+
+Durée :
+Exactement celle du fichier Suno.
+
+Le fichier audio original doit être conservé dans
+la timeline et ne doit pas être remplacé.
+
+Créer les fichiers :
+
+/output/sandbox-intro-final.mp4
+/output/sandbox-intro-preview.mp4
+
+Fournir également :
+- Le projet Remotion éditable
+- Les sources graphiques
+- Les animations
+- La timeline JSON
+- Un README pour modifier le générique
+
+==================================================
+10. WORKFLOW OBLIGATOIRE
+==================================================
+
+ÉTAPE 1 :
+Inspecter le projet et les fichiers disponibles.
+
+ÉTAPE 2 :
+Analyser intégralement le fichier Suno.
+
+ÉTAPE 3 :
+Construire la timeline exacte.
+
+ÉTAPE 4 :
+Analyser la direction artistique SANDBOX.
+
+ÉTAPE 5 :
+Préparer les visages détourés et tous les assets.
+
+ÉTAPE 6 :
+Développer les neuf scènes animées.
+
+ÉTAPE 7 :
+Synchroniser chaque scène avec l'audio.
+
+ÉTAPE 8 :
+Générer un premier rendu vidéo.
+
+ÉTAPE 9 :
+Inspecter des captures à plusieurs moments du rendu.
+
+ÉTAPE 10 :
+Corriger les erreurs :
+- Visages déformés
+- Textes coupés
+- Mauvais timings
+- Animations saccadées
+- Transitions incohérentes
+- Éléments graphiques manquants
+
+ÉTAPE 11 :
+Exporter la vidéo définitive.
+
+ÉTAPE 12 :
+Vérifier que la vidéo finale se lit correctement
+et contient bien toute la bande-son.
+
+Ne considère pas la mission comme terminée avant
+d'avoir produit un fichier MP4 exploitable.
+
+==================================================
+11. LIBERTÉ CRÉATIVE
+==================================================
+
+Tu as une grande liberté créative.
+
+Tu peux enrichir les animations, imaginer des gags visuels,
+ajouter des détails amusants et proposer des transitions
+plus originales que celles du storyboard.
+
+Le storyboard décrit les intentions, pas des limites.
+
+Toutefois :
+- Respecter la bande-son.
+- Respecter les véritables visages.
+- Respecter les quatre séquences.
+- Respecter l'identité SANDBOX.
+- Ne pas modifier les dialogues présents dans l'audio.
+
+Je veux que le générique soit drôle même lorsqu'on
+le regarde sans le son.
+
+Les animations doivent apporter une seconde couche d'humour.
+
+Exemple :
+Quand quelqu'un annonce qu'il a créé un SaaS,
+on découvre qu'il n'a absolument aucun utilisateur.
+
+Quand Nico dit que ça fonctionnait en local,
+tout le datacenter explose.
+
+Quand Lou annonce qu'il a rédigé quarante tickets,
+une avalanche de tickets envahit l'écran.
+
+C'est précisément cet humour visuel que je recherche.
+
+OBJECTIF FINAL :
+
+Créer un générique tellement dynamique, drôle et bien
+réalisé qu'on ait envie de le regarder à chaque épisode.
+
+Un véritable générique TV original.
+
+Pas un slideshow.
+Pas une simple animation de texte.
+Pas une vidéo IA générique.
+
+UN VRAI GÉNÉRIQUE SANDBOX.
+
+Commence maintenant par analyser le projet et le fichier audio,
+puis réalise et exporte la vidéo.

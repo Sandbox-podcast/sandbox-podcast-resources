@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Artisans : du vocal WhatsApp au devis</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 95.9091px;
+        top: 220px;
+        width: 528.1818px;
+        height: 830px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1931.6364px;
+        height: 1086.5455px;
+        left: -1361.2px;
+        top: -156.9455px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="41.6"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LES MÉTIERS / #02</div>
+        </div>
+        <h1>Artisans : du vocal WhatsApp au devis</h1>
+      </header>
+      <div class="focus right">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-008-devis-whatsapp-3399.7-3441.3.mp4"
+          playsinline
+          data-start="0"
+          data-duration="41.6"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.180"
+        data-duration="2.660"
+        data-track-index="3"
+      >
+        <span>ensuite pour les artisans j</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="2.840"
+        data-duration="1.320"
+        data-track-index="3"
+      >
+        <span>&#x27;ai vu moi des artisans qui</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="4.160"
+        data-duration="2.360"
+        data-track-index="3"
+      >
+        <span>font ça en gros ils ont</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="6.520"
+        data-duration="2.980"
+        data-track-index="3"
+      >
+        <span>un bot dans leur whatsapp et</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="9.500"
+        data-duration="2.480"
+        data-track-index="3"
+      >
+        <span>en vocale ils envoient en fait</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="11.980"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>un vocale à leur whatsapp ils</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="13.440"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>leur disent aujourd&#x27;hui je suis</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="15.040"
+        data-duration="1.620"
+        data-track-index="3"
+      >
+        <span>passé chez ma chaîne du pont</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="18.100"
+        data-duration="1.000"
+        data-track-index="3"
+      >
+        <span>j&#x27;ai vu qu&#x27;il y</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="19.100"
+        data-duration="2.020"
+        data-track-index="3"
+      >
+        <span>avait ça à faire et en</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="21.120"
+        data-duration="1.120"
+        data-track-index="3"
+      >
+        <span>fait tout ce que tu vends</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="22.240"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>en gros toutes les prestations que</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="23.400"
+        data-duration="1.820"
+        data-track-index="3"
+      >
+        <span>tu fais elles sont référencées dans</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="25.220"
+        data-duration="0.960"
+        data-track-index="3"
+      >
+        <span>ta base de données de ton</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="26.180"
+        data-duration="2.100"
+        data-track-index="3"
+      >
+        <span>outil de facturation et bien l</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="28.280"
+        data-duration="1.060"
+        data-track-index="3"
+      >
+        <span>&#x27;IA, vu qu&#x27;elle a accès</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="29.340"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>à ça elle va te créer</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="30.500"
+        data-duration="2.060"
+        data-track-index="3"
+      >
+        <span>automatiquement le devis avec les bons</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="32.560"
+        data-duration="1.120"
+        data-track-index="3"
+      >
+        <span>prix et tout et l&#x27;envoyer</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="33.680"
+        data-duration="1.760"
+        data-track-index="3"
+      >
+        <span>directement au client toi tu as</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="35.440"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>juste envoyé un vocale qui t</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="36.600"
+        data-duration="1.560"
+        data-track-index="3"
+      >
+        <span>&#x27;a pris 5 minutes même pas,</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="38.240"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>tu t&#x27;as pris 20 secondes</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="39.700"
+        data-duration="1.440"
+        data-track-index="3"
+      >
+        <span>donc ça c&#x27;est aussi intéressant</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 95.9091, top: 220.0, width: 528.1818, height: 830.0 }, 0);
+      tl.set('#focus', { width: 1931.6364, height: 1086.5455, left: -1361.2, top: -156.9455 }, 0);
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 30.2);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 30.2);
+      tl.set(
+        '.focus',
+        { left: 142.6909, top: 220.0, width: 434.6182, height: 830.0 },
+        31.400000000000002,
+      );
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1457.7818, top: -156.9455 },
+        31.400000000000002,
+      );
+    </script>
+  </body>
+</html>

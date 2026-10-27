@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Restaurant : répondre aux réservations pendant le service</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 95.9091px;
+        top: 220px;
+        width: 528.1818px;
+        height: 830px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1931.6364px;
+        height: 1086.5455px;
+        left: -1361.2px;
+        top: -156.9455px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      data-hf-id="hf-hp2h"
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="29.7"
+      data-fps="30"
+    >
+      <header data-hf-id="hf-0drs">
+        <div data-hf-id="hf-oojr" class="brand">
+          <img data-hf-id="hf-1rn9" src="assets/logo.png" alt="SANDBOX" />
+          <div data-hf-id="hf-ma0l" class="category">LES MÉTIERS / #02</div>
+        </div>
+        <h1 data-hf-id="hf-1wa7">Restaurant : répondre aux réservations pendant le service</h1>
+      </header>
+      <div data-hf-id="hf-yzim" class="focus right">
+        <video
+          data-hf-id="hf-2nj4"
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-007-reservations-3369.9-3399.6.mp4"
+          playsinline
+          data-start="0"
+          data-duration="29.7"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        data-hf-id="hf-35cm"
+        id="caption-000"
+        class="clip caption"
+        data-start="0.220"
+        data-duration="1.360"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-ehgp">les restaurateurs ils ont un grand</span>
+      </div>
+      <div
+        data-hf-id="hf-4b35"
+        id="caption-001"
+        class="clip caption"
+        data-start="1.580"
+        data-duration="1.340"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-ygt6">problème c&#x27;est que quand ils</span>
+      </div>
+      <div
+        data-hf-id="hf-dy0z"
+        id="caption-002"
+        class="clip caption"
+        data-start="2.920"
+        data-duration="2.440"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-di5i">sont en service donc en général</span>
+      </div>
+      <div
+        data-hf-id="hf-z9xe"
+        id="caption-003"
+        class="clip caption"
+        data-start="5.760"
+        data-duration="2.120"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-c6lh">de midi à 15h et de</span>
+      </div>
+      <div
+        data-hf-id="hf-s6g0"
+        id="caption-004"
+        class="clip caption"
+        data-start="7.880"
+        data-duration="2.540"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-o7jw">18h30 à 19h jusqu&#x27;à minuit</span>
+      </div>
+      <div
+        data-hf-id="hf-io4n"
+        id="caption-005"
+        class="clip caption"
+        data-start="10.420"
+        data-duration="1.260"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-8cmn">ils sont en train de bosser</span>
+      </div>
+      <div
+        data-hf-id="hf-szae"
+        id="caption-006"
+        class="clip caption"
+        data-start="11.680"
+        data-duration="0.820"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-qxe9">avec des clients ils peuvent pas</span>
+      </div>
+      <div
+        data-hf-id="hf-ipzo"
+        id="caption-007"
+        class="clip caption"
+        data-start="12.500"
+        data-duration="2.160"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-4tx0">répondre au téléphone potentiellement ils vont</span>
+      </div>
+      <div
+        data-hf-id="hf-lsob"
+        id="caption-008"
+        class="clip caption"
+        data-start="14.660"
+        data-duration="2.040"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-f85s">louper des réservations et bien là</span>
+      </div>
+      <div
+        data-hf-id="hf-dksk"
+        id="caption-009"
+        class="clip caption"
+        data-start="16.700"
+        data-duration="0.980"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-s9fk">tu peux avoir une IA qui</span>
+      </div>
+      <div
+        data-hf-id="hf-bteq"
+        id="caption-010"
+        class="clip caption"
+        data-start="17.680"
+        data-duration="1.660"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-iku1">va répondre au téléphone qui a</span>
+      </div>
+      <div
+        data-hf-id="hf-fko6"
+        id="caption-011"
+        class="clip caption"
+        data-start="19.340"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-rhso">accès à ton agenda, qui va</span>
+      </div>
+      <div
+        data-hf-id="hf-9phl"
+        id="caption-012"
+        class="clip caption"
+        data-start="20.580"
+        data-duration="1.660"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-vtvz">pouvoir faire la réservation, faire le</span>
+      </div>
+      <div
+        data-hf-id="hf-pvr8"
+        id="caption-013"
+        class="clip caption"
+        data-start="22.240"
+        data-duration="1.500"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-9k2p">prépaiement s&#x27;il y a un</span>
+      </div>
+      <div
+        data-hf-id="hf-v5bw"
+        id="caption-014"
+        class="clip caption"
+        data-start="23.740"
+        data-duration="2.360"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-izn0">prépaiement dans ta réservation qui va</span>
+      </div>
+      <div
+        data-hf-id="hf-01ok"
+        id="caption-015"
+        class="clip caption"
+        data-start="26.100"
+        data-duration="2.960"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-3f3l">tout automatiser donc en gros ça</span>
+      </div>
+      <div
+        data-hf-id="hf-w6fr"
+        id="caption-016"
+        class="clip caption"
+        data-start="29.060"
+        data-duration="0.500"
+        data-track-index="3"
+      >
+        <span data-hf-id="hf-0mcr">c&#x27;est pas mal</span>
+      </div>
+      <div data-hf-id="hf-8czw" class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 95.9091, top: 220.0, width: 528.1818, height: 830.0 }, 0);
+      tl.set('#focus', { width: 1931.6364, height: 1086.5455, left: -1361.2, top: -156.9455 }, 0);
+    </script>
+  </body>
+</html>

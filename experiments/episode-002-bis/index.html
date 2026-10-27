@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#05090d" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="sandbox-sync" content="local-server" />
+    <meta
+      name="description"
+      content="Épisode 002 BIS de SANDBOX. Conducteur visuel de talk-show : Radar, Build, Clash, Bêta."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>SANDBOX | Épisode 002 BIS</title>
+    <link rel="stylesheet" href="./show.css" />
+    <script type="module" src="./show.js"></script>
+  </head>
+  <body>
+    <div id="boot" role="status">Ouverture de SANDBOX...</div>
+    <noscript
+      >Cette expérience nécessite JavaScript. Le support original reste disponible à son adresse
+      habituelle.</noscript
+    >
+    <main id="app" hidden>
+      <div class="workspace">
+        <div class="screen-area">
+          <div class="screen-wrap">
+            <section id="screen" aria-label="Sortie antenne">
+              <div class="broadcast-brand">
+                <img src="./assets/logo.png" alt="SANDBOX" /><span>002 <b>BIS</b></span>
+              </div>
+              <div id="chapter-bug"></div>
+              <div id="scene"></div>
+              <div id="lower-third"></div>
+              <div id="video-layer" hidden>
+                <div id="video-slot"></div>
+                <p id="video-credit"></p>
+              </div>
+              <div id="blackout" hidden>
+                <img src="./assets/logo.png" alt="SANDBOX" />
+                <p>On revient.</p>
+              </div>
+            </section>
+          </div>
+          <nav class="player-bar controls" aria-label="Navigation de l'épisode">
+            <button data-action="previous" aria-label="Précédent">← <span>Précédent</span></button>
+            <button
+              class="topic-picker"
+              data-action="overview"
+              aria-label="Sujets : choisir un sujet"
+            >
+              <span class="topic-meta"><b>Sujets ▾</b><span id="counter"></span></span>
+              <strong id="current-title"></strong>
+            </button>
+            <button class="primary" data-action="next" aria-label="Suivant">
+              <span>Suivant</span> →
+            </button>
+            <button data-action="stop-video" id="stop-video" hidden>Fermer la vidéo</button>
+            <button data-action="options" aria-label="Options">•••</button>
+          </nav>
+        </div>
+      </div>
+    </main>
+    <dialog id="overview" aria-labelledby="overview-title">
+      <div class="dialog-top">
+        <div>
+          <span class="eyebrow">ÉPISODE 002 BIS</span>
+          <h2 id="overview-title">Choisir un sujet</h2>
+        </div>
+        <button data-close="overview">Fermer</button>
+      </div>
+      <div id="overview-content"></div>
+    </dialog>
+    <dialog id="notes" aria-labelledby="notes-title">
+      <div class="dialog-top">
+        <h2 id="notes-title">Dossier du sujet</h2>
+        <button data-close="notes">Fermer</button>
+      </div>
+      <div id="notes-content"></div>
+    </dialog>
+    <dialog id="options" aria-labelledby="options-title">
+      <div class="dialog-top">
+        <h2 id="options-title">Options</h2>
+        <button data-close="options">Fermer</button>
+      </div>
+      <div class="option-list">
+        <button data-action="fullscreen">Plein écran <kbd>F</kbd></button>
+        <button data-action="notes">Notes et sources</button>
+        <button data-action="zoom" id="zoom-button" aria-pressed="false">Agrandir la source</button>
+        <button data-action="fact" id="fact-button" aria-pressed="false">
+          Afficher le chiffre clé
+        </button>
+      </div>
+      <div id="media-controls" hidden>
+        <h3>Vidéos du sujet</h3>
+        <div class="option-list">
+          <button data-video="creator">Test de Sam Witteveen · 1:32</button
+          ><button data-video="studio">Pagode 3D · Google</button>
+        </div>
+        <p class="option-hint">Lecture sans son au départ. Activez-le dans le lecteur si besoin.</p>
+      </div>
+      <p class="option-hint">
+        ← / → ou Espace : avancer et revenir.<br />Vous pouvez aussi cliquer directement sur les
+        métiers, les outils et les points affichés.
+      </p>
+      <details class="broadcast-options">
+        <summary>Diffusion OBS</summary>
+        <button data-action="program">Ouvrir la sortie sans commandes</button>
+        <p id="connection" role="status">Mode local</p>
+        <p id="sync-status"></p>
+      </details>
+    </dialog>
+    <div id="notification" role="status" hidden></div>
+  </body>
+</html>

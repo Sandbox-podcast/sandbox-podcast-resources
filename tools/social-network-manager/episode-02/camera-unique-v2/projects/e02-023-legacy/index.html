@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Legacy : quand faut-il repartir de zéro ?</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 36px;
+        top: 230px;
+        width: 648px;
+        height: 810px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1885.0909px;
+        height: 1060.3636px;
+        left: -265.0909px;
+        top: -153.1636px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="70.5"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LE CLASH / #02</div>
+        </div>
+        <h1>Legacy : quand faut-il repartir de zéro ?</h1>
+      </header>
+      <div class="focus main">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-023-legacy-5751.5-5822.0.mp4"
+          playsinline
+          data-start="0"
+          data-duration="70.5"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.000"
+        data-duration="1.680"
+        data-track-index="3"
+      >
+        <span>vois moi je pense que</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="3.260"
+        data-duration="2.440"
+        data-track-index="3"
+      >
+        <span>le legacy qui marche, il</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="5.700"
+        data-duration="0.360"
+        data-track-index="3"
+      >
+        <span>n&#x27;y a pas de raison</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="6.060"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span>de le toucher si tu ne</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="7.300"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>le fais pas évoluer et qui</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="8.840"
+        data-duration="0.700"
+        data-track-index="3"
+      >
+        <span>marche très bien, tu n&#x27;as</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="9.540"
+        data-duration="0.820"
+        data-track-index="3"
+      >
+        <span>pas vraiment de raison d&#x27;y</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="10.360"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>toucher mais là où tu vas</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="11.760"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>vouloir y toucher c&#x27;est quand</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="13.160"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>tu veux le modifier et que</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="14.700"
+        data-duration="1.920"
+        data-track-index="3"
+      >
+        <span>pas de chance tu as perdu</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="16.620"
+        data-duration="1.180"
+        data-track-index="3"
+      >
+        <span>le savoir dans ta boîte parce</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="17.800"
+        data-duration="2.600"
+        data-track-index="3"
+      >
+        <span>que les développeurs qui ont développé</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="20.400"
+        data-duration="1.280"
+        data-track-index="3"
+      >
+        <span>le truc à la base c</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="21.680"
+        data-duration="0.920"
+        data-track-index="3"
+      >
+        <span>&#x27;était des vieilles techno ils sont</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="22.600"
+        data-duration="2.600"
+        data-track-index="3"
+      >
+        <span>partis le truc</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="25.200"
+        data-duration="1.260"
+        data-track-index="3"
+      >
+        <span>est monstrueux tu n&#x27;as plus</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="26.460"
+        data-duration="1.200"
+        data-track-index="3"
+      >
+        <span>aucun développeur qui est capable de</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="27.660"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>le prendre en charge et tu</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="29.060"
+        data-duration="1.640"
+        data-track-index="3"
+      >
+        <span>dois le faire évoluer à ce</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="30.700"
+        data-duration="0.540"
+        data-track-index="3"
+      >
+        <span>moment là tu n&#x27;as pas</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="31.240"
+        data-duration="1.340"
+        data-track-index="3"
+      >
+        <span>le choix de toute façon un</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="32.580"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span>truc tu vas devoir repartir de</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="33.820"
+        data-duration="1.860"
+        data-track-index="3"
+      >
+        <span>zéro tu vas le recoder entièrement</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="36.040"
+        data-duration="1.520"
+        data-track-index="3"
+      >
+        <span>tu vas faire uniac analyse tout</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="37.560"
+        data-duration="2.640"
+        data-track-index="3"
+      >
+        <span>le code pour bien saisir tout</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="40.200"
+        data-duration="1.480"
+        data-track-index="3"
+      >
+        <span>le scope de tout ce que</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="41.680"
+        data-duration="1.920"
+        data-track-index="3"
+      >
+        <span>fait l&#x27;application et tu vas</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="43.600"
+        data-duration="1.360"
+        data-track-index="3"
+      >
+        <span>repartir sur un truc un nouveau</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="44.960"
+        data-duration="1.080"
+        data-track-index="3"
+      >
+        <span>truc clean et tu vas ajouter</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="46.040"
+        data-duration="2.460"
+        data-track-index="3"
+      >
+        <span>des nouvelles fonctionnalités et ça</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="48.500"
+        data-duration="1.480"
+        data-track-index="3"
+      >
+        <span>ça va te prendre longtemps ça</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="49.980"
+        data-duration="2.560"
+        data-track-index="3"
+      >
+        <span>va être très rapide tu</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="52.540"
+        data-duration="1.880"
+        data-track-index="3"
+      >
+        <span>peux reprendre une énorme application legacy</span>
+      </div>
+      <div
+        id="caption-034"
+        class="clip caption"
+        data-start="54.420"
+        data-duration="1.360"
+        data-track-index="3"
+      >
+        <span>avec de l&#x27;IA, avec un</span>
+      </div>
+      <div
+        id="caption-035"
+        class="clip caption"
+        data-start="55.780"
+        data-duration="2.560"
+        data-track-index="3"
+      >
+        <span>opus en ultracode, en</span>
+      </div>
+      <div
+        id="caption-036"
+        class="clip caption"
+        data-start="58.340"
+        data-duration="2.300"
+        data-track-index="3"
+      >
+        <span>swarm d&#x27;agents et tout tu</span>
+      </div>
+      <div
+        id="caption-037"
+        class="clip caption"
+        data-start="60.640"
+        data-duration="1.780"
+        data-track-index="3"
+      >
+        <span>peux arriver à te faire en</span>
+      </div>
+      <div
+        id="caption-038"
+        class="clip caption"
+        data-start="62.420"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>une journée, tu peux reprendre une</span>
+      </div>
+      <div
+        id="caption-039"
+        class="clip caption"
+        data-start="63.580"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>vieille appli legacy et refaire une</span>
+      </div>
+      <div
+        id="caption-040"
+        class="clip caption"
+        data-start="64.980"
+        data-duration="1.760"
+        data-track-index="3"
+      >
+        <span>application complètement neuve qui fonctionne très</span>
+      </div>
+      <div
+        id="caption-041"
+        class="clip caption"
+        data-start="66.740"
+        data-duration="2.820"
+        data-track-index="3"
+      >
+        <span>bien à condition</span>
+      </div>
+      <div
+        id="caption-042"
+        class="clip caption"
+        data-start="69.560"
+        data-duration="0.940"
+        data-track-index="3"
+      >
+        <span>de créer des tests</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 0);
+      tl.set('#focus', { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 }, 0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,677 @@
+{
+  "revision": "camera-unique-v2",
+  "source_video_id": "7KVqydbGow0",
+  "hyperframes_version": "0.8.172",
+  "canvas": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30
+  },
+  "clips": [
+    {
+      "id": "E02-001",
+      "slug": "quotas",
+      "start": 79.7,
+      "end": 113.5,
+      "duration": 33.8,
+      "category": "radar",
+      "title": "Un forfait IA épuisé en vingt minutes : notre retour",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=79",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "column",
+          "end": 33.8
+        }
+      ]
+    },
+    {
+      "id": "E02-002",
+      "slug": "regard-neuf",
+      "start": 174.4,
+      "end": 228.8,
+      "duration": 54.4,
+      "category": "radar",
+      "title": "Faire relire son projet par un autre modèle IA",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=174",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "column",
+          "end": 8.0
+        },
+        {
+          "start": 8.0,
+          "mode": "portrait",
+          "end": 34.8
+        },
+        {
+          "start": 34.8,
+          "mode": "column",
+          "end": 45.2
+        },
+        {
+          "start": 45.2,
+          "mode": "speaker",
+          "end": 54.4
+        }
+      ]
+    },
+    {
+      "id": "E02-003",
+      "slug": "comparer-modeles",
+      "start": 561.25,
+      "end": 639.91,
+      "duration": 78.66,
+      "category": "radar",
+      "title": "Comment comparer deux modèles IA sur vos vrais usages",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=561",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 78.66
+        }
+      ]
+    },
+    {
+      "id": "E02-004",
+      "slug": "commerce",
+      "start": 3074.5,
+      "end": 3167.7,
+      "duration": 93.2,
+      "category": "metiers",
+      "title": "Commerçants : fidéliser ses clients avec un outil IA",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3074",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "column",
+          "end": 4.8
+        },
+        {
+          "start": 4.8,
+          "mode": "portrait",
+          "end": 65.2
+        },
+        {
+          "start": 65.2,
+          "mode": "column",
+          "end": 93.2
+        }
+      ]
+    },
+    {
+      "id": "E02-005",
+      "slug": "immobilier",
+      "start": 3178.8,
+      "end": 3285.05,
+      "duration": 106.25,
+      "category": "metiers",
+      "title": "Immobilier : un assistant pour répondre quand l'agence est fermée",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3178",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "column",
+          "end": 10.4
+        },
+        {
+          "start": 10.4,
+          "mode": "portrait",
+          "end": 29.2
+        },
+        {
+          "start": 29.2,
+          "mode": "slide",
+          "end": 42.8
+        },
+        {
+          "start": 42.8,
+          "mode": "portrait",
+          "end": 106.25
+        }
+      ]
+    },
+    {
+      "id": "E02-006",
+      "slug": "menu-3d",
+      "start": 3285.1,
+      "end": 3367.6,
+      "duration": 82.5,
+      "category": "metiers",
+      "title": "Restaurants : à quoi pourrait servir un menu en 3D ?",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3285",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "portrait",
+          "end": 4.0
+        },
+        {
+          "start": 4.0,
+          "mode": "column",
+          "end": 79.6
+        },
+        {
+          "start": 79.6,
+          "mode": "speaker",
+          "end": 82.5
+        }
+      ]
+    },
+    {
+      "id": "E02-007",
+      "slug": "reservations",
+      "start": 3369.9,
+      "end": 3399.6,
+      "duration": 29.7,
+      "category": "metiers",
+      "title": "Restaurant : répondre aux réservations pendant le service",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3369",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "portrait",
+          "end": 29.7
+        }
+      ]
+    },
+    {
+      "id": "E02-008",
+      "slug": "devis-whatsapp",
+      "start": 3399.7,
+      "end": 3441.3,
+      "duration": 41.6,
+      "category": "metiers",
+      "title": "Artisans : du vocal WhatsApp au devis",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3399",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "portrait",
+          "end": 30.8
+        },
+        {
+          "start": 30.8,
+          "mode": "column",
+          "end": 41.6
+        }
+      ]
+    },
+    {
+      "id": "E02-009",
+      "slug": "menuisier",
+      "start": 3442.2,
+      "end": 3463.42,
+      "duration": 21.22,
+      "category": "metiers",
+      "title": "Menuisiers : visualiser un meuble avant de le fabriquer",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3442",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "column",
+          "end": 4.8
+        },
+        {
+          "start": 4.8,
+          "mode": "slide",
+          "end": 21.22
+        }
+      ]
+    },
+    {
+      "id": "E02-010",
+      "slug": "paysagiste",
+      "start": 3463.3,
+      "end": 3535.6,
+      "duration": 72.3,
+      "category": "metiers",
+      "title": "Paysagistes : montrer un projet de jardin avec l'IA",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3463",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 3.6
+        },
+        {
+          "start": 3.6,
+          "mode": "slide",
+          "end": 23.6
+        },
+        {
+          "start": 23.6,
+          "mode": "portrait",
+          "end": 45.4
+        },
+        {
+          "start": 45.4,
+          "mode": "slide",
+          "end": 55.6
+        },
+        {
+          "start": 55.6,
+          "mode": "portrait",
+          "end": 72.3
+        }
+      ]
+    },
+    {
+      "id": "E02-011",
+      "slug": "fleuriste",
+      "start": 3535.6,
+      "end": 3551.2,
+      "duration": 15.6,
+      "category": "metiers",
+      "title": "Fleuristes : imaginer une création avec le client",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3535",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "portrait",
+          "end": 3.8
+        },
+        {
+          "start": 3.8,
+          "mode": "slide",
+          "end": 15.6
+        }
+      ]
+    },
+    {
+      "id": "E02-012",
+      "slug": "boulanger",
+      "start": 3551.2,
+      "end": 3596.28,
+      "duration": 45.08,
+      "category": "metiers",
+      "title": "Boulangers : mieux anticiper les quantités à produire",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3551",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "slide",
+          "end": 10.8
+        },
+        {
+          "start": 10.8,
+          "mode": "speaker",
+          "end": 27.6
+        },
+        {
+          "start": 27.6,
+          "mode": "portrait",
+          "end": 45.08
+        }
+      ]
+    },
+    {
+      "id": "E02-013",
+      "slug": "patisserie",
+      "start": 3598.04,
+      "end": 3662.2,
+      "duration": 64.16,
+      "category": "metiers",
+      "title": "Pâtissiers : relier commandes, devis et facturation",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3598",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "slide",
+          "end": 12.8
+        },
+        {
+          "start": 12.8,
+          "mode": "portrait",
+          "end": 31.8
+        },
+        {
+          "start": 31.8,
+          "mode": "column",
+          "end": 59.4
+        },
+        {
+          "start": 59.4,
+          "mode": "portrait",
+          "end": 64.16
+        }
+      ]
+    },
+    {
+      "id": "E02-014",
+      "slug": "coiffeur",
+      "start": 3662.2,
+      "end": 3684.5,
+      "duration": 22.3,
+      "category": "metiers",
+      "title": "Coiffeurs : essayer une coupe avant de couper",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=3662",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "portrait",
+          "end": 22.3
+        }
+      ]
+    },
+    {
+      "id": "E02-015",
+      "slug": "cadrer-besoin",
+      "start": 4580.42,
+      "end": 4644.7,
+      "duration": 64.28,
+      "category": "methode",
+      "title": "Avant de demander une application à l'IA, faites-vous questionner",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=4580",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 64.28
+        }
+      ]
+    },
+    {
+      "id": "E02-016",
+      "slug": "contexte",
+      "start": 4644.7,
+      "end": 4717.3,
+      "duration": 72.6,
+      "category": "methode",
+      "title": "Votre IA manque-t-elle surtout de contexte ?",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=4644",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 72.6
+        }
+      ]
+    },
+    {
+      "id": "E02-017",
+      "slug": "lire-tickets",
+      "start": 4843.3,
+      "end": 4923.5,
+      "duration": 80.2,
+      "category": "clash",
+      "title": "Faut-il encore lire les tickets quand on code avec l'IA ?",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=4843",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "column",
+          "end": 50.4
+        },
+        {
+          "start": 50.4,
+          "mode": "speaker",
+          "end": 80.2
+        }
+      ]
+    },
+    {
+      "id": "E02-018",
+      "slug": "ticket-fonctionnel",
+      "start": 5082.2,
+      "end": 5164.5,
+      "duration": 82.3,
+      "category": "clash",
+      "title": "Un ticket doit-il expliquer le besoin ou l'implémentation ?",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=5082",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 82.3
+        }
+      ]
+    },
+    {
+      "id": "E02-019",
+      "slug": "ticket-sans-contexte",
+      "start": 5273.1,
+      "end": 5339.4,
+      "duration": 66.3,
+      "category": "clash",
+      "title": "Le piège du ticket IA rédigé sans le contexte du projet",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=5273",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 66.3
+        }
+      ]
+    },
+    {
+      "id": "E02-020",
+      "slug": "maquette",
+      "start": 5342.8,
+      "end": 5459.8,
+      "duration": 117,
+      "category": "clash",
+      "title": "Une maquette peut-elle remplacer un ticket ? Le débat",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=5342",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 117
+        }
+      ]
+    },
+    {
+      "id": "E02-021",
+      "slug": "caracteriser-bug",
+      "start": 5529.7,
+      "end": 5594.6,
+      "duration": 64.9,
+      "category": "clash",
+      "title": "Décrire un bug : une compétence que l'IA ne dispense pas de cadrer",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=5529",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 64.9
+        }
+      ]
+    },
+    {
+      "id": "E02-022",
+      "slug": "refonte",
+      "start": 5661.8,
+      "end": 5702.1,
+      "duration": 40.3,
+      "category": "clash",
+      "title": "Faut-il tout recoder avec l'IA ou repenser le produit ?",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=5661",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "column",
+          "end": 19.8
+        },
+        {
+          "start": 19.8,
+          "mode": "speaker",
+          "end": 40.3
+        }
+      ]
+    },
+    {
+      "id": "E02-023",
+      "slug": "legacy",
+      "start": 5751.5,
+      "end": 5822,
+      "duration": 70.5,
+      "category": "clash",
+      "title": "Legacy : quand faut-il repartir de zéro ?",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=5751",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 70.5
+        }
+      ]
+    },
+    {
+      "id": "E02-024",
+      "slug": "relire-code",
+      "start": 6159.24,
+      "end": 6189.3,
+      "duration": 30.06,
+      "category": "clash",
+      "title": "Relire le code généré par l'IA : on en parle",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=6159",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "column",
+          "end": 30.06
+        }
+      ]
+    },
+    {
+      "id": "E02-025",
+      "slug": "transformation",
+      "start": 6482.8,
+      "end": 6568.08,
+      "duration": 85.28,
+      "category": "clash",
+      "title": "Passer à l'IA en équipe : progressivement ou tous ensemble ?",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=6482",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "trio",
+          "end": 85.28
+        }
+      ]
+    },
+    {
+      "id": "E02-026",
+      "slug": "experience-echecs",
+      "start": 6673.9,
+      "end": 6733.6,
+      "duration": 59.7,
+      "category": "clash",
+      "title": "Ce que les échecs apprennent et que les démos ne montrent pas",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=6673",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 59.7
+        }
+      ]
+    },
+    {
+      "id": "E02-027",
+      "slug": "metier-dev",
+      "start": 6738.2,
+      "end": 6806.5,
+      "duration": 68.3,
+      "category": "clash",
+      "title": "Développeurs : coder ou comprendre ce que l'on construit ?",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=6738",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "column",
+          "end": 68.3
+        }
+      ]
+    },
+    {
+      "id": "E02-028",
+      "slug": "pm-maquette",
+      "start": 6852.25,
+      "end": 6931.55,
+      "duration": 79.3,
+      "category": "clash",
+      "title": "Product managers : la maquette change-t-elle le travail ?",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=6852",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "column",
+          "end": 13.4
+        },
+        {
+          "start": 13.4,
+          "mode": "portrait",
+          "end": 28.8
+        },
+        {
+          "start": 28.8,
+          "mode": "trio",
+          "end": 79.3
+        }
+      ]
+    },
+    {
+      "id": "E02-029",
+      "slug": "skills",
+      "start": 7040.4,
+      "end": 7105.7,
+      "duration": 65.3,
+      "category": "beta",
+      "title": "Des skills pour retrouver sa façon de travailler avec l'IA",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=7040",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 65.3
+        }
+      ]
+    },
+    {
+      "id": "E02-030",
+      "slug": "regie",
+      "start": 7213.5,
+      "end": 7324.5,
+      "duration": 111,
+      "category": "beta",
+      "title": "Dans les coulisses : notre régie de podcast avec OBS",
+      "source_url": "https://youtu.be/7KVqydbGow0?t=7213",
+      "layout_shots": [
+        {
+          "start": 0.0,
+          "mode": "speaker",
+          "end": 28.6
+        },
+        {
+          "start": 28.6,
+          "mode": "trio",
+          "end": 30.0
+        },
+        {
+          "start": 30.0,
+          "mode": "speaker",
+          "end": 111
+        }
+      ]
+    }
+  ],
+  "instagram_ranges": {
+    "E02-004": [[5.5, 93.2]],
+    "E02-005": [[43.2, 106.266667]],
+    "E02-020": [
+      [4.1, 27.8],
+      [32.3, 38.95],
+      [42.0, 79.9],
+      [98.9, 115.6]
+    ],
+    "E02-030": [
+      [0, 28.3],
+      [38.7, 87.4],
+      [103.7, 111.0]
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-20",
+  "tool": "image_gen intégré",
+  "mode": "edit",
+  "source": "apps/site/public/images/rooms/cinema-room-v1.webp",
+  "generatedSource": "C:/Users/Lou/.codex/generated_images/01a158a4-3068-7a62-bc71-c5bd30744104/exec-e2887821-4dfc-4692-bccd-57968dcfd42e.png",
+  "output": "apps/site/public/images/rooms/cinema-room-v2.webp",
+  "width": 1672,
+  "height": 941,
+  "bytes": 162052,
+  "webpQuality": 89,
+  "prompt": "Use case: precise-object-edit.\nAsset type: cinematic website room background, wide 16:9, photorealistic architectural visualization.\nInput image: cinema-room-v1.webp is the edit target and material/lighting reference.\nPrimary request: redesign this cinema so that all six portrait poster frames are mounted on ONE SINGLE FLAT FRONTAL WALL, parallel to the camera image plane, instead of the receding side walls. The six poster interiors must be perfectly upright rectangles, equal size, no trapezoids, no skew, no curved walls. This is essential because real HTML poster artwork will be placed inside the empty frames.\nComposition: symmetrical straight-on view, camera centered and level with the wall, corrected architectural verticals, 16:9. Flat dark walnut back wall filling the whole width. Arrange exactly THREE equal portrait frames on the left and THREE equal portrait frames on the right of one centered widescreen cinema screen. All six frames in one straight horizontal row at the same height on the SAME wall plane. Suggested frame bounds as percentage of canvas: x=5–13.5, 15–23.5, 25–33.5, 66.5–75, 76.5–85, 86.5–95; y=24–55. Their black inner panels must be completely blank, lit evenly, unobstructed and easy to overlay. Central screen x=37–63 y=28–54, also blank dark blue. These coordinates guide layout; retain six clear rectangular surfaces.\nKeep style from reference: rich walnut acoustic vertical battens, deep midnight navy, tasteful warm amber brass picture-light fixtures, navy velvet cinema seats, soft cinematic shadows. No curved architecture and no angled side-wall poster frames. Only a low row of seat backs across the bottom fifth, leaving all frames fully visible; dark aisle floor and restrained amber footlights. Some ceiling and floor depth may remain, but poster wall must be entirely frontal. A real cozy small private screening room, polished but plausible.\nConstraints: exactly six identical portrait rectangular frames, ALL front-facing; no text, no logos, no people, no fake thumbnails, no illustrations in posters or screen, no watermark. No wide-angle lens distortion. Do not preserve the existing side wall layout: replace it with the flat frontal poster wall. Preserve palette, material quality and photorealism."
+}

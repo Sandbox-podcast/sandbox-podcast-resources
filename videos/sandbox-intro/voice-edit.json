@@ -1,0 +1,231 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_v4",
+  "duration": 63.56,
+  "sampleRate": 48000,
+  "catalogVoices": {
+    "lou": "Stephane - Joyful & Enthusiastic.",
+    "loic": "Nova - Deep and Calm",
+    "nico": "Fabien - Confident and Energetic",
+    "narrator": "Fred - Radio Host"
+  },
+  "original": "public/original.m4a",
+  "instrumental": "public/voices/suno-instrumental.flac",
+  "output": "public/voices/sandbox-elevenlabs-mix.wav",
+  "replaceWindows": [
+    [3.2, 28.86],
+    [33.12, 51.24],
+    [56.64, 60.12]
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "voice": "narrator",
+      "in": 0,
+      "out": 4.07,
+      "start": 3.36,
+      "end": 7.77,
+      "text": "En 2026, on a confié l'intelligence artificielle à trois mecs."
+    },
+    {
+      "id": "intro-chute",
+      "voice": "narrator",
+      "in": 4.07,
+      "out": 6.06,
+      "start": 7.84,
+      "end": 10.3,
+      "text": "Personne n'a pensé à les arrêter !"
+    },
+    {
+      "id": "lou-annonce",
+      "voice": "narrator",
+      "in": 6.06,
+      "out": 7.94,
+      "start": 10.56,
+      "end": 12.78,
+      "text": "Lou ! Product Manager !"
+    },
+    {
+      "id": "lou-description",
+      "voice": "narrator",
+      "in": 7.94,
+      "out": 10.06,
+      "start": 12.88,
+      "end": 14.88,
+      "text": "Il écrit ses tickets avec l'IA !"
+    },
+    {
+      "id": "lou-replique",
+      "voice": "lou",
+      "in": 0,
+      "out": 1.95,
+      "start": 14.96,
+      "end": 16.61,
+      "text": "J'en ai fait quarante ce matin !"
+    },
+    {
+      "id": "loic-annonce",
+      "voice": "narrator",
+      "in": 10.06,
+      "out": 11.69,
+      "start": 16.72,
+      "end": 18.31,
+      "text": "Loïc ! Développeur !"
+    },
+    {
+      "id": "loic-description",
+      "voice": "narrator",
+      "in": 11.69,
+      "out": 14.04,
+      "start": 18.4,
+      "end": 20.78,
+      "text": "Il fait coder les tickets par son IA !"
+    },
+    {
+      "id": "loic-replique",
+      "voice": "loic",
+      "in": 0,
+      "out": 1.86,
+      "start": 20.88,
+      "end": 22.59,
+      "text": "J'ai même pas lu le ticket !"
+    },
+    {
+      "id": "nico-annonce",
+      "voice": "narrator",
+      "in": 14.04,
+      "out": 15.65,
+      "start": 22.72,
+      "end": 24.62,
+      "text": "Nico ! Développeur !"
+    },
+    {
+      "id": "nico-description",
+      "voice": "narrator",
+      "in": 15.65,
+      "out": 17.49,
+      "start": 24.72,
+      "end": 26.77,
+      "text": "Il balance tout en production !"
+    },
+    {
+      "id": "nico-replique",
+      "voice": "nico",
+      "in": 0,
+      "out": 1.8,
+      "start": 26.88,
+      "end": 28.7,
+      "text": "Mais ça marchait en local !"
+    },
+    {
+      "id": "radar-annonce",
+      "voice": "narrator",
+      "in": 17.49,
+      "out": 18.45,
+      "start": 33.28,
+      "end": 34.23,
+      "text": "Le Radar !"
+    },
+    {
+      "id": "radar-description",
+      "voice": "narrator",
+      "in": 18.45,
+      "out": 20.04,
+      "start": 34.32,
+      "end": 36.3,
+      "text": "Toute l'actualité de l'IA !"
+    },
+    {
+      "id": "radar-chute",
+      "voice": "narrator",
+      "in": 20.04,
+      "out": 21.52,
+      "start": 36.4,
+      "end": 37.74,
+      "text": "Déjà périmée demain !"
+    },
+    {
+      "id": "build-annonce",
+      "voice": "narrator",
+      "in": 21.52,
+      "out": 22.3,
+      "start": 37.84,
+      "end": 38.49,
+      "text": "Le Build !"
+    },
+    {
+      "id": "build-description",
+      "voice": "narrator",
+      "in": 22.3,
+      "out": 24.16,
+      "start": 38.56,
+      "end": 40.55,
+      "text": "Encore un SaaS vibe codé !"
+    },
+    {
+      "id": "build-chute",
+      "voice": "narrator",
+      "in": 24.16,
+      "out": 25.49,
+      "start": 40.64,
+      "end": 42.2,
+      "text": "Zéro utilisateur !"
+    },
+    {
+      "id": "clash-annonce",
+      "voice": "narrator",
+      "in": 25.49,
+      "out": 26.46,
+      "start": 43.04,
+      "end": 44,
+      "text": "Le Clash !"
+    },
+    {
+      "id": "clash-egos",
+      "voice": "narrator",
+      "in": 26.46,
+      "out": 27.43,
+      "start": 44.08,
+      "end": 45.11,
+      "text": "Trois égos !"
+    },
+    {
+      "id": "clash-chute",
+      "voice": "narrator",
+      "in": 27.43,
+      "out": 28.95,
+      "start": 45.2,
+      "end": 46.69,
+      "text": "Zéro remise en question !"
+    },
+    {
+      "id": "beta-annonce",
+      "voice": "narrator",
+      "in": 28.95,
+      "out": 29.84,
+      "start": 46.8,
+      "end": 48.38,
+      "text": "La Bêta !"
+    },
+    {
+      "id": "beta-description",
+      "voice": "narrator",
+      "in": 29.84,
+      "out": 32.23,
+      "start": 48.48,
+      "end": 51.07,
+      "text": "Des expériences que personne n'a demandées !"
+    },
+    {
+      "id": "finale",
+      "voice": "narrator",
+      "in": 0,
+      "out": 2.92575,
+      "start": 56.8,
+      "end": 59.9,
+      "text": "L'émission qui n'aurait jamais dû passer en prod.",
+      "sourceFile": "public/voices/finale-elevenlabs.mp3",
+      "generationText": "[deadpan] L'émission qui n'aurait jamais dû passer en prode."
+    }
+  ]
+}

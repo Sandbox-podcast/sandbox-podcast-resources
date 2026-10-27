@@ -1,0 +1,535 @@
+1
+00:00:00,000 --> 00:00:00,200
+OK.
+
+2
+00:00:00,200 --> 00:00:01,200
+Moi, qu'est-ce que je fais en ce moment
+
+3
+00:00:01,200 --> 00:00:03,200
+? En ce moment, je fais beaucoup de jeux
+
+4
+00:00:03,200 --> 00:00:04,200
+vidéos
+
+5
+00:00:04,200 --> 00:00:07,200
+parce que enfin tout le monde, tout
+
+6
+00:00:07,200 --> 00:00:10,200
+développeur je pense ou en tout cas une
+
+7
+00:00:10,200 --> 00:00:12,200
+grande partie rêve de de faire des jeux
+
+8
+00:00:12,200 --> 00:00:13,200
+vidéos. Le problème c'est que ça prend
+
+9
+00:00:13,200 --> 00:00:14,200
+du temps.
+
+10
+00:00:14,200 --> 00:00:15,200
+Je pense qu'on est tous devenu
+
+11
+00:00:15,200 --> 00:00:17,200
+développeurs à cause de ça au départ.
+
+12
+00:00:17,200 --> 00:00:21,200
+Ouais, c'est ça. Et du coup euh du coup
+
+13
+00:00:21,200 --> 00:00:23,200
+bah maintenant que la technique et le
+
+14
+00:00:23,200 --> 00:00:25,200
+temps euh ne compte plus euh on se dit
+
+15
+00:00:25,200 --> 00:00:27,200
+queon va pouvoir faire le jeu vidéo de
+
+16
+00:00:27,200 --> 00:00:30,200
+nos rêves, plein de jeux vidéos et euh
+
+17
+00:00:30,200 --> 00:00:31,200
+on prend un coup d'humilité en fait
+
+18
+00:00:31,200 --> 00:00:33,200
+parce qu'on se rend compte que
+
+19
+00:00:33,200 --> 00:00:34,200
+maintenant qu'on a la technique à porter
+
+20
+00:00:34,200 --> 00:00:38,200
+de main euh il faut des idées, il faut
+
+21
+00:00:38,200 --> 00:00:41,200
+du il faut il faut euh des
+
+22
+00:00:41,200 --> 00:00:43,200
+faire un faire un bon jeu. Un jeu n'est
+
+23
+00:00:43,200 --> 00:00:44,200
+pas forcément fun, tu peux avoir une
+
+24
+00:00:44,200 --> 00:00:47,200
+idée très bonne et mal l'exécuter.
+
+25
+00:00:47,200 --> 00:00:49,200
+Il faut du level design, il y a plein de
+
+26
+00:00:49,200 --> 00:00:51,200
+trucs auxquels on pense pas et on se
+
+27
+00:00:51,200 --> 00:00:53,200
+rend vite compte que il y a pas que la
+
+28
+00:00:53,200 --> 00:00:55,200
+technique qui compte dans un jeu vidéo
+
+29
+00:00:55,200 --> 00:00:58,200
+et on prend un coup d'humilité quoi. Et
+
+30
+00:00:58,200 --> 00:01:00,200
+voilà, j'ai trouvé ça in rendu compte
+
+31
+00:01:00,200 --> 00:01:01,200
+que tu avais une super idée et qu'en
+
+32
+00:01:01,200 --> 00:01:04,200
+fait quand tu y joues c'est chiant.
+
+33
+00:01:04,200 --> 00:01:05,200
+[rires] Exactement.
+
+34
+00:01:05,200 --> 00:01:07,200
+Là je travaille sur un jeu justement
+
+35
+00:01:07,200 --> 00:01:09,200
+enfin j'ai travaillé maintenant je je
+
+36
+00:01:09,200 --> 00:01:10,200
+pense que je vais le publier le jeu
+
+37
+00:01:10,200 --> 00:01:12,200
+bientôt. C'est il est pas ouf. Il est ce
+
+38
+00:01:12,200 --> 00:01:15,200
+qu'il est. Ça s'appelle Power Rush. Euh,
+
+39
+00:01:15,200 --> 00:01:17,200
+on mettra peut-être l'URL quelque part,
+
+40
+00:01:17,200 --> 00:01:19,200
+je sais pas si les gens veulent tester.
+
+41
+00:01:19,200 --> 00:01:22,200
+C'est un jeu de snow un petit peu où tu
+
+42
+00:01:22,200 --> 00:01:23,200
+descends des tu descends une montagne à
+
+43
+00:01:23,200 --> 00:01:25,200
+l'infini avec une avalanche qui te
+
+44
+00:01:25,200 --> 00:01:28,200
+poursuit. tu dois récupérer des power up
+
+45
+00:01:28,200 --> 00:01:31,200
+qui te permettent d'augmenter l'XP et à
+
+46
+00:01:31,200 --> 00:01:33,200
+chaque level d'XP, tu peux avoir un
+
+47
+00:01:33,200 --> 00:01:35,200
+boost supplémentaire, des capacités
+
+48
+00:01:35,200 --> 00:01:36,200
+supplémentaires qui te permettent
+
+49
+00:01:36,200 --> 00:01:38,200
+d'aller plus loin, une progression
+
+50
+00:01:38,200 --> 00:01:40,200
+continue où tu améliores entre chaque
+
+51
+00:01:40,200 --> 00:01:42,200
+run tes tes tes performances, enfin tes
+
+52
+00:01:42,200 --> 00:01:45,200
+capacités avec plein de pièges, plein de
+
+53
+00:01:45,200 --> 00:01:47,200
+biomes et cetera.
+
+54
+00:01:47,200 --> 00:01:49,200
+Bon, je suis moyennement convaincu mais
+
+55
+00:01:49,200 --> 00:01:51,200
+en tout cas voilà, c'est un truc c'est
+
+56
+00:01:51,200 --> 00:01:53,200
+un truc qui m'a amusé et voilà, je lance
+
+57
+00:01:53,200 --> 00:01:55,200
+des nouvelles idées de jeu comme ça, ça
+
+58
+00:01:55,200 --> 00:01:57,200
+m'éclate. Mais du coup, je suis vraiment
+
+59
+00:01:57,200 --> 00:02:00,200
+à fond dans le dans le dans le dans les
+
+60
+00:02:00,200 --> 00:02:02,200
+jeux en ce moment. C'est mon petit euh
+
+61
+00:02:02,200 --> 00:02:05,200
+mon petit passe-temps, mon petit hobby
+
+62
+00:02:05,200 --> 00:02:08,200
+perso parce que Mais moi en fait, je me
+
+63
+00:02:08,200 --> 00:02:11,200
+suis rendu compte que j'étais plus amusé
+
+64
+00:02:11,200 --> 00:02:13,200
+par l'idée de faire le jeu que par jouer
+
+65
+00:02:13,200 --> 00:02:15,200
+au jeu lui-même en fait. Ouais, [rires]
+
+66
+00:02:15,200 --> 00:02:17,200
+c'est triste. J'ai fait un jeu, c'est un
+
+67
+00:02:17,200 --> 00:02:19,200
+peu un truc genre Populous en 3D
+
+68
+00:02:19,200 --> 00:02:21,200
+isométrique.
+
+69
+00:02:21,200 --> 00:02:23,200
+Tout le temps où je l'ai fait, je me
+
+70
+00:02:23,200 --> 00:02:24,200
+suis dit "Putain, ça va être génial."
+
+71
+00:02:24,200 --> 00:02:26,200
+Puis j'y ai joué. Je fais "Putain, je me
+
+72
+00:02:26,200 --> 00:02:28,200
+Ouais, ouais, ouais. C'est ça en fait.
+
+73
+00:02:28,200 --> 00:02:29,200
+En fait, pour faire un bon jeu, il faut
+
+74
+00:02:29,200 --> 00:02:31,200
+jouer à ton jeu. Faut vraiment beaucoup
+
+75
+00:02:31,200 --> 00:02:33,200
+jouer à ton jeu. Et des fois, tu as du
+
+76
+00:02:33,200 --> 00:02:34,200
+mal à savoir si c'est de la merde ou pas
+
+77
+00:02:34,200 --> 00:02:35,200
+parce que c'est toi qui te l'a qui l'a
+
+78
+00:02:35,200 --> 00:02:38,200
+fait. Mais en fait, si le jeu tu as pas
+
+79
+00:02:38,200 --> 00:02:40,200
+un déclic quand tu y joues, c'est que
+
+80
+00:02:40,200 --> 00:02:41,200
+c'est de la merde en fait, tout
+
+81
+00:02:41,200 --> 00:02:43,200
+simplement. Et la plupart du temps, tous
+
+82
+00:02:43,200 --> 00:02:44,200
+les jeux que j'ai fait, c'était de la
+
+83
+00:02:44,200 --> 00:02:45,200
+merde. Mais en tout cas, comme toi, ça
+
+84
+00:02:45,200 --> 00:02:48,200
+m'a amusé de les faire. C'est super fun
+
+85
+00:02:48,200 --> 00:02:50,200
+à faire de de voir ton jeu qui
+
+86
+00:02:50,200 --> 00:02:51,200
+s'améliore, de dire "Ah là, ça serait
+
+87
+00:02:51,200 --> 00:02:54,200
+bien d'ajouter ça, tu ajoutes le tu tu
+
+88
+00:02:54,200 --> 00:02:56,200
+as une idée et quelques minutes après,
+
+89
+00:02:56,200 --> 00:02:58,200
+elle est en place et c'est incroyable.
+
+90
+00:02:58,200 --> 00:03:00,200
+C'est vraiment l'époque qu'on vit
+
+91
+00:03:00,200 --> 00:03:03,200
+justement sur la possibilité de de
+
+92
+00:03:03,200 --> 00:03:05,200
+donner vie à des idées très rapidement.
+
+93
+00:03:05,200 --> 00:03:06,200
+Je trouve que c'est incroyable. Et les
+
+94
+00:03:06,200 --> 00:03:07,200
+jeux vidéos, je trouve que c'est ce
+
+95
+00:03:07,200 --> 00:03:09,200
+qu'il représente le plus."
+
+96
+00:03:09,200 --> 00:03:11,200
+Ouais. Je pense que c'est aussi un bon
+
+97
+00:03:11,200 --> 00:03:13,200
+point d'entrée, tu vois, pour les pour
+
+98
+00:03:13,200 --> 00:03:15,200
+les jeunes, pour les enfants et tout ça,
+
+99
+00:03:15,200 --> 00:03:17,200
+justement coder des jeux.
+
+100
+00:03:17,200 --> 00:03:19,200
+c'est un peu l'équivalent du scratch
+
+101
+00:03:19,200 --> 00:03:21,200
+enfin de de scratch ou de la tortue en
+
+102
+00:03:21,200 --> 00:03:22,200
+fait qu'il y avait avant pour
+
+103
+00:03:22,200 --> 00:03:25,200
+t'apprendre les bases de l'algorithme et
+
+104
+00:03:25,200 --> 00:03:28,200
+cetera. Ouais. Ouais. Car tu filmes en
+
+105
+00:03:28,200 --> 00:03:29,200
+vipodant quoi.
+
+106
+00:03:29,200 --> 00:03:31,200
+Ouais, c'est ça. [soupir]
+
+107
+00:03:31,200 --> 00:03:33,200
+Mais du coup euh bah du coup tu vois,
+
+108
+00:03:33,200 --> 00:03:35,200
+c'est pour ça que Google avec leur
+
+109
+00:03:35,200 --> 00:03:36,200
+playground là pour rebondir un peu
+
+110
+00:03:36,200 --> 00:03:38,200
+dessus, c'est c'est je pense que c'est
+
+111
+00:03:38,200 --> 00:03:41,200
+une bonne idée, tu vois. C'est
+
+112
+00:03:41,200 --> 00:03:44,200
+c'est à mon avis c'est un produit qui va
+
+113
+00:03:44,200 --> 00:03:45,200
+amuser beaucoup de monde. Il y a
+
+114
+00:03:45,200 --> 00:03:46,200
+beaucoup de gens qui vont se lancer
+
+115
+00:03:46,200 --> 00:03:48,200
+parce que c'est très simple de très
+
+116
+00:03:48,200 --> 00:03:50,200
+accessible.
+
+117
+00:03:50,200 --> 00:03:52,200
+Euh et puis les jeunes maintenant ils
+
+118
+00:03:52,200 --> 00:03:53,200
+vont plus apprendre à coder, ils vont
+
+119
+00:03:53,200 --> 00:03:56,200
+apprendre à à à apprentter et à vipe
+
+120
+00:03:56,200 --> 00:03:57,200
+coder quoi.
+
+121
+00:03:57,200 --> 00:03:59,200
+Ouais mais il y a quand même la phase de
+
+122
+00:03:59,200 --> 00:04:00,200
+réflexion qui va à prendre en compte
+
+123
+00:04:00,200 --> 00:04:01,200
+hein.
+
+124
+00:04:01,200 --> 00:04:03,200
+Il y avait un jeu comme ça Roblox et
+
+125
+00:04:03,200 --> 00:04:04,200
+Fortnite où ils peuvent créer des jeux
+
+126
+00:04:04,200 --> 00:04:06,200
+de
+
+127
+00:04:06,200 --> 00:04:08,200
+l'impression que c'est la relève un peu.
+
+128
+00:04:08,200 --> 00:04:10,200
+Ouais ouais. Ouais, c'est quand même
+
+129
+00:04:10,200 --> 00:04:13,200
+compliqué hein.
+
+130
+00:04:13,200 --> 00:04:15,200
+Ouais, là tu as quand même la
+
+131
+00:04:15,200 --> 00:04:17,200
+possibilité d'avoir un aperçu quasiment
+
+132
+00:04:17,200 --> 00:04:20,200
+instantané de ton idée en fait.
+
+133
+00:04:20,200 --> 00:04:22,200
+C'est c'est beaucoup plus rapide quoi.
+
+134
+00:04:22,200 --> 00:04:23,200
+Ouais. Ouais, clairement.

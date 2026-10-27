@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Paysagistes : montrer un projet de jardin avec l&#x27;IA</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 36px;
+        top: 230px;
+        width: 648px;
+        height: 810px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1885.0909px;
+        height: 1060.3636px;
+        left: -265.0909px;
+        top: -153.1636px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="72.3"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LES MÉTIERS / #02</div>
+        </div>
+        <h1>Paysagistes : montrer un projet de jardin avec l&#x27;IA</h1>
+      </header>
+      <div class="focus slide">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-010-paysagiste-3463.3-3535.6.mp4"
+          playsinline
+          data-start="0"
+          data-duration="72.3"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.000"
+        data-duration="2.220"
+        data-track-index="3"
+      >
+        <span>augmenter ensuite pour les architectes</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="2.220"
+        data-duration="2.080"
+        data-track-index="3"
+      >
+        <span>paysagistes donc ça moi je l</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="4.300"
+        data-duration="2.200"
+        data-track-index="3"
+      >
+        <span>&#x27;ai fait pour mon jardin tu</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="6.500"
+        data-duration="2.740"
+        data-track-index="3"
+      >
+        <span>prends photo ton jardin tu</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="9.240"
+        data-duration="2.600"
+        data-track-index="3"
+      >
+        <span>dis, je veux faire un</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="11.840"
+        data-duration="2.600"
+        data-track-index="3"
+      >
+        <span>style Bali, un style</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="15.420"
+        data-duration="1.460"
+        data-track-index="3"
+      >
+        <span>Ibiza, le style que tu veux</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="16.880"
+        data-duration="2.720"
+        data-track-index="3"
+      >
+        <span>style Equator machin tu</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="19.600"
+        data-duration="1.560"
+        data-track-index="3"
+      >
+        <span>te dois il faut le faire</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="21.160"
+        data-duration="2.200"
+        data-track-index="3"
+      >
+        <span>avec un professionnel parce que quand</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="23.360"
+        data-duration="1.340"
+        data-track-index="3"
+      >
+        <span>tu te connais pas, t&#x27;as</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="24.700"
+        data-duration="1.760"
+        data-track-index="3"
+      >
+        <span>pas beaucoup d&#x27;imagination le mec,</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="26.600"
+        data-duration="1.120"
+        data-track-index="3"
+      >
+        <span>le professionnel il va te dire</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="27.720"
+        data-duration="1.640"
+        data-track-index="3"
+      >
+        <span>par rapport à la où t</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="29.360"
+        data-duration="2.000"
+        data-track-index="3"
+      >
+        <span>&#x27;habites par rapport à l&#x27;orientation</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="31.360"
+        data-duration="1.440"
+        data-track-index="3"
+      >
+        <span>du soleil à tel endroit de</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="32.800"
+        data-duration="2.120"
+        data-track-index="3"
+      >
+        <span>ton jardin tu mets tel plant</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="34.920"
+        data-duration="1.820"
+        data-track-index="3"
+      >
+        <span>à tel endroit si on les</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="36.740"
+        data-duration="2.460"
+        data-track-index="3"
+      >
+        <span>plante à tel moment voilà</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="39.200"
+        data-duration="1.080"
+        data-track-index="3"
+      >
+        <span>ce qui va se passer et</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="40.280"
+        data-duration="1.360"
+        data-track-index="3"
+      >
+        <span>derrière ta l&#x27;IA va te générer</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="41.640"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>des photos elle peut même te</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="43.040"
+        data-duration="1.520"
+        data-track-index="3"
+      >
+        <span>générer une vidéo ou t&#x27;as</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="44.560"
+        data-duration="1.880"
+        data-track-index="3"
+      >
+        <span>une sorte de timelapse sur 5</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="46.440"
+        data-duration="1.500"
+        data-track-index="3"
+      >
+        <span>ans et tu vois toute l</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="47.940"
+        data-duration="1.500"
+        data-track-index="3"
+      >
+        <span>&#x27;évolution de ton jardin sur 5</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="49.440"
+        data-duration="2.040"
+        data-track-index="3"
+      >
+        <span>ans si tu prends parce qu</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="51.480"
+        data-duration="1.180"
+        data-track-index="3"
+      >
+        <span>&#x27;en fait ils peuvent te planter</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="53.240"
+        data-duration="1.140"
+        data-track-index="3"
+      >
+        <span>toutes les plantes qui vont te</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="54.380"
+        data-duration="1.580"
+        data-track-index="3"
+      >
+        <span>mettre, du gazon et tout t</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="55.960"
+        data-duration="1.060"
+        data-track-index="3"
+      >
+        <span>&#x27;as plusieurs manières de l&#x27;acheter</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="57.020"
+        data-duration="1.340"
+        data-track-index="3"
+      >
+        <span>tu peux l&#x27;acheter en graine,</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="58.480"
+        data-duration="0.620"
+        data-track-index="3"
+      >
+        <span>tu peux l&#x27;acheter qui a</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="59.100"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>déjà poussé de 1m, de 2m,</span>
+      </div>
+      <div
+        id="caption-034"
+        class="clip caption"
+        data-start="60.800"
+        data-duration="1.480"
+        data-track-index="3"
+      >
+        <span>de machin et en fonction de</span>
+      </div>
+      <div
+        id="caption-035"
+        class="clip caption"
+        data-start="62.280"
+        data-duration="1.140"
+        data-track-index="3"
+      >
+        <span>ce que tu prends comme prestation</span>
+      </div>
+      <div
+        id="caption-036"
+        class="clip caption"
+        data-start="63.420"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>elle va pas évoluer pareil dans</span>
+      </div>
+      <div
+        id="caption-037"
+        class="clip caption"
+        data-start="64.580"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>le temps elle va pas coûter</span>
+      </div>
+      <div
+        id="caption-038"
+        class="clip caption"
+        data-start="65.740"
+        data-duration="1.620"
+        data-track-index="3"
+      >
+        <span>pareil en darse rosage et là</span>
+      </div>
+      <div
+        id="caption-039"
+        class="clip caption"
+        data-start="67.360"
+        data-duration="0.960"
+        data-track-index="3"
+      >
+        <span>en gros le mec en faisant</span>
+      </div>
+      <div
+        id="caption-040"
+        class="clip caption"
+        data-start="68.320"
+        data-duration="2.280"
+        data-track-index="3"
+      >
+        <span>3 photos tu vois exactement tout</span>
+      </div>
+      <div
+        id="caption-041"
+        class="clip caption"
+        data-start="70.600"
+        data-duration="1.240"
+        data-track-index="3"
+      >
+        <span>ce qui va se passer c</span>
+      </div>
+      <div
+        id="caption-042"
+        class="clip caption"
+        data-start="71.840"
+        data-duration="0.460"
+        data-track-index="3"
+      >
+        <span>&#x27;est une folie</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 0);
+      tl.set('#focus', { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 }, 0);
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 3.0);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 3.0);
+      tl.set('.focus', { left: 36.0, top: 447.562, width: 648.0, height: 374.876 }, 4.2);
+      tl.set(
+        '#focus',
+        { width: 1370.9752, height: 771.1736, left: -567.6694, top: -240.9917 },
+        4.2,
+      );
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 23.0);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 23.0);
+      tl.set(
+        '.focus',
+        { left: 95.9091, top: 220.0, width: 528.1818, height: 830.0 },
+        24.200000000000003,
+      );
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1361.2, top: -156.9455 },
+        24.200000000000003,
+      );
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 44.8);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 44.8);
+      tl.set('.focus', { left: 36.0, top: 447.562, width: 648.0, height: 374.876 }, 46.0);
+      tl.set(
+        '#focus',
+        { width: 1370.9752, height: 771.1736, left: -567.6694, top: -240.9917 },
+        46.0,
+      );
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 55.0);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 55.0);
+      tl.set('.focus', { left: 95.9091, top: 220.0, width: 528.1818, height: 830.0 }, 56.2);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1361.2, top: -156.9455 },
+        56.2,
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+{
+  "generatedAt": "2026-10-16",
+  "tool": "image_gen.imagegen (outil intégré)",
+  "kind": "Illustrations éditoriales de concept, pas des photographies historiques",
+  "sharedPrompt": "Use case: stylized-concept. Asset type: editorial illustration for Sandbox AI history interactive timeline. Premium cinematic photorealistic 3D still life, sophisticated museum-exhibit art direction, almost-black navy background, cyan edge light with restrained warm amber highlights, beautifully tactile materials, macro photographic realism, pronounced depth, atmospheric but crisp, single compelling subject centered, fills frame, landscape 3:2 composition with safe crop to square. No text, no letters, no logos, no brand emblems, no borders, no watermark, no people, no false historic screenshot. This is a conceptual illustration, not a documentary photograph. ",
+  "assets": [
+    {
+      "subject": "chess",
+      "path": "apps/site/public/images/time-machine/chess-v1.webp",
+      "prompt": "A real black and ivory chessboard, dramatic central ivory king facing a black chess knight, small rows of late-1990s server cabinets softly behind; intellectual competition between computing and chess, not a robot.",
+      "eventIds": ["deep-blue-first-game", "deep-blue-match", "alphazero"]
+    },
+    {
+      "subject": "go",
+      "path": "apps/site/public/images/time-machine/go-v1.webp",
+      "prompt": "An exquisite wooden Go board, round black and white stones clustered in a compelling mid-game pattern, atmospheric cyan reflections on polished black stones.",
+      "eventIds": ["alphago-lee-sedol"]
+    },
+    {
+      "subject": "neural",
+      "path": "apps/site/public/images/time-machine/neural-v1.webp",
+      "prompt": "An elegant three-dimensional neural network sculpture: layered glass nodes connected by many hair-thin luminous cyan filaments, each layer separated with clear perspective, tiny warm pulses flowing through the network.",
+      "eventIds": [
+        "lstm",
+        "deep-belief-nets",
+        "word2vec",
+        "vae",
+        "sequence-to-sequence",
+        "resnet",
+        "transformer",
+        "bert",
+        "t5",
+        "nobel-physics-ai"
+      ]
+    },
+    {
+      "subject": "compute",
+      "path": "apps/site/public/images/time-machine/compute-v1.webp",
+      "prompt": "An extraordinarily detailed physical GPU processor chip resting on a dark circuit board, etched silicon, copper traces and matte graphite heatsinks, cyan macro lighting.",
+      "eventIds": ["cuda-1", "tensorflow", "pytorch-first-release", "chinchilla", "palm"]
+    },
+    {
+      "subject": "vision",
+      "path": "apps/site/public/images/time-machine/vision-v1.webp",
+      "prompt": "A cinematic still life of a glass camera lens projecting a small luminous structured grid onto a wall of tiny varied image tiles. Optical recognition and dataset classification, no readable digits.",
+      "eventIds": ["lenet-5", "imagenet", "alexnet", "deepface", "clip"]
+    },
+    {
+      "subject": "voice",
+      "path": "apps/site/public/images/time-machine/voice-v1.webp",
+      "prompt": "A sculptural three-dimensional sound waveform in cyan light above an elegant graphite smart speaker; concentric sound ripples and warm reflection.",
+      "eventIds": ["watson-jeopardy", "siri-iphone", "wavenet", "whisper", "gpt-4o", "grok-voice-3"]
+    },
+    {
+      "subject": "code",
+      "path": "apps/site/public/images/time-machine/code-v1.webp",
+      "prompt": "A retro-modern dark computer terminal with a glowing cyan cursor and abstract rows of light blocks suggesting software code, physical mechanical keyboard and elegant metal chassis. NO readable text or characters.",
+      "eventIds": [
+        "github-copilot",
+        "gpt-3-api",
+        "claude-3-5-sonnet",
+        "claude-3-7-code",
+        "codex-cloud-agent",
+        "claude-sonnet-5-5",
+        "claude-haiku-5-5",
+        "glm-5-3",
+        "agents-api-computer-use",
+        "decisions-api",
+        "model-context-protocol"
+      ]
+    },
+    {
+      "subject": "image",
+      "path": "apps/site/public/images/time-machine/image-v1.webp",
+      "prompt": "A beautiful surreal tiny landscape with a vivid red-orange sphere and a silver folded ribbon, dissolving into a cloud of square image pixels at the edges. The subject suggests image synthesis, no frame or screen.",
+      "eventIds": [
+        "gan",
+        "ddpm",
+        "dall-e",
+        "latent-diffusion",
+        "dall-e-2-preview",
+        "imagen",
+        "stable-diffusion",
+        "sdxl-1",
+        "dall-e-3",
+        "flux-1"
+      ]
+    },
+    {
+      "subject": "video",
+      "path": "apps/site/public/images/time-machine/video-v1.webp",
+      "prompt": "A luminous cinema film strip floating in a graceful spiral, sequential tiny cinematic landscapes inside the frames, one frame turning into a realistic ocean wave, no writing.",
+      "eventIds": ["sora-preview", "sora-public", "wan-2-1", "veo-3", "sora-2"]
+    },
+    {
+      "subject": "biology",
+      "path": "apps/site/public/images/time-machine/biology-v1.webp",
+      "prompt": "A scientifically inspired colourful folded protein ribbon sculpture, cyan and warm amber molecular bonds, tiny glossy atoms, a translucent DNA helix softly behind, dramatic laboratory macro photography.",
+      "eventIds": [
+        "halicin",
+        "alphafold-2",
+        "alphafold-database-200m",
+        "rfdiffusion",
+        "alphamissense",
+        "alphafold-3",
+        "alphaproteo",
+        "nobel-chemistry-alphafold",
+        "ai-co-scientist",
+        "rentosertib-phase-2a",
+        "alphagenome",
+        "claude-art-enzyme"
+      ]
+    },
+    {
+      "subject": "math",
+      "path": "apps/site/public/images/time-machine/math-v1.webp",
+      "prompt": "An intricate mathematical sculpture made of interlocking transparent geometric surfaces and copper wire curves, a dark chalkboard with subtle unlabeled diagrams behind. No formulas or writing, refined research atmosphere.",
+      "eventIds": [
+        "alphatensor",
+        "alphadev",
+        "funsearch",
+        "alphageometry",
+        "alphaproof-imo",
+        "alphaevolve",
+        "gemini-imo-gold",
+        "aletheia",
+        "erdos-unit-distance",
+        "jacobian-counterexample",
+        "openai-ten-math-advances",
+        "navier-stokes-proposed-proof",
+        "openai-math-repository",
+        "deep-review"
+      ]
+    },
+    {
+      "subject": "climate",
+      "path": "apps/site/public/images/time-machine/climate-v1.webp",
+      "prompt": "A detailed physical Earth globe floating above a dark base, luminous cyan storm systems and cloud circulation swirling over oceans, warm rim lighting and delicate satellite-like orbit rings.",
+      "eventIds": ["graphcast", "earth-ai-agents", "hiro-ace-v2"]
+    },
+    {
+      "subject": "robotics",
+      "path": "apps/site/public/images/time-machine/robotics-v1.webp",
+      "prompt": "A refined industrial articulated robot arm gently grasping a small amber wooden cube, polished metal joints, tactile gripper, dark clean laboratory, three-quarter close-up.",
+      "eventIds": ["darpa-grand-challenge-2005", "rt-2", "gemini-robotics", "aa-robotics"]
+    },
+    {
+      "subject": "governance",
+      "path": "apps/site/public/images/time-machine/governance-v1.webp",
+      "prompt": "A sculptural modern balance scale made of brushed black steel and warm brass; one side contains a small glowing cyan processor, the other a stack of blank ivory pages. Dramatic serious legal/technology atmosphere.",
+      "eventIds": ["ai-act-effective", "openai-announcement", "anthropic-cyber-mission"]
+    },
+    {
+      "subject": "agent",
+      "path": "apps/site/public/images/time-machine/agent-v1.webp",
+      "prompt": "Three small elegant autonomous computing modules, each a black glass cuboid with a cyan status light, interconnected by luminous trajectories, with a translucent floating task-window outline behind. No humanoid robots, no letters.",
+      "eventIds": [
+        "devin",
+        "operator",
+        "chatgpt-agent",
+        "grok-bot",
+        "meta-muse",
+        "grok-team-bots",
+        "chatgpt-space",
+        "openai-dots",
+        "x-subscription",
+        "muse-wonder",
+        "gpt-6-intelligent-ui"
+      ]
+    },
+    {
+      "subject": "model",
+      "path": "apps/site/public/images/time-machine/model-v1.webp",
+      "prompt": "A luminous cyan crystalline intelligence core enclosed in a transparent glass cube, layered concentric pathways and reflective metallic base, intricate internal architecture, physically grounded studio photography.",
+      "eventIds": [
+        "gpt-1",
+        "gpt-2",
+        "gpt-3-paper",
+        "lamda",
+        "instructgpt",
+        "bloom",
+        "chatgpt",
+        "llama-1",
+        "claude-1",
+        "gpt-4",
+        "llama-2",
+        "mistral-7b",
+        "gemini-1",
+        "mixtral-8x7b",
+        "gemini-1-5",
+        "claude-3",
+        "llama-3",
+        "llama-3-1",
+        "openai-o1-preview",
+        "gemini-2",
+        "deepseek-v3",
+        "deepseek-r1",
+        "gemini-2-5",
+        "llama-4",
+        "qwen-3",
+        "claude-4",
+        "gpt-oss",
+        "gpt-5",
+        "gemini-3",
+        "mistral-3",
+        "gemini-3-1-pro",
+        "gpt-5-4",
+        "gpt-5-5",
+        "deepseek-v4-preview",
+        "claude-fable-mythos-5",
+        "gpt-5-6-sol",
+        "qwen-3-8-max",
+        "gemini-3-8-flash",
+        "gpt-6-astra",
+        "grok-4-7",
+        "claude-opus-5-5",
+        "gpt-6-sol-luna",
+        "gpt-6-1-sol",
+        "mistral-large-4",
+        "gemini-4-argon"
+      ]
+    },
+    {
+      "subject": "fusion",
+      "path": "apps/site/public/images/time-machine/fusion-v1.webp",
+      "prompt": "A scientifically inspired magnetic fusion tokamak reactor seen through a cutaway: a vivid turquoise ring of plasma suspended inside a circular metal vacuum chamber, precise coils, dark laboratory atmosphere.",
+      "eventIds": ["plasma-control"]
+    },
+    {
+      "subject": "materials",
+      "path": "apps/site/public/images/time-machine/materials-v1.webp",
+      "prompt": "An extraordinary cluster of newly discovered crystalline materials, translucent teal and amber mineral facets floating above a dark graphite laboratory platform, intricate lattice structure in the background.",
+      "eventIds": ["gnome"]
+    },
+    {
+      "subject": "arcade",
+      "path": "apps/site/public/images/time-machine/arcade-v1.webp",
+      "prompt": "A period-correct 1980s arcade cabinet in a dark room, screen showing a very simple fictional pixel paddle game with tiny luminous blocks, cyan edge lighting and warm amber arcade buttons. No words or logos.",
+      "eventIds": ["dqn-atari"]
+    }
+  ]
+}

@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Restaurants : à quoi pourrait servir un menu en 3D ?</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 95.9091px;
+        top: 220px;
+        width: 528.1818px;
+        height: 830px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1931.6364px;
+        height: 1086.5455px;
+        left: -1361.2px;
+        top: -156.9455px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="82.5"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LES MÉTIERS / #02</div>
+        </div>
+        <h1>Restaurants : à quoi pourrait servir un menu en 3D ?</h1>
+      </header>
+      <div class="focus right">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-006-menu-3d-3285.1-3367.6.mp4"
+          playsinline
+          data-start="0"
+          data-duration="82.5"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.080"
+        data-duration="1.480"
+        data-track-index="3"
+      >
+        <span>ensuite on enchaîne sur les restaurants</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="1.560"
+        data-duration="2.460"
+        data-track-index="3"
+      >
+        <span>donc les restaurants très intéressants</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="4.540"
+        data-duration="0.860"
+        data-track-index="3"
+      >
+        <span>tout ça c&#x27;est des trucs</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="5.400"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>qui existent déjà, c&#x27;est pas</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="6.560"
+        data-duration="2.580"
+        data-track-index="3"
+      >
+        <span>moi qui invente restaurant, tu</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="9.140"
+        data-duration="3.000"
+        data-track-index="3"
+      >
+        <span>prends photo tous tes plats voire</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="12.140"
+        data-duration="0.900"
+        data-track-index="3"
+      >
+        <span>tu fais des vidéos de tous</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="13.040"
+        data-duration="1.180"
+        data-track-index="3"
+      >
+        <span>tes plats t&#x27;envoies tout ça</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="14.220"
+        data-duration="2.400"
+        data-track-index="3"
+      >
+        <span>dans une intelligence artificielle et elle</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="16.620"
+        data-duration="2.320"
+        data-track-index="3"
+      >
+        <span>va te générer un menu 3D</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="18.940"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>ou avec la souris ou avec</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="20.480"
+        data-duration="1.380"
+        data-track-index="3"
+      >
+        <span>le doigt tu peux tourner autour</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="21.860"
+        data-duration="2.480"
+        data-track-index="3"
+      >
+        <span>des plats voire tout plat et</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="24.340"
+        data-duration="1.020"
+        data-track-index="3"
+      >
+        <span>l&#x27;IA te met tout ce que</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="25.360"
+        data-duration="1.020"
+        data-track-index="3"
+      >
+        <span>tu veux te met tous les</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="26.380"
+        data-duration="2.480"
+        data-track-index="3"
+      >
+        <span>ingrédients, les quantités les allergènes</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="29.280"
+        data-duration="1.300"
+        data-track-index="3"
+      >
+        <span>dans toutes les langues que tu</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="30.580"
+        data-duration="1.600"
+        data-track-index="3"
+      >
+        <span>veux et tout ça tu peux</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="32.180"
+        data-duration="1.000"
+        data-track-index="3"
+      >
+        <span>mettre un QR code sur ta</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="33.180"
+        data-duration="0.880"
+        data-track-index="3"
+      >
+        <span>table le mec qui est à</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="34.060"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>ta table il scanne et voilà</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="36.800"
+        data-duration="1.180"
+        data-track-index="3"
+      >
+        <span>en France on n&#x27;est pas</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="37.980"
+        data-duration="2.100"
+        data-track-index="3"
+      >
+        <span>trop dans le délire tu voyages</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="40.080"
+        data-duration="2.060"
+        data-track-index="3"
+      >
+        <span>au Japon etc les mecs ils</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="42.140"
+        data-duration="1.900"
+        data-track-index="3"
+      >
+        <span>ont des gens qui leur font</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="44.040"
+        data-duration="1.580"
+        data-track-index="3"
+      >
+        <span>comme le musée de cire qui</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="45.620"
+        data-duration="2.220"
+        data-track-index="3"
+      >
+        <span>est à Paris ils ont des</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="47.840"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>musées de cire de toutes les</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="49.000"
+        data-duration="1.500"
+        data-track-index="3"
+      >
+        <span>assiettes qui vendent et dans les</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="50.500"
+        data-duration="1.380"
+        data-track-index="3"
+      >
+        <span>vitrines t&#x27;as toutes les assiettes</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="51.880"
+        data-duration="0.680"
+        data-track-index="3"
+      >
+        <span>de tout ce que tu peux</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="52.560"
+        data-duration="2.520"
+        data-track-index="3"
+      >
+        <span>acheter en cire et en</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="55.080"
+        data-duration="2.240"
+        data-track-index="3"
+      >
+        <span>vrai c&#x27;est trop bien parce</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="57.320"
+        data-duration="2.400"
+        data-track-index="3"
+      >
+        <span>que tu comprends rien nous</span>
+      </div>
+      <div
+        id="caption-034"
+        class="clip caption"
+        data-start="59.720"
+        data-duration="0.960"
+        data-track-index="3"
+      >
+        <span>on s&#x27;y connait en cuisine</span>
+      </div>
+      <div
+        id="caption-035"
+        class="clip caption"
+        data-start="61.400"
+        data-duration="1.640"
+        data-track-index="3"
+      >
+        <span>française donc on sait très bien</span>
+      </div>
+      <div
+        id="caption-036"
+        class="clip caption"
+        data-start="63.040"
+        data-duration="0.700"
+        data-track-index="3"
+      >
+        <span>ce que c&#x27;est une omelette</span>
+      </div>
+      <div
+        id="caption-037"
+        class="clip caption"
+        data-start="63.740"
+        data-duration="0.780"
+        data-track-index="3"
+      >
+        <span>on sait très bien ce que</span>
+      </div>
+      <div
+        id="caption-038"
+        class="clip caption"
+        data-start="64.520"
+        data-duration="0.940"
+        data-track-index="3"
+      >
+        <span>c&#x27;est tous les trucs français</span>
+      </div>
+      <div
+        id="caption-039"
+        class="clip caption"
+        data-start="65.460"
+        data-duration="1.160"
+        data-track-index="3"
+      >
+        <span>mais quand tu vas dans un</span>
+      </div>
+      <div
+        id="caption-040"
+        class="clip caption"
+        data-start="66.620"
+        data-duration="1.380"
+        data-track-index="3"
+      >
+        <span>autre pays et que tu vois</span>
+      </div>
+      <div
+        id="caption-041"
+        class="clip caption"
+        data-start="68.000"
+        data-duration="1.660"
+        data-track-index="3"
+      >
+        <span>ta beau voire écrite poulet t</span>
+      </div>
+      <div
+        id="caption-042"
+        class="clip caption"
+        data-start="69.660"
+        data-duration="2.520"
+        data-track-index="3"
+      >
+        <span>&#x27;as 10 plats c</span>
+      </div>
+      <div
+        id="caption-043"
+        class="clip caption"
+        data-start="72.180"
+        data-duration="0.840"
+        data-track-index="3"
+      >
+        <span>&#x27;est du poulet et du riz</span>
+      </div>
+      <div
+        id="caption-044"
+        class="clip caption"
+        data-start="73.020"
+        data-duration="1.260"
+        data-track-index="3"
+      >
+        <span>et quand tu vois les photos</span>
+      </div>
+      <div
+        id="caption-045"
+        class="clip caption"
+        data-start="74.280"
+        data-duration="0.640"
+        data-track-index="3"
+      >
+        <span>en fait ça n&#x27;a rien</span>
+      </div>
+      <div
+        id="caption-046"
+        class="clip caption"
+        data-start="74.920"
+        data-duration="1.440"
+        data-track-index="3"
+      >
+        <span>à voir alors que c&#x27;est</span>
+      </div>
+      <div
+        id="caption-047"
+        class="clip caption"
+        data-start="76.360"
+        data-duration="1.100"
+        data-track-index="3"
+      >
+        <span>tous du poulet et du riz</span>
+      </div>
+      <div
+        id="caption-048"
+        class="clip caption"
+        data-start="77.460"
+        data-duration="2.120"
+        data-track-index="3"
+      >
+        <span>et de voir visuellement le truc</span>
+      </div>
+      <div
+        id="caption-049"
+        class="clip caption"
+        data-start="79.580"
+        data-duration="1.020"
+        data-track-index="3"
+      >
+        <span>ça change tout, tu vois les</span>
+      </div>
+      <div
+        id="caption-050"
+        class="clip caption"
+        data-start="80.600"
+        data-duration="1.040"
+        data-track-index="3"
+      >
+        <span>quantités tu vois tout c&#x27;est</span>
+      </div>
+      <div
+        id="caption-051"
+        class="clip caption"
+        data-start="81.640"
+        data-duration="0.680"
+        data-track-index="3"
+      >
+        <span>super intéressant</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 95.9091, top: 220.0, width: 528.1818, height: 830.0 }, 0);
+      tl.set('#focus', { width: 1931.6364, height: 1086.5455, left: -1361.2, top: -156.9455 }, 0);
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 3.4);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 3.4);
+      tl.set('.focus', { left: 142.6909, top: 220.0, width: 434.6182, height: 830.0 }, 4.6);
+      tl.set(
+        '#focus',
+        { width: 1931.6364, height: 1086.5455, left: -1457.7818, top: -156.9455 },
+        4.6,
+      );
+      tl.set('.focus', { left: 36.0, top: 485.6562, width: 648.0, height: 298.6875 }, 79.0);
+      tl.set('#focus', { width: 648.0, height: 364.5, left: 0.0, top: -40.5 }, 79.0);
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 80.19999999999999);
+      tl.set(
+        '#focus',
+        { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 },
+        80.19999999999999,
+      );
+    </script>
+  </body>
+</html>

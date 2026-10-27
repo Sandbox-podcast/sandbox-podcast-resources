@@ -1,0 +1,63 @@
+1
+00:00:00,170 --> 00:00:01,990
+les restaurateurs ils ont un grand problème
+
+2
+00:00:01,990 --> 00:00:03,710
+c'est que quand ils sont en service
+
+3
+00:00:04,130 --> 00:00:05,310
+donc en général
+
+4
+00:00:05,710 --> 00:00:07,030
+de midi à 15h
+
+5
+00:00:07,030 --> 00:00:10,370
+et de 18h30 à 19h jusqu'à minuit
+
+6
+00:00:10,370 --> 00:00:12,070
+ils sont en train de bosser avec des clients
+
+7
+00:00:12,070 --> 00:00:13,130
+ils peuvent pas répondre au téléphone
+
+8
+00:00:13,970 --> 00:00:15,310
+potentiellement ils vont louper des réservations
+
+9
+00:00:16,010 --> 00:00:17,450
+et bien là tu peux avoir une IA
+
+10
+00:00:17,450 --> 00:00:18,650
+qui va répondre au téléphone
+
+11
+00:00:18,650 --> 00:00:20,790
+qui a accès à ton agenda, qui va pouvoir
+
+12
+00:00:20,790 --> 00:00:22,710
+faire la réservation, faire le prépaiement
+
+13
+00:00:22,710 --> 00:00:24,830
+s'il y a un prépaiement dans ta réservation
+
+14
+00:00:25,510 --> 00:00:26,810
+qui va tout automatiser
+
+15
+00:00:26,810 --> 00:00:27,950
+donc en gros
+
+16
+00:00:28,610 --> 00:00:29,510
+ça c'est pas mal

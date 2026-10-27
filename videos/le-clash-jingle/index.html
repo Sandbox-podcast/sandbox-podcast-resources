@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <meta name="color-scheme" content="dark" />
+    <title>Le Clash — Jingle Sandbox</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: 'League Gothic';
+        src: url('assets/LeagueGothic-Condensed.woff2') format('woff2');
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        margin: 0;
+        overflow: hidden;
+        background: #0a1022;
+      }
+
+      #stage {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0a1022;
+        color: #f7f8fc;
+        isolation: isolate;
+      }
+
+      .composition-clip {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      #hero-visual-clip {
+        z-index: 1;
+      }
+
+      #title-clip {
+        z-index: 2;
+      }
+
+      #logo-clip {
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      data-hf-id="hf-90x0"
+      id="stage"
+      data-composition-id="le-clash-jingle"
+      data-duration="15"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div
+        data-hf-id="hf-jbwx"
+        id="hero-visual-clip"
+        class="clip composition-clip"
+        data-composition-id="hero-visual"
+        data-composition-src="compositions/hero-visual.html"
+        data-start="0"
+        data-duration="10.5"
+        data-track-index="0"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        data-hf-id="hf-9t1r"
+        id="title-clip"
+        class="clip composition-clip"
+        data-composition-id="caption-kinetic-slam"
+        data-composition-src="compositions/components/caption-kinetic-slam.html"
+        data-start="2.5"
+        data-duration="12.5"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        data-hf-id="hf-x3n6"
+        id="logo-clip"
+        class="clip composition-clip"
+        data-composition-id="sandbox-lockup"
+        data-composition-src="compositions/sandbox-lockup.html"
+        data-start="10.5"
+        data-duration="4.5"
+        data-track-index="2"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <!-- Audio slot intentionally empty until the official 15 s Suno export is available. -->
+    </main>
+
+    <script>
+      (function () {
+        const timeline = gsap.timeline({ paused: true });
+
+        window.__timelines = window.__timelines || {};
+        window.__timelines['le-clash-jingle'] = timeline;
+        timeline.seek(0);
+      })();
+    </script>
+  </body>
+</html>

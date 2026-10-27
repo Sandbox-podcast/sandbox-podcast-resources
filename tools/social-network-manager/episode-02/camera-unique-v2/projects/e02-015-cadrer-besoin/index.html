@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>Avant de demander une application à l&#x27;IA, faites-vous questionner</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Archivo;
+        src: url('assets/archivo.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+        color: #f4f7fa;
+        font-family: Archivo, sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: #05090d;
+      }
+      header {
+        height: 185px;
+        padding: 26px 38px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand img {
+        width: 210px;
+        height: 42px;
+        object-fit: contain;
+      }
+      .category {
+        font-family: 'JetBrains Mono';
+        font-size: 17px;
+        color: #ade9f9;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      .focus {
+        position: absolute;
+        left: 26px;
+        top: 195px;
+        width: 668px;
+        height: 510px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #071a29;
+      }
+      .focus video {
+        position: absolute;
+        width: 1146px;
+        height: 645px;
+        max-width: none;
+        left: -27px;
+        top: -93px;
+        object-fit: fill;
+      }
+      .focus.right video {
+        width: 1336px;
+        height: 752px;
+        left: -720px;
+        top: -108px;
+      }
+      .focus.slide video {
+        width: 701px;
+        height: 394px;
+        left: -16px;
+        top: 25px;
+      }
+      .context {
+        position: absolute;
+        left: 26px;
+        top: 850px;
+        width: 668px;
+        height: 376px;
+        overflow: hidden;
+        border: 1px solid #294457;
+        border-radius: 10px;
+      }
+      .context video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .caption {
+        position: absolute;
+        left: 40px;
+        top: 715px;
+        width: 620px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1.14;
+      }
+      .caption span {
+        padding: 6px 10px;
+        background: #05090d;
+        color: #f4f7fa;
+      }
+      .footer {
+        position: absolute;
+        left: 38px;
+        top: 1238px;
+        font-size: 18px;
+        color: #ade9f9;
+        font-family: 'JetBrains Mono';
+      }
+
+      /* V2: one source view, source-layout-aware crop, no repeated camera. */
+      .focus,
+      .focus.right,
+      .focus.slide {
+        left: 36px;
+        top: 230px;
+        width: 648px;
+        height: 810px;
+        border-radius: 12px;
+        background: #05090d;
+      }
+      .focus video,
+      .focus.right video,
+      .focus.slide video {
+        width: 1885.0909px;
+        height: 1060.3636px;
+        left: -265.0909px;
+        top: -153.1636px;
+        object-fit: fill;
+      }
+      .caption {
+        left: 48px;
+        top: 1070px;
+        width: 624px;
+        height: 112px;
+        font-size: 34px;
+        line-height: 1.16;
+      }
+      .footer {
+        left: 38px;
+        top: 1210px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="720"
+      data-height="1280"
+      data-duration="64.28"
+      data-fps="30"
+    >
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="SANDBOX" />
+          <div class="category">LA MÉTHODE / #02</div>
+        </div>
+        <h1>Avant de demander une application à l&#x27;IA, faites-vous questionner</h1>
+      </header>
+      <div class="focus main">
+        <video
+          id="focus"
+          data-layout-allow-overflow="true"
+          class="clip"
+          src="assets/e02-015-cadrer-besoin-4580.42-4644.7.mp4"
+          playsinline
+          data-start="0"
+          data-duration="64.28"
+          data-track-index="0"
+          data-has-audio="true"
+        ></video>
+      </div>
+
+      <div
+        id="caption-000"
+        class="clip caption"
+        data-start="0.000"
+        data-duration="2.220"
+        data-track-index="3"
+      >
+        <span>par contre un dernier truc sur</span>
+      </div>
+      <div
+        id="caption-001"
+        class="clip caption"
+        data-start="2.220"
+        data-duration="2.220"
+        data-track-index="3"
+      >
+        <span>ce que tu dis Lou tu</span>
+      </div>
+      <div
+        id="caption-002"
+        class="clip caption"
+        data-start="4.440"
+        data-duration="2.660"
+        data-track-index="3"
+      >
+        <span>dis on peut dire on faut</span>
+      </div>
+      <div
+        id="caption-003"
+        class="clip caption"
+        data-start="7.100"
+        data-duration="1.000"
+        data-track-index="3"
+      >
+        <span>dire à l&#x27;HGPT de nous</span>
+      </div>
+      <div
+        id="caption-004"
+        class="clip caption"
+        data-start="8.100"
+        data-duration="1.320"
+        data-track-index="3"
+      >
+        <span>rédiger un prompt qui dit fais</span>
+      </div>
+      <div
+        id="caption-005"
+        class="clip caption"
+        data-start="9.420"
+        data-duration="1.920"
+        data-track-index="3"
+      >
+        <span>-moi cette application tu vois mais</span>
+      </div>
+      <div
+        id="caption-006"
+        class="clip caption"
+        data-start="11.340"
+        data-duration="1.620"
+        data-track-index="3"
+      >
+        <span>je pense que si tu donnes</span>
+      </div>
+      <div
+        id="caption-007"
+        class="clip caption"
+        data-start="12.960"
+        data-duration="1.740"
+        data-track-index="3"
+      >
+        <span>pas assez d&#x27;informations à ton</span>
+      </div>
+      <div
+        id="caption-008"
+        class="clip caption"
+        data-start="14.700"
+        data-duration="0.880"
+        data-track-index="3"
+      >
+        <span>IA elle va te faire un</span>
+      </div>
+      <div
+        id="caption-009"
+        class="clip caption"
+        data-start="15.580"
+        data-duration="2.460"
+        data-track-index="3"
+      >
+        <span>truc qui correspond pas forcément à</span>
+      </div>
+      <div
+        id="caption-010"
+        class="clip caption"
+        data-start="18.040"
+        data-duration="1.400"
+        data-track-index="3"
+      >
+        <span>tes besoins pour moi il y</span>
+      </div>
+      <div
+        id="caption-011"
+        class="clip caption"
+        data-start="19.440"
+        data-duration="1.140"
+        data-track-index="3"
+      >
+        <span>a une étape avant l&#x27;étape</span>
+      </div>
+      <div
+        id="caption-012"
+        class="clip caption"
+        data-start="20.580"
+        data-duration="1.500"
+        data-track-index="3"
+      >
+        <span>que de la rédaction du prompt</span>
+      </div>
+      <div
+        id="caption-013"
+        class="clip caption"
+        data-start="22.080"
+        data-duration="0.800"
+        data-track-index="3"
+      >
+        <span>c&#x27;est qu&#x27;il faut dire</span>
+      </div>
+      <div
+        id="caption-014"
+        class="clip caption"
+        data-start="22.880"
+        data-duration="2.040"
+        data-track-index="3"
+      >
+        <span>à l&#x27;IA je sais pas exactement</span>
+      </div>
+      <div
+        id="caption-015"
+        class="clip caption"
+        data-start="24.920"
+        data-duration="2.400"
+        data-track-index="3"
+      >
+        <span>comment marche une application je sais</span>
+      </div>
+      <div
+        id="caption-016"
+        class="clip caption"
+        data-start="27.320"
+        data-duration="0.980"
+        data-track-index="3"
+      >
+        <span>pas exactement ce que je veux</span>
+      </div>
+      <div
+        id="caption-017"
+        class="clip caption"
+        data-start="28.300"
+        data-duration="1.520"
+        data-track-index="3"
+      >
+        <span>faire mais faut que tu me</span>
+      </div>
+      <div
+        id="caption-018"
+        class="clip caption"
+        data-start="29.820"
+        data-duration="1.660"
+        data-track-index="3"
+      >
+        <span>poses les questions pose-moi toutes</span>
+      </div>
+      <div
+        id="caption-019"
+        class="clip caption"
+        data-start="31.480"
+        data-duration="1.100"
+        data-track-index="3"
+      >
+        <span>les questions qu&#x27;il faut pour</span>
+      </div>
+      <div
+        id="caption-020"
+        class="clip caption"
+        data-start="32.580"
+        data-duration="3.100"
+        data-track-index="3"
+      >
+        <span>que je j</span>
+      </div>
+      <div
+        id="caption-021"
+        class="clip caption"
+        data-start="35.680"
+        data-duration="1.840"
+        data-track-index="3"
+      >
+        <span>&#x27;arrive à m&#x27;orienter pour mon</span>
+      </div>
+      <div
+        id="caption-022"
+        class="clip caption"
+        data-start="37.520"
+        data-duration="2.400"
+        data-track-index="3"
+      >
+        <span>besoin réel et ensuite</span>
+      </div>
+      <div
+        id="caption-023"
+        class="clip caption"
+        data-start="39.920"
+        data-duration="1.380"
+        data-track-index="3"
+      >
+        <span>après ça tu me fais une</span>
+      </div>
+      <div
+        id="caption-024"
+        class="clip caption"
+        data-start="41.300"
+        data-duration="1.200"
+        data-track-index="3"
+      >
+        <span>application parce que les gens ils</span>
+      </div>
+      <div
+        id="caption-025"
+        class="clip caption"
+        data-start="42.500"
+        data-duration="0.760"
+        data-track-index="3"
+      >
+        <span>savent pas ce qu&#x27;ils veulent</span>
+      </div>
+      <div
+        id="caption-026"
+        class="clip caption"
+        data-start="43.260"
+        data-duration="2.280"
+        data-track-index="3"
+      >
+        <span>des fois, les artisans, les maquilles</span>
+      </div>
+      <div
+        id="caption-027"
+        class="clip caption"
+        data-start="45.540"
+        data-duration="1.200"
+        data-track-index="3"
+      >
+        <span>ils savent pas forcément ce qu</span>
+      </div>
+      <div
+        id="caption-028"
+        class="clip caption"
+        data-start="46.740"
+        data-duration="0.620"
+        data-track-index="3"
+      >
+        <span>&#x27;ils veulent même moi je crois</span>
+      </div>
+      <div
+        id="caption-029"
+        class="clip caption"
+        data-start="47.360"
+        data-duration="1.060"
+        data-track-index="3"
+      >
+        <span>que quelqu&#x27;un à leur axe</span>
+      </div>
+      <div
+        id="caption-030"
+        class="clip caption"
+        data-start="48.880"
+        data-duration="1.200"
+        data-track-index="3"
+      >
+        <span>ils ont besoin d&#x27;être axé</span>
+      </div>
+      <div
+        id="caption-031"
+        class="clip caption"
+        data-start="50.080"
+        data-duration="1.340"
+        data-track-index="3"
+      >
+        <span>sur qu&#x27;est-ce que doit</span>
+      </div>
+      <div
+        id="caption-032"
+        class="clip caption"
+        data-start="51.420"
+        data-duration="2.060"
+        data-track-index="3"
+      >
+        <span>être qu&#x27;est-ce qu&#x27;elle</span>
+      </div>
+      <div
+        id="caption-033"
+        class="clip caption"
+        data-start="53.480"
+        data-duration="1.980"
+        data-track-index="3"
+      >
+        <span>est vraiment leur besoin et comment</span>
+      </div>
+      <div
+        id="caption-034"
+        class="clip caption"
+        data-start="55.460"
+        data-duration="1.320"
+        data-track-index="3"
+      >
+        <span>y répondre et ça c&#x27;est</span>
+      </div>
+      <div
+        id="caption-035"
+        class="clip caption"
+        data-start="56.780"
+        data-duration="1.040"
+        data-track-index="3"
+      >
+        <span>une étape qui doit être avant</span>
+      </div>
+      <div
+        id="caption-036"
+        class="clip caption"
+        data-start="57.820"
+        data-duration="3.540"
+        data-track-index="3"
+      >
+        <span>justement le le prompt</span>
+      </div>
+      <div
+        id="caption-037"
+        class="clip caption"
+        data-start="61.360"
+        data-duration="1.540"
+        data-track-index="3"
+      >
+        <span>de l&#x27;application</span>
+      </div>
+      <div class="footer">Émission complète : youtube.com/@SandboxFR</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines['main'] = tl;
+      tl.set('.focus', { left: 36.0, top: 230.0, width: 648.0, height: 810.0 }, 0);
+      tl.set('#focus', { width: 1885.0909, height: 1060.3636, left: -265.0909, top: -153.1636 }, 0);
+    </script>
+  </body>
+</html>

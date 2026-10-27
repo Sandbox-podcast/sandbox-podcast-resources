@@ -1,0 +1,23 @@
+# Base PostgreSQL de développement et de test du noyau serveur.
+#   pnpm env:init   (génère .local/.env avec un mot de passe aléatoire, ignoré par git)
+#   pnpm db:up
+name: podcast-api
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: podcast
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: podcast
+    ports:
+      - '127.0.0.1:${POSTGRES_PORT:-54329}:5432'
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U podcast -d podcast']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  dbdata:
