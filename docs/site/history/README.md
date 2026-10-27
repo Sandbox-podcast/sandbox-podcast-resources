@@ -35,6 +35,7 @@ Ces rapports datés sont conservés ici comme archives de travail. Les guides à
 - [`experiences-e1-e2-2026-10-14.md`](2026/10/experiences-e1-e2-2026-10-14.md)
 - [`fiabilisation-planification-2026-10-20.md`](2026/10/fiabilisation-planification-2026-10-20.md)
 - [`generation-formats-prochains-episodes-2026-10-24.md`](2026/10/generation-formats-prochains-episodes-2026-10-24.md)
+- [`guides-lisibilite-2026-10-26.md`](2026/10/guides-lisibilite-2026-10-26.md)
 - [`home-host-fantasy-prompts-2026-10-16.json`](2026/10/home-host-fantasy-prompts-2026-10-16.json)
 - [`home-project-artwork-prompts-2026-10-16.json`](2026/10/home-project-artwork-prompts-2026-10-16.json)
 - [`home-project-covers-2026-10-16.md`](2026/10/home-project-covers-2026-10-16.md)

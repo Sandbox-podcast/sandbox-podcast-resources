@@ -4,6 +4,8 @@ Pour chaque nouvel épisode : [générer des Shorts adaptés à YouTube, TikTok,
 
 Outil Python pour [Sandbox TalkShow](https://www.youtube.com/@SandboxFR). Il complète le site existant sans modifier `old/`. Voir [ADR-0029](https://github.com/Sandbox-podcast/sandbox-podcast-site/blob/main/docs/adr/ADR-0029-growth-agent-et-extraits-youtube.md), [ADR-0032](https://github.com/Sandbox-podcast/sandbox-podcast-site/blob/main/docs/adr/ADR-0032-protections-et-persistance-issue-68.md) et [la livraison du 14 octobre](../../docs/site/history/2026/10/youtube-growth-2026-10-14.md).
 
+Vidéos horizontales de 5 à 15 minutes : [commande indépendante, cache, exports et contrôles](THEMATIC.md). La [recette sur les deux épisodes](../../docs/site/history/2026/10/youtube-thematiques-2026-10-20.md) livre cinq vidéos locales, sans publication et avec les Shorts préservés.
+
 ## Connexion et audit
 
 Python 3.12 minimum; FFmpeg et ffprobe pour les rendus. Depuis ce dossier :

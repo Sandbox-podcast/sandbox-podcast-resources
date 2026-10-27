@@ -49,11 +49,7 @@ Les trois guides de skills et leur hub sont liés au pied de page, à la page Sk
 
 ## Vérification locale
 
-Préparation de la PR à la demande de Lou : le lot SEO est repris dans une branche isolée depuis `main` (`9b0b670`). Les autres changements du dossier principal ne sont pas embarqués. Les adaptations des anciennes fixtures et le formatage des slides sont déjà intégrés dans cette base ; ils ne sont donc pas réintroduits par la PR. La recette HTTP et navigateur est ajoutée à la CI sous `test:seo:e2e`.
-
-Validation dans le dossier principal avant préparation de la PR : `pnpm check` passe intégralement (formatage, ESLint, TypeScript, **1 178 tests du site dans 148 fichiers**, sept tests de l’introduction vidéo, quatre tests des jingles et 24 tests du support BIS). Le build `pnpm --filter @podcast/site build` réussit : compilation, types et génération de 208 pages statiques. Les nouveaux guides figurent dans le résultat du build. Aucun déploiement ne fait partie de ces commandes.
-
-Sur la branche de PR repartie du `main` à jour : `pnpm check` passe avec **1 249 tests du site dans 152 fichiers**, en plus des suites vidéo et BIS. La recette `test:seo:e2e` passe ses 24 contrôles. L’audit des dépendances ne trouve aucune vulnérabilité connue et Gitleaks ne détecte aucun secret dans les changements préparés. Les tests supplémentaires proviennent des correctifs déjà intégrés dans `main` depuis la version du dossier principal.
+Validation finale : `pnpm check` passe intégralement (formatage, ESLint, TypeScript, **1 178 tests du site dans 148 fichiers**, sept tests de l’introduction vidéo, quatre tests des jingles et 24 tests du support BIS). Le build `pnpm --filter @podcast/site build` réussit : compilation, types et génération de 208 pages statiques. Les nouveaux guides figurent dans le résultat du build. Aucun déploiement ne fait partie de ces commandes.
 
 Les tests ciblés des métadonnées, auteurs, projets, langues et archives donnent **94 tests réussis sur 12 fichiers**. La recette finale donne **24 contrôles HTTP et navigateur réussis** : quatorze URL indexables conformes, dix lectures navigateur sans JavaScript à 390 et 1 440 pixels, sans débordement horizontal. Elle vérifie aussi deux 404 attendues et le maintien du podcast vide hors index et hors sitemap dans la base de test. Les dix captures et le rapport sont conservés dans `apps/site/.local/skill-guides-check/` ; les captures du guide Claude mobile, d’À propos sur ordinateur et de Sillage en anglais sur mobile ont été relues visuellement.
 
