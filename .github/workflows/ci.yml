@@ -29,6 +29,7 @@ jobs:
         with:
           node-version: 24
       - run: node --test brand/youtube/assets.test.mjs videos/jingle-assets.test.mjs
+      - run: node --test tools/youtube-growth/tests/workflow-preflight.test.mjs
       - run: npm ci --prefix experiments/episode-002-bis
       - run: npm test --prefix experiments/episode-002-bis
       - run: npm ci --prefix videos/sandbox-intro
