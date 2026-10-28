@@ -38,6 +38,13 @@ class PipelineJournalTests(unittest.TestCase):
                     _process_new_comments(Mock(), SANDBOX_CHANNEL_ID, {'v': {'id': 'v'}}, State(comments_baselined=True), [], True, journal)
                 self.assertEqual(post.call_count, 1)
 
+
+class UploadOnceTests(unittest.TestCase):
+    def setUp(self):
+        # Only the journal behavior is exercised; _upload_clip is a local mock.
+        # The unpatched entry point must reject writes in test_factory_connectors.
+        self.enterContext(patch('youtube_growth.factory.connectors.guard_legacy_write'))
+
     def test_upload_recovers_committed_id_without_reuploading_changed_metadata(self):
         with tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parents[1]) as directory:
             clip = Path(directory) / 'clip.mp4'

@@ -9,6 +9,6 @@ useDefault = true
 [[allowlists]]
 description = "Format vertical-9x16 dans le catalogue archivé"
 condition = "AND"
-paths = ['''(^|.*/)old/packages/episode-factory/src/catalog\.ts$''']
+paths = ['''(^|.*/)(old|archive/platform)/packages/episode-factory/src/catalog\.ts$''']
 regexTarget = "line"
 regexes = ['''^\s*\{ key: 'vertical-9x16', presetVersion: 1 \},\s*$''']

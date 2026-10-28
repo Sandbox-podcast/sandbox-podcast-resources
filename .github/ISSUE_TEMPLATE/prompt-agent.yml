@@ -1,0 +1,35 @@
+name: Travail issu d'un prompt
+description: Suivre une demande confiée à un harnais d'agent jusqu'à la fusion de sa PR.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Une issue par nouveau prompt de travail. Une reprise du même prompt conserve son issue.
+        L'issue reste ouverte jusqu'à la fusion de la PR qui termine le travail.
+        Ne copie aucun secret ni donnée privée dans ce formulaire.
+  - type: textarea
+    id: request
+    attributes:
+      label: Demande
+      description: Reformule fidèlement le prompt et précise le résultat attendu.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Périmètre
+      description: Fichiers, contenus ou outils concernés et contraintes données.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères de fin
+      description: Résultats et contrôles qui permettront de considérer la demande comme terminée.
+    validations:
+      required: true
+  - type: textarea
+    id: progress
+    attributes:
+      label: Avancement et PR associées
+      description: Ajoute les avancées, les blocages et les liens vers les PR dès leur création.

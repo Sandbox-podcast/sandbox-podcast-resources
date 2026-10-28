@@ -56,8 +56,9 @@ def run_poll() -> int:
 
 def _run_poll(state: State, save_state, journal, execute_actions: bool) -> int:
     from .youtube_api import build_youtube_service
-    output_dir = Path(os.environ.get("YOUTUBE_OUTPUT_DIR", "output"))
-    summary_path = Path(os.environ.get("GITHUB_STEP_SUMMARY", "output/summary.md"))
+    local_output = Path(__file__).resolve().parents[4] / ".local/youtube-growth/output"
+    output_dir = Path(os.environ.get("YOUTUBE_OUTPUT_DIR", str(local_output)))
+    summary_path = Path(os.environ.get("GITHUB_STEP_SUMMARY", str(output_dir / "summary.md")))
     service = build_youtube_service()
     entries: list[str] = []
     if service is None:

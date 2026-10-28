@@ -61,7 +61,9 @@ class IdentityTests(unittest.TestCase):
 
 class MutationTests(unittest.TestCase):
     def setUp(self):
-        # These cases exercise the local SQLite journal with a mocked YouTube client.
+        # Test the historical journal with an entirely mocked YouTube client.
+        # The production barrier is tested without a patch in test_factory_connectors.
+        self.enterContext(patch("youtube_growth.factory.connectors.guard_legacy_write"))
         self.enterContext(patch.dict(os.environ, {
             "GITHUB_ACTIONS": "false", "YOUTUBE_JOURNAL_DATABASE_URL": "",
         }))
