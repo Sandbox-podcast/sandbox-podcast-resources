@@ -3,10 +3,12 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from pathlib import Path
 import re
 import shutil
 import subprocess
+import tempfile
 
 from ..shorts import _call, _require_media_tools, _sha256, _subtitle_filter_path
 from ..storage import digest, save_json
@@ -15,6 +17,40 @@ from ..thematic_render import probe as _probe
 from .local_lock import local_lock as exclusive_run
 
 VERSION = 1
+TECHNICAL_VERSION = 1
+
+
+def _load_stage(path: Path, identity: dict) -> dict | None:
+    """Use only receipts bound to the complete input hash and stage version."""
+    if not path.exists():
+        return None
+    value = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(value, dict) or not isinstance(value.get("payload"), dict) or value.get("identity") != identity or value.get("payload_sha256") != digest(value.get("payload")):
+        raise ValueError("Reçu de cache média incompatible ou modifié.")
+    return value["payload"]
+
+
+def _save_stage(path: Path, identity: dict, payload: dict) -> None:
+    """Commit a cache receipt atomically, including concurrent identical probes."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=path.parent,
+                                         prefix=path.name+".", suffix=".tmp", delete=False) as stream:
+            temporary = Path(stream.name)
+            json.dump({"identity": identity, "payload": payload, "payload_sha256": digest(payload)},
+                      stream, ensure_ascii=False, allow_nan=False)
+            stream.flush()
+            os.fsync(stream.fileno())
+        temporary.replace(path)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+
+
+def _probe_stage(output: Path, source_hash: str) -> tuple[Path, dict]:
+    identity = {"stage": "probe", "version": TECHNICAL_VERSION, "source_sha256": source_hash}
+    return output / f"probe-v{TECHNICAL_VERSION}-{source_hash}.json", identity
 
 
 def fingerprint(path: Path) -> str:
@@ -159,8 +195,7 @@ def analyze(source: Path, transcript: Path | None, output: Path, *, evidence: Pa
     source, output = Path(source).resolve(strict=True), Path(output).resolve()
     if source.is_relative_to(output):
         raise ValueError("La source doit rester hors du dossier d'analyse.")
-    source_hash, info = fingerprint(source), probe(source)
-    duration = info["duration_seconds"]
+    source_hash = fingerprint(source)
     transcript = Path(transcript).resolve(strict=True) if transcript else None
     evidence = Path(evidence).resolve(strict=True) if evidence else None
     if any(p.is_relative_to(output) for p in (transcript, evidence) if p):
@@ -175,8 +210,12 @@ def analyze(source: Path, transcript: Path | None, output: Path, *, evidence: Pa
         previous = json.loads(cache.read_text(encoding="utf-8"))
         if previous.get("cache_key") != key:
             raise ValueError("Reçu d'analyse incompatible.")
-        return previous
+        return {**previous, "execution_cache": {"analysis": "hit", "source_probe": "not_needed", "technical_scan": "not_needed"}}
     with exclusive_run(output):
+        probe_path, probe_identity = _probe_stage(output, source_hash)
+        cached_info = _load_stage(probe_path, probe_identity)
+        info = cached_info if cached_info is not None else probe(source)
+        duration = info["duration_seconds"]
         segments = read_transcript(transcript, duration, source_hash=source_hash) if transcript else []
         transcript_ranges = [[s["start"], s["end"]] for s in segments]
         raw = json.loads(evidence.read_text(encoding="utf-8-sig")) if evidence else {}
@@ -187,9 +226,10 @@ def analyze(source: Path, transcript: Path | None, output: Path, *, evidence: Pa
         coverage_raw = raw.get("coverage", {})
         modality_ranges = {k: _ranges(coverage_raw.get(k+"_ranges_seconds", []), duration)
                            for k in ("audio", "visual", "transcript")}
-        technical_path = output / f"technical-{source_hash}.json"
-        technical = json.loads(technical_path.read_text(encoding="utf-8")) if technical_path.exists() else _scan(source)
-        save_json(technical_path, technical)
+        technical_path = output / f"technical-v{TECHNICAL_VERSION}-{source_hash}.json"
+        technical_identity = {"stage": "technical_scan", "version": TECHNICAL_VERSION, "source_sha256": source_hash}
+        cached_technical = _load_stage(technical_path, technical_identity)
+        technical = cached_technical if cached_technical is not None else _scan(source)
         frame_dir = output / f"frames-{source_hash[:20]}"
         samples = _frames(source, frame_dir, duration)
         candidates, rejected = [], []
@@ -239,6 +279,12 @@ def analyze(source: Path, transcript: Path | None, output: Path, *, evidence: Pa
                                 "technical": str(technical_path)}, "blockers": blockers}
         if fingerprint(source) != source_hash:
             raise ValueError("Le master a changé pendant l'analyse ; résultats non validés.")
+        if cached_info is None:
+            _save_stage(probe_path, probe_identity, info)
+        if cached_technical is None:
+            _save_stage(technical_path, technical_identity, technical)
+        result["execution_cache"] = {"analysis": "miss", "source_probe": "hit" if cached_info is not None else "miss",
+                                     "technical_scan": "hit" if cached_technical is not None else "miss"}
         save_json(cache, result)
         return result
 
@@ -305,9 +351,12 @@ def render(source: Path, candidate: dict, output: Path, *, format: str = "vertic
     transcript = Path(transcript).resolve(strict=True) if transcript else None
     if transcript and transcript.is_relative_to(output):
         raise ValueError("La transcription doit rester hors du dossier de rendu.")
-    source_hash, info = fingerprint(source), probe(source)
+    source_hash = fingerprint(source)
     if candidate.get("source_sha256", source_hash) != source_hash:
         raise ValueError("La sélection ne correspond pas au master.")
+    probe_path, probe_identity = _probe_stage(output, source_hash)
+    cached_info = _load_stage(probe_path, probe_identity)
+    info = cached_info if cached_info is not None else probe(source)
     cuts = _cuts(candidate, info["duration_seconds"])
     length = cuts[-1]["output_end_seconds"]
     video = next(s for s in info["streams"] if s["codec_type"] == "video")
@@ -326,7 +375,8 @@ def render(source: Path, candidate: dict, output: Path, *, format: str = "vertic
                 for k, h in (("path", "sha256"), ("master_path", "master_sha256"),
                              ("subtitle_path", "subtitle_sha256"), ("ass_path", "ass_sha256"))):
             raise ValueError("Un export terminé a été modifié. Aucun écrasement automatique.")
-        return previous
+        return {**previous, "execution_cache": {"render": "hit", "source_probe": "hit" if cached_info is not None else "miss",
+                                                  "technical_qa": "not_needed"}}
     ffmpeg, _ = _require_media_tools()
     directory.mkdir(parents=True, exist_ok=True)
     with exclusive_run(directory):
@@ -379,6 +429,7 @@ def render(source: Path, candidate: dict, output: Path, *, format: str = "vertic
                 raise ValueError("Rendu intermédiaire modifié ou perdu ; aucun écrasement automatique.")
             if present != final:
                 temporary.replace(final)
+            final_hash = stage["sha256"]
         elif final.exists():
             raise ValueError("Rendu sans reçu déjà présent ; conserver le dossier pour diagnostic.")
         else:
@@ -387,10 +438,19 @@ def render(source: Path, candidate: dict, output: Path, *, format: str = "vertic
                        f"ass=filename='{_subtitle_filter_path(ass_path)}'", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-c:a", "copy", "-movflags", "+faststart", str(temporary)])
             else:
                 shutil.copyfile(master, temporary)
-            save_json(final_stage, {"cache_key": key, "sha256": fingerprint(temporary)})
+            final_hash = fingerprint(temporary)
+            save_json(final_stage, {"cache_key": key, "sha256": final_hash})
             temporary.replace(final)
-        technical = _scan(final)
-        actual = probe(final)
+        qa_identity = {"stage": "technical_qa", "version": TECHNICAL_VERSION, "asset_sha256": final_hash}
+        qa_path = directory / f"technical-v{TECHNICAL_VERSION}-{final_hash}.json"
+        cached_qa = _load_stage(qa_path, qa_identity)
+        if cached_qa is None:
+            technical, actual = _scan(final), probe(final)
+            if fingerprint(final) != final_hash:
+                raise ValueError("Le rendu a changé pendant son contrôle technique ; résultats non validés.")
+            _save_stage(qa_path, qa_identity, {"technical": technical, "probe": actual})
+        else:
+            technical, actual = cached_qa["technical"], cached_qa["probe"]
         final_video = next(s for s in actual["streams"] if s["codec_type"] == "video")
         final_audio = next(s for s in actual["streams"] if s["codec_type"] == "audio")
         if abs(actual["duration_seconds"]-length) > .3 or (final_video["width"], final_video["height"]) != size:
@@ -401,11 +461,13 @@ def render(source: Path, candidate: dict, output: Path, *, format: str = "vertic
         if av_delta > .2:
             raise RuntimeError("Décalage de durée des pistes audio/vidéo.")
         samples = _frames(final, directory, length)
+        if fingerprint(final) != final_hash:
+            raise ValueError("Le rendu a changé pendant ses aperçus ; résultats non validés.")
         qa_status = "passed" if not technical["black_intervals_seconds"] and not technical["silence_events"] else "needs_review"
         if technical["max_volume_db"] is None or technical["max_volume_db"] > -.1:
             qa_status = "needs_review"
         result = {"asset_id": "asset-"+key[:20], "version": 1, "cache_key": key, "path": str(final),
-                  "sha256": fingerprint(final), "master_path": str(master), "master_sha256": fingerprint(master),
+                  "sha256": final_hash, "master_path": str(master), "master_sha256": fingerprint(master),
                   "source_sha256": source_hash, "segment_id": candidate.get("segment_id"), "format": format,
                   "duration_seconds": actual["duration_seconds"], "width": size[0], "height": size[1], "cuts": cuts,
                   "synthetic": fixture, "subtitle_path": str(subtitle_path), "subtitle_sha256": fingerprint(subtitle_path),
@@ -414,10 +476,14 @@ def render(source: Path, candidate: dict, output: Path, *, format: str = "vertic
                   "qa": {"technical": qa_status, "details": technical, "av_duration_delta_seconds": round(av_delta, 5),
                          "visual": "pending_human_review", "audio": "pending_listening", "editorial": "pending_review",
                          "subtitles": "needs_word_alignment" if boundary_warnings else ("pending_review" if srt else "missing"),
-                         "subtitle_boundary_warnings": boundary_warnings, "quality_revision_sha256": fingerprint(final)},
+                         "subtitle_boundary_warnings": boundary_warnings, "quality_revision_sha256": final_hash},
+                  "execution_cache": {"render": "miss", "source_probe": "hit" if cached_info is not None else "miss",
+                                      "technical_qa": "hit" if cached_qa is not None else "miss"},
                   "publication": "not_uploaded"}
         if fingerprint(source) != source_hash:
             raise ValueError("Le master a changé pendant le rendu ; export non validé.")
+        if cached_info is None:
+            _save_stage(probe_path, probe_identity, info)
         save_json(receipt, result)
         return result
 

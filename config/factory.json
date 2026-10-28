@@ -20,10 +20,11 @@
     "connector_latency_minutes": 30,
     "maximum_lateness_minutes": 15
   },
-  "runtime": {"lease_seconds": 900, "maximum_attempts": 3, "retry_seconds": 60},
+  "runtime": {"lease_seconds": 900, "maximum_attempts": 3, "retry_seconds": 60, "watch_verify_seconds": 3600, "idle_max_seconds": 60},
   "metrics": {"interval_hours": 24, "report_interval_hours": 168},
   "budgets": {"currency": "EUR", "episode_limit": 0, "external_calls_enabled": false},
   "models": {"transcription": null, "editorial": null, "visual": null},
+  "knowledge": {"registry": "docs/factory/youtube-knowledge.json"},
   "quality": {"require_editorial_review": true, "require_audio_review": true, "require_visual_review": true},
   "thumbnails": {
     "width": 3840,

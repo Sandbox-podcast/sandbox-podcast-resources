@@ -6,6 +6,8 @@ Aujourd'hui, le programme traite les médias sur l'ordinateur et simule le calen
 
 Les [commandes et l'installation](exploitation.md) sont dans le guide technique. Ce README explique le parcours d'une émission et les décisions à prendre en équipe.
 
+Le [guide d'optimisation](optimisation.md) décrit ce que la factory réutilise, ce qu'elle mesure et comment préparer les décisions du prochain épisode. Demande à Codex le `brief` de l'épisode pour retrouver les résultats disponibles, les preuves manquantes et les références à réexaminer.
+
 ## Ce qu'il faut donner pour une émission
 
 Fournis le master vidéo terminé, la transcription horodatée si elle existe, le titre et le numéro de l'épisode. Indique la sortie prévue, l'URL de l'émission complète lorsqu'elle est connue, et la date et l'heure exactes du prochain tournage, en Europe/Paris.
@@ -34,13 +36,15 @@ Il n'y a pas de nombre d'extraits à atteindre. Un bon passage peut servir un se
 
 ## Lire le tableau de bord
 
-Demande à Codex d'ouvrir l'interface locale, généralement à [127.0.0.1:8765](http://127.0.0.1:8765). Le nom de la base et son dossier apparaissent en haut, avec la mention de recette si les épisodes sont synthétiques. La vue d'ensemble rassemble les échéances, les points à traiter et le dernier passage du worker.
+Demande à Codex d'ouvrir l'interface locale, généralement à [127.0.0.1:8765](http://127.0.0.1:8765). Le parcours en haut indique les étapes : analyser, choisir les passages, monter les vidéos et préparer les sorties. Le bloc "Prochaine étape" explique ce qui reste à faire et donne accès à la vue utile. Le dossier de travail reste accessible sous "Emplacement des fichiers" ; les données fictives portent la mention "Démonstration".
 
-Les vues "Publications", "Rendus & sélection", "Miniatures", "Traitements" et "Résultats" donnent accès aux contenus et à leurs preuves. Dans "Publications", filtre par réseau et par état, puis recherche un titre. Les filtres et la vue restent dans l'adresse du navigateur : tu peux retrouver la même vue après un rechargement. "Copier le texte" prépare le texte du pack pour une utilisation manuelle.
+Dans "Passages et vidéos", chaque passage proposé affiche ses horaires, sa durée, son intérêt et le public visé. Le lien YouTube ouvre le passage au bon moment dans un nouvel onglet. Les réserves restent sous "À vérifier avant de retenir ce passage". Demande à Codex les décisions de sélection et les montages dans le chat ; consulter une fiche ne valide pas son contenu.
 
-"Actualiser" relit l'avancement. L'actualisation automatique se fait toutes les quinze secondes lorsque l'onglet est visible ; tu peux la désactiver. Une vidéo en lecture et les détails ouverts restent en place. Le journal des traitements montre les événements récents. "Exporter l'état JSON" télécharge un diagnostic de l'épisode et du réseau sélectionnés, avec les chemins locaux et les contenus éditoriaux. Cet export ne remplace pas la sauvegarde des médias.
+Les vues "Publications", "Miniatures", "Activité" et "Résultats" donnent accès aux autres étapes. Si aucune publication n'est préparée, la page explique ce qui manque et renvoie aux passages proposés. Dans "Publications", filtre par réseau et par état, puis recherche un titre. Les filtres et la vue restent dans l'adresse du navigateur. "Copier le texte" prépare le texte pour une utilisation manuelle.
 
-"Suspendre la file" arrête la prise de nouveaux travaux en conservant les fichiers et l'historique. "Reprendre la file" relance les travaux admissibles. "Reprendre ce traitement" cible une erreur isolée. Une tentative au résultat inconnu exige d'abord une vérification de son état.
+"Mettre à jour" relit l'avancement. La mise à jour automatique se fait toutes les quinze secondes lorsque l'onglet est visible ; tu peux la désactiver. Une vidéo en lecture et les détails ouverts restent en place. Le journal des traitements montre les événements récents. "Télécharger le diagnostic technique" fournit l'état de l'épisode et du réseau sélectionnés, avec les chemins locaux et les contenus éditoriaux. Cet export ne remplace pas la sauvegarde des médias.
+
+Dans "Options de suivi", "Suspendre les traitements" arrête le démarrage de nouveaux travaux en conservant les fichiers et l'historique. "Reprendre les traitements" relance les travaux prêts. Les traitements en cours continuent. Dans "Activité", "Reprendre ce traitement" cible une erreur isolée. Une tentative au résultat inconnu exige d'abord une vérification de son état.
 
 Le tableau lit un espace de suivi, appelé base, choisi à son lancement. La même adresse peut montrer une recette ou le travail opérationnel selon la session ouverte :
 

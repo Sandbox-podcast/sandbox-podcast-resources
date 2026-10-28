@@ -12,7 +12,7 @@ from typing import Any, Iterable
 from zoneinfo import ZoneInfo
 
 
-PROTECTED_CONFIG_KEYS = frozenset({"mode", "live_enabled", "authorized_accounts", "credentials", "connectors", "storage"})
+PROTECTED_CONFIG_KEYS = frozenset({"mode", "live_enabled", "authorized_accounts", "credentials", "connectors", "storage", "state_directory", "inbox_directory"})
 
 
 def _time(value: Any) -> datetime:
@@ -46,6 +46,9 @@ def validate_observation(row: dict[str, Any]) -> dict[str, Any]:
         raise ValueError("Nature cumulative, interval ou gauge requise.")
     if row["data_class"] not in {"observed", "synthetic_fixture"}:
         raise ValueError("Origine observée ou fixture explicite requise.")
+    for field in ("experiment_id", "variant_id", "publication_id"):
+        if row.get(field) is not None:
+            _text(row, (field,))
     value = row.get("value")
     if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
         raise ValueError("Une valeur absente n'est pas une observation à zéro.")
@@ -62,6 +65,17 @@ def validate_observation(row: dict[str, Any]) -> dict[str, Any]:
     return copy.deepcopy(row)
 
 
+def _observations(observations: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
+    identities = {}
+    for raw in observations:
+        row = validate_observation(raw)
+        previous = identities.get(row["observation_id"])
+        if previous is not None and previous != row:
+            raise ValueError("Deux valeurs contradictoires portent le même observation_id.")
+        identities[row["observation_id"]] = row
+    return list(identities.values())
+
+
 def summarize(observations: Iterable[dict[str, Any]]) -> dict[str, Any]:
     """Conserve les séries distinctes ; aucun total multiréseau ou inter-posts.
 
@@ -69,32 +83,33 @@ def summarize(observations: Iterable[dict[str, Any]]) -> dict[str, Any]:
     n'est donc compté qu'une fois. Les différences de définition, de période ou
     de nature des données restent visibles. Les fenêtres ne sont jamais sommées.
     """
-    identities: dict[str, dict] = {}
     series: dict[tuple, list[dict]] = defaultdict(list)
     fields = ("platform", "account_id", "scope", "entity_id", "metric", "unit", "statistic",
-              "source", "definition", "definition_version", "data_class", "aggregation_timezone")
-    for raw in observations:
-        row = validate_observation(raw)
-        previous = identities.get(row["observation_id"])
-        if previous is not None:
-            if previous != row:
-                raise ValueError("Deux valeurs contradictoires portent le même observation_id.")
-            continue
-        identities[row["observation_id"]] = row
-        series[tuple(row[key] for key in fields)].append(row)
+              "source", "definition", "definition_version", "data_class", "aggregation_timezone",
+              "experiment_id", "variant_id")
+    validated = _observations(observations)
+    for row in validated:
+        series[tuple(row.get(key) or "" for key in fields)].append(row)
     result = []
     for key, rows in sorted(series.items()):
         rows.sort(key=lambda row: (_time(row["period_end"]), _time(row["collected_at"]), row["observation_id"]))
         # Counters with different start dates are not the same cumulative series.
         starts = {_time(row["period_start"]) for row in rows}
-        overlaps = any(_time(left["period_end"]) > _time(right["period_start"])
-                       for index, left in enumerate(rows) for right in rows[index+1:])
+        # Sorting by start and retaining the furthest end detects nested periods
+        # too, without comparing every pair in long, non-overlapping histories.
+        periods = sorted((_time(row["period_start"]), _time(row["period_end"])) for row in rows)
+        overlaps, furthest_end = False, None
+        for start, end in periods:
+            if furthest_end is not None and start < furthest_end:
+                overlaps = True
+                break
+            furthest_end = end if furthest_end is None else max(furthest_end, end)
         item = dict(zip(fields, key))
         item.update(observations=rows, latest=rows[-1], observation_count=len(rows),
                     aggregation="no_sum", overlapping_periods=overlaps,
                     compatible_cumulative_origin=len(starts) == 1)
         result.append(item)
-    return {"series": result, "observation_count": len(identities),
+    return {"series": result, "observation_count": len(validated),
             "unavailable_metrics": "absent", "cross_platform_unique_audience": None,
             "attribution": {"observed_clicks": "available_only_if_observed",
                             "youtube_arrivals": "available_only_if_observed",
@@ -146,31 +161,116 @@ def conclude_experiment(experiment: dict[str, Any], observations: Iterable[dict[
                         now: str | datetime | None = None) -> dict[str, Any]:
     current = validate_experiment(experiment)
     instant = _time(now or datetime.now(timezone.utc))
-    rows = [validate_observation(row) for row in observations]
+    rows = _observations(observations)
     related = [row for row in rows if row.get("experiment_id") == current["experiment_id"]
                and row["metric"] == current["primary_metric"]
+               and row.get("publication_id") == current["publication_id"]
                and row["data_class"] == "observed"
+               and _time(row["collected_at"]) <= instant
+               and all(not current.get(field) or row[field] == current[field] for field in ("platform", "account_id"))
                and _time(row["period_start"]) >= _time(current["window_start"])
                and _time(row["period_end"]) <= _time(current["window_end"])]
     result = {"experiment_id": current["experiment_id"], "conclusion": "inconclusive", "winner": None,
               "observation_ids": [row["observation_id"] for row in related], "design": current["design"]}
     if instant < _time(current["window_end"]) or current["status"] == "active":
         return {**result, "reason": "experiment_in_progress"}
+    if current["status"] != "complete":
+        return {**result, "reason": "experiment_not_completed"}
     if not related:
         return {**result, "reason": "no_observed_variant_results"}
     if current["design"] != "native_randomized":
         return {**result, "reason": "observational_comparison_cannot_establish_a_causal_winner"}
+    comparable_fields = ("platform", "account_id", "scope", "unit", "statistic", "source",
+                         "definition", "definition_version", "aggregation_timezone")
+    if len({tuple(row[field] for field in comparable_fields) for row in related}) != 1:
+        return {**result, "reason": "incompatible_variant_measurements"}
     # A native result may be imported, but never invented from a universal threshold.
     provider = current.get("provider_result", {})
     allowed = {variant["variant_id"] for variant in current["variants"]}
     if {row.get("variant_id") for row in related} != allowed:
         return {**result, "reason": "observed_variant_coverage_incomplete"}
+    latest = {variant: max((row for row in related if row.get("variant_id") == variant),
+                           key=lambda row: (_time(row["period_end"]), _time(row["collected_at"])))
+              for variant in allowed}
+    if len({(_time(row["period_start"]), _time(row["period_end"])) for row in latest.values()}) != 1:
+        return {**result, "reason": "incompatible_variant_periods"}
     if (not isinstance(provider, dict) or provider.get("winner") not in allowed
             or not provider.get("evidence") or provider.get("status") != "conclusive"):
         return {**result, "reason": "native_result_missing_or_inconclusive"}
     return {**result, "conclusion": "provider_reported_winner", "winner": provider["winner"],
             "reason": "imported_native_result", "evidence": provider["evidence"],
             "isolated_factor": current["factor"]}
+
+
+def learning_brief(observations: Iterable[dict[str, Any]], experiments: Iterable[dict[str, Any]] = (),
+                   decisions: Iterable[dict[str, Any]] = (), *,
+                   now: str | datetime | None = None,
+                   decision_observations: Iterable[dict[str, Any]] | None = None) -> dict[str, Any]:
+    """Build the next review from available evidence, without changing strategy.
+
+    The brief retains native units and scopes. It never ranks unrelated videos,
+    invents a target metric or turns a native result into a universal rule.
+    """
+    instant = _time(now or datetime.now(timezone.utc))
+    rows = _observations(observations)
+    available = [row for row in rows if row["data_class"] == "observed" and _time(row["collected_at"]) <= instant]
+    # Decisions can span episodes even when performance facts are filtered.
+    decision_rows = rows if decision_observations is None else _observations(decision_observations)
+    available_by_id = {row["observation_id"]: row for row in decision_rows
+                       if row["data_class"] == "observed" and _time(row["collected_at"]) <= instant}
+    all_by_id = {row["observation_id"]: row for row in decision_rows}
+    summary = summarize(available)
+    facts = []
+    for series in summary["series"]:
+        latest = series["latest"]
+        facts.append({key: copy.deepcopy(latest.get(key)) for key in (
+            "observation_id", "platform", "account_id", "scope", "entity_id", "publication_id",
+            "metric", "value", "unit", "denominator", "statistic", "period_start", "period_end",
+            "collected_at", "aggregation_timezone", "source", "definition", "definition_version",
+            "experiment_id", "variant_id")})
+    actions = []
+    if not available:
+        actions.append({"action": "collect_observed_results", "priority": "high", "observation_ids": [],
+                        "reason": "Importer des résultats réels avec leurs périodes et leur provenance avant de décider d'un changement."})
+    experiment_results = []
+    for experiment in experiments:
+        result = conclude_experiment(experiment, rows, now=instant)
+        experiment_results.append({**result, "hypothesis": experiment["hypothesis"],
+                                   "publication_id": experiment["publication_id"],
+                                   "primary_metric": experiment["primary_metric"]})
+        if result["reason"] not in {"experiment_in_progress", "experiment_not_completed"}:
+            actions.append({"action": "review_experiment" if result["winner"] else "resolve_inconclusive_experiment",
+                            "priority": "normal", "experiment_id": result["experiment_id"],
+                            "observation_ids": result["observation_ids"], "reason": result["reason"]})
+    decision_reviews = []
+    for decision in decisions:
+        _text(decision, ("decision_id", "reason", "reevaluate_at"))
+        observation_ids = decision.get("observation_ids")
+        if not isinstance(observation_ids, list) or not observation_ids or any(not isinstance(key, str) for key in observation_ids):
+            raise ValueError("Les observations sources d'une décision sont requises pour son bilan.")
+        missing = [key for key in observation_ids if key not in all_by_id]
+        unavailable = [key for key in observation_ids if key in all_by_id and key not in available_by_id]
+        due = _time(decision["reevaluate_at"]) <= instant
+        review = {"decision_id": decision["decision_id"], "reason": decision["reason"],
+                  "reevaluate_at": decision["reevaluate_at"], "reevaluation_due": due,
+                  "observation_ids": list(dict.fromkeys(observation_ids)), "missing_observation_ids": missing,
+                  "unavailable_observation_ids": unavailable,
+                  "evidence_status": "missing" if missing else "unavailable" if unavailable else "observed",
+                  "application_status": "not_inferred_from_proposal"}
+        decision_reviews.append(review)
+        if due or missing or unavailable:
+            actions.append({"action": "reevaluate_decision" if due else "complete_decision_evidence",
+                            "priority": "high", "decision_id": decision["decision_id"],
+                            "observation_ids": review["observation_ids"],
+                            "reason": "Échéance de réévaluation atteinte." if due else "Les preuves réelles citées restent incomplètes."})
+    return {"generated_at": instant.isoformat(), "status": "observed_evidence_available" if available else "no_observed_evidence",
+            "observed_count": len(available), "synthetic_count": sum(row["data_class"] == "synthetic_fixture" for row in rows),
+            "future_observed_count": sum(row["data_class"] == "observed" and _time(row["collected_at"]) > instant for row in rows),
+            "facts": facts, "experiments": experiment_results, "decisions_to_review": decision_reviews,
+            "recommended_actions": actions, "automatic_changes": False,
+            "limits": ["Une mesure absente reste inconnue ; elle ne vaut pas zéro.",
+                       "Un résultat natif porte sur sa vidéo, sa population et sa période.",
+                       "Les propositions ne prouvent pas qu'une configuration a été appliquée."]}
 
 
 def _amount(value: Any) -> Decimal:

@@ -66,6 +66,10 @@ def load_config(path: Path | None = None) -> dict:
     for field in ("lease_seconds", "maximum_attempts", "retry_seconds"):
         if type(value["runtime"][field]) is not int or value["runtime"][field] < 1:
             raise ValueError(f"Paramètre runtime invalide : {field}.")
+    for field, default in (("watch_verify_seconds", 3600), ("idle_max_seconds", 60)):
+        number = value["runtime"].get(field, default)
+        if type(number) is not int or number < 1:
+            raise ValueError(f"Paramètre runtime invalide : {field}.")
     for field in ("interval_hours", "report_interval_hours"):
         if type(value["metrics"][field]) not in (int, float) or not math.isfinite(value["metrics"][field]) or value["metrics"][field] <= 0:
             raise ValueError(f"Fréquence de métriques invalide : {field}.")

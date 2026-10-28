@@ -10,6 +10,7 @@ import time
 
 from .contracts import ROOT, digest, episode_blockers, instant, iso, load_json, utcnow, validate_episode
 from .store import Store
+from .efficiency import measured, summarize_runs
 from . import scheduler
 
 
@@ -26,7 +27,7 @@ def render_revision(candidate: dict, episode: dict, analysis: dict) -> str:
                    "source": episode["source_sha256"], "transcript": analysis.get("transcript_sha256")})
 
 
-def ingest(store: Store, manifest: Path, *, now=None) -> dict:
+def ingest(store: Store, manifest: Path, *, now=None, verify_source=False) -> dict:
     from .media import fingerprint, probe
     manifest = manifest.resolve(strict=True)
     episode = validate_episode(load_json(manifest), base=manifest.parent)
@@ -38,7 +39,7 @@ def ingest(store: Store, manifest: Path, *, now=None) -> dict:
         raise ValueError("Signal de fin requis : source_sha256 doit être écrit dans le manifeste après la copie.")
     stat = {"size": before.st_size, "mtime_ns": before.st_mtime_ns}
     cached = (previous and previous.get("source") == str(source) and previous.get("source_sha256") == expected and previous.get("source_stat") == stat)
-    actual = previous["source_sha256"] if cached else fingerprint(source)
+    actual = previous["source_sha256"] if cached and not verify_source else fingerprint(source)
     after = source.stat()
     if expected != actual or (before.st_size, before.st_mtime_ns) != (after.st_size, after.st_mtime_ns):
         raise ValueError("Fichier incomplet ou modifié pendant l'ingestion.")
@@ -78,21 +79,88 @@ def watch(store: Store, config: dict, *, now=None) -> dict:
     if not inbox.is_absolute():
         inbox = ROOT / inbox
     inbox.mkdir(parents=True, exist_ok=True)
-    receipts, errors = [], []
+    receipts, errors, skipped = [], [], 0
+    current = instant(now or utcnow())
     for path in sorted(inbox.glob("*.ready.json")):
         try:
-            receipts.append(ingest(store, path, now=now))
+            # Poll metadata cheaply, but periodically rehash the source. A watcher
+            # cache is not proof that a media file still matches its review.
+            snapshot = _input_snapshot(path)
+            key = digest(str(path.resolve()))
+            previous = store.get("watch_receipt", key)
+            interval = config["runtime"].get("watch_verify_seconds", 3600)
+            age = (current-instant(previous.get("source_verified_at", previous["verified_at"]))).total_seconds() if previous else None
+            if (previous and previous["inputs"] == snapshot and
+                    0 <= age < interval):
+                skipped += 1
+                continue
+            verify_source = (not previous or not 0 <= age < interval or
+                             previous["inputs"].get("source") != snapshot.get("source"))
+            receipt = ingest(store, path, now=now, verify_source=verify_source)
+            receipts.append(receipt)
+            if _input_snapshot(path) == snapshot:
+                source_verified = iso(current) if verify_source else previous.get("source_verified_at", previous["verified_at"])
+                store.put("watch_receipt", key, {"inputs": snapshot, "verified_at": iso(current),
+                                               "source_verified_at": source_verified}, now=now)
         except (OSError, ValueError, RuntimeError) as error:
             # The ready file stays in place and can be corrected; suppress unchanged errors.
             issue = {"manifest": str(path), "error_type": type(error).__name__}
             errors.append(issue)
-            key = digest({"path": str(path), "stat": path.stat().st_mtime_ns, "error": str(error)})
+            key = digest({"path": str(path), "stat": _file_signature(path), "error": str(error)})
             if not store.get("ingestion_error", key):
                 store.put("ingestion_error", key, issue, now=now)
                 store.event("ingestion_blocked", None, issue, now=now)
-    return {"ingested": receipts, "errors": errors}
+    return {"ingested": receipts, "errors": errors, "unchanged": skipped}
 
 
+def _file_signature(path: Path):
+    try:
+        stat = path.stat()
+    except OSError:
+        return None
+    return [stat.st_size, stat.st_mtime_ns, stat.st_ctime_ns, stat.st_dev, stat.st_ino]
+
+
+def _input_snapshot(manifest: Path):
+    signatures = {"manifest": {"path": str(manifest.resolve()), "signature": _file_signature(manifest)}}
+    value = load_json(manifest)
+    for field in ("source", "transcript", "evidence"):
+        if value.get(field):
+            if not isinstance(value[field], str):
+                raise ValueError("Chemin local invalide dans le manifeste.")
+            path = Path(value[field])
+            path = (manifest.parent / path).resolve()
+            signatures[field] = {"path": str(path), "signature": _file_signature(path)}
+    return signatures
+
+
+def idle_delay(store: Store, config: dict, *, idle_count: int, interval: float, now=None) -> float:
+    """Back off an empty worker without sleeping past known due work or closure."""
+    current = instant(now or utcnow())
+    delay = min(interval * 2 ** min(max(idle_count-1, 0), 10), config["runtime"].get("idle_max_seconds", 60))
+    paused_filter = " AND kind IN ('collect','report')" if store.setting("paused", False) else ""
+    deadlines = []
+    for column, predicate in (("due_at", "status='queued' AND attempts<?"), ("lease_until", "status='running'")):
+        params = (config["runtime"]["maximum_attempts"],) if column == "due_at" else ()
+        row = store.db.execute(f"SELECT MIN({column}) FROM jobs WHERE {predicate}"+paused_filter, params).fetchone()
+        if row[0]:
+            deadlines.append(instant(row[0]))
+    for name, hours in (("last_collection_at", config["metrics"]["interval_hours"]),
+                        ("last_report_at", config["metrics"]["report_interval_hours"])):
+        last = store.setting(name)
+        if last and instant(last)+timedelta(hours=hours) > current:
+            deadlines.append(instant(last)+timedelta(hours=hours))
+    for episode in store.records("episode"):
+        if episode.get("next_filming_at"):
+            deadline = instant(episode["next_filming_at"])-timedelta(minutes=config["schedule"]["processing_margin_minutes"])
+            if deadline > current:
+                deadlines.append(deadline)
+    for deadline in deadlines:
+        delay = min(delay, max(0.1, (deadline-current).total_seconds()))
+    return delay
+
+
+@measured("process")
 def process(store: Store, config: dict, episode_id: str, *, now=None) -> dict:
     from .media import analyze
     episode = store.get("episode", episode_id)
@@ -128,6 +196,7 @@ def process(store: Store, config: dict, episode_id: str, *, now=None) -> dict:
     return result
 
 
+@measured("render")
 def render_candidate(store: Store, config: dict, episode_id: str, segment_id: str, format_name: str, *, now=None) -> dict:
     from .media import render
     from .packaging import prepare
@@ -312,9 +381,11 @@ def report(store: Store, *, episode_id=None, now=None, config=None) -> dict:
               "publications": store.publications(episode_id), "metrics": summarize(observations),
               "experiments": [conclude_experiment(x, observations, now=now or utcnow()) for x in store.records("experiment", episode_id)],
               "costs": store.records("cost", episode_id), "decisions": store.records("decision", episode_id),
+              "resources": summarize_runs(store.records("resource_run", episode_id)),
               "budget": budget_status(store.records("cost", episode_id), {"currency": config["budgets"]["currency"],
                          "episode_max": config["budgets"]["episode_limit"], "usable_content_count": sum(a.get("qa_status") == "passed" for a in store.records("asset", episode_id))}),
               "limits": ["Aucune performance réelle déduite de la simulation.", "Analyse audiovisuelle intégrale d'un épisode réel encore à valider."]}
+    result["next_cycle"] = brief(store, config, episode_id=episode_id, now=now)
     output = store.directory / "reports"
     output.mkdir(exist_ok=True)
     name = (episode_id or "factory")+"-"+instant(now or utcnow()).strftime("%Y%m%dT%H%M%SZ")
@@ -323,10 +394,50 @@ def report(store: Store, *, episode_id=None, now=None, config=None) -> dict:
     for p in result["publications"]:
         lines.append(f"| {p['platform']} | {p.get('title','').replace('|','/')} | {p['status']} |")
     lines += ["", f"Observations importées : {len(observations)}. Les mesures absentes restent absentes.", "", *result["limits"]]
+    lines += ["", "## Consommation mesurée", "",
+              "Les durées couvrent les appels d'analyse et de rendu instrumentés. Le CPU Python exclut FFmpeg.", "",
+              "| Étape | Appels | Échecs | Durée cumulée (s) |", "| --- | ---: | ---: | ---: |"]
+    for stage in result["resources"]["stages"]:
+        lines.append(f"| {stage['stage']} | {stage['runs']} | {stage['failed']} | {stage['elapsed_seconds']} |")
+    if not result["resources"]["stages"]:
+        lines += ["", "Aucune durée enregistrée. Les anciens calculs ne sont pas estimés rétroactivement."]
+    lines += ["", "## Préparer le prochain cycle", ""]
+    learning = result["next_cycle"]["learning"]
+    lines += [f"Observations réelles disponibles : {learning['observed_count']}. Observations synthétiques : {learning['synthetic_count']}.", ""]
+    for action in learning["recommended_actions"]:
+        reference = action.get("decision_id") or action.get("experiment_id") or action["action"]
+        lines.append(f"- {reference} : {action['reason']}")
+    if result["next_cycle"]["knowledge"]["review_required"]:
+        lines += ["", "Des références demandent une nouvelle vérification ; consulter le registre dans le bilan JSON."]
+    lines += ["", "Les faits, identifiants de preuve et références sont conservés dans le bilan JSON associé."]
     (output / (name+".md")).write_text("\n".join(lines)+"\n", encoding="utf-8")
     result["report_path"] = str(output / (name+".md"))
     store.set_setting("last_report_at", iso(now or utcnow()))
     return result
+
+
+def brief(store: Store, config: dict, *, episode_id=None, now=None) -> dict:
+    """Prepare the next review from current evidence, without models or network."""
+    from .analytics import learning_brief
+    from .knowledge import knowledge_status
+    current = instant(now or utcnow())
+    episodes = [e for e in store.records("episode") if not episode_id or e["episode_id"] == episode_id]
+    if episode_id and not episodes:
+        raise ValueError("Épisode inconnu.")
+    candidates = store.records("candidate", episode_id)
+    return {"generated_at": iso(current), "episode_id": episode_id, "mode": "simulation",
+            "positioning": config["identity"], "knowledge": knowledge_status(config, now=current),
+            "learning": learning_brief(store.records("observation", episode_id),
+                                       store.records("experiment", episode_id), store.records("decision"), now=current,
+                                       decision_observations=store.records("observation")),
+            "decisions_scope": "global_configuration",
+            "resources": summarize_runs(store.records("resource_run", episode_id)),
+            "readiness": [{"episode_id": e["episode_id"], "synthetic": e.get("synthetic", False),
+                           "blockers": episode_blockers(e),
+                           "candidates_to_review": sum(c.get("episode_id") == e["episode_id"] and c.get("decision") == "needs_review" for c in candidates),
+                           "retained_candidates": sum(c.get("episode_id") == e["episode_id"] and c.get("decision") == "retained" for c in candidates)} for e in episodes],
+            "policy": {"automatic_strategy_change": False, "editorial_quota": None,
+                       "guide": "docs/factory/optimisation.md"}}
 
 
 @contextmanager
@@ -421,4 +532,5 @@ def status(store: Store, *, episode_id=None, platform=None) -> dict:
             "thumbnail_bundles": store.records("thumbnail_bundle", episode_id),
             "publications": store.publications(episode_id, platform), "jobs": [j for j in store.jobs() if not episode_id or j["episode_id"] == episode_id],
             "experiments": store.records("experiment", episode_id), "observations": store.records("observation", episode_id),
-            "costs": store.records("cost", episode_id), "decisions": store.records("decision", episode_id)}
+            "costs": store.records("cost", episode_id), "decisions": store.records("decision", episode_id),
+            "resources": summarize_runs(store.records("resource_run", episode_id))}

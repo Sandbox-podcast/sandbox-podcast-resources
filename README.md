@@ -80,6 +80,10 @@ Il n'y a aucun quota d'extraits à atteindre. Le programme exécute les traiteme
 
 Les [capacités et leurs limites](docs/factory/capacites.md), la [procédure des miniatures](docs/factory/miniatures.md) et le [prompt maître du 28 octobre 2026](docs/factory/sources/prompt-maitre-2026-10-28.txt) précisent le fonctionnement attendu.
 
+Le tableau local indique la prochaine étape et présente les passages avec leurs horaires, leurs raisons et un lien vers la vidéo. Les décisions de sélection et les demandes de montage se font dans le chat avec Codex. Le [guide pour l'équipe](docs/factory/README.md#lire-le-tableau-de-bord) explique ce parcours.
+
+Le [guide d'optimisation](docs/factory/optimisation.md) décrit les calculs réutilisés, les mesures de ressources et le brief pour le prochain cycle. La commande `python -m youtube_growth.factory brief --episode-id IDENTIFIANT` rassemble les résultats disponibles et les points à réexaminer ; elle n'applique aucun changement automatique de stratégie.
+
 ## Démarrer en local
 
 Prérequis : **Python 3.12+**, **FFmpeg** et **ffprobe** accessibles dans le `PATH`. Depuis la racine du dépôt, dans PowerShell :

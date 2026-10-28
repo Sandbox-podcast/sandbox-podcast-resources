@@ -5,9 +5,9 @@ const assert=require('node:assert/strict');
  try {
  const page=await browser.newPage({viewport:{width:1440,height:1000}});
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto('http://127.0.0.1:8765/');
+ await page.goto((process.env.FACTORY_UI_URL||'http://127.0.0.1:8765')+'/');
  await page.waitForSelector('#initial',{state:'hidden'});
- await page.waitForFunction(()=>document.querySelector('#workspace').textContent.includes('Recette'));
+ await page.waitForFunction(()=>document.querySelector('#workspace').textContent.includes('Démonstration'));
  await page.screenshot({path:'.local/factory-rework-desktop.png',fullPage:true});
  for(const view of ['publications','media','thumbnails','operations','results','overview']){
   await page.locator('[data-view="'+view+'"]').click();
@@ -36,7 +36,7 @@ const assert=require('node:assert/strict');
  assert.equal(await page.locator('#platform').inputValue(),'youtube');
  assert(await page.locator('#view-publications').isVisible());
  await page.locator('#search').fill('DOES NOT EXIST');
- assert(await page.getByText('Aucun contenu ne correspond').isVisible());
+ assert(await page.getByText('Aucun contenu ne correspond aux filtres').isVisible());
  await page.locator('#search').fill('');
  const download=page.waitForEvent('download');await page.locator('#export').click();
  assert.equal((await download).suggestedFilename(),'factory-diagnostic.json');

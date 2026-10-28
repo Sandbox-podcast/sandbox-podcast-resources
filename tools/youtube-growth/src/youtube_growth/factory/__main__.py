@@ -5,6 +5,7 @@ import argparse
 import copy
 from datetime import timedelta
 import json
+import math
 from pathlib import Path
 import shutil
 import sqlite3
@@ -46,7 +47,7 @@ def parser():
     thumbnail_review.add_argument("--evidence", required=True)
     from .thumbnails import CHECKS
     thumbnail_review.add_argument("--checks", nargs="+", required=True, choices=sorted(CHECKS))
-    for name in ("status", "diagnostics", "report"):
+    for name in ("status", "diagnostics", "report", "brief"):
         command = commands.add_parser(name)
         command.add_argument("--episode-id")
         if name in {"status", "diagnostics"}:
@@ -199,9 +200,10 @@ def main(argv=None):
                 elif command == "watch":
                     result = runtime.watch(store, config, now=now)
                 elif command in {"worker", "simulate"}:
-                    if args.limit < 1 or args.interval < 1:
+                    if args.limit < 1 or not math.isfinite(args.interval) or args.interval < 1:
                         raise ValueError("Limite et intervalle positifs requis.")
                     results = []
+                    idle_count = 0
                     while True:
                         step = runtime.run_once(store, config, now=now)
                         results.append(step)
@@ -209,7 +211,11 @@ def main(argv=None):
                             break
                         if len(results) > 100:
                             results = results[-100:]
-                        time.sleep(args.interval)
+                        idle_count = idle_count+1 if step["status"] == "idle" else 0
+                        if command == "simulate":
+                            time.sleep(args.interval)
+                        elif idle_count:
+                            time.sleep(runtime.idle_delay(store, config, idle_count=idle_count, interval=args.interval, now=now))
                     result = {"mode": "simulation", "results": results}
                 elif command in {"status", "diagnostics"}:
                     result = runtime.status(store, episode_id=args.episode_id, platform=args.platform)
@@ -266,6 +272,8 @@ def main(argv=None):
                     result = runtime.collect(store, config, now=now, fixture=args.fixture)
                 elif command == "report":
                     result = runtime.report(store, episode_id=args.episode_id, now=now, config=config)
+                elif command == "brief":
+                    result = runtime.brief(store, config, episode_id=args.episode_id, now=now)
                 elif command == "backup":
                     from .backups import backup
                     result = backup(store, args.destination, include_media=args.include_media)
@@ -307,8 +315,8 @@ def main(argv=None):
                         evidence_rows = [store.get("observation", identity) for identity in args.observation_id]
                         if any(row is None for row in evidence_rows):
                             raise ValueError("Une observation citée est absente de la base.")
-                        if args.apply and args.config.resolve() == (ROOT / "config/factory.json").resolve() and any(row.get("data_class") == "synthetic_fixture" for row in evidence_rows):
-                            raise ValueError("Les mesures synthétiques ne peuvent pas modifier la configuration opérationnelle.")
+                        if args.apply and any(row.get("data_class") == "synthetic_fixture" for row in evidence_rows):
+                            raise ValueError("Les mesures synthétiques permettent une proposition, pas une modification de configuration.")
                         decision = make_decision(config, load_json(args.changes), reason=args.reason, observation_ids=args.observation_id,
                                                  recorded_at=iso(now or utcnow()), reevaluate_at=args.reevaluate_at)
                         updated = apply_decision(config, decision)
