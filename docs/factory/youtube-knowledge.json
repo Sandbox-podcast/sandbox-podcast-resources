@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "audience-loyalty",
+      "checked_at": "2026-10-28T00:00:00+01:00",
+      "review_after": "2027-01-26T00:00:00+01:00",
+      "source_url": "https://support.google.com/youtube/answer/10246996",
+      "fact": "YouTube distingue nouveaux spectateurs, occasionnels et réguliers. La catégorie réguliers exige une présence mensuelle sur plus de six mois dans l'année écoulée.",
+      "application": "Suivre l'audience active et les retours dans Studio. Une chaîne récente ne peut pas être évaluée seulement sur sa part de spectateurs réguliers.",
+      "status_in_sandbox": "Mesures réelles à importer ; aucune profession déduite des spectateurs."
+    },
+    {
+      "id": "native-packaging-tests",
+      "checked_at": "2026-10-28T00:00:00+01:00",
+      "review_after": "2026-11-27T00:00:00+01:00",
+      "source_url": "https://support.google.com/youtube/answer/16391400",
+      "fact": "Studio permet de comparer jusqu'à trois titres ou couples titre/miniature sur les vidéos éligibles. Le test natif vise le temps regardé et peut rester sans gagnant. Il ne concerne pas les Shorts.",
+      "application": "Conserver le résultat natif et son contexte. Comparer des promesses fidèles au passage ; une rotation séquentielle ne prouve pas un effet causal.",
+      "status_in_sandbox": "Éligibilité du compte à vérifier dans Studio ; aucune API de test présumée."
+    },
+    {
+      "id": "shorts-view-definitions",
+      "checked_at": "2026-10-28T00:00:00+01:00",
+      "review_after": "2026-11-27T00:00:00+01:00",
+      "source_url": "https://developers.google.com/youtube/analytics/revision_history",
+      "fact": "Le comptage des vues Shorts a changé en 2025. Les API Analytics et Reporting distinguent vues et engagedViews/engaged_views selon leur surface.",
+      "application": "Conserver nom natif, version, surface et date de définition. Comparer séparément Shorts et vidéos longues ; ne pas fusionner les anciennes et nouvelles définitions.",
+      "status_in_sandbox": "Les imports exigent définition/version ; la collecte réelle reste à vérifier."
+    },
+    {
+      "id": "retention-diagnosis",
+      "checked_at": "2026-10-28T00:00:00+01:00",
+      "review_after": "2027-01-26T00:00:00+01:00",
+      "source_url": "https://support.google.com/youtube/answer/9314415?hl=fr",
+      "fact": "Le rapport de rétention est lié à une vidéo. L'introduction mesure les spectateurs encore présents après trente secondes. Un pic peut venir d'un passage apprécié ou d'un besoin de revoir une explication.",
+      "application": "Relire les baisses et pics avec les timecodes et le contenu. Comparer des durées similaires et vérifier l'accord entre la promesse du titre et le début de la vidéo.",
+      "status_in_sandbox": "La courbe réelle et l'examen audiovisuel sont des preuves distinctes à fournir."
+    },
+    {
+      "id": "short-to-long",
+      "checked_at": "2026-10-28T00:00:00+01:00",
+      "review_after": "2026-11-27T00:00:00+01:00",
+      "source_url": "https://support.google.com/youtube/answer/14075157?hl=fr",
+      "fact": "Studio peut associer une vidéo de la chaîne à un Short, avec accès aux fonctionnalités avancées. La destination doit être publique ou non répertoriée.",
+      "application": "Préparer une destination qui prolonge le passage, puis vérifier le lien dans Studio lors d'une diffusion autorisée. Le lien ne prouve pas une conversion attribuable.",
+      "status_in_sandbox": "Action Studio manuelle ; aucune mutation sociale exécutée par la factory."
+    }
+  ]
+}

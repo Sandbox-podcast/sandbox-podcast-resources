@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560" role="img" aria-labelledby="title description">
+  <title id="title">SANDBOX, les coulisses du podcast</title>
+  <desc id="description">Le logo officiel SANDBOX en blanc et cyan sur fond bleu nuit, avec les étapes analyser, monter, préparer et suivre.</desc>
+  <defs>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M 56 0 L 0 0 0 56" fill="none" stroke="#182631" stroke-width="1"/>
+    </pattern>
+    <clipPath id="frame"><rect width="1440" height="560" rx="16"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1440" height="560" fill="#05090D"/>
+    <rect width="1440" height="560" fill="url(#grid)" opacity="0.42"/>
+    <path d="M1080 -98 L1458 556 L702 556 Z" fill="none" stroke="#00C8E8" stroke-width="1" opacity="0.13"/>
+    <path d="M1140 -28 L1468 540 L812 540 Z" fill="none" stroke="#00C8E8" stroke-width="1" opacity="0.09"/>
+    <path d="M48 80 V48 H80 M1360 48 H1392 V80 M48 480 V512 H80 M1360 512 H1392 V480" fill="none" stroke="#00C8E8" stroke-width="2"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="3">
+      <text x="80" y="88" fill="#97ADB9">SANDBOX / RESSOURCES</text>
+      <text x="1360" y="88" fill="#00C8E8" text-anchor="end">PODCAST IA &amp; TECH</text>
+    </g>
+    <svg x="190" y="172" width="1060" height="125" viewBox="150 238 1870 230" preserveAspectRatio="xMidYMid meet">
+      <image href="../../assets/brand/logo.png" width="2172" height="724"/>
+    </svg>
+    <text x="720" y="348" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#DAE4EB" letter-spacing="0.5">Les coulisses du podcast.</text>
+    <path d="M80 416 H1360" stroke="#243540" stroke-width="1"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="14" letter-spacing="2">
+      <text x="80" y="465" fill="#00C8E8">01<tspan dx="18" fill="#B8C7D0">ANALYSER</tspan></text>
+      <text x="420" y="465" fill="#00C8E8">02<tspan dx="18" fill="#B8C7D0">MONTER</tspan></text>
+      <text x="760" y="465" fill="#00C8E8">03<tspan dx="18" fill="#B8C7D0">PRÉPARER</tspan></text>
+      <text x="1100" y="465" fill="#00C8E8">04<tspan dx="18" fill="#B8C7D0">SUIVRE</tspan></text>
+    </g>
+  </g>
+</svg>

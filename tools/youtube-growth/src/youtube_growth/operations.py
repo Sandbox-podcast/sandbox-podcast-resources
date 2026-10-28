@@ -44,6 +44,9 @@ def make_plan(video: dict, patch: object) -> dict:
 
 
 def execute_plan(service, plan: dict, directory: Path, execute: bool = False) -> dict:
+    if execute:
+        from .factory.connectors import guard_legacy_write
+        guard_legacy_write("youtube.metadata_or_restore")
     if not isinstance(plan, dict) or plan.get("channel_id") != expected_channel_id() or plan.get("version") != 1:
         raise ValueError("Plan non conforme ou destiné à une autre chaîne.")
     video = verify_video(service, plan["video_id"])

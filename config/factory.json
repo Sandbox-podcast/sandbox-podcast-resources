@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "mode": "simulation",
+  "live_enabled": false,
+  "timezone": "Europe/Paris",
+  "state_directory": ".local/factory",
+  "inbox_directory": ".local/factory/inbox",
+  "authorized_accounts": {
+    "youtube": ["UCuATIBXo5uvNLVm-gCgMenA"],
+    "tiktok": [],
+    "instagram": [],
+    "x": [],
+    "linkedin": []
+  },
+  "schedule": {
+    "slots_local": ["10:00", "17:00"],
+    "minimum_spacing_minutes": 180,
+    "maximum_per_day_per_account": 2,
+    "processing_margin_minutes": 60,
+    "connector_latency_minutes": 30,
+    "maximum_lateness_minutes": 15
+  },
+  "runtime": {"lease_seconds": 900, "maximum_attempts": 3, "retry_seconds": 60, "watch_verify_seconds": 3600, "idle_max_seconds": 60},
+  "metrics": {"interval_hours": 24, "report_interval_hours": 168},
+  "budgets": {"currency": "EUR", "episode_limit": 0, "external_calls_enabled": false},
+  "models": {"transcription": null, "editorial": null, "visual": null},
+  "knowledge": {"registry": "docs/factory/youtube-knowledge.json"},
+  "quality": {"require_editorial_review": true, "require_audio_review": true, "require_visual_review": true},
+  "thumbnails": {
+    "width": 3840,
+    "height": 2160,
+    "max_bytes": 1900000,
+    "reference_max_age_days": 90,
+    "reference_guide": "docs/factory/references-miniatures-2026-10-28.md",
+    "policy": "docs/factory/miniatures.md"
+  },
+  "identity": {
+    "name": "Sandbox Podcast",
+    "description": "Talkshow sur l'IA appliquée au développement logiciel, au produit et aux entreprises.",
+    "brand": "assets/brand/social/README.md",
+    "hosts": ["Lou", "Loïc", "Nico"],
+    "series": ["Développement et outils", "Produit et travail", "Entreprises et organisations"]
+  }
+}

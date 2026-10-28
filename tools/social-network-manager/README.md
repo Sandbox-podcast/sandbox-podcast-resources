@@ -1,5 +1,7 @@
 # SANDBOX Social Network Manager
 
+Consigne actuelle, 28 octobre 2026 : utiliser la [factory persistante](../../docs/factory/exploitation.md). Le prompt maître remplace les cadences et quotas ci-dessous par une sélection selon la qualité, dans une fenêtre terminée avant le prochain tournage. La livraison initiale simule tous les envois ; aucun upload privé, brouillon distant, programmation ou modification sociale. LinkedIn reste exclusivement manuel. Les sections historiques conservent le contexte des épisodes précédents.
+
 Pour Nico et Loïc : commence par le [tutoriel pour chaque nouvel épisode](GENERER.md). Il couvre les Shorts adaptés à chaque réseau, les formats YouTube de 5 à 15 minutes, l'installation sur un autre ordinateur et les contrôles. Les vidéos ne font pas partie de cette livraison. Les compositions E02 sont une référence de montage ; leurs timecodes ne doivent pas être réutilisés pour une nouvelle émission.
 
 Agent editorial pour préparer, contrôler et mesurer la distribution de SANDBOX sur YouTube, Instagram, TikTok et X. Le dossier complète l'outil YouTube existant. Il ne remplace pas ses contrôles et ne publie rien par défaut.

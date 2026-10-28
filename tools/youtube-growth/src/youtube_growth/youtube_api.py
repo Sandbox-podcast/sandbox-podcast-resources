@@ -101,6 +101,8 @@ def list_recent_comment_threads(service, channel_id: str, max_pages: int = 10) -
 
 
 def post_top_level_comment(service, channel_id: str, video_id: str, text: str) -> str:
+    from .factory.connectors import guard_legacy_write
+    guard_legacy_write("youtube.comment")
     verify_video(service, video_id, channel_id)
     response = service.commentThreads().insert(
         part="snippet",
@@ -110,6 +112,8 @@ def post_top_level_comment(service, channel_id: str, video_id: str, text: str) -
 
 
 def post_reply(service, parent_id: str, text: str) -> str:
+    from .factory.connectors import guard_legacy_write
+    guard_legacy_write("youtube.reply")
     channel = verify_channel(service)
     parent = service.comments().list(part="snippet", id=parent_id).execute(num_retries=3)
     items = parent.get("items", [])

@@ -26,6 +26,8 @@ MAX_CLIP_SECONDS = 60
 
 
 def upload_once(service, clip_path: Path, clip: dict, source_title: str, source_video_id: str) -> str:
+    from .factory.connectors import guard_legacy_write
+    guard_legacy_write("youtube.upload_intent")
     from .identity import expected_channel_id
     journal = open_journal(clip_path.parent / "operations.sqlite3")
     try:
@@ -394,6 +396,8 @@ def _youtube_title(quote: str) -> str:
 
 
 def _upload_clip(service: Any, clip_path: Path, clip: dict[str, Any], source_title: str, source_video_id: str) -> str:
+    from .factory.connectors import guard_legacy_write
+    guard_legacy_write("youtube.upload_private_or_schedule")
     from .identity import verify_video
     verify_video(service, source_video_id)
     try:
@@ -524,6 +528,9 @@ def _render_and_report(source: Path, work_dir: Path, manifest: dict[str, Any], f
 
 
 def run(source_arg: str, count: int, language: str, source_video_id: str | None, publish: bool, output_root: Path, first_publish_at_arg: str | None, approve: bool = False) -> int:
+    if publish:
+        from .factory.connectors import guard_legacy_write
+        guard_legacy_write("youtube.publish_pipeline")
     source = Path(source_arg).expanduser().resolve()
     if count < 1 or count > 14:
         raise ValueError("--count doit être compris entre 1 et 14 pour conserver un rythme éditorial raisonnable.")

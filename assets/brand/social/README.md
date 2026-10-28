@@ -1,0 +1,7 @@
+# Identité sociale SANDBOX
+
+`sandbox-social-avatar.png` est la déclinaison carrée commune aux réseaux sociaux du logotype officiel `logov2.png`. Elle conserve le mot-symbole SANDBOX et son A cyan, sur le fond bleu nuit de la charte DD-0002, avec le contenu dans une zone sûre pour le recadrage circulaire. Le même fichier est utilisé comme avatar sur Instagram, TikTok et X.
+
+À la demande de Lou du 20 octobre 2026, les profils publics reprennent le nom `Sandbox Podcast` et ajoutent le mot-clé `Talkshow` dans leur description. Les identifiants et les URL restent inchangés. Pour toute nouvelle saisie, utiliser les [six descriptions finales validées](../../../docs/site/history/2026/10/descriptions-reseaux-vision-2026-10-20.md), corrigées sans mention des années d'expérience. Le [relevé des profils](../../../docs/site/history/2026/10/social-profile-copy-2026-10-20.md) conserve l'historique et l'état des comptes ; ses anciens textes ne sont plus les versions à copier.
+
+Instagram n'affiche pas de bannière de profil. L'identifiant `@sandbox.talkshow` a remplacé `@sandbox.podcast.pro` le 17 octobre 2026. L'avatar commun `brand/social/sandbox-social-avatar.png` est appliqué aux profils Instagram `@sandbox.talkshow`, TikTok `@sandbox.talkshow` et X `@SandboxTalkShow`, puis vérifié le 17 octobre 2026. Les stories à la une pourront recevoir des couvertures assorties quand ces rubriques auront du contenu réel.

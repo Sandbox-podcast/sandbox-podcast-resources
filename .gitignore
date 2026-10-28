@@ -14,3 +14,63 @@ node_modules/
 *.log
 .DS_Store
 Thumbs.db
+
+# Les médias de travail et les livrables restent sur chaque ordinateur.
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.mp3
+*.m4a
+*.aac
+*.wav
+*.flac
+*.ogg
+*.opus
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.avif
+*.zip
+*.7z
+*.tar
+*.gz
+*.srt
+*.ass
+*.vtt
+*.sqlite
+*.sqlite3
+*.db
+**/renders/
+**/proof/
+**/analysis/
+**/output/
+**/outputs/
+**/dist/
+projects/videos/**/public/
+projects/experiments/**/assets/
+projects/experiments/**/fixtures/site-public/**/assets/
+projects/relay-kits/**/production/assets/
+projects/relay-kits/**/production/captions/
+
+# Sources communes et illustration du dépôt, sans média d'épisode.
+!assets/brand/logo.png
+!docs/readme/hero.png
+
+# Anciens emplacements : les copies locales sont dans .local/legacy/.
+/Episode 2/
+/SANDBOX_LinkedIn_Kit/
+/SANDBOX_LinkedIn_Kit.zip
+/exports/
+/kits-relais/
+/media/
+/output/
+/videos/
+/experiments/
+/brand/
+/old/
+/logo rs
+/logo rs2
