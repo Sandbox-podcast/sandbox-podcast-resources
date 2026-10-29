@@ -10,9 +10,92 @@ import json
 import math
 from typing import Any, Iterable
 from zoneinfo import ZoneInfo
+from statistics import median
 
 
 PROTECTED_CONFIG_KEYS = frozenset({"mode", "live_enabled", "authorized_accounts", "credentials", "connectors", "storage", "state_directory", "inbox_directory"})
+
+
+def compare_content(observations, contexts, *, now=None):
+    """Compare observed native series with pairwise compatible exposure and age.
+
+    Contexts map native entity IDs to format, duration, publication date, topic,
+    hook and visual style. Missing exposure never becomes zero or a view proxy.
+    """
+    current = _time(now or datetime.now(timezone.utc))
+    context = {}
+    for row in contexts:
+        _text(row, ("entity_id", "format", "topic", "hook", "visual_style", "provenance"))
+        if row["entity_id"] in context:
+            raise ValueError("Contexte de contenu dupliqué.")
+        if row["format"] not in {"short", "extract", "narrative"}:
+            raise ValueError("Format de comparaison inconnu.")
+        duration = row.get("duration_seconds")
+        if type(duration) not in (int, float) or not math.isfinite(duration) or duration <= 0:
+            raise ValueError("Durée de contenu positive requise.")
+        if _time(row.get("published_at")) > current:
+            raise ValueError("Publication future dans les comparaisons.")
+        context[row["entity_id"]] = row
+    observed = [r for r in _observations(observations) if r["data_class"] == "observed" and _time(r["collected_at"]) <= current]
+    latest = [s["latest"] for s in summarize(observed)["series"]]
+    exposure = [r for r in latest if r["metric"] == "impressions"]
+    usable, excluded = [], []
+    for row in latest:
+        meta = context.get(row["entity_id"])
+        reason = None
+        impressions = next((r for r in exposure if all(r[k] == row[k] for k in
+            ("entity_id", "platform", "account_id", "scope", "period_start", "period_end", "statistic"))), None)
+        if not meta:
+            reason = "content_context_missing"
+        elif not impressions or impressions["value"] <= 0:
+            reason = "comparable_impressions_missing"
+        elif _time(row["period_start"]) < _time(meta["published_at"]):
+            reason = "measurement_predates_content"
+        if reason:
+            excluded.append({"observation_id": row["observation_id"], "reason": reason})
+            continue
+        age = (_time(row["period_end"])-_time(meta["published_at"])).total_seconds()/86400
+        if age <= 0:
+            excluded.append({"observation_id": row["observation_id"], "reason": "positive_content_age_required"})
+            continue
+        usable.append({"observation": row, "context": meta, "age_days": age, "impressions": impressions["value"],
+                       "impressions_observation_id": impressions["observation_id"]})
+    keys = ("platform", "account_id", "scope", "metric", "unit", "definition", "definition_version", "statistic", "source", "aggregation_timezone")
+    groups = []
+    def compatible(a, b):
+        ar, br = a["observation"], b["observation"]
+        return (all(ar[k] == br[k] for k in keys)
+                and ar.get("dimensions", {}) == br.get("dimensions", {})
+                and ar.get("experiment_id") == br.get("experiment_id") and ar.get("variant_id") == br.get("variant_id")
+                and a["context"]["format"] == b["context"]["format"]
+                and max(a["context"]["duration_seconds"], b["context"]["duration_seconds"])/min(a["context"]["duration_seconds"], b["context"]["duration_seconds"]) <= 1.3
+                and max(a["age_days"], b["age_days"])/min(a["age_days"], b["age_days"]) <= 1.25
+                and max(a["impressions"], b["impressions"])/min(a["impressions"], b["impressions"]) <= 2
+                and abs((_time(ar["period_end"])-_time(ar["period_start"])).total_seconds()-
+                        (_time(br["period_end"])-_time(br["period_start"])).total_seconds()) <= 3600)
+    for item in sorted(usable, key=lambda r: r["observation"]["observation_id"]):
+        group = next((g for g in groups if all(compatible(item, other) for other in g)), None)
+        if group is None:
+            groups.append([item])
+        else:
+            group.append(item)
+    cohorts = []
+    for group in groups:
+        entities = {r["observation"]["entity_id"] for r in group}
+        if len(entities) < 2:
+            excluded.extend({"observation_id": r["observation"]["observation_id"], "reason": "no_comparable_peer"} for r in group)
+            continue
+        findings = []
+        for dimension in ("topic", "hook", "visual_style"):
+            labels = {r["context"][dimension] for r in group}
+            findings.extend({"dimension": dimension, "label": label,
+                             "median": median(r["observation"]["value"] for r in group if r["context"][dimension] == label),
+                             "sample_size": sum(r["context"][dimension] == label for r in group)} for label in sorted(labels))
+        cohorts.append({"metric": group[0]["observation"]["metric"], "format": group[0]["context"]["format"],
+                        "members": group, "findings": findings, "status": "descriptive_only", "causal_winner": None})
+    return {"cohorts": cohorts, "excluded": excluded, "synthetic_excluded": sum(r["data_class"] != "observed" for r in observations),
+            "automatic_strategy_change": False, "limits": {"duration_ratio": 1.3, "age_ratio": 1.25, "exposure_ratio": 2,
+            "period_length_tolerance_seconds": 3600}, "interpretation": "Hypothèses à tester ; aucune causalité déduite des corrélations."}
 
 
 def _time(value: Any) -> datetime:
@@ -89,7 +172,7 @@ def summarize(observations: Iterable[dict[str, Any]]) -> dict[str, Any]:
               "experiment_id", "variant_id")
     validated = _observations(observations)
     for row in validated:
-        series[tuple(row.get(key) or "" for key in fields)].append(row)
+        series[tuple(row.get(key) or "" for key in fields)+(_hash(row.get("dimensions", {})),)].append(row)
     result = []
     for key, rows in sorted(series.items()):
         rows.sort(key=lambda row: (_time(row["period_end"]), _time(row["collected_at"]), row["observation_id"]))
@@ -105,6 +188,7 @@ def summarize(observations: Iterable[dict[str, Any]]) -> dict[str, Any]:
                 break
             furthest_end = end if furthest_end is None else max(furthest_end, end)
         item = dict(zip(fields, key))
+        item["dimensions"] = rows[-1].get("dimensions", {})
         item.update(observations=rows, latest=rows[-1], observation_count=len(rows),
                     aggregation="no_sum", overlapping_periods=overlaps,
                     compatible_cumulative_origin=len(starts) == 1)

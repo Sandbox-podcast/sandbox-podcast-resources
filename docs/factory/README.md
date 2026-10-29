@@ -8,6 +8,8 @@ Les [commandes et l'installation](exploitation.md) sont dans le guide technique.
 
 Le [guide d'optimisation](optimisation.md) décrit ce que la factory réutilise, ce qu'elle mesure et comment préparer les décisions du prochain épisode. Demande à Codex le `brief` de l'épisode pour retrouver les résultats disponibles, les preuves manquantes et les références à réexaminer.
 
+Le [parcours éditorial multiformat](production-editoriale.md) ajoute la découverte de sujets, leur évaluation justifiée, les dossiers de recherche, les vidéos narratives originales et les comparaisons Analytics. La configuration livrée attend les réponses d'un agent ou un modèle local à configurer ; elle ne lance aucun appel IA payant. La première bibliothèque de schémas animés est décrite dans la [direction artistique narrative](direction-artistique-narrative.md).
+
 ## Ce qu'il faut donner pour une émission
 
 Fournis le master vidéo terminé, la transcription horodatée si elle existe, le titre et le numéro de l'épisode. Indique la sortie prévue, l'URL de l'émission complète lorsqu'elle est connue, et la date et l'heure exactes du prochain tournage, en Europe/Paris.

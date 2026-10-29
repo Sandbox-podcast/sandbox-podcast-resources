@@ -18,6 +18,7 @@ from .local_lock import local_lock as exclusive_run
 
 VERSION = 1
 TECHNICAL_VERSION = 1
+RENDER_VERSION = 2
 
 
 def _load_stage(path: Path, identity: dict) -> dict | None:
@@ -146,10 +147,16 @@ def _cuts(candidate: dict, duration: float) -> list[dict]:
     if not isinstance(raw, list) or not raw or len(raw) > 100:
         raise ValueError("Une à cent coupes source sont requises.")
     cuts, cursor, previous = [], 0.0, -1.0
+    reorder = candidate.get("edit_order_review")
+    if reorder and (not isinstance(reorder, dict) or not all(isinstance(reorder.get(k), str) and reorder[k].strip()
+                    for k in ("reviewer", "evidence", "reason")) or reorder.get("preserves_meaning") is not True):
+        raise ValueError("Réorganisation : revue du sens, responsable et preuves requis.")
     for item in raw:
         a, b = item.get("source_start_seconds"), item.get("source_end_seconds")
-        if not _number(a) or not _number(b) or not 0 <= a < b <= duration + .02 or a < previous:
+        if not _number(a) or not _number(b) or not 0 <= a < b <= duration + .02 or (a < previous and not reorder):
             raise ValueError("Coupes invalides, superposées ou hors ordre chronologique.")
+        if any(a < c["source_end_seconds"] and c["source_start_seconds"] < b for c in cuts):
+            raise ValueError("Les coupes ne doivent pas se superposer, même après réorganisation.")
         length = min(b, duration) - a
         cuts.append({"source_start_seconds": float(a), "source_end_seconds": float(min(b, duration)),
                      "output_start_seconds": round(cursor, 6), "output_end_seconds": round(cursor+length, 6)})
@@ -250,8 +257,8 @@ def analyze(source: Path, transcript: Path | None, output: Path, *, evidence: Pa
                     decision = "needs_review"
                     risks.append("Revue sémantique multimodale absente ou incomplète.")
                 candidate = {**row, "segment_id": "segment-"+digest({"source": source_hash, "cuts": cuts})[:16],
-                             "source_sha256": source_hash, "start_seconds": cuts[0]["source_start_seconds"],
-                             "end_seconds": cuts[-1]["source_end_seconds"], "cuts": cuts, "decision": decision,
+                             "source_sha256": source_hash, "start_seconds": min(c["source_start_seconds"] for c in cuts),
+                             "end_seconds": max(c["source_end_seconds"] for c in cuts), "cuts": cuts, "decision": decision,
                              "risks": risks, "synthetic": fixture,
                              "review_evidence_sha256": identity["evidence_sha256"]}
                 candidates.append(candidate)
@@ -336,7 +343,9 @@ def _ass_subtitles(segments: list[dict], cuts: list[dict], size: tuple[int, int]
             a = cut["output_start_seconds"] + start-cut["source_start_seconds"]
             b = cut["output_start_seconds"] + end-cut["source_start_seconds"]
             text = "\\N".join(_ass_text(line) for line in textwrap.wrap(row["text"], width=26 if vertical else 48))
-            lines.append(f"Dialogue: 0,{_ass_time(a)},{_ass_time(b)},Caption,,0,0,0,,{text}")
+            # Animate whole timed ASR segments. No fabricated word-level alignment.
+            motion = r"{\fad(60,50)\fscx96\fscy96\t(0,110,\fscx100\fscy100)}"
+            lines.append(f"Dialogue: 0,{_ass_time(a)},{_ass_time(b)},Caption,,0,0,0,,{motion}{text}")
     return "\n".join(lines)+"\n"
 
 
@@ -363,9 +372,10 @@ def render(source: Path, candidate: dict, output: Path, *, format: str = "vertic
     if video.get("sample_aspect_ratio") not in {None, "1:1", "N/A"}:
         raise ValueError("Pixels source non carrés : fournir une copie normalisée sans modifier les timecodes.")
     size = (1080, 1920) if format == "vertical" else (max(32, min(1280, video["width"])//32*32), max(18, min(720, video["width"]*9/16)//18*18))
-    options = {"version": VERSION, "source_sha256": source_hash, "cuts": cuts, "format": format,
+    options = {"version": RENDER_VERSION, "source_sha256": source_hash, "cuts": cuts, "format": format,
                "size": size, "transcript_sha256": fingerprint(transcript) if transcript else None,
-               "audio": "loudnorm-I-16-TP-1.5", "layout": "fit_preserve_all_pixels", "synthetic": fixture}
+               "audio": "loudnorm-I-16-TP-1.5", "layout": "fit_preserve_all_pixels", "synthetic": fixture,
+               "captions": "animated_segments_not_word_alignment", "edit_order_review": candidate.get("edit_order_review")}
     key = digest(options)
     directory = output / key[:20]
     receipt = directory / "asset.json"

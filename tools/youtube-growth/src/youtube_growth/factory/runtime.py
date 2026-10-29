@@ -193,6 +193,10 @@ def process(store: Store, config: dict, episode_id: str, *, now=None) -> dict:
             store.save_publication(row, now=now)
             store.db.execute("UPDATE jobs SET status='blocked' WHERE kind='dispatch' AND json_extract(payload,'$.publication_id')=? AND status IN ('queued','failed')", (row["id"],))
     store.event("analysis_completed", episode_id, {"candidates": len(result["candidates"]), "blockers": result.get("blockers", [])}, now=now)
+    if config.get("generation", {}).get("auto_editorial"):
+        from .editorial_runtime import discover, assess
+        result["discovery"] = discover(store, config, episode_id, use_model=True, now=now)
+        result["editorial"] = assess(store, config, episode_id=episode_id, use_model=True, now=now)
     return result
 
 
@@ -204,6 +208,9 @@ def render_candidate(store: Store, config: dict, episode_id: str, segment_id: st
     episode, candidate = store.get("episode", episode_id), store.get("candidate", segment_id)
     if not episode or not candidate or candidate.get("episode_id") != episode_id or candidate.get("decision") != "retained":
         raise ValueError("Candidat retenu et lié à l'épisode requis.")
+    opportunity = store.get("opportunity", segment_id)
+    from .editorial import assert_compatible
+    assert_compatible(opportunity, candidate, now=now)
     if episode.get("revision") and candidate.get("episode_revision") != episode["revision"]:
         raise ValueError("editorial_analysis_revision_changed")
     for existing in store.publications(episode_id):
@@ -418,7 +425,7 @@ def report(store: Store, *, episode_id=None, now=None, config=None) -> dict:
 
 def brief(store: Store, config: dict, *, episode_id=None, now=None) -> dict:
     """Prepare the next review from current evidence, without models or network."""
-    from .analytics import learning_brief
+    from .analytics import learning_brief, compare_content
     from .knowledge import knowledge_status
     current = instant(now or utcnow())
     episodes = [e for e in store.records("episode") if not episode_id or e["episode_id"] == episode_id]
@@ -431,6 +438,9 @@ def brief(store: Store, config: dict, *, episode_id=None, now=None) -> dict:
                                        store.records("experiment", episode_id), store.records("decision"), now=current,
                                        decision_observations=store.records("observation")),
             "decisions_scope": "global_configuration",
+            "comparable_performance": compare_content(store.records("observation", episode_id), store.records("performance_context"), now=current),
+            "editorial_opportunities": store.records("opportunity", episode_id),
+            "narrative_productions": store.records("narrative", episode_id),
             "resources": summarize_runs(store.records("resource_run", episode_id)),
             "readiness": [{"episode_id": e["episode_id"], "synthetic": e.get("synthetic", False),
                            "blockers": episode_blockers(e),
@@ -486,6 +496,17 @@ def run_once(store: Store, config: dict, *, now=None) -> dict:
                 result = {"status": "superseded"} if stale else render_candidate(store, config, job["episode_id"], job["payload"]["segment_id"], job["payload"]["format"], now=current)
             elif job["kind"] == "dispatch":
                 result = dispatch(store, config, job["payload"]["publication_id"], now=current if controlled else None)
+            elif job["kind"] == "narrative":
+                from .narrative import run
+                from .media import fingerprint
+                payload = job["payload"]
+                if fingerprint(Path(payload["story_path"])) != payload["story_sha256"]:
+                    result = {"status": "superseded"}
+                else:
+                    result = run(store, config, Path(payload["story_path"]), stage=payload["stage"],
+                                 format_name=payload["format"], draft=payload["draft"], now=current)
+                    if result.get("status") == "blocked":
+                        raise ValueError("narrative_research_blocked")
             elif job["kind"] == "collect":
                 result = collect(store, config, now=current)
             elif job["kind"] == "report":
@@ -528,6 +549,8 @@ def status(store: Store, *, episode_id=None, platform=None) -> dict:
     return {"mode": "simulation", "live_enabled": False, "paused": store.setting("paused", False),
             "heartbeat": store.setting("heartbeat"), "episodes": [x for x in store.records("episode") if not episode_id or x["episode_id"] == episode_id],
             "candidates": store.records("candidate", episode_id), "assets": store.records("asset", episode_id),
+            "opportunities": store.records("opportunity", episode_id), "proposals": store.records("proposal", episode_id),
+            "narratives": store.records("narrative", episode_id),
             "analyses": store.records("analysis", episode_id), "windows": store.records("window", episode_id),
             "thumbnail_bundles": store.records("thumbnail_bundle", episode_id),
             "publications": store.publications(episode_id, platform), "jobs": [j for j in store.jobs() if not episode_id or j["episode_id"] == episode_id],

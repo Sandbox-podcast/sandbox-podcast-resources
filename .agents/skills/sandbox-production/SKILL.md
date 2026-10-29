@@ -5,6 +5,8 @@ description: Rendre et contrôler les montages locaux SANDBOX depuis des coupes 
 
 # Produire les médias
 
+Pour une vidéo originale, suis [la production éditoriale](../../../docs/factory/production-editoriale.md) et [les composants narratifs](../../../docs/factory/direction-artistique-narrative.md). `narrative` conserve les étapes de recherche, scénario, storyboard, voix, rendu et métadonnées ; `--stage` reprend une étape et `--queue` utilise le worker. Conserve la distinction faits/analyses/témoignages et les vérifications orales en attente. Une voix standard ou des pistes autorisées remplacent tout clonage implicite. Le portrait exige sa propre composition. `review-narrative` ne doit être renseigné qu'après les contrôles effectivement réalisés.
+
 Entrées : source autorisée, sélection sourcée, coupes en secondes, transcription et disposition choisie. Paramètres : `episode_id`, `segment_id`, format et version. Outils : Python, FFmpeg et FFprobe, en conservant les moteurs du dépôt. Lis [le guide](../../../docs/factory/exploitation.md) et l'aide de `render` / `qa` avant exécution.
 
 Conserve le master intact et écris dans un dossier de sortie lié aux empreintes. Une correction du titre ne justifie pas de retranscription ni de réencodage. Un changement de source, de coupes ou de paramètres invalide les sorties et contrôles qui en dépendent. Ne remplace pas une ancienne version associée à une publication.
