@@ -1,0 +1,4 @@
+interface:
+  display_name: "SANDBOX Diffusion simulée"
+  short_description: "Planifier et reprendre la diffusion en simulation"
+  default_prompt: "Utilise $sandbox-diffusion pour vérifier la fenêtre de cet épisode et préparer son calendrier simulé."

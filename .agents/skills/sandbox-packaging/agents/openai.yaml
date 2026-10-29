@@ -1,0 +1,4 @@
+interface:
+  display_name: "SANDBOX Packaging"
+  short_description: "Préparer titres, miniatures et textes de diffusion"
+  default_prompt: "Utilise $sandbox-packaging pour préparer les titres, miniatures et textes de ce contenu avec leurs preuves."

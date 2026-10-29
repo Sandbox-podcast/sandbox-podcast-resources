@@ -1,0 +1,4 @@
+interface:
+  display_name: "SANDBOX Factory"
+  short_description: "Reprendre les étapes du cycle de production local"
+  default_prompt: "Utilise $sandbox-factory pour examiner l'état local et poursuivre les étapes disponibles de cette production."

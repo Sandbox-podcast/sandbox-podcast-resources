@@ -6,6 +6,7 @@ Depuis la racine :
 
 ```powershell
 python tools/repository/check_repository.py
+python tools/repository/sync_skills.py
 python -m unittest discover -s tools/repository -v
 ```
 
