@@ -1,0 +1,4 @@
+interface:
+  display_name: "StoryTelling Generator"
+  short_description: "Créer et reprendre une vidéo narrative SANDBOX"
+  default_prompt: "Utilise $sandbox-storytelling-generator pour créer une vidéo à partir de mon sujet et de mes sources, avec ElevenLabs dans le navigateur intégré."

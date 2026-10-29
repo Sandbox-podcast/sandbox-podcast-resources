@@ -1,4 +1,4 @@
 interface:
   display_name: "SANDBOX Factory"
-  short_description: "Reprendre un cycle ou une production StoryTelling"
+  short_description: "Lancer et reprendre un cycle de production SANDBOX"
   default_prompt: "Utilise $sandbox-factory pour examiner l'état local et poursuivre les étapes disponibles de cette production."
