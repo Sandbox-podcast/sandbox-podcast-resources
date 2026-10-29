@@ -40,7 +40,11 @@ try {
     $factoryParameters=@{GitHubArguments=@('pr','list')}
     if ($env:FACTORY_TEST_ACCOUNT) { $factoryParameters.Account=$env:FACTORY_TEST_ACCOUNT }
     if ($env:FACTORY_TEST_GIT -eq '1') { $factoryParameters.Git=$true }
-    & $env:FACTORY_TEST_HELPER @factoryParameters
+    if ($env:FACTORY_TEST_LITERAL -eq '1') {
+        & $env:FACTORY_TEST_HELPER -Account azerothl -Git push -u origin codex/helper-test
+    } else {
+        & $env:FACTORY_TEST_HELPER @factoryParameters
+    }
     $factoryExit=$LASTEXITCODE
 } catch {
     $factoryExit=1
@@ -57,7 +61,7 @@ exit $factoryExit
 
 @unittest.skipUnless(POWERSHELL, 'PowerShell 7 requis pour tester le script du dépôt')
 class GithubHelperTests(unittest.TestCase):
-    def run_helper(self, *, account=None, login='loukan42', missing=False, git=False, target_exit=0):
+    def run_helper(self, *, account=None, login='loukan42', missing=False, git=False, target_exit=0, literal=False):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             harness = root / 'harness.ps1'
@@ -66,7 +70,8 @@ class GithubHelperTests(unittest.TestCase):
             env = {**os.environ, 'FACTORY_TEST_HELPER': str(HELPER),
                    'FACTORY_TEST_RESULT': str(result_path), 'FACTORY_TEST_ACCOUNT': account or '',
                    'FACTORY_TEST_LOGIN': login, 'FACTORY_TEST_MISSING': '1' if missing else '0',
-                   'FACTORY_TEST_GIT': '1' if git else '0', 'FACTORY_TEST_TARGET_EXIT': str(target_exit)}
+                   'FACTORY_TEST_GIT': '1' if git else '0', 'FACTORY_TEST_TARGET_EXIT': str(target_exit),
+                   'FACTORY_TEST_LITERAL': '1' if literal else '0'}
             process = subprocess.run([POWERSHELL, '-NoProfile', '-NonInteractive', '-File', str(harness)],
                                      env=env, cwd=root, capture_output=True, text=True, timeout=30)
             result = json.loads(result_path.read_text(encoding='utf-8-sig'))
@@ -114,6 +119,12 @@ class GithubHelperTests(unittest.TestCase):
     def test_command_failure_is_propagated_and_environment_restored(self):
         code, _ = self.run_helper(account='azerothl', login='azerothl', target_exit=73)
         self.assertEqual(code, 73)
+
+    def test_documented_literal_push_forwards_single_dash_u(self):
+        code, calls = self.run_helper(account='azerothl', login='azerothl', git=True, literal=True)
+        self.assertEqual(code, 0)
+        self.assertEqual(calls[-1]['tool'], 'git')
+        self.assertEqual(calls[-1]['arguments'][4:], ['push', '-u', 'origin', 'codex/helper-test'])
 
 
 if __name__ == '__main__':

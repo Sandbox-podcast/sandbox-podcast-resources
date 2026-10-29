@@ -463,8 +463,7 @@ class PipelineTests(unittest.TestCase):
         directory = Path(pack['manual_pack'])
         old = (directory/'pack.json').read_bytes()
         (directory/'texte.txt').write_text('tampered',encoding='utf-8')
-        autonomy.calendar(self.store,self.store.get('episode','local-test'),self.config,
-            {'payload': {'local_run_key':pack['local_run_key']}},now=NOW)
+        self.drain()
         blocked = self.store.get('local_calendar','local-test')['blocked']
         self.assertTrue(any(p['publication_id'] == pack['id'] for p in blocked))
         self.assertEqual((directory/'pack.json').read_bytes(),old)
@@ -572,6 +571,56 @@ class PipelineTests(unittest.TestCase):
         self.addCleanup(self.store.close)
         self.drain()
         self.assertEqual(len(self.store.jobs()), jobs)
+
+    def test_advancing_worker_clock_reaches_idle_and_preserves_calendar_reports(self):
+        from datetime import timedelta
+        from youtube_growth.factory.contracts import instant
+        self.prepare()
+        start = instant(NOW)
+        for tick in range(60):
+            result = runtime.run_once(self.store, self.config, now=start+timedelta(seconds=tick))
+            if result['status'] == 'idle':
+                break
+        else:
+            self.fail('Le calendrier se recrée sans fin lorsque le temps avance.')
+        jobs = len(self.store.jobs())
+        reports = {p: (fingerprint(p), p.stat().st_mtime_ns) for p in (self.store.directory/'reports').glob('*')}
+        calendar = copy.deepcopy(self.store.get('local_calendar', 'local-test'))
+        for offset in range(1, 6):
+            result = runtime.run_once(self.store, self.config, now=start+timedelta(seconds=tick+offset))
+            self.assertEqual(result['status'], 'idle')
+        self.assertEqual(len(self.store.jobs()), jobs)
+        self.assertEqual(self.store.get('local_calendar', 'local-test'), calendar)
+        self.assertEqual({p: (fingerprint(p), p.stat().st_mtime_ns) for p in reports}, reports)
+        # Crossing a real slot still invalidates the forecast; idle is not a frozen cache.
+        later = start+timedelta(hours=2, minutes=1)
+        for offset in range(10):
+            result = runtime.run_once(self.store, self.config, now=later+timedelta(seconds=offset))
+            if result['status'] == 'idle':
+                break
+        else:
+            self.fail('Le nouveau créneau ne se stabilise pas.')
+        revised = self.store.get('local_calendar', 'local-test')
+        self.assertNotEqual(revised['planned'], calendar['planned'])
+        self.assertTrue(all(instant(p['proposed_at']) >= later for p in revised['planned']))
+        self.assertFalse(any(j['kind'] == 'dispatch' for j in self.store.jobs()))
+
+    def test_calendar_ignores_sqlite_timestamp_but_rechecks_pack_status(self):
+        from datetime import timedelta
+        from youtube_growth.factory.contracts import instant
+        self.prepare(); self.drain()
+        jobs = len(self.store.jobs())
+        pack = self.store.publications('local-test')[0]
+        later = instant(NOW)+timedelta(seconds=30)
+        self.store.save_publication(pack, now=later)
+        self.assertEqual(runtime.run_once(self.store, self.config, now=later)['status'], 'idle')
+        self.assertEqual(len(self.store.jobs()), jobs)
+        pack['status'] = 'blocked'
+        self.store.save_publication(pack, now=later)
+        self.assertEqual(runtime.run_once(self.store, self.config, now=later)['kind'], 'local_calendar')
+        calendar = self.store.get('local_calendar', 'local-test')
+        self.assertTrue(any(p['publication_id'] == pack['id'] for p in calendar['blocked']))
+        self.assertFalse(any(p['publication_id'] == pack['id'] for p in calendar['planned']))
 
     def test_failed_review_blocks_only_its_own_content(self):
         ModelDouble.reject_title = "Contrôler les sources"

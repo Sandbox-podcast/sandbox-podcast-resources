@@ -76,6 +76,14 @@ def artifact_signatures(store, episode: dict, key: str) -> list:
                     if isinstance(brief, dict):
                         for field in ("generation_evidence", "concept_plan", "citation_alignment"):
                             references(brief.get(field, {}))
+    for pack in store.publications(episode["episode_id"]):
+        if pack.get("local_run_key") != key:
+            continue
+        for name in ("pack_path", "manual_video_path", "manual_cover_path"):
+            if pack.get(name):
+                paths.add(pack[name])
+        if pack.get("pack_path"):
+            paths.add(str(Path(pack["pack_path"]).with_name("texte.txt")))
     result = []
     for value in sorted(paths):
         try:
@@ -188,7 +196,10 @@ def advance(store, config: dict, *, now=None) -> None:
                 local_now = instant(now or utcnow()).astimezone(PARIS)
                 clock = [local_now.date().isoformat(), sum(t <= local_now.strftime("%H:%M") for t in config["schedule"]["slots_local"])]
                 stamp = digest({"stages": stages, "clock": clock, "files": artifact_signatures(store, episode, key),
-                                "packs": [p for p in store.publications(episode["episode_id"]) if p.get("local_run_key") == key]})
+                                # Calendar exports update SQLite bookkeeping even when
+                                # their content is unchanged. It must not trigger itself.
+                                "packs": [{name: value for name, value in p.items() if name != "updated_at"}
+                                          for p in store.publications(episode["episode_id"]) if p.get("local_run_key") == key]})
                 store.enqueue("local_calendar", episode["episode_id"], payload(episode, config, calendar_revision=stamp), now=now)
 
 
