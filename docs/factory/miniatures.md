@@ -34,11 +34,23 @@ Une phrase peut montrer une conséquence, poser une question ou préciser l'enje
 
 Les images viennent du passage réellement monté ou de photos autorisées. Le moteur extrait lui-même les images vidéo aux secondes choisies et vérifie leur appartenance aux coupes. Pour une photo, conserver son empreinte, le sujet représenté et une preuve d'autorisation. Les visages des chaînes de référence, les faux intervenants et les fausses captures de logiciel n'entrent pas dans les créations SANDBOX.
 
-## Composer, cadrer et comparer
+## Concevoir une image éditoriale
 
-La composition utilise la palette bleu nuit et cyan de SANDBOX. Le brief place explicitement l'image et le texte ; le moteur ne choisit pas une mise en page au hasard. Il conserve le sujet déclaré important dans le recadrage, sépare sa zone du texte et garde une réserve dans le coin inférieur droit pour les interfaces. Ces marges sont des choix de production internes.
+Les règles de fond bleu nuit/cyan obligatoire, de bandeau SANDBOX et de deux rectangles séparés pour la photo et le texte sont retirées. Elles enfermaient les créations dans un gabarit proche d'une diapositive. Une miniature reçoit sa propre direction artistique ; l'identité du site ne détermine pas ses couleurs ni sa mise en page.
 
-Le texte s'adapte à sa zone sans coupure de mot ni débordement. Si la phrase ne tient pas dans une composition lisible, le rendu échoue : retravailler la phrase ou la composition. Agrandir un petit fichier source ne crée pas de détails ; l'audit indique l'agrandissement éventuel.
+Partir d'une scène, d'un objet ou d'une relation visuelle que le public reconnaît : un commerce et ses tâches, une demande transformée en application, des agents pilotés depuis un téléphone. Le visage peut porter un point de vue si sa présence aide le sujet. Un portrait posé à côté d'une phrase ne constitue pas à lui seul le concept.
+
+Les exemples de Lou et les références de grandes chaînes IA servent à examiner des choix concrets : détourages propres, taille des sujets, lumière cohérente, profondeur, contraste et bandeaux typographiques. Un montage dense peut fonctionner si ses masses restent distinctes en petit. Une composition sobre peut fonctionner si son idée visuelle reste forte. Ni le rouge, ni le jaune, ni une expression étonnée ne sont une recette universelle. Ne pas copier les fausses urgences ou les promesses d'un autre sujet.
+
+Employer une phrase française naturelle. "11 idées pour ton commerce" et "11 façons d'utiliser l'IA" sont compréhensibles ; "11 usages IA ton commerce" est rejeté avant rendu. Réduire le texte en choisissant une idée plus précise, sans supprimer les liens grammaticaux. Un numéro d'épisode ou le logotype n'a pas priorité sur la promesse.
+
+Pour un visuel raster, utiliser ImageGen lorsqu'il est disponible, ou composer un montage photo avec les assets autorisés. Les objets et décors d'illustration peuvent être créés ; les signaler dans la provenance. Conserver l'identité des personnes réelles et leurs expressions autorisées. Ne pas présenter une illustration comme une capture de logiciel, une réaction enregistrée ou une automatisation effectivement démontrée.
+
+Le moteur de la factory reçoit trois **créations finies** avec `image.kind=finished_artwork`. Il vérifie le format, les empreintes et les preuves, puis exporte les images et aperçus. Il n'ajoute ni bandeau, ni fond imposé, ni texte supplémentaire. Son ancien rendu par rectangles est réservé aux fixtures synthétiques et refusé pour un épisode réel.
+
+Le brief indique les zones importantes du texte et du sujet. Les objets peuvent se superposer pour construire de la profondeur ; conserver les visages, les mots et la réserve de durée YouTube lisibles. Une interdiction de tout chevauchement entre deux grands rectangles n'est plus une règle artistique.
+
+Le second lecteur vérifie le texte déjà intégré : orthographe, grammaire, mots entiers et lisibilité aux tailles de contrôle. Le moteur ne sait pas certifier le lettrage d'une image raster. L'ajustement automatique de taille et le refus de débordement restent des contrôles du gabarit de fixture uniquement. Agrandir un petit fichier source ne crée pas de détails ; l'audit indique l'agrandissement éventuel.
 
 Chaque livraison contient trois JPEG, leurs aperçus à 320 et 160 pixels, une planche de comparaison avec les titres et le brief de conception. Lire aussi cette planche sur fond clair, puis les images sur fond sombre. Vérifier le premier élément identifié, les mots encore lisibles, les détails perdus et les ambiguïtés du couple titre/image.
 
@@ -48,7 +60,11 @@ Le défaut d'export est 3840 x 2160 en JPEG, avec un budget interne de 1,9 Mo pa
 
 La personne ou l'agent qui a conçu le brief ne valide pas seul ses propositions. Le second lecteur reçoit le passage, la transcription, les preuves, les trois images et les aperçus. Il regarde les fichiers et consigne une revue pour chaque concept, avec ses objections et les corrections nécessaires. Un nom de relecteur dans un JSON ne prouve pas qu'il a fait cet examen.
 
-Les six contrôles sont : fidélité au contenu, complémentarité titre/image, lisibilité mobile, composition, charte et droits, différence des hypothèses. Le choix initial est une proposition éditoriale argumentée. Aucun gagnant de performance n'est déclaré à ce stade.
+Les six contrôles restent : fidélité au contenu, complémentarité titre/image, lisibilité mobile, composition, identité et droits, différence des hypothèses. Le contrôle de composition porte aussi sur la direction artistique : scène comprise rapidement, détourages et lumière cohérents, hiérarchie des masses, typographie intégrée et absence de rendu de diapositive. Le contrôle d'identité ne réimpose pas la palette du site.
+
+Placer les nouvelles propositions à côté des références, à la même taille, puis examiner les deux avec leurs titres. Le second lecteur décrit les écarts visibles et demande une nouvelle version si la qualité reste insuffisante. Il peut refuser une miniature techniquement conforme, fidèle et lisible. Trois lignes "passed" et des empreintes ne prouvent pas un niveau professionnel. Le choix initial reste éditorial ; aucun gagnant de performance n'est déclaré à ce stade.
+
+Un rejet de Lou invalide le choix concerné même après revue. Conserver les versions rejetées pour comprendre la correction, produire de nouveaux fichiers versionnés et empêcher un rappel ou un test futur de reprendre les anciennes images. Pour une reprise de catalogue, inventorier les vidéos et variantes affectées ; conserver les résultats d'expériences actives et préparer leurs remplaçantes séparément.
 
 Le programme exige une attestation distincte liée au contenu exact des images, du brief et du packaging. Il vérifie leurs empreintes avant planification et juste avant envoi simulé. Changer le titre, le texte, le concept choisi ou un fichier invalide la revue. Une revue vidéo réussie ne valide pas les miniatures. Une miniature non conforme bloque sa publication, tout en laissant les autres contenus avancer.
 
@@ -77,6 +93,10 @@ Utiliser `$sandbox-packaging` pour préparer le brief. Le JSON attendu par `thum
 | Choix initial | `preferred_concept_id`, `selection_reason` |
 
 `image.kind=episode_frame` prend `source_time_seconds`. `authorized_photo` prend `path`, `sha256`, `rights_evidence` et `subject_identity`. Les deux demandent `crop` et `focus_box`, rectangles `[x,y,largeur,hauteur]` normalisés entre 0 et 1. Les rectangles `image_box` et `text_box` s'expriment sur un canevas de travail de 1280 x 720, indépendamment de la définition d'export.
+
+Pour un épisode réel, utiliser `image.kind=finished_artwork` avec `path`, `sha256`, `rights_evidence` et `subject_identity`. `rights_evidence` décrit les assets photographiques et les éléments illustrés ou générés, avec leurs sources. La création complète doit être en 16:9 et au moins 1280 × 720. Garder `crop=[0,0,1,1]`, `image_box=[0,0,1280,720]` et un `focus_box` autour du sujet essentiel. `text_box` repère le texte déjà intégré ; il n'en commande pas un nouveau rendu. Le concept contient aussi `art_direction`, `visual_story` et `typography_reason`. Les types historiques restent documentés pour relire les anciens briefs et exécuter les fixtures, sans produire de nouvelles miniatures réelles.
+
+Pour le worker local autonome, placer ce brief dans `episodes/EPISODE/autonomy/EMPREINTE_MASTER_24/finished-artwork/ASSET_ID/brief.json`, sous le répertoire de travail indiqué dans le message `local_finished_artwork_required`. Les images relatives sont résolues depuis ce fichier. Chaque concept fournit aussi son `editorial_question`, vérifiée contre les propos par la revue locale. Sans création finale, le worker bloque cette étape avant tout appel modèle ; il ne remplace pas l'image manquante par le gabarit rejeté. Une fois le brief installé, reprendre le job `local_thumbnails`. Les autres étapes et les fixtures continuent normalement.
 
 Les références portent `reference_id`, `channel`, `video_url`, `thumbnail_url`, `observed_at`, `format`, `selection_reason`, `visual_observation`, `title_image_relation`, `takeaway`, `limitations`, `visually_inspected=true` et `comparable_format`. Les concepts citent leurs `reference_ids` et `evidence_ids`. Le relevé JSON fournit les références examinées ; choisir celles qui servent réellement le passage.
 

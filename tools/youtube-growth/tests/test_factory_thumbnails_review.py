@@ -97,6 +97,55 @@ class ThumbnailReviewIndependentTests(unittest.TestCase):
         return thumbnails.create_bundle(self.brief, self.episode, self.candidate, self.asset,
                                          self.root / "thumbnails", self.config, now=NOW)
 
+    def finished_brief(self):
+        image = Image.new("RGB", (1280, 720), "#cf523d")
+        ImageDraw.Draw(image).rectangle((0, 0, 250, 150), fill="#ffd51c")
+        path = self.root / "finished.png"
+        image.save(path)
+        brief = copy.deepcopy(self.brief)
+        for concept in brief["concepts"]:
+            concept.update(art_direction="Fixture aux couleurs libres.", visual_story="Scène synthétique.",
+                           typography_reason="Lettrage déjà intégré.", image_box=[0, 0, 1280, 720],
+                           text_box=[30, 20, 400, 160])
+            concept["image"].update(kind="finished_artwork", path=str(path), sha256=fingerprint(path),
+                                    crop=[0, 0, 1, 1], focus_box=[.3, .3, .3, .3])
+        return brief, path
+
+    def test_finished_artwork_is_exported_without_brand_header_or_second_lettering(self):
+        self.brief, path = self.finished_brief()
+        self.episode["synthetic"] = False
+        for reference in self.brief["benchmark"]["references"]:
+            reference.pop("synthetic")
+        bundle = self.create()
+        result = Image.open(bundle["variants"][0]["thumbnail"]["path"])
+        self.assertLess(sum(abs(a-b) for a, b in zip(result.getpixel((4, 4)), (255, 213, 28))), 15)
+        self.assertLess(sum(abs(a-b) for a, b in zip(result.getpixel((900, 300)), (207, 82, 61))), 15)
+        self.assertEqual(result.size, (1280, 720))
+        reviewed = thumbnails.review_bundle(bundle, reviewer="art-reviewer", evidence="Synthetic artwork test",
+                                             checks=sorted(thumbnails.CHECKS), now=NOW)
+        thumbnails.validate_bundle(reviewed, asset=self.asset, require_review=True)
+        Path(bundle["artifacts"][0]["path"]).write_bytes(b"replaced artwork")
+        with self.assertRaises(ValueError):
+            thumbnails.validate_bundle(reviewed, asset=self.asset, require_review=True)
+
+    def test_finished_artwork_rejects_tampering_cropping_and_missing_art_direction(self):
+        brief, path = self.finished_brief()
+        for change in (lambda c: c["image"].update(sha256="invalid"),
+                       lambda c: c["image"].update(crop=[0, 0, .8, 1]),
+                       lambda c: c.update(art_direction=""),
+                       lambda c: c.update(image_box=[40, 80, 1200, 600])):
+            changed = copy.deepcopy(brief)
+            change(changed["concepts"][0])
+            with self.assertRaises(ValueError):
+                thumbnails.validate_brief(changed, self.episode, self.candidate, self.asset, self.config, now=NOW)
+
+    def test_real_episode_cannot_fall_back_to_the_automatic_fixture_layout(self):
+        self.episode["synthetic"] = False
+        for reference in self.brief["benchmark"]["references"]:
+            reference.pop("synthetic")
+        with self.assertRaisesRegex(ValueError, "gabarit automatique"):
+            self.create()
+
     def test_a_quote_cannot_be_located_inside_a_wider_transcript_cue_by_guessing(self):
         brief = copy.deepcopy(self.brief)
         brief["content_evidence"][0].update(start_seconds=2, end_seconds=8)

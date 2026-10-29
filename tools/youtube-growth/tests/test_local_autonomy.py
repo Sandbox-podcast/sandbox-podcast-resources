@@ -70,7 +70,7 @@ class ModelDouble:
             result['concepts']=[{k:v for k,v in row.items() if k in schema['properties']['concepts']['items']['properties']} for row in result['concepts']]
         elif role == "citation_alignment":
             result = {"assignments": [{"concept_index": i,
-                "spoken_unit_index": next(u["index"] for u in data["spoken_units"] if data["concepts"][i]["anchor_term"] in autonomy.anchor_words(u["text"])),
+                "spoken_unit_index": next(u["index"] for u in data["spoken_units"] if not data["concepts"][i].get("anchor_term") or data["concepts"][i]["anchor_term"] in autonomy.anchor_words(u["text"])),
                 "supported": not self.unsupported_evidence, "reason": "Association synthétique du double de test."} for i in range(3)]}
         elif role == "packaging_concept":
             plan = data["plan"]
@@ -313,6 +313,55 @@ class PipelineTests(unittest.TestCase):
             autonomy.thumbnails(self.store,episode,self.config,{'payload':autonomy.payload(episode,self.config,
                 asset_id=pack['asset_id'],packaging_version=autonomy.PACKAGING_VERSION,quality_version=autonomy.QUALITY_VERSION)},now=NOW)
         self.assertEqual(self.store.publication(pack['id']),before)
+
+    def test_real_thumbnail_job_waits_for_finished_artwork_before_model_calls(self):
+        self.prepare(); self.drain()
+        episode = self.store.get('episode', 'local-test')
+        episode['synthetic'] = False
+        asset = self.store.records('asset')[0]
+        job = {'payload': autonomy.payload(episode, self.config, asset_id=asset['asset_id'],
+                packaging_version=autonomy.PACKAGING_VERSION, quality_version=autonomy.QUALITY_VERSION)}
+        with patch.object(autonomy, '_model', side_effect=AssertionError('No model before artwork')):
+            with self.assertRaisesRegex(local_models.LocalModelError, 'local_finished_artwork_required'):
+                autonomy.thumbnails(self.store, episode, self.config, job, now=NOW)
+
+    def test_real_thumbnail_worker_imports_finished_artwork_and_keeps_local_review(self):
+        from PIL import Image
+        self.prepare(); self.drain()
+        episode = self.store.get('episode', 'local-test')
+        episode['synthetic'] = False
+        asset = self.store.records('asset')[0]
+        previous = next(b for b in self.store.records('thumbnail_bundle') if b['asset_sha256'] == asset['sha256'])
+        brief = json.loads(Path(previous['brief_path']).read_text(encoding='utf-8'))
+        brief['created_by'] = 'artist-alice'
+        directory = autonomy._directory(self.store, episode) / 'finished-artwork' / asset['asset_id']
+        directory.mkdir(parents=True)
+        for reference in brief['benchmark']['references']:
+            reference.pop('synthetic', None)
+        for index, concept in enumerate(brief['concepts']):
+            concept.pop('anchor_term', None)
+            image = directory / ('art-'+str(index)+'.png')
+            Image.new('RGB', (1280, 720), (210, 60+index*40, 45)).save(image)
+            concept.update(art_direction='Fixture éditoriale.', visual_story='Objet illustré de test.',
+                typography_reason='Lettrage déjà intégré.', image_box=[0, 0, 1280, 720], text_box=[30, 30, 500, 200])
+            concept['image'] = {'kind':'finished_artwork', 'path':image.name, 'sha256':fingerprint(image),
+                'rights_evidence':'Fixture synthétique temporaire.', 'subject_identity':'Aucune personne.',
+                'crop':[0, 0, 1, 1], 'focus_box':[.2, .3, .4, .3]}
+        autonomy.write_json(directory / 'brief.json', brief)
+        job = {'episode_id':episode['episode_id'], 'payload':autonomy.payload(episode, self.config, asset_id=asset['asset_id'],
+            packaging_version=autonomy.PACKAGING_VERSION, quality_version=autonomy.QUALITY_VERSION)}
+        with patch.object(autonomy, 'portrait_frame', side_effect=AssertionError('No template portrait')):
+            result = autonomy.thumbnails(self.store, episode, self.config, job, now=NOW)
+        self.assertEqual(result['status'], 'local_passed')
+        bundle = self.store.get('thumbnail_bundle', result['bundle_id'])
+        self.assertFalse(bundle['synthetic'])
+        self.assertTrue(bundle['local_review']['passed'])
+        self.assertEqual(bundle['created_by'], 'artist-alice')
+        from youtube_growth.factory.thumbnails import review_bundle, CHECKS
+        with self.assertRaises(ValueError):
+            review_bundle(bundle, reviewer='artist-alice', evidence='Self-review', checks=sorted(CHECKS), now=NOW)
+        exported = Image.open(bundle['variants'][0]['thumbnail']['path'])
+        self.assertLess(sum(abs(a-b) for a,b in zip(exported.getpixel((5, 5)), (210, 60, 45))), 15)
 
     def test_quality_upgrade_rechecks_media_without_repeating_compatible_packaging(self):
         self.prepare(); self.drain()
