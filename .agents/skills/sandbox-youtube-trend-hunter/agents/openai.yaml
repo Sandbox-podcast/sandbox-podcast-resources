@@ -1,4 +1,4 @@
 interface:
   display_name: "SANDBOX YouTube Trend Hunter"
-  short_description: "Veille YouTube gratuite et préparation vidéo locale"
-  default_prompt: "Utilise $sandbox-youtube-trend-hunter pour rechercher les opportunités YouTube du jour et présenter leurs preuves."
+  short_description: "Des tendances sourcées au brief StoryTelling"
+  default_prompt: "Utilise $sandbox-youtube-trend-hunter pour proposer les tendances du jour, puis attends mon choix pour préparer le brief StoryTelling."

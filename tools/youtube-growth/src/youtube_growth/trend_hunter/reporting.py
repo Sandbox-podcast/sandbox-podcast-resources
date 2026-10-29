@@ -16,6 +16,7 @@ def markdown(report):
     lines += ["", "# Veille YouTube SANDBOX", "", "DÉMONSTRATION SYNTHÉTIQUE." if report["synthetic"] else "Collecte réelle ; aucune statistique simulée.", "",
               "Collecte : "+report["collected_at"]+". Mode : "+report["mode"]+".", "",
               f"{len(report['opportunities'])} opportunité(s) retenue(s) sur {report['requested_count']} demandées. Les sujets insuffisamment documentés restent écartés.", "",
+              "Choisis un sujet ou un rang dans cette analyse pour préparer son dossier d'entrée StoryTelling. Ce choix ne valide ni le scénario ni une dépense sonore.", "",
               "Scores heuristiques arrondis, sans prédiction de vues. Critères absents : contribution nulle, sans redistribution de poids. Concurrence : échantillon limité, jamais un recensement.", "",
               "Couverture : "+report["coverage_notice"], "", "Sources et quotas :", ""]
     for name, result in report["source_status"].items():

@@ -37,3 +37,13 @@ Ce test vérifie le montage local. Il ne valide ni une narration ElevenLabs rée
 L'API ElevenLabs n'a pas été appelée avec un compte réel. La recherche n'en consomme jamais les crédits. L'import manuel du MP3 reste le parcours par défaut ; la génération facultative exige un dépassement désactivé côté compte et des limites vérifiables.
 
 La découverte du nouveau nom dans les catalogues d'une nouvelle session Codex ou Claude Code n'est pas attestée par la seule validation des fichiers. Les points d'entrée existent et sont valides ; leur chargement doit être constaté dans le harnais utilisé.
+
+## Entrée StoryTelling, issue #20
+
+Le [contrat de cadrage de la PR #19](https://github.com/Sandbox-podcast/sandbox-podcast-resources/pull/19) a été lu à la révision `2e0266f522530174f618641425a8f10b63722c7c`. Après une sélection explicite du sujet, `storytelling RANG --run IDENTIFIANT` exporte `storytelling-brief.json`, les documents archivés, leurs métadonnées, les citations et la provenance des observations. Ce transfert ne produit ni scénario ni voix.
+
+Sept tests couvrent le transfert, le choix lié à l'analyse d'origine, les sources absentes ou modifiées, les versions et les reprises identiques. Le test de compatibilité exécute les vrais `frame`, `import_sources` et `build_request` de cette révision de la PR #19, dans un autre interpréteur. Le cadrage est accepté, les documents sont importés sans accès réseau, leurs citations restent reliées aux bons identifiants et la requête de scénario reçoit les sources. L'original documentaire est supprimé avant cet import pour vérifier que le dossier transféré suffit.
+
+La recette utilise un sujet et des textes synthétiques. Elle ne confirme aucune tendance réelle ni aucun droit sur une voix. Le budget monétaire et les crédits navigateur restent à zéro par défaut, le mode documentaire attend une validation éditoriale et les choix de voix restent visibles. Une sélection de tendance ne constitue pas une approbation du scénario. Le test de compatibilité peut utiliser `STORYTELLING_CONTRACT_ROOT` pour pointer vers le checkout cible ; sans ce checkout ni le module installé, ce seul test est ignoré.
+
+Après ajout du transfert, la suite complète exécute 296 tests avec succès, dont 5 ignorés selon leurs prérequis ; le checkout de la PR #19 est fourni pour que le test de compatibilité soit effectivement exécuté. Les sept tests ciblés passent aussi après les derniers contrôles de voix et de crédits transmis. Les huit tests du dépôt, les seize validations de skills, les liens locaux, la compilation et le contrôle de l'index sont vérifiés séparément.

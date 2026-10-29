@@ -26,6 +26,15 @@ def main(argv=None):
     subs.add_parser("ai-tech", help="Analyse IA et tech.")
     subs.add_parser("demo", help="Démonstration synthétique isolée.")
     subs.add_parser("doctor", help="Vérifier les prérequis sans réseau.")
+    transfer = subs.add_parser("storytelling", help="Exporter une tendance choisie vers le cadrage StoryTelling (PR19).")
+    transfer.add_argument("rank", type=int)
+    transfer.add_argument("--run", dest="run_id", required=True)
+    transfer.add_argument("--selected-by", required=True)
+    transfer.add_argument("--selection-note", required=True)
+    transfer.add_argument("--research-dossier", type=Path)
+    transfer.add_argument("--angle")
+    transfer.add_argument("--voice-name")
+    transfer.add_argument("--browser-credit-limit", type=int, default=0)
     for name in ("prepare", "voice", "render"):
         child = subs.add_parser(name)
         child.add_argument("rank", type=int)
@@ -65,6 +74,13 @@ def main(argv=None):
                     raise ValueError("Utiliser un état distinct pour la démonstration et les données réelles.")
                 report, path = demo(store, cfg) if args.command == "demo" else analyze(store, cfg)
                 result = {"status": "demonstration" if report["synthetic"] else "analyzed", "count": len(report["opportunities"]), "report": str(path / "report.md"), "json": str(path / "report.json"), "run_id": report["run_id"], "source_status": report["source_status"]}
+            elif args.command == "storytelling":
+                from .storytelling import handoff
+                path, manifest = handoff(store, args.rank, cfg, run_id=args.run_id, selected_by=args.selected_by,
+                                         selection_note=args.selection_note, research_path=args.research_dossier,
+                                         angle=args.angle, voice_name=args.voice_name, browser_credit_limit=args.browser_credit_limit)
+                result = {"directory": str(path), "status": manifest["status"], "brief": manifest["brief_path"],
+                          "story_id": manifest["story_id"], "remaining_decisions": manifest["remaining_decisions"]}
             elif args.command == "prepare":
                 path = prepare(store, args.rank, cfg, run_id=args.run_id, editorial_path=args.editorial)
                 result = {"directory": str(path), "status": load_json(path / "pack.json")["status"]}
