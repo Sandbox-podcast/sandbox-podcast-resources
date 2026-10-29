@@ -99,6 +99,27 @@ class LiveHttpTests(unittest.TestCase):
             self.assertFalse(store.setting("paused", False))
             self.assertEqual(store.db.execute("SELECT count(*) FROM events WHERE kind='ui_queue_pause'").fetchone()[0], 0)
 
+    def test_storytelling_page_and_authenticated_framing(self):
+        code, _, page = self.request("GET", "/storytelling")
+        self.assertEqual(code, 200)
+        self.assertIn("StoryTelling Generator", page.decode("utf-8"))
+        body = json.dumps({"topic": "Sujet de recette", "notes": "Données fournies"})
+        code, _, _ = self.request("POST", "/api/storytelling", body=body,
+                                  headers={"Content-Type": "application/json"})
+        self.assertEqual(code, 403)
+        code, _, _ = self.request("POST", "/api/storytelling", body=body,
+                                  headers={"Content-Type": "application/json", "X-Factory-Token": self.token(),
+                                           "Origin": "https://example.com"})
+        self.assertEqual(code, 403)
+        code, _, result = self.request("POST", "/api/storytelling", body=body,
+                                       headers={"Content-Type": "application/json", "X-Factory-Token": self.token()})
+        self.assertEqual(code, 200)
+        story = json.loads(result)
+        self.assertEqual(story["production_status"], "needs_framing")
+        code, _, result = self.request("GET", "/api/storytelling")
+        self.assertEqual(code, 200)
+        self.assertEqual(json.loads(result)["stories"][0]["story_id"], story["story_id"])
+
     def test_pause_and_resume_persist_across_http_connections(self):
         token = self.token()
         code, _, _ = self.action({"action": "pause"}, token=token)

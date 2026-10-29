@@ -104,10 +104,13 @@ class StorytellingHandoffTests(unittest.TestCase):
             self.export(research_path=self.root / "dossier.json", angle="Autre angle.")
 
     def test_cli_exports_the_selected_run_without_importing_the_factory(self):
+        environment = dict(os.environ, PYTHONUTF8="1")
+        source = str(Path(__file__).resolve().parents[1] / "src")
+        environment["PYTHONPATH"] = os.pathsep.join(filter(None, (source, environment.get("PYTHONPATH"))))
         completed = subprocess.run([sys.executable, "-m", "youtube_growth.trend_hunter", "--state-dir", str(self.store.directory),
                                     "storytelling", "1", "--run", self.report["run_id"], "--selected-by", "Lou (fixture)",
                                     "--selection-note", "Celle-ci me plaît", "--research-dossier", str(self.root / "dossier.json")],
-                                   capture_output=True, text=True, encoding="utf-8", env=dict(os.environ, PYTHONUTF8="1"), timeout=30)
+                                   capture_output=True, text=True, encoding="utf-8", env=environment, timeout=30)
         self.assertEqual(completed.returncode, 0, completed.stderr)
         result = json.loads(completed.stdout)
         self.assertEqual(result["status"], "ready_for_storytelling_framing")

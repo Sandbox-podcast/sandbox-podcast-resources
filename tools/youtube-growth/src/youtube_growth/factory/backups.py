@@ -128,6 +128,13 @@ def _registered_files(record: dict):
             yield artifact["path"], "narrative-artifact", artifact["sha256"]
         for stage in row.get("stages", {}).values():
             yield stage["receipt"], "narrative-receipt", stage.get("sha256")
+    elif record["kind"] in {"storytelling_project","storytelling_run","storytelling_script"}:
+        for item in row.get("artifacts",[]):
+            yield item["path"],"storytelling-artifact",item.get("sha256")
+    elif record["kind"]=="storytelling_browser_request":
+        for key in ("request_file","result"):
+            item=row.get(key)
+            if item:yield item["path"],"storytelling-browser-"+key,item.get("sha256")
 
 
 def _inventory(records: list[dict], state: Path) -> list[dict]:
@@ -146,7 +153,7 @@ def _inventory(records: list[dict], state: Path) -> list[dict]:
             raise ValueError("Un média a changé depuis son enregistrement ; sauvegarde refusée.")
         if str(source) in entries:
             return
-        if any(source.is_relative_to(state / folder) for folder in ("episodes", "narratives", "narrative-cache", "editorial", "story-design", "research-sources")):
+        if any(source.is_relative_to(state / folder) for folder in ("episodes", "narratives", "narrative-cache", "editorial", "story-design", "research-sources", "storytelling", "storytelling-cache")):
             relative = source.relative_to(state).as_posix()
         elif relative is None:
             identity = _episode_id(episode_id or "research")
@@ -158,7 +165,7 @@ def _inventory(records: list[dict], state: Path) -> list[dict]:
         destinations[relative] = str(source)
         entries[str(source)] = {"relative_path": relative, "original_path": str(source), "sha256": sha,
                                 "size_bytes": source.stat().st_size, "role": role, "episode_id": episode_id}
-    for folder in ("episodes", "narratives", "narrative-cache", "editorial", "story-design", "research-sources"):
+    for folder in ("episodes", "narratives", "narrative-cache", "editorial", "story-design", "research-sources", "storytelling", "storytelling-cache"):
         episodes = state / folder
         if not episodes.exists():
             continue
@@ -279,7 +286,7 @@ def _validate_receipt(snapshot: Path) -> tuple[dict, Path]:
         if not isinstance(row, dict) or not isinstance(row.get("original_path"), str) or _path_key(row["original_path"]) is None:
             raise ValueError("Origine de fichier absolue requise.")
         relative = row.get("relative_path")
-        if _safe_relative(relative).parts[0] not in {"episodes", "sources", "narratives", "narrative-cache", "editorial", "story-design", "research-sources"}:
+        if _safe_relative(relative).parts[0] not in {"episodes", "sources", "narratives", "narrative-cache", "editorial", "story-design", "research-sources", "storytelling", "storytelling-cache"}:
             raise ValueError("Le média n'appartient pas aux épisodes ou à leurs sources.")
         source = _under(payload, relative)
         if relative in destinations or _path_key(row["original_path"]) in originals:

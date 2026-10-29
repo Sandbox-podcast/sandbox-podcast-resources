@@ -77,6 +77,7 @@ def parser():
     restore.add_argument("snapshot", type=Path)
     serve = commands.add_parser("serve")
     serve.add_argument("--port", type=int, default=8765)
+    serve.add_argument("--with-worker", action="store_true", help="Exécuter aussi la file locale pendant que le tableau reste ouvert")
     demo = commands.add_parser("demo")
     demo.add_argument("--fixture-dir", type=Path)
     record = commands.add_parser("record")
@@ -107,6 +108,18 @@ def parser():
     design = commands.add_parser("draft-story")
     design.add_argument("brief", type=Path)
     design.add_argument("--generate", action="store_true")
+    storytelling = commands.add_parser("storytelling-frame", help="Enregistrer le cadrage d'une nouvelle histoire")
+    storytelling.add_argument("brief", type=Path)
+    story_run=commands.add_parser("storytelling-run")
+    story_run.add_argument("story_id")
+    story_run.add_argument("--queue",action="store_true")
+    story_import=commands.add_parser("storytelling-script")
+    story_import.add_argument("story_id")
+    story_import.add_argument("file",type=Path)
+    story_control=commands.add_parser("storytelling-control")
+    story_control.add_argument("story_id")
+    story_control.add_argument("action",choices=["pause","resume","cancel","approve","lock","unlock"])
+    story_control.add_argument("--scene-id")
     narrative = commands.add_parser("narrative")
     narrative.add_argument("story", type=Path)
     narrative.add_argument("--stage", choices=["all", "research", "script", "storyboard", "voice", "render", "metadata"], default="all")
@@ -134,7 +147,8 @@ def doctor(store, config):
             "heartbeat": health, "runtime_executed": health is not None,
             "production_capabilities": {"editorial": "local_model_configured" if config.get("generation", {}).get("local_command") else "structured_agent_input_required",
                 "narrative_renderer": "ffmpeg_and_pillow", "stock_system_voice": "Windows_System_Speech_or_imported_recordings",
-                "elevenlabs": "not_enabled_paid_calls_disabled", "human_content_validation": "required", "social_publication": "disabled"},
+                "elevenlabs": "browser_session_handoff_or_opt_in_api", "storytelling": "sources_script_audio_timeline_ffmpeg_exports",
+                "human_content_validation": "required", "social_publication": "disabled"},
             "accounts": {k: {"configured": len(v), "real_connection_verified": False} for k, v in config["authorized_accounts"].items()},
             "skills": [{"name": x.parent.name, "path": str(x), "catalog_verification": "requires_host_catalog"} for x in (ROOT / ".agents/skills").glob("sandbox-*/SKILL.md")],
             "blockers": (["ffmpeg_or_ffprobe_missing"] if not all(tools.values()) else [])+["real_connectors_disabled", "no_background_model_configured"],
@@ -213,7 +227,7 @@ def main(argv=None):
             result = run_demo(target, config, fixture_dir=args.fixture_dir, now=now)
         elif args.command == "serve":
             from .web import serve
-            serve(directory, config, port=args.port)
+            serve(directory, config, port=args.port, with_worker=args.with_worker)
             return
         else:
             with Store(directory) as store:
@@ -238,6 +252,18 @@ def main(argv=None):
                 elif command == "draft-story":
                     from .editorial_runtime import draft_story
                     result = draft_story(store, config, args.brief, use_model=args.generate, now=now)
+                elif command == "storytelling-frame":
+                    from .storytelling import frame
+                    result = frame(store, load_json(args.brief), now=now)
+                elif command == "storytelling-run":
+                    from .storytelling import enqueue, run
+                    result=enqueue(store,args.story_id,now=now) if args.queue else run(store,config,args.story_id,now=now)
+                elif command == "storytelling-script":
+                    from .storytelling import import_script
+                    result=import_script(store,args.story_id,load_json(args.file),now=now)
+                elif command == "storytelling-control":
+                    from .storytelling import control
+                    result=control(store,args.story_id,args.action,scene_id=args.scene_id,now=now)
                 elif command == "narrative":
                     from .narrative import run
                     from .media import fingerprint

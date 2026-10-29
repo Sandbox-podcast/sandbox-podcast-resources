@@ -11,3 +11,15 @@ python -m unittest discover -s tools/repository -v
 ```
 
 La [structure du dépôt et la migration locale](../../docs/organisation.md) précisent où ranger les fichiers sur chaque ordinateur.
+
+## Compte GitHub SANDBOX
+
+Toutes les opérations de ce dépôt utilisent `loukan42`. Pour GitHub CLI, passer par le script qui sélectionne le compte, vérifie son identité et restaure l'environnement de la session après la commande :
+
+```powershell
+& ./tools/repository/github.ps1 api user --jq .login
+& ./tools/repository/github.ps1 pr list
+& ./tools/repository/github.ps1 pr view 19 --json 'author,state'
+```
+
+L'identité Git et le credential helper sont configurés localement dans le dépôt commun à ses worktrees. Les jetons restent dans le gestionnaire de credentials ; aucun fichier versionné ne les contient. Les consignes du dépôt interdisent le repli vers un autre compte si `loukan42` est indisponible.

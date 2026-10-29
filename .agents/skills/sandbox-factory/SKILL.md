@@ -1,6 +1,6 @@
 ---
 name: sandbox-factory
-description: Lancer, reprendre ou diagnostiquer un cycle complet de la factory SANDBOX, du master aux rendus, packs et bilan. Utiliser pour coordonner plusieurs étapes ; pour une seule étape, appliquer son skill spécialisé. Diffusion simulée uniquement.
+description: Lancer, reprendre ou diagnostiquer un cycle complet SANDBOX, du master aux rendus et au bilan, ou produire une histoire avec StoryTelling Generator. Utiliser pour coordonner plusieurs étapes ; pour une seule étape, appliquer son skill spécialisé. Diffusion simulée uniquement.
 ---
 
 # Factory SANDBOX
@@ -9,7 +9,7 @@ Depuis la racine du dépôt, définir `PYTHONPATH=tools/youtube-growth/src` et u
 
 ## Reprendre le travail
 
-1. Exécuter `doctor` et `status` sur l'état choisi. Recueillir `episode_id`, manifeste, master autorisé terminé, transcription disponible, preuves et prochain tournage en Europe/Paris. Importer seulement après confirmation de copie terminée.
+1. Exécuter `doctor` et `status` sur l'état choisi. Pour un épisode, recueillir `episode_id`, manifeste, master autorisé terminé, transcription disponible, preuves et prochain tournage en Europe/Paris ; importer seulement après confirmation de copie terminée. Pour une histoire originale, partir de son brief sans exiger un master d'épisode.
 2. Choisir l'étape utile dans le tableau ci-dessous. Continuer les étapes indépendantes si une entrée manque : une URL absente bloque la diffusion concernée, pas l'analyse locale.
 3. Vérifier les sorties, empreintes et reçus. Conserver comme manquants les examens impossibles. Une réponse d'agent ne constitue ni une revue humaine ni une autorisation sociale.
 4. Terminer par le calendrier simulé et le bilan si le périmètre le demande. Après fermeture, interdire les nouveaux posts tout en poursuivant mesures et expériences existantes.
@@ -25,5 +25,7 @@ Depuis la racine du dépôt, définir `PYTHONPATH=tools/youtube-growth/src` et u
 | Chercher de nouveaux sujets sur Internet | [sandbox-youtube-trend-hunter](../sandbox-youtube-trend-hunter/SKILL.md) |
 
 Pour la découverte multiformat et le parcours `research` / `draft-story` / `narrative`, lire [la production éditoriale](../../../docs/factory/production-editoriale.md). `discover` utilise toute la transcription ; les notes d'`editorial` et d'`opportunities` restent motivées et sans quota. Utiliser `--queue` pour les réservations de worker. Sans modèle local, traiter dans la conversation la requête exportée plutôt que prétendre à une génération exécutée en arrière-plan.
+
+Pour StoryTelling Generator, lire [le parcours et ses reprises](references/storytelling.md), puis [son tutoriel](../../../docs/factory/storytelling-generator.md). Le sujet vient du brief de Lou ; le corpus narratif fournit une méthode d'écriture. Si le Trend Hunter a préparé `storytelling-brief.json`, utiliser ce dossier et ses sources pour le cadrage, sans demander à Lou de les recopier. La sélection du sujet ne valide ni le scénario ni une dépense.
 
 Livrer l'état durable, les reçus, les fichiers locaux et le prochain besoin exact. Préserver sources, traçabilité des coupes et reprise sans doublon. Maintenir la simulation sociale, y compris pour uploads privés et brouillons distants ; LinkedIn reste manuel. Distinguer performances réelles et fixtures, contrôle technique et fidélité du montage. Un SKILL.md ne remplace pas le worker.
