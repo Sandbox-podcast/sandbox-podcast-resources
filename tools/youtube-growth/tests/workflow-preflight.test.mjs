@@ -22,6 +22,15 @@ describe('GitHub contrôle les sources ; la production reste sur les postes', ()
     }
   });
 
+  it('active la recette média synthétique dans la même étape que la suite Python', () => {
+    const youtube = readWorkflow('youtube-growth');
+    const testStep = youtube.match(/- name: Exécuter les tests Python\n([\s\S]*?)(?=\n      - |$)/)?.[1];
+    assert.ok(testStep, 'Étape de tests Python requise');
+    assert.match(testStep, /FACTORY_MEDIA_INTEGRATION: ['"]?1['"]?\s*\n/);
+    assert.match(testStep, /python -m unittest discover -s tools\/youtube-growth\/tests -v/);
+    assert.match(youtube, /apt-get install -y ffmpeg/);
+  });
+
   it('vérifie les fichiers suivis pour refuser les livrables ajoutés de force', () => {
     const ci = readWorkflow('ci');
     assert.match(ci, /python tools\/repository\/check_repository.py/);
