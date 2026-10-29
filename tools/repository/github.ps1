@@ -1,4 +1,7 @@
 param(
+    [ValidateSet('loukan42', 'azerothl')]
+    [string]$Account = 'loukan42',
+    [switch]$Git,
     [Parameter(ValueFromRemainingArguments = $true)]
     [string[]]$GitHubArguments
 )
@@ -13,21 +16,26 @@ try {
     # Select the named stored account, regardless of the shell's active credentials.
     [Environment]::SetEnvironmentVariable('GH_TOKEN', $null, 'Process')
     [Environment]::SetEnvironmentVariable('GITHUB_TOKEN', $null, 'Process')
-    $sandboxGithubToken = & gh auth token --hostname github.com --user loukan42 2>$null
+    $sandboxGithubToken = & gh auth token --hostname github.com --user $Account 2>$null
     if ($LASTEXITCODE -ne 0 -or -not $sandboxGithubToken) {
-        throw 'Compte loukan42 indisponible : aucune opération GitHub exécutée.'
+        throw "Compte $Account indisponible : aucune opération GitHub exécutée."
     }
     [Environment]::SetEnvironmentVariable('GH_TOKEN', ($sandboxGithubToken -join '').Trim(), 'Process')
     $sandboxGithubLogin = & gh api user --jq '.login' 2>$null
-    if ($LASTEXITCODE -ne 0 -or ($sandboxGithubLogin -join '').Trim() -cne 'loukan42') {
-        throw 'Identité GitHub différente de loukan42 : opération interrompue.'
+    if ($LASTEXITCODE -ne 0 -or ($sandboxGithubLogin -join '').Trim() -cne $Account) {
+        throw "Identité GitHub différente de $Account : opération interrompue."
     }
     if (-not $GitHubArguments) {
         throw 'Fournir une commande gh, par exemple : api user --jq .login'
     }
     Push-Location -LiteralPath $sandboxRepositoryRoot
     try {
-        & gh @GitHubArguments
+        if ($Git) {
+            # Use the verified account for this Git command only.
+            & git -c credential.helper= -c 'credential.https://github.com.helper=!gh auth git-credential' @GitHubArguments
+        } else {
+            & gh @GitHubArguments
+        }
         $sandboxCommandExit = $LASTEXITCODE
     } finally {
         Pop-Location

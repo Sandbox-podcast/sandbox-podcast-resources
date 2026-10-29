@@ -16,9 +16,9 @@ Ce dépôt rassemble les documents et outils éditoriaux, audiovisuels et de dif
 
 ### Compte GitHub SANDBOX
 
-- Utiliser exclusivement le compte `loukan42` pour toute opération sur `Sandbox-podcast/sandbox-podcast-resources` : Git, GitHub CLI, issues, commentaires et pull requests.
-- Pour GitHub CLI, utiliser `tools/repository/github.ps1`, qui sélectionne et vérifie ce compte pour la commande. Ne pas se fier au compte global actif et ne pas utiliser un connecteur dont l'identité n'est pas vérifiée comme `loukan42`.
-- Conserver l'identité Git locale `loukan42` et les credentials du dépôt liés à ce compte. Ne pas revenir à `louhuss` en cas de refus : arrêter l'opération et signaler le problème d'accès.
+- Les comptes autorisés pour `Sandbox-podcast/sandbox-podcast-resources` sont `loukan42` et `azerothl` (ajout demandé par le propriétaire le 29 octobre 2026) : Git, GitHub CLI, issues, commentaires et pull requests.
+- Utiliser `tools/repository/github.ps1`, qui sélectionne et vérifie le compte pour la commande : `-Account azerothl` pour ce compte, `loukan42` par défaut. Ajouter `-Git` pour un push Git avec les mêmes credentials vérifiés. Ne pas se fier au compte global actif ni utiliser un connecteur dont l'identité n'est pas vérifiée comme le compte choisi.
+- Conserver l'identité Git locale et les credentials du dépôt liés au compte choisi. En cas de refus, arrêter l'opération et signaler le problème d'accès ; aucun repli automatique vers un autre compte.
 - Garder cette configuration limitée au dépôt et à ses worktrees ; ne pas changer les comptes des autres projets ni enregistrer de jeton dans les fichiers.
 
 ### Issues et PR
