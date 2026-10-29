@@ -102,6 +102,26 @@ Ouvre le tableau de bord sur [127.0.0.1:8765](http://127.0.0.1:8765). La démons
 
 Pour traiter un épisode réel, installer le worker Windows ou sauvegarder l'état, suis le [guide d'exploitation](docs/factory/exploitation.md).
 
+## StoryTelling Generator
+
+StoryTelling Generator transforme un sujet et ses sources en scénario, pistes sonores, plans et vidéo montée. Il conserve les versions dans la factory et permet de corriger une scène après l'export. Le parcours principal se pilote dans Codex, avec une interface locale pour retrouver chaque étape.
+
+1. Installe les prérequis indiqués ci-dessus, puis lance le tableau de la factory :
+
+   ```powershell
+   $env:PYTHONPATH = 'tools/youtube-growth/src'
+   & ./.local/factory-venv/Scripts/python.exe -m youtube_growth.factory serve --with-worker
+   ```
+
+2. Dans Codex, donne ton sujet, tes sources et tes contraintes, puis demande : « Crée cette vidéo avec StoryTelling Generator et utilise ElevenLabs dans le navigateur intégré pour le son. » Codex prépare le cadrage et te demande les choix déterminants qui manquent.
+3. Ouvre [StoryTelling Generator](http://127.0.0.1:8765/storytelling). Tu peux y ajouter des notes, liens, documents et médias, choisir documentaire ou fiction, régler la durée et définir le plafond de crédits ElevenLabs. Le mode avec validation éditoriale s'arrête après le scénario et le storyboard.
+4. Lance la production. Codex traite la requête de scénario et les demandes ElevenLabs depuis sa session active, puis les fichiers reçus sont importés dans le projet. Le worker mesure les voix, construit la timeline et rend la prévisualisation, le MP4 1080p et les sous-titres.
+5. Relis et écoute le résultat. Pour corriger une scène, ouvre son texte, remplace une ressource ou régénère sa voix. Les ressources inchangées sont réutilisées ; une scène verrouillée protège aussi ses dépendances.
+
+Le parcours ElevenLabs dans le navigateur nécessite une session Codex active. Un modèle local configuré peut assurer la rédaction dans le worker ; sans modèle, la requête reste à traiter par Codex. Les voix Windows et les médias autorisés permettent aussi un rendu local. L'API ElevenLabs serveur reste une option désactivée par défaut.
+
+Le [tutoriel complet](docs/factory/storytelling-generator.md) détaille les sept étapes, la configuration, les commandes, les corrections et la reprise. Les tests techniques et les générations réellement effectuées sont distingués dans le [suivi de réalisation](docs/factory/storytelling-progress.md).
+
 ## Dans le dépôt
 
 GitHub contient le code, les projets éditables et la documentation. Les masters, Shorts, vidéos, miniatures, sous-titres et packs générés restent sur l'ordinateur de la personne qui utilise la factory. Les workflows vérifient les sources et ne publient aucun média de production en artefact GitHub.

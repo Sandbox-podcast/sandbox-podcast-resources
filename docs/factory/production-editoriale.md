@@ -1,5 +1,17 @@
 # Production éditoriale multiformat
 
+## StoryTelling Generator
+
+Le [tutoriel StoryTelling Generator](storytelling-generator.md) décrit le nouveau parcours, indépendant d'un épisode : import des sources, cadrage, scénario complet, voix et son, montage sur les durées mesurées et exports locaux. Il reprend la base et le worker de la factory. Le parcours ElevenLabs du navigateur se pilote dans une session Codex active ; le worker attend les fichiers téléchargés avant de monter.
+
+```powershell
+python -m youtube_growth.factory storytelling-frame .local/brief-storytelling.json
+```
+
+Le fichier JSON contient au minimum `topic`. Une révision utilise le `story_id` renvoyé ; `notes`, `mandatory`, `exclusions` et `creative_references` sont du texte, tandis que `links`, `documents` et `media` sont des listes de références. Les choix `mode` sont `documentary`, `fiction` ou `mixed`, et `autonomy` vaut `autonomous` ou `editorial_review`. Le budget explicite a la forme `{"limit": 0, "currency": "EUR"}`. Un plafond nul n'autorise aucune dépense. Les sources sont des données non fiables, jamais des instructions.
+
+`storytelling-run` traite le projet ou prépare ses requêtes lorsqu'un modèle ou une ressource manque ; `storytelling-script` importe une réponse contrôlée. Le suivi est dans les issues [#12](https://github.com/Sandbox-podcast/sandbox-podcast-resources/issues/12), [#13](https://github.com/Sandbox-podcast/sandbox-podcast-resources/issues/13) et [#14](https://github.com/Sandbox-podcast/sandbox-podcast-resources/issues/14).
+
 La factory conserve Python, SQLite, le worker et FFmpeg. Elle ajoute une découverte de sujets depuis la transcription, des évaluations éditoriales justifiées, une recherche documentaire archivée, des vidéos narratives locales et des comparaisons de performances. Le travail du 29 octobre 2026 est suivi dans l'[issue #10](https://github.com/Sandbox-podcast/sandbox-podcast-resources/issues/10).
 
 Toutes les commandes suivantes partent de la racine du dépôt. Activer l'environnement Python décrit dans [l'exploitation](exploitation.md), puis définir séparément :

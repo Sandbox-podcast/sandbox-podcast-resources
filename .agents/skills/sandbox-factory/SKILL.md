@@ -1,6 +1,6 @@
 ---
 name: sandbox-factory
-description: Exploiter la chaîne locale SANDBOX depuis un épisode terminé jusqu'aux rendus, packs, calendrier simulé et bilan. Utiliser pour lancer ou reprendre un cycle de la factory, pas pour publier sur un compte réel.
+description: Lancer ou reprendre un cycle local SANDBOX, du master aux rendus et au bilan, ou produire une histoire avec StoryTelling Generator. Diffusion simulée uniquement.
 ---
 
 # Factory SANDBOX
@@ -20,3 +20,5 @@ Pour le parcours multiformat, lis [la production éditoriale](../../../docs/fact
 Sorties : état durable du cycle, reçus d'étape, rendus, packs manuels, calendrier simulé et bilan. Qualité attendue : coupes traçables, reprise sans doublon, sources intactes, aucune performance synthétique présentée comme réelle.
 
 Les uploads privés, brouillons distants et programmations sont des mutations sociales. Ils restent interdits. LinkedIn reste exclusivement manuel. Si le runtime est arrêté, redémarre-le selon le guide ; un SKILL.md ne remplace pas le worker. Si une donnée ou un accès manque, bloque seulement l'étape concernée et indique le besoin exact.
+
+Pour StoryTelling Generator, lis [le parcours et ses reprises](references/storytelling.md), puis [son tutoriel](../../../docs/factory/storytelling-generator.md). Le sujet vient du brief de Lou ; le corpus narratif fournit une méthode d'écriture.

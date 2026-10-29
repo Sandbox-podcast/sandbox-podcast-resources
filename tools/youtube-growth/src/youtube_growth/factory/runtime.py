@@ -507,6 +507,17 @@ def run_once(store: Store, config: dict, *, now=None) -> dict:
                                  format_name=payload["format"], draft=payload["draft"], now=current)
                     if result.get("status") == "blocked":
                         raise ValueError("narrative_research_blocked")
+            elif job["kind"] == "storytelling":
+                from .storytelling import run
+                row=store.get("storytelling",job["payload"]["story_id"])
+                project=store.get("storytelling_project",job["payload"]["story_id"]) or {}
+                if not row or row["revision"]!=job["payload"]["revision"] or (job["payload"].get("script_revision") and job["payload"]["script_revision"]!=project.get("script_revision")):
+                    result={"status":"superseded"}
+                else:
+                    result=run(store,config,row["story_id"],now=current)
+                    if result["status"] not in {"completed","superseded","revised"}:
+                        store.finish(job,status="blocked",error="storytelling_"+result["status"])
+                        return {"status":"blocked","job_id":job["id"],"kind":job["kind"],"project_status":result["status"]}
             elif job["kind"] == "collect":
                 result = collect(store, config, now=current)
             elif job["kind"] == "report":
