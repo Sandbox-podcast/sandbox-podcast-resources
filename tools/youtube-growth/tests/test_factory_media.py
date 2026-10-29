@@ -12,6 +12,60 @@ from unittest.mock import patch
 
 from youtube_growth.factory import media
 from youtube_growth.factory.local_lock import local_lock
+from youtube_growth.factory.store import Store
+from youtube_growth.factory.contracts import load_config
+from youtube_growth.factory import runtime
+
+
+class LocalPackReplacementTests(unittest.TestCase):
+    def test_new_local_render_replaces_archived_pack_but_preserves_remote_terminal_intent(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);source=root/'source.mp4';source.write_bytes(b'owned-source')
+            old=root/'old.mp4';new=root/'new.mp4';old.write_bytes(b'old');new.write_bytes(b'new')
+            episode={'episode_id':'local-e','source':str(source),'local_autonomy':True,'revision':'r'}
+            candidate={'segment_id':'c','episode_id':'local-e','episode_revision':'r','decision':'retained',
+                       'local_only':True,'title':'Titre','platforms':['youtube']}
+            def rendered(path):return {'asset_id':path.stem,'path':str(path),'sha256':media.fingerprint(path),'format':'horizontal','qa_status':'needs_review'}
+            with Store(root/'state') as store:
+                store.put('episode','local-e',episode,episode_id='local-e');store.put('candidate','c',candidate,episode_id='local-e')
+                with patch.object(media,'render',return_value=rendered(old)):
+                    runtime.render_candidate(store,load_config(),'local-e','c','horizontal')
+                pack=store.publications('local-e')[0];pack.update(local_only=True,status='archived');store.save_publication(pack)
+                with patch.object(media,'render',return_value=rendered(new)):
+                    runtime.render_candidate(store,load_config(),'local-e','c','horizontal')
+                current=store.publication(pack['id'])
+                self.assertEqual(current['asset_sha256'],media.fingerprint(new))
+                self.assertNotEqual(current['status'],'archived')
+                current.update(status='published',remote_id='remote-keep');store.save_publication(current)
+                with patch.object(media,'render',return_value=rendered(old)):
+                    runtime.render_candidate(store,load_config(),'local-e','c','horizontal')
+                self.assertEqual(store.publication(pack['id'])['remote_id'],'remote-keep')
+                self.assertEqual(store.publication(pack['id'])['asset_sha256'],media.fingerprint(new))
+
+
+@unittest.skipUnless(os.environ.get('FACTORY_MEDIA_INTEGRATION')=='1','Recette média explicite requise')
+class LocalCaptionBandMediaTests(unittest.TestCase):
+    def test_real_export_preserves_bottom_marker_and_groups_fleeting_final_word(self):
+        from PIL import Image
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);source=root/'source.mp4';transcript=root/'transcript.json'
+            ffmpeg,_=media._require_media_tools()
+            media._call([ffmpeg,'-nostdin','-v','error','-n','-f','lavfi','-i','color=c=0x1450a0:s=640x360:r=30:d=4',
+                '-f','lavfi','-i','sine=frequency=440:duration=4','-vf','drawbox=x=0:y=330:w=iw:h=30:color=red:t=fill',
+                '-c:v','libx264','-preset','ultrafast','-pix_fmt','yuv420p','-c:a','aac','-shortest',str(source)])
+            transcript.write_text(json.dumps({'source_sha256':media.fingerprint(source),'segments':[
+                {'start':0,'end':1,'text':'Une idée qui est hyper'},{'start':1,'end':1.28,'text':'utile.'}]}),encoding='utf-8')
+            result=media.render(source,{'start_seconds':0,'end_seconds':4,'render_profile':'local_caption_band_v1'},root/'renders',format='horizontal',transcript=transcript,fixture=True)
+            self.assertEqual(result['parameters']['subtitle_grouping_version'],2)
+            self.assertEqual(Path(result['subtitle_path']).read_text(encoding='utf-8-sig').count('-->'),1)
+            self.assertIn('utile.',Path(result['ass_path']).read_text(encoding='utf-8-sig'))
+            frame=root/'final.png'
+            media._call([ffmpeg,'-nostdin','-v','error','-n','-ss','0.8','-i',result['path'],'-frames:v','1',str(frame)])
+            with Image.open(frame).convert('RGB') as image:
+                red=[y for y in range(image.height) if (lambda c:c[0]>150 and c[1]<100 and c[2]<100)(image.getpixel((image.width//2,y)))]
+                self.assertGreater(len(red),5)
+                self.assertLess(max(red),image.height-result['parameters']['caption_band_pixels'])
+                self.assertLess(max(abs(a-b) for a,b in zip(image.getpixel((5,image.height-5)),(7,19,34))),12)
 
 
 class ProcessLockTests(unittest.TestCase):
@@ -21,7 +75,10 @@ class ProcessLockTests(unittest.TestCase):
             script = "from pathlib import Path; import sys,time; from youtube_growth.factory.local_lock import local_lock; " \
                      "lock=local_lock(Path(sys.argv[1])); lock.__enter__(); print('locked',flush=True); time.sleep(60)"
             environment = {**os.environ, "PYTHONPATH": os.pathsep.join(str(Path(p).resolve()) for p in sys.path if p)}
-            child = subprocess.Popen([sys.executable, "-u", "-c", script, str(root)], stdout=subprocess.PIPE,
+            # Windows venv python.exe is a launcher: terminate the actual process
+            # holding the lock, rather than leaving its interpreter child alive.
+            interpreter = sys._base_executable if os.name == "nt" else sys.executable
+            child = subprocess.Popen([interpreter, "-u", "-c", script, str(root)], stdout=subprocess.PIPE,
                                      stderr=subprocess.PIPE, text=True, env=environment)
             try:
                 self.assertEqual(child.stdout.readline().strip(), "locked")
@@ -75,6 +132,36 @@ class InterruptedRenderTests(unittest.TestCase):
 
 
 class MediaPureTests(unittest.TestCase):
+    def test_local_caption_band_keeps_static_text_and_legacy_animation(self):
+        rows = [{'start': 1, 'end': 2, 'text': 'Une phrase entière.'}]
+        cuts = [{'source_start_seconds': 0, 'source_end_seconds': 3,
+                 'output_start_seconds': 0, 'output_end_seconds': 3}]
+        legacy = media._ass_subtitles(rows, cuts, (1280, 720), False)
+        local = media._ass_subtitles(rows, cuts, (1280, 720), False, group_short=True, caption_band=128)
+        self.assertIn(r'\fad(60,50)', legacy)
+        self.assertNotIn(r'\fad(', local)
+        self.assertIn('Une phrase entière.', local)
+        self.assertIn('0:00:01.00,0:00:02.00', local)
+
+    def test_short_caption_keeps_final_word_visible_with_previous_phrase(self):
+        rows=[{'start':1,'end':2,'text':"Une idée qui est hyper"},{'start':2,'end':2.28,'text':'utile.'}]
+        merged=media._caption_units(rows)
+        self.assertEqual(merged,[{'start':1,'end':2.28,'text':"Une idée qui est hyper utile."}])
+        cuts=[{'source_start_seconds':0,'source_end_seconds':3,'output_start_seconds':0,'output_end_seconds':3}]
+        srt=media._subtitles(rows,cuts,group_short=True)
+        self.assertEqual(srt.count('-->'),1)
+        self.assertIn('utile.',srt)
+        ass=media._ass_subtitles(rows,cuts,(1280,720),False,group_short=True,caption_band=128)
+        self.assertEqual(ass.count('Dialogue:'),1)
+        self.assertIn('utile.',ass)
+        self.assertEqual(len(media._caption_units([rows[0],{'start':4,'end':4.28,'text':'Autre sujet.'}])),2)
+        professional=media._caption_units([{'start':182.99,'end':185.04,'text':'à une application'},
+                                         {'start':185.78,'end':186.10,'text':'professionnelle.'}])
+        self.assertEqual(professional,[{'start':182.99,'end':186.10,'text':'à une application professionnelle.'}])
+        split=[{**cuts[0],'source_end_seconds':2,'output_end_seconds':2},
+               {'source_start_seconds':2,'source_end_seconds':3,'output_start_seconds':2,'output_end_seconds':3}]
+        self.assertEqual(media._subtitles(rows,split,group_short=True).count('-->'),2)
+
     def test_cuts_keep_source_and_output_correspondence(self):
         candidate = {"cuts": [{"source_start_seconds": 10, "source_end_seconds": 20},
                                {"source_start_seconds": 40, "source_end_seconds": 55}]}

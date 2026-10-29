@@ -81,6 +81,8 @@ def load_config(path: Path | None = None) -> dict:
     generation = value.get("generation", {})
     if generation.get("network", False) is not False or generation.get("cost_per_call", 0) != 0:
         raise ValueError("La génération configurée doit rester locale et sans coût.")
+    from .local_models import settings
+    settings(value)
     return value
 
 
@@ -94,6 +96,8 @@ def validate_episode(value: dict, *, base: Path | None = None) -> dict:
     if value.get("timezone", "Europe/Paris") != "Europe/Paris":
         raise ValueError("Fuseau Europe/Paris requis.")
     value["timezone"] = "Europe/Paris"
+    if type(value.get("local_autonomy", False)) is not bool:
+        raise ValueError("local_autonomy doit être un booléen.")
     source = value.get("source")
     if not isinstance(source, str) or not source.strip():
         raise ValueError("Chemin source requis.")

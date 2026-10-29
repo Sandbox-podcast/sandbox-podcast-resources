@@ -77,11 +77,11 @@ def enrich(store, state, config, *, now=None):
                           "severity": "critical" if unknown else "warning",
                           "next_action": "Vérifier le reçu et réconcilier le résultat avant toute reprise." if unknown else REMEDIES.get(reason, "Lire le motif et corriger la condition manquante avant de replanifier.")})
     for asset in state["assets"]:
-        if asset.get("qa_status") == "passed":
+        if asset.get("qa_status") == "passed" or asset.get("local_only") and asset.get("qa_status") == "local_passed":
             continue
         attention.append({"kind": "asset", "entity_id": asset["asset_id"], "episode_id": asset.get("episode_id"),
                           "title": "Revue du rendu "+asset.get("format", ""), "reason": asset.get("qa_status", "needs_review"),
-                          "severity": "warning", "next_action": REMEDIES["quality_review_required"]})
+                          "severity": "warning", "next_action": "Corriger le contrôle automatique dans Activité, puis reprendre le traitement." if asset.get("local_only") else REMEDIES["quality_review_required"]})
     for job in state["jobs"]:
         if job["status"] not in {"failed", "blocked", "unknown"}:
             continue

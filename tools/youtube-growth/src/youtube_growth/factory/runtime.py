@@ -69,7 +69,8 @@ def ingest(store: Store, manifest: Path, *, now=None, verify_source=False) -> di
                     store.db.execute("UPDATE jobs SET status='blocked' WHERE kind='dispatch' AND json_extract(payload,'$.publication_id')=? AND status IN ('queued','failed')", (row["id"],))
         store.put("episode", identity, episode, episode_id=identity, now=now)
         store.put("episode_revision", identity+":"+episode["revision"], episode, episode_id=identity, now=now)
-        store.enqueue("process", identity, {"revision": episode["revision"]}, now=now)
+        if episode.get("local_autonomy") is not True:
+            store.enqueue("process", identity, {"revision": episode["revision"]}, now=now)
         store.event("episode_ingested", identity, {"source_sha256": actual, "revision": episode["revision"], "blockers": episode_blockers(episode)}, now=now)
     return {"episode_id": identity, "status": "ingested", "blockers": episode_blockers(episode)}
 
@@ -218,7 +219,7 @@ def render_candidate(store: Store, config: dict, episode_id: str, segment_id: st
             ensure_packaging_unlocked(existing["id"], store.records("experiment"))
     asset = render(Path(episode["source"]), candidate, store.directory / "episodes" / episode_id / "renders",
                    format=format_name, transcript=Path(episode["transcript"]) if episode.get("transcript") else None,
-                   fixture=episode.get("synthetic", False))
+                   fixture=episode.get("synthetic", False),alignment_options=config.get('autonomy') if candidate.get('local_only') else None)
     asset["asset_id"] = episode_record_id(store, "asset", asset["asset_id"], episode_id)
     asset.update(episode_id=episode_id, segment_id=segment_id, qa_status="needs_review", synthetic=episode.get("synthetic", False))
     previous = store.get("asset", asset["asset_id"])
@@ -231,7 +232,10 @@ def render_candidate(store: Store, config: dict, episode_id: str, segment_id: st
         if previous_pack:
             ensure_packaging_unlocked(pack["id"], store.records("experiment"))
             if previous_pack["status"] in scheduler.TERMINAL:
-                continue
+                replacing_local = (episode.get('local_autonomy') and candidate.get('local_only')
+                    and previous_pack.get('local_only') and previous_pack['status']=='archived'
+                    and not previous_pack.get('remote_id') and not previous_pack.get('scheduled_at'))
+                if not replacing_local:continue
             if previous_pack["asset_sha256"] != asset["sha256"]:
                 pack.update(status="blocked", blocked_reason="asset_revision_requires_review")
             from .packaging import revision
@@ -468,10 +472,13 @@ def keep_lease(store: Store, job: dict, seconds: int, *, now=None):
 
 def run_once(store: Store, config: dict, *, now=None) -> dict:
     from .connectors import ConnectorError
+    from .autonomy import KINDS, advance, execute
+    from .local_models import LocalModelError
     controlled = now is not None
     current = instant(now or utcnow())
     scheduler.close_cycles(store, config, now=current)
     watch_result = watch(store, config, now=current)
+    advance(store, config, now=current)
     store.set_setting("heartbeat", {"at": iso(current), "mode": "simulation", "clock": "controlled_simulation" if controlled else "wall_clock", "pid": __import__("os").getpid()})
     # Collections and reports survive editorial closure and queue suspension.
     for name, interval, kind in (("last_collection_at", config["metrics"]["interval_hours"], "collect"),
@@ -484,7 +491,9 @@ def run_once(store: Store, config: dict, *, now=None) -> dict:
         return {"status": "idle", "watch": watch_result}
     try:
         with keep_lease(store, job, config["runtime"]["lease_seconds"], now=current if controlled else None):
-            if job["kind"] == "process":
+            if job["kind"] in KINDS:
+                result = execute(store, config, job, now=current if controlled else None)
+            elif job["kind"] == "process":
                 episode = store.get("episode", job["episode_id"])
                 result = {"status": "superseded"} if episode["revision"] != job["payload"]["revision"] else process(store, config, job["episode_id"], now=current)
             elif job["kind"] == "render":
@@ -526,6 +535,14 @@ def run_once(store: Store, config: dict, *, now=None) -> dict:
                 raise ValueError("Type de job inconnu.")
         store.finish(job)
         return {"status": "completed", "job_id": job["id"], "kind": job["kind"]}
+    except LocalModelError as error:
+        from .autonomy import invalidate_calendar
+        invalidate_calendar(store, job, str(error), now=current)
+        retry = str(error) == "local_model_unavailable" and job["attempts"] < config["runtime"]["maximum_attempts"]
+        state = "queued" if retry else "blocked"
+        store.finish(job, status=state, error=str(error), due_at=current+timedelta(seconds=config["runtime"]["retry_seconds"]) if retry else None)
+        store.event("local_stage_blocked", job["id"], {"code": str(error), "status": state}, now=current)
+        return {"status": state, "job_id": job["id"], "error": str(error)}
     except ConnectorError as error:
         status = "unknown" if error.uncertain else "queued" if error.retryable and job["attempts"] < config["runtime"]["maximum_attempts"] else "blocked"
         retry_at = current+timedelta(seconds=error.retry_after_seconds or config["runtime"]["retry_seconds"])
@@ -564,6 +581,7 @@ def status(store: Store, *, episode_id=None, platform=None) -> dict:
             "narratives": store.records("narrative", episode_id),
             "analyses": store.records("analysis", episode_id), "windows": store.records("window", episode_id),
             "thumbnail_bundles": store.records("thumbnail_bundle", episode_id),
+            "local_runs": store.records("local_run", episode_id), "local_calendars": store.records("local_calendar", episode_id),
             "publications": store.publications(episode_id, platform), "jobs": [j for j in store.jobs() if not episode_id or j["episode_id"] == episode_id],
             "experiments": store.records("experiment", episode_id), "observations": store.records("observation", episode_id),
             "costs": store.records("cost", episode_id), "decisions": store.records("decision", episode_id),
