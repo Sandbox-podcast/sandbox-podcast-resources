@@ -14,6 +14,15 @@ Ce dépôt rassemble les documents et outils éditoriaux, audiovisuels et de dif
 
 ## Suivi des prompts, issues et PR
 
+### Compte GitHub SANDBOX
+
+- Utiliser exclusivement le compte `loukan42` pour toute opération sur `Sandbox-podcast/sandbox-podcast-resources` : Git, GitHub CLI, issues, commentaires et pull requests.
+- Pour GitHub CLI, utiliser `tools/repository/github.ps1`, qui sélectionne et vérifie ce compte pour la commande. Ne pas se fier au compte global actif et ne pas utiliser un connecteur dont l'identité n'est pas vérifiée comme `loukan42`.
+- Conserver l'identité Git locale `loukan42` et les credentials du dépôt liés à ce compte. Ne pas revenir à `louhuss` en cas de refus : arrêter l'opération et signaler le problème d'accès.
+- Garder cette configuration limitée au dépôt et à ses worktrees ; ne pas changer les comptes des autres projets ni enregistrer de jeton dans les fichiers.
+
+### Issues et PR
+
 - Pour chaque nouveau prompt de travail envoyé à un harnais d'agent sur ce dépôt, créer une issue GitHub dans `Sandbox-podcast/sandbox-podcast-resources` au démarrage. Cela vaut pour le code, la documentation, les médias et la configuration, quel que soit le harnais utilisé. Une reprise du même prompt réutilise son issue ; un nouveau prompt a sa propre issue.
 - Donner à l'issue un titre précis, une reformulation fidèle de la demande, le périmètre et les critères de fin. Ne jamais y copier de secret, de jeton ni de donnée privée présente dans le prompt. Conserver son URL dans le suivi du travail et y consigner les avancées et blocages utiles.
 - Dès qu'une PR correspondante existe, la lier à l'issue dans GitHub et reporter son URL dans l'issue. La PR qui termine le travail et vise la branche par défaut doit contenir `Closes #NUMERO` dans sa description, avec le véritable numéro. Pour une PR partielle ou une branche intermédiaire, utiliser une liaison dans la section Development de GitHub et une référence sans fermeture automatique. Si une PR termine plusieurs prompts, elle référence toutes leurs issues.
