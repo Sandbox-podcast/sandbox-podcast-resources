@@ -4,6 +4,8 @@ La factory prépare les contenus issus d'une émission : extraits, sous-titres, 
 
 Aujourd'hui, le programme traite les médias sur l'ordinateur et simule le calendrier. Aucun fichier ni texte ne part vers les réseaux, y compris en privé, en brouillon ou en programmation. LinkedIn reçoit toujours un pack à publier manuellement.
 
+Le parcours [`prepare`](autonomie-locale.md) enchaîne maintenant les étapes locales avec les modèles installés sur le poste : transcription, sélection, montage, contrôles automatiques, miniatures et prévision de calendrier. Il ne crée aucun envoi, même simulé. Les revues automatiques indiquent leurs sources et leurs limites ; elles restent distinctes d'une revue humaine.
+
 Les [commandes et l'installation](exploitation.md) sont dans le guide technique. Ce README explique le parcours d'une émission et les décisions à prendre en équipe.
 
 Le [guide d'optimisation](optimisation.md) décrit ce que la factory réutilise, ce qu'elle mesure et comment préparer les décisions du prochain épisode. Demande à Codex le `brief` de l'épisode pour retrouver les résultats disponibles, les preuves manquantes et les références à réexaminer.
@@ -32,7 +34,7 @@ Le calendrier attend une preuve de disponibilité effective de l'émission à la
 
 Le programme découpe les médias, prépare les exports et sous-titres, contrôle les fichiers et mémorise l'avancement. Il reprend les travaux admissibles après interruption et réutilise les médias compatibles quand seul le titre change.
 
-Le choix d'un angle, la fidélité d'une coupe et la lisibilité d'une démonstration demandent un jugement éditorial. Codex peut aider à les examiner et consigner ses preuves. Aucun modèle n'est actuellement configuré en arrière-plan pour comprendre seul une nouvelle émission : le programme attend les éléments d'analyse et de sélection. Un contrôle technique réussi ne prouve pas une écoute ou un visionnage attentif.
+Le choix d'un angle, la fidélité d'une coupe et la lisibilité d'une démonstration demandent un jugement éditorial. Le parcours autonome utilise des rôles locaux de conception et de revue distincts, avec des preuves liées aux fichiers. Le parcours manuel reste disponible avec Codex. Un contrôle technique réussi, une transcription ou des images échantillonnées ne prouvent pas une écoute ou un visionnage humain continu.
 
 Il n'y a pas de nombre d'extraits à atteindre. Un bon passage peut servir un seul réseau ; chaque variante doit apporter quelque chose à son public.
 

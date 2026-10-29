@@ -26,6 +26,20 @@ def parser():
     commands.add_parser("doctor")
     ingest = commands.add_parser("ingest")
     ingest.add_argument("manifest", type=Path)
+    prepare = commands.add_parser("prepare", help="Préparer localement un master jusqu'aux miniatures et au calendrier, sans diffusion.")
+    prepare.add_argument("source", type=Path)
+    prepare.add_argument("--episode-id", required=True)
+    prepare.add_argument("--title", required=True)
+    prepare.add_argument("--publication-at")
+    prepare.add_argument("--next-filming-at")
+    prepare.add_argument("--transcript", type=Path)
+    prepare.add_argument("--full-episode-url")
+    prepare.add_argument("--full-episode-id")
+    prepare.add_argument("--enqueue-only", action="store_true")
+    prepare.add_argument("--limit", type=int, default=2000)
+    prepare.add_argument("--synthetic", action="store_true", help="Identifier un master fabriqué pour une recette.")
+    revise = commands.add_parser("revise-local", help="Appliquer un plan de correction sourcé, file suspendue, sans supprimer de média.")
+    revise.add_argument("plan", type=Path)
     for name in ("process", "plan"):
         command = commands.add_parser(name)
         command.add_argument("episode_id")
@@ -140,6 +154,8 @@ def parser():
 
 
 def doctor(store, config):
+    from .local_models import settings
+    local = settings(config)
     tools = {name: shutil.which(name) for name in ("ffmpeg", "ffprobe")}
     health = store.setting("heartbeat")
     return {"mode": config["mode"], "live_enabled": False, "python": sys.version.split()[0], "tools": tools,
@@ -151,7 +167,10 @@ def doctor(store, config):
                 "human_content_validation": "required", "social_publication": "disabled"},
             "accounts": {k: {"configured": len(v), "real_connection_verified": False} for k, v in config["authorized_accounts"].items()},
             "skills": [{"name": x.parent.name, "path": str(x), "catalog_verification": "requires_host_catalog"} for x in (ROOT / ".agents/skills").glob("sandbox-*/SKILL.md")],
-            "blockers": (["ffmpeg_or_ffprobe_missing"] if not all(tools.values()) else [])+["real_connectors_disabled", "no_background_model_configured"],
+            "local_autonomy": {"configured": local.get("enabled", False), "social_transport": False,
+                               "models": {k: local.get(k) for k in ("editorial_model", "review_model", "transcription_model")},
+                               "model_availability": "checked_when_local_stage_starts"},
+            "blockers": (["ffmpeg_or_ffprobe_missing"] if not all(tools.values()) else [])+["real_connectors_disabled"]+([] if local.get("enabled") else ["no_background_model_configured"]),
             "discovery_notice": "Emplacement canonique contrôlé ; consulter le catalogue fourni par Codex pour attester leur chargement."}
 
 
@@ -289,6 +308,27 @@ def main(argv=None):
                     result = import_audit(store, config, load_json(args.audit), fixture=args.fixture, now=now)
                 elif command == "ingest":
                     result = runtime.ingest(store, args.manifest, now=now)
+                elif command == "revise-local":
+                    from .local_revisions import apply_plan
+                    result = apply_plan(store, config, args.plan, now=now)
+                elif command == "prepare":
+                    from .autonomy import prepare_master, run_key
+                    if args.limit < 1:
+                        raise ValueError("Le nombre maximal de passages du worker doit être positif.")
+                    ingestion = prepare_master(store, config, args.source, episode_id=args.episode_id, title=args.title,
+                        publication_at=args.publication_at, next_filming_at=args.next_filming_at, transcript=args.transcript,
+                        full_episode_url=args.full_episode_url, full_episode_id=args.full_episode_id, synthetic=args.synthetic, now=now)
+                    processed = 0
+                    if not args.enqueue_only:
+                        for _ in range(args.limit):
+                            step = runtime.run_once(store, config, now=now)
+                            if step["status"] == "idle":
+                                break
+                            processed += 1
+                    episode = store.get("episode", args.episode_id)
+                    result = {"mode": "local_only", "ingestion": ingestion, "processed_jobs": processed,
+                              "run": store.get("local_run", run_key(episode, config)),
+                              "calendar": store.get("local_calendar", args.episode_id)}
                 elif command == "process":
                     result = runtime.process(store, config, args.episode_id, now=now)
                 elif command == "render":
@@ -435,6 +475,8 @@ def main(argv=None):
                 else:
                     raise ValueError("Commande inconnue.")
         print(json.dumps(result, ensure_ascii=False, indent=2))
+        if args.command == "prepare" and not args.enqueue_only and result["run"]["status"] != "completed":
+            return 3
     except (OSError, ValueError, RuntimeError, sqlite3.Error) as error:
         print(json.dumps({"error_type": type(error).__name__, "error": str(error)}, ensure_ascii=False), file=sys.stderr)
         return 2

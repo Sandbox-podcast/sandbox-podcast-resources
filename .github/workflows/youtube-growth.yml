@@ -36,7 +36,7 @@ jobs:
       - name: Vérifier la syntaxe Python
         run: python -m compileall -q tools/youtube-growth/src tools/youtube-growth/tests
       - name: Installer les dépendances de test et de recette média
-        run: python -m pip install "psycopg[binary]>=3.2,<4" "Pillow>=10,<13" "numpy>=2.2,<3"
+        run: python -m pip install "psycopg[binary]>=3.2,<4" "Pillow>=10,<13" "numpy>=2.2,<3" "jsonschema>=4.23,<5"
       - name: Installer FFmpeg pour la recette des formats courts et thématiques
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Exécuter les tests Python

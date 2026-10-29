@@ -62,7 +62,7 @@ L'aide YouTube consultée mentionne l'import de miniatures de Shorts depuis Stud
 
 ## Commandes et contrat pour Codex
 
-Le travail éditorial et les observations sont préparés par Codex ou l'équipe. Le moteur local exécute ensuite le brief ; aucun modèle en arrière-plan ne parcourt automatiquement les chaînes ou ne juge les images aujourd'hui.
+Le parcours manuel utilise un brief préparé par Codex ou l'équipe. Le parcours d'[autonomie locale](autonomie-locale.md) peut aussi préparer le brief, choisir un cadrage dans le master et relire les vrais rendus avec deux modèles locaux distincts. Le corpus de chaînes reste un relevé daté : le worker ne parcourt pas automatiquement les chaînes pour le renouveler. Une revue automatique porte explicitement cette mention et ne constitue pas une attestation humaine.
 
 Utiliser `$sandbox-packaging` pour préparer le brief. Le JSON attendu par `thumbnails.py` contient :
 

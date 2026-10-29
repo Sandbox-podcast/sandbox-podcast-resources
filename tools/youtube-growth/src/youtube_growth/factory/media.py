@@ -17,8 +17,8 @@ from ..thematic_render import probe as _probe
 from .local_lock import local_lock as exclusive_run
 
 VERSION = 1
+RENDERER_VERSION = 3
 TECHNICAL_VERSION = 1
-RENDER_VERSION = 2
 
 
 def _load_stage(path: Path, identity: dict) -> dict | None:
@@ -301,10 +301,25 @@ def _srt_time(seconds: float) -> str:
     return f"{total//3600000:02}:{total//60000%60:02}:{total//1000%60:02},{total%1000:03}"
 
 
-def _subtitles(segments: list[dict], cuts: list[dict]) -> str:
+def _caption_units(rows: list[dict]) -> list[dict]:
+    """Merge fleeting ASR fragments for display; never invent word timestamps."""
+    result = []
+    for row in rows:
+        if result and (row['end']-row['start'] < .7 or result[-1]['end']-result[-1]['start'] < .7):
+            previous=result[-1]
+            if (0 <= row['start']-previous['end'] <= 1 and row['end']-previous['start'] <= 4
+                    and len(previous['text'])+len(row['text'])+1 <= 84):
+                result[-1]={'start':previous['start'],'end':row['end'],'text':previous['text']+' '+row['text']}
+                continue
+        result.append(dict(row))
+    return result
+
+
+def _subtitles(segments: list[dict], cuts: list[dict], *, group_short=False) -> str:
     lines, index = [], 1
     for cut in cuts:
-        for row in segments:
+        rows = [r for r in segments if cut['source_start_seconds']-.001 <= r['start'] and r['end'] <= cut['source_end_seconds']+.001] if group_short else segments
+        for row in _caption_units(rows) if group_short else rows:
             start, end = max(row["start"], cut["source_start_seconds"]), min(row["end"], cut["source_end_seconds"])
             if end <= start:
                 continue
@@ -323,18 +338,20 @@ def _subtitles(segments: list[dict], cuts: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def _ass_subtitles(segments: list[dict], cuts: list[dict], size: tuple[int, int], vertical: bool) -> str:
+def _ass_subtitles(segments: list[dict], cuts: list[dict], size: tuple[int, int], vertical: bool, *, group_short=False, caption_band=0) -> str:
     from ..rendering import _ass_time, _ass_text
     import textwrap
     width, height = size
     fontsize, side, bottom = (62, 100, 280) if vertical else (max(18, round(width/32)), 35, 35)
+    if caption_band:bottom=16
     lines = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {width}", f"PlayResY: {height}",
              "WrapStyle: 0", "", "[V4+ Styles]",
              "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
              f"Style: Caption,Arial,{fontsize},&H00FFFFFF,&H00FFFFFF,&H00221307,&H00221307,-1,0,0,0,100,100,0,0,1,3,0,2,{side},{side+20},{bottom},1", "", "[Events]",
              "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
     for cut in cuts:
-        for row in segments:
+        rows = [r for r in segments if cut['source_start_seconds']-.001 <= r['start'] and r['end'] <= cut['source_end_seconds']+.001] if group_short else segments
+        for row in _caption_units(rows) if group_short else rows:
             start, end = max(row["start"], cut["source_start_seconds"]), min(row["end"], cut["source_end_seconds"])
             if end <= start:
                 continue
@@ -342,15 +359,20 @@ def _ass_subtitles(segments: list[dict], cuts: list[dict], size: tuple[int, int]
                 continue
             a = cut["output_start_seconds"] + start-cut["source_start_seconds"]
             b = cut["output_start_seconds"] + end-cut["source_start_seconds"]
-            text = "\\N".join(_ass_text(line) for line in textwrap.wrap(row["text"], width=26 if vertical else 48))
-            # Animate whole timed ASR segments. No fabricated word-level alignment.
-            motion = r"{\fad(60,50)\fscx96\fscy96\t(0,110,\fscx100\fscy100)}"
+            wrapped = textwrap.wrap(row["text"], width=26 if vertical else 48)
+            text = "\\N".join(_ass_text(line) for line in wrapped)
+            if caption_band and len(wrapped)>2:
+                fitted=min(fontsize,int((caption_band-24)/(1.2*len(wrapped))))
+                if fitted < 24:raise ValueError('Sous-titre trop long pour la bande lisible ; alignement plus fin nécessaire.')
+                text='{\\fs'+str(fitted)+'}'+text
+            # Keep the established animation outside the fixed local caption band.
+            motion = "" if caption_band else r"{\fad(60,50)\fscx96\fscy96\t(0,110,\fscx100\fscy100)}"
             lines.append(f"Dialogue: 0,{_ass_time(a)},{_ass_time(b)},Caption,,0,0,0,,{motion}{text}")
     return "\n".join(lines)+"\n"
 
 
 def render(source: Path, candidate: dict, output: Path, *, format: str = "vertical",
-           transcript: Path | None = None, fixture: bool = False) -> dict:
+           transcript: Path | None = None, fixture: bool = False, alignment_options: dict | None = None) -> dict:
     """Render immutable, content-addressed outputs; title changes reuse the media."""
     if format not in {"vertical", "horizontal"}:
         raise ValueError("Format attendu : vertical ou horizontal.")
@@ -372,10 +394,27 @@ def render(source: Path, candidate: dict, output: Path, *, format: str = "vertic
     if video.get("sample_aspect_ratio") not in {None, "1:1", "N/A"}:
         raise ValueError("Pixels source non carrés : fournir une copie normalisée sans modifier les timecodes.")
     size = (1080, 1920) if format == "vertical" else (max(32, min(1280, video["width"])//32*32), max(18, min(720, video["width"]*9/16)//18*18))
-    options = {"version": RENDER_VERSION, "source_sha256": source_hash, "cuts": cuts, "format": format,
+    options = {"version": RENDERER_VERSION, "source_sha256": source_hash, "cuts": cuts, "format": format,
                "size": size, "transcript_sha256": fingerprint(transcript) if transcript else None,
                "audio": "loudnorm-I-16-TP-1.5", "layout": "fit_preserve_all_pixels", "synthetic": fixture,
                "captions": "animated_segments_not_word_alignment", "edit_order_review": candidate.get("edit_order_review")}
+    local_captions = candidate.get('render_profile') == 'local_caption_band_v1'
+    band = round((max(18,round(size[0]/32))*2.4+32)/2)*2 if local_captions and format=='horizontal' else 0
+    if band >= size[1]-18:raise ValueError('Source trop petite pour le profil de sous-titres lisibles.')
+    if local_captions:options.update(subtitle_grouping_version=2,caption_band_pixels=band,layout='fit_preserve_all_pixels_local_captions_v1',captions='fixed_local_caption_band')
+    display_segments=None;alignment_evidence=[]
+    if local_captions and transcript:
+        import textwrap
+        original_segments=read_transcript(transcript,info['duration_seconds'],source_hash=source_hash)
+        long_rows=[r for r in original_segments if len(textwrap.wrap(r['text'],width=26 if format=='vertical' else 48))>3
+                   and any(c['source_start_seconds']<=r['start'] and r['end']<=c['source_end_seconds'] for c in cuts)]
+        if long_rows:
+            if not alignment_options:raise ValueError('Modèle local requis pour aligner les sous-titres longs sans réécriture.')
+            from .local_alignment import align_rows
+            aligned,alignment_evidence=align_rows(source,source_hash,long_rows,alignment_options,output/'subtitle-alignments')
+            replacement={digest(row['source_row']):row['captions'] for row in aligned}
+            display_segments=[caption for row in original_segments for caption in replacement.get(digest(row),[row])]
+            options['subtitle_alignment']={'version':1,'receipt_hashes':[r['sha256'] for r in alignment_evidence]}
     key = digest(options)
     directory = output / key[:20]
     receipt = directory / "asset.json"
@@ -396,20 +435,21 @@ def render(source: Path, candidate: dict, output: Path, *, format: str = "vertic
             segments = []
         subtitle_path = directory / "subtitles.srt"
         ass_path = directory / "subtitles.ass"
-        srt = _subtitles(segments, cuts)
+        srt = _subtitles(display_segments if display_segments is not None else segments, cuts, group_short=local_captions)
         boundary_warnings = [{"source_start_seconds": row["start"], "source_end_seconds": row["end"],
                               "reason": "Coupe dans un segment de parole ; sous-titre omis faute d'alignement mot à mot."}
                              for cut in cuts for row in segments
                              if row["end"] > cut["source_start_seconds"] and row["start"] < cut["source_end_seconds"]
                              and (row["start"] < cut["source_start_seconds"]-.001 or row["end"] > cut["source_end_seconds"]+.001)]
         subtitle_path.write_text(srt, encoding="utf-8-sig")
-        ass_path.write_text(_ass_subtitles(segments, cuts, size, format == "vertical"), encoding="utf-8-sig")
+        ass_path.write_text(_ass_subtitles(display_segments if display_segments is not None else segments, cuts, size, format == "vertical",group_short=local_captions,caption_band=band), encoding="utf-8-sig")
         inputs, filters, labels = [], [], []
         for index, cut in enumerate(cuts):
             duration = cut["output_end_seconds"]-cut["output_start_seconds"]
             inputs += ["-ss", str(cut["source_start_seconds"]), "-t", str(duration), "-i", str(source)]
-            filters += [f"[{index}:v:0]trim=duration={duration},setpts=PTS-STARTPTS,scale={size[0]}:{size[1]}:force_original_aspect_ratio=decrease,pad={size[0]}:{size[1]}:(ow-iw)/2:(oh-ih)/2:color=0x071322,setsar=1[v{index}]",
-                        f"[{index}:a:0]atrim=duration={duration},asetpts=PTS-STARTPTS,aresample=48000[a{index}]"]
+            placement = '0' if band else '(oh-ih)/2'
+            filters += [f"[{index}:v:0]trim=duration={duration},setpts=PTS-STARTPTS,scale={size[0]}:{size[1]-band}:force_original_aspect_ratio=decrease,pad={size[0]}:{size[1]}:(ow-iw)/2:{placement}:color=0x071322,setsar=1[v{index}]",
+                        f"[{index}:a:0]atrim=duration={duration},aresample=48000:first_pts=0[a{index}]"]
             labels.append(f"[v{index}][a{index}]")
         filters += ["".join(labels)+f"concat=n={len(cuts)}:v=1:a=1[v][a]", "[a]loudnorm=I=-16:TP=-1.5:LRA=11[audio]"]
         master, final = directory / "master-clean.mp4", directory / "video.mp4"
@@ -483,6 +523,7 @@ def render(source: Path, candidate: dict, output: Path, *, format: str = "vertic
                   "synthetic": fixture, "subtitle_path": str(subtitle_path), "subtitle_sha256": fingerprint(subtitle_path),
                   "ass_path": str(ass_path), "ass_sha256": fingerprint(ass_path),
                   "parameters": options, "frames": samples, "contact_sheet": str(directory / "contact-sheet.jpg"),
+                  'subtitle_alignment_evidence':alignment_evidence,
                   "qa": {"technical": qa_status, "details": technical, "av_duration_delta_seconds": round(av_delta, 5),
                          "visual": "pending_human_review", "audio": "pending_listening", "editorial": "pending_review",
                          "subtitles": "needs_word_alignment" if boundary_warnings else ("pending_review" if srt else "missing"),

@@ -179,6 +179,8 @@ def close_cycles(store, config: dict, *, now=None) -> list[str]:
 
 def assert_sendable(store, config, publication, *, now=None):
     now = instant(now or utcnow())
+    if publication.get("local_only"):
+        raise ValueError("local_only_publication_forbidden")
     if store.setting("paused", False):
         raise ValueError("queue_paused")
     if publication["status"] not in {"scheduled", "sending"}:

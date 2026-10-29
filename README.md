@@ -66,6 +66,8 @@ Les déclinaisons de l'identité SANDBOX pour la chaîne, le plateau et les rés
 
 ## La factory
 
+Le nouveau parcours [`prepare`](docs/factory/autonomie-locale.md) part d'un master terminé et enchaîne transcription, sélection, extraits, contrôles automatiques, trois miniatures et calendrier prévisionnel avec des modèles locaux. Les comptes sociaux restent hors de ce parcours : aucun upload, brouillon ou programmation, même simulé.
+
 La factory prépare les contenus issus d'une émission et conserve leur avancement dans une base locale. L'équipe examine les passages, les montages et leur présentation avant de préparer le calendrier.
 
 1. **Analyser et sélectionner.** Repérer les sujets dans le master, conserver les timecodes et choisir les passages avec leur contexte et leurs réserves.

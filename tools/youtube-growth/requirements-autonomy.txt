@@ -1,0 +1,6 @@
+-r requirements.txt
+faster-whisper>=1.2,<2
+# faster-whisper 1.2 utilise metadata_errors, retiré des versions récentes de PyAV.
+av>=11,<17
+numpy>=2.2,<3
+opencv-python-headless==4.11.0.86

@@ -3,5 +3,6 @@ google-auth-oauthlib>=1.2,<2
 Pillow>=10,<13
 pypdf>=5
 requests>=2.31,<3
+jsonschema>=4.23,<5
 tzdata>=2024.1
 psycopg[binary]>=3.2,<4
