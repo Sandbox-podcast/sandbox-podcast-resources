@@ -1,4 +1,4 @@
-# StoryTelling Generator : scénario, voix et reprises
+# Scénario, voix et reprises
 
 Lire cette référence pour une histoire originale traitée par `storytelling-*`. Le [tutoriel du moteur](../../../../docs/factory/storytelling-generator.md) décrit les schémas et paramètres ; suivre le brief de Lou pour le sujet, le corpus narratif pour la méthode d'écriture.
 

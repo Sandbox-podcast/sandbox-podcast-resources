@@ -2,9 +2,22 @@
 
 StoryTelling Generator prépare une vidéo narrative dans la factory SANDBOX : il conserve tes sources, le scénario, les voix, les plans et les versions du montage. Tu peux le piloter dans Codex et suivre l'histoire dans le tableau local. Les fichiers produits restent sur ton ordinateur, sous `.local/factory/`.
 
-Pour démarrer dans Codex, donne ton sujet, tes sources et le résultat attendu. Par exemple :
+Dans un chat Codex ouvert sur ce dépôt, utilise le skill [`sandbox-storytelling-generator`](../../.agents/skills/sandbox-storytelling-generator/SKILL.md). Pour ouvrir l'interface :
 
-> Crée une histoire avec StoryTelling Generator à partir de ce sujet et de ces fichiers. Commence par lire mes sources, puis pose les questions qui changent le récit. Écris le scénario complet, prépare les plans et conduis la production jusqu'au MP4. Utilise ElevenLabs dans le navigateur intégré pour le son. Le plafond de crédits sera celui que je définis dans le cadrage. Conserve les étapes et les fichiers pour que je puisse corriger une scène ensuite.
+```text
+$sandbox-storytelling-generator Ouvre le générateur.
+```
+
+Codex vérifie l'état local et ouvre `/storytelling`, en lançant le serveur si nécessaire. Cette demande n'engage aucune production. Pour créer une vidéo, donne ton sujet, tes sources et le résultat attendu :
+
+```text
+$sandbox-storytelling-generator
+Crée une vidéo sur [mon sujet] avec les fichiers joints.
+Durée : [durée souhaitée]. Public : [public visé].
+Utilise ElevenLabs dans le navigateur intégré pour le son.
+```
+
+Le skill prépare le cadrage, traite le scénario et conduit les étapes disponibles jusqu'au MP4. Il demande les choix déterminants manquants et respecte les plafonds définis pour cette histoire. Pour reprendre, indique l'histoire concernée et la correction souhaitée ; Codex retrouve ses versions dans le même état local.
 
 Précise si tu veux un documentaire, une fiction ou un récit mêlant faits et reconstitutions. Ajoute la durée, le public et les éléments obligatoires si tu les connais. Codex peut préparer le scénario à partir de la requête de la factory, puis l'importer et poursuivre le parcours. L'accès à ElevenLabs dans le navigateur demande une session Codex active et un compte connecté.
 

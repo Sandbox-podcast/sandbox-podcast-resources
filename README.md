@@ -106,6 +106,18 @@ Pour traiter un épisode réel, installer le worker Windows ou sauvegarder l'ét
 
 StoryTelling Generator transforme un sujet et ses sources en scénario, pistes sonores, plans et vidéo montée. Il conserve les versions dans la factory et permet de corriger une scène après l'export. Le parcours principal se pilote dans Codex, avec une interface locale pour retrouver chaque étape.
 
+Dans un chat Codex ouvert sur ce dépôt, appelle le skill [`sandbox-storytelling-generator`](.agents/skills/sandbox-storytelling-generator/SKILL.md) :
+
+```text
+$sandbox-storytelling-generator
+Crée une vidéo sur [mon sujet] à partir des fichiers joints.
+Utilise ElevenLabs dans le navigateur intégré pour le son.
+```
+
+Pour ouvrir l'interface, écris `$sandbox-storytelling-generator Ouvre le générateur`. Le skill vérifie le serveur et le worker, puis ouvre la page ; cette demande seule ne lance aucune production. Pour reprendre, indique l'histoire à poursuivre ou la scène à corriger.
+
+Tu peux aussi démarrer le serveur toi-même :
+
 1. Installe les prérequis indiqués ci-dessus, puis lance le tableau de la factory :
 
    ```powershell
@@ -113,7 +125,7 @@ StoryTelling Generator transforme un sujet et ses sources en scénario, pistes s
    & ./.local/factory-venv/Scripts/python.exe -m youtube_growth.factory serve --with-worker
    ```
 
-2. Dans Codex, donne ton sujet, tes sources et tes contraintes, puis demande : « Crée cette vidéo avec StoryTelling Generator et utilise ElevenLabs dans le navigateur intégré pour le son. » Codex prépare le cadrage et te demande les choix déterminants qui manquent.
+2. Appelle le skill dans Codex avec ton sujet, tes sources et tes contraintes. Codex prépare le cadrage et te demande les choix déterminants qui manquent.
 3. Ouvre [StoryTelling Generator](http://127.0.0.1:8765/storytelling). Tu peux y ajouter des notes, liens, documents et médias, choisir documentaire ou fiction, régler la durée et définir le plafond de crédits ElevenLabs. Le mode avec validation éditoriale s'arrête après le scénario et le storyboard.
 4. Lance la production. Codex traite la requête de scénario et les demandes ElevenLabs depuis sa session active, puis les fichiers reçus sont importés dans le projet. Le worker mesure les voix, construit la timeline et rend la prévisualisation, le MP4 1080p et les sous-titres.
 5. Relis et écoute le résultat. Pour corriger une scène, ouvre son texte, remplace une ressource ou régénère sa voix. Les ressources inchangées sont réutilisées ; une scène verrouillée protège aussi ses dépendances.
