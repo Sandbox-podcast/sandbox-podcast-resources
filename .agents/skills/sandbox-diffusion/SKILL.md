@@ -1,16 +1,17 @@
 ---
 name: sandbox-diffusion
-description: Préparer le calendrier SANDBOX et exécuter sa simulation en respectant disponibilité réelle, échéance, comptes et reprises incertaines. Utiliser pour planifier, suspendre ou reprendre un cycle ; aucune mutation sociale réelle.
+description: Planifier, suspendre, reprendre ou simuler le calendrier de diffusion SANDBOX après contrôle des médias et du packaging. Respecter disponibilité réelle, prochain tournage et tentatives incertaines ; LinkedIn manuel et aucune mutation sociale réelle.
 ---
 
 # Préparer la diffusion
 
-Entrées : épisodes, disponibilité vérifiée de l'émission complète, rendus contrôlés, packaging, comptes configurés et prochain tournage explicite. Paramètres : `episode_id`, plateforme, instant avec décalage UTC et état persistant. Outils : commandes `plan`, `simulate`, `status`, `pause`, `resume` de la factory. Vérifie leur aide dans [le parcours d'exploitation](../../../docs/factory/exploitation.md).
+Réunir `episode_id`, disponibilité vérifiée de l'émission complète, rendus et packaging contrôlés, comptes configurés et prochain tournage explicite. Utiliser `status`, `plan`, `simulate`, `pause` et `resume` sur le bon état persistant ; consulter [l'exploitation](../../../docs/factory/exploitation.md) pour leurs paramètres.
 
-Calcule la fenêtre en Europe/Paris entre disponibilité effective et prochain tournage, avec marge de traitement. Une date prévue ne prouve pas la disponibilité. Stocke des instants non ambigus ; ne devine pas une heure lors d'un changement d'heure. Après retard, recalcule dans la fenêtre restante sans déplacer la borne finale. Évite les sujets trop rapprochés et archive le surplus justifié.
+1. Calculer la fenêtre en Europe/Paris entre disponibilité effective et prochain tournage, avec marge de traitement. Une date prévue ne prouve pas la disponibilité. Stocker des instants avec décalage UTC ; faire préciser une heure ambiguë lors d'un changement d'heure.
+2. Après retard, recalculer dans la fenêtre restante sans déplacer la borne finale. Éviter les sujets trop rapprochés et archiver le surplus justifié. Appliquer la fermeture même sans nouvel épisode ; aucun rattrapage en rafale d'échéances expirées.
+3. Laisser le runtime réserver atomiquement le travail. Revérifier cycle, disponibilité, compte, empreintes et validité immédiatement avant chaque envoi simulé. Lire l'état durable avant de reprendre ; ne pas effacer une intention pour forcer une tentative.
+4. Pour une tentative au résultat inconnu, conserver le blocage jusqu'à réconciliation. Borner les reprises selon le runtime ; continuer les contenus indépendants encore admissibles.
 
-Consulte le vrai état, réserve atomiquement le travail, puis revérifie cycle, disponibilité et validité immédiatement avant l'envoi simulé. Une fermeture doit s'appliquer même sans nouvel épisode. Ne rattrape pas les échéances expirées en rafale.
+Maintenir les connecteurs simulés, même avec des credentials. Les uploads privés, ébauches distantes, programmations et modifications sont des mutations sociales interdites dans ce parcours. Préparer uniquement le pack manuel pour LinkedIn.
 
-Le connecteur doit rester simulé, même si des credentials existent. Aucune publication, upload privé, ébauche distante, programmation ou modification distante n'est autorisée. LinkedIn produit uniquement son pack manuel. Les nouvelles tentatives sont bornées ; un résultat inconnu exige une réconciliation avant toute reprise. Ne supprime pas une intention pour forcer un nouvel envoi.
-
-Sorties : calendrier persistant, statuts et journal de tentatives, identifiants `sim:` reconnaissables, blocages par contenu et actions humaines. Le succès de simulation ne prouve pas une intégration réelle. Toute activation future exige le périmètre explicite de Lou et les prérequis de [la matrice](../../../docs/factory/capacites.md).
+Livrer calendrier persistant, statuts, journal de tentatives, identifiants `sim:`, blocages par contenu et actions humaines. Le succès de simulation ne prouve pas une intégration réelle. Consulter [les capacités](../../../docs/factory/capacites.md) si une activation réelle est demandée ; ce skill ne l'active pas.

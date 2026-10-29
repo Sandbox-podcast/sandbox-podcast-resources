@@ -1,0 +1,4 @@
+interface:
+  display_name: "SANDBOX Analyse"
+  short_description: "Cartographier un épisode avec preuves et lacunes"
+  default_prompt: "Utilise $sandbox-analyse pour examiner cet épisode et documenter la couverture du texte, du son et des images."

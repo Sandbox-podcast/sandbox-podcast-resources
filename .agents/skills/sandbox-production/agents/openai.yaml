@@ -1,0 +1,4 @@
+interface:
+  display_name: "SANDBOX Production"
+  short_description: "Rendre et contrôler les montages vidéo locaux"
+  default_prompt: "Utilise $sandbox-production pour produire ce montage local et vérifier ses fichiers, sa provenance et les contrôles restants."

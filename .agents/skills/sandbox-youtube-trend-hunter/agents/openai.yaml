@@ -1,0 +1,4 @@
+interface:
+  display_name: "SANDBOX YouTube Trend Hunter"
+  short_description: "Veille YouTube gratuite et préparation vidéo locale"
+  default_prompt: "Utilise $sandbox-youtube-trend-hunter pour rechercher les opportunités YouTube du jour et présenter leurs preuves."

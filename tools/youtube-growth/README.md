@@ -1,5 +1,7 @@
 # SANDBOX YouTube Growth Agent
 
+La [veille YouTube Trend Hunter](TREND-HUNTER.md) collecte les tendances publiques gratuites, produit un classement sourcé et prépare des vidéos locales de deux à cinq minutes. Son skill est `sandbox-youtube-trend-hunter`, disponible avec les autres skills `sandbox-` dans Codex et via les points d'entrée Claude Code.
+
 Depuis le 28 octobre 2026, la factory persistante prolonge ces moteurs locaux. Commence par le [guide pour l'équipe](../../docs/factory/README.md) pour comprendre le parcours d'un épisode et les états du tableau, puis utilise les [commandes d'exploitation](../../docs/factory/exploitation.md). Les commandes historiques d'écriture (`apply --execute`, restauration réelle, commentaires, `--publish` et uploads privés) sont bloquées par une barrière commune, même avec OAuth. Les lectures et rendus locaux restent utilisables. Le [diagnostic](../../docs/factory/audit.md) et la [matrice des capacités](../../docs/factory/capacites.md) distinguent code, simulation et accès réels.
 
 Depuis le 29 octobre, le [parcours éditorial multiformat](../../docs/factory/production-editoriale.md) étend ce moteur aux opportunités de veille, aux jugements éditoriaux sourcés, à la production narrative locale et aux comparaisons Analytics. La découverte par modèle est optionnelle et les sélections restent soumises à leurs preuves et revues.
