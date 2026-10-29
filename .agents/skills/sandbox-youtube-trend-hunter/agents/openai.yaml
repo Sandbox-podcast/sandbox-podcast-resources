@@ -1,0 +1,4 @@
+interface:
+  display_name: "SANDBOX YouTube Trend Hunter"
+  short_description: "Des tendances sourcées au brief StoryTelling"
+  default_prompt: "Utilise $sandbox-youtube-trend-hunter pour proposer les tendances du jour, puis attends mon choix pour préparer le brief StoryTelling."

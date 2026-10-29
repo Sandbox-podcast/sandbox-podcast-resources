@@ -1,0 +1,4 @@
+interface:
+  display_name: "SANDBOX Sélection"
+  short_description: "Choisir les extraits sourcés sans quota de contenus"
+  default_prompt: "Utilise $sandbox-selection pour choisir les passages de cet épisode et justifier les coupes, formats et réserves."

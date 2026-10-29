@@ -1,0 +1,4 @@
+interface:
+  display_name: "SANDBOX Résultats"
+  short_description: "Examiner les performances et préparer le prochain brief"
+  default_prompt: "Utilise $sandbox-resultats pour analyser ces observations et proposer les décisions à réexaminer au prochain cycle."

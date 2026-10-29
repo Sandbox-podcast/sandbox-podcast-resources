@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "mode": "ai-tech",
+  "language": "fr",
+  "regions": ["FR", "US"],
+  "window_days": 7,
+  "recommendations": 10,
+  "minimum_score": 25,
+  "max_video_seconds": 300,
+  "max_difficulty": 2,
+  "allowed_categories": [],
+  "excluded_categories": ["sensitive"],
+  "sources": {"trends": true, "news": true, "reddit": true, "hackernews": true, "youtube": true},
+  "reddit_communities": ["artificial", "technology"],
+  "news_queries": {"fr": "intelligence artificielle OR technologie", "en": "artificial intelligence OR technology"},
+  "topic_aliases": {},
+  "http": {"timeout_seconds": 15, "cache_seconds": 1800, "max_requests_per_run": 60},
+  "youtube": {"daily_search_calls": 30, "daily_other_units": 500, "search_topics": 5, "channels_per_run": 5, "baseline_videos": 20, "min_baseline": 5, "refresh_videos": 50},
+  "weights": {"outperformance": 25, "growth": 20, "confirmation": 15, "competition": 15, "production": 15, "french_relevance": 10},
+  "repeat_after_hours": 48,
+  "repeat_score_increase": 10,
+  "elevenlabs": {"enabled": false, "model_id": "eleven_multilingual_v2", "voice_id": null, "max_characters": 4500}
+}

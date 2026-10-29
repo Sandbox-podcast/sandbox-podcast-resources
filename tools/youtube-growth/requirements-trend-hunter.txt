@@ -1,0 +1,4 @@
+# Collecte, SQLite et rapports : bibliothèque standard Python.
+# PNG des schémas et base des fuseaux horaires pour Windows.
+Pillow>=10,<13
+tzdata>=2024.1
