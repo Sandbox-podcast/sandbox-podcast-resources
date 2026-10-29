@@ -13,9 +13,10 @@ BLOCKER_CODES = {"queue_paused", "publication_not_sendable", "editorial_revision
     "minimum_spacing_replan_required", "account_has_uncertain_dispatch", "daily_limit_replan_required",
     "asset_or_review_changed", "asset_file_changed", "thumbnail_concepts_required",
     "selected_title_or_thumbnail_changed", "selected_thumbnail_file_changed", "packaging_revision_requires_review"}
+BLOCKER_CODES.update({"editorial_recommendation_changed", "editorial_judgment_stale", "editorial_topic_expired", "narrative_research_blocked"})
 
 
-def assert_editorial_current(store, publication):
+def assert_editorial_current(store, publication, *, now=None):
     if publication.get("editorial_current") is False:
         raise ValueError("editorial_revision_changed")
     candidate = store.get("candidate", publication["segment_id"]) if publication.get("segment_id") else None
@@ -23,6 +24,9 @@ def assert_editorial_current(store, publication):
         raise ValueError("editorial_selection_not_retained")
     if candidate and (candidate.get("decision") != "retained" or candidate.get("episode_id") != publication["episode_id"]):
         raise ValueError("editorial_selection_not_retained")
+    if candidate:
+        from .editorial import assert_compatible
+        assert_compatible(store.get("opportunity", publication["segment_id"]), candidate, now=now)
 
 
 def window(episode: dict, config: dict) -> tuple[datetime, datetime]:
@@ -85,7 +89,7 @@ def plan(store, config: dict, episode_id: str, *, now=None) -> dict:
         if row["status"] in TERMINAL:
             continue
         try:
-            assert_editorial_current(store, row)
+            assert_editorial_current(store, row, now=now)
         except ValueError as error:
             row.update(status="blocked", blocked_reason=str(error), scheduled_at=None)
             store.save_publication(row, now=now)
@@ -179,7 +183,7 @@ def assert_sendable(store, config, publication, *, now=None):
         raise ValueError("queue_paused")
     if publication["status"] not in {"scheduled", "sending"}:
         raise ValueError("publication_not_sendable")
-    assert_editorial_current(store, publication)
+    assert_editorial_current(store, publication, now=now)
     episode = store.get("episode", publication["episode_id"])
     start, end = window(episode, config)
     latest = end-timedelta(minutes=config["schedule"]["connector_latency_minutes"])

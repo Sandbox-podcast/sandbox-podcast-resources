@@ -75,6 +75,12 @@ def load_config(path: Path | None = None) -> dict:
             raise ValueError(f"Fréquence de métriques invalide : {field}.")
     if value["budgets"]["external_calls_enabled"] is not False:
         raise ValueError("Les appels externes payants restent désactivés dans cette livraison.")
+    minimum = value.get("editorial", {}).get("minimum_score", 70)
+    if type(minimum) not in (int, float) or not math.isfinite(minimum) or not 0 <= minimum <= 100:
+        raise ValueError("Seuil éditorial invalide.")
+    generation = value.get("generation", {})
+    if generation.get("network", False) is not False or generation.get("cost_per_call", 0) != 0:
+        raise ValueError("La génération configurée doit rester locale et sans coût.")
     return value
 
 

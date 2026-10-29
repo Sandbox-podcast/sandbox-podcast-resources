@@ -15,6 +15,8 @@ Entrées : manifeste d'épisode, master autorisé terminé, transcription évent
 4. Vérifie les fichiers produits et leur provenance. Garde les contrôles visuels et d'écoute manquants comme manquants. Un rendu ne certifie pas le sens du montage.
 5. Consulte le calendrier, simule les échéances, relève les erreurs puis produis le bilan. La clôture interdit les nouveaux posts, tout en laissant continuer mesures et expériences existantes.
 
+Pour le parcours multiformat, lis [la production éditoriale](../../../docs/factory/production-editoriale.md). `discover` prépare les sujets depuis toute la transcription ; `editorial` et `opportunities` enregistrent des notes motivées, sans quota ni validation audiovisuelle implicite. Les vidéos originales utilisent `research`, `draft-story` puis `narrative`, avec les mêmes réservations de worker via `--queue`. Un modèle local absent reste un blocage explicite ; ses requêtes sont utilisables dans la conversation. Ne transforme pas une réponse d'agent en revue humaine ni en autorisation sociale.
+
 Sorties : état durable du cycle, reçus d'étape, rendus, packs manuels, calendrier simulé et bilan. Qualité attendue : coupes traçables, reprise sans doublon, sources intactes, aucune performance synthétique présentée comme réelle.
 
 Les uploads privés, brouillons distants et programmations sont des mutations sociales. Ils restent interdits. LinkedIn reste exclusivement manuel. Si le runtime est arrêté, redémarre-le selon le guide ; un SKILL.md ne remplace pas le worker. Si une donnée ou un accès manque, bloque seulement l'étape concernée et indique le besoin exact.

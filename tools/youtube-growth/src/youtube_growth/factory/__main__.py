@@ -89,6 +89,40 @@ def parser():
     decision.add_argument("--observation-id", action="append", default=[])
     decision.add_argument("--apply", action="store_true")
     decision.add_argument("--reverse")
+    editorial = commands.add_parser("editorial")
+    editorial.add_argument("episode_id")
+    news = commands.add_parser("opportunities")
+    news.add_argument("feed", type=Path)
+    for command in (editorial, news):
+        command.add_argument("--judgments", type=Path)
+        command.add_argument("--generate", action="store_true")
+    discovery = commands.add_parser("discover")
+    discovery.add_argument("episode_id")
+    discovery.add_argument("--proposals", type=Path)
+    discovery.add_argument("--generate", action="store_true")
+    research = commands.add_parser("research")
+    research.add_argument("dossier", type=Path)
+    research_fetch = commands.add_parser("research-fetch")
+    research_fetch.add_argument("manifest", type=Path)
+    design = commands.add_parser("draft-story")
+    design.add_argument("brief", type=Path)
+    design.add_argument("--generate", action="store_true")
+    narrative = commands.add_parser("narrative")
+    narrative.add_argument("story", type=Path)
+    narrative.add_argument("--stage", choices=["all", "research", "script", "storyboard", "voice", "render", "metadata"], default="all")
+    narrative.add_argument("--format", choices=["horizontal", "vertical"], default="horizontal")
+    narrative.add_argument("--draft", action="store_true")
+    narrative.add_argument("--queue", action="store_true")
+    narrative_review = commands.add_parser("review-narrative")
+    narrative_review.add_argument("record_id", help="story_id:revision depuis status")
+    narrative_review.add_argument("--reviewer", required=True)
+    narrative_review.add_argument("--evidence", required=True)
+    narrative_review.add_argument("--checks", nargs="+", required=True, choices=["facts", "editorial", "visual", "audio", "subtitles", "packaging"])
+    learn = commands.add_parser("learn")
+    learn.add_argument("--contexts", type=Path)
+    analytics_import = commands.add_parser("import-analytics")
+    analytics_import.add_argument("audit", type=Path)
+    analytics_import.add_argument("--fixture", action="store_true")
     return result
 
 
@@ -98,6 +132,9 @@ def doctor(store, config):
     return {"mode": config["mode"], "live_enabled": False, "python": sys.version.split()[0], "tools": tools,
             "database": str(store.path), "integrity_check": store.db.execute("PRAGMA integrity_check").fetchone()[0],
             "heartbeat": health, "runtime_executed": health is not None,
+            "production_capabilities": {"editorial": "local_model_configured" if config.get("generation", {}).get("local_command") else "structured_agent_input_required",
+                "narrative_renderer": "ffmpeg_and_pillow", "stock_system_voice": "Windows_System_Speech_or_imported_recordings",
+                "elevenlabs": "not_enabled_paid_calls_disabled", "human_content_validation": "required", "social_publication": "disabled"},
             "accounts": {k: {"configured": len(v), "real_connection_verified": False} for k, v in config["authorized_accounts"].items()},
             "skills": [{"name": x.parent.name, "path": str(x), "catalog_verification": "requires_host_catalog"} for x in (ROOT / ".agents/skills").glob("sandbox-*/SKILL.md")],
             "blockers": (["ffmpeg_or_ffprobe_missing"] if not all(tools.values()) else [])+["real_connectors_disabled", "no_background_model_configured"],
@@ -183,6 +220,47 @@ def main(argv=None):
                 command = args.command
                 if command == "doctor":
                     result = doctor(store, config)
+                elif command in {"editorial", "opportunities"}:
+                    from .editorial_runtime import assess
+                    result = assess(store, config, episode_id=args.episode_id if command == "editorial" else None,
+                                    feed=args.feed if command == "opportunities" else None, judgments_path=args.judgments,
+                                    use_model=args.generate, now=now)
+                elif command == "discover":
+                    from .editorial_runtime import discover
+                    result = discover(store, config, args.episode_id, proposals_path=args.proposals, use_model=args.generate, now=now)
+                elif command == "research":
+                    from .research import verify
+                    result = verify(load_json(args.dossier), base=args.dossier.resolve().parent, now=now)
+                    store.put("research", result["research_id"], result, now=now)
+                elif command == "research-fetch":
+                    from .research import fetch_sources
+                    result = fetch_sources(load_json(args.manifest), store.directory/"research-sources", now=now)
+                elif command == "draft-story":
+                    from .editorial_runtime import draft_story
+                    result = draft_story(store, config, args.brief, use_model=args.generate, now=now)
+                elif command == "narrative":
+                    from .narrative import run
+                    from .media import fingerprint
+                    if args.queue:
+                        payload = {"story_path": str(args.story.resolve(strict=True)), "story_sha256": fingerprint(args.story),
+                                   "stage": args.stage, "format": args.format, "draft": args.draft}
+                        job_id = store.enqueue("narrative", load_json(args.story).get("episode_id"), payload, now=now)
+                        result = {"status": "queued", "job_id": job_id}
+                    else:
+                        result = run(store, config, args.story, stage=args.stage, format_name=args.format, draft=args.draft, now=now)
+                elif command == "review-narrative":
+                    from .narrative import review
+                    result = review(store, args.record_id, reviewer=args.reviewer, evidence=args.evidence, checks=args.checks, now=now)
+                elif command == "learn":
+                    from .analytics import compare_content
+                    contexts = load_json(args.contexts).get("contents", []) if args.contexts else store.records("performance_context")
+                    result = compare_content(store.records("observation"), contexts, now=now)
+                    if args.contexts:
+                        for context in contexts:
+                            store.put("performance_context", context["entity_id"], context, now=now)
+                elif command == "import-analytics":
+                    from .analytics_import import import_audit
+                    result = import_audit(store, config, load_json(args.audit), fixture=args.fixture, now=now)
                 elif command == "ingest":
                     result = runtime.ingest(store, args.manifest, now=now)
                 elif command == "process":

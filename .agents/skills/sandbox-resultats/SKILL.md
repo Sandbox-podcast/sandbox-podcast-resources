@@ -5,6 +5,8 @@ description: Analyser les observations et expériences SANDBOX et préparer des 
 
 # Analyser les résultats
 
+Le [parcours multiformat](../../../docs/factory/production-editoriale.md) ajoute `import-analytics` pour les audits YouTube existants et `learn` pour les contenus comparables. Préserve positions de rétention et sources de trafic. Fournis durée, format, date de publication, sujet, accroche, style et provenance ; exige les impressions de la même période pour comparer l'exposition. Les groupes et médianes sont descriptifs. Les références réelles alimentent le prochain brief, sans modifier automatiquement le scoring ni attribuer une causalité.
+
 Entrées : publications confirmées ou simulées, observations avec provenance, coûts et registre d'expériences. Paramètres : épisode, plateforme, compte, fenêtre et ancienneté comparable. Outils : `collect`, `report`, import d'observations et fonctions analytiques communes, selon [le guide](../../../docs/factory/exploitation.md).
 
 Pour chaque mesure, garde définition native et version, unité, dénominateur si pertinent, portée compte / post / média / destination, période, date de collecte et fuseau d'agrégation. Une donnée absente reste absente. Ne somme pas des relevés cumulés, des fenêtres recouvrantes ou plusieurs posts partageant un média. Les observations synthétiques de recette ne deviennent jamais des performances Sandbox.

@@ -120,6 +120,14 @@ def _registered_files(record: dict):
         for name in ("brief_path", "receipt_path"):
             if row.get(name):
                 yield row[name], "thumbnail-"+name, None
+    elif record["kind"] == "research":
+        for source in row.get("sources", []):
+            yield source["snapshot"], "research-source", source["sha256"]
+    elif record["kind"] == "narrative":
+        for artifact in row.get("inputs", [])+(row.get("asset") or {}).get("artifacts", []):
+            yield artifact["path"], "narrative-artifact", artifact["sha256"]
+        for stage in row.get("stages", {}).values():
+            yield stage["receipt"], "narrative-receipt", stage.get("sha256")
 
 
 def _inventory(records: list[dict], state: Path) -> list[dict]:
@@ -138,10 +146,10 @@ def _inventory(records: list[dict], state: Path) -> list[dict]:
             raise ValueError("Un média a changé depuis son enregistrement ; sauvegarde refusée.")
         if str(source) in entries:
             return
-        if source.is_relative_to(state / "episodes"):
+        if any(source.is_relative_to(state / folder) for folder in ("episodes", "narratives", "narrative-cache", "editorial", "story-design", "research-sources")):
             relative = source.relative_to(state).as_posix()
         elif relative is None:
-            identity = _episode_id(episode_id)
+            identity = _episode_id(episode_id or "research")
             suffix = source.suffix.lower()
             relative = f"sources/{identity}/{role}-{sha[:16]}{suffix}"
         _safe_relative(relative)
@@ -150,15 +158,17 @@ def _inventory(records: list[dict], state: Path) -> list[dict]:
         destinations[relative] = str(source)
         entries[str(source)] = {"relative_path": relative, "original_path": str(source), "sha256": sha,
                                 "size_bytes": source.stat().st_size, "role": role, "episode_id": episode_id}
-    episodes = state / "episodes"
-    if episodes.exists():
+    for folder in ("episodes", "narratives", "narrative-cache", "editorial", "story-design", "research-sources"):
+        episodes = state / folder
+        if not episodes.exists():
+            continue
         if not episodes.resolve().is_relative_to(state):
             raise ValueError("Le dossier des épisodes sort du stockage de la factory.")
         for path in sorted(episodes.rglob("*")):
             if path.is_symlink() or (hasattr(path, "is_junction") and path.is_junction()):
                 raise ValueError("Jonction ou lien dans les artefacts d'épisode.")
             if path.is_file() and path.name not in {"run.lock"} and not path.name.endswith(".lock"):
-                add(str(path), path.relative_to(state).as_posix(), role="episode_artifact", episode_id=None)
+                add(str(path), path.relative_to(state).as_posix(), role="factory_artifact", episode_id=None)
     for record in records:
         for path, role, expected in _registered_files(record):
             add(path, None, role=role, episode_id=record["data"].get("episode_id", record["episode_id"]), expected=expected)
@@ -269,7 +279,7 @@ def _validate_receipt(snapshot: Path) -> tuple[dict, Path]:
         if not isinstance(row, dict) or not isinstance(row.get("original_path"), str) or _path_key(row["original_path"]) is None:
             raise ValueError("Origine de fichier absolue requise.")
         relative = row.get("relative_path")
-        if _safe_relative(relative).parts[0] not in {"episodes", "sources"}:
+        if _safe_relative(relative).parts[0] not in {"episodes", "sources", "narratives", "narrative-cache", "editorial", "story-design", "research-sources"}:
             raise ValueError("Le média n'appartient pas aux épisodes ou à leurs sources.")
         source = _under(payload, relative)
         if relative in destinations or _path_key(row["original_path"]) in originals:
@@ -316,15 +326,36 @@ def restore(snapshot: Path, directory: Path) -> dict:
             except (UnicodeError, json.JSONDecodeError):
                 continue
             after = remap(before)
+            if isinstance(after, dict) and {"identity", "payload", "payload_sha256"} <= after.keys():
+                from .contracts import digest
+                after["payload_sha256"] = digest(after["payload"])
             if before != after:
                 target.write_text(json.dumps(after, ensure_ascii=False, indent=2, allow_nan=False)+"\n", encoding="utf-8")
                 changed.append({"relative_path": row["relative_path"], "previous_sha256": row["sha256"], "new_sha256": _sha(target)})
     with Store(directory) as store:
         with store.transaction():
+            changed_by_path = {str(_under(directory, row["relative_path"])): row["new_sha256"] for row in changed}
+            def refresh_hashes(value):
+                if isinstance(value, list):
+                    return [refresh_hashes(item) for item in value]
+                if not isinstance(value, dict):
+                    return value
+                result = {key: refresh_hashes(item) for key,item in value.items()}
+                for name in ("path", "receipt"):
+                    if isinstance(result.get(name), str) and result[name] in changed_by_path and "sha256" in result:
+                        result["sha256"] = changed_by_path[result[name]]
+                return result
             for table, key, column in (("records", "rowid", "data"), ("publications", "id", "data"),
                                        ("jobs", "id", "payload"), ("events", "sequence", "data")):
                 for identity, value in store.db.execute(f"SELECT {key},{column} FROM {table}").fetchall():
-                    updated = remap(json.loads(value))
+                    updated = refresh_hashes(remap(json.loads(value)))
+                    if table == "records" and updated.get("story_id") and updated.get("stages"):
+                        from .contracts import digest
+                        updated["review_revision"] = digest({"stages": {k:v["sha256"] for k,v in updated["stages"].items()},
+                                                               "asset_sha256": (updated.get("asset") or {}).get("sha256")})
+                        if updated.get("review"):
+                            updated["previous_review"] = updated.pop("review")
+                        updated["human_content_validation"] = "pending"
                     store.db.execute(f"UPDATE {table} SET {column}=? WHERE {key}=?",
                                      (json.dumps(updated, ensure_ascii=False, allow_nan=False), identity))
             # A restored process owns no old lease. Never replay an interrupted send.
