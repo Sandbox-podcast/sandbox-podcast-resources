@@ -23,7 +23,8 @@ Les réglages réellement appliqués viennent de la lecture du code du backend 0
 | Contrôle | Résultat observé |
 | --- | --- |
 | Suite Python de la factory, Python 3.14 de l'environnement factory | 453 tests, succès, 11 ignorés selon leurs prérequis ; 435 tests avant ce chantier. |
-| Tests du dépôt | 22 tests, succès ; les 8 tests de l'assistant GitHub sont ignorés faute de PowerShell 7 sur ce poste. |
+| Tests du dépôt | 24 tests, succès ; les 8 tests de l'assistant GitHub sont ignorés faute de PowerShell 7 sur ce poste. |
+| Clone propre de la branche | `vendor_skills.py check` et `check_repository.py` sans erreur, 555 fichiers de collections suivis. |
 | Collections | `vendor_skills.py check` : empreintes, licences et catalogue conformes. |
 | Skills SANDBOX | `sync_skills.py` : 10 skills vérifiés, entrée Claude de `sandbox-video-onboarding` générée. |
 | Index Git | `check_repository.py` et `git diff --check` sans erreur. |
@@ -31,6 +32,8 @@ Les réglages réellement appliqués viennent de la lecture du code du backend 0
 | CLI | Parcours de recette jusqu'au cadrage StoryTelling avec la voix « Lou » choisie, puis cadrage périmé après une réponse modifiée. |
 
 Une passe d'audit indépendante a corrigé l'invalidation après un changement de voix Windows, ajouté le refus d'une voix fixée sous une autre version de Voice Studio, distingué profils clonés et conçus, et appliqué `delivery.pause_after_seconds` au montage sans modifier les caches existants.
+
+La première CI de la PR a échoué sur `vendor_skills.py check`. Deux causes : la règle `**/analysis/` du `.gitignore` avait écarté six skills Autopunk de `data-journalism/analysis`, et l'empreinte dépendait de l'ordre de tri des chemins, différent sous Windows et Linux. Une exception limitée aux fichiers texte de `.agents/vendor/` et un tri par chemin POSIX corrigent ces deux points ; deux tests les couvrent. La réinstallation depuis les commits épinglés a reproduit les mêmes fichiers et le même catalogue.
 
 ## Ce qui reste à vérifier
 
