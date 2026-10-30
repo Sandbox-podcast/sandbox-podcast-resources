@@ -9,7 +9,7 @@ Les fichiers `*-v2.png` sont les visuels à utiliser sur la chaîne [@SandboxFR]
 - `channel-banner-v2.png` : bannière 2560 × 1440 px. Le logo seul reste dans la zone centrale de 1544 × 423 px, visible sur mobile.
 - `channel-avatar-v2.png` : avatar 800 × 800 px, triangle cyan centré optiquement dans le recadrage circulaire YouTube, avec des espaces équilibrés en haut et sur les côtés.
 - `video-watermark-v2.png` : filigrane transparent 150 × 150 px, prévu pour l'intégralité des vidéos.
-- `episode-thumbnail-template-v2.png` : base 1280 × 720 px à personnaliser par épisode. Le titre et le numéro sont des exemples, pas une miniature publiable telle quelle.
+- `episode-thumbnail-template-v2.png` et son SVG : ancien gabarit conservé pour l'historique. Ne plus l'utiliser pour les nouvelles miniatures. Chaque sujet reçoit une composition éditoriale selon la [procédure des miniatures](../../../docs/factory/miniatures.md), avec une palette et une mise en page adaptées.
 
 La [décision graphique](https://github.com/Sandbox-podcast/sandbox-podcast-site/blob/main/docs/design-decisions/DD-0011-identite-youtube-sandbox.md) explique l'alignement avec le site. Le [texte de chaîne](channel-copy.md) contient le nom, le lien et la description en vigueur. Les fichiers sans suffixe `-v2` sont conservés comme première version du kit.
 

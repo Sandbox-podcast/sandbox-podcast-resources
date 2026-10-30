@@ -16,7 +16,7 @@ from ..storage import save_json
 from ..thumbnails import _font
 
 VERSION = 1
-RENDERER_VERSION = "1.1"
+RENDERER_VERSION = "1.2"
 CHECKS = frozenset({"content_fidelity", "title_image_complementarity", "mobile_readability", "composition", "brand_rights", "distinct_hypotheses"})
 NAVY, CYAN, WHITE = "#071322", "#42e8de", "#f9fbff"
 
@@ -152,18 +152,31 @@ def validate_brief(brief, episode, candidate, asset, config, *, now=None):
             at = source.get("source_time_seconds")
             if not _number(at) or not any(c["source_start_seconds"] <= at < c["source_end_seconds"] for c in asset["cuts"]):
                 raise ValueError("L'image doit venir du passage réellement monté.")
-        elif source.get("kind") == "authorized_photo":
+        elif source.get("kind") in {"authorized_photo", "finished_artwork"}:
             _text(source, ("path", "sha256", "rights_evidence", "subject_identity"))
             if fingerprint(Path(source["path"])) != source["sha256"]:
                 raise ValueError("La photo autorisée a changé.")
+            if source["kind"] == "finished_artwork":
+                _text(row, ("art_direction", "visual_story", "typography_reason"))
+                from PIL import Image
+                with Image.open(source["path"]) as artwork:
+                    if artwork.width < 1280 or artwork.height < 720 or artwork.width*9 != artwork.height*16:
+                        raise ValueError("La création finale doit être en 16:9 et au moins 1280 x 720.")
+                if crop != [0, 0, 1, 1]:
+                    raise ValueError("Conserver la création finale entière, sans nouveau recadrage.")
         else:
             raise ValueError("Utiliser une vraie image du passage ou une photo autorisée.")
         image_box = _box(row.get("image_box"))
         text_box = _box(row.get("text_box"))
-        safe = [40, 80, 1200, 600]
+        # Finished artwork already includes its composition and lettering. Do
+        # not reserve a fixed brand header or split it into disjoint panels.
+        finished = source.get("kind") == "finished_artwork"
+        safe = [0, 0, 1280, 720] if finished else [40, 80, 1200, 600]
         if not _contains(safe, image_box) or not _contains(safe, text_box):
             raise ValueError("Respecter les marges et l'espace de marque du canevas 1280 x 720.")
-        if phrase.strip() and _intersects(image_box, text_box):
+        if finished and image_box != [0, 0, 1280, 720]:
+            raise ValueError("La création finale doit occuper le canevas entier.")
+        if not finished and phrase.strip() and _intersects(image_box, text_box):
             raise ValueError("Placer le texte hors de la zone réservée à la personne ou à la démonstration.")
         if phrase.strip() and _intersects(text_box, [1080, 640, 200, 80]):
             raise ValueError("Conserver le texte hors de la réserve basse droite des interfaces.")
@@ -198,6 +211,8 @@ def create_bundle(brief, episode, candidate, asset, output: Path, config, *, now
     from PIL import Image, ImageDraw, ImageOps
     from ..shorts import _call, _require_media_tools
     validate_brief(brief, episode, candidate, asset, config, now=now)
+    if not episode.get("synthetic") and any(c["image"]["kind"] != "finished_artwork" for c in brief["concepts"]):
+        raise ValueError("Le gabarit automatique est réservé aux fixtures. Fournir trois créations finales avec image.kind=finished_artwork.")
     brief = json.loads(json.dumps(brief))
     if fingerprint(Path(asset["path"])) != asset["sha256"] or fingerprint(Path(episode["source"])) != episode["source_sha256"]:
         raise ValueError("Le média ou son master a changé depuis l'analyse.")
@@ -221,6 +236,7 @@ def create_bundle(brief, episode, candidate, asset, output: Path, config, *, now
         variants, artifacts = [], []
         for concept in brief["concepts"]:
             source = concept["image"]
+            finished = source["kind"] == "finished_artwork"
             source_file = directory / (concept["concept_id"]+"-source.png")
             if source["kind"] == "episode_frame":
                 ffmpeg, _ = _require_media_tools()
@@ -246,14 +262,15 @@ def create_bundle(brief, episode, candidate, asset, output: Path, config, *, now
                     raise ValueError("La copie de la photo autorisée a changé.")
                 source["path"] = str(copied_photo)
                 photo = Image.open(source["path"]).convert("RGB")
-                artifacts.append(_artifact(copied_photo, "authorized_photo"))
+                artifacts.append(_artifact(copied_photo, "finished_artwork" if finished else "authorized_photo"))
             original_size = photo.size
             x, y, w, h = source["crop"]
             photo = photo.crop((round(x*photo.width), round(y*photo.height), round((x+w)*photo.width), round((y+h)*photo.height)))
             canvas = Image.new("RGB", (width, height), NAVY)
             draw = ImageDraw.Draw(canvas)
-            draw.rectangle((0, 0, round(14*scale), height), fill=CYAN)
-            draw.text((round(40*scale), round(23*scale)), "SANDBOX", font=_font(round(29*scale)), fill=CYAN)
+            if not finished:
+                draw.rectangle((0, 0, round(14*scale), height), fill=CYAN)
+                draw.text((round(40*scale), round(23*scale)), "SANDBOX", font=_font(round(29*scale)), fill=CYAN)
             ix, iy, iw, ih = concept["image_box"]
             fitted = ImageOps.contain(photo, (round(iw*scale), round(ih*scale)), method=Image.Resampling.LANCZOS)
             left, top = round(ix*scale)+(round(iw*scale)-fitted.width)//2, round(iy*scale)+(round(ih*scale)-fitted.height)//2
@@ -266,7 +283,7 @@ def create_bundle(brief, episode, candidate, asset, output: Path, config, *, now
             tx, ty, tw, th = concept["text_box"]
             phrase = concept["thumbnail_text"].strip()
             lines, font_size = [], None
-            if phrase:
+            if phrase and not finished:
                 for size in range(112, 47, -2):
                     font = _font(round(size*scale))
                     wrapped = _wrap(phrase, font, tw*scale)

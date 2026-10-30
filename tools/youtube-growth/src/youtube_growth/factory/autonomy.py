@@ -720,10 +720,11 @@ def validate_local_wording(response: dict, config: dict, spoken_units=None, conc
             raise ValueError("La phrase de miniature ne tient pas dans trois lignes lisibles. Réécris-la plus brièvement, avec des mots plus courts.")
 
 
-def align_concept_evidence(model, concepts: list[dict], spoken_units: list[dict]) -> tuple[dict, dict]:
+def align_concept_evidence(model, concepts: list[dict], spoken_units: list[dict], *, imported=False) -> tuple[dict, dict]:
     alternatives = []
     for index, concept in enumerate(concepts):
-        indices = [u["index"] for u in spoken_units if len(u["text"].split()) >= 12 and concept["anchor_term"] in anchor_words(u["text"])]
+        indices = [u["index"] for u in spoken_units if imported or
+                   (len(u["text"].split()) >= 12 and concept["anchor_term"] in anchor_words(u["text"]))]
         alternatives.append(object_schema({"concept_index": {"const": index}, "spoken_unit_index": {"enum": indices},
             "supported": {"type": "boolean"}, "reason": {"type": "string", "minLength": 1, "maxLength": 600}}))
     schema = object_schema({"assignments": {"type": "array", "minItems": 3, "maxItems": 3,
@@ -828,7 +829,7 @@ def source_bound_metadata(response: dict, candidate: dict, spoken_units: list[di
         unit=next(u for u in spoken_units if u['index']==concept['spoken_unit_index'])
         concept.update(angle=question,hypothesis='Question éditoriale : '+question,
             wording_reason='Paroles conservées : "'+punctuation(unit['text'])+'"',
-            title_image_complementarity='Le titre présente la question "'+question+'". L\'accroche "'+punctuation(concept['thumbnail_text'])+'" en propose une entrée courte avec un portrait du passage.')
+            title_image_complementarity='Le titre présente la question "'+question+'". L\'accroche "'+punctuation(concept['thumbnail_text'])+'" en propose une entrée courte.')
     selected=result['concepts'][result['preferred_index']]
     unit=next(u for u in spoken_units if u['index']==selected['spoken_unit_index'])
     result.update(viewer_question=selected['editorial_question'],
@@ -978,11 +979,26 @@ def thumbnails(store, episode: dict, config: dict, job: dict, *, now=None, attem
         raise LocalModelError('local_packaging_remote_intent_refused')
     for pack in packs:
         ensure_packaging_unlocked(pack["id"], store.records("experiment"))
-    options, directory, model = settings(config), _directory(store, episode), _model(store, episode, config)
+    directory = _directory(store, episode)
+    artwork_path = directory / "finished-artwork" / asset["asset_id"] / "brief.json"
+    artwork = None
+    if not episode.get("synthetic"):
+        if not artwork_path.is_file():
+            raise LocalModelError("local_finished_artwork_required: "+str(artwork_path))
+        artwork = load_json(artwork_path)
+        if any(c.get("image", {}).get("kind") != "finished_artwork" for c in artwork.get("concepts", [])):
+            raise LocalModelError("local_finished_artwork_required")
+        for concept in artwork.get("concepts", []):
+            image = concept["image"]
+            if image.get("path") and not Path(image["path"]).is_absolute():
+                image["path"] = str((artwork_path.parent / image["path"]).resolve())
+        from .thumbnails import validate_brief
+        validate_brief(artwork, episode, candidate, asset, config, now=now)
+    options, model = settings(config), _model(store, episode, config)
     registry = Path(options["reference_registry"])
     registry = registry if registry.is_absolute() else ROOT / registry
-    references = load_json(registry)["references"]
-    frames = samples(Path(episode["source"]), directory / "source-frames", [[candidate["start_seconds"], candidate["end_seconds"]]],
+    references = artwork["benchmark"]["references"] if artwork else load_json(registry)["references"]
+    frames = [] if artwork else samples(Path(episode["source"]), directory / "source-frames", [[candidate["start_seconds"], candidate["end_seconds"]]],
                      max(options["review_frame_interval_seconds"], int((candidate["end_seconds"]-candidate["start_seconds"])/options["maximum_images_per_call"])+1))
     spoken_units = []
     source_segments = _segments(episode)
@@ -992,11 +1008,22 @@ def thumbnails(store, episode: dict, config: dict, job: dict, *, now=None, attem
             spoken_units.append({"index": len(spoken_units), **unit})
     if not spoken_units:
         raise LocalModelError("local_packaging_spoken_evidence_missing")
-    concept_plan, plan_evidence = plan_concepts(model, spoken_units, candidate, feedback)
-    compact_candidate = {name: candidate[name] for name in ("title", "audience", "rationale", "context", "essential_nuance")}
-    response, evidence = design_concepts(model, compact_candidate, spoken_units, frames,
-                                         concept_plan, references, config, feedback)
-    alignment, alignment_proof = align_concept_evidence(model, response["concepts"], spoken_units)
+    if artwork:
+        response = copy.deepcopy(artwork)
+        response["preferred_index"] = next(i for i, c in enumerate(response["concepts"])
+                                            if c["concept_id"] == artwork["preferred_concept_id"])
+        for concept in response["concepts"]:
+            if not concept.get("editorial_question"):
+                raise LocalModelError("local_artwork_editorial_question_required")
+        evidence = {"path": str(artwork_path), "sha256": fingerprint(artwork_path),
+                    "model": {"name": artwork["created_by"]}, "kind": "prepared_artwork"}
+        concept_plan, plan_evidence = {"source": "prepared_artwork"}, evidence
+    else:
+        concept_plan, plan_evidence = plan_concepts(model, spoken_units, candidate, feedback)
+        compact_candidate = {name: candidate[name] for name in ("title", "audience", "rationale", "context", "essential_nuance")}
+        response, evidence = design_concepts(model, compact_candidate, spoken_units, frames,
+                                             concept_plan, references, config, feedback)
+    alignment, alignment_proof = align_concept_evidence(model, response["concepts"], spoken_units, imported=bool(artwork))
     unsupported = [a for a in alignment["assignments"] if not a["supported"]]
     if unsupported:
         if attempt+1 < options["maximum_model_attempts"]:
@@ -1007,6 +1034,13 @@ def thumbnails(store, episode: dict, config: dict, job: dict, *, now=None, attem
     response=source_bound_metadata(response,candidate,spoken_units)
     concepts, content_evidence, crops = [], [], {}
     for index, row in enumerate(response["concepts"]):
+        if artwork:
+            unit = next(u for u in spoken_units if u["index"] == row["spoken_unit_index"])
+            evidence_id = "concept-"+str(index+1)+"-spoken-"+str(row["spoken_unit_index"])
+            content_evidence.append({"evidence_id": evidence_id, "quote": unit["text"], "start_seconds": unit["start"],
+                                     "end_seconds": unit["end"], "context": candidate["context"], "supports": row["hypothesis"]})
+            concepts.append({**row, "concept_id": "concept-"+str(index+1), "evidence_ids": [evidence_id]})
+            continue
         if row["frame_index"] >= len(frames):
             raise LocalModelError("local_thumbnail_frame_index_invalid")
         unit = next(u for u in spoken_units if u["index"] == row["spoken_unit_index"])
@@ -1028,10 +1062,10 @@ def thumbnails(store, episode: dict, config: dict, job: dict, *, now=None, attem
             "image_box": [60, 90, 620, 540], "text_box": [730, 120, 440, 430]})
     brief = {"version": 1, "episode_id": episode["episode_id"], "segment_id": candidate["segment_id"],
              "asset_sha256": asset["sha256"], "source_sha256": episode["source_sha256"],
-             "created_by": "local-creator:"+evidence["model"]["name"], "audience": candidate["audience"],
+             "created_by": artwork["created_by"] if artwork else "local-creator:"+evidence["model"]["name"], "audience": candidate["audience"],
              "viewer_question": response["viewer_question"], "content_promise": response["content_promise"],
              "essential_nuance": candidate["essential_nuance"], "selection_reason": response["selection_reason"],
-             "benchmark": {"references": references, "registry_sha256": fingerprint(registry)},
+             "benchmark": {"references": references, "registry_sha256": fingerprint(artwork_path if artwork else registry)},
              "content_evidence": content_evidence, "concepts": concepts,
              "preferred_concept_id": "concept-"+str(response["preferred_index"]+1), "generation_evidence": evidence,
              "citation_alignment": {"assignments": alignment["assignments"], "evidence": alignment_proof},
