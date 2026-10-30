@@ -61,9 +61,11 @@ class RepositoryPolicyTests(unittest.TestCase):
             'README.md', 'config/factory.json', 'assets/brand/logo.png', 'docs/readme/hero.png',
             'assets/brand/youtube/channel-banner-v2.svg', 'projects/videos/jingle/production.html',
             'archive/platform/packages/test.ts', 'docs/factory/validation-2026-10-28.md',
+            '.agents/vendor/autopunk-media-skills/skills/data-journalism/analysis/data-story-finder/SKILL.md',
         ):
             with self.subTest(name=name):
                 self.assertFalse(policy.local_only(name))
+        self.assertTrue(policy.local_only('.agents/vendor/autopunk-media-skills/skills/cover.png'))
 
     def test_index_check_refuses_forced_additions(self):
         with patch.object(policy.subprocess, 'check_output', return_value=b'config/factory.json\0forced/SHORT.MP4\0'):

@@ -70,8 +70,9 @@ def file_digest(content):
 
 
 def tree_summary(directory):
-    files = sorted(p for p in Path(directory).rglob("*") if p.is_file())
-    rows = [(p.relative_to(directory).as_posix(), file_digest(p.read_bytes())) for p in files]
+    # Order by POSIX path text: Windows sorts paths case-insensitively, Linux does not.
+    rows = sorted((p.relative_to(directory).as_posix(), file_digest(p.read_bytes()))
+                  for p in Path(directory).rglob("*") if p.is_file())
     names = [name for name, _ in rows]
     return {"files": len(rows),
             "tree_sha256": hashlib.sha256("".join(f"{n}\0{h}\n" for n, h in rows).encode("utf-8")).hexdigest(),

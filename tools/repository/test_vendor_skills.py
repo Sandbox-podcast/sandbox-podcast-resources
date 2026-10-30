@@ -1,10 +1,11 @@
+import hashlib
 import json
 from pathlib import Path
 import subprocess
 import tempfile
 import unittest
 
-from vendor_skills import LOCK, CATALOG, ROOT, check, find, frontmatter, install, selected
+from vendor_skills import LOCK, CATALOG, ROOT, check, find, frontmatter, install, selected, tree_summary
 
 SKILL = "---\nname: {name}\ndescription: \"{description}\"\n---\n\nVoir [référence](reference.md).\n"
 
@@ -98,6 +99,24 @@ class VendorSkillsTest(unittest.TestCase):
     def test_frontmatter_reads_quoted_and_folded_descriptions(self):
         self.assertEqual(frontmatter('---\nname: a\ndescription: "Dit \\"oui\\""\n---\n')["description"], 'Dit "oui"')
         self.assertEqual(frontmatter("---\ndescription: >\n  deux\n  lignes\nname: b\n---\n"), {"description": "deux lignes", "name": "b"})
+
+    def test_tree_digest_uses_posix_order_on_every_platform(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in ("LICENSE", "agents/a-agent.md", "skills/x/SKILL.md", "skills/x/reference.md"):
+                (root / name).parent.mkdir(parents=True, exist_ok=True)
+                (root / name).write_text(name, encoding="utf-8")
+            rows = sorted((n, hashlib.sha256(n.encode("utf-8")).hexdigest())
+                          for n in ("LICENSE", "agents/a-agent.md", "skills/x/SKILL.md", "skills/x/reference.md"))
+            expected = hashlib.sha256("".join(f"{n}\0{h}\n" for n, h in rows).encode("utf-8")).hexdigest()
+            self.assertEqual(tree_summary(root)["tree_sha256"], expected)
+
+    def test_no_ignore_rule_hides_an_installed_file(self):
+        # Upstream folders such as data-journalism/analysis collide with local output rules.
+        names = [p.relative_to(ROOT).as_posix() for p in (ROOT / ".agents/vendor").rglob("*") if p.is_file()]
+        ignored = subprocess.run(["git", "-C", str(ROOT), "check-ignore", "--no-index", "--stdin"], input="\n".join(names),
+                                 capture_output=True, text=True).stdout.split()
+        self.assertEqual(ignored, [])
 
     def test_repository_collections_match_their_lock(self):
         result = check(ROOT)

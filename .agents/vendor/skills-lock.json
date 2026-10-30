@@ -48,7 +48,7 @@
       ],
       "installed": {
         "files": 469,
-        "tree_sha256": "692a38810c8ce453b8252b663a1880e16a5a8155edcc8a380e506d5494718c75",
+        "tree_sha256": "efa4f1eb29f82fc0f9173bdd09d770fd7ad4e49ea1cb5c5e7ff2b790482f1721",
         "skills": 408,
         "localized_skills": 50,
         "agents": 9
@@ -130,7 +130,7 @@
       ],
       "installed": {
         "files": 81,
-        "tree_sha256": "23bc663143f3c3fad2c019461a00c8aa8f46628d9798a3def744f83c23c8b881",
+        "tree_sha256": "00884a8030456cfdd31e069218ec3f6910f0b78f7815847a763a48964472bd21",
         "skills": 26,
         "localized_skills": 0,
         "agents": 0
