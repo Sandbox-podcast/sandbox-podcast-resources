@@ -6,6 +6,8 @@ Depuis le 28 octobre 2026, la factory persistante prolonge ces moteurs locaux. C
 
 Depuis le 29 octobre, le [parcours éditorial multiformat](../../docs/factory/production-editoriale.md) étend ce moteur aux opportunités de veille, aux jugements éditoriaux sourcés, à la production narrative locale et aux comparaisons Analytics. La découverte par modèle est optionnelle et les sélections restent soumises à leurs preuves et revues.
 
+Depuis le 30 octobre, l'[onboarding vidéo](../../docs/factory/onboarding-video.md) (`video-onboarding`) conserve les réponses et les étapes d'une nouvelle vidéo, route les skills installés dans `.agents/vendor/` et crée l'histoire StoryTelling. Le module `voicestudio` lit les profils et réglages réels de Voice Studio et sert de fournisseur de voix local au générateur.
+
 Pour chaque nouvel épisode : [générer des Shorts adaptés à YouTube, TikTok, Instagram et X, puis des vidéos de 5 à 15 minutes](../social-network-manager/GENERER.md). La commande `youtube_growth.social` rend les variantes locales d'un plan relu ; `youtube_growth.thematic` prépare les formats horizontaux selon [son guide](THEMATIC.md). Ces deux commandes ne publient rien.
 
 Outil Python pour [Sandbox TalkShow](https://www.youtube.com/@SandboxFR). Il complète le site existant sans modifier `old/`. Voir [ADR-0029](https://github.com/Sandbox-podcast/sandbox-podcast-site/blob/main/docs/adr/ADR-0029-growth-agent-et-extraits-youtube.md), [ADR-0032](https://github.com/Sandbox-podcast/sandbox-podcast-site/blob/main/docs/adr/ADR-0032-protections-et-persistance-issue-68.md) et [la livraison du 14 octobre](../../docs/site/history/2026/10/youtube-growth-2026-10-14.md).

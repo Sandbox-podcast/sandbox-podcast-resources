@@ -12,6 +12,20 @@ python -m unittest discover -s tools/repository -v
 
 La [structure du dépôt et la migration locale](../../docs/organisation.md) précisent où ranger les fichiers sur chaque ordinateur.
 
+## Skills SANDBOX et collections externes
+
+`sync_skills.py` vérifie les skills `sandbox-*` de `.agents/skills/` et génère leurs petites entrées Claude dans `.claude/skills/` (`--write`). Les collections externes restent dans `.agents/vendor/`, sous leurs noms amont, sans entrée découverte automatiquement ; l'onboarding vidéo les charge par leur chemin.
+
+`vendor_skills.py` gère ces collections à partir de `.agents/vendor/skills-lock.json` :
+
+```powershell
+python tools/repository/vendor_skills.py check
+python tools/repository/vendor_skills.py find "documentary narration"
+python tools/repository/vendor_skills.py install --collection autopunk-media-skills
+```
+
+`install` récupère le commit épinglé avec Git sans extraire l'arbre amont, copie seulement les fichiers texte demandés et leurs licences, puis régénère `catalog.json`. Il refuse d'écraser une copie modifiée localement. `check` compare chaque collection à son empreinte, vérifie les licences et le catalogue ; la CI l'exécute. Le [README des collections](../../.agents/vendor/README.md) liste les sources, les exclusions et la procédure de mise à jour.
+
 ## Compte GitHub SANDBOX
 
 Les comptes autorisés sont `loukan42` et `azerothl`, ce dernier ajouté à la demande du propriétaire le 29 octobre 2026. Le script sélectionne explicitement le compte, vérifie son identité et restaure l'environnement de la session après la commande. Le défaut reste `loukan42` :

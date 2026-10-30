@@ -1,6 +1,6 @@
 ---
 name: sandbox-storytelling-generator
-description: Ouvrir StoryTelling Generator, créer une vidéo narrative à partir du sujet et des sources de Lou, ou reprendre et corriger une histoire existante dans la factory SANDBOX. Utiliser pour le scénario, le storyboard, les voix ElevenLabs et le montage de ce parcours ; pour chercher des tendances, utiliser sandbox-youtube-trend-hunter.
+description: Ouvrir StoryTelling Generator, créer une vidéo narrative à partir d'un brief complet, ou reprendre et corriger une histoire existante dans la factory SANDBOX. Utiliser pour le scénario, le storyboard, les voix Voice Studio ou ElevenLabs et le montage ; pour « je veux créer une nouvelle vidéo » sans brief complet, utiliser sandbox-video-onboarding, et pour chercher des tendances, sandbox-youtube-trend-hunter.
 ---
 
 # StoryTelling Generator
@@ -24,6 +24,8 @@ Cette commande reste au premier plan. Pour un lancement par l'agent sous Windows
 
 ## Créer une histoire
 
+Pour une nouvelle vidéo dont le type, le sujet ou la voix restent à définir, appliquer [sandbox-video-onboarding](../sandbox-video-onboarding/SKILL.md) : il pose les questions progressivement, conserve les réponses et crée l'histoire ici. Si une session d'onboarding existe pour l'histoire (`brief.video_onboarding`), poursuivre cette session plutôt qu'un parcours parallèle.
+
 Lire les fichiers et les choix déjà fournis avant de demander les précisions qui changent le récit. Recueillir le sujet, les sources, le type de récit, le public, la durée, le format et le mode de validation. Proposer les valeurs initiales du tutoriel seulement lorsque Lou n'a pas donné de préférence.
 
 Si le Trend Hunter a produit `storytelling-brief.json`, utiliser ce brief et son dossier documentaire directement. Le choix d'un sujet ne valide ni le scénario ni une dépense. Conserver les plafonds déjà autorisés pour cette histoire ; si un plafond manque, poursuivre le travail local et le demander avant toute génération payante.
@@ -40,6 +42,8 @@ Lire [le parcours de production et de reprise](references/production.md) pour tr
 Respecter le mode de validation choisi. Un documentaire autonome exige sa vérification éditoriale distincte ; si elle manque, signaler ce blocage et continuer les étapes indépendantes. Une approbation humaine doit venir de Lou et porter sur la révision courante.
 
 ## Produire le son et corriger
+
+Pour une voix Voice Studio, le worker appelle l'API locale avec le profil fixé dans le brief ; lire [la référence voix de l'onboarding](../sandbox-video-onboarding/references/voix.md) pour lancer le service, les réglages réellement appliqués et les erreurs.
 
 Pour ElevenLabs dans le navigateur intégré, lire la section navigateur de la [référence de production](references/production.md) et appliquer le contrat courant de `storytelling_browser.py`. Utiliser la session connectée avec les outils de computer use ; le worker seul n'effectue pas ces manipulations.
 

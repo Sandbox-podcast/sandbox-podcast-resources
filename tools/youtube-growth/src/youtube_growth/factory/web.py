@@ -72,10 +72,15 @@ def make_server(directory: Path, config: dict, *, port=8765):
                         budgets[story["story_id"]]["browser"]={"limit":story["brief"]["budget"].get("browser_credit_limit"),
                             "committed":sum(r.get("actual_credits") if r.get("actual_credits") is not None else r.get("estimated_credits",0) for r in rows),
                             "confirmed":sum(r.get("actual_credits") or 0 for r in rows),"unknown_calls":sum(r.get("actual_credits") is None for r in rows)}
-                    self.send_json({"stories":stories,"projects":projects,"budgets":budgets,
+                    from .video_onboarding import sessions
+                    self.send_json({"stories":stories,"projects":projects,"budgets":budgets,"onboarding":sessions(store),
                                     "jobs":[j for j in store.jobs() if j["kind"]=="storytelling"],
                                     "capabilities":{"editorial_model":bool(config.get("generation",{}).get("local_command")),
                                                     "elevenlabs_enabled":config.get("storytelling",{}).get("elevenlabs",{}).get("enabled",False)}})
+            elif parsed.path == "/api/voicestudio":
+                # Read-only inventory; the page asks for it only when the voice panel opens.
+                from .voicestudio import DEFAULT_URL, VoiceStudio, discover
+                self.send_json(discover(VoiceStudio(config.get("voicestudio", {}).get("base_url", DEFAULT_URL))))
             elif parsed.path.startswith("/storytelling-file/"):
                 parts=parsed.path.split("/")
                 if len(parts)!=4 or not re.fullmatch(r"[a-f0-9]{64}",parts[3]):

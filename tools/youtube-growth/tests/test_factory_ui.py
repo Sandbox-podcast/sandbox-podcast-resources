@@ -6,6 +6,7 @@ from http.client import HTTPConnection
 import json
 from pathlib import Path
 import re
+import socket
 import tempfile
 import threading
 import unittest
@@ -119,6 +120,25 @@ class LiveHttpTests(unittest.TestCase):
         code, _, result = self.request("GET", "/api/storytelling")
         self.assertEqual(code, 200)
         self.assertEqual(json.loads(result)["stories"][0]["story_id"], story["story_id"])
+
+    def test_storytelling_page_lists_guided_videos_and_voice_studio_state(self):
+        from youtube_growth.factory.video_onboarding import start
+        with Store(self.directory) as store:
+            start(store, session_id="video-ui", answers={"video_type": "documentary", "topic": "Sujet guidé"})
+        code, _, page = self.request("GET", "/storytelling")
+        self.assertIn("Je veux créer une nouvelle vidéo", page.decode("utf-8"))
+        self.assertIn('value="voicestudio"', page.decode("utf-8"))
+        code, _, result = self.request("GET", "/api/storytelling")
+        row = json.loads(result)["onboarding"][0]
+        self.assertEqual((row["session_id"], row["topic"], row["current_stage"]), ("video-ui", "Sujet guidé", "framing"))
+        # Nothing listens on this port: the page reports Voice Studio as unavailable instead of failing.
+        closed = socket.socket()
+        closed.bind(("127.0.0.1", 0))
+        port = closed.getsockname()[1]
+        closed.close()
+        self.config["voicestudio"] = {"base_url": f"http://127.0.0.1:{port}"}
+        code, _, result = self.request("GET", "/api/voicestudio")
+        self.assertEqual((code, json.loads(result)["status"]), (200, "unavailable"))
 
     def test_pause_and_resume_persist_across_http_connections(self):
         token = self.token()

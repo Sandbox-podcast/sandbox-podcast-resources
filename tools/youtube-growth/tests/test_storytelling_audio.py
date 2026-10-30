@@ -249,6 +249,40 @@ class RecordingTests(unittest.TestCase):
                 self.assertAlmostEqual(revised["scenes"][0]["utterances"][1]["start_seconds"], .2)
 
     @unittest.skipUnless(shutil.which("ffmpeg"), "FFmpeg required")
+    def test_script_pause_after_a_line_is_silence_in_the_measured_timeline(self):
+        from youtube_growth.factory.narrative import join_waves
+        from youtube_growth.factory.storytelling_render import build_timeline
+        with tempfile.TemporaryDirectory() as directory, Store(Path(directory)) as store:
+            root = Path(directory)
+            def system(text, voice, path):
+                target = path / "system.wav"
+                target.write_bytes(wav_bytes(.2))
+                return target
+            script = {"story_id": "story", "speakers": {"n": {"name": "N", "voice": {"provider": "system", "name": "Fixture", "authorization": "fixture"}}},
+                      "scenes": [{"scene_id": "s", "function": "Ouvrir.", "factual_status": "fiction", "utterances": [
+                          {"utterance_id": "a", "speaker_id": "n", "text": "Première phrase.", "delivery": {"pause_after_seconds": .5}},
+                          {"utterance_id": "b", "speaker_id": "n", "text": "Seconde phrase.", "delivery": {}}],
+                       "shots": [{"shot_id": "p", "utterance_ids": ["a", "b"], "type": "diagram", "purpose": "situation", "description": "Schéma."}]}]}
+            with patch("youtube_growth.factory.storytelling_audio._system", side_effect=system):
+                audio = produce_audio(store, {}, script, root / "audio")
+                first, second = audio["scenes"][0]["utterances"]
+                self.assertEqual((first["end_seconds"], first["pause_after_seconds"]), (.2, .5))
+                self.assertNotIn("pause_after_seconds", second)
+                self.assertAlmostEqual(second["start_seconds"], .7)
+                self.assertAlmostEqual(audio["scenes"][0]["duration_seconds"], .9)
+                # The take itself is unchanged and cached; only the scene join carries the silence.
+                self.assertAlmostEqual(first["duration_seconds"], .2)
+                timeline = build_timeline(script, audio, [])
+                self.assertAlmostEqual(timeline["shots"][0]["end_seconds"], .9)
+                script["scenes"][0]["utterances"][0]["delivery"]["pause_after_seconds"] = 11
+                with self.assertRaisesRegex(ValueError, "storytelling_pause_invalid"):
+                    produce_audio(store, {}, script, root / "again")
+            take = root / "take.wav"
+            take.write_bytes(wav_bytes(.2))
+            with self.assertRaisesRegex(ValueError, "désalignées"):
+                join_waves([take], root / "joined.wav", pauses=[0, .5])
+
+    @unittest.skipUnless(shutil.which("ffmpeg"), "FFmpeg required")
     def test_revision_reuses_unchanged_utterances_and_recalculates_times(self):
         with tempfile.TemporaryDirectory() as directory, Store(Path(directory)) as store:
             root = Path(directory)
