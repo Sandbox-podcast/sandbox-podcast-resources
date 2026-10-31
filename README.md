@@ -142,7 +142,7 @@ Le [tutoriel complet](docs/factory/storytelling-generator.md) détaille les sept
 
 ## Les skills
 
-Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 11 skills SANDBOX et six collections externes qui totalisent 203 entrées, choisies pour faire des vidéos YouTube sur l'IA.
+Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 11 skills SANDBOX et cinq collections externes qui totalisent 196 entrées, choisies pour faire des vidéos YouTube sur l'IA.
 
 ### Skills SANDBOX
 
@@ -166,9 +166,9 @@ Les consignes de référence sont dans `.agents/skills/`. Les fichiers de `.clau
 
 ### Skills externes
 
-Les collections de [`.agents/vendor/`](.agents/vendor/README.md) sont copiées depuis une révision épinglée, avec leur licence. Ces skills ne s'appellent pas par leur nom : `sandbox-video-onboarding` choisit ceux de l'étape en cours et lit leur fichier. Pour en utiliser un en dehors de l'onboarding, donne son chemin à l'agent. Le [catalogue complet](.agents/vendor/CATALOGUE.md) liste les 203 entrées avec leur description d'origine.
+Les collections de [`.agents/vendor/`](.agents/vendor/README.md) sont copiées depuis une révision épinglée, avec leur licence. Ces skills ne s'appellent pas par leur nom : `sandbox-video-onboarding` choisit ceux de l'étape en cours et lit leur fichier. Pour en utiliser un en dehors de l'onboarding, donne son chemin à l'agent. Le [catalogue complet](.agents/vendor/CATALOGUE.md) liste les 196 entrées avec leur description d'origine.
 
-Seuls les skills utiles pour des vidéos YouTube sur l'IA sont installés. Le [verrou](.agents/vendor/skills-lock.json) exclut le reste : presse écrite, newsletter, relations presse, radio, financement, séries télévisées, dramaturgies chinoise et japonaise, variantes en allemand, espagnol, italien et portugais. Les skills qu'utilise l'onboarding vidéo restent tous installés.
+Seuls les skills utiles pour des vidéos YouTube sur l'IA sont installés. Le [verrou](.agents/vendor/skills-lock.json) exclut le reste : presse écrite, newsletter, relations presse, radio, financement, séries télévisées, variantes en allemand, espagnol, italien et portugais. La collection `screenwriting-skills`, dont les consignes sont en chinois, est retirée entièrement. Les skills qu'utilise l'onboarding vidéo restent tous installés.
 
 #### humaniseur-fr
 
@@ -189,20 +189,6 @@ Seuls les skills utiles pour des vidéos YouTube sur l'IA sont installés. Le [v
 #### content-research-writer
 
 [content-research-writer](.agents/vendor/awesome-claude-skills/skills/content-research-writer/SKILL.md), tiré de [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills), accompagne l'écriture d'un texte documenté : plan, recherche et citations, accroche, retours section par section, dans la voix de l'auteur. Ses consignes sont en anglais.
-
-#### screenwriting-skills
-
-7 skills d'écriture de récit et de scénario, issus de [jtydhr88/screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills). Leurs consignes sont en chinois ; l'agent répond dans la langue de la demande. Leur [table de termes](.agents/vendor/screenwriting-skills/skills/sw-workflow/terms.md) donne les équivalents d'origine.
-
-| Skill | Usage |
-| --- | --- |
-| [sw-character-conflict](.agents/vendor/screenwriting-skills/skills/sw-character-conflict/SKILL.md) | Construire les personnages, le duo protagoniste et antagoniste, et le conflit dramatique. |
-| [sw-dialogue](.agents/vendor/screenwriting-skills/skills/sw-dialogue/SKILL.md) | Écrire et réviser les dialogues : dialogue comme action, non-dit, sous-texte, voix de chaque personnage. |
-| [sw-genre-anatomy](.agents/vendor/screenwriting-skills/skills/sw-genre-anatomy/SKILL.md) | Anatomie des genres selon John Truby : les étapes propres à chaque genre, leur mélange et leur dépassement. |
-| [sw-premise-theme](.agents/vendor/screenwriting-skills/skills/sw-premise-theme/SKILL.md) | Prémisse, thème, idée directrice, choix du sujet et logline. |
-| [sw-scene-craft](.agents/vendor/screenwriting-skills/skills/sw-scene-craft/SKILL.md) | Construire scènes et séquences : retournements, battements, sous-texte, rythme et suspense. |
-| [sw-story-structure](.agents/vendor/screenwriting-skills/skills/sw-story-structure/SKILL.md) | Structure du récit : Syd Field, *Save the Cat*, McKee. |
-| [sw-truby-anatomy](.agents/vendor/screenwriting-skills/skills/sw-truby-anatomy/SKILL.md) | Anatomie du récit selon Truby : principe de conception, sept étapes clés, vingt-deux étapes et enjeu moral. |
 
 #### autopunk-media-skills
 

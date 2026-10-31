@@ -5,7 +5,6 @@ Ce dossier contient les skills externes installés à la demande de Lou pour l'[
 | Collection | Source demandée | Contenu installé | Licence |
 | --- | --- | --- | --- |
 | `autopunk-media-skills` | [ur-grue/autopunk-media-skills](https://github.com/ur-grue/autopunk-media-skills) | 182 skills sur 408, 7 variantes françaises et 2 agents sur 9 | MIT |
-| `screenwriting-skills` | [jtydhr88/screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills) | 7 skills sur 26, leurs références et la table de termes de `sw-workflow` | MIT, avec `NOTICE` |
 | `cc-skills` | [humaniseur-fr sur skills.sh](https://www.skills.sh/samber/cc-skills/humaniseur-fr) | `humaniseur-fr` et `copywriting-prose-creator` avec ses références | MIT |
 | `humanizer-fr` | [ferr079/humanizer-fr](https://github.com/ferr079/humanizer-fr) | `humanizer-fr` | MIT |
 | `youtube-agent-skill` | [yt-script](https://github.com/Jakeschincariol/youtube-agent-skill/blob/main/skills/yt-script/SKILL.md) | `yt-script` et ses 21 formules d'accroche (`hooks.json`) | MIT |
@@ -13,7 +12,7 @@ Ce dossier contient les skills externes installés à la demande de Lou pour l'[
 
 ## Utilisation
 
-Ces skills ne sont pas déclarés dans `.agents/skills/` ni `.claude/skills/`. Codex et Claude n'en chargent donc pas les 203 descriptions à chaque session. Le skill [`sandbox-video-onboarding`](../skills/sandbox-video-onboarding/SKILL.md) choisit ceux de l'étape en cours et lit leur fichier à ce moment-là.
+Ces skills ne sont pas déclarés dans `.agents/skills/` ni `.claude/skills/`. Codex et Claude n'en chargent donc pas les 196 descriptions à chaque session. Le skill [`sandbox-video-onboarding`](../skills/sandbox-video-onboarding/SKILL.md) choisit ceux de l'étape en cours et lit leur fichier à ce moment-là.
 
 [`catalog.json`](catalog.json) donne pour chaque entrée son identifiant, son chemin, sa langue, sa catégorie et le début de sa description. [`CATALOGUE.md`](CATALOGUE.md) présente les mêmes entrées en tableaux, par collection et par catégorie. Pour un agent ou une variante sans description dans son en-tête, le catalogue reprend le premier paragraphe du fichier. Pour chercher depuis la racine :
 
@@ -22,7 +21,7 @@ python tools/repository/vendor_skills.py find "narration documentary"
 python tools/repository/vendor_skills.py find hook --language fr
 ```
 
-Les instructions de `screenwriting-skills` sont rédigées en chinois. L'agent répond dans la langue de la demande ; la table des termes de `sw-workflow` donne les équivalents d'origine. `autopunk-media-skills`, `humaniseur-fr`, `copywriting-prose-creator`, `yt-script` et `content-research-writer` sont rédigés en anglais, sauf les variantes françaises. `humanizer-fr` est rédigé en français.
+`autopunk-media-skills`, `humaniseur-fr`, `copywriting-prose-creator`, `yt-script` et `content-research-writer` sont rédigés en anglais, sauf les variantes françaises. `humanizer-fr` est rédigé en français.
 
 Deux correcteurs du français sont installés : `humaniseur-fr` (samber) et `humanizer-fr` (ferr079). Une révision n'en applique qu'un, celui que route l'onboarding vidéo.
 
@@ -32,9 +31,9 @@ Deux correcteurs du français sont installés : `humaniseur-fr` (samber) et `hum
 
 Le verrou liste chaque exclusion et son motif : jeux d'évaluation, gabarits, hooks, serveur MCP, installateurs et scripts amont, dont `hookscore.py` de `yt-script`. Seuls les textes, les données JSON et les licences sont copiés. L'installation lit les fichiers comme des données ; elle n'exécute et n'active aucun code amont. Une instruction présente dans un skill ne donne aucune autorisation supplémentaire : publication, dépense, clonage de voix ou envoi restent soumis aux règles du dépôt.
 
-Le champ `exclude` du verrou retire aussi les skills sans usage pour des vidéos YouTube sur l'IA. Cela couvre la presse écrite, la newsletter, les relations presse, la radio, le financement, les séries télévisées et les dramaturgies chinoise et japonaise. S'y ajoutent les variantes en allemand, espagnol, italien et portugais, 7 agents sur 9 et le skill `sw-workflow`, dont seule la table de termes reste installée. Les skills routés par l'onboarding vidéo restent tous installés. Certains skills conservés citent encore un skill retiré : l'agent ignore ce renvoi. Pour rétablir un skill, retirer son motif de `exclude`, puis exécuter `install` pour sa collection.
+Le champ `exclude` du verrou retire aussi les skills sans usage pour des vidéos YouTube sur l'IA. Cela couvre la presse écrite, la newsletter, les relations presse, la radio, le financement et les séries télévisées. S'y ajoutent les variantes en allemand, espagnol, italien et portugais et 7 agents sur 9. Les skills routés par l'onboarding vidéo restent tous installés. Certains skills conservés citent encore un skill retiré : l'agent ignore ce renvoi. Pour rétablir un skill, retirer son motif de `exclude`, puis exécuter `install` pour sa collection.
 
-Le `NOTICE` de `screenwriting-skills` précise que les extraits d'ouvrages, de scénarios et de livrets cités dans les `reference*.md` restent la propriété de leurs auteurs, traducteurs et éditeurs. La licence MIT ne les couvre pas ; ils servent d'appui à l'étude et ne doivent pas être recopiés dans un livrable. Le propriétaire du dépôt a choisi, le 31 octobre 2026, de garder ces références dans le dépôt public avec le `NOTICE` amont.
+La collection `screenwriting-skills` (jtydhr88/screenwriting-skills), rédigée en chinois, a été retirée entièrement le 31 octobre 2026 à la demande de Lou. Ses routes dans l'onboarding vidéo passent par des skills d'`autopunk-media-skills` : `beat-sheet-builder`, `character-profile-writer`, `treatment-writer`, `scene-writer` et `dialogue-polisher`.
 
 ## Contrôler et mettre à jour
 
@@ -42,7 +41,7 @@ Ne pas modifier ces fichiers à la main. Une adaptation propre à SANDBOX va dan
 
 ```powershell
 python tools/repository/vendor_skills.py check
-python tools/repository/vendor_skills.py install --collection screenwriting-skills
+python tools/repository/vendor_skills.py install --collection youtube-agent-skill
 ```
 
 `check` compare chaque collection à l'empreinte enregistrée, vérifie les licences et les deux catalogues ; `catalog` les régénère. Pour changer de révision, remplacer `commit` dans le verrou par un commit complet relu, puis exécuter `install` pour cette collection. L'installation refuse d'écraser une copie modifiée localement ; `--replace-modified` assume ce remplacement. Relire ensuite le diff et le routage de l'onboarding avant de valider la mise à jour.

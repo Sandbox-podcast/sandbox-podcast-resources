@@ -202,7 +202,8 @@ class OnboardingTest(unittest.TestCase):
                     for stage in onboarding.STAGE_IDS:
                         for skill in onboarding.route(stage, answers):
                             self.assertTrue((onboarding.ROOT / skill["path"]).is_file(), skill)
-        self.assertIn("screenwriting-skills/sw-story-structure",
+                            self.assertFalse(skill["id"].startswith("screenwriting-skills/"), skill)
+        self.assertIn("autopunk-media-skills/beat-sheet-builder",
                       [s["id"] for s in onboarding.route("structure", {"video_type": "fiction"})])
         revision = [s["id"] for s in onboarding.route("french_revision", {"video_type": "documentary"})]
         self.assertIn("humanizer-fr/humanizer-fr", revision)

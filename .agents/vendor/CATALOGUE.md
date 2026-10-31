@@ -2,13 +2,12 @@
 
 <!-- Généré par tools/repository/vendor_skills.py depuis catalog.json ; ne pas modifier à la main. -->
 
-203 entrées : 194 skills, 7 variantes localisées et 2 agents. Les descriptions sont celles des collections amont, dans leur langue d'origine. Le [README des collections](README.md) explique leur chargement et leur mise à jour.
+196 entrées : 187 skills, 7 variantes localisées et 2 agents. Les descriptions sont celles des collections amont, dans leur langue d'origine. Le [README des collections](README.md) explique leur chargement et leur mise à jour.
 
 Pour chercher depuis la racine : `python tools/repository/vendor_skills.py find "mot clé"`.
 
 - [autopunk-media-skills](#autopunk-media-skills) : 191 entrées
 - [cc-skills](#cc-skills) : 2 entrées
-- [screenwriting-skills](#screenwriting-skills) : 7 entrées
 - [youtube-agent-skill](#youtube-agent-skill) : 1 entrée
 - [awesome-claude-skills](#awesome-claude-skills) : 1 entrée
 - [humanizer-fr](#humanizer-fr) : 1 entrée
@@ -476,20 +475,6 @@ Source : [samber/cc-skills](https://github.com/samber/cc-skills) · commit `123c
 | --- | --- |
 | [copywriting-prose-creator](cc-skills/skills/copywriting-prose-creator/SKILL.md) | Codifies how a person or brand writes — lexicon, syntax, rhythm, structure, signature moves — into a PROSE.md guide, independent of emotional tone. Builds from SOUL.md and TONE.md, ports a guide to another channel, or reverse-engineers prose patterns from a corpus. Trigger on PROSE.md, writing style guide, prose guide, house style, ghostwriter style, writing playbook, banned words, sentence-lengt… |
 | [humaniseur-fr](cc-skills/skills/humaniseur-fr/SKILL.md) | Remove AI-writing patterns from French text and inject voice and personality. Use when editing, reviewing, or rewriting French content that reads like ChatGPT or Claude output. Detects and fixes 38 patterns: AI vocabulary (crucial, essentiel, notamment, dans le paysage), anglicisms from English-first models (faire du sens, adresser un problème), formulaic openings (À l'ère de, Dans un monde où),… |
-
-## screenwriting-skills
-
-Source : [jtydhr88/screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills) · commit `51115f1` · licence MIT, avec citations d'ouvrages tiers non couvertes (voir NOTICE)
-
-| Nom | Description |
-| --- | --- |
-| [sw-character-conflict](screenwriting-skills/skills/sw-character-conflict/SKILL.md) | Character creation, protagonist/antagonist design and dramatic conflict for scripts (人物/对手/冲突) — merged from Lajos Egri (three-dimensional character, orchestration, unity of opposites, pivotal character, rising vs static vs jumping conflict, transition), William Indick's Psychology for Screenwriters (Freud, Erikson, Jung archetypes, Campbell/Murdock hero journeys, Adler, Rollo May), Robert McKee… |
-| [sw-dialogue](screenwriting-skills/skills/sw-dialogue/SKILL.md) | Dialogue writing and revision for screen and stage (对白/台词/潜台词) — merged from Robert McKee's Dialogue (dialogue as action, said/unsaid/unsayable, exposition as ammunition, beat = action/reaction gerunds, flaws of credibility/language/content/design, character-specific vocabulary and grammar, seven scene analyses), Richard Walter (economy, subtext, argument, no small talk, no parentheticals, silenc… |
-| [sw-genre-anatomy](screenwriting-skills/skills/sw-genre-anatomy/SKILL.md) | Genre anatomy from John Truby's The Anatomy of Genres (类型解剖 / 类型节拍 / 混合类型 / 超越类型) — genres as beat systems with a life philosophy underneath; three rules (hit every beat of your genre, mix three or four genres, transcend the primary genre), the ladder and families of twelve genres (Horror 恐怖, Action 动作, Myth 神话, Memoir and Coming-of-Age 回忆录与成长, Science Fiction 科幻, Crime 犯罪, Comedy 喜剧, Western 西部,… |
-| [sw-premise-theme](screenwriting-skills/skills/sw-premise-theme/SKILL.md) | Premise, theme, controlling idea, subject selection and logline for scripts (前提/主题/立意/选材/戏核) — merged from Lajos Egri's premise-as-tyrant and dialectic, Robert McKee's controlling idea (value + cause) and idea/counter-idea, Neill Hicks' five premise questions, Lisa Cron's "third rail" (desire vs misbelief, origin scene, what-if), Julian Hoxter's logline and theme-attitude rule, Blake Snyder's log… |
-| [sw-scene-craft](screenwriting-skills/skills/sw-scene-craft/SKILL.md) | Scene and sequence craft (场景/段落/细节/道具/悬念/情趣) — merged from Robert McKee's scene design and five-step scene analysis (value turn, beats, text/subtext, turning points, pacing, image systems), McKee's Dialogue scene types (balanced, comic, asymmetric, indirect, reflexive, minimal), Syd Field's sequence and scene elements, Neill Hicks (less is more, enter late leave early, energy), Richard Walter (ac… |
-| [sw-story-structure](screenwriting-skills/skills/sw-story-structure/SKILL.md) | Story structure for screenplays and stage plays (故事结构) — merged from Syd Field's paradigm and plot points, Blake Snyder's Save the Cat beat sheet and board, Robert McKee's Story (event/scene/sequence/act, inciting incident, progressive complications, crisis-climax-resolution, subplots, story triangle), Julian Hoxter's nine-beat model, Neill Hicks' three acts as attraction/anticipation/satisfactio… |
-| [sw-truby-anatomy](screenwriting-skills/skills/sw-truby-anatomy/SKILL.md) | Organic story anatomy from John Truby's The Anatomy of Story (有机结构/设计原则/22步骤/道德议题/四角对立/幽灵/场景编排) — the designing principle (story process plus original execution), the seven key steps as the organic spine, all twenty-two steps with the middle-act machinery the beat sheets lack (ghost, fake-ally opponent, plan, opponent's drive, ally's attack, fake defeat, three revelation-and-decision pairs, audie… |
 
 ## youtube-agent-skill
 

@@ -12,11 +12,6 @@
       "commit": "123cb155f5ab5751fc13c8027fbfa5eb0d3773c6",
       "license": "MIT"
     },
-    "screenwriting-skills": {
-      "repository": "https://github.com/jtydhr88/screenwriting-skills.git",
-      "commit": "51115f18d160aa8b2ac5813e4432b6f0b425358f",
-      "license": "MIT, avec citations d'ouvrages tiers non couvertes (voir NOTICE)"
-    },
     "youtube-agent-skill": {
       "repository": "https://github.com/Jakeschincariol/youtube-agent-skill.git",
       "commit": "a2feb2104981a375ffd4f87ee04f4f5344ac43c6",
@@ -1983,76 +1978,6 @@
       "category": "",
       "path": ".agents/vendor/humanizer-fr/skills/humanizer-fr/SKILL.md",
       "description": "Réécrit un texte français qui sonne IA pour qu'il se lise comme son auteur, sans changer ce qu'il dit. À utiliser pour relire ou réécrire de la prose en français : « pas X mais Y », chutes en une ligne, amorces mises en scène, triades forcées, tirets partout, portée gonflée, ton promotionnel, mots-béquilles, gras décoratif, guillemets droits, anglicismes calqués, connecteurs en surnombre. Adaptat…"
-    },
-    {
-      "id": "screenwriting-skills/sw-character-conflict",
-      "name": "sw-character-conflict",
-      "collection": "screenwriting-skills",
-      "kind": "skill",
-      "language": "zh",
-      "category": "",
-      "path": ".agents/vendor/screenwriting-skills/skills/sw-character-conflict/SKILL.md",
-      "description": "Character creation, protagonist/antagonist design and dramatic conflict for scripts (人物/对手/冲突) — merged from Lajos Egri (three-dimensional character, orchestration, unity of opposites, pivotal character, rising vs static vs jumping conflict, transition), William Indick's Psychology for Screenwriters (Freud, Erikson, Jung archetypes, Campbell/Murdock hero journeys, Adler, Rollo May), Robert McKee…"
-    },
-    {
-      "id": "screenwriting-skills/sw-dialogue",
-      "name": "sw-dialogue",
-      "collection": "screenwriting-skills",
-      "kind": "skill",
-      "language": "zh",
-      "category": "",
-      "path": ".agents/vendor/screenwriting-skills/skills/sw-dialogue/SKILL.md",
-      "description": "Dialogue writing and revision for screen and stage (对白/台词/潜台词) — merged from Robert McKee's Dialogue (dialogue as action, said/unsaid/unsayable, exposition as ammunition, beat = action/reaction gerunds, flaws of credibility/language/content/design, character-specific vocabulary and grammar, seven scene analyses), Richard Walter (economy, subtext, argument, no small talk, no parentheticals, silenc…"
-    },
-    {
-      "id": "screenwriting-skills/sw-genre-anatomy",
-      "name": "sw-genre-anatomy",
-      "collection": "screenwriting-skills",
-      "kind": "skill",
-      "language": "zh",
-      "category": "",
-      "path": ".agents/vendor/screenwriting-skills/skills/sw-genre-anatomy/SKILL.md",
-      "description": "Genre anatomy from John Truby's The Anatomy of Genres (类型解剖 / 类型节拍 / 混合类型 / 超越类型) — genres as beat systems with a life philosophy underneath; three rules (hit every beat of your genre, mix three or four genres, transcend the primary genre), the ladder and families of twelve genres (Horror 恐怖, Action 动作, Myth 神话, Memoir and Coming-of-Age 回忆录与成长, Science Fiction 科幻, Crime 犯罪, Comedy 喜剧, Western 西部,…"
-    },
-    {
-      "id": "screenwriting-skills/sw-premise-theme",
-      "name": "sw-premise-theme",
-      "collection": "screenwriting-skills",
-      "kind": "skill",
-      "language": "zh",
-      "category": "",
-      "path": ".agents/vendor/screenwriting-skills/skills/sw-premise-theme/SKILL.md",
-      "description": "Premise, theme, controlling idea, subject selection and logline for scripts (前提/主题/立意/选材/戏核) — merged from Lajos Egri's premise-as-tyrant and dialectic, Robert McKee's controlling idea (value + cause) and idea/counter-idea, Neill Hicks' five premise questions, Lisa Cron's \"third rail\" (desire vs misbelief, origin scene, what-if), Julian Hoxter's logline and theme-attitude rule, Blake Snyder's log…"
-    },
-    {
-      "id": "screenwriting-skills/sw-scene-craft",
-      "name": "sw-scene-craft",
-      "collection": "screenwriting-skills",
-      "kind": "skill",
-      "language": "zh",
-      "category": "",
-      "path": ".agents/vendor/screenwriting-skills/skills/sw-scene-craft/SKILL.md",
-      "description": "Scene and sequence craft (场景/段落/细节/道具/悬念/情趣) — merged from Robert McKee's scene design and five-step scene analysis (value turn, beats, text/subtext, turning points, pacing, image systems), McKee's Dialogue scene types (balanced, comic, asymmetric, indirect, reflexive, minimal), Syd Field's sequence and scene elements, Neill Hicks (less is more, enter late leave early, energy), Richard Walter (ac…"
-    },
-    {
-      "id": "screenwriting-skills/sw-story-structure",
-      "name": "sw-story-structure",
-      "collection": "screenwriting-skills",
-      "kind": "skill",
-      "language": "zh",
-      "category": "",
-      "path": ".agents/vendor/screenwriting-skills/skills/sw-story-structure/SKILL.md",
-      "description": "Story structure for screenplays and stage plays (故事结构) — merged from Syd Field's paradigm and plot points, Blake Snyder's Save the Cat beat sheet and board, Robert McKee's Story (event/scene/sequence/act, inciting incident, progressive complications, crisis-climax-resolution, subplots, story triangle), Julian Hoxter's nine-beat model, Neill Hicks' three acts as attraction/anticipation/satisfactio…"
-    },
-    {
-      "id": "screenwriting-skills/sw-truby-anatomy",
-      "name": "sw-truby-anatomy",
-      "collection": "screenwriting-skills",
-      "kind": "skill",
-      "language": "zh",
-      "category": "",
-      "path": ".agents/vendor/screenwriting-skills/skills/sw-truby-anatomy/SKILL.md",
-      "description": "Organic story anatomy from John Truby's The Anatomy of Story (有机结构/设计原则/22步骤/道德议题/四角对立/幽灵/场景编排) — the designing principle (story process plus original execution), the seven key steps as the organic spine, all twenty-two steps with the middle-act machinery the beat sheets lack (ghost, fake-ally opponent, plan, opponent's drive, ally's attack, fake defeat, three revelation-and-decision pairs, audie…"
     },
     {
       "id": "youtube-agent-skill/yt-script",

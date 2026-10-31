@@ -16,7 +16,7 @@ import uuid
 from .contracts import ROOT, digest, iso, utcnow
 from .media import fingerprint
 
-AP, SW = "autopunk-media-skills/", "screenwriting-skills/"
+AP = "autopunk-media-skills/"
 TYPES = {
     "documentary": {"label": "Documentaire", "mode": "documentary"},
     "explainer": {"label": "Explication ou vulgarisation", "mode": "documentary"},
@@ -95,17 +95,17 @@ ROUTES = {
                       (AP+"story-angle-finder", "Décliner un thème large en angles distincts.")],
         "commentary": [TREND, (AP+"trending-topics-brief", "Cartographier les conversations qui montent sur le thème."),
                        (AP+"debate-state-summary", "Résumer l'état du débat avant de prendre position.")],
-        "fiction": [(SW+"sw-premise-theme", "Choisir une prémisse et une idée directrice."),
-                    (AP+"logline-writer", "Formuler chaque proposition en une phrase.")],
+        "fiction": [(AP+"logline-writer", "Formuler chaque prémisse en une phrase.")],
         "docufiction": [(AP+"story-angle-finder", "Décliner un thème large en angles distincts."),
-                        (SW+"sw-premise-theme", "Choisir la prémisse des reconstitutions.")],
+                        (AP+"logline-creator", "Formuler la prémisse des reconstitutions en une phrase.")],
     },
     "framing": {
         "documentary": [(AP+"logline-creator", "Formuler la promesse du film en une ou deux phrases.")],
         "explainer": [(AP+"story-angle-finder", "Choisir l'angle le plus clair pour le public visé.")],
         "commentary": [(AP+"story-angle-finder", "Choisir la thèse et son angle.")],
-        "fiction": [(SW+"sw-premise-theme", "Préciser prémisse, thème et enjeu."), (AP+"logline-writer", "Formuler le récit en une phrase.")],
-        "docufiction": [(AP+"logline-creator", "Formuler la promesse du film."), (SW+"sw-premise-theme", "Préciser l'enjeu des reconstitutions.")],
+        "fiction": [(AP+"treatment-writer", "Préciser prémisse, thème et enjeu dans un court traitement."),
+                    (AP+"logline-writer", "Formuler le récit en une phrase.")],
+        "docufiction": [(AP+"logline-creator", "Formuler la promesse du film et l'enjeu des reconstitutions.")],
     },
     "research": {
         "explainer": [WRITER, RESEARCH],
@@ -124,20 +124,18 @@ ROUTES = {
     },
     "structure": {
         "documentary": [WRITER, (YT, "Cinq accroches d'après ses formules, les deux meilleures montrées à Lou, puis les séquences."),
-                        (SW+"sw-story-structure", "Choisir la structure et placer les tournants."),
+                        (AP+"beat-sheet-builder", "Choisir la structure et placer les tournants."),
                         (AP+"character-arc-planner", "Construire l'arc d'un personnage réel, si le récit en suit un."),
                         (AP+"scene-breakdown-writer", "Découper les séquences avec leurs besoins."),
                         (AP+"structure-flow-checker", "Vérifier l'enchaînement et les transitions.")],
         "explainer": [WRITER, (YT, "Cinq accroches d'après ses formules, les deux meilleures montrées à Lou, puis les séquences."),
                       (AP+"structure-flow-checker", "Vérifier que chaque étape prépare la suivante.")],
-        "commentary": [WRITER, (SW+"sw-premise-theme", "Fixer l'idée directrice et sa contradiction."),
+        "commentary": [WRITER, (AP+"structure-improvement-advisor", "Fixer la thèse, sa contradiction et l'ordre des arguments."),
                        (YT, "Cinq accroches d'après ses formules, les deux meilleures montrées à Lou, puis les séquences."),
                        (AP+"structure-flow-checker", "Vérifier la logique de l'argumentation.")],
-        "fiction": [(SW+"sw-story-structure", "Structure, incident déclencheur et tournants."),
-                    (SW+"sw-character-conflict", "Personnages, objectifs et conflit."),
-                    (SW+"sw-genre-anatomy", "Respecter les attentes du genre choisi."),
-                    (AP+"beat-sheet-builder", "Placer les temps forts sur la durée.")],
-        "docufiction": [(SW+"sw-story-structure", "Structure générale et tournants."),
+        "fiction": [(AP+"beat-sheet-builder", "Structure, incident déclencheur, tournants et temps forts sur la durée."),
+                    (AP+"character-profile-writer", "Personnages, objectifs et conflit.")],
+        "docufiction": [(AP+"beat-sheet-builder", "Structure générale et tournants."),
                         (AP+"scene-breakdown-writer", "Séparer séquences factuelles et reconstitutions."),
                         (AP+"hook-generator@fr", "Écrire trois accroches d'ouverture.")],
     },
@@ -150,10 +148,11 @@ ROUTES = {
                       (AP+"animated-explainer-script", "Passages explicatifs : un concept par phrase, jargon expliqué, un visuel par passage.")],
         "commentary": [WRITER, (YT, "Script séquence par séquence avec ce qui est à l'écran."),
                        (AP+"voice-over-script-writer", "Écrire pour l'oreille, phrases courtes et actives.")],
-        "fiction": [(SW+"sw-scene-craft", "Construire chaque scène autour d'un changement."),
-                    (AP+"scene-writer", "Rédiger les scènes."), (SW+"sw-dialogue", "Écrire des dialogues avec sous-texte.")],
+        "fiction": [(AP+"scene-writer", "Construire chaque scène autour d'un changement et la rédiger."),
+                    (AP+"dialogue-polisher", "Écrire des dialogues avec sous-texte.")],
         "docufiction": [(AP+"commentary-writer", "Écrire la narration factuelle."),
-                        (SW+"sw-scene-craft", "Écrire les reconstitutions annoncées."), (SW+"sw-dialogue", "Dialogues des reconstitutions.")],
+                        (AP+"scene-writer", "Écrire les reconstitutions annoncées."),
+                        (AP+"dialogue-polisher", "Dialogues des reconstitutions.")],
     },
     "narrator_adaptation": {
         "*": [WRITER, (AP+"narrator-voice-adapter", "Reformuler ce que Lou ne dirait pas ainsi, en gardant faits, réserves et attributions.")],

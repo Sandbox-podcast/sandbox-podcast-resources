@@ -148,7 +148,7 @@ class VendorSkillsTest(unittest.TestCase):
 
     def test_repository_collections_match_their_lock(self):
         result = check(ROOT)
-        self.assertEqual(result["screenwriting-skills"]["skills"], 7)
+        self.assertNotIn("screenwriting-skills", result)
         self.assertEqual(result["cc-skills"]["skills"], 2)
         self.assertEqual(result["humanizer-fr"]["skills"], 1)
         self.assertEqual(result["autopunk-media-skills"]["skills"], 182)

@@ -41,13 +41,13 @@ Un format vertical 9:16 ou de trois minutes au plus ajoute les skills d'écritur
 
 ## Le parcours et ses skills
 
-Après ces réponses, l'agent crée l'histoire dans StoryTelling Generator et enchaîne les étapes. À chaque étape, il lit seulement les skills qui lui servent ; les 203 skills installés ne sont pas chargés d'un coup. De la recherche à la révision orale, le texte est écrit par l'agent scénariste [`sandbox-video-scriptwriter`](../../.agents/skills/sandbox-video-scriptwriter/SKILL.md), qui applique tes règles apprises et te demande de valider l'accroche puis le texte.
+Après ces réponses, l'agent crée l'histoire dans StoryTelling Generator et enchaîne les étapes. À chaque étape, il lit seulement les skills qui lui servent ; les 196 skills installés ne sont pas chargés d'un coup. De la recherche à la révision orale, le texte est écrit par l'agent scénariste [`sandbox-video-scriptwriter`](../../.agents/skills/sandbox-video-scriptwriter/SKILL.md), qui applique tes règles apprises et te demande de valider l'accroche puis le texte.
 
 | Étape | Exemples de skills utilisés | Ce que tu examines |
 | --- | --- | --- |
 | Recherche et sources | `content-research-writer`, `research-brief-creator`, `claim-fact-checker`, `source-cross-referencer`, `statistics-verifier` | Les faits retenus, leurs sources et leurs limites |
-| Structure narrative | `yt-script` (cinq accroches, les deux meilleures te sont montrées), `sw-story-structure`, `character-arc-planner`, `sw-character-conflict` en fiction | L'accroche, la progression, la conclusion |
-| Texte intégral | `yt-script`, `animated-explainer-script`, `commentary-writer`, `documentary-narration-writer`, `sw-scene-craft`, `sw-dialogue` | Le texte complet |
+| Structure narrative | `yt-script` (cinq accroches, les deux meilleures te sont montrées), `beat-sheet-builder`, `character-arc-planner`, `character-profile-writer` en fiction | L'accroche, la progression, la conclusion |
+| Texte intégral | `yt-script`, `animated-explainer-script`, `commentary-writer`, `documentary-narration-writer`, `scene-writer` et `dialogue-polisher` en fiction | Le texte complet |
 | Adaptation au narrateur | `narrator-voice-adapter`, `dialogue-polisher` en fiction | Le texte te ressemble-t-il ? |
 | Révision du français | `humanizer-fr`, seul correcteur qui réécrit, puis `redundancy-checker`, `tone-consistency-checker` | Les formulations, sans changement des faits |
 | Révision pour l'oral | `teleprompter-script-writer`, `voice-over-script-writer` et le diagnostic oral de la factory | Chiffres, sigles, respirations, rythme |
@@ -111,7 +111,7 @@ Les contrôles réellement exécutés lors de la mise en place sont dans le [rap
 
 ## Les collections de skills
 
-Les skills externes sont installés dans [`.agents/vendor/`](../../.agents/vendor/README.md), à des révisions épinglées et avec leurs licences : Autopunk Media Skills (182 skills, 7 variantes françaises, 2 agents), Screenwriting Skills (7 skills, rédigés en chinois ; l'agent répond en français), Humaniseur FR et `copywriting-prose-creator` (samber), Humanizer FR (ferr079), `yt-script` et `content-research-writer`. Seuls les skills utiles pour des vidéos YouTube sur l'IA sont installés ; le [README des collections](../../.agents/vendor/README.md#ce-qui-nest-pas-installé) liste ce qui a été retiré. `python tools/repository/vendor_skills.py check` vérifie leur contenu ; `find` cherche un skill dans le catalogue.
+Les skills externes sont installés dans [`.agents/vendor/`](../../.agents/vendor/README.md), à des révisions épinglées et avec leurs licences : Autopunk Media Skills (182 skills, 7 variantes françaises, 2 agents), Humaniseur FR et `copywriting-prose-creator` (samber), Humanizer FR (ferr079), `yt-script` et `content-research-writer`. Seuls les skills utiles pour des vidéos YouTube sur l'IA sont installés ; le [README des collections](../../.agents/vendor/README.md#ce-qui-nest-pas-installé) liste ce qui a été retiré. `python tools/repository/vendor_skills.py check` vérifie leur contenu ; `find` cherche un skill dans le catalogue.
 
 ## Limites actuelles
 
