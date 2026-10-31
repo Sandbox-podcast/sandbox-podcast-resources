@@ -12,7 +12,7 @@ Ce dossier contient les skills externes installés à la demande de Lou pour l'[
 
 Ces skills ne sont pas déclarés dans `.agents/skills/` ni `.claude/skills/`. Codex et Claude n'en chargent donc pas les 494 descriptions à chaque session. Le skill [`sandbox-video-onboarding`](../skills/sandbox-video-onboarding/SKILL.md) choisit ceux de l'étape en cours et lit leur fichier à ce moment-là.
 
-[`catalog.json`](catalog.json) donne pour chaque entrée son identifiant, son chemin, sa langue, sa catégorie et le début de sa description. Pour chercher depuis la racine :
+[`catalog.json`](catalog.json) donne pour chaque entrée son identifiant, son chemin, sa langue, sa catégorie et le début de sa description. [`CATALOGUE.md`](CATALOGUE.md) présente les mêmes entrées en tableaux, par collection et par catégorie. Pour un agent ou une variante sans description dans son en-tête, le catalogue reprend le premier paragraphe du fichier. Pour chercher depuis la racine :
 
 ```powershell
 python tools/repository/vendor_skills.py find "narration documentary"
@@ -36,4 +36,4 @@ python tools/repository/vendor_skills.py check
 python tools/repository/vendor_skills.py install --collection screenwriting-skills
 ```
 
-`check` compare chaque collection à l'empreinte enregistrée, vérifie les licences et le catalogue. Pour changer de révision, remplacer `commit` dans le verrou par un commit complet relu, puis exécuter `install` pour cette collection. L'installation refuse d'écraser une copie modifiée localement ; `--replace-modified` assume ce remplacement. Relire ensuite le diff et le routage de l'onboarding avant de valider la mise à jour.
+`check` compare chaque collection à l'empreinte enregistrée, vérifie les licences et les deux catalogues ; `catalog` les régénère. Pour changer de révision, remplacer `commit` dans le verrou par un commit complet relu, puis exécuter `install` pour cette collection. L'installation refuse d'écraser une copie modifiée localement ; `--replace-modified` assume ce remplacement. Relire ensuite le diff et le routage de l'onboarding avant de valider la mise à jour.

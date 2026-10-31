@@ -347,7 +347,7 @@
       "language": "de",
       "category": "social-media/content",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/de/social-media/content/caption-writer.md",
-      "description": ""
+      "description": "Schreibt plattformoptimierte Social-Media-Captions für Instagram, LinkedIn, TikTok oder Twitter/X aus einem Briefing, Artikelauszug oder einer Inhaltsbeschreibung -- abgestimmt auf die Konventionen der Plattform und die Stimme des Accounts."
     },
     {
       "id": "autopunk-media-skills/caption-writer@es",
@@ -357,7 +357,7 @@
       "language": "es",
       "category": "social-media/content",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/es/social-media/content/caption-writer.md",
-      "description": ""
+      "description": "Escribe pies de foto para redes sociales optimizados por plataforma para Instagram, LinkedIn, TikTok o Twitter/X a partir de un brief, extracto de artículo o descripción de contenido — adaptados a las convenciones de la plataforma y a la voz de la cuenta."
     },
     {
       "id": "autopunk-media-skills/caption-writer@fr",
@@ -367,7 +367,7 @@
       "language": "fr",
       "category": "social-media/content",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/fr/social-media/content/caption-writer.md",
-      "description": ""
+      "description": "Rédige des légendes de réseaux sociaux optimisées par plateforme pour Instagram, LinkedIn, TikTok ou Twitter/X à partir d'un brief, d'un extrait d'article ou d'une description de contenu — adaptées aux conventions de la plateforme et à la voix du compte."
     },
     {
       "id": "autopunk-media-skills/caption-writer@it",
@@ -377,7 +377,7 @@
       "language": "it",
       "category": "social-media/content",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/it/social-media/content/caption-writer.md",
-      "description": ""
+      "description": "Scrive didascalie per i social media ottimizzate per piattaforma per Instagram, LinkedIn, TikTok o Twitter/X a partire da un brief, un estratto di articolo o una descrizione del contenuto — adattate alle convenzioni della piattaforma e alla voce dell'account."
     },
     {
       "id": "autopunk-media-skills/caption-writer@pt",
@@ -387,7 +387,7 @@
       "language": "pt",
       "category": "social-media/content",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/pt/social-media/content/caption-writer.md",
-      "description": ""
+      "description": "Escreve legendas para redes sociais otimizadas por plataforma para Instagram, LinkedIn, TikTok ou Twitter/X a partir de um brief, excerto de artigo ou descrição de conteúdo — adaptadas às convenções da plataforma e à voz da conta."
     },
     {
       "id": "autopunk-media-skills/carousel-script-writer",
@@ -957,7 +957,7 @@
       "language": "en",
       "category": "agents",
       "path": ".agents/vendor/autopunk-media-skills/agents/data-journalism-investigator-agent.md",
-      "description": ""
+      "description": "Takes a dataset or data source and a research question and produces a complete data journalism package — story angles, data collection plan, cleaning instructions, statistical analysis, reader-friendly explanations, chart descriptions, and a published methodology statement — ready for an editor to review."
     },
     {
       "id": "autopunk-media-skills/data-outlier-finder",
@@ -1117,7 +1117,7 @@
       "language": "en",
       "category": "agents",
       "path": ".agents/vendor/autopunk-media-skills/agents/documentary-development-agent.md",
-      "description": ""
+      "description": "Takes a one-line documentary idea and produces a complete development package — logline, pitch treatment, broadcaster pitch, and festival synopses — ready to send to commissioners, funders, or festival programmers."
     },
     {
       "id": "autopunk-media-skills/documentary-narration-writer",
@@ -1617,7 +1617,7 @@
       "language": "de",
       "category": "magazine-journalism/ideation",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/de/magazine-journalism/ideation/headline-generator.md",
-      "description": ""
+      "description": "Erzeugt eine Bandbreite von Schlagzeilen- und Unterzeilen-Optionen über verschiedene Register, Längen und Publikationsstile für einen gegebenen Artikel oder ein Feature."
     },
     {
       "id": "autopunk-media-skills/headline-generator@es",
@@ -1627,7 +1627,7 @@
       "language": "es",
       "category": "magazine-journalism/ideation",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/es/magazine-journalism/ideation/headline-generator.md",
-      "description": ""
+      "description": "Genera una variedad de opciones de titulares y subtítulos en diferentes registros, longitudes y estilos de publicación para un artículo o reportaje determinado."
     },
     {
       "id": "autopunk-media-skills/headline-generator@fr",
@@ -1637,7 +1637,7 @@
       "language": "fr",
       "category": "magazine-journalism/ideation",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/fr/magazine-journalism/ideation/headline-generator.md",
-      "description": ""
+      "description": "Génère une gamme d'options de titres et de sous-titres dans différents registres, longueurs et styles de publications pour un article ou un reportage donné."
     },
     {
       "id": "autopunk-media-skills/headline-generator@it",
@@ -1647,7 +1647,7 @@
       "language": "it",
       "category": "magazine-journalism/ideation",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/it/magazine-journalism/ideation/headline-generator.md",
-      "description": ""
+      "description": "Genera una serie di opzioni per titoli e sottotitoli in diversi registri, lunghezze e stili editoriali per un articolo o reportage specifico."
     },
     {
       "id": "autopunk-media-skills/headline-generator@pt",
@@ -1657,7 +1657,7 @@
       "language": "pt",
       "category": "magazine-journalism/ideation",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/pt/magazine-journalism/ideation/headline-generator.md",
-      "description": ""
+      "description": "Gera uma variedade de opções de títulos e subtítulos em diferentes registos, extensões e estilos de publicação para um artigo ou reportagem específica."
     },
     {
       "id": "autopunk-media-skills/headline-writer",
@@ -1707,7 +1707,7 @@
       "language": "de",
       "category": "youtube/pre-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/de/youtube/pre-production/hook-generator.md",
-      "description": ""
+      "description": "Schreibt drei Einstiegs-Hooks -- einen pro Stil -- für ein YouTube-Video, eine Podcast-Intro oder eine Doku-Eröffnung. Jeder Hook hat 1 bis 3 Sätze und ist sofort einsatzbereit."
     },
     {
       "id": "autopunk-media-skills/hook-generator@es",
@@ -1717,7 +1717,7 @@
       "language": "es",
       "category": "youtube/pre-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/es/youtube/pre-production/hook-generator.md",
-      "description": ""
+      "description": "Escribe tres opciones de gancho de apertura —una por estilo— para un video de YouTube, introducción de podcast o apertura de documental. Cada gancho tiene entre 1 y 3 oraciones y está listo para usarse tal como está."
     },
     {
       "id": "autopunk-media-skills/hook-generator@fr",
@@ -1727,7 +1727,7 @@
       "language": "fr",
       "category": "youtube/pre-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/fr/youtube/pre-production/hook-generator.md",
-      "description": ""
+      "description": "Rédige trois options d'accroche d'ouverture — une par style — pour une vidéo YouTube, une introduction de podcast ou l'ouverture d'un documentaire. Chaque accroche fait 1 à 3 phrases et peut être utilisée telle quelle."
     },
     {
       "id": "autopunk-media-skills/hook-generator@it",
@@ -1737,7 +1737,7 @@
       "language": "it",
       "category": "youtube/pre-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/it/youtube/pre-production/hook-generator.md",
-      "description": ""
+      "description": "Scrive tre opzioni di hook di apertura — una per stile — per un video YouTube, un'introduzione di podcast o un'apertura di documentario. Ogni hook e' composto da 1 a 3 frasi ed e' pronto per l'uso cosi' com'e'."
     },
     {
       "id": "autopunk-media-skills/hook-generator@pt",
@@ -1747,7 +1747,7 @@
       "language": "pt",
       "category": "youtube/pre-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/pt/youtube/pre-production/hook-generator.md",
-      "description": ""
+      "description": "Escreve três opções de gancho de abertura — uma por estilo — para um vídeo de YouTube, introdução de podcast ou abertura de documentário. Cada gancho tem entre 1 e 3 frases e está pronto a usar tal como está."
     },
     {
       "id": "autopunk-media-skills/house-style-enforcer",
@@ -1877,7 +1877,7 @@
       "language": "de",
       "category": "tv-documentary/scripting",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/de/tv-documentary/scripting/interview-question-generator.md",
-      "description": ""
+      "description": "Erzeugt einen gezielten, strukturierten Interviewfragen-Satz für eine bestimmte Dokumentarfilm-Protagonistin oder einen bestimmten Protagonisten -- geordnet nach erzählerischer Funktion, von eröffnenden Aufwärmfragen bis zu den anspruchsvollsten oder aufschlussreichsten Fragen."
     },
     {
       "id": "autopunk-media-skills/interview-question-generator@es",
@@ -1887,7 +1887,7 @@
       "language": "es",
       "category": "tv-documentary/scripting",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/es/tv-documentary/scripting/interview-question-generator.md",
-      "description": ""
+      "description": "Genera un conjunto de preguntas de entrevista orientado y estructurado para un sujeto documental específico — organizado por función narrativa, desde preguntas iniciales para crear confianza hasta las preguntas más desafiantes o reveladoras."
     },
     {
       "id": "autopunk-media-skills/interview-question-generator@fr",
@@ -1897,7 +1897,7 @@
       "language": "fr",
       "category": "tv-documentary/scripting",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/fr/tv-documentary/scripting/interview-question-generator.md",
-      "description": ""
+      "description": "Génère un ensemble de questions d'interview ciblé et structuré pour un sujet documentaire spécifique — organisé par fonction narrative, des questions initiales de mise en confiance jusqu'aux questions les plus difficiles ou révélatrices."
     },
     {
       "id": "autopunk-media-skills/interview-question-generator@it",
@@ -1907,7 +1907,7 @@
       "language": "it",
       "category": "tv-documentary/scripting",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/it/tv-documentary/scripting/interview-question-generator.md",
-      "description": ""
+      "description": "Genera un set di domande per intervista mirato e strutturato per un soggetto documentaristico specifico — organizzato per funzione narrativa, dalle domande iniziali per costruire fiducia fino alle domande piu' difficili o rivelatrici."
     },
     {
       "id": "autopunk-media-skills/interview-question-generator@pt",
@@ -1917,7 +1917,7 @@
       "language": "pt",
       "category": "tv-documentary/scripting",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/pt/tv-documentary/scripting/interview-question-generator.md",
-      "description": ""
+      "description": "Gera um conjunto de perguntas de entrevista orientado e estruturado para um sujeito documental específico — organizado por função narrativa, desde perguntas iniciais para criar confiança até às perguntas mais desafiantes ou reveladoras."
     },
     {
       "id": "autopunk-media-skills/interview-transcript-editor",
@@ -1957,7 +1957,7 @@
       "language": "en",
       "category": "agents",
       "path": ".agents/vendor/autopunk-media-skills/agents/investigative-reporter-agent.md",
-      "description": ""
+      "description": "Takes a story spark and produces a fully-scoped investigation package — editorial angle, source map, records requests, document analysis, verification checklist, libel-risk flags, and a draft lede — ready for an editor's desk."
     },
     {
       "id": "autopunk-media-skills/investor-brief-writer",
@@ -2197,7 +2197,7 @@
       "language": "de",
       "category": "tv-documentary/development",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/de/tv-documentary/development/logline-creator.md",
-      "description": ""
+      "description": "Erstellt 4 bis 6 präzise, überzeugende Logline-Optionen für ein beliebiges Dokumentarfilm-Projekt, von einem einzelnen Satz bis zur Zwei-Satz-Form, jeweils mit einem anderen Schwerpunkt."
     },
     {
       "id": "autopunk-media-skills/logline-creator@es",
@@ -2207,7 +2207,7 @@
       "language": "es",
       "category": "tv-documentary/development",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/es/tv-documentary/development/logline-creator.md",
-      "description": ""
+      "description": "Elabora 4 a 6 opciones de logline precisas y convincentes para cualquier proyecto documental, que van desde una sola oración hasta una forma de dos oraciones, cada una con un énfasis diferente."
     },
     {
       "id": "autopunk-media-skills/logline-creator@fr",
@@ -2217,7 +2217,7 @@
       "language": "fr",
       "category": "tv-documentary/development",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/fr/tv-documentary/development/logline-creator.md",
-      "description": ""
+      "description": "Rédige 4 à 6 options précises et convaincantes de ligne éditoriale pour tout projet documentaire, allant d'une seule phrase à une forme en deux phrases, chacune avec un angle différent."
     },
     {
       "id": "autopunk-media-skills/logline-creator@it",
@@ -2227,7 +2227,7 @@
       "language": "it",
       "category": "tv-documentary/development",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/it/tv-documentary/development/logline-creator.md",
-      "description": ""
+      "description": "Elabora da 4 a 6 opzioni di logline precise e convincenti per qualsiasi progetto documentaristico, che vanno da una singola frase a una forma di due frasi, ciascuna con un'enfasi diversa."
     },
     {
       "id": "autopunk-media-skills/logline-creator@pt",
@@ -2237,7 +2237,7 @@
       "language": "pt",
       "category": "tv-documentary/development",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/pt/tv-documentary/development/logline-creator.md",
-      "description": ""
+      "description": "Elabora 4 a 6 opções de logline precisas e convincentes para qualquer projeto documental, que vão desde uma única frase até uma forma de duas frases, cada uma com uma ênfase diferente."
     },
     {
       "id": "autopunk-media-skills/logline-writer",
@@ -2257,7 +2257,7 @@
       "language": "en",
       "category": "agents",
       "path": ".agents/vendor/autopunk-media-skills/agents/magazine-editor-agent.md",
-      "description": ""
+      "description": "Takes a draft magazine article and produces a complete editorial package — structural diagnosis, register cleanup, copy edits, house style compliance, fact-check checklist, headline options, and pull quotes — ready for the editor to sign off before layout."
     },
     {
       "id": "autopunk-media-skills/management-briefing-writer",
@@ -2427,7 +2427,7 @@
       "language": "en",
       "category": "agents",
       "path": ".agents/vendor/autopunk-media-skills/agents/newsletter-launch-agent.md",
-      "description": ""
+      "description": "Takes a newsletter concept or topic area and produces a complete launch package — positioning document, pilot edition, subject line options, welcome email, and landing page copy — ready for the creator to start collecting subscribers and send their first issue."
     },
     {
       "id": "autopunk-media-skills/newsletter-subject-line-writer",
@@ -2467,7 +2467,7 @@
       "language": "en",
       "category": "agents",
       "path": ".agents/vendor/autopunk-media-skills/agents/newsroom-operations-agent.md",
-      "description": ""
+      "description": "Takes a newsroom description and produces a complete operational infrastructure package — AI usage policy, beat setup guides for every coverage area, an editorial calendar, longer-term content arcs, and a reusable ethics review template — everything a newsroom needs to run well from day one."
     },
     {
       "id": "autopunk-media-skills/niche-positioning-brief",
@@ -2767,7 +2767,7 @@
       "language": "en",
       "category": "agents",
       "path": ".agents/vendor/autopunk-media-skills/agents/podcast-producer-agent.md",
-      "description": ""
+      "description": "Takes a topic or guest and produces a complete episode package — concept, research brief, interview questions (or solo script), intro and outro scripts, ad reads, show notes, and episode descriptions — ready for the host to record."
     },
     {
       "id": "autopunk-media-skills/podcast-show-notes-writer",
@@ -2847,7 +2847,7 @@
       "language": "en",
       "category": "agents",
       "path": ".agents/vendor/autopunk-media-skills/agents/pr-crisis-response-agent.md",
-      "description": ""
+      "description": "Takes a crisis situation briefing and produces a complete crisis communications package — from an immediate holding statement through full crisis statement, FAQ document, spokesperson briefing, internal staff memo, and (where appropriate) proactive media outreach and a formal press release — ready for the comms team to deploy under time pressure."
     },
     {
       "id": "autopunk-media-skills/presenter-briefing-writer",
@@ -2917,7 +2917,7 @@
       "language": "de",
       "category": "media-business/distribution",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/de/media-business/distribution/press-release-writer.md",
-      "description": ""
+      "description": "Schreibt eine Pressemitteilung für ein Medienprojekt -- Premiere, Auftragserteilung, Preis oder Produktionsmeilenstein --, formatiert für den Versand an Fach- und Branchenjournalist:innen."
     },
     {
       "id": "autopunk-media-skills/press-release-writer@es",
@@ -2927,7 +2927,7 @@
       "language": "es",
       "category": "media-business/distribution",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/es/media-business/distribution/press-release-writer.md",
-      "description": ""
+      "description": "Escribe un comunicado de prensa profesional anunciando un estreno, encargo, premio o hito de producción de un proyecto mediático, formateado para distribución a periodistas del sector del entretenimiento y prensa especializada."
     },
     {
       "id": "autopunk-media-skills/press-release-writer@fr",
@@ -2937,7 +2937,7 @@
       "language": "fr",
       "category": "media-business/distribution",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/fr/media-business/distribution/press-release-writer.md",
-      "description": ""
+      "description": "Rédige un communiqué de presse professionnel annonçant une première, une commande, un prix ou une étape de production d'un projet médiatique, formaté pour la diffusion aux journalistes du secteur du divertissement et à la presse professionnelle."
     },
     {
       "id": "autopunk-media-skills/press-release-writer@it",
@@ -2947,7 +2947,7 @@
       "language": "it",
       "category": "media-business/distribution",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/it/media-business/distribution/press-release-writer.md",
-      "description": ""
+      "description": "Scrive un comunicato stampa professionale per annunciare una premiere, una commissione, un premio o una tappa produttiva di un progetto mediatico, formattato per la distribuzione a giornalisti del settore dell'intrattenimento e stampa specializzata."
     },
     {
       "id": "autopunk-media-skills/press-release-writer@pt",
@@ -2957,7 +2957,7 @@
       "language": "pt",
       "category": "media-business/distribution",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/pt/media-business/distribution/press-release-writer.md",
-      "description": ""
+      "description": "Escreve um comunicado de imprensa profissional anunciando uma estreia, encomenda, prémio ou marco de produção de um projeto mediático, formatado para distribuição a jornalistas do setor do entretenimento e imprensa especializada."
     },
     {
       "id": "autopunk-media-skills/press-roundup-writer",
@@ -3427,7 +3427,7 @@
       "language": "de",
       "category": "youtube/pre-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/de/youtube/pre-production/seo-title-optimizer.md",
-      "description": ""
+      "description": "Erzeugt 8 bis 10 suchoptimierte YouTube-Titelvorschläge für ein gegebenes Videothema, sortiert nach Klickpotenzial und Auffindbarkeit."
     },
     {
       "id": "autopunk-media-skills/seo-title-optimizer@es",
@@ -3437,7 +3437,7 @@
       "language": "es",
       "category": "youtube/pre-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/es/youtube/pre-production/seo-title-optimizer.md",
-      "description": ""
+      "description": "Genera 8 a 10 opciones de títulos de YouTube optimizados para búsqueda para un tema de video determinado, clasificadas por potencial de clics y descubribilidad."
     },
     {
       "id": "autopunk-media-skills/seo-title-optimizer@fr",
@@ -3447,7 +3447,7 @@
       "language": "fr",
       "category": "youtube/pre-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/fr/youtube/pre-production/seo-title-optimizer.md",
-      "description": ""
+      "description": "Génère 8 à 10 options de titres YouTube optimisés pour la recherche pour un sujet de vidéo donné, classées par potentiel de clic et de découvrabilité."
     },
     {
       "id": "autopunk-media-skills/seo-title-optimizer@it",
@@ -3457,7 +3457,7 @@
       "language": "it",
       "category": "youtube/pre-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/it/youtube/pre-production/seo-title-optimizer.md",
-      "description": ""
+      "description": "Genera da 8 a 10 opzioni di titoli YouTube ottimizzati per la ricerca per un dato tema video, classificati per potenziale di clic e scopribilita'."
     },
     {
       "id": "autopunk-media-skills/seo-title-optimizer@pt",
@@ -3467,7 +3467,7 @@
       "language": "pt",
       "category": "youtube/pre-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/pt/youtube/pre-production/seo-title-optimizer.md",
-      "description": ""
+      "description": "Gera 8 a 10 opções de títulos de YouTube otimizados para pesquisa para um tema de vídeo determinado, classificados por potencial de cliques e descobribilidade."
     },
     {
       "id": "autopunk-media-skills/series-bible-generator",
@@ -3557,7 +3557,7 @@
       "language": "de",
       "category": "podcast/post-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/de/podcast/post-production/show-notes-generator.md",
-      "description": ""
+      "description": "Erzeugt vollständige, SEO-taugliche Podcast-Shownotes aus einem Transkript oder einer Folgenzusammenfassung -- mit Folgenbeschreibung, Kernaussagen, Zeitmarken, Gast-Bio und Links-Bereich -- fertig zum Einfügen in die Podcast-Hosting-Plattform."
     },
     {
       "id": "autopunk-media-skills/show-notes-generator@es",
@@ -3567,7 +3567,7 @@
       "language": "es",
       "category": "podcast/post-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/es/podcast/post-production/show-notes-generator.md",
-      "description": ""
+      "description": "Genera notas de episodio completas y optimizadas para SEO a partir de una transcripción o resumen de episodio — incluyendo descripción del episodio, puntos clave, marcas de tiempo, bio del invitado y sección de enlaces — listas para pegar en una plataforma de alojamiento de podcasts."
     },
     {
       "id": "autopunk-media-skills/show-notes-generator@fr",
@@ -3577,7 +3577,7 @@
       "language": "fr",
       "category": "podcast/post-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/fr/podcast/post-production/show-notes-generator.md",
-      "description": ""
+      "description": "Génère des notes d'émission complètes et optimisées pour le référencement à partir d'une transcription ou d'un résumé d'épisode — incluant description de l'épisode, points clés, horodatages, biographie de l'invité et section de liens — prêtes à coller dans une plateforme d'hébergement de podcast."
     },
     {
       "id": "autopunk-media-skills/show-notes-generator@it",
@@ -3587,7 +3587,7 @@
       "language": "it",
       "category": "podcast/post-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/it/podcast/post-production/show-notes-generator.md",
-      "description": ""
+      "description": "Genera note dell'episodio complete e ottimizzate per la SEO a partire da una trascrizione o un riassunto dell'episodio — inclusa la descrizione dell'episodio, i punti chiave, i timestamp, la bio dell'ospite e la sezione link — pronte per essere incollate nella piattaforma di hosting del podcast."
     },
     {
       "id": "autopunk-media-skills/show-notes-generator@pt",
@@ -3597,7 +3597,7 @@
       "language": "pt",
       "category": "podcast/post-production",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/pt/podcast/post-production/show-notes-generator.md",
-      "description": ""
+      "description": "Gera notas de episódio completas e otimizadas para SEO a partir de uma transcrição ou resumo de episódio — incluindo descrição do episódio, pontos-chave, marcas de tempo, biografia do convidado e secção de links — prontas a colar numa plataforma de alojamento de podcasts."
     },
     {
       "id": "autopunk-media-skills/sidebar-fact-box-writer",
@@ -3647,7 +3647,7 @@
       "language": "de",
       "category": "magazine-journalism/distribution",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/de/magazine-journalism/distribution/social-media-excerpt.md",
-      "description": ""
+      "description": "Extrahiert die teilbarste Passage oder das stärkste Argument aus einem veröffentlichten Artikel und formatiert es als plattformspezifische Social-Media-Posts -- ohne den Journalismus umzuschreiben."
     },
     {
       "id": "autopunk-media-skills/social-media-excerpt@es",
@@ -3657,7 +3657,7 @@
       "language": "es",
       "category": "magazine-journalism/distribution",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/es/magazine-journalism/distribution/social-media-excerpt.md",
-      "description": ""
+      "description": "Extrae y reformatea el pasaje o argumento más compartible de un artículo publicado en publicaciones específicas para cada plataforma — sin reescribir el periodismo."
     },
     {
       "id": "autopunk-media-skills/social-media-excerpt@fr",
@@ -3667,7 +3667,7 @@
       "language": "fr",
       "category": "magazine-journalism/distribution",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/fr/magazine-journalism/distribution/social-media-excerpt.md",
-      "description": ""
+      "description": "Extrait et reformate le passage ou l'argument le plus partageable d'un article publié en publications adaptées à chaque plateforme — sans réécrire le journalisme."
     },
     {
       "id": "autopunk-media-skills/social-media-excerpt@it",
@@ -3677,7 +3677,7 @@
       "language": "it",
       "category": "magazine-journalism/distribution",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/it/magazine-journalism/distribution/social-media-excerpt.md",
-      "description": ""
+      "description": "Estrae e riformatta il passaggio o l'argomento piu' condivisibile di un articolo pubblicato in post specifici per ciascuna piattaforma — senza riscrivere il giornalismo."
     },
     {
       "id": "autopunk-media-skills/social-media-excerpt@pt",
@@ -3687,7 +3687,7 @@
       "language": "pt",
       "category": "magazine-journalism/distribution",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/pt/magazine-journalism/distribution/social-media-excerpt.md",
-      "description": ""
+      "description": "Extrai e reformata a passagem ou argumento mais partilhável de um artigo publicado em publicações específicas para cada plataforma — sem reescrever o jornalismo."
     },
     {
       "id": "autopunk-media-skills/social-media-intelligence",
@@ -3997,7 +3997,7 @@
       "language": "de",
       "category": "magazine-journalism/ideation",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/de/magazine-journalism/ideation/story-angle-finder.md",
-      "description": ""
+      "description": "Erzeugt 6 bis 8 eigenständige redaktionelle Winkel aus einem breiten Thema oder Nachrichtenereignis, jeweils mit eigener Perspektive, Zielgruppe und Recherche-Ansatz."
     },
     {
       "id": "autopunk-media-skills/story-angle-finder@es",
@@ -4007,7 +4007,7 @@
       "language": "es",
       "category": "magazine-journalism/ideation",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/es/magazine-journalism/ideation/story-angle-finder.md",
-      "description": ""
+      "description": "Genera 6 a 8 ángulos editoriales distintos a partir de un tema amplio o evento de actualidad, cada uno con una perspectiva única, público objetivo y enfoque periodístico."
     },
     {
       "id": "autopunk-media-skills/story-angle-finder@fr",
@@ -4017,7 +4017,7 @@
       "language": "fr",
       "category": "magazine-journalism/ideation",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/fr/magazine-journalism/ideation/story-angle-finder.md",
-      "description": ""
+      "description": "Génère 6 à 8 angles éditoriaux distincts à partir d'un sujet large ou d'un événement d'actualité, chacun avec une perspective unique, un public cible et une approche journalistique."
     },
     {
       "id": "autopunk-media-skills/story-angle-finder@it",
@@ -4027,7 +4027,7 @@
       "language": "it",
       "category": "magazine-journalism/ideation",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/it/magazine-journalism/ideation/story-angle-finder.md",
-      "description": ""
+      "description": "Genera da 6 a 8 angoli editoriali distinti a partire da un tema ampio o un evento di attualita', ciascuno con una prospettiva unica, un pubblico di riferimento e un approccio giornalistico."
     },
     {
       "id": "autopunk-media-skills/story-angle-finder@pt",
@@ -4037,7 +4037,7 @@
       "language": "pt",
       "category": "magazine-journalism/ideation",
       "path": ".agents/vendor/autopunk-media-skills/skills/locales/pt/magazine-journalism/ideation/story-angle-finder.md",
-      "description": ""
+      "description": "Gera 6 a 8 ângulos editoriais distintos a partir de um tema amplo ou evento de atualidade, cada um com uma perspetiva única, público-alvo e abordagem jornalística."
     },
     {
       "id": "autopunk-media-skills/story-pitch-writer",
@@ -4647,7 +4647,7 @@
       "language": "en",
       "category": "agents",
       "path": ".agents/vendor/autopunk-media-skills/agents/youtube-channel-operator-agent.md",
-      "description": ""
+      "description": "Takes a video concept — from a loose topic or a fully formed idea — and produces a complete production package: script, optimized titles, thumbnail brief, SEO description, and chapter timestamps. Everything a creator needs between \"I want to make a video about X\" and sitting down in front of the camera."
     },
     {
       "id": "autopunk-media-skills/youtube-chapters-writer",
