@@ -25,7 +25,7 @@ Les instructions de `screenwriting-skills` sont rédigées en chinois. L'agent r
 
 Le verrou liste chaque exclusion et son motif : jeux d'évaluation, gabarits, hooks, serveur MCP, installateurs et scripts amont. L'installation lit les fichiers comme des données ; elle n'exécute et n'active aucun code amont. Une instruction présente dans un skill ne donne aucune autorisation supplémentaire : publication, dépense, clonage de voix ou envoi restent soumis aux règles du dépôt.
 
-Le `NOTICE` de `screenwriting-skills` précise que les extraits d'ouvrages, de scénarios et de livrets cités dans les `reference*.md` restent la propriété de leurs auteurs, traducteurs et éditeurs. La licence MIT ne les couvre pas ; ils servent d'appui à l'étude et ne doivent pas être recopiés dans un livrable.
+Le `NOTICE` de `screenwriting-skills` précise que les extraits d'ouvrages, de scénarios et de livrets cités dans les `reference*.md` restent la propriété de leurs auteurs, traducteurs et éditeurs. La licence MIT ne les couvre pas ; ils servent d'appui à l'étude et ne doivent pas être recopiés dans un livrable. Le propriétaire du dépôt a choisi, le 31 octobre 2026, de garder ces références dans le dépôt public avec le `NOTICE` amont.
 
 ## Contrôler et mettre à jour
 

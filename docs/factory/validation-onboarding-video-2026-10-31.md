@@ -33,7 +33,9 @@ Les réglages réellement appliqués viennent de la lecture du code du backend 0
 
 Une passe d'audit indépendante a corrigé l'invalidation après un changement de voix Windows, ajouté le refus d'une voix fixée sous une autre version de Voice Studio, distingué profils clonés et conçus, et appliqué `delivery.pause_after_seconds` au montage sans modifier les caches existants.
 
-La première CI de la PR a échoué sur `vendor_skills.py check`. Deux causes : la règle `**/analysis/` du `.gitignore` avait écarté six skills Autopunk de `data-journalism/analysis`, et l'empreinte dépendait de l'ordre de tri des chemins, différent sous Windows et Linux. Une exception limitée aux fichiers texte de `.agents/vendor/` et un tri par chemin POSIX corrigent ces deux points ; deux tests les couvrent. La réinstallation depuis les commits épinglés a reproduit les mêmes fichiers et le même catalogue.
+La première CI de la PR a échoué sur `vendor_skills.py check`. Deux causes : la règle `**/analysis/` du `.gitignore` avait écarté six skills Autopunk de `data-journalism/analysis`, et l'empreinte dépendait de l'ordre de tri des chemins, différent sous Windows et Linux. Une exception limitée aux fichiers texte de `.agents/vendor/` et un tri par chemin POSIX corrigent ces deux points ; deux tests les couvrent. La réinstallation depuis les commits épinglés a reproduit les mêmes fichiers et le même catalogue. La CI relancée après ce correctif a réussi ses 8 contrôles.
+
+Les références de `screenwriting-skills` citent des ouvrages que leur licence MIT ne couvre pas (`NOTICE` amont). Lou a choisi de les garder dans le dépôt public ; le [README des collections](../../.agents/vendor/README.md) rappelle qu'elles ne doivent pas être recopiées dans un livrable.
 
 ## Ce qui reste à vérifier
 
