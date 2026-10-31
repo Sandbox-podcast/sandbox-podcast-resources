@@ -60,8 +60,8 @@ def safe_relative(path):
     value = PurePosixPath(path)
     if value.is_absolute() or not value.parts or any(part in {"", ".", ".."} or ":" in part for part in value.parts):
         raise ValueError("Chemin amont refusé : " + path)
-    if value.suffix.lower() not in {".md", ".txt"} and value.name not in TEXT_NAMES:
-        raise ValueError("Seuls les textes des skills et leurs licences sont installés : " + path)
+    if value.suffix.lower() not in {".md", ".txt", ".json"} and value.name not in TEXT_NAMES:
+        raise ValueError("Seuls les textes des skills, leurs données JSON et leurs licences sont installés : " + path)
     return value.as_posix()
 
 
