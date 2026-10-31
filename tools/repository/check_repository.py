@@ -22,6 +22,9 @@ def local_only(name: str) -> bool:
     path = PurePosixPath(name.replace('\\', '/'))
     if path.as_posix() in SHARED_IMAGES:
         return False
+    # Pinned external skills are text only; their upstream folder names may collide with local output names.
+    if path.parts[:2] == ('.agents', 'vendor') and path.suffix.lower() not in MEDIA_SUFFIXES:
+        return False
     return bool(
         path.parts[0] in LEGACY_ROOTS
         or set(path.parts) & LOCAL_PARTS

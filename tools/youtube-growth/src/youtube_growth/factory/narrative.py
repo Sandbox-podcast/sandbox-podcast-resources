@@ -116,17 +116,21 @@ def audio_duration(path):
         return stream.getnframes() / stream.getframerate()
 
 
-def join_waves(paths, output, *, pause=.18):
+def join_waves(paths, output, *, pause=.18, pauses=None):
+    """Concatenate takes; a silence follows each one (the same `pause`, or one value per take)."""
+    gaps = list(pauses) if pauses is not None else [pause] * len(paths)
+    if len(gaps) != len(paths):
+        raise ValueError("Pauses et pistes de narration désalignées.")
     with wave.open(str(paths[0]), "rb") as first:
         params = first.getparams()
     with wave.open(str(output), "wb") as target:
         target.setparams(params)
-        for path in paths:
+        for path, gap in zip(paths, gaps):
             with wave.open(str(path), "rb") as source:
                 if source.getparams()[:3] != params[:3]:
                     raise ValueError("Pistes de narration incompatibles.")
                 target.writeframes(source.readframes(source.getnframes()))
-            target.writeframes(b"\0" * round(params.framerate*pause)*params.nchannels*params.sampwidth)
+            target.writeframes(b"\0" * round(params.framerate*gap)*params.nchannels*params.sampwidth)
 
 
 def voice(board, options, directory, *, base):

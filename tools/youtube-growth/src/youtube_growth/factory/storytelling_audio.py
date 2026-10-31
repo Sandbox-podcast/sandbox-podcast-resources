@@ -277,13 +277,47 @@ def _system(text, voice, directory):
     return raw
 
 
+def _voicestudio(store, config, script, text, voice, directory, target):
+    """One local take per caption sentence, joined with a measured breathing pause."""
+    from .voicestudio import DEFAULT_URL, VoiceStudio, live_voice, request_fields
+    options = config.get("voicestudio", {})
+    client = VoiceStudio(options.get("base_url", DEFAULT_URL), timeout=options.get("timeout_seconds", 1800))
+    pause = voice["settings"].get("pause_between_sentences_seconds", .3)
+    # One GPU service per host: takes are serialized like paid provider calls.
+    with local_lock(store.directory / "storytelling-provider-locks" / "voicestudio"):
+        live = live_voice(client, voice)
+        chunks, paths, captions, offset = caption_chunks(text), [], [], 0.
+        for index, caption in enumerate(chunks):
+            _cancelled(store, script["story_id"])
+            chunk_dir = directory / ("sentence-" + str(index))
+            chunk_dir.mkdir(exist_ok=True)
+            raw = chunk_dir / "voicestudio.wav"
+            if not raw.exists():
+                temporary = raw.with_suffix(".part")
+                temporary.write_bytes(client.generate(request_fields(voice, spoken(caption, voice.get("pronunciations", {})))))
+                temporary.replace(raw)
+            wav = chunk_dir / "normalized.wav"
+            _normalize(raw, wav)
+            duration = audio_duration(wav)
+            if duration <= .05:
+                raise ValueError("storytelling_speech_empty")
+            captions.append({"text": caption, "start_seconds": offset, "end_seconds": offset + duration})
+            offset += duration + pause
+            paths.append(wav)
+        join_waves(paths, target, pause=pause)
+    sent = {k: v for k, v in request_fields(voice, "").items() if k != "text"}
+    return captions, {"profile_id": voice["profile_id"], "profile_name": live["profile_name"], "consent": live["consent"],
+                      "engine": voice["engine"], "voicestudio_version": live["version"], "request": sent,
+                      "sentences": len(chunks), "pause_between_sentences_seconds": pause}
+
+
 def _utterance(store, config, script, utterance, voice, cache, *, client=None):
     if not voice.get("authorization"):
         raise ValueError("storytelling_voice_authorization_required")
     text = utterance["text"]
     spoken_text = spoken(text, voice.get("pronunciations", {}))
     provider = voice.get("provider", "system")
-    if provider not in {"system", "recordings", "elevenlabs"}:
+    if provider not in {"system", "recordings", "elevenlabs", "voicestudio"}:
         raise ValueError("storytelling_voice_provider_unavailable")
     source = None
     source_sha256 = None
@@ -335,6 +369,8 @@ def _utterance(store, config, script, utterance, voice, cache, *, client=None):
                 paths.append(wav)
             join_waves(paths, target, pause=0)
             metadata = {"measured_caption_chunks": len(chunks)}
+        elif provider == "voicestudio":
+            captions, metadata = _voicestudio(store, config, script, text, {**voice, "settings": settings}, directory, target)
         elif provider == "recordings":
             _normalize(source, target)
             if recording_captions is not None:
@@ -462,28 +498,31 @@ def produce_audio(store, config, script, directory: Path, *, synthetic=False):
     cursor, scenes, artifacts, sound_tracks = 0., [], [], []
     for scene in script["scenes"]:
         _cancelled(store, script["story_id"])
-        rows, paths = [], []
+        rows, paths, pauses = [], [], []
         scene_start = cursor
         for utterance in scene["utterances"]:
             _cancelled(store, script["story_id"])
             voice = script["speakers"][utterance["speaker_id"]]["voice"]
             item = _utterance(store, config, script, utterance, voice, cache)
             duration = item["duration_seconds"]
+            # A pause written in the script is silence after the measured take; the voice itself is never stretched.
+            pause = _number((utterance.get("delivery") or {}).get("pause_after_seconds", 0), "storytelling_pause_invalid", 0, 10)
             rows.append({**item, "utterance_id": utterance["utterance_id"], "speaker_id": utterance["speaker_id"], "text": utterance["text"],
-                         "start_seconds": cursor, "end_seconds": cursor + duration})
+                         "start_seconds": cursor, "end_seconds": cursor + duration, **({"pause_after_seconds": pause} if pause else {})})
             paths.append(Path(item["path"]))
+            pauses.append(pause)
             artifacts.extend(item["artifacts"])
-            cursor += duration
+            cursor += duration + pause
         if not paths:
             raise ValueError("storytelling_scene_speech_missing")
-        scene_identity = digest({"paths": [_artifact(p) for p in paths]})
+        scene_identity = digest({"paths": [_artifact(p) for p in paths], **({"pauses": pauses} if any(pauses) else {})})
         target = directory / (scene_identity + ".wav")
         scene_receipt = target.with_suffix(".receipt.json")
         if target.exists():
             if not scene_receipt.exists() or json.loads(scene_receipt.read_text(encoding="utf-8")).get("sha256") != fingerprint(target):
                 raise ValueError("storytelling_scene_audio_changed")
         else:
-            join_waves(paths, target, pause=0)
+            join_waves(paths, target, pauses=pauses)
             _write(scene_receipt, _artifact(target))
         measured = audio_duration(target)
         scenes.append({"scene_id": scene["scene_id"], "start_seconds": scene_start, "duration_seconds": measured,

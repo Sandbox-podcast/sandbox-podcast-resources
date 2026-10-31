@@ -104,6 +104,10 @@ Ouvre le tableau de bord sur [127.0.0.1:8765](http://127.0.0.1:8765). La démons
 
 Pour traiter un épisode réel, installer le worker Windows ou sauvegarder l'état, suis le [guide d'exploitation](docs/factory/exploitation.md).
 
+## Créer une nouvelle vidéo
+
+Dans Codex ou Claude Code ouvert sur ce dépôt, écris « Je veux créer une nouvelle vidéo ». Le skill [`sandbox-video-onboarding`](.agents/skills/sandbox-video-onboarding/SKILL.md) demande le type de vidéo, le sujet ou te propose des pistes, puis le cadrage et la voix parmi celles de Voice Studio. Il enchaîne ensuite recherche, structure, rédaction, adaptation au narrateur, révisions française et orale, storyboard, montage, contrôles et exports, en chargeant à chaque étape les skills installés qui conviennent. Les réponses sont conservées pour reprendre plus tard. Le [guide de l'onboarding](docs/factory/onboarding-video.md) détaille le parcours.
+
 ## StoryTelling Generator
 
 StoryTelling Generator transforme un sujet et ses sources en scénario, pistes sonores, plans et vidéo montée. Il conserve les versions dans la factory et permet de corriger une scène après l'export. Le parcours principal se pilote dans Codex, avec une interface locale pour retrouver chaque étape.
@@ -147,6 +151,7 @@ GitHub contient le code, les projets éditables et la documentation. Les masters
 | [tools/](tools/) | Outils de production, de croissance YouTube et de gestion des réseaux sociaux. |
 | [docs/factory/](docs/factory/) | Guides de la factory, diagnostics et rapports de validation. |
 | [.agents/skills/](.agents/skills/) | Skills SANDBOX, de l'analyse au bilan ; `sandbox-factory` sert de point d'entrée. |
+| [.agents/vendor/](.agents/vendor/) | Collections de skills externes épinglées, avec licences et catalogue, chargées par l'onboarding vidéo. |
 | [config/factory.json](config/factory.json) | Configuration versionnée de la factory. |
 | [docs/site/history/](docs/site/history/) | Rapports datés du site, classés par année et mois. |
 | [archive/platform/](archive/platform/) | Code de l'ancienne plateforme, conservé pour référence. |

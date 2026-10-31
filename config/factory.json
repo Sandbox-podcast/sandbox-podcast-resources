@@ -28,6 +28,7 @@
   "generation": {"local_command": null, "model_revision": null, "network": false, "cost_per_call": 0, "timeout_seconds": 300, "auto_editorial": false},
   "narrative": {"direction": "sandbox-diagrams-v1", "minimum_seconds": 180, "maximum_seconds": 600},
   "storytelling": {"paid_calls_enabled": false, "elevenlabs": {"enabled": false, "api_key_env": "ELEVENLABS_API_KEY", "currency": "EUR", "music_enabled": false, "effects_enabled": false}},
+  "voicestudio": {"base_url": "http://127.0.0.1:3900", "timeout_seconds": 1800},
   "autonomy": {
     "enabled": true,
     "ollama_url": "http://127.0.0.1:11434",

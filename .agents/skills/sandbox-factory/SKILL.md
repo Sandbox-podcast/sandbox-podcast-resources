@@ -23,6 +23,7 @@ Depuis la racine du dépôt, définir `PYTHONPATH=tools/youtube-growth/src` et u
 | Planifier ou reprendre la simulation | [sandbox-diffusion](../sandbox-diffusion/SKILL.md) |
 | Examiner mesures, expériences et prochain brief | [sandbox-resultats](../sandbox-resultats/SKILL.md) |
 | Chercher de nouveaux sujets sur Internet | [sandbox-youtube-trend-hunter](../sandbox-youtube-trend-hunter/SKILL.md) |
+| Créer une nouvelle vidéo sans brief complet | [sandbox-video-onboarding](../sandbox-video-onboarding/SKILL.md) |
 | Créer, reprendre ou corriger une histoire originale | [sandbox-storytelling-generator](../sandbox-storytelling-generator/SKILL.md) |
 
 Pour la découverte multiformat et le parcours `research` / `draft-story` / `narrative`, lire [la production éditoriale](../../../docs/factory/production-editoriale.md). `discover` utilise toute la transcription ; les notes d'`editorial` et d'`opportunities` restent motivées et sans quota. Utiliser `--queue` pour les réservations de worker. Sans modèle local, traiter dans la conversation la requête exportée plutôt que prétendre à une génération exécutée en arrière-plan.

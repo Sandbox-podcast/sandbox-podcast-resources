@@ -134,6 +134,40 @@ def parser():
     story_control.add_argument("story_id")
     story_control.add_argument("action",choices=["pause","resume","cancel","approve","lock","unlock"])
     story_control.add_argument("--scene-id")
+    onboarding = commands.add_parser("video-onboarding", help="Conduire l'onboarding d'une nouvelle vidéo et conserver ses réponses.")
+    onboarding.add_argument("action", choices=["start", "show", "list", "answer", "propose", "choose", "voice", "frame", "record", "spoken-check"])
+    onboarding.add_argument("target", nargs="?", help="Session, ou fichier de texte pour spoken-check.")
+    onboarding.add_argument("--set", action="append", default=[], metavar="CHAMP=VALEUR")
+    onboarding.add_argument("--accepted-recommendation", action="store_true", help="Les valeurs sont des recommandations acceptées par Lou.")
+    onboarding.add_argument("--file", type=Path, help="Réponses, propositions ou résultat d'étape en JSON.")
+    onboarding.add_argument("--brief", type=Path, help="storytelling-brief.json produit par le Trend Hunter.")
+    onboarding.add_argument("--session-id")
+    onboarding.add_argument("--proposal", type=int)
+    onboarding.add_argument("--topic")
+    onboarding.add_argument("--confirmation", help="Les mots par lesquels Lou a exprimé son choix.")
+    onboarding.add_argument("--profile")
+    onboarding.add_argument("--engine")
+    onboarding.add_argument("--authorization")
+    onboarding.add_argument("--instruct", help="Consigne d'interprétation, seulement pour un moteur qui l'applique.")
+    onboarding.add_argument("--effect-preset")
+    onboarding.add_argument("--sentence-pause", type=float, help="Silence entre deux phrases, en secondes.")
+    onboarding.add_argument("--pronounce", action="append", default=[], metavar="TERME=PRONONCIATION")
+    onboarding.add_argument("--stage")
+    onboarding.add_argument("--artifact", action="append", default=[], type=Path)
+    onboarding.add_argument("--skill", action="append", default=[])
+    onboarding.add_argument("--check", action="append", default=[], metavar="ID=STATUT[:NOTE]")
+    onboarding.add_argument("--summary", default="")
+    onboarding.add_argument("--target-minutes", type=float)
+    voicestudio = commands.add_parser("voicestudio", help="Lire les profils et réglages réellement disponibles dans Voice Studio.")
+    voicestudio.add_argument("action", choices=["status", "profiles", "plan", "sample"])
+    voicestudio.add_argument("--url")
+    voicestudio.add_argument("--session", help="Session d'onboarding dont la voix choisie sert à l'essai.")
+    voicestudio.add_argument("--text")
+    voicestudio.add_argument("--output", type=Path)
+    voicestudio.add_argument("--instruct", help="Consigne à comparer, seulement pour l'essai.")
+    voicestudio.add_argument("--video-type", default="documentary", choices=["documentary", "explainer", "commentary", "fiction", "docufiction"])
+    voicestudio.add_argument("--register", choices=["analytic", "dynamic"])
+    voicestudio.add_argument("--engine")
     narrative = commands.add_parser("narrative")
     narrative.add_argument("story", type=Path)
     narrative.add_argument("--stage", choices=["all", "research", "script", "storyboard", "voice", "render", "metadata"], default="all")
@@ -230,6 +264,62 @@ def run_demo(directory: Path, config: dict, *, fixture_dir=None, now=None):
         return result
 
 
+def video_onboarding(store, config, args, *, now=None):
+    from . import video_onboarding as onboarding
+    values = {}
+    for item in args.set:
+        key, separator, raw = item.partition("=")
+        if not separator or not key.strip():
+            raise ValueError("Forme CHAMP=VALEUR attendue pour --set.")
+        # Only lists and objects are JSON; a text answer such as "2026" or "null" stays text.
+        values[key.strip()] = json.loads(raw) if raw[:1] in ("[", "{") else raw
+    payload = load_json(args.file) if args.file and args.action not in {"spoken-check"} else None
+    action, target = args.action, args.target
+    if action == "list":
+        return {"sessions": onboarding.sessions(store)}
+    if action == "spoken-check":
+        if not target:
+            raise ValueError("Fichier de texte ou de scénario requis.")
+        return onboarding.spoken_report(onboarding._texts(Path(target)), target_seconds=args.target_minutes*60 if args.target_minutes else None)
+    if action == "start":
+        brief = load_json(args.brief) if args.brief else None
+        return onboarding.start(store, answers={**(payload or {}), **values}, brief=brief, session_id=args.session_id or target, now=now)
+    if not target:
+        raise ValueError("Identifiant de session requis.")
+    if action == "show":
+        return onboarding.next_step(store, target)
+    if action == "answer":
+        origin = "accepted_recommendation" if args.accepted_recommendation else "user"
+        return onboarding.answer(store, target, {**(payload or {}), **values}, origin=origin, now=now)
+    if action == "propose":
+        return onboarding.propose_topics(store, target, (payload or {}).get("proposals", payload), now=now)
+    if action == "choose":
+        return onboarding.choose_topic(store, target, rank=args.proposal, topic=args.topic, confirmation=args.confirmation, now=now)
+    if action == "voice":
+        from .voicestudio import DEFAULT_URL, VoiceStudio, discover
+        found = discover(VoiceStudio(config.get("voicestudio", {}).get("base_url", DEFAULT_URL)))
+        words = dict(item.split("=", 1) for item in args.pronounce if "=" in item) or None
+        if len(words or {}) != len(args.pronounce):
+            raise ValueError("Forme TERME=PRONONCIATION attendue pour --pronounce.")
+        settings = {"instruct": args.instruct, "effect_preset": args.effect_preset, "pause_between_sentences_seconds": args.sentence_pause}
+        return onboarding.choose_voice(store, target, found, profile_id=args.profile, engine=args.engine,
+                                       authorization=args.authorization, confirmation=args.confirmation,
+                                       settings=settings, pronunciations=words, now=now)
+    if action == "frame":
+        return onboarding.frame_story(store, target, now=now)
+    data = payload or {}
+    checks = dict(data.get("checks", {}))
+    for item in args.check:
+        key, _, rest = item.partition("=")
+        status, _, note = rest.partition(":")
+        checks[key] = {"status": status, **({"note": note} if note else {})}
+    return onboarding.record_stage(store, target, args.stage or data.get("stage"),
+                                   artifacts=[*data.get("artifacts", []), *map(str, args.artifact)],
+                                   skills_used=[*data.get("skills_used", []), *args.skill], checks=checks,
+                                   summary=args.summary or data.get("summary", ""), status=data.get("status", "complete"),
+                                   reason=data.get("reason"), now=now)
+
+
 def main(argv=None):
     args = parser().parse_args(argv)
     try:
@@ -283,6 +373,28 @@ def main(argv=None):
                 elif command == "storytelling-control":
                     from .storytelling import control
                     result=control(store,args.story_id,args.action,scene_id=args.scene_id,now=now)
+                elif command == "video-onboarding":
+                    result = video_onboarding(store, config, args, now=now)
+                elif command == "voicestudio":
+                    from .voicestudio import DEFAULT_URL, VoiceStudio, check_compatibility, discover, interpretation_plan, sample
+                    client = VoiceStudio(args.url or config.get("voicestudio", {}).get("base_url", DEFAULT_URL))
+                    found = discover(client)
+                    if args.action == "sample":
+                        session = store.get("video_onboarding", args.session or "") or {}
+                        voice = (session.get("voice") or {}).get("voice")
+                        if not voice or not args.text or not args.output:
+                            raise ValueError("Session avec une voix Voice Studio choisie, --text et --output requis.")
+                        if args.instruct:
+                            voice = {**voice, "settings": {**voice["settings"], "instruct": args.instruct}}
+                            check_compatibility(voice, found.get("version", ""))
+                        result = sample(client, voice, args.text, args.output)
+                    elif args.action == "plan" and found["status"] == "available":
+                        engine = args.engine or found["active_engine"]
+                        result = interpretation_plan(args.video_type, engine, found["version"], register=args.register, presets=found["effect_presets"])
+                    elif args.action == "profiles" and found["status"] == "available":
+                        result = {k: found[k] for k in ("version", "active_engine", "profiles")}
+                    else:
+                        result = found
                 elif command == "narrative":
                     from .narrative import run
                     from .media import fingerprint
@@ -478,7 +590,8 @@ def main(argv=None):
         if args.command == "prepare" and not args.enqueue_only and result["run"]["status"] != "completed":
             return 3
     except (OSError, ValueError, RuntimeError, sqlite3.Error) as error:
-        print(json.dumps({"error_type": type(error).__name__, "error": str(error)}, ensure_ascii=False), file=sys.stderr)
+        detail = {"detail": error.detail} if getattr(error, "detail", None) else {}
+        print(json.dumps({"error_type": type(error).__name__, "error": str(error), **detail}, ensure_ascii=False), file=sys.stderr)
         return 2
     return 0
 

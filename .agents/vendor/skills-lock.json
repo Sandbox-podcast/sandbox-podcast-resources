@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "collections": [
+    {
+      "id": "autopunk-media-skills",
+      "requested_url": "https://github.com/ur-grue/autopunk-media-skills",
+      "repository": "https://github.com/ur-grue/autopunk-media-skills.git",
+      "commit": "39e119bfef25957223d6c44fccab0329e936d2f6",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "instructions_language": "en",
+      "include": [
+        "LICENSE",
+        "README.md",
+        "skills/**/SKILL.md",
+        "skills/locales/**/*.md",
+        "agents/*-agent.md"
+      ],
+      "exclude": [],
+      "map": {},
+      "excluded": [
+        {
+          "path": "**/*.evals.json",
+          "reason": "Jeux d'évaluation amont, inutiles à l'exécution des skills ; disponibles au commit épinglé."
+        },
+        {
+          "path": "agents/AGENT_TEMPLATE.md, SKILL.md, SKILL_TEMPLATE.md",
+          "reason": "Gabarits et index de distribution de la collection, pas des skills."
+        },
+        {
+          "path": "hooks/",
+          "reason": "Hooks de session : non activés sans demande explicite."
+        },
+        {
+          "path": "mcp-server/, bin/, scripts/, package.json",
+          "reason": "Serveur MCP et installateurs npm : aucun code amont n'est exécuté ni installé."
+        },
+        {
+          "path": ".claude/skills/",
+          "reason": "Outils de développement du dépôt amont (docx, pdf, skill-creator), hors collection média."
+        },
+        {
+          "path": "docs/, tests/, content/, .planning/, .github/, .claude-plugin/",
+          "reason": "Site, tests, contenus et métadonnées de publication de l'amont."
+        }
+      ],
+      "installed": {
+        "files": 469,
+        "tree_sha256": "efa4f1eb29f82fc0f9173bdd09d770fd7ad4e49ea1cb5c5e7ff2b790482f1721",
+        "skills": 408,
+        "localized_skills": 50,
+        "agents": 9
+      }
+    },
+    {
+      "id": "cc-skills",
+      "requested_url": "https://www.skills.sh/samber/cc-skills/humaniseur-fr",
+      "repository": "https://github.com/samber/cc-skills.git",
+      "commit": "123cb155f5ab5751fc13c8027fbfa5eb0d3773c6",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "instructions_language": "en",
+      "include": [
+        "LICENSE",
+        "skills/humaniseur-fr/SKILL.md"
+      ],
+      "exclude": [],
+      "map": {},
+      "excluded": [
+        {
+          "path": "skills/humaniseur-fr/evals/",
+          "reason": "Jeu d'évaluation amont, inutile à l'exécution ; disponible au commit épinglé."
+        },
+        {
+          "path": "skills/<20 autres skills>",
+          "reason": "Le lien fourni vise uniquement humaniseur-fr ; les autres skills de la collection n'ont pas été demandés."
+        },
+        {
+          "path": ".claude-plugin/, .codex-plugin/, .cursor-plugin/, .github/, clawhub-publish.sh",
+          "reason": "Manifestes et scripts de publication de l'amont."
+        }
+      ],
+      "installed": {
+        "files": 2,
+        "tree_sha256": "96f92043718f52b02400ca3a88b8dc78fe5de80019e630d5f48260d8f6a172c5",
+        "skills": 1,
+        "localized_skills": 0,
+        "agents": 0
+      }
+    },
+    {
+      "id": "screenwriting-skills",
+      "requested_url": "https://github.com/jtydhr88/screenwriting-skills",
+      "repository": "https://github.com/jtydhr88/screenwriting-skills.git",
+      "commit": "51115f18d160aa8b2ac5813e4432b6f0b425358f",
+      "license": "MIT, avec citations d'ouvrages tiers non couvertes (voir NOTICE)",
+      "license_files": [
+        "LICENSE",
+        "NOTICE"
+      ],
+      "instructions_language": "zh",
+      "include": [
+        "LICENSE",
+        "NOTICE",
+        "README.md",
+        "README_FR.md",
+        "plugins/screenwriting/skills/**/*.md"
+      ],
+      "exclude": [],
+      "map": {
+        "plugins/screenwriting/skills/": "skills/"
+      },
+      "excluded": [
+        {
+          "path": "plugins/screenwriting/.claude-plugin/, plugins/screenwriting/.codex-plugin/, .claude-plugin/, .agents/plugins/",
+          "reason": "Manifestes de plugin : les skills sont lus depuis le catalogue, sans installation de plugin."
+        },
+        {
+          "path": "tools/check-skills.py",
+          "reason": "Script de contrôle amont, non exécuté."
+        },
+        {
+          "path": "README_JA.md, README_KO.md, README_ZH.md",
+          "reason": "Traductions du README ; l'anglais (bibliographie) et le français sont conservés."
+        }
+      ],
+      "installed": {
+        "files": 81,
+        "tree_sha256": "00884a8030456cfdd31e069218ec3f6910f0b78f7815847a763a48964472bd21",
+        "skills": 26,
+        "localized_skills": 0,
+        "agents": 0
+      }
+    }
+  ]
+}

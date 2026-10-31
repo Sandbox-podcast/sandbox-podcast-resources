@@ -2,6 +2,8 @@
 
 StoryTelling Generator prépare une vidéo narrative dans la factory SANDBOX : il conserve tes sources, le scénario, les voix, les plans et les versions du montage. Tu peux le piloter dans Codex et suivre l'histoire dans le tableau local. Les fichiers produits restent sur ton ordinateur, sous `.local/factory/`.
 
+Pour une nouvelle vidéo dont le type, le sujet ou la voix restent à choisir, dis simplement « Je veux créer une nouvelle vidéo » : l'[onboarding vidéo](onboarding-video.md) pose les questions dans le chat, choisit les skills de chaque étape et pilote ce générateur jusqu'aux exports.
+
 Dans un chat Codex ouvert sur ce dépôt, utilise le skill [`sandbox-storytelling-generator`](../../.agents/skills/sandbox-storytelling-generator/SKILL.md). Pour ouvrir l'interface :
 
 ```text
@@ -107,6 +109,10 @@ Les demandes musicales et les effets suivent le même parcours lorsqu'ils sont p
 
 Ce parcours navigateur s'arrête quand aucune session Codex ne peut effectuer les manipulations ElevenLabs. Le worker peut continuer les traitements locaux déjà prêts. Il reprend le montage lorsque tous les fichiers attendus sont disponibles.
 
+Pour **Voice Studio**, le brief porte le profil choisi, son empreinte, le moteur et les réglages vérifiés pour la version installée. Le worker vérifie le service local (`voicestudio.base_url`, `http://127.0.0.1:3900` par défaut), le profil et le moteur, puis génère une prise par phrase et insère entre les phrases un silence mesuré. Les prises restent dans le cache local et sont réutilisées tant que le texte et la voix sont inchangés. Un réglage que le moteur n'applique pas, comme la vitesse avec VoxCPM2, est refusé au lieu d'être ignoré. La [référence voix](../../.agents/skills/sandbox-video-onboarding/references/voix.md) décrit le lancement du service, les réglages réels et les erreurs.
+
+Quel que soit le fournisseur de voix, `delivery.pause_after_seconds` d'une réplique (0 à 10 s) ajoute un silence après cette réplique dans le montage ; les plans et les sous-titres suivent cette durée mesurée. Les autres intentions de `delivery` restent des indications d'écriture.
+
 Les voix Windows et les enregistrements autorisés restent utilisables pour une production locale. L'intégration API serveur est une option distincte, désactivée dans la configuration livrée ; son installation et ses limites figurent dans le [guide sonore](elevenlabs-storytelling.md).
 
 ### 6. Production
@@ -145,6 +151,8 @@ python -m youtube_growth.factory storytelling-script mon-histoire .local/mon-sce
 python -m youtube_growth.factory storytelling-run mon-histoire --queue
 python -m youtube_growth.factory worker --once
 ```
+
+Le cadrage accepte `"audio_workflow": "voicestudio"` avec un locuteur dont la voix a pour fournisseur `voicestudio` ; `video-onboarding frame` le prépare à partir du profil choisi. `voicestudio status`, `profiles` et `plan` lisent le service sans rien générer.
 
 Le premier lancement sans modèle exporte la requête de rédaction. La commande `storytelling-script` importe la réponse contrôlée. Un passage `worker --once` traite un seul travail disponible ; le worker continu traite la file.
 

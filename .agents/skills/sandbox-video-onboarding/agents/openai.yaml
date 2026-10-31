@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nouvelle vidéo SANDBOX"
+  short_description: "Onboarding guidé d'une nouvelle vidéo, du sujet aux exports"
+  default_prompt: "Utilise $sandbox-video-onboarding : je veux créer une nouvelle vidéo."

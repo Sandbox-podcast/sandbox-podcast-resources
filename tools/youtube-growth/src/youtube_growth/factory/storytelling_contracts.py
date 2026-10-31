@@ -11,6 +11,7 @@ ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,79}\Z")
 PLACEHOLDER = re.compile(r"\b(?:à développer|a developper|TODO|TBD|lorem ipsum)\b|\{\{", re.I)
 MODES = {"documentary", "fiction", "mixed"}
 STRUCTURES = {"human", "investigation", "idea"}
+PROVIDERS = ("system", "voicestudio", "elevenlabs", "elevenlabs_browser", "recordings")
 
 
 def required_text(value, field, *, maximum=20000):
@@ -83,8 +84,8 @@ def _validate_script(script, sources):
             raise ValueError("Locuteur invalide.")
         required_text(speaker.get("name"), "speaker.name", maximum=150)
         voice = speaker.get("voice", {})
-        if not isinstance(voice, dict) or voice.get("provider") not in ("system", "elevenlabs", "elevenlabs_browser", "recordings"):
-            raise ValueError("Voix system, elevenlabs_browser, elevenlabs ou recordings requise.")
+        if not isinstance(voice, dict) or voice.get("provider") not in PROVIDERS:
+            raise ValueError("Voix system, voicestudio, elevenlabs_browser, elevenlabs ou recordings requise.")
         required_text(voice.get("authorization"), "voice.authorization")
         if voice["provider"] == "system":
             required_text(voice.get("name"), "voice.name", maximum=200)
@@ -92,6 +93,9 @@ def _validate_script(script, sources):
             required_text(voice.get("voice_id"), "voice.voice_id", maximum=200)
         elif voice["provider"] == "elevenlabs_browser":
             required_text(voice.get("name") or voice.get("voice_id"), "voice.browser_selection", maximum=200)
+        elif voice["provider"] == "voicestudio":
+            from .voicestudio import validate_voice
+            validate_voice(voice)
     source_map = {}
     for source in _list(sources, "sources"):
         key = identity(source.get("source_id"), "source_id")
@@ -305,8 +309,10 @@ SCRIPT_SCHEMA = {
         "speaker": {"type": "object", "required": ["name", "voice"], "properties": {
             "name": {"$ref": "#/$defs/text"}, "real_person": {"type": "boolean"},
             "voice": {"type": "object", "required": ["provider", "authorization"], "properties": {
-                "provider": {"enum": ["system", "elevenlabs", "elevenlabs_browser", "recordings"]}, "authorization": {"$ref": "#/$defs/text"},
+                "provider": {"enum": list(PROVIDERS)}, "authorization": {"$ref": "#/$defs/text"},
                 "name": {"type": "string"}, "voice_id": {"type": "string"}, "model_id": {"type": "string"},
+                **{f: {"type": "string"} for f in ("profile_id", "engine", "language", "profile_revision", "voicestudio_version")},
+                "settings": {"type": "object"},
                 "pronunciations": {"type": "object", "additionalProperties": {"type": "string"}},
                 "recordings": {"type": "object", "additionalProperties": {"type": "object", "required": ["source_id"],
                     "additionalProperties": False, "properties": {"source_id": {"$ref": "#/$defs/id"}}}}}}}},

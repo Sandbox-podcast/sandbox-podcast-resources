@@ -20,6 +20,19 @@ class SkillsTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "SANDBOX"):
                 sync(root, write=True)
 
+    def test_vendor_collections_stay_out_of_discovery(self):
+        # External skills keep their upstream names and are loaded through the onboarding catalog only.
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / ".agents/skills/sandbox-test/SKILL.md"
+            source.parent.mkdir(parents=True)
+            source.write_text("---\nname: sandbox-test\ndescription: Test.\n---\n", encoding="utf-8")
+            vendor = root / ".agents/vendor/craft/skills/story-shape/SKILL.md"
+            vendor.parent.mkdir(parents=True)
+            vendor.write_text("---\nname: story-shape\ndescription: Amont.\n---\n", encoding="utf-8")
+            self.assertEqual(sync(root, write=True), 1)
+            self.assertFalse((root / ".claude/skills/story-shape").exists())
+
     def test_unmanaged_wrapper_is_preserved(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

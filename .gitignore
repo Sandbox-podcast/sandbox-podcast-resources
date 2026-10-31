@@ -50,6 +50,13 @@ Thumbs.db
 **/output/
 **/outputs/
 **/dist/
+# Les catégories des skills externes peuvent porter ces noms ; elles restent du texte versionné.
+!.agents/vendor/**/analysis/
+!.agents/vendor/**/output/
+!.agents/vendor/**/outputs/
+!.agents/vendor/**/renders/
+!.agents/vendor/**/proof/
+!.agents/vendor/**/dist/
 projects/videos/**/public/
 projects/experiments/**/assets/
 projects/experiments/**/fixtures/site-public/**/assets/
