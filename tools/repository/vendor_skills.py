@@ -20,7 +20,8 @@ ROOT = Path(__file__).resolve().parents[2]
 VENDOR = PurePosixPath(".agents/vendor")
 LOCK = VENDOR / "skills-lock.json"
 CATALOG = VENDOR / "catalog.json"
-ROOT_FILES = {"README.md", "skills-lock.json", "catalog.json"}
+CATALOG_MD = VENDOR / "CATALOGUE.md"
+ROOT_FILES = {"README.md", "skills-lock.json", "catalog.json", "CATALOGUE.md"}
 TEXT_NAMES = {"LICENSE", "NOTICE"}
 MAX_FILE_BYTES = 2_000_000
 DESCRIPTION_LIMIT = 400
@@ -131,6 +132,12 @@ def _write_json(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
+def write_catalog(root, lock):
+    catalog = build_catalog(root, lock)
+    _write_json(Path(root) / CATALOG, catalog)
+    (Path(root) / CATALOG_MD).write_text(render_catalog(catalog), encoding="utf-8", newline="\n")
+
+
 def install(root=ROOT, *, only=None, replace_modified=False, fetcher=fetch):
     root = Path(root)
     lock = load_lock(root)
@@ -162,7 +169,7 @@ def install(root=ROOT, *, only=None, replace_modified=False, fetcher=fetch):
         staging.rename(target)
         collection["installed"] = tree_summary(target)
     _write_json(root / LOCK, lock)
-    _write_json(root / CATALOG, build_catalog(root, lock))
+    write_catalog(root, lock)
     return {c["id"]: c.get("installed") for c in lock["collections"]}
 
 
@@ -194,6 +201,16 @@ def frontmatter(text):
     return result
 
 
+def first_paragraph(text):
+    """Return the first prose paragraph after the frontmatter, for files without a description."""
+    body = re.sub(r"\A---\s*\n.*?\n---[^\n]*\n", "", text, count=1, flags=re.S)
+    for block in re.split(r"\n\s*\n", body):
+        lines = [line.strip() for line in block.strip().split("\n") if line.strip() and not line.lstrip().startswith("#")]
+        if lines and not lines[0].startswith(("-", "*", "|", ">", "`", "<")):
+            return " ".join(lines)
+    return ""
+
+
 def build_catalog(root, lock):
     entries = []
     for collection in lock["collections"]:
@@ -211,10 +228,11 @@ def build_catalog(root, lock):
                 kind = "skill"
             else:
                 continue
-            meta = frontmatter(path.read_text(encoding="utf-8"))
+            text = path.read_text(encoding="utf-8")
+            meta = frontmatter(text)
             name = meta.get("name") or (path.parent.name if kind == "skill" else path.stem)
             language = meta.get("language") or (parts[2] if kind == "localized_skill" else collection.get("instructions_language", "en"))
-            description = " ".join(str(meta.get("description", "")).split())
+            description = " ".join(str(meta.get("description") or first_paragraph(text)).split())
             if len(description) > DESCRIPTION_LIMIT:
                 description = description[:DESCRIPTION_LIMIT - 1].rstrip() + "…"
             folder = PurePosixPath(relative).parent
@@ -233,6 +251,45 @@ def build_catalog(root, lock):
             "collections": {c["id"]: {"repository": c["repository"], "commit": c["commit"], "license": c["license"]}
                             for c in lock["collections"]},
             "entries": sorted(entries, key=lambda e: e["id"])}
+
+
+def _cell(text):
+    return text.replace("\\", "\\\\").replace("|", "\\|").replace("<", "&lt;") or "-"
+
+
+def render_catalog(catalog):
+    """Render the catalog as a Markdown list, one table per collection and category."""
+    entries = catalog["entries"]
+    counts = {kind: sum(e["kind"] == kind for e in entries) for kind in ("skill", "localized_skill", "agent")}
+    lines = ["# Catalogue des skills externes", "",
+             "<!-- Généré par tools/repository/vendor_skills.py depuis catalog.json ; ne pas modifier à la main. -->", "",
+             f"{len(entries)} entrées : {counts['skill']} skills, {counts['localized_skill']} variantes localisées "
+             f"et {counts['agent']} agents. Les descriptions sont celles des collections amont, dans leur langue "
+             "d'origine. Le [README des collections](README.md) explique leur chargement et leur mise à jour.", "",
+             "Pour chercher depuis la racine : `python tools/repository/vendor_skills.py find \"mot clé\"`.", ""]
+    for identifier in catalog["collections"]:
+        count = sum(e["collection"] == identifier for e in entries)
+        lines.append(f"- [{identifier}](#{identifier}) : {count} entrée{'s' if count > 1 else ''}")
+    for identifier, collection in catalog["collections"].items():
+        rows = [e for e in entries if e["collection"] == identifier]
+        repository = collection["repository"].removesuffix(".git")
+        lines += ["", f"## {identifier}", "",
+                  f"Source : [{repository.removeprefix('https://github.com/')}]({repository}) · "
+                  f"commit `{collection['commit'][:7]}` · licence {collection['license']}"]
+        groups = {}
+        for entry in rows:
+            title = {"agent": "Agents", "localized_skill": "Variantes localisées"}.get(entry["kind"], entry["category"])
+            groups.setdefault((entry["kind"] != "skill", entry["kind"], title), []).append(entry)
+        for (_, kind, title), group in sorted(groups.items()):
+            if title and len(groups) > 1:
+                lines += ["", f"### {title}"]
+            lines += ["", "| Nom | Langue | Description |" if kind == "localized_skill" else "| Nom | Description |",
+                      "| --- | --- | --- |" if kind == "localized_skill" else "| --- | --- |"]
+            for entry in sorted(group, key=lambda e: (e["name"], e["language"])):
+                link = f"[{entry['name']}]({entry['path'].removeprefix(VENDOR.as_posix() + '/')})"
+                language = f" {entry['language']} |" if kind == "localized_skill" else ""
+                lines.append(f"| {link} |{language} {_cell(entry['description'])} |")
+    return "\n".join(lines) + "\n"
 
 
 def check(root=ROOT):
@@ -254,8 +311,9 @@ def check(root=ROOT):
             errors.append("Contenu différent de la révision installée : " + collection["id"])
         errors.extend("Licence absente : " + collection["id"] + "/" + name
                       for name in collection["license_files"] if not (target / name).is_file())
-    catalog_path = root / CATALOG
-    if not catalog_path.is_file() or json.loads(catalog_path.read_text(encoding="utf-8")) != build_catalog(root, lock):
+    catalog, catalog_path, markdown_path = build_catalog(root, lock), root / CATALOG, root / CATALOG_MD
+    if (not catalog_path.is_file() or json.loads(catalog_path.read_text(encoding="utf-8")) != catalog
+            or not markdown_path.is_file() or markdown_path.read_text(encoding="utf-8") != render_catalog(catalog)):
         errors.append("Catalogue à régénérer : python tools/repository/vendor_skills.py catalog")
     if errors:
         raise ValueError("Collections de skills incohérentes :\n" + "\n".join(errors))
@@ -290,8 +348,8 @@ def main(argv=None):
         for collection in lock["collections"]:
             if tree_summary(ROOT / VENDOR / collection["id"]) != collection.get("installed"):
                 raise ValueError("Collection modifiée ; réinstaller avant le catalogue : " + collection["id"])
-        _write_json(ROOT / CATALOG, build_catalog(ROOT, lock))
-        result = {"catalog": CATALOG.as_posix()}
+        write_catalog(ROOT, lock)
+        result = {"catalog": CATALOG.as_posix(), "markdown": CATALOG_MD.as_posix()}
     elif args.command == "find":
         result = [{k: e[k] for k in ("id", "kind", "language", "path", "description")}
                   for e in find(ROOT, args.query, language=args.language, collection=args.collection)]

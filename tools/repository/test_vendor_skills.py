@@ -5,7 +5,8 @@ import subprocess
 import tempfile
 import unittest
 
-from vendor_skills import LOCK, CATALOG, ROOT, check, find, frontmatter, install, selected, tree_summary
+from vendor_skills import (LOCK, CATALOG, CATALOG_MD, ROOT, check, find, first_paragraph, frontmatter, install,
+                           render_catalog, selected, tree_summary)
 
 SKILL = "---\nname: {name}\ndescription: \"{description}\"\n---\n\nVoir [référence](reference.md).\n"
 
@@ -60,6 +61,14 @@ class VendorSkillsTest(unittest.TestCase):
             self.assertEqual(catalog["entries"][0]["id"], "craft/story-shape")
             self.assertEqual(catalog["collections"]["craft"]["commit"], commit)
             self.assertEqual([e["id"] for e in find(root, "récit")], ["craft/story-shape"])
+            markdown = (root / CATALOG_MD).read_text(encoding="utf-8")
+            self.assertIn("| [story-shape](craft/skills/story-shape/SKILL.md) | Structure d'un récit. |", markdown)
+            # A stale Markdown catalogue is reported like a stale JSON catalogue.
+            (root / CATALOG_MD).write_text(markdown.replace("récit", "film"), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "Catalogue à régénérer"):
+                check(root)
+            install(root)
+            check(root)
             # A local edit is reported and protected from a silent reinstall.
             (installed / "skills/story-shape/SKILL.md").write_text("modifié", encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "révision installée"):
@@ -99,6 +108,19 @@ class VendorSkillsTest(unittest.TestCase):
     def test_frontmatter_reads_quoted_and_folded_descriptions(self):
         self.assertEqual(frontmatter('---\nname: a\ndescription: "Dit \\"oui\\""\n---\n')["description"], 'Dit "oui"')
         self.assertEqual(frontmatter("---\ndescription: >\n  deux\n  lignes\nname: b\n---\n"), {"description": "deux lignes", "name": "b"})
+
+    def test_agent_without_description_uses_its_first_paragraph(self):
+        agent = "---\nname: a-agent\nskills:\n  - x\n---\n\n# A Agent\n\n## What this agent does\nBuilds a\nfull package.\n\n- item\n"
+        self.assertEqual(first_paragraph(agent), "Builds a full package.")
+        self.assertEqual(first_paragraph("---\nname: b\n---\n\n# Titre\n\n- liste seule\n"), "")
+
+    def test_markdown_catalogue_escapes_table_cells(self):
+        catalog = {"collections": {"craft": {"repository": "https://github.com/o/craft.git", "commit": "a" * 40, "license": "MIT"}},
+                   "entries": [{"name": "pipe", "collection": "craft", "kind": "skill", "language": "en", "category": "",
+                                "path": ".agents/vendor/craft/skills/pipe/SKILL.md", "description": "a | b <c>"}]}
+        markdown = render_catalog(catalog)
+        self.assertIn("| [pipe](craft/skills/pipe/SKILL.md) | a \\| b &lt;c> |", markdown)
+        self.assertIn("[o/craft](https://github.com/o/craft) · commit `aaaaaaa` · licence MIT", markdown)
 
     def test_tree_digest_uses_posix_order_on_every_platform(self):
         with tempfile.TemporaryDirectory() as directory:

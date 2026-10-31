@@ -11,7 +11,7 @@ Du master vidéo aux extraits, jusqu'aux kits de diffusion et au suivi des résu
 [![Contrôles YouTube](https://github.com/Sandbox-podcast/sandbox-podcast-resources/actions/workflows/youtube-growth.yml/badge.svg)](https://github.com/Sandbox-podcast/sandbox-podcast-resources/actions/workflows/youtube-growth.yml)
 [![Diffusion simulée](https://img.shields.io/badge/diffusion-simulation-00C8E8?style=flat&labelColor=101923)](docs/factory/README.md)
 
-[Le podcast](https://www.sandboxpodcast.fr/) · [YouTube](https://www.youtube.com/@SandboxFR) · [La factory](#la-factory) · [Démarrer](#démarrer-en-local) · [Contribuer](#contribuer)
+[Le podcast](https://www.sandboxpodcast.fr/) · [YouTube](https://www.youtube.com/@SandboxFR) · [La factory](#la-factory) · [Démarrer](#démarrer-en-local) · [Les skills](#les-skills) · [Contribuer](#contribuer)
 
 </div>
 
@@ -140,6 +140,113 @@ Le parcours ElevenLabs dans le navigateur nécessite une session Codex active. U
 
 Le [tutoriel complet](docs/factory/storytelling-generator.md) détaille les sept étapes, la configuration, les commandes, les corrections et la reprise. Les tests techniques et les générations réellement effectuées sont distingués dans le [suivi de réalisation](docs/factory/storytelling-progress.md).
 
+## Les skills
+
+Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 10 skills SANDBOX et trois collections externes qui totalisent 494 entrées.
+
+### Skills SANDBOX
+
+Dans Codex, appelle un skill avec `$nom-du-skill` ; dans Claude Code, avec `/nom-du-skill`. Pour une nouvelle vidéo, commence par `sandbox-video-onboarding`. Pour un épisode, `sandbox-factory` enchaîne les étapes ; pour une seule étape, appelle directement son skill.
+
+| Skill | Usage |
+| --- | --- |
+| [sandbox-video-onboarding](.agents/skills/sandbox-video-onboarding/SKILL.md) | Point de départ d'une nouvelle vidéo sans brief complet. Demande type, sujet, cadrage et voix, puis conduit l'écriture, le storyboard, le montage et les exports. |
+| [sandbox-storytelling-generator](.agents/skills/sandbox-storytelling-generator/SKILL.md) | Ouvre StoryTelling Generator, crée une vidéo narrative à partir d'un brief complet ou corrige une histoire existante : scénario, storyboard, voix et montage. |
+| [sandbox-youtube-trend-hunter](.agents/skills/sandbox-youtube-trend-hunter/SKILL.md) | Propose des tendances Internet et YouTube sourcées, en général ou en IA et tech, puis exporte celle que tu choisis en brief pour StoryTelling Generator. |
+| [sandbox-factory](.agents/skills/sandbox-factory/SKILL.md) | Lance, reprend ou diagnostique le cycle complet d'un épisode, du master aux rendus et au bilan. |
+| [sandbox-analyse](.agents/skills/sandbox-analyse/SKILL.md) | Analyse le master ou la transcription d'un épisode, repère ses sujets et note ce qui a réellement été lu, écouté et regardé. |
+| [sandbox-selection](.agents/skills/sandbox-selection/SKILL.md) | Choisit ou révise les extraits d'un épisode analysé : coupes, formats, passages retenus ou rejetés, réserves. |
+| [sandbox-production](.agents/skills/sandbox-production/SKILL.md) | Monte et contrôle un rendu local à partir de coupes validées ou d'un scénario narratif sourcé, avec sous-titres et provenance. |
+| [sandbox-packaging](.agents/skills/sandbox-packaging/SKILL.md) | Prépare titres, miniatures, couvertures et textes de diffusion, dont le pack LinkedIn à publier manuellement. |
+| [sandbox-diffusion](.agents/skills/sandbox-diffusion/SKILL.md) | Planifie, suspend, reprend ou simule le calendrier entre la disponibilité de l'épisode et le prochain tournage. Rien n'est publié. |
+| [sandbox-resultats](.agents/skills/sandbox-resultats/SKILL.md) | Collecte ou importe les performances, compare contenus et expériences, prépare le bilan et le brief du cycle suivant. |
+
+Les consignes de référence sont dans `.agents/skills/`. Les fichiers de `.claude/skills/` y renvoient et se régénèrent avec `python tools/repository/sync_skills.py --write`.
+
+### Skills externes
+
+Les collections de [`.agents/vendor/`](.agents/vendor/README.md) sont copiées depuis une révision épinglée, avec leur licence. Ces skills ne s'appellent pas par leur nom : `sandbox-video-onboarding` choisit ceux de l'étape en cours et lit leur fichier. Pour en utiliser un en dehors de l'onboarding, donne son chemin à l'agent. Le [catalogue complet](.agents/vendor/CATALOGUE.md) liste les 494 entrées avec leur description d'origine.
+
+#### humaniseur-fr
+
+[humaniseur-fr](.agents/vendor/cc-skills/skills/humaniseur-fr/SKILL.md), tiré de [samber/cc-skills](https://github.com/samber/cc-skills), retire d'un texte français les tournures typiques d'une IA et lui redonne une voix. Il repère 38 motifs, dont le vocabulaire convenu (« crucial », « notamment »), les anglicismes (« faire du sens ») et les ouvertures toutes faites (« À l'ère de »). Ses consignes sont en anglais.
+
+#### screenwriting-skills
+
+26 skills d'écriture de scénario, de série et de dramaturgie, issus de [jtydhr88/screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills). Leurs consignes sont en chinois ; l'agent répond dans la langue de la demande. `sw-workflow` conduit un projet d'étape en étape et oriente vers les autres.
+
+| Skill | Usage |
+| --- | --- |
+| [chekhov-dramaturgy](.agents/vendor/screenwriting-skills/skills/chekhov-dramaturgy/SKILL.md) | Écrire une pièce ou un scénario à la manière de Tchekhov, d'après ses pièces, ses lettres et les notes de répétition de Stanislavski. |
+| [ozu-screenplay-style](.agents/vendor/screenwriting-skills/skills/ozu-screenplay-style/SKILL.md) | Écrire dans le style d'Ozu et de Noda, d'après six scénarios complets dont *Voyage à Tokyo* et *Printemps tardif*. |
+| [succession-series-writing](.agents/vendor/screenwriting-skills/skills/succession-series-writing/SKILL.md) | Écrire une série chorale à la manière de *Succession*, d'après les scripts de tournage des quatre saisons. |
+| [sw-american-case-studies](.agents/vendor/screenwriting-skills/skills/sw-american-case-studies/SKILL.md) | Études de cas du cinéma américain : western, screwball comedy, Billy Wilder, Hitchcock, *Thelma et Louise*, *Fargo*. |
+| [sw-character-conflict](.agents/vendor/screenwriting-skills/skills/sw-character-conflict/SKILL.md) | Construire les personnages, le duo protagoniste et antagoniste, et le conflit dramatique. |
+| [sw-chinese-opera-banqiang](.agents/vendor/screenwriting-skills/skills/sw-chinese-opera-banqiang/SKILL.md) | Écrire pour l'opéra chinois de système banqiang (opéra de Pékin, yuju, yueju…), où les airs suivent des vers appariés. |
+| [sw-chinese-opera-banqiang-cases](.agents/vendor/screenwriting-skills/skills/sw-chinese-opera-banqiang-cases/SKILL.md) | Livrets complets d'opéra banqiang, étudiés avec l'histoire de leur création. |
+| [sw-chinese-opera-qupai](.agents/vendor/screenwriting-skills/skills/sw-chinese-opera-qupai/SKILL.md) | Écrire pour l'opéra chinois de système qupai (zaju, chuanqi, kunqu), où le texte se coule dans des airs fixes. |
+| [sw-chinese-opera-qupai-cases](.agents/vendor/screenwriting-skills/skills/sw-chinese-opera-qupai-cases/SKILL.md) | Livrets qupai étudiés acte par acte : Guan Hanqing, *Le Pavillon aux pivoines*, *L'Éventail aux fleurs de pêcher*. |
+| [sw-chinese-series-practice](.agents/vendor/screenwriting-skills/skills/sw-chinese-series-practice/SKILL.md) | Écriture des séries télévisées chinoises : formats de script, règles de suspense, adaptation et chaîne de production. |
+| [sw-dialogue](.agents/vendor/screenwriting-skills/skills/sw-dialogue/SKILL.md) | Écrire et réviser les dialogues pour l'écran et la scène : dialogue comme action, non-dit, sous-texte, voix de chaque personnage. |
+| [sw-format-adaptation](.agents/vendor/screenwriting-skills/skills/sw-format-adaptation/SKILL.md) | Format de scénario, écriture de la page, étapes de rédaction et adaptation d'une œuvre. |
+| [sw-genre-anatomy](.agents/vendor/screenwriting-skills/skills/sw-genre-anatomy/SKILL.md) | Anatomie des genres selon John Truby : les étapes propres à chaque genre, leur mélange et leur dépassement. |
+| [sw-industry-business](.agents/vendor/screenwriting-skills/skills/sw-industry-business/SKILL.md) | Le métier de scénariste : tester une idée, pitcher, soumettre un projet, recevoir des notes, négocier. |
+| [sw-japanese-screenwriting](.agents/vendor/screenwriting-skills/skills/sw-japanese-screenwriting/SKILL.md) | Méthodes d'écriture japonaises et hors Hollywood, d'après dix réalisateurs et scénaristes. |
+| [sw-korean-french-screenwriting](.agents/vendor/screenwriting-skills/skills/sw-korean-french-screenwriting/SKILL.md) | Pratiques d'écriture coréennes et françaises, issues d'une masterclass internationale. |
+| [sw-premise-theme](.agents/vendor/screenwriting-skills/skills/sw-premise-theme/SKILL.md) | Prémisse, thème, idée directrice, choix du sujet et logline. |
+| [sw-scene-craft](.agents/vendor/screenwriting-skills/skills/sw-scene-craft/SKILL.md) | Construire scènes et séquences : retournements, battements, sous-texte, rythme, accessoires et suspense. |
+| [sw-series-case-studies](.agents/vendor/screenwriting-skills/skills/sw-series-case-studies/SKILL.md) | Études de séries d'après leurs scripts : *À la Maison-Blanche*, *Les Soprano*, *Downton Abbey*, *Fleabag*. |
+| [sw-series-engine-bible](.agents/vendor/screenwriting-skills/skills/sw-series-engine-bible/SKILL.md) | Transformer une idée en série vendable : moteur de série, réseau de personnages, types de pilote, bible et pitch. |
+| [sw-series-structure](.agents/vendor/screenwriting-skills/skills/sw-series-structure/SKILL.md) | Structure d'un épisode et d'une saison : cold open, découpage en actes, cliffhangers, intrigues entrelacées. |
+| [sw-sitcom-comedy](.agents/vendor/screenwriting-skills/skills/sw-sitcom-comedy/SKILL.md) | Sitcom d'une demi-heure : prémisse comique, situations, mécanique des gags, formats multicaméra et caméra unique. |
+| [sw-story-structure](.agents/vendor/screenwriting-skills/skills/sw-story-structure/SKILL.md) | Structure du récit pour l'écran et la scène : Syd Field, *Save the Cat*, McKee. |
+| [sw-truby-anatomy](.agents/vendor/screenwriting-skills/skills/sw-truby-anatomy/SKILL.md) | Anatomie du récit selon Truby : principe de conception, sept étapes clés, vingt-deux étapes et enjeu moral. |
+| [sw-workflow](.agents/vendor/screenwriting-skills/skills/sw-workflow/SKILL.md) | Conduit un projet de film, de pièce ou de série d'étape en étape et tient la bible du projet. |
+| [sw-writers-room](.agents/vendor/screenwriting-skills/skills/sw-writers-room/SKILL.md) | Fonctionnement d'une writers' room et réalités de production d'une série. |
+
+#### autopunk-media-skills
+
+408 skills, 50 variantes localisées et 9 agents pour les métiers des médias, issus de [ur-grue/autopunk-media-skills](https://github.com/ur-grue/autopunk-media-skills). Leurs consignes sont en anglais. Le catalogue complet donne chaque skill et sa description ; voici les familles :
+
+| Famille | Skills | Contenu |
+| --- | ---: | --- |
+| [research](.agents/vendor/autopunk-media-skills/skills/research/) | 74 | Contexte et faits, chiffres, personnes et contacts, lieux, veille des concurrents, sources académiques, archivage du web. |
+| [writing](.agents/vendor/autopunk-media-skills/skills/writing/) | 57 | Articles, textes pour l'antenne, contenus web et réseaux, textes institutionnels. |
+| [magazine-journalism](.agents/vendor/autopunk-media-skills/skills/magazine-journalism/) | 43 | Journalisme magazine : idées de sujets, enquête, écriture, édition, vérification, risque juridique, diffusion. |
+| [tv-documentary](.agents/vendor/autopunk-media-skills/skills/tv-documentary/) | 30 | Télévision et documentaire : développement, pitch, repérages, budget, notes de montage, doublage et sous-titres. |
+| [data-journalism](.agents/vendor/autopunk-media-skills/skills/data-journalism/) | 18 | Journalisme de données : collecte, nettoyage, analyse, visualisation et méthodologie. |
+| [media-business](.agents/vendor/autopunk-media-skills/skills/media-business/) | 18 | Pitchs, financement participatif, subventions, droits, licences et distribution. |
+| [youtube](.agents/vendor/autopunk-media-skills/skills/youtube/) | 18 | Idées de vidéos, accroches, scripts, Shorts, titres et descriptions SEO, miniatures, chapitres, sponsors. |
+| [editing](.agents/vendor/autopunk-media-skills/skills/editing/) | 17 | Correction, relecture, cohérence du ton et des termes, risque de diffamation, retrait des tics d'écriture IA. |
+| [production-support](.agents/vendor/autopunk-media-skills/skills/production-support/) | 16 | Métadonnées, crédits, biographies, mise en forme et passage du print au web. |
+| [pr-communications](.agents/vendor/autopunk-media-skills/skills/pr-communications/) | 15 | Communiqués, relations presse, tribunes, discours et communication de crise. |
+| [newsletter](.agents/vendor/autopunk-media-skills/skills/newsletter/) | 13 | Positionnement, numéros, objets d'e-mail, page d'inscription, parrainage et offre payante. |
+| [podcast](.agents/vendor/autopunk-media-skills/skills/podcast/) | 12 | Concepts d'épisode, recherche sur l'invité, questions, intro et outro, lectures sponsorisées, notes d'épisode. |
+| [radio-audio](.agents/vendor/autopunk-media-skills/skills/radio-audio/) | 12 | Journaux, sujets, conducteurs, narration documentaire et adaptation d'un podcast pour la radio. |
+| [social-media](.agents/vendor/autopunk-media-skills/skills/social-media/) | 11 | Légendes, carrousels, threads, vidéos courtes, hashtags et stratégie par plateforme. |
+| [translation](.agents/vendor/autopunk-media-skills/skills/translation/) et [translation-localization](.agents/vendor/autopunk-media-skills/skills/translation-localization/) | 11 | Traduction d'articles, de citations et de sous-titres, adaptation culturelle, glossaires et relecture. |
+| [image-prompting](.agents/vendor/autopunk-media-skills/skills/image-prompting/) | 10 | Prompts d'images pour Midjourney et Flux, direction artistique, planches d'ambiance, séries de visuels. |
+| [pre-production](.agents/vendor/autopunk-media-skills/skills/pre-production/) | 10 | Budget, demandes de lieux et de droits, questions d'interview, briefing du présentateur, plan de tournage. |
+| [screenwriting](.agents/vendor/autopunk-media-skills/skills/screenwriting/) | 9 | Logline, traitement, séquencier, scènes, personnages, dialogues et notes de lecture. |
+| [archive-legal](.agents/vendor/autopunk-media-skills/skills/archive-legal/) | 7 | Métadonnées d'archive, droits des images et de la musique, RGPD, risque juridique, bibliographie. |
+| [audience-distribution](.agents/vendor/autopunk-media-skills/skills/audience-distribution/) | 7 | Public cible, moment de publication, choix des plateformes, variantes A/B, analyse des commentaires. |
+
+Les [50 variantes localisées](.agents/vendor/autopunk-media-skills/skills/locales/) traduisent dix skills (accroches, titres, légendes, questions d'interview, logline, communiqué, notes d'épisode…) en allemand, espagnol, français, italien et portugais.
+
+Les 9 agents enchaînent plusieurs skills pour livrer un ensemble complet :
+
+| Agent | Livrable |
+| --- | --- |
+| [podcast-producer-agent](.agents/vendor/autopunk-media-skills/agents/podcast-producer-agent.md) | Un épisode de podcast prêt à enregistrer, du concept aux notes et descriptions d'épisode. |
+| [youtube-channel-operator-agent](.agents/vendor/autopunk-media-skills/agents/youtube-channel-operator-agent.md) | Une vidéo YouTube : script, titres, brief de miniature, description SEO et chapitres. |
+| [documentary-development-agent](.agents/vendor/autopunk-media-skills/agents/documentary-development-agent.md) | Le dossier de développement d'un documentaire : logline, traitement, pitch diffuseur et synopsis pour festivals. |
+| [investigative-reporter-agent](.agents/vendor/autopunk-media-skills/agents/investigative-reporter-agent.md) | Le cadrage d'une enquête : angle, carte des sources, demandes de documents, vérification, risques juridiques et attaque. |
+| [data-journalism-investigator-agent](.agents/vendor/autopunk-media-skills/agents/data-journalism-investigator-agent.md) | Un sujet de données, des angles et de la collecte jusqu'aux graphiques et à la méthodologie publiée. |
+| [magazine-editor-agent](.agents/vendor/autopunk-media-skills/agents/magazine-editor-agent.md) | L'édition d'un article de magazine : structure, corrections, charte, vérification, titres et exergues. |
+| [newsletter-launch-agent](.agents/vendor/autopunk-media-skills/agents/newsletter-launch-agent.md) | Le lancement d'une newsletter : positionnement, premier numéro, objets, e-mail de bienvenue et page d'inscription. |
+| [newsroom-operations-agent](.agents/vendor/autopunk-media-skills/agents/newsroom-operations-agent.md) | L'organisation d'une rédaction : charte d'usage de l'IA, rubriques, calendrier éditorial et revue déontologique. |
+| [pr-crisis-response-agent](.agents/vendor/autopunk-media-skills/agents/pr-crisis-response-agent.md) | La communication de crise, de la déclaration d'attente au mémo interne et au briefing du porte-parole. |
+
 ## Dans le dépôt
 
 GitHub contient le code, les projets éditables et la documentation. Les masters, Shorts, vidéos, miniatures, sous-titres et packs générés restent sur l'ordinateur de la personne qui utilise la factory. Les workflows vérifient les sources et ne publient aucun média de production en artefact GitHub.
@@ -150,8 +257,8 @@ GitHub contient le code, les projets éditables et la documentation. Les masters
 | [projects/](projects/) | Sources éditables des vidéos, jingles, expériences et kits. |
 | [tools/](tools/) | Outils de production, de croissance YouTube et de gestion des réseaux sociaux. |
 | [docs/factory/](docs/factory/) | Guides de la factory, diagnostics et rapports de validation. |
-| [.agents/skills/](.agents/skills/) | Skills SANDBOX, de l'analyse au bilan ; `sandbox-factory` sert de point d'entrée. |
-| [.agents/vendor/](.agents/vendor/) | Collections de skills externes épinglées, avec licences et catalogue, chargées par l'onboarding vidéo. |
+| [.agents/skills/](.agents/skills/) | Skills SANDBOX, de l'onboarding vidéo au bilan ; voir [la liste](#les-skills). |
+| [.agents/vendor/](.agents/vendor/) | Collections de skills externes épinglées, avec licences et [catalogue](.agents/vendor/CATALOGUE.md), chargées par l'onboarding vidéo. |
 | [config/factory.json](config/factory.json) | Configuration versionnée de la factory. |
 | [docs/site/history/](docs/site/history/) | Rapports datés du site, classés par année et mois. |
 | [archive/platform/](archive/platform/) | Code de l'ancienne plateforme, conservé pour référence. |

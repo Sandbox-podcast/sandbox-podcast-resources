@@ -24,7 +24,7 @@ python tools/repository/vendor_skills.py find "documentary narration"
 python tools/repository/vendor_skills.py install --collection autopunk-media-skills
 ```
 
-`install` récupère le commit épinglé avec Git sans extraire l'arbre amont, copie seulement les fichiers texte demandés et leurs licences, puis régénère `catalog.json`. Il refuse d'écraser une copie modifiée localement. `check` compare chaque collection à son empreinte, vérifie les licences et le catalogue ; la CI l'exécute. Le [README des collections](../../.agents/vendor/README.md) liste les sources, les exclusions et la procédure de mise à jour.
+`install` récupère le commit épinglé avec Git sans extraire l'arbre amont, copie seulement les fichiers texte demandés et leurs licences, puis régénère `catalog.json` et sa version lisible `CATALOGUE.md`. Il refuse d'écraser une copie modifiée localement. `catalog` régénère ces deux fichiers sans rien récupérer. `check` compare chaque collection à son empreinte, vérifie les licences et les deux catalogues ; la CI l'exécute. Le [README des collections](../../.agents/vendor/README.md) liste les sources, les exclusions et la procédure de mise à jour.
 
 ## Compte GitHub SANDBOX
 
