@@ -1,6 +1,7 @@
 import hashlib
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import tempfile
 import unittest
@@ -99,6 +100,11 @@ class VendorSkillsTest(unittest.TestCase):
             lock(root, source.as_uri(), commit, include=["LICENSE", "scripts/*"])
             with self.assertRaisesRegex(ValueError, "Seuls les textes"):
                 install(root)
+            # JSON data read by a skill is copied like its text.
+            lock(root, source.as_uri(), commit, include=["LICENSE", "plugins/craft/skills/**/*.json"])
+            install(root)
+            self.assertTrue((root / ".agents/vendor/craft/skills/story-shape/story-shape.evals.json").is_file())
+            shutil.rmtree(root / ".agents/vendor/craft")
             lock(root, source.as_uri(), commit)
             install(root)
             (root / ".agents/vendor/autre").mkdir()
@@ -143,8 +149,11 @@ class VendorSkillsTest(unittest.TestCase):
     def test_repository_collections_match_their_lock(self):
         result = check(ROOT)
         self.assertEqual(result["screenwriting-skills"]["skills"], 7)
-        self.assertEqual(result["cc-skills"]["skills"], 1)
+        self.assertEqual(result["cc-skills"]["skills"], 2)
+        self.assertEqual(result["humanizer-fr"]["skills"], 1)
         self.assertEqual(result["autopunk-media-skills"]["skills"], 182)
+        self.assertEqual(result["youtube-agent-skill"]["skills"], 1)
+        self.assertEqual(result["awesome-claude-skills"]["skills"], 1)
 
 
 if __name__ == "__main__":

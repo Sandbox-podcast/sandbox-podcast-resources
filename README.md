@@ -142,7 +142,7 @@ Le [tutoriel complet](docs/factory/storytelling-generator.md) détaille les sept
 
 ## Les skills
 
-Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 10 skills SANDBOX et trois collections externes qui totalisent 199 entrées, choisies pour faire des vidéos YouTube sur l'IA.
+Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 10 skills SANDBOX et six collections externes qui totalisent 203 entrées, choisies pour faire des vidéos YouTube sur l'IA.
 
 ### Skills SANDBOX
 
@@ -151,8 +151,7 @@ Dans Codex, appelle un skill avec `$nom-du-skill` ; dans Claude Code, avec `/nom
 | Skill | Usage |
 | --- | --- |
 | [sandbox-video-onboarding](.agents/skills/sandbox-video-onboarding/SKILL.md) | Point de départ d'une nouvelle vidéo sans brief complet. Demande type, sujet, cadrage et voix, puis conduit l'écriture, le storyboard, le montage et les exports. |
-| [sandbox-storytelling-generator](.agents/skills/sandbox-storytelling-generator/SKILL.md) | Ouvre StoryTelling Generator, crée une vidéo narrative à partir d'un brief complet ou corrige une histoire existante : scénario, storyboard, voix et montage. |
-| [sandbox-youtube-trend-hunter](.agents/skills/sandbox-youtube-trend-hunter/SKILL.md) | Propose des tendances Internet et YouTube sourcées, en général ou en IA et tech, puis exporte celle que tu choisis en brief pour StoryTelling Generator. |
+| [sandbox-storytelling-generator](.agents/skills/sandbox-storytelling-generator/SKILL.md) | Ouvre StoryTelling Generator, crée une vidéo narrative à partir d'un brief complet ou corrige une histoire existante : scénario, storyboard, voix et montage. || [sandbox-youtube-trend-hunter](.agents/skills/sandbox-youtube-trend-hunter/SKILL.md) | Propose des tendances Internet et YouTube sourcées, en général ou en IA et tech, puis exporte celle que tu choisis en brief pour StoryTelling Generator. |
 | [sandbox-factory](.agents/skills/sandbox-factory/SKILL.md) | Lance, reprend ou diagnostique le cycle complet d'un épisode, du master aux rendus et au bilan. |
 | [sandbox-analyse](.agents/skills/sandbox-analyse/SKILL.md) | Analyse le master ou la transcription d'un épisode, repère ses sujets et note ce qui a réellement été lu, écouté et regardé. |
 | [sandbox-selection](.agents/skills/sandbox-selection/SKILL.md) | Choisit ou révise les extraits d'un épisode analysé : coupes, formats, passages retenus ou rejetés, réserves. |
@@ -165,13 +164,29 @@ Les consignes de référence sont dans `.agents/skills/`. Les fichiers de `.clau
 
 ### Skills externes
 
-Les collections de [`.agents/vendor/`](.agents/vendor/README.md) sont copiées depuis une révision épinglée, avec leur licence. Ces skills ne s'appellent pas par leur nom : `sandbox-video-onboarding` choisit ceux de l'étape en cours et lit leur fichier. Pour en utiliser un en dehors de l'onboarding, donne son chemin à l'agent. Le [catalogue complet](.agents/vendor/CATALOGUE.md) liste les 199 entrées avec leur description d'origine.
+Les collections de [`.agents/vendor/`](.agents/vendor/README.md) sont copiées depuis une révision épinglée, avec leur licence. Ces skills ne s'appellent pas par leur nom : `sandbox-video-onboarding` choisit ceux de l'étape en cours et lit leur fichier. Pour en utiliser un en dehors de l'onboarding, donne son chemin à l'agent. Le [catalogue complet](.agents/vendor/CATALOGUE.md) liste les 203 entrées avec leur description d'origine.
 
 Seuls les skills utiles pour des vidéos YouTube sur l'IA sont installés. Le [verrou](.agents/vendor/skills-lock.json) exclut le reste : presse écrite, newsletter, relations presse, radio, financement, séries télévisées, dramaturgies chinoise et japonaise, variantes en allemand, espagnol, italien et portugais. Les skills qu'utilise l'onboarding vidéo restent tous installés.
 
 #### humaniseur-fr
 
 [humaniseur-fr](.agents/vendor/cc-skills/skills/humaniseur-fr/SKILL.md), tiré de [samber/cc-skills](https://github.com/samber/cc-skills), retire d'un texte français les tournures typiques d'une IA et lui redonne une voix. Il repère 38 motifs, dont le vocabulaire convenu (« crucial », « notamment »), les anglicismes (« faire du sens ») et les ouvertures toutes faites (« À l'ère de »). Ses consignes sont en anglais.
+
+#### humanizer-fr
+
+[humanizer-fr](.agents/vendor/humanizer-fr/skills/humanizer-fr/SKILL.md), tiré de [ferr079/humanizer-fr](https://github.com/ferr079/humanizer-fr), adapte au français le skill blader/humanizer. Il réécrit un texte qui sonne IA sans changer ce qu'il dit : contrastes « pas X mais Y », triades forcées, tirets, anglicismes calqués, connecteurs en surnombre. Ses consignes sont en français. Il fait le même travail que `humaniseur-fr` : une révision n'applique qu'un des deux.
+
+#### copywriting-prose-creator
+
+[copywriting-prose-creator](.agents/vendor/cc-skills/skills/copywriting-prose-creator/SKILL.md), de la même collection samber/cc-skills que `humaniseur-fr`, décrit la façon d'écrire d'une personne ou d'une marque dans un guide `PROSE.md` : vocabulaire, syntaxe, rythme, structure. Il fixe un style ; il n'écrit pas le contenu lui-même. Ses consignes sont en anglais.
+
+#### yt-script
+
+[yt-script](.agents/vendor/youtube-agent-skill/skills/yt-script/SKILL.md), tiré de [Jakeschincariol/youtube-agent-skill](https://github.com/Jakeschincariol/youtube-agent-skill), écrit le script d'une vidéo YouTube à partir d'une idée. Il propose cinq accroches fondées sur [21 formules](.agents/vendor/youtube-agent-skill/skills/yt-script/hooks.json) et en garde deux. Il rédige ensuite le script temps par temps, en notant ce qui est à l'écran. Ses consignes sont en anglais. Son script de notation des accroches, `hookscore.py`, n'est pas installé : l'agent compare les accroches aux formules sans l'exécuter.
+
+#### content-research-writer
+
+[content-research-writer](.agents/vendor/awesome-claude-skills/skills/content-research-writer/SKILL.md), tiré de [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills), accompagne l'écriture d'un texte documenté : plan, recherche et citations, accroche, retours section par section, dans la voix de l'auteur. Ses consignes sont en anglais.
 
 #### screenwriting-skills
 

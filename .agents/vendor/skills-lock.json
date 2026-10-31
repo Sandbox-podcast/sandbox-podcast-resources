@@ -239,7 +239,8 @@
       "instructions_language": "en",
       "include": [
         "LICENSE",
-        "skills/humaniseur-fr/SKILL.md"
+        "skills/humaniseur-fr/SKILL.md",
+        "skills/copywriting-prose-creator/**/*.md"
       ],
       "exclude": [],
       "map": {},
@@ -255,12 +256,16 @@
         {
           "path": ".claude-plugin/, .codex-plugin/, .cursor-plugin/, .github/, clawhub-publish.sh",
           "reason": "Manifestes et scripts de publication de l'amont."
+        },
+        {
+          "path": "skills/copywriting-prose-creator/references/audit-tools.md (extraits)",
+          "reason": "Les extraits Python et la configuration Vale de cette référence sont de la documentation : rien n'est exécuté."
         }
       ],
       "installed": {
-        "files": 2,
-        "tree_sha256": "96f92043718f52b02400ca3a88b8dc78fe5de80019e630d5f48260d8f6a172c5",
-        "skills": 1,
+        "files": 12,
+        "tree_sha256": "081a8044a06fdfa1eca24fc70a91cff7b4b1963c5fb928a33596e41593806c91",
+        "skills": 2,
         "localized_skills": 0,
         "agents": 0
       }
@@ -330,6 +335,113 @@
         "files": 20,
         "tree_sha256": "599c3e6f6c5c7a3f4ef348b346f46b7bce4331dc44f115f40a77babc2fc74a93",
         "skills": 7,
+        "localized_skills": 0,
+        "agents": 0
+      }
+    },
+    {
+      "id": "youtube-agent-skill",
+      "requested_url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/main/skills/yt-script/SKILL.md",
+      "repository": "https://github.com/Jakeschincariol/youtube-agent-skill.git",
+      "commit": "a2feb2104981a375ffd4f87ee04f4f5344ac43c6",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "instructions_language": "en",
+      "include": [
+        "LICENSE",
+        "skills/yt-script/SKILL.md",
+        "skills/yt-script/hooks.json"
+      ],
+      "exclude": [],
+      "map": {},
+      "excluded": [
+        {
+          "path": "skills/yt-script/hookscore.py",
+          "reason": "Script amont de notation des accroches, non installé ni exécuté. L'agent compare les accroches aux formules de hooks.json."
+        },
+        {
+          "path": "skills/yt-audit/, yt-chapters/, yt-comment/, yt-edit/, yt-package/, yt-plan/, yt-retention/, yt-seo/, yt-shorts/, yt-viral/",
+          "reason": "Autres skills de la collection, non demandés ; seul yt-script l'a été le 31 octobre 2026."
+        },
+        {
+          "path": ".claude-plugin/, templates/voice.md, README.md",
+          "reason": "Manifestes de plugin et gabarit de profil de voix : la voix se règle dans l'onboarding vidéo."
+        }
+      ],
+      "installed": {
+        "files": 3,
+        "tree_sha256": "a950474773409334cb46a407f82d36f0abf4d723a102ba2e5825fe7f959588f6",
+        "skills": 1,
+        "localized_skills": 0,
+        "agents": 0
+      }
+    },
+    {
+      "id": "awesome-claude-skills",
+      "requested_url": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/content-research-writer",
+      "repository": "https://github.com/ComposioHQ/awesome-claude-skills.git",
+      "commit": "be2a406907dbc61b73e6827ded415c96139d13a2",
+      "license": "Apache-2.0, déclarée dans le README amont, sans fichier LICENSE",
+      "license_files": [
+        "README.md"
+      ],
+      "instructions_language": "en",
+      "include": [
+        "README.md",
+        "content-research-writer/SKILL.md"
+      ],
+      "exclude": [],
+      "map": {
+        "content-research-writer/": "skills/content-research-writer/"
+      },
+      "excluded": [
+        {
+          "path": "tous les autres dossiers",
+          "reason": "Liste de skills tiers ; seul content-research-writer a été demandé le 31 octobre 2026."
+        }
+      ],
+      "installed": {
+        "files": 2,
+        "tree_sha256": "1ba41b23b7dcbd82fd1ca2f4439e3c30129793ba7e11a56f3d61e267271b878d",
+        "skills": 1,
+        "localized_skills": 0,
+        "agents": 0
+      }
+    },
+    {
+      "id": "humanizer-fr",
+      "requested_url": "https://github.com/ferr079/humanizer-fr",
+      "repository": "https://github.com/ferr079/humanizer-fr.git",
+      "commit": "297b482e178ea8e54938ab1b7de7657249c0e5f8",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "instructions_language": "fr",
+      "include": [
+        "LICENSE",
+        "SKILL.md"
+      ],
+      "exclude": [],
+      "map": {
+        "SKILL.md": "skills/humanizer-fr/SKILL.md"
+      },
+      "excluded": [
+        {
+          "path": "README.md, CHANGELOG.md",
+          "reason": "Présentation et historique de la collection, pas des consignes du skill."
+        },
+        {
+          "path": ".claude-plugin/, .github/",
+          "reason": "Manifestes de plugin et workflows amont : rien n'est installé comme plugin ni exécuté."
+        }
+      ],
+      "installed": {
+        "files": 2,
+        "tree_sha256": "30a2ca311380259707877ab02a1f3c682aeb59570a813ced8b31324d19539c61",
+        "skills": 1,
         "localized_skills": 0,
         "agents": 0
       }

@@ -41,7 +41,7 @@ Un format vertical 9:16 ou de trois minutes au plus ajoute les skills d'écritur
 
 ## Le parcours et ses skills
 
-Après ces réponses, l'agent crée l'histoire dans StoryTelling Generator et enchaîne les étapes. À chaque étape, il lit seulement les skills qui lui servent ; les 199 skills installés ne sont pas chargés d'un coup.
+Après ces réponses, l'agent crée l'histoire dans StoryTelling Generator et enchaîne les étapes. À chaque étape, il lit seulement les skills qui lui servent ; les 203 skills installés ne sont pas chargés d'un coup.
 
 | Étape | Exemples de skills utilisés | Ce que tu examines |
 | --- | --- | --- |
@@ -111,7 +111,7 @@ Les contrôles réellement exécutés lors de la mise en place sont dans le [rap
 
 ## Les collections de skills
 
-Les skills externes sont installés dans [`.agents/vendor/`](../../.agents/vendor/README.md), à des révisions épinglées et avec leurs licences : Autopunk Media Skills (182 skills, 7 variantes françaises, 2 agents), Screenwriting Skills (7 skills, rédigés en chinois ; l'agent répond en français) et Humaniseur FR. Seuls les skills utiles pour des vidéos YouTube sur l'IA sont installés ; le [README des collections](../../.agents/vendor/README.md#ce-qui-nest-pas-installé) liste ce qui a été retiré. `python tools/repository/vendor_skills.py check` vérifie leur contenu ; `find` cherche un skill dans le catalogue.
+Les skills externes sont installés dans [`.agents/vendor/`](../../.agents/vendor/README.md), à des révisions épinglées et avec leurs licences : Autopunk Media Skills (182 skills, 7 variantes françaises, 2 agents), Screenwriting Skills (7 skills, rédigés en chinois ; l'agent répond en français), Humaniseur FR et `copywriting-prose-creator` (samber), Humanizer FR (ferr079), `yt-script` et `content-research-writer`. Seuls les skills utiles pour des vidéos YouTube sur l'IA sont installés ; le [README des collections](../../.agents/vendor/README.md#ce-qui-nest-pas-installé) liste ce qui a été retiré. `python tools/repository/vendor_skills.py check` vérifie leur contenu ; `find` cherche un skill dans le catalogue.
 
 ## Limites actuelles
 

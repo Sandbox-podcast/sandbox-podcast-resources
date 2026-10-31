@@ -2,13 +2,16 @@
 
 <!-- Généré par tools/repository/vendor_skills.py depuis catalog.json ; ne pas modifier à la main. -->
 
-199 entrées : 190 skills, 7 variantes localisées et 2 agents. Les descriptions sont celles des collections amont, dans leur langue d'origine. Le [README des collections](README.md) explique leur chargement et leur mise à jour.
+203 entrées : 194 skills, 7 variantes localisées et 2 agents. Les descriptions sont celles des collections amont, dans leur langue d'origine. Le [README des collections](README.md) explique leur chargement et leur mise à jour.
 
 Pour chercher depuis la racine : `python tools/repository/vendor_skills.py find "mot clé"`.
 
 - [autopunk-media-skills](#autopunk-media-skills) : 191 entrées
-- [cc-skills](#cc-skills) : 1 entrée
+- [cc-skills](#cc-skills) : 2 entrées
 - [screenwriting-skills](#screenwriting-skills) : 7 entrées
+- [youtube-agent-skill](#youtube-agent-skill) : 1 entrée
+- [awesome-claude-skills](#awesome-claude-skills) : 1 entrée
+- [humanizer-fr](#humanizer-fr) : 1 entrée
 
 ## autopunk-media-skills
 
@@ -471,6 +474,7 @@ Source : [samber/cc-skills](https://github.com/samber/cc-skills) · commit `123c
 
 | Nom | Description |
 | --- | --- |
+| [copywriting-prose-creator](cc-skills/skills/copywriting-prose-creator/SKILL.md) | Codifies how a person or brand writes — lexicon, syntax, rhythm, structure, signature moves — into a PROSE.md guide, independent of emotional tone. Builds from SOUL.md and TONE.md, ports a guide to another channel, or reverse-engineers prose patterns from a corpus. Trigger on PROSE.md, writing style guide, prose guide, house style, ghostwriter style, writing playbook, banned words, sentence-lengt… |
 | [humaniseur-fr](cc-skills/skills/humaniseur-fr/SKILL.md) | Remove AI-writing patterns from French text and inject voice and personality. Use when editing, reviewing, or rewriting French content that reads like ChatGPT or Claude output. Detects and fixes 38 patterns: AI vocabulary (crucial, essentiel, notamment, dans le paysage), anglicisms from English-first models (faire du sens, adresser un problème), formulaic openings (À l'ère de, Dans un monde où),… |
 
 ## screenwriting-skills
@@ -486,3 +490,27 @@ Source : [jtydhr88/screenwriting-skills](https://github.com/jtydhr88/screenwriti
 | [sw-scene-craft](screenwriting-skills/skills/sw-scene-craft/SKILL.md) | Scene and sequence craft (场景/段落/细节/道具/悬念/情趣) — merged from Robert McKee's scene design and five-step scene analysis (value turn, beats, text/subtext, turning points, pacing, image systems), McKee's Dialogue scene types (balanced, comic, asymmetric, indirect, reflexive, minimal), Syd Field's sequence and scene elements, Neill Hicks (less is more, enter late leave early, energy), Richard Walter (ac… |
 | [sw-story-structure](screenwriting-skills/skills/sw-story-structure/SKILL.md) | Story structure for screenplays and stage plays (故事结构) — merged from Syd Field's paradigm and plot points, Blake Snyder's Save the Cat beat sheet and board, Robert McKee's Story (event/scene/sequence/act, inciting incident, progressive complications, crisis-climax-resolution, subplots, story triangle), Julian Hoxter's nine-beat model, Neill Hicks' three acts as attraction/anticipation/satisfactio… |
 | [sw-truby-anatomy](screenwriting-skills/skills/sw-truby-anatomy/SKILL.md) | Organic story anatomy from John Truby's The Anatomy of Story (有机结构/设计原则/22步骤/道德议题/四角对立/幽灵/场景编排) — the designing principle (story process plus original execution), the seven key steps as the organic spine, all twenty-two steps with the middle-act machinery the beat sheets lack (ghost, fake-ally opponent, plan, opponent's drive, ally's attack, fake defeat, three revelation-and-decision pairs, audie… |
+
+## youtube-agent-skill
+
+Source : [Jakeschincariol/youtube-agent-skill](https://github.com/Jakeschincariol/youtube-agent-skill) · commit `a2feb21` · licence MIT
+
+| Nom | Description |
+| --- | --- |
+| [yt-script](youtube-agent-skill/skills/yt-script/SKILL.md) | Write a YouTube video script from a raw idea - hook options off 21 formulas, scored, then the full spoken script with the retention beats marked. Use whenever the user wants a video script, a hook, an opening line, "what should I say", "write my next video", or is about to record and does not have the first fifteen seconds yet. |
+
+## awesome-claude-skills
+
+Source : [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) · commit `be2a406` · licence Apache-2.0, déclarée dans le README amont, sans fichier LICENSE
+
+| Nom | Description |
+| --- | --- |
+| [content-research-writer](awesome-claude-skills/skills/content-research-writer/SKILL.md) | Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing process from solo effort to collaborative partnership. |
+
+## humanizer-fr
+
+Source : [ferr079/humanizer-fr](https://github.com/ferr079/humanizer-fr) · commit `297b482` · licence MIT
+
+| Nom | Description |
+| --- | --- |
+| [humanizer-fr](humanizer-fr/skills/humanizer-fr/SKILL.md) | Réécrit un texte français qui sonne IA pour qu'il se lise comme son auteur, sans changer ce qu'il dit. À utiliser pour relire ou réécrire de la prose en français : « pas X mais Y », chutes en une ligne, amorces mises en scène, triades forcées, tirets partout, portée gonflée, ton promotionnel, mots-béquilles, gras décoratif, guillemets droits, anglicismes calqués, connecteurs en surnombre. Adaptat… |

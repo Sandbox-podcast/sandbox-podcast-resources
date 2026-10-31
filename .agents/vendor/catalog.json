@@ -16,6 +16,21 @@
       "repository": "https://github.com/jtydhr88/screenwriting-skills.git",
       "commit": "51115f18d160aa8b2ac5813e4432b6f0b425358f",
       "license": "MIT, avec citations d'ouvrages tiers non couvertes (voir NOTICE)"
+    },
+    "youtube-agent-skill": {
+      "repository": "https://github.com/Jakeschincariol/youtube-agent-skill.git",
+      "commit": "a2feb2104981a375ffd4f87ee04f4f5344ac43c6",
+      "license": "MIT"
+    },
+    "awesome-claude-skills": {
+      "repository": "https://github.com/ComposioHQ/awesome-claude-skills.git",
+      "commit": "be2a406907dbc61b73e6827ded415c96139d13a2",
+      "license": "Apache-2.0, déclarée dans le README amont, sans fichier LICENSE"
+    },
+    "humanizer-fr": {
+      "repository": "https://github.com/ferr079/humanizer-fr.git",
+      "commit": "297b482e178ea8e54938ab1b7de7657249c0e5f8",
+      "license": "MIT"
     }
   },
   "entries": [
@@ -1930,6 +1945,26 @@
       "description": "Generates 5 YouTube title options for a single video, each 60–70 characters long, front-loading the hook word or primary keyword so it is visible before the title is cut off in search results."
     },
     {
+      "id": "awesome-claude-skills/content-research-writer",
+      "name": "content-research-writer",
+      "collection": "awesome-claude-skills",
+      "kind": "skill",
+      "language": "en",
+      "category": "",
+      "path": ".agents/vendor/awesome-claude-skills/skills/content-research-writer/SKILL.md",
+      "description": "Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing process from solo effort to collaborative partnership."
+    },
+    {
+      "id": "cc-skills/copywriting-prose-creator",
+      "name": "copywriting-prose-creator",
+      "collection": "cc-skills",
+      "kind": "skill",
+      "language": "en",
+      "category": "",
+      "path": ".agents/vendor/cc-skills/skills/copywriting-prose-creator/SKILL.md",
+      "description": "Codifies how a person or brand writes — lexicon, syntax, rhythm, structure, signature moves — into a PROSE.md guide, independent of emotional tone. Builds from SOUL.md and TONE.md, ports a guide to another channel, or reverse-engineers prose patterns from a corpus. Trigger on PROSE.md, writing style guide, prose guide, house style, ghostwriter style, writing playbook, banned words, sentence-lengt…"
+    },
+    {
       "id": "cc-skills/humaniseur-fr",
       "name": "humaniseur-fr",
       "collection": "cc-skills",
@@ -1938,6 +1973,16 @@
       "category": "",
       "path": ".agents/vendor/cc-skills/skills/humaniseur-fr/SKILL.md",
       "description": "Remove AI-writing patterns from French text and inject voice and personality. Use when editing, reviewing, or rewriting French content that reads like ChatGPT or Claude output. Detects and fixes 38 patterns: AI vocabulary (crucial, essentiel, notamment, dans le paysage), anglicisms from English-first models (faire du sens, adresser un problème), formulaic openings (À l'ère de, Dans un monde où),…"
+    },
+    {
+      "id": "humanizer-fr/humanizer-fr",
+      "name": "humanizer-fr",
+      "collection": "humanizer-fr",
+      "kind": "skill",
+      "language": "fr",
+      "category": "",
+      "path": ".agents/vendor/humanizer-fr/skills/humanizer-fr/SKILL.md",
+      "description": "Réécrit un texte français qui sonne IA pour qu'il se lise comme son auteur, sans changer ce qu'il dit. À utiliser pour relire ou réécrire de la prose en français : « pas X mais Y », chutes en une ligne, amorces mises en scène, triades forcées, tirets partout, portée gonflée, ton promotionnel, mots-béquilles, gras décoratif, guillemets droits, anglicismes calqués, connecteurs en surnombre. Adaptat…"
     },
     {
       "id": "screenwriting-skills/sw-character-conflict",
@@ -2008,6 +2053,16 @@
       "category": "",
       "path": ".agents/vendor/screenwriting-skills/skills/sw-truby-anatomy/SKILL.md",
       "description": "Organic story anatomy from John Truby's The Anatomy of Story (有机结构/设计原则/22步骤/道德议题/四角对立/幽灵/场景编排) — the designing principle (story process plus original execution), the seven key steps as the organic spine, all twenty-two steps with the middle-act machinery the beat sheets lack (ghost, fake-ally opponent, plan, opponent's drive, ally's attack, fake defeat, three revelation-and-decision pairs, audie…"
+    },
+    {
+      "id": "youtube-agent-skill/yt-script",
+      "name": "yt-script",
+      "collection": "youtube-agent-skill",
+      "kind": "skill",
+      "language": "en",
+      "category": "",
+      "path": ".agents/vendor/youtube-agent-skill/skills/yt-script/SKILL.md",
+      "description": "Write a YouTube video script from a raw idea - hook options off 21 formulas, scored, then the full spoken script with the retention beats marked. Use whenever the user wants a video script, a hook, an opening line, \"what should I say\", \"write my next video\", or is about to record and does not have the first fifteen seconds yet."
     }
   ]
 }
