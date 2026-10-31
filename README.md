@@ -151,7 +151,8 @@ Dans Codex, appelle un skill avec `$nom-du-skill` ; dans Claude Code, avec `/nom
 | Skill | Usage |
 | --- | --- |
 | [sandbox-video-onboarding](.agents/skills/sandbox-video-onboarding/SKILL.md) | Point de départ d'une nouvelle vidéo sans brief complet. Demande type, sujet, cadrage et voix, puis conduit l'écriture, le storyboard, le montage et les exports. |
-| [sandbox-storytelling-generator](.agents/skills/sandbox-storytelling-generator/SKILL.md) | Ouvre StoryTelling Generator, crée une vidéo narrative à partir d'un brief complet ou corrige une histoire existante : scénario, storyboard, voix et montage. || [sandbox-youtube-trend-hunter](.agents/skills/sandbox-youtube-trend-hunter/SKILL.md) | Propose des tendances Internet et YouTube sourcées, en général ou en IA et tech, puis exporte celle que tu choisis en brief pour StoryTelling Generator. |
+| [sandbox-storytelling-generator](.agents/skills/sandbox-storytelling-generator/SKILL.md) | Ouvre StoryTelling Generator, crée une vidéo narrative à partir d'un brief complet ou corrige une histoire existante : scénario, storyboard, voix et montage. |
+| [sandbox-youtube-trend-hunter](.agents/skills/sandbox-youtube-trend-hunter/SKILL.md) | Propose des tendances Internet et YouTube sourcées, en général ou en IA et tech, puis exporte celle que tu choisis en brief pour StoryTelling Generator. |
 | [sandbox-factory](.agents/skills/sandbox-factory/SKILL.md) | Lance, reprend ou diagnostique le cycle complet d'un épisode, du master aux rendus et au bilan. |
 | [sandbox-analyse](.agents/skills/sandbox-analyse/SKILL.md) | Analyse le master ou la transcription d'un épisode, repère ses sujets et note ce qui a réellement été lu, écouté et regardé. |
 | [sandbox-selection](.agents/skills/sandbox-selection/SKILL.md) | Choisit ou révise les extraits d'un épisode analysé : coupes, formats, passages retenus ou rejetés, réserves. |
