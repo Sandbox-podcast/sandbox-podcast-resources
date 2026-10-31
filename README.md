@@ -142,7 +142,7 @@ Le [tutoriel complet](docs/factory/storytelling-generator.md) détaille les sept
 
 ## Les skills
 
-Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 10 skills SANDBOX et six collections externes qui totalisent 203 entrées, choisies pour faire des vidéos YouTube sur l'IA.
+Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 11 skills SANDBOX et six collections externes qui totalisent 203 entrées, choisies pour faire des vidéos YouTube sur l'IA.
 
 ### Skills SANDBOX
 
@@ -152,6 +152,7 @@ Dans Codex, appelle un skill avec `$nom-du-skill` ; dans Claude Code, avec `/nom
 | --- | --- |
 | [sandbox-video-onboarding](.agents/skills/sandbox-video-onboarding/SKILL.md) | Point de départ d'une nouvelle vidéo sans brief complet. Demande type, sujet, cadrage et voix, puis conduit l'écriture, le storyboard, le montage et les exports. |
 | [sandbox-storytelling-generator](.agents/skills/sandbox-storytelling-generator/SKILL.md) | Ouvre StoryTelling Generator, crée une vidéo narrative à partir d'un brief complet ou corrige une histoire existante : scénario, storyboard, voix et montage. |
+| [sandbox-video-scriptwriter](.agents/skills/sandbox-video-scriptwriter/SKILL.md) | Écrit et révise le texte d'une vidéo en enchaînant recherche, accroches, script, adaptation à la voix de Lou, retrait des tournures IA et révision orale, chaque skill à son étape. |
 | [sandbox-youtube-trend-hunter](.agents/skills/sandbox-youtube-trend-hunter/SKILL.md) | Propose des tendances Internet et YouTube sourcées, en général ou en IA et tech, puis exporte celle que tu choisis en brief pour StoryTelling Generator. |
 | [sandbox-factory](.agents/skills/sandbox-factory/SKILL.md) | Lance, reprend ou diagnostique le cycle complet d'un épisode, du master aux rendus et au bilan. |
 | [sandbox-analyse](.agents/skills/sandbox-analyse/SKILL.md) | Analyse le master ou la transcription d'un épisode, repère ses sujets et note ce qui a réellement été lu, écouté et regardé. |

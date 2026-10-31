@@ -36,6 +36,7 @@ Lire le [parcours détaillé](references/parcours.md) pour l'étape en cours. Ch
 
 Écrire les fichiers de travail sous `.local/video-onboarding/SESSION/`, ignoré par Git. Enregistrer le résultat de l'étape avec `record`, ses fichiers, les skills réellement utilisés et l'état de chaque contrôle. Un contrôle `auto` est calculé par la factory ; un contrôle `human` ne passe qu'avec les mots de Lou.
 
+- De la recherche à la révision orale, le texte est écrit par l'agent [sandbox-video-scriptwriter](../sandbox-video-scriptwriter/SKILL.md) : il charge les skills d'écriture dans l'ordre, applique les règles apprises de Lou et rend les fichiers à enregistrer. Dans Claude Code, le lancer comme sous-agent `sandbox-video-scriptwriter` avec l'identifiant de session.
 - Narrateur et interprétation : [voix.md](references/voix.md).
 - Révision pour l'oral : [revision-orale.md](references/revision-orale.md).
 - Production, voix ElevenLabs et reprise du rendu : skill [sandbox-storytelling-generator](../sandbox-storytelling-generator/SKILL.md).

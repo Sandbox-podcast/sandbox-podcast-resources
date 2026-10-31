@@ -204,7 +204,21 @@ class OnboardingTest(unittest.TestCase):
                             self.assertTrue((onboarding.ROOT / skill["path"]).is_file(), skill)
         self.assertIn("screenwriting-skills/sw-story-structure",
                       [s["id"] for s in onboarding.route("structure", {"video_type": "fiction"})])
-        self.assertIn("cc-skills/humaniseur-fr", [s["id"] for s in onboarding.route("french_revision", {"video_type": "documentary"})])
+        revision = [s["id"] for s in onboarding.route("french_revision", {"video_type": "documentary"})]
+        self.assertIn("humanizer-fr/humanizer-fr", revision)
+        self.assertNotIn("cc-skills/humaniseur-fr", revision)  # one rewriting corrector only
+
+    def test_the_scriptwriter_leads_every_writing_stage(self):
+        ids = lambda stage, kind: [s["id"] for s in onboarding.route(stage, {"video_type": kind, "format": "16:9", "duration_minutes": 6})]
+        for kind in ("documentary", "explainer", "commentary"):
+            for stage in ("research", "structure", "writing", "narrator_adaptation", "french_revision", "spoken_revision"):
+                self.assertEqual(ids(stage, kind)[0], "sandbox-video-scriptwriter", (kind, stage))
+            self.assertIn("awesome-claude-skills/content-research-writer", ids("research", kind))
+            self.assertIn("youtube-agent-skill/yt-script", ids("structure", kind))
+            self.assertIn("youtube-agent-skill/yt-script", ids("writing", kind))
+            self.assertNotIn("autopunk-media-skills/hook-generator@fr", ids("structure", kind))
+        self.assertIn("autopunk-media-skills/animated-explainer-script", ids("writing", "explainer"))
+        self.assertNotIn("sandbox-video-scriptwriter", ids("writing", "fiction"))
 
     def test_trend_hunter_brief_and_command_line(self):
         with tempfile.TemporaryDirectory() as directory:

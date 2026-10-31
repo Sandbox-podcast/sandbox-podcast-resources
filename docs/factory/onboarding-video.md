@@ -41,15 +41,15 @@ Un format vertical 9:16 ou de trois minutes au plus ajoute les skills d'écritur
 
 ## Le parcours et ses skills
 
-Après ces réponses, l'agent crée l'histoire dans StoryTelling Generator et enchaîne les étapes. À chaque étape, il lit seulement les skills qui lui servent ; les 203 skills installés ne sont pas chargés d'un coup.
+Après ces réponses, l'agent crée l'histoire dans StoryTelling Generator et enchaîne les étapes. À chaque étape, il lit seulement les skills qui lui servent ; les 203 skills installés ne sont pas chargés d'un coup. De la recherche à la révision orale, le texte est écrit par l'agent scénariste [`sandbox-video-scriptwriter`](../../.agents/skills/sandbox-video-scriptwriter/SKILL.md), qui applique tes règles apprises et te demande de valider l'accroche puis le texte.
 
 | Étape | Exemples de skills utilisés | Ce que tu examines |
 | --- | --- | --- |
-| Recherche et sources | `research-brief-creator`, `claim-fact-checker`, `source-cross-referencer`, `statistics-verifier` | Les faits retenus, leurs sources et leurs limites |
-| Structure narrative | `sw-story-structure`, `hook-generator` (FR), `character-arc-planner`, `sw-character-conflict` en fiction | L'accroche, la progression, la conclusion |
-| Texte intégral | `commentary-writer`, `documentary-narration-writer`, `animated-explainer-script-writer`, `full-script-writer`, `sw-scene-craft`, `sw-dialogue` | Le texte complet |
+| Recherche et sources | `content-research-writer`, `research-brief-creator`, `claim-fact-checker`, `source-cross-referencer`, `statistics-verifier` | Les faits retenus, leurs sources et leurs limites |
+| Structure narrative | `yt-script` (cinq accroches, les deux meilleures te sont montrées), `sw-story-structure`, `character-arc-planner`, `sw-character-conflict` en fiction | L'accroche, la progression, la conclusion |
+| Texte intégral | `yt-script`, `animated-explainer-script`, `commentary-writer`, `documentary-narration-writer`, `sw-scene-craft`, `sw-dialogue` | Le texte complet |
 | Adaptation au narrateur | `narrator-voice-adapter`, `dialogue-polisher` en fiction | Le texte te ressemble-t-il ? |
-| Révision du français | `humaniseur-fr`, `redundancy-checker`, `tone-consistency-checker` | Les formulations, sans changement des faits |
+| Révision du français | `humanizer-fr`, seul correcteur qui réécrit, puis `redundancy-checker`, `tone-consistency-checker` | Les formulations, sans changement des faits |
 | Révision pour l'oral | `teleprompter-script-writer`, `voice-over-script-writer` et le diagnostic oral de la factory | Chiffres, sigles, respirations, rythme |
 | Storyboard | `b-roll-shot-list`, `archival-footage-brief`, `rights-clearance-checklist`, `subtitles-rewriter` | Les plans, médias, droits et sous-titres |
 | Voix et montage | StoryTelling Generator | La prévisualisation |

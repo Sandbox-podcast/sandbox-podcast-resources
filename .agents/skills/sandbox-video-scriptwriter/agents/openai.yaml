@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scénariste vidéo SANDBOX"
+  short_description: "Texte prononcé d'une vidéo, de la recherche à la révision orale"
+  default_prompt: "Utilise $sandbox-video-scriptwriter pour écrire le texte de la vidéo en cours."
