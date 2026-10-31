@@ -4,3 +4,5 @@
 apps/site/drizzle/*.sql -text
 old/** -text
 archive/platform/** -text
+# Les collections de skills externes gardent le texte de leur révision amont, espaces compris.
+.agents/vendor/** -whitespace

@@ -54,13 +54,17 @@ def frame(store, brief, *, now=None):
         questions.append({"field": "budget", "question": "Quel plafond de dépense et quelle devise ?", "choices": [], "recommendation": None})
     if brief.get("audio_workflow")=="elevenlabs_browser" and (budget or {}).get("browser_credit_limit") is None:
         questions.append({"field":"browser_credit_limit","question":"Quel plafond de crédits ElevenLabs utiliser dans le navigateur ?","choices":[],"recommendation":None})
+    if brief.get("audio_workflow")=="voicestudio" and not any(
+            isinstance(s,dict) and isinstance(s.get("voice"),dict) and s["voice"].get("provider")=="voicestudio" for s in (brief.get("speakers") or {}).values()):
+        questions.append({"field":"speakers","question":"Quel profil Voice Studio utiliser pour la narration ?","choices":[],"recommendation":None,
+                          "action":"python -m youtube_growth.factory voicestudio profiles"})
     data = {**DEFAULTS, **store.setting("storytelling_preferences",{}), **brief, "topic": topic.strip(), "story_id": story_id}
     duration=data.get("duration_minutes")
     if type(duration) not in (int,float) or not math.isfinite(duration) or not .25<=duration<=120:
         raise ValueError("storytelling_duration_invalid")
     if data.get("format") not in {"16:9","9:16"}:
         raise ValueError("storytelling_format_invalid")
-    if data.get("audio_workflow","system") not in {"system","elevenlabs_browser","configured"}:
+    if data.get("audio_workflow","system") not in {"system","voicestudio","elevenlabs_browser","configured"}:
         raise ValueError("storytelling_audio_workflow_invalid")
     if data.get("audio_workflow")=="elevenlabs_browser" and not data.get("speakers"):
         data["speakers"]={"narrator":{"name":"Narrateur","voice":{"provider":"elevenlabs_browser","name":"Voix choisie dans ElevenLabs","authorization":"Voix autorisée de l'espace ElevenLabs connecté."}}}

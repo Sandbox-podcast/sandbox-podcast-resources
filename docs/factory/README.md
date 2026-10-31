@@ -10,6 +10,8 @@ Les [commandes et l'installation](exploitation.md) sont dans le guide technique.
 
 Le [guide d'optimisation](optimisation.md) décrit ce que la factory réutilise, ce qu'elle mesure et comment préparer les décisions du prochain épisode. Demande à Codex le `brief` de l'épisode pour retrouver les résultats disponibles, les preuves manquantes et les références à réexaminer.
 
+Pour une vidéo originale, l'[onboarding vidéo](onboarding-video.md) démarre quand tu dis « Je veux créer une nouvelle vidéo ». Il conduit le choix du type et du sujet, le cadrage, la voix Voice Studio, l'écriture et ses révisions, puis le montage et les contrôles avec [StoryTelling Generator](storytelling-generator.md).
+
 Le [parcours éditorial multiformat](production-editoriale.md) ajoute la découverte de sujets, leur évaluation justifiée, les dossiers de recherche, les vidéos narratives originales et les comparaisons Analytics. La configuration livrée attend les réponses d'un agent ou un modèle local à configurer ; elle ne lance aucun appel IA payant. La première bibliothèque de schémas animés est décrite dans la [direction artistique narrative](direction-artistique-narrative.md).
 
 ## Ce qu'il faut donner pour une émission

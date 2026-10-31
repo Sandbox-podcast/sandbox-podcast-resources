@@ -19,6 +19,7 @@ jobs:
           python-version: '3.12'
       - run: python tools/repository/check_repository.py
       - run: python tools/repository/sync_skills.py
+      - run: python tools/repository/vendor_skills.py check
       - run: python -m unittest discover -s tools/repository -v
       - run: python -m pip install -r tools/social-network-manager/episode-02/camera-unique-v2/requirements-qa.txt
       - run: python -m unittest discover -s projects/relay-kits/2026-10-18/production -p test_monter.py -v
