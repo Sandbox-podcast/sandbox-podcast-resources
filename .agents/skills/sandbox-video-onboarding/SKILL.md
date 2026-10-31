@@ -32,7 +32,7 @@ Les options globales `--config` et `--state-dir` précèdent la commande. Garder
 
 ## Faire le travail de chaque étape
 
-Lire le [parcours détaillé](references/parcours.md) pour l'étape en cours. Charger seulement les fichiers `skills[].path` de cette étape, au moment de l'utiliser ; ne pas lire tout le catalogue. Les skills de `screenwriting-skills` sont rédigés en chinois : répondre en français et ne recopier aucun extrait de leurs références dans un livrable.
+Lire le [parcours détaillé](references/parcours.md) pour l'étape en cours. Charger seulement les fichiers `skills[].path` de cette étape, au moment de l'utiliser ; ne pas lire tout le catalogue. Les skills de `screenwriting-skills` sont rédigés en chinois : répondre en français et ne recopier aucun extrait de leurs références dans un livrable. Un renvoi vers un skill absent du catalogue est ignoré.
 
 Écrire les fichiers de travail sous `.local/video-onboarding/SESSION/`, ignoré par Git. Enregistrer le résultat de l'étape avec `record`, ses fichiers, les skills réellement utilisés et l'état de chaque contrôle. Un contrôle `auto` est calculé par la factory ; un contrôle `human` ne passe qu'avec les mots de Lou.
 

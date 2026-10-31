@@ -142,9 +142,9 @@ class VendorSkillsTest(unittest.TestCase):
 
     def test_repository_collections_match_their_lock(self):
         result = check(ROOT)
-        self.assertEqual(result["screenwriting-skills"]["skills"], 26)
+        self.assertEqual(result["screenwriting-skills"]["skills"], 7)
         self.assertEqual(result["cc-skills"]["skills"], 1)
-        self.assertGreaterEqual(result["autopunk-media-skills"]["skills"], 400)
+        self.assertEqual(result["autopunk-media-skills"]["skills"], 182)
 
 
 if __name__ == "__main__":
