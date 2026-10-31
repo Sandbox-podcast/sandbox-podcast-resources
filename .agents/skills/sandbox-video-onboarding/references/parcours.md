@@ -8,7 +8,7 @@ La sortie de `video-onboarding show SESSION` donne l'étape courante, les skills
 {
   "stage": "structure",
   "artifacts": [".local/video-onboarding/SESSION/structure.md"],
-  "skills_used": ["screenwriting-skills/sw-story-structure", "autopunk-media-skills/hook-generator@fr"],
+  "skills_used": ["autopunk-media-skills/beat-sheet-builder", "youtube-agent-skill/yt-script"],
   "checks": {
     "hook_promise": {"status": "passed", "note": "L'ouverture pose la question du basculement."},
     "progression": {"status": "passed"},
@@ -32,7 +32,7 @@ Types : `documentary`, `explainer`, `commentary`, `fiction`, `docufiction`, `oth
 <a id="topic"></a>
 ## Sujet
 
-Si Lou donne un sujet, l'enregistrer tel quel. Sinon, utiliser les skills routés (Trend Hunter pour une tendance, `story-angle-finder`, `niche-video-idea-generator`, `trending-topics-brief`, `sw-premise-theme` pour une fiction). Présenter trois à six propositions avec leur angle, leur intérêt et leurs sources, les enregistrer avec `propose`, puis attendre. Le choix s'enregistre avec `choose --proposal RANG --confirmation "..."` ou `choose --topic "..." --confirmation "..."`.
+Si Lou donne un sujet, l'enregistrer tel quel. Sinon, utiliser les skills routés (Trend Hunter pour une tendance, `story-angle-finder`, `niche-video-idea-generator`, `trending-topics-brief`, `logline-writer` pour une fiction). Présenter trois à six propositions avec leur angle, leur intérêt et leurs sources, les enregistrer avec `propose`, puis attendre. Le choix s'enregistre avec `choose --proposal RANG --confirmation "..."` ou `choose --topic "..." --confirmation "..."`.
 
 ```json
 {"proposals": [{"title": "...", "angle": "...", "why": "...", "sources": ["https://..."], "skills_used": ["autopunk-media-skills/story-angle-finder"]}]}

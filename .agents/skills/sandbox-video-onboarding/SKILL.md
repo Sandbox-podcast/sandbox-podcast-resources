@@ -32,10 +32,11 @@ Les options globales `--config` et `--state-dir` précèdent la commande. Garder
 
 ## Faire le travail de chaque étape
 
-Lire le [parcours détaillé](references/parcours.md) pour l'étape en cours. Charger seulement les fichiers `skills[].path` de cette étape, au moment de l'utiliser ; ne pas lire tout le catalogue. Les skills de `screenwriting-skills` sont rédigés en chinois : répondre en français et ne recopier aucun extrait de leurs références dans un livrable. Un renvoi vers un skill absent du catalogue est ignoré.
+Lire le [parcours détaillé](references/parcours.md) pour l'étape en cours. Charger seulement les fichiers `skills[].path` de cette étape, au moment de l'utiliser ; ne pas lire tout le catalogue. Répondre en français, quelle que soit la langue du skill. Un renvoi vers un skill absent du catalogue est ignoré.
 
 Écrire les fichiers de travail sous `.local/video-onboarding/SESSION/`, ignoré par Git. Enregistrer le résultat de l'étape avec `record`, ses fichiers, les skills réellement utilisés et l'état de chaque contrôle. Un contrôle `auto` est calculé par la factory ; un contrôle `human` ne passe qu'avec les mots de Lou.
 
+- De la recherche à la révision orale, le texte est écrit par l'agent [sandbox-video-scriptwriter](../sandbox-video-scriptwriter/SKILL.md) : il charge les skills d'écriture dans l'ordre, applique les règles apprises de Lou et rend les fichiers à enregistrer. Dans Claude Code, le lancer comme sous-agent `sandbox-video-scriptwriter` avec l'identifiant de session.
 - Narrateur et interprétation : [voix.md](references/voix.md).
 - Révision pour l'oral : [revision-orale.md](references/revision-orale.md).
 - Production, voix ElevenLabs et reprise du rendu : skill [sandbox-storytelling-generator](../sandbox-storytelling-generator/SKILL.md).
