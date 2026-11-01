@@ -305,5 +305,114 @@ class RecordingTests(unittest.TestCase):
         self.assertEqual(split_text("Une phrase assez longue", 10), ["Une phrase", "assez", "longue"])
 
 
+def fake_system(text, voice, path):
+    target = path / "system.wav"
+    target.write_bytes(wav_bytes(.4))
+    return target
+
+
+class SoundCueTests(unittest.TestCase):
+    """Imported music: authorization from import rights, documented level_db applied."""
+
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        self.store = Store(self.root / "state")
+        self.addCleanup(self.store.close)
+        self.music = self.root / "synthetic-music.wav"
+        self.music.write_bytes(wav_bytes(.3))
+
+    def source(self, rights="owned"):
+        return {"source_id": "music", "path": str(self.music), "sha256": fingerprint(self.music), "media_type": "audio", "rights": rights}
+
+    def script(self, **cue):
+        music = {"provider": "recordings", "source_id": "music", "purpose": "Installer l'attente.", **cue}
+        return {"story_id": "story", "speakers": {"n": {"voice": {"provider": "system", "name": "Fixture", "authorization": "fixture"}}},
+                "scenes": [{"scene_id": "s", "utterances": [{"utterance_id": "u", "speaker_id": "n", "text": "Une phrase."}],
+                            "sound": {"music": music}}]}
+
+    def produce(self, script, sources, name):
+        from youtube_growth.factory.storytelling import audio_inputs
+        with patch("youtube_growth.factory.storytelling_audio._system", side_effect=fake_system):
+            return produce_audio(self.store, {}, audio_inputs(script, sources), self.root / name)
+
+    def test_level_rule_accepts_legacy_gain_only_when_equal(self):
+        from youtube_growth.factory.storytelling_contracts import sound_level_db
+        from youtube_growth.factory import storytelling_render
+        self.assertEqual(sound_level_db({"level_db": -18}, "music"), -18)
+        self.assertEqual(sound_level_db({"level_db": -18, "gain_db": -18.0}, "music"), -18)
+        self.assertEqual(sound_level_db({"gain_db": -20}, "effect"), -20)
+        self.assertEqual((sound_level_db({}, "music"), sound_level_db({}, "effect")), (-25, -15))
+        with self.assertRaisesRegex(ValueError, "storytelling_sound_level_conflict"):
+            sound_level_db({"level_db": -18, "gain_db": -25}, "music")
+        for value in (-61, 1, True, "-18", float("nan")):
+            with self.assertRaisesRegex(ValueError, "storytelling_sound_gain_invalid"):
+                sound_level_db({"level_db": value}, "music")
+        # The render mixes with the very same rule as the audio stage.
+        self.assertIs(storytelling_render.sound_level_db, sound_level_db)
+
+    @unittest.skipUnless(shutil.which("ffmpeg"), "FFmpeg required")
+    def test_imported_music_with_source_id_and_level_is_produced_at_that_level(self):
+        script = self.script(level_db=-18)
+        first = self.produce(script, [self.source()], "first")
+        track = first["sound_tracks"][0]
+        self.assertEqual((track["kind"], track["provider"], track["gain_db"]), ("music", "recordings", -18))
+        self.assertAlmostEqual(track["duration_seconds"], .3, places=2)
+        self.assertTrue(Path(track["path"]).is_file())
+        self.assertNotEqual(Path(track["path"]).resolve(), self.music.resolve())
+        self.assertEqual(fingerprint(self.music), self.source()["sha256"])
+        # A volume change reuses the normalized stem; only the mix value changes.
+        script["scenes"][0]["sound"]["music"]["level_db"] = -12
+        louder = self.produce(script, [self.source()], "louder")
+        self.assertEqual(louder["sound_tracks"][0]["gain_db"], -12)
+        self.assertEqual(louder["sound_tracks"][0]["path"], track["path"])
+        # Other rights mean another authorization: the stem is produced again.
+        relicensed = self.produce(script, [self.source("licence CC BY 4.0")], "relicensed")
+        self.assertNotEqual(relicensed["sound_tracks"][0]["path"], track["path"])
+
+    @unittest.skipUnless(shutil.which("ffmpeg"), "FFmpeg required")
+    def test_started_legacy_cache_keeps_its_key(self):
+        from youtube_growth.factory.contracts import digest
+        from youtube_growth.factory.storytelling import audio_inputs
+        from youtube_growth.factory.storytelling_audio import LEGACY_MIX_FIELDS, VERSION
+        script = self.script(level_db=-18)
+        spec = audio_inputs(script, [self.source()])["scenes"][0]["sound"]["music"]
+        legacy = digest({"version": VERSION, "kind": "music", "spec": {k: v for k, v in spec.items() if k not in LEGACY_MIX_FIELDS}})
+        cache = self.store.directory / "storytelling-cache" / "audio"
+        (cache / legacy).mkdir(parents=True)
+        result = self.produce(script, [self.source()], "legacy")
+        self.assertEqual(Path(result["sound_tracks"][0]["path"]).parent.name, legacy)
+
+    def test_missing_rights_are_refused_even_with_a_scenario_authorization(self):
+        from youtube_growth.factory.storytelling import audio_inputs
+        for rights in (None, "", "  ", "usage_to_confirm"):
+            with self.assertRaisesRegex(ValueError, "storytelling_sound_source_unverified"):
+                audio_inputs(self.script(level_db=-18, authorization="Autorisation écrite dans le scénario."), [self.source(rights)])
+        prepared = audio_inputs(self.script(level_db=-18, authorization="Autre valeur"), [self.source()])
+        self.assertEqual(prepared["scenes"][0]["sound"]["music"]["authorization"], "owned")
+
+    @unittest.skipUnless(shutil.which("ffmpeg"), "FFmpeg required")
+    def test_changed_imported_file_is_refused(self):
+        from youtube_growth.factory.storytelling import audio_inputs
+        prepared = audio_inputs(self.script(level_db=-18), [self.source()])
+        self.music.write_bytes(wav_bytes(.5))
+        with patch("youtube_growth.factory.storytelling_audio._system", side_effect=fake_system):
+            with self.assertRaisesRegex(ValueError, "storytelling_sound_source_unverified"):
+                produce_audio(self.store, {}, prepared, self.root / "changed")
+
+    def test_diverging_level_and_gain_are_refused_before_any_sound_work(self):
+        from youtube_growth.factory.storytelling import audio_inputs
+        speech = self.root / "speech.wav"
+        speech.write_bytes(wav_bytes(.4))
+        take = {"path": str(speech), "sha256": fingerprint(speech), "duration_seconds": .4, "provider": "system",
+                "artifacts": [{"path": str(speech), "sha256": fingerprint(speech)}]}
+        prepared = audio_inputs(self.script(level_db=-18, gain_db=-25), [self.source()])
+        with patch("youtube_growth.factory.storytelling_audio._utterance", return_value=take), \
+                patch("youtube_growth.factory.storytelling_audio._sound", side_effect=AssertionError("Aucun son ne doit être produit")):
+            with self.assertRaisesRegex(ValueError, "storytelling_sound_level_conflict"):
+                produce_audio(self.store, {}, prepared, self.root / "conflict")
+
+
 if __name__ == "__main__":
     unittest.main()

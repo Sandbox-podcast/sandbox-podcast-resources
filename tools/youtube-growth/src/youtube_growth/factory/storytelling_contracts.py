@@ -12,6 +12,29 @@ PLACEHOLDER = re.compile(r"\b(?:à développer|a developper|TODO|TBD|lorem ipsum
 MODES = {"documentary", "fiction", "mixed"}
 STRUCTURES = {"human", "investigation", "idea"}
 PROVIDERS = ("system", "voicestudio", "elevenlabs", "elevenlabs_browser", "recordings")
+DEFAULT_SOUND_LEVEL_DB = {"music": -25., "effect": -15.}
+
+
+def sound_level_db(cue, kind):
+    """One rule for audio and render: documented level_db, legacy gain_db only if equal."""
+    values = []
+    for field in ("level_db", "gain_db"):
+        if field in cue:
+            value = cue[field]
+            if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or not -60 <= value <= 0:
+                raise ValueError("storytelling_sound_gain_invalid")
+            values.append(float(value))
+    if len(values) == 2 and abs(values[0] - values[1]) > 1e-9:
+        raise ValueError("storytelling_sound_level_conflict")
+    return values[0] if values else DEFAULT_SOUND_LEVEL_DB["music" if kind == "music" else "effect"]
+
+
+def imported_sound_rights(source):
+    """Rights declared at import authorize an imported sound; placeholders never do."""
+    rights = (source or {}).get("rights")
+    if (source or {}).get("media_type") != "audio" or not isinstance(rights, str) or not rights.strip() or rights.strip() == "usage_to_confirm":
+        return None
+    return rights.strip()
 
 
 def required_text(value, field, *, maximum=20000):
@@ -265,9 +288,12 @@ def _validate_script(script, sources):
             if any(key in cue for key in ("path", "command", "filter", "argv")):
                 raise ValueError("Un son référence une source importée ou une intention, jamais une commande.")
             required_text(cue.get("purpose"), "sound.purpose")
+            try:
+                sound_level_db(cue, "music" if sound.get("music") is cue else "effect")
+            except ValueError:
+                raise ValueError("Niveau sonore invalide : level_db entre -60 et 0 dB ; un ancien gain_db doit lui être identique.") from None
             if cue.get("provider") == "recordings":
-                source = source_map.get(cue.get("source_id"))
-                if not source or source.get("media_type") != "audio" or source.get("rights") in (None, "", "usage_to_confirm"):
+                if not imported_sound_rights(source_map.get(cue.get("source_id"))):
                     raise ValueError("Source sonore autorisée absente.")
             else:
                 required_text(cue.get("prompt"), "sound.prompt")

@@ -238,6 +238,7 @@ def regenerate(store,story_id,scene_id,utterance_id,*,now=None,_locked=False):
 
 def audio_inputs(script,sources):
     from copy import deepcopy
+    from .storytelling_contracts import imported_sound_rights
     result=deepcopy(script)
     source_map={s["source_id"]:s for s in sources}
     def recording(ref):
@@ -256,7 +257,12 @@ def audio_inputs(script,sources):
         sound=scene.get("sound",{})
         for cue in ([sound["music"]] if sound.get("music") else [])+sound.get("effects",[]):
             if cue.get("provider")=="recordings":
-                cue.update(recording(cue))
+                # The import rights, checked at validation, are the only authorization;
+                # a value written in the scenario is replaced, never trusted.
+                rights=imported_sound_rights(source_map.get(cue.get("source_id")))
+                if not rights:
+                    raise ValueError("storytelling_sound_source_unverified")
+                cue.update(recording(cue),authorization=rights)
     return result
 
 
@@ -330,7 +336,8 @@ def run(store,config,story_id,*,now=None,synthetic=False):
             prepared=audio_inputs(script,sources["sources"])
             if row["brief"].get("audio_workflow")=="elevenlabs_browser":
                 from .storytelling_browser import prepare
-                browser=prepare(store,script,root/"browser")
+                # Imported voices and sounds stay resolved next to browser results.
+                browser=prepare(store,prepared,root/"browser")
                 project["browser_requests"]=browser["requests"]
                 project["artifacts"]=project.get("artifacts",[])+browser.get("artifacts",[])
                 if not browser["ready"]:
