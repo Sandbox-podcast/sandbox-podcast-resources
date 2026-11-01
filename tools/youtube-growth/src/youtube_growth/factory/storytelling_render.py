@@ -11,8 +11,9 @@ from .contracts import ROOT, digest
 from .media import fingerprint, _load_stage, _save_stage, _srt_time, _scan, probe
 from .narrative import join_waves
 from .narrative_visuals import PALETTE, font_file, wrap
+from .storytelling_contracts import sound_level_db
 
-VERSION = 3
+VERSION = 4
 
 
 def caption_rows(utterance, spoken):
@@ -105,36 +106,59 @@ def build_timeline(script, audio, sources):
             "sound_tracks": audio.get("sound_tracks", [])}
 
 
+def _full_frame(path, size):
+    """The picture as large as the frame allows, over a blurred, darkened copy of itself."""
+    from PIL import Image, ImageFilter
+    width, height = size
+    with Image.open(path) as source:
+        picture = source.convert("RGB")
+    ratio = max(width/picture.width, height/picture.height)
+    cover = picture.resize((math.ceil(picture.width*ratio), math.ceil(picture.height*ratio)))
+    left, top = (cover.width-width)//2, (cover.height-height)//2
+    cover = cover.crop((left, top, left+width, top+height)).filter(ImageFilter.GaussianBlur(width/40))
+    frame = Image.blend(cover, Image.new("RGB", size, (0,0,0)), .55)
+    ratio = min(width/picture.width, height/picture.height)
+    fit = picture.resize((round(picture.width*ratio), round(picture.height*ratio)))
+    frame.paste(fit, ((width-fit.width)//2, (height-fit.height)//2))
+    return frame
+
+
 def poster(shot, path, size):
+    # Only what the script puts on screen: no house banner, and the scene's
+    # editorial function never stands in for a missing title.
     from PIL import Image, ImageDraw, ImageFont
     width, height = size
     scale = width/960
-    im = Image.new("RGBA", size, (0,0,0,0)) if shot["type"]=="video" else Image.new("RGB", size, PALETTE["background"])
-    draw = ImageDraw.Draw(im)
+    if shot["type"] == "image":
+        base = _full_frame(Path(shot["source"]["path"]), size).convert("RGBA")
+    elif shot["type"] == "video":
+        base = Image.new("RGBA", size, (0,0,0,0))
+    else:
+        base = Image.new("RGBA", size, PALETTE["background"])
+    layer = Image.new("RGBA", size, (0,0,0,0))
+    draw = ImageDraw.Draw(layer)
     font = str(font_file())
     title = ImageFont.truetype(font, round(34*scale))
     label = ImageFont.truetype(font, round(25*scale))
     small = ImageFont.truetype(font, round(17*scale))
     margin = round(48*scale)
-    draw.text((margin, round(24*scale)), "SANDBOX / STORYTELLING", font=small, fill=PALETTE["cyan"])
-    heading = shot.get("on_screen_text") or shot["heading"]
-    lines = wrap(draw, heading, title, width-2*margin)
-    if len(lines) > 3:
-        raise ValueError("storytelling_screen_title_too_long")
-    y = round(72*scale)
-    for line in lines:
-        draw.text((margin,y), line, font=title, fill=PALETTE["white"])
-        y += round(42*scale)
-    top, bottom = max(y+round(25*scale), round(190*scale)), height-round(80*scale)
-    if shot["type"] == "image":
-        src = Path(shot["source"]["path"])
-        with Image.open(src) as source:
-            picture = source.convert("RGB")
-            picture.thumbnail((width-2*margin, bottom-top))
-            im.paste(picture, ((width-picture.width)//2, top+(bottom-top-picture.height)//2))
-    elif shot["type"] == "diagram":
+    y = margin
+    heading = shot.get("on_screen_text")
+    if heading:
+        lines = wrap(draw, heading, title, width-4*margin)
+        if len(lines) > 3:
+            raise ValueError("storytelling_screen_title_too_long")
+        pad = round(14*scale)
+        line_w = max(draw.textlength(line, font=title) for line in lines)
+        draw.rounded_rectangle((margin, margin, margin+line_w+2*pad, margin+len(lines)*round(42*scale)+2*pad),
+                               radius=round(8*scale), fill=(0,0,0,170))
+        for i, line in enumerate(lines):
+            draw.text((margin+pad, margin+pad+i*round(42*scale)), line, font=title, fill=PALETTE["white"])
+        y = margin+len(lines)*round(42*scale)+2*pad
+    if shot["type"] == "diagram":
         labels = shot.get("labels") or [shot["description"]]
         gap = round(16*scale)
+        top, bottom = y+round(25*scale), height-round(80*scale)
         card_h = (bottom-top-gap*(len(labels)-1))/len(labels)
         for i, text in enumerate(labels):
             a = top+i*(card_h+gap)
@@ -144,9 +168,12 @@ def poster(shot, path, size):
                 raise ValueError("storytelling_diagram_text_overflow")
             for j,line in enumerate(rows):
                 draw.text((margin+round(16*scale),a+(card_h-len(rows)*round(30*scale))/2+j*round(30*scale)),line,font=label,fill=PALETTE["white"])
-    nature = {"fiction":"FICTION", "reconstruction":"RECONSTITUTION", "fact":"SOURCES DU DOSSIER"}[shot["factual_status"]]
-    draw.text((margin,height-round(45*scale)),nature,font=small,fill=PALETTE["orange"])
-    im.save(path)
+    # Invented or reconstructed scenes stay labelled, away from the subtitle area.
+    nature = {"fiction":"FICTION", "reconstruction":"RECONSTITUTION"}.get(shot["factual_status"])
+    if nature:
+        draw.text((width-margin-draw.textlength(nature, font=small), margin), nature, font=small, fill=PALETTE["orange"])
+    im = Image.alpha_composite(base, layer)
+    (im if shot["type"] == "video" else im.convert("RGB")).save(path)
 
 
 def _run(args):
@@ -175,7 +202,7 @@ def render(script, timeline, audio, directory, *, draft=False, portrait=False):
     for shot in timeline["shots"]:
         # Artwork is independent of the recorded duration and survives a voice edit.
         art_key = digest({k:v for k,v in shot.items() if k not in {"start_seconds","end_seconds","duration_seconds"}})
-        art_dir = directory.parent.parent/"visual-cache"/digest({"art":art_key,"size":size})
+        art_dir = directory.parent.parent/"visual-cache"/digest({"version":VERSION,"art":art_key,"size":size})
         art_dir.mkdir(parents=True,exist_ok=True)
         picture = art_dir/"frame.png"
         if not picture.exists():
@@ -237,7 +264,7 @@ def render(script, timeline, audio, directory, *, draft=False, portrait=False):
     if tracks:
         for i,track in enumerate(tracks):
             seconds=float(track["duration_seconds"])
-            gain=float(track.get("gain_db",-24 if track["kind"]=="music" else -14))
+            gain=sound_level_db(track,track["kind"])
             delay=round(1000*float(track.get("start_seconds",0)))
             filters.append(f"[{i+2}:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=duration={seconds},afade=t=in:d=0.1,afade=t=out:st={max(0,seconds-.3)}:d=0.3,volume={gain}dB,adelay={delay}|{delay}[s{i}]")
         labels="".join(f"[s{i}]" for i in range(len(tracks)))

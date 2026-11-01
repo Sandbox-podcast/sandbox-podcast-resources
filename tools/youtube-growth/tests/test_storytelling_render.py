@@ -8,9 +8,11 @@ import struct
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 import wave
 
 from youtube_growth.factory.media import probe
+from youtube_growth.factory import storytelling_render
 from youtube_growth.factory.storytelling_render import artifact, build_timeline, render
 
 
@@ -24,6 +26,25 @@ def tone(path, duration, frequency, gain=.15):
     with wave.open(str(path), "wb") as stream:
         stream.setparams((1, 2, rate, 0, "NONE", "not compressed"))
         stream.writeframes(samples)
+
+
+class StorytellingPosterTests(unittest.TestCase):
+    def test_image_fills_the_frame_and_scene_function_never_becomes_a_title(self):
+        from PIL import Image
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "square.png"
+            Image.new("RGB", (400, 400), (220, 30, 30)).save(source)
+            shot = {"type": "image", "source": {"path": str(source)}, "factual_status": "fact",
+                    "heading": "Note interne de la scène"}
+            storytelling_render.poster(shot, root / "with-heading.png", (960, 540))
+            storytelling_render.poster({**shot, "heading": "Autre note"}, root / "other-heading.png", (960, 540))
+            with Image.open(root / "with-heading.png") as first, Image.open(root / "other-heading.png") as second:
+                self.assertEqual(first.tobytes(), second.tobytes())
+                self.assertEqual(first.getpixel((480, 270)), (220, 30, 30))
+                # The sides show a blurred copy of the picture, not the old dark card background.
+                red, green, blue = first.getpixel((40, 270))
+                self.assertGreater(red, green + 40)
 
 
 @unittest.skipUnless(os.environ.get("FACTORY_MEDIA_INTEGRATION") == "1", "Recette média explicite requise")
@@ -52,7 +73,7 @@ class StorytellingRenderIntegrationTests(unittest.TestCase):
                                  "utterances": [{**u, "start_seconds": boundaries[i], "end_seconds": boundaries[i + 1]}
                                                 for i, u in enumerate(utterances)]}],
                      "duration_seconds": duration, "synthetic": True,
-                     "sound_tracks": [{**artifact(music), "kind": "music", "start_seconds": 0., "duration_seconds": duration, "gain_db": -18},
+                     "sound_tracks": [{**artifact(music), "kind": "music", "start_seconds": 0., "duration_seconds": duration, "level_db": -18},
                                       {**artifact(effect), "kind": "effect", "start_seconds": 1.2, "duration_seconds": .35, "gain_db": -10}],
                      "artifacts": [artifact(voice), artifact(music), artifact(effect)]}
             timeline = build_timeline(script, audio, [])
@@ -62,7 +83,17 @@ class StorytellingRenderIntegrationTests(unittest.TestCase):
             self.assertEqual(len(timeline["sound_tracks"]), 2)
             # These chosen durations expose drift if each shot is rounded in isolation.
             self.assertNotEqual(sum(round(s["duration_seconds"] * 12) for s in timeline["shots"]), round(duration * 12))
-            result = render(script, timeline, audio, root / "export", draft=True)
+            calls = []
+            original = storytelling_render._run
+            def spy(args):
+                calls.append(args)
+                return original(args)
+            with patch("youtube_growth.factory.storytelling_render._run", side_effect=spy):
+                result = render(script, timeline, audio, root / "export", draft=True)
+            # The documented level_db reaches the mix, like a legacy gain_db.
+            mix = calls[-1][calls[-1].index("-filter_complex") + 1]
+            self.assertIn("volume=-18.0dB", mix)
+            self.assertIn("volume=-10.0dB", mix)
             info = probe(Path(result["path"]))
             inspection = subprocess.run([shutil.which("ffprobe"), "-v", "error", "-count_frames", "-show_streams", "-of", "json", result["path"]],
                                         capture_output=True, timeout=30, check=True)

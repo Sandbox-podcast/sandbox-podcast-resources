@@ -6,7 +6,7 @@ Lire cette référence pour une histoire originale traitée par `storytelling-*`
 
 1. Créer le cadrage avec `storytelling-frame`, puis lancer `storytelling-run` sur le même état persistant.
 2. Si le modèle local manque, lire le `request_path` exporté, traiter la demande avec les outils de la conversation et écrire le scénario intégral selon son schéma. L'importer avec `storytelling-script`. Faire relire sources et texte par un critique distinct si le workflow actif le demande.
-3. Conserver identifiants, sources et voix du scénario. Enregistrer les fichiers reçus avant de continuer ; la copie de production doit résoudre les téléchargements en pistes locales mesurées. Une scène verrouillée protège également ses voix et médias.
+3. Conserver identifiants, sources et voix du scénario. Enregistrer les fichiers reçus avant de continuer ; la copie de production doit résoudre les téléchargements en pistes locales mesurées. Une scène verrouillée protège également ses voix et médias. Une musique ou un effet importé s'écrit `{"provider": "recordings", "source_id": …, "purpose": …, "level_db": …}` : déclarer ses droits à l'import, sans recopier chemin ni autorisation dans le scénario, et régler le volume par `level_db` (voir le tutoriel).
 4. Reprendre avec `storytelling-run` ou sa file durable. Vérifier MP4, sous-titres et manifeste, puis préciser les contrôles effectués. Une correction crée une version et recalcule ses dépendances.
 
 Pour un documentaire autonome, conserver une vérification éditoriale distincte. Un compte rendu de contrôle technique ne la remplace pas.

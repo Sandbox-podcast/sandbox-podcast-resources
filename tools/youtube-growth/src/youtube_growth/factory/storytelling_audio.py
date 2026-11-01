@@ -15,6 +15,7 @@ from .elevenlabs import ElevenLabsClient, GenerationUnknown, ProviderError, pars
 from .local_lock import local_lock
 from .media import fingerprint
 from .narrative import SAPI_SCRIPT, audio_duration, join_waves, spoken
+from .storytelling_contracts import sound_level_db
 
 VERSION = 2
 
@@ -441,10 +442,27 @@ def _utterance(store, config, script, utterance, voice, cache, *, client=None):
         return _save_cache(receipt, key, result)
 
 
+# Placement and volume belong to the mix, not to the generated or imported resource.
+MIX_FIELDS = {"offset_seconds", "gain_db", "level_db", "fade_in_seconds", "fade_out_seconds", "purpose", "utterance_id", "sound_id"}
+# Before level_db was applied, it still entered the key; such caches remain reusable.
+LEGACY_MIX_FIELDS = MIX_FIELDS - {"level_db"}
+
+
+def _sound_identity(spec, kind, cache):
+    def identity(excluded):
+        return {"version": VERSION, "kind": kind, "spec": {k: v for k, v in spec.items() if k not in excluded}}
+    current = identity(MIX_FIELDS)
+    if "level_db" in spec:
+        legacy = identity(LEGACY_MIX_FIELDS)
+        # A started legacy resource keeps its key: no second paid call or new render for it.
+        if (cache / digest(legacy)).is_dir():
+            return legacy
+    return current
+
+
 def _sound(store, config, script, spec, kind, cache, *, client=None):
-    generation_spec = {key: value for key, value in spec.items() if key not in {
-        "offset_seconds", "gain_db", "fade_in_seconds", "fade_out_seconds", "purpose", "utterance_id", "sound_id"}}
-    identity = {"version": VERSION, "kind": kind, "spec": generation_spec}
+    identity = _sound_identity(spec, kind, cache)
+    generation_spec = identity["spec"]
     key = digest(identity)
     directory = cache / key
     directory.mkdir(parents=True, exist_ok=True)
@@ -455,8 +473,12 @@ def _sound(store, config, script, spec, kind, cache, *, client=None):
         provider = spec.get("provider", "elevenlabs")
         target = directory / "sound.wav"
         if provider == "recordings":
+            if not isinstance(spec.get("path"), str) or not spec.get("sha256"):
+                raise ValueError("storytelling_sound_source_unverified")
             source = Path(spec["path"]).resolve(strict=True)
-            if not spec.get("authorization") or fingerprint(source) != spec.get("sha256"):
+            authorization = spec.get("authorization")
+            if (not isinstance(authorization, str) or not authorization.strip() or authorization.strip() == "usage_to_confirm"
+                    or fingerprint(source) != spec["sha256"]):
                 raise ValueError("storytelling_sound_source_unverified")
             _normalize(source, target)
         elif provider == "elevenlabs":
@@ -532,9 +554,10 @@ def produce_audio(store, config, script, directory: Path, *, synthetic=False):
         specifications = ([('music', sound["music"])] if isinstance(sound.get("music"), dict) else []) + [("effect", s) for s in sound.get("effects", [])]
         for kind, spec in specifications:
             _cancelled(store, script["story_id"])
-            stem = _sound(store, config, script, spec, kind, cache)
+            # Mix values are checked before any import or paid generation.
             offset = _number(spec.get("offset_seconds", 0), "storytelling_sound_offset_invalid", 0, measured)
-            gain = _number(spec.get("gain_db", -25 if kind == "music" else -15), "storytelling_sound_gain_invalid", -60, 0)
+            gain = sound_level_db(spec, kind)
+            stem = _sound(store, config, script, spec, kind, cache)
             sound_tracks.append({**stem, "scene_id": scene["scene_id"], "start_seconds": scene_start + offset,
                                  "duration_seconds": min(stem["duration_seconds"], measured - offset), "gain_db": gain,
                                  "fade_in_seconds": min(.4, measured/4), "fade_out_seconds": min(.6, measured/4)})

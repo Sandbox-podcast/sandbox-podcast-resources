@@ -176,6 +176,72 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(timeline["clock"], "measured_audio")
             self.assertTrue(all(c["alignment"] == "measured_audio_chunks" for c in timeline["captions"]))
 
+    def imported_music_project(self, rights="owned", extra=None, cue=None):
+        music = self.root / "synthetic-music.wav"
+        with wave.open(str(music), "wb") as output:
+            output.setparams((1, 2, 48000, 0, "NONE", "not compressed"))
+            output.writeframes(b"\x00\x00" * 24000)
+        brief = {**brief_fixture(), "media": [str(music)], **(extra or {})}
+        if rights:
+            brief["media_rights"] = {str(music): rights}
+        storytelling.frame(self.store, brief)
+        source = next(s for s in storytelling._sources(self.store, storytelling._record(self.store, "pipeline-fixture"))["sources"] if s["media_type"] == "audio")
+        script = script_fixture()
+        script["budget"] = brief["budget"]
+        script["scenes"][0]["sound"] = {"music": {"provider": "recordings", "source_id": source["source_id"],
+                                                  "purpose": "Installer l'attente sur le quai.", "level_db": -18, **(cue or {})}}
+        return script
+
+    def test_imported_music_needs_rights_and_a_coherent_level(self):
+        script = self.imported_music_project(rights=None)
+        with self.assertRaisesRegex(ValueError, "Source sonore autorisée absente"):
+            storytelling.import_script(self.store, "pipeline-fixture", script)
+        script = self.imported_music_project(cue={"gain_db": -25})
+        with self.assertRaisesRegex(ValueError, "Niveau sonore invalide"):
+            storytelling.import_script(self.store, "pipeline-fixture", script)
+        script = self.imported_music_project(cue={"gain_db": -18})
+        storytelling.import_script(self.store, "pipeline-fixture", script)
+
+    @unittest.skipUnless(shutil.which("ffmpeg"), "FFmpeg required for imported music")
+    def test_imported_music_from_source_id_reaches_the_timeline_at_its_level(self):
+        def system(text, voice, path):
+            target = path / "system.wav"
+            with wave.open(str(target), "wb") as output:
+                output.setparams((1, 2, 48000, 0, "NONE", "not compressed"))
+                output.writeframes(b"\x00\x00" * 48000)
+            return target
+        storytelling.import_script(self.store, "pipeline-fixture", self.imported_music_project())
+        with patch("youtube_growth.factory.storytelling_audio._system", side_effect=system), \
+                patch("youtube_growth.factory.storytelling_render.render", side_effect=self.fake_render):
+            result = storytelling.run(self.store, self.config, "pipeline-fixture", synthetic=True)
+        self.assertEqual(result["status"], "completed")
+        timeline = json.loads(Path(result["timeline"]["path"]).read_text(encoding="utf-8"))
+        self.assertEqual([(t["kind"], t["provider"], t["gain_db"]) for t in timeline["sound_tracks"]], [("music", "recordings", -18)])
+
+    @unittest.skipUnless(shutil.which("ffmpeg"), "FFmpeg required for imported browser audio")
+    def test_browser_workflow_keeps_imported_music_resolved(self):
+        from youtube_growth.factory.storytelling_browser import record_attempt, complete_request
+        budget = {"limit": 0, "currency": "EUR", "browser_credit_limit": 1000}
+        script = self.imported_music_project(extra={"audio_workflow": "elevenlabs_browser", "budget": budget})
+        script["speakers"]["n"]["voice"] = {"provider": "elevenlabs_browser", "name": "Voix choisie dans ElevenLabs",
+                                            "authorization": "Voix du compte connecté via navigateur."}
+        storytelling.import_script(self.store, "pipeline-fixture", script)
+        with patch("youtube_growth.factory.storytelling_render.render", side_effect=self.fake_render):
+            waiting = storytelling.run(self.store, self.config, "pipeline-fixture", synthetic=True)
+            self.assertEqual(waiting["status"], "awaiting_browser_audio")
+            self.assertTrue(all(row["kind"] == "speech" for row in waiting["browser_requests"]))
+            for index, row in enumerate(waiting["browser_requests"]):
+                download = self.root / ("download-" + str(index) + ".wav")
+                with wave.open(str(download), "wb") as output:
+                    output.setparams((1, 2, 48000, 0, "NONE", "not compressed"))
+                    output.writeframes(b"\x00\x00" * 48000)
+                record_attempt(self.store, row["request_id"], 1000, 100, "Crédits de recette simulés, aucun appel fournisseur.")
+                complete_request(self.store, row["request_id"], download,
+                                 {"provider": "ElevenLabs", "surface": "test_double", "voice_name": "Voix de recette", "evidence": "Fichier PCM synthétique de test, aucune génération réelle."})
+            completed = storytelling.run(self.store, self.config, "pipeline-fixture", synthetic=True)
+        self.assertEqual(completed["status"], "completed")
+        self.assertEqual([t["gain_db"] for t in completed["audio"]["sound_tracks"]], [-18])
+
     def test_project_and_media_paths_cannot_traverse(self):
         brief = brief_fixture()
         brief["story_id"] = "../../escape"

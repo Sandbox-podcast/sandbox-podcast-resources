@@ -93,7 +93,7 @@ Un documentaire autonome exige une critique éditoriale séparée du scénario. 
 
 Examine les plans et leur fonction dans le récit. Chaque plan est lié aux répliques qu'il accompagne. Les textes affichés restent modifiables dans le scénario.
 
-Le moteur local compose des schémas et utilise les images ou vidéos importées dont les droits sont renseignés. Une illustration générée ne peut pas être déclarée comme preuve. Les intentions de cadrage et de mouvement sont conservées ; le rendu actuel applique son habillage local et ses fondus. Un mouvement spécialisé absent du moteur demande une ressource préparée ou une adaptation du rendu.
+Le moteur local compose des schémas et utilise les images ou vidéos importées dont les droits sont renseignés. Une illustration générée ne peut pas être déclarée comme preuve. Les intentions de cadrage et de mouvement sont conservées ; le rendu actuel applique ses fondus. Une image occupe tout le cadre, posée sur une copie floutée et assombrie d'elle-même ; une vidéo est ajustée au cadre. Seul `on_screen_text` s'affiche en titre, en haut à gauche sur un fond sombre, hors de la zone des sous-titres : sans texte à l'écran, le plan n'a pas de titre, et la fonction de la scène n'apparaît jamais. Aucun bandeau de marque n'est ajouté. Les scènes de fiction ou de reconstitution portent leur mention en haut à droite. Un mouvement spécialisé absent du moteur demande une ressource préparée ou une adaptation du rendu.
 
 ### 5. Voix et son
 
@@ -106,6 +106,16 @@ Codex récupère le fichier terminé dans ElevenLabs, puis l'attache à sa deman
 La factory copie le fichier, contrôle son empreinte et mesure sa durée. Les textes longs passent par de courts segments ; le programme les assemble et conserve leurs bornes audio mesurées pour les sous-titres. Les noms des locuteurs et les consignes de montage restent hors du texte envoyé à la voix.
 
 Les demandes musicales et les effets suivent le même parcours lorsqu'ils sont présents dans le scénario. Chaque ressource conserve son fichier et sa fonction. Le montage réduit le fond sonore sous les voix, ajoute des fondus et contrôle les crêtes.
+
+Pour poser sous une scène une musique ou un effet que tu as fourni, importe le fichier audio avec ses droits (`media_rights` dans le brief), puis référence-le dans `sound.music` ou `sound.effects` :
+
+```json
+{"provider": "recordings", "source_id": "source-…", "purpose": "Installer l'attente.", "level_db": -18}
+```
+
+Le scénario ne recopie ni chemin ni autorisation. La production reprend le fichier figé et son empreinte depuis la source importée, et l'autorisation depuis les droits déclarés à l'import. Elle refuse le son si ces droits manquent (`usage_to_confirm`) ou si le fichier ne correspond plus à son empreinte (`storytelling_sound_source_unverified`). Une autorisation écrite dans le scénario est remplacée par ces droits.
+
+`level_db` fixe le volume de la piste dans le mix, de -60 à 0 dB ; sans valeur, la musique est à -25 dB et un effet à -15 dB. L'ancien champ `gain_db` reste accepté s'il est seul ou égal à `level_db` ; deux valeurs différentes bloquent l'import du scénario et la production (`storytelling_sound_level_conflict`). Changer le volume réutilise le son déjà préparé ; changer le fichier ou ses droits le prépare à nouveau. Le compresseur placé sous les voix et la normalisation finale agissent ensuite sur l'ensemble du mix.
 
 Ce parcours navigateur s'arrête quand aucune session Codex ne peut effectuer les manipulations ElevenLabs. Le worker peut continuer les traitements locaux déjà prêts. Il reprend le montage lorsque tous les fichiers attendus sont disponibles.
 
