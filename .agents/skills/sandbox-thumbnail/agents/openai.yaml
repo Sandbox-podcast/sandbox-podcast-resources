@@ -1,0 +1,4 @@
+interface:
+  display_name: "Miniatures Sandbox"
+  short_description: "Visages naturels, accroches courtes et fonds sobres"
+  default_prompt: "Utilise $sandbox-thumbnail pour créer la miniature de cet épisode à partir de son sujet et de nos portraits."

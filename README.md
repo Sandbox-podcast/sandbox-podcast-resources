@@ -142,7 +142,7 @@ Le [tutoriel complet](docs/factory/storytelling-generator.md) détaille les sept
 
 ## Les skills
 
-Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 11 skills SANDBOX et cinq collections externes qui totalisent 196 entrées, choisies pour faire des vidéos YouTube sur l'IA.
+Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 12 skills SANDBOX et cinq collections externes qui totalisent 196 entrées, choisies pour faire des vidéos YouTube sur l'IA.
 
 ### Skills SANDBOX
 
@@ -159,6 +159,7 @@ Dans Codex, appelle un skill avec `$nom-du-skill` ; dans Claude Code, avec `/nom
 | [sandbox-selection](.agents/skills/sandbox-selection/SKILL.md) | Choisit ou révise les extraits d'un épisode analysé : coupes, formats, passages retenus ou rejetés, réserves. |
 | [sandbox-production](.agents/skills/sandbox-production/SKILL.md) | Monte et contrôle un rendu local à partir de coupes validées ou d'un scénario narratif sourcé, avec sous-titres et provenance. |
 | [sandbox-packaging](.agents/skills/sandbox-packaging/SKILL.md) | Prépare titres, miniatures, couvertures et textes de diffusion, dont le pack LinkedIn à publier manuellement. |
+| [sandbox-thumbnail](.agents/skills/sandbox-thumbnail/SKILL.md) | Crée des miniatures sobres avec les visages de l’équipe, des tenues et attitudes variées, une phrase courte et un fond uni. |
 | [sandbox-diffusion](.agents/skills/sandbox-diffusion/SKILL.md) | Planifie, suspend, reprend ou simule le calendrier entre la disponibilité de l'épisode et le prochain tournage. Rien n'est publié. |
 | [sandbox-resultats](.agents/skills/sandbox-resultats/SKILL.md) | Collecte ou importe les performances, compare contenus et expériences, prépare le bilan et le brief du cycle suivant. |
 
