@@ -163,6 +163,8 @@ Dans Codex, appelle un skill avec `$nom-du-skill` ; dans Claude Code, avec `/nom
 | [sandbox-diffusion](.agents/skills/sandbox-diffusion/SKILL.md) | Planifie, suspend, reprend ou simule le calendrier entre la disponibilité de l'épisode et le prochain tournage. Rien n'est publié. |
 | [sandbox-resultats](.agents/skills/sandbox-resultats/SKILL.md) | Collecte ou importe les performances, compare contenus et expériences, prépare le bilan et le brief du cycle suivant. |
 
+Le skill `sandbox-thumbnail` inclut les règles du trio et des touches bleu nuit/cyan validées, ainsi qu'un [manifeste de portraits et une procédure portable](.agents/skills/sandbox-thumbnail/references/portraits.md). Son script récupère les trois photos publiques épinglées et vérifie leurs empreintes ; les médias restent locaux.
+
 Les consignes de référence sont dans `.agents/skills/`. Les fichiers de `.claude/skills/` y renvoient et se régénèrent avec `python tools/repository/sync_skills.py --write`.
 
 ### Skills externes
