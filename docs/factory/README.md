@@ -90,10 +90,10 @@ La préparation doit ensuite proposer trois hypothèses de titre et d'image dist
 
 - L'idée que le spectateur doit comprendre et les paroles ou timecodes qui la justifient.
 - Le rôle du titre et celui du texte dans l'image, avec une raison pour chaque mot conservé.
-- La composition : personne ou élément montré, choix de l'image source, expression réelle, cadrage, contraste et ordre de lecture.
+- La composition : personnes montrées, portraits sources autorisés, expression choisie, transformations éventuelles, cadrage, contraste et ordre de lecture.
 - Ce qui doit différencier cette variante des autres et le risque de mauvaise interprétation.
 
-Visages, gestes et écrans viennent des vrais médias autorisés. La composition suit la charte Sandbox et respecte la démonstration. Une image peut demander peu de texte ; il faut expliquer ce que ces mots ajoutent au titre.
+La direction visuelle suit [sandbox-thumbnail](../../.agents/skills/sandbox-thumbnail/SKILL.md) : visages de l'équipe, vêtements/postures/émotions variés, phrase courte et fond uni, sans effets inutiles. Les portraits viennent de médias autorisés ; les transformations sont documentées et ne sont jamais présentées comme une réaction filmée. Expliquer ce que les mots ajoutent au titre. Cette direction ne modifie pas l'identité de la bannière ou de l'avatar de la chaîne.
 
 Le moteur livre les propositions, une planche avec leurs titres et des aperçus à 320 et 160 pixels de largeur. Vérifier à ces tailles les mots lisibles, le premier élément identifié et les détails perdus. Confier la revue à un autre lecteur ou agent, avec le contenu source et le brief. Il examine fidélité, compréhension, texte, composition et différence entre variantes, puis demande de retravailler ou rejeter les propositions insuffisantes. La revue de la vidéo et celle des miniatures sont deux contrôles séparés.
 

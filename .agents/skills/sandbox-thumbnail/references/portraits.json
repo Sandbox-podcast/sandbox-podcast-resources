@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "source_commit": "fcc96e560845c5ead64fb4eb780c4289db7bcc3c",
+  "portraits": [
+    {
+      "id": "lou",
+      "name": "Lou",
+      "filename": "lou.png",
+      "url": "https://raw.githubusercontent.com/Sandbox-podcast/sandbox-podcast-site/fcc96e560845c5ead64fb4eb780c4289db7bcc3c/apps/site/public/team/lou.png",
+      "sha256": "d027b19f90811e02d8c79d5d8c1b5c803e4007708b7b64184305ccb4fbf84e88",
+      "source_page": "https://www.sandboxpodcast.fr/about"
+    },
+    {
+      "id": "nicolas",
+      "name": "Nicolas",
+      "filename": "nicolas-prod-2026-10-15.webp",
+      "url": "https://raw.githubusercontent.com/Sandbox-podcast/sandbox-podcast-site/fcc96e560845c5ead64fb4eb780c4289db7bcc3c/apps/site/public/team/nicolas-prod-2026-10-15.webp",
+      "sha256": "aea75f5d4a0c46079e5464a94bc5338a19a720c61063001e23e0e5e6b06b7fe7",
+      "source_page": "https://www.sandboxpodcast.fr/about"
+    },
+    {
+      "id": "loic",
+      "name": "Loïc",
+      "filename": "loic.png",
+      "url": "https://raw.githubusercontent.com/Sandbox-podcast/sandbox-podcast-site/fcc96e560845c5ead64fb4eb780c4289db7bcc3c/apps/site/public/team/loic.png",
+      "sha256": "cd742771ee7e786346fb30327343b01c3ecce988e02cab18c04a71b67af46493",
+      "source_page": "https://www.sandboxpodcast.fr/about"
+    }
+  ]
+}
