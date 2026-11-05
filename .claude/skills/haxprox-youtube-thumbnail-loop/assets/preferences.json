@@ -1,0 +1,38 @@
+{
+  "preferences": [
+    {
+      "date": "2026-11-01",
+      "user_words": "Il faut couper au niveau de la tête et du cou, maximum le torse.",
+      "rule": "Cadrer sur tête, cou et épaules, au maximum le haut du torse si le geste sert la composition.",
+      "scope": "Miniatures de Lou"
+    },
+    {
+      "date": "2026-11-02",
+      "user_words": "je peux pas avoir toujours la même posture, le même pull etc, faut des têtes differentes",
+      "rule": "Varier expressions, gestes et vêtements selon le sujet ; joindre une photo originale pour préserver l’identité.",
+      "scope": "Choix des portraits de Lou",
+      "bank": "assets/identity/lou/portraits"
+    },
+    {
+      "date": "2026-11-05",
+      "user_words": "Voila les exemples, il faut faire le meme patern mais pour notre thematique avec nos tete",
+      "rule": "Suivre le pattern des exemples fournis et l'adapter au sujet et aux personnes demandées.",
+      "scope": "Pack SANDBOX approuvé et futurs briefs avec références explicites",
+      "example": "assets/examples/sandbox-equipe-tech-ia"
+    },
+    {
+      "date": "2026-11-05",
+      "user_words": "Elle sont parfaite ces miniatures, met à jour mon skill pour pouvoir faire aussi bien la prochaine fois",
+      "rule": "Utiliser les trois miniatures comme exemples approuvés de composition et de lisibilité ; adapter leur contenu au prochain sujet.",
+      "scope": "Référence de qualité, pas une preuve de performance",
+      "example": "assets/examples/sandbox-equipe-tech-ia"
+    },
+    {
+      "date": "2026-11-05",
+      "user_words": "Met tout ce qu'il faut dans le dossier haxprox-youtube-thumbnail-loop pour que je puisse la partager à un collegue et qu'elle fonctionne, pas d'url vers des path ailleurs etc",
+      "rule": "Conserver les dépendances et références locales dans le dossier du skill et vérifier son déplacement.",
+      "scope": "Portabilité du skill"
+    }
+  ],
+  "note": "Les préférences propres à d'autres projets ne sont pas nécessaires à ce skill portable. Les couleurs de ce pack ne constituent pas une charte universelle."
+}

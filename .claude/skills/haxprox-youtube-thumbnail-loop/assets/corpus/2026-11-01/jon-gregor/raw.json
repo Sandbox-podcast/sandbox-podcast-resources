@@ -1,0 +1,970 @@
+{
+  "id": "UCHa4gKlAuJyviI4fmjBYRZQ",
+  "channel": "Jon Gregor",
+  "channel_id": "UCHa4gKlAuJyviI4fmjBYRZQ",
+  "title": "Jon Gregor - Videos",
+  "availability": "public",
+  "channel_follower_count": 40400,
+  "description": "Bienvenue sur la chaîne dédiée à l'Intelligence Artificielle et sa monétisation.\n\nMa mission est simple : te montrer comment lancer, développer et scaler un business en ligne rentable grâce à l'IA pour générer des revenus concrets et atteindre ta liberté financière.\n\nFort de mes expériences et succès, je suis convaincu que l'IA représente une opportunité unique pour des milliers de personnes.\n\nDans mes vidéos, tu apprendras :\n1. Identifier et exploiter des niches de business IA inexploitées.\n2. Des méthodes pas à pas pour générer tes premières ventes avec l'IA, même sans expérience.\n3. Les stratégies pour construire des revenus passifs et automatiser tes tâches.\n4. Les meilleurs outils et prompts pour se lancer.\n\nSaisis la plus grande opportunité business de notre époque !\n\nAbonne-toi à la chaîne pour rejoindre notre communauté d'entrepreneurs IA ! C'est maintenant !\n",
+  "tags": [
+    "intelligence artificielle",
+    "automatisation",
+    "IA",
+    "ChatGPT",
+    "OpenAI",
+    "Gemini",
+    "Perplexity",
+    "Créateur de contenus",
+    "Business",
+    "Productivité",
+    "Machine Learning",
+    "Deep Learning",
+    "GPT-5",
+    "Midjourney",
+    "Modèles de langage",
+    "Agents autonomes",
+    "Automatisation IA",
+    "IA générative",
+    "Prompt Engineering",
+    "Startups IA",
+    "SaaS IA",
+    "Business IA",
+    "Gagner de l’argent avec l’IA",
+    "Création de contenu IA",
+    "IA et SEO",
+    "Marketing IA",
+    "IA et trading",
+    "IA et crypto",
+    "claude",
+    "automatisations",
+    "LLM",
+    "GenAI",
+    "side hustle",
+    "make money"
+  ],
+  "thumbnails": [
+    {
+      "url": "https://yt3.googleusercontent.com/-fCrUyjLte8QdB-piMvcfmrDxR9COtvccy5uptAVJSkTZd6YSadTghIsIH1h9YuWJ4PcgmXbXbg=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 175,
+      "width": 1060,
+      "preference": -10,
+      "id": "0",
+      "resolution": "1060x175"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/-fCrUyjLte8QdB-piMvcfmrDxR9COtvccy5uptAVJSkTZd6YSadTghIsIH1h9YuWJ4PcgmXbXbg=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 188,
+      "width": 1138,
+      "preference": -10,
+      "id": "1",
+      "resolution": "1138x188"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/-fCrUyjLte8QdB-piMvcfmrDxR9COtvccy5uptAVJSkTZd6YSadTghIsIH1h9YuWJ4PcgmXbXbg=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 283,
+      "width": 1707,
+      "preference": -10,
+      "id": "2",
+      "resolution": "1707x283"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/-fCrUyjLte8QdB-piMvcfmrDxR9COtvccy5uptAVJSkTZd6YSadTghIsIH1h9YuWJ4PcgmXbXbg=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 351,
+      "width": 2120,
+      "preference": -10,
+      "id": "3",
+      "resolution": "2120x351"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/-fCrUyjLte8QdB-piMvcfmrDxR9COtvccy5uptAVJSkTZd6YSadTghIsIH1h9YuWJ4PcgmXbXbg=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 377,
+      "width": 2276,
+      "preference": -10,
+      "id": "4",
+      "resolution": "2276x377"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/-fCrUyjLte8QdB-piMvcfmrDxR9COtvccy5uptAVJSkTZd6YSadTghIsIH1h9YuWJ4PcgmXbXbg=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 424,
+      "width": 2560,
+      "preference": -10,
+      "id": "5",
+      "resolution": "2560x424"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/-fCrUyjLte8QdB-piMvcfmrDxR9COtvccy5uptAVJSkTZd6YSadTghIsIH1h9YuWJ4PcgmXbXbg=s0",
+      "id": "banner_uncropped",
+      "preference": -5
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/j_ApekvKDdCzLsOFUDgUHHutwW2ecqPbHj9zpjgxsbR56gbu7u6YlwR8RrbhZxFiGmXsTZG9_w=s900-c-k-c0x00ffffff-no-rj",
+      "height": 900,
+      "width": 900,
+      "id": "7",
+      "resolution": "900x900"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/j_ApekvKDdCzLsOFUDgUHHutwW2ecqPbHj9zpjgxsbR56gbu7u6YlwR8RrbhZxFiGmXsTZG9_w=s0",
+      "id": "avatar_uncropped",
+      "preference": 1
+    }
+  ],
+  "uploader_id": "@JonGregor_IA",
+  "uploader_url": "https://www.youtube.com/@JonGregor_IA",
+  "modified_date": null,
+  "view_count": null,
+  "playlist_count": 30,
+  "uploader": "Jon Gregor",
+  "channel_url": "https://www.youtube.com/channel/UCHa4gKlAuJyviI4fmjBYRZQ",
+  "_type": "playlist",
+  "entries": [
+    {
+      "title": "How to Make Money with GTA 6 (Start NOW)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Gs8mt2bxR5s/hq720_custom_2.jpg?sqp=CPjLntcG-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_y7DpLD3UfMzsUw5B1UClbrRhiQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Gs8mt2bxR5s/hq720_custom_2.jpg?sqp=CPjLntcG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC1dzAhns03y0F68vcYaNXisLUa_Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 948,
+      "view_count": 1700,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "Gs8mt2bxR5s",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=Gs8mt2bxR5s",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Build a Profitable AI App in 20 Mins (NO CODING!)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/bYj8kcfytTo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBSxx6VjJIjdNq_BNcbHbjbxay5qg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/bYj8kcfytTo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsR5pXtN3W37SK59ywh1PdKfolKA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 743,
+      "view_count": 6800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "bYj8kcfytTo",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=bYj8kcfytTo",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Learn 95% of Claude Cowork in 20 min",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ybk8iJ8vz6Y/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAcfKK8OgdpqQ8RrzJpy2KILudHHg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ybk8iJ8vz6Y/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDeGT7_UGmYM2_03ckgMzKUxo2Gsw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1241,
+      "view_count": 33000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "ybk8iJ8vz6Y",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=ybk8iJ8vz6Y",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "These AI skills are worth gold (the 7th is incredible)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/XxAfaIZzB2k/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBUpsakblWiT6ruaS_yJWzFgbohOg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/XxAfaIZzB2k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDo_t7uDqWFGqgS89r_GaS3TaIZdA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 776,
+      "view_count": 1300,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "XxAfaIZzB2k",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=XxAfaIZzB2k",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "This AI business will replace your salary",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi_lc/Itpy8qpdmDE/hq720_en-US.jpg?sqp=CPjLntcG-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBqLzl_8DMhIwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9JdHB5OHFwZG1ERS9ocWRlZmF1bHQuanBn&rs=AOn4CLC1zcoxkTxHoxfdLxxArdvJR5x4nQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi_lc/Itpy8qpdmDE/hq720_en-US.jpg?sqp=CPjLntcG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBqLzl_8DMhIwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9JdHB5OHFwZG1ERS9ocWRlZmF1bHQuanBn&rs=AOn4CLA7D_CBgoN_1UanbVhUD4FRSahxnA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 599,
+      "view_count": 12000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "Itpy8qpdmDE",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=Itpy8qpdmDE",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "What I'm secretly preparing for you",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/55CzcD5T-RM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzjWgxKQ0aZ_FSR4XEzuW3DtQmyQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/55CzcD5T-RM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB7tLhwaKgdYqeqYQc0lhawXQAWYw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 89,
+      "view_count": null,
+      "timestamp": null,
+      "live_status": null,
+      "availability": "subscriber_only",
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "55CzcD5T-RM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=55CzcD5T-RM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Create this digital product with AI and generate over €100/day",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/seaNEMztd4k/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDm12aXrFC0BkGuce7OzBIpxf8NCw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/seaNEMztd4k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDD0tYXFA3uamMID0QokuZXPMqb3w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1085,
+      "view_count": 235000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "seaNEMztd4k",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=seaNEMztd4k",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How to create an app worth over €1M/month using AI",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/r-TWRLk8Wwg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA9tnZzgdtss1OjJxa5GBex-nlKAQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/r-TWRLk8Wwg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCOTxtFYf4wIaWMtjyeW8-QZGlfmQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 919,
+      "view_count": 56000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "r-TWRLk8Wwg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=r-TWRLk8Wwg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "3 AI AUTOMATIONS that help you EARN CASH (no code)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/LwQ_4RbuaqY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBeuu_Xf34eY9Rc6VJIU9g8ITNRLA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/LwQ_4RbuaqY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDNHkczSrSF3kYh7G0wx-t9kvobdA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 721,
+      "view_count": 15000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "LwQ_4RbuaqY",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=LwQ_4RbuaqY",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How to make €940/week with Nano Banana 🍌",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/yOos8WPRNto/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC3peA4TVDAsSko54aI9gmj24G_7w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/yOos8WPRNto/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOo0LpJ2y2jU_ni-u6ZIk8jJxj6Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 536,
+      "view_count": 83000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "yOos8WPRNto",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=yOos8WPRNto",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "AI AGENTS: 99% of people don't know about this!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Ha00LqnP_6M/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDBqURM2AM5_U4ERrAHta7yLxYXTA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Ha00LqnP_6M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDu9T--jHAY9aH5plyjrmC1x26ZuA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 470,
+      "view_count": 1900,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "Ha00LqnP_6M",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=Ha00LqnP_6M",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "AI works, you cash in: the Skywork opportunity",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/2YsYmxWmOSk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB3ahOxT7QwnpqB7aOeO7RmsZl3uQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/2YsYmxWmOSk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAVDl2Bu88R1fvjLzvXIJNkkVc4HQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 650,
+      "view_count": 5400,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "2YsYmxWmOSk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=2YsYmxWmOSk",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "ChatGPT Agent: the ULTIMATE 6-Minute Guide.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/uZTJrH_Ao5Q/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCo8dYvFgdGdx2PR7Df9-4ZXYA6PA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/uZTJrH_Ao5Q/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAB-tRV6ZRTgKXH327YPmnoIKu0Pg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 398,
+      "view_count": 6400,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "uZTJrH_Ao5Q",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=uZTJrH_Ao5Q",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "I tested ChatGPT Agent Mode... beware, DANGER!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ifJfGyQ3y0E/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAeWtovaon8ahxFzG_ylVZK9rbiMw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ifJfGyQ3y0E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsFOVHD9NkmZcc2FVPEx5_xCUXvQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 284,
+      "view_count": 2300,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "ifJfGyQ3y0E",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=ifJfGyQ3y0E",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "GPT-5: How It Will CHANGE Your Business (Demos & Review)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/JeW-C3Ic7Jk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCxsIk26HpA-j3T2wGzlok9px7wCg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/JeW-C3Ic7Jk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDLUxxukI_zRGCFTf54rhaUy5tl2Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 372,
+      "view_count": 1600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "JeW-C3Ic7Jk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=JeW-C3Ic7Jk",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Starting an AI website agency in 20 minutes (Full guide)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/4IHgQuLSbHM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAzg4jLRE29Kbhpng4uGFLDPnrWMQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/4IHgQuLSbHM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCrWyOMPr0jSFhJg30Puf0X-ljZ-A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1283,
+      "view_count": 17000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "4IHgQuLSbHM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=4IHgQuLSbHM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How to make MONEY with AI (starting from ZERO)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Jbj5fdtdhqI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA5fT8bNf7NEeow0zhKMW04lCu5Uw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Jbj5fdtdhqI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2G6SAC6kMoxAfx1IA4e6TFa-TTw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1179,
+      "view_count": 6400,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "Jbj5fdtdhqI",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=Jbj5fdtdhqI",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "2026: The First SOLOPRENEUR UNICORN (with Claude 4)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/MsvrNoyNJM0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLANN5M0iLCxRr7vFenUg8_tEPQNFg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/MsvrNoyNJM0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6Ha4eooLa3b2IBO8eWIN8ys97AQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 526,
+      "view_count": 4100,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "MsvrNoyNJM0",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=MsvrNoyNJM0",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Build a complete AI App in 10 minutes (no code)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/XxSz67I_mb4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHPOfV2QbpO8TQtJpTuxHL95CUVQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/XxSz67I_mb4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBdvJNU-I4w7weBEeqXAYVPk_jdQg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 709,
+      "view_count": 64000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "XxSz67I_mb4",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=XxSz67I_mb4",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "ChatGPT-4o : 10 exclusive AI businesses (launch NOW!)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/XbFPFKSuj1s/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCMVLxB5BrLWl6flHPmODBcwcCfHg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/XbFPFKSuj1s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBG0zqFe4asecAlfKFgfcyh77P3kA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 680,
+      "view_count": 9500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "XbFPFKSuj1s",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=XbFPFKSuj1s",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "3 steps to generate cash with AI (100% free)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/FP3e25btN6s/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDXKhPrRRLIgIdL8CzBTcUFIrhviw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/FP3e25btN6s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAWBfRI34C0pq8Widx4yN-paeqTPA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 673,
+      "view_count": 266000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "FP3e25btN6s",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=FP3e25btN6s",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "14'000 €  thanks to this ChatGPT prompt (you can copy it!)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/4t6L1omKJeo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAUphZVRGzwgrjDUvL5-Vz2j-xa6g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/4t6L1omKJeo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVl0QwCLUo8cF87dvQ-vNs5mhWqQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 590,
+      "view_count": 12000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "4t6L1omKJeo",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=4t6L1omKJeo",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "8 AI skills that will make millionaires in 2025",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/fpFjQM-IXy0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmEudDpEG56Q0ie1oqrZi8l7XVKg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/fpFjQM-IXy0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7zLgW3JpC-q1L4zq1SmWXVwmH4g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 707,
+      "view_count": 11000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "fpFjQM-IXy0",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=fpFjQM-IXy0",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "AI influencers make €10,000 PER POST...Here's HOW !",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/WWmBZ3R8BLc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBB8Ff2sm0yG5GJ_yG0RmuscDzViA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/WWmBZ3R8BLc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDE9pmsmg4tk7nEdLfk1JPpaPjIQQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 940,
+      "view_count": 4700,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "WWmBZ3R8BLc",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=WWmBZ3R8BLc",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "AI will surpass HUMAN intelligence in 2026?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/eiKh9mtFIPE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCE1otaiNisKoYNVTz9kw8mM4TTlw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/eiKh9mtFIPE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBMlU-lAngtYBjxcX8PFwEXp6m_zw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 406,
+      "view_count": 908,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "eiKh9mtFIPE",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=eiKh9mtFIPE",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "7 AI tools that WILL make you RICH",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/bWF2yGMgxsU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCgatEU-VRbsUDfWGHgTTB5HW63FA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/bWF2yGMgxsU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAiMtiuSfvQTVsR_lNu7uObdBRyaw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 873,
+      "view_count": 13000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "bWF2yGMgxsU",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=bWF2yGMgxsU",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The 3 AI that will CRASH Google in 2025 (test + comparison)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/5wH1QYpqwg0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDPfCnCkPkll-Y673OnHK6r89urw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/5wH1QYpqwg0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBCMMOCegja7PHhuE5FVmbc7f-a-g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 264,
+      "view_count": 1100,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "5wH1QYpqwg0",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=5wH1QYpqwg0",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Trump's 2025 secret plan to dominate AI (STARGATE)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/18pxrna5r5w/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAjZ32eRFWMu5j-i5lCy46l3jBrAw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/18pxrna5r5w/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLArtQtyHoxebpE4JpXPGGRhJLsnfw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 208,
+      "view_count": 1400,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "18pxrna5r5w",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=18pxrna5r5w",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The AI that replaces photographers! FLUX LoRA tutorial 2025",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/YZi11y8lMqs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBzLLTZ33l78Z8iKJuM8c46Q8rLfA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/YZi11y8lMqs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAS-_UuApwO-3GSvdRg8tlcpPmqBA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 774,
+      "view_count": 5600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "YZi11y8lMqs",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=YZi11y8lMqs",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "AI for beginners : Must-know basics",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/6VTZyuswGQk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDCRZTTr1hL1krdtW53W4foKd5y8Q",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/6VTZyuswGQk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAkr8jsaX0s-ic7eu7uDyV2fszbLg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 507,
+      "view_count": 113000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "6VTZyuswGQk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=6VTZyuswGQk",
+      "__x_forwarded_for_ip": null
+    }
+  ],
+  "extractor_key": "YoutubeTab",
+  "extractor": "youtube:tab",
+  "webpage_url": "https://www.youtube.com/@JonGregor_IA/videos",
+  "original_url": "https://www.youtube.com/@JonGregor_IA/videos",
+  "webpage_url_basename": "videos",
+  "webpage_url_domain": "youtube.com",
+  "release_year": null,
+  "epoch": 1793566423
+}

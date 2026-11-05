@@ -1,0 +1,3925 @@
+{
+  "id": "UCxrT9QLqHx5fWeSaL8MoJLQ",
+  "channel": "DevArt ",
+  "channel_id": "UCxrT9QLqHx5fWeSaL8MoJLQ",
+  "title": "DevArt  - Videos",
+  "availability": "public",
+  "channel_follower_count": 18700,
+  "description": "Tests d’IA, tutos et conseils de carrière pour progresser dans la Tech avec l’IA, sans courir après chaque nouvel outil.\n\n▬▬▬▬▬▬▬▬▬▬ ⚡️ ▬▬▬▬▬▬▬▬▬▬▬\n\n🧪 Des TESTS concrets de modèles et d’outils IA : Claude, ChatGPT, Cursor, LLM en local (Ollama, OpenCode, Mistral…). Ce qui marche vraiment, et ce qui ne marche pas.\n🛠️ Des TUTOS et des workflows pour coder, automatiser et bosser plus vite avec l’IA.\n🎯 Des conseils pour décrocher un poste dans la Tech : CV, portfolio, entretiens.\n👨‍💻 Le regard d’un SOFTWARE ENGINEER chez PLAYSTATION 🚀\n\n▬▬▬▬▬▬▬▬ 🎓 COMMUNAUTÉ 🎓 ▬▬▬▬▬▬▬▬\n\nRejoins DevArt Academy, la communauté gratuite. Tu y trouveras les prompts et ressources de chaque vidéo, des offres d’emploi repérées pour toi, et un accès direct à moi.\n👉 https://dub.sh/devart-academy\n\n▬▬▬▬▬▬▬▬▬ ⬇️ CONTACT ⬇️ ▬▬▬▬▬▬▬▬▬\n\nPour toute demande professionnelle ou collaboration : devarttechnews@gmail.com\n",
+  "tags": [
+    "Apprendre à Coder",
+    "react",
+    "css",
+    "javascript",
+    "devenir développeur",
+    "html",
+    "projets",
+    "Devenir programmeur",
+    "ai",
+    "chatgpt",
+    "mistral ai",
+    "llm",
+    "claude code",
+    "codex",
+    "developper avec ia",
+    "apprendre à coder avec ia",
+    "cursor",
+    "openclaw",
+    "deepseek",
+    "open ai",
+    "anthropic"
+  ],
+  "thumbnails": [
+    {
+      "url": "https://yt3.googleusercontent.com/ajP9N230JcEF6uRLGiY5LDfQVcC6ArqvdOly5tdUBlwbKdWKSCW5v5j0ntA6lRejXqk4-oF3jnQ=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 175,
+      "width": 1060,
+      "preference": -10,
+      "id": "0",
+      "resolution": "1060x175"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/ajP9N230JcEF6uRLGiY5LDfQVcC6ArqvdOly5tdUBlwbKdWKSCW5v5j0ntA6lRejXqk4-oF3jnQ=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 188,
+      "width": 1138,
+      "preference": -10,
+      "id": "1",
+      "resolution": "1138x188"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/ajP9N230JcEF6uRLGiY5LDfQVcC6ArqvdOly5tdUBlwbKdWKSCW5v5j0ntA6lRejXqk4-oF3jnQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 283,
+      "width": 1707,
+      "preference": -10,
+      "id": "2",
+      "resolution": "1707x283"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/ajP9N230JcEF6uRLGiY5LDfQVcC6ArqvdOly5tdUBlwbKdWKSCW5v5j0ntA6lRejXqk4-oF3jnQ=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 351,
+      "width": 2120,
+      "preference": -10,
+      "id": "3",
+      "resolution": "2120x351"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/ajP9N230JcEF6uRLGiY5LDfQVcC6ArqvdOly5tdUBlwbKdWKSCW5v5j0ntA6lRejXqk4-oF3jnQ=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 377,
+      "width": 2276,
+      "preference": -10,
+      "id": "4",
+      "resolution": "2276x377"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/ajP9N230JcEF6uRLGiY5LDfQVcC6ArqvdOly5tdUBlwbKdWKSCW5v5j0ntA6lRejXqk4-oF3jnQ=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "height": 424,
+      "width": 2560,
+      "preference": -10,
+      "id": "5",
+      "resolution": "2560x424"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/ajP9N230JcEF6uRLGiY5LDfQVcC6ArqvdOly5tdUBlwbKdWKSCW5v5j0ntA6lRejXqk4-oF3jnQ=s0",
+      "id": "banner_uncropped",
+      "preference": -5
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/Mz8VC3P2fFM4JfjEuZXjGy_9TV3qQdnQuVNsmDPf_w50L3T4Bx4f9Oi1zcO3wstv7dXV3_VV43I=s900-c-k-c0x00ffffff-no-rj",
+      "height": 900,
+      "width": 900,
+      "id": "7",
+      "resolution": "900x900"
+    },
+    {
+      "url": "https://yt3.googleusercontent.com/Mz8VC3P2fFM4JfjEuZXjGy_9TV3qQdnQuVNsmDPf_w50L3T4Bx4f9Oi1zcO3wstv7dXV3_VV43I=s0",
+      "id": "avatar_uncropped",
+      "preference": 1
+    }
+  ],
+  "uploader_id": "@devart-studio",
+  "uploader_url": "https://www.youtube.com/@devart-studio",
+  "modified_date": null,
+  "view_count": null,
+  "playlist_count": 136,
+  "uploader": "DevArt ",
+  "channel_url": "https://www.youtube.com/channel/UCxrT9QLqHx5fWeSaL8MoJLQ",
+  "_type": "playlist",
+  "entries": [
+    {
+      "title": "Even Anthropic Bans AI in Job Interviews",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/i-L6qD5Rr_Y/hq720_custom_2.jpg?sqp=CPjLntcG-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABB8lRoXfeHytkhKOKDLFc3Zq7KA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/i-L6qD5Rr_Y/hq720_custom_2.jpg?sqp=CPjLntcG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAUzDsOXpTHmzBxc4cHiZ4U70eG8Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1739,
+      "view_count": 10000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "i-L6qD5Rr_Y",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=i-L6qD5Rr_Y",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How YouTube can change your life VERY quickly",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/5UtFZA9fvsw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD8Ayg7gkSMFfbBU_0Z12rN8OhsWQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/5UtFZA9fvsw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCV8cAMzFbVl6LJCf0WcMAY_4ak-g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1033,
+      "view_count": 16000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "5UtFZA9fvsw",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=5UtFZA9fvsw",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Create your own private AI, accessible everywhere (complete tutorial)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/rxVPmEck2wY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZ3LQMQefiExD_Yk8IFoXBjVZrJg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/rxVPmEck2wY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAj53S4gmA_4A5jOtN4mFittkbRhQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1138,
+      "view_count": 15000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "rxVPmEck2wY",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=rxVPmEck2wY",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "DeepSeek is (STILL) way TOO GOOD?! (V4.1 1017 Test)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ETNj4WgqAPg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA9V73In5qUt8FNNijMlkWLgVA3sA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ETNj4WgqAPg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnkK54Q-sQG8zcZdyRhE4Gf-7Gkw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1226,
+      "view_count": 24000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "ETNj4WgqAPg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=ETNj4WgqAPg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "I was skeptical about Claude + Higgsfield… I was (really) wrong",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/-xtc8kKW_s8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuqmUH_gGiDOs8KpwKvGAZP47Suw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/-xtc8kKW_s8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEFzlfC5gSl5k9wag1Uc7VEGHNZg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1363,
+      "view_count": 9300,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "-xtc8kKW_s8",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=-xtc8kKW_s8",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Mistral Large 4… FINALLY! (Full Review)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/-fuUWNA8N0Y/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBIpIVRR0IEwRsw6TbctU-IipZlcQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/-fuUWNA8N0Y/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDli2qqAjLAUkW4yCTHoiFzYZveGA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1719,
+      "view_count": 23000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "-fuUWNA8N0Y",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=-fuUWNA8N0Y",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The New Job for Developers… It Stings VERY Hard",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/aME7pEz5z4E/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCMiiCguz7KCCyKaK5j05MVIq-oiA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/aME7pEz5z4E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyPC09F7RSbM2zQ3WP-KVkOjQs-A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1656,
+      "view_count": 34000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "aME7pEz5z4E",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=aME7pEz5z4E",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Everything is designed to make you feel behind with AI",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/tgdJo8XBac8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD255SQmlhLnW_n5kJoaLCr9qmgSw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/tgdJo8XBac8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZaKFjwINX3KXh2qw_rBl4UFx-kg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1151,
+      "view_count": 12000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "tgdJo8XBac8",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=tgdJo8XBac8",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "GLM 5.3 Flash… It’s cheap, efficient, and INSANE in UI",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/IN6ELg_amLc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAkq5qsOCETdSBaOFvhrFbPCbHfOg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/IN6ELg_amLc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsm1BYJJdNvztaKZSbk44umKAi6Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1915,
+      "view_count": 24000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "IN6ELg_amLc",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=IN6ELg_amLc",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "2026 Layoffs Explained",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/rvLsI2x9Juw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDfg-FW6E3GZ6d-nw59vZlPSLv8_w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/rvLsI2x9Juw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDug08vobutUpxzEtFe7ScFO9Fi7g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 846,
+      "view_count": 35000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "rvLsI2x9Juw",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=rvLsI2x9Juw",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "So, I tested DeepSeek 4.1 Flash",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/SBSFHUL8e5Q/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC1kwMMeEXncR1BXRr98q42BeBOKQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SBSFHUL8e5Q/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBWoW4L7drlO7dMQGi-gYRICP-s1w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1310,
+      "view_count": 17000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "SBSFHUL8e5Q",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=SBSFHUL8e5Q",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Okay, this has gone too far",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/AipfXpMsEXI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZhfeX4s_lRoCj-lKFsragRdug3A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/AipfXpMsEXI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrO7DHjUgTMc2L7Z5h6ptZoJk9bg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 867,
+      "view_count": 9300,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "AipfXpMsEXI",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=AipfXpMsEXI",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "I was wrong (again)... Google is actually really strong",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/eaZCZJRNn5s/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0MjfjoEC-mkqubF-8NWQugZLFcg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/eaZCZJRNn5s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9tZn5Vm7Cpy7xPA0v2O804aeg_g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1063,
+      "view_count": 19000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "eaZCZJRNn5s",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=eaZCZJRNn5s",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Everything is officially going off the rails",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Sa-EUyrs6R4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsc5mE10HeGcZbcpgmcF4405WuXQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Sa-EUyrs6R4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAO4iyNkNZF0dyyG1eBdIxMolas9Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 581,
+      "view_count": 14000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "Sa-EUyrs6R4",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=Sa-EUyrs6R4",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "It’s still hard to really wrap our heads around what’s happening.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Riw2kxIGtuE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBBVfpAoxzKHlmsrA_EaiPmKrrOPg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Riw2kxIGtuE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFGD8Zso1UQzqTa0olOJlkcKzqEQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 576,
+      "view_count": 50000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "Riw2kxIGtuE",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=Riw2kxIGtuE",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "AI Pool",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/o6QjOaztPKI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgHBvptQncCRFABNYd0C3g7tO90g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/o6QjOaztPKI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB4KnA09r3Z4RJ9eJtlhV_MRAlXUQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1173,
+      "view_count": 10000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "o6QjOaztPKI",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=o6QjOaztPKI",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "I stopped writing my prompts",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/PmXUfPv93zA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBFzSRqlFv0GA_hmPVKDiI3gLJQbQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/PmXUfPv93zA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOjBngfxg6XkST__5HBSQe793GJg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 836,
+      "view_count": 6100,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "PmXUfPv93zA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=PmXUfPv93zA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "DeepSeek V4 Flash... Too good to be true?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/CjIT9EXpH5w/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARPXWt-c1EX6xLjsFKO7qbOgD2FQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/CjIT9EXpH5w/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgK0hV-Vknw6AuNGLooLZzGRL8pQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1630,
+      "view_count": 17000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "CjIT9EXpH5w",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=CjIT9EXpH5w",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Is It Illegal to Have a Side Project While Employed Full-Time?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/V8q0j2rOnuw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8BSvjfZ_rqw35pOFhV9coQao_Ug",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/V8q0j2rOnuw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOr7ROPmi_CxvGnhTUsKXVYTMJ8A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 907,
+      "view_count": 14000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "V8q0j2rOnuw",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=V8q0j2rOnuw",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "What is this INSANE SaaS?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/61kGkm04-Wc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBe9t0qtOUwGoOb22gRr5KQIIVYhg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/61kGkm04-Wc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-gMyGvE8KT9ZX_I3HLUXwiNNcZA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 767,
+      "view_count": 2400,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "61kGkm04-Wc",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=61kGkm04-Wc",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How to find the best LLM for your machine",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/-lZ6jq7HQMY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDV-x98Kk6j-wIzxxg6trkmX_IeMw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/-lZ6jq7HQMY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbEGPiDXm_AJ-DgX1MU2r9_h0sYA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 463,
+      "view_count": 3500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "-lZ6jq7HQMY",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=-lZ6jq7HQMY",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Karpathy has LOST IT",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/4ocgxSHvlOk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDY03XtGmXJzqOLldxuOJDLtqxwKw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/4ocgxSHvlOk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNbcVuWt3QcP6wc98MITkAjl_CEg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 691,
+      "view_count": 2600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "4ocgxSHvlOk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=4ocgxSHvlOk",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Qwen 3.8… Another insane release? Complete nonsense",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/jGibtVgKcqU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGAjuWPuSia4ZaDhxJCVLxWvz7fg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/jGibtVgKcqU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCAqWZNQwQD0wS6ac2of57v3IEU8w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1445,
+      "view_count": 6600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "jGibtVgKcqU",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=jGibtVgKcqU",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "KIMI K3... How did they do it?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/VmZCbxdvWX8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB4hQOleoXV-9wKuXwDJbJq2XgcIQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/VmZCbxdvWX8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8nQY1fSSVRYnLw6UIzHpGSkxeiQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1307,
+      "view_count": 30000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "VmZCbxdvWX8",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=VmZCbxdvWX8",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Finally, an affordable LLM that packs a PUNCH",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/q8cwwwKDVJQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCgicuuHH-OVUHSH1eL-pm95wJRlw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/q8cwwwKDVJQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDgDqNgYz1wS3wELJntQc3dzIMU-A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1579,
+      "view_count": 5500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "q8cwwwKDVJQ",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=q8cwwwKDVJQ",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "What AI will never be able to teach you",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/fdABXCcyfSA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_bDmnVqj1NglXBSfa_FI9gJH0Og",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/fdABXCcyfSA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDe3WGb1YrH8HcXva-83XpMABISHQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 445,
+      "view_count": 1800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "fdABXCcyfSA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=fdABXCcyfSA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "I’m ALMOST 40. If you’re in your 20s or 30s, watch this video.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/jGUfdFx4qK8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB6Sj0svuACqLUo1OTteD6fvpzr2Q",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/jGUfdFx4qK8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD5DH-RsGPyo6PBuvcDBlkXvxe5DQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1281,
+      "view_count": 10000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "jGUfdFx4qK8",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=jGUfdFx4qK8",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Composer 2.5 vs. Claude Opus? (Full Test)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/X2g5DSrwNNY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_e4gCQz-7LGFgc-HcfEbRirf8yw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/X2g5DSrwNNY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtIzAv7qkQCQnLbMSy89-d19ML8w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1597,
+      "view_count": 4700,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "X2g5DSrwNNY",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=X2g5DSrwNNY",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The Secret That's Going to Sting? French Companies Are Using Chinese AI",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/hGGkHGRtEfc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCcpzm46TYcSzoUNjb7MMGM4TUl9g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/hGGkHGRtEfc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAjYu6RuaKFFrD2x7DLTXtAPLqOhw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 726,
+      "view_count": 2400,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "hGGkHGRtEfc",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=hGGkHGRtEfc",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Kimi k2.7 Code: The most powerful local AI today?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/59AtpghPW_I/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCuJtbHUpMMDb5gCIYxGYj8sRiFMw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/59AtpghPW_I/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDFwx5zYMpQNd7gSmlHHS3kjbdo6A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1566,
+      "view_count": 8900,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "59AtpghPW_I",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=59AtpghPW_I",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Musk acquires Cursor and just changed everything for DEVS (OpenAI and Anthropic already know it)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/c8lfAnw5Hx0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCTErcEUDoGAzerkFyOOE_LhZ4dSw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/c8lfAnw5Hx0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAAIvTsvGywVKwQ_fvwwdmZzsaM-g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1076,
+      "view_count": 14000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "c8lfAnw5Hx0",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=c8lfAnw5Hx0",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How good is Devstral 2, really? Are we actually falling behind?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/gsQ355llIJs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAlSyh4V3MiweklpA8JkL-LLlNnmg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/gsQ355llIJs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-Up88Jodkm1W00NdgujDZDOzpcQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1779,
+      "view_count": 12000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "gsQ355llIJs",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=gsQ355llIJs",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "I was wrong... Gemma 4 as a local LLM is incredible. FULL Test.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/kKbDCrvO7Rg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0D0vOPVfydbfp8c6uqFJhzSbNag",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/kKbDCrvO7Rg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDkB3_Bp6aCpvVW-EC3fO24OQHNhQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1267,
+      "view_count": 60000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "kKbDCrvO7Rg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=kKbDCrvO7Rg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Mistral 3B, 8B, 14B : Test complet et installation locale",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/vdKr9vHQD_8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCe5fKJsxe3-RAOeu85HGOqO7BXPg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/vdKr9vHQD_8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAsJK6tbYNBHwDijAsqO4wdn5mrqA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1800,
+      "view_count": 40000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "vdKr9vHQD_8",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=vdKr9vHQD_8",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "If I Had to Start Over in Tech Today",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/TQ_1WIddTN8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBv9Ap12DlIxY8e42AbNmryJwhlBA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/TQ_1WIddTN8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBzKGZXnmMFO2jgjZWMcawHlfyvmg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1227,
+      "view_count": 6000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "TQ_1WIddTN8",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=TQ_1WIddTN8",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Job postings and AI: Why is it becoming official?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/22RU-bUWxpE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDLUTE7egg5yqXTMIoBowBNBhQtKA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/22RU-bUWxpE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBfuVeGydb0kkRjyhdQbsewEG-Alg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1283,
+      "view_count": 3600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "22RU-bUWxpE",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=22RU-bUWxpE",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "We all have that one coworker... yeah, yeah",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ftTB15eApAs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAJzyfYdTNelLER0a9SHcacBc5LEw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ftTB15eApAs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoqobIPvK5pBvfOln_Ic9so8t_FQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 836,
+      "view_count": 4600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "ftTB15eApAs",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=ftTB15eApAs",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Dev en 2026 - salaires, IA, entretiens… on fait le point (Par contre je suis 100% honnête)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/5CGL4OHfbh8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAG_48G6z9HiQoOTAMwby3zkEEtyQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/5CGL4OHfbh8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBRuJXCidsSKsljhQ8gp2b8vNF8ag",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1742,
+      "view_count": 11000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "5CGL4OHfbh8",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=5CGL4OHfbh8",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Andrej Karpathy joins Anthropic: Should OpenAI be worried?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/rVPf4QK4raw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLX9r3KxWZQQ6sbBCGF3n-kclMbw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/rVPf4QK4raw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDAg5jbY8wIAjB_HeGUEGRWfSbM1Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 985,
+      "view_count": 4800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "rVPf4QK4raw",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=rVPf4QK4raw",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The hellish dev interviews are coming...",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/mBe7YBmbgbg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCM9KrcNwkFalUmIuxbaHw8cfKYPg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/mBe7YBmbgbg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5vpv7_I8watvOw8WlW2_N7wwcyg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 754,
+      "view_count": 9600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "mBe7YBmbgbg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=mBe7YBmbgbg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "He Blew $1.3 MILLION on OpenAI tokens… in 30 days",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/rK3M22owk7A/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDAOF3DJH7BZFu1OYNyTGPFX9rc7w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/rK3M22owk7A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD5W7R9fSpgsYkp2OOsDLPnIo0MZA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 904,
+      "view_count": 2700,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "rK3M22owk7A",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=rK3M22owk7A",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Why everyone is wrong about Mistral AI",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/kURT0Eo5wGo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBI7DyjejSm6afIs-AVWw2kilnk9g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/kURT0Eo5wGo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7pPAMLXNnVSs_FlaZj7vI_jPlcw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1164,
+      "view_count": 24000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "kURT0Eo5wGo",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=kURT0Eo5wGo",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Vibe coders have flooded the internet with SaaS.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/fJQR-KxcFdw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALl3aBOUyTaXV-7aX4PskoF6jouA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/fJQR-KxcFdw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAVK54OhgiMgKvYt61aBH-TMB1abA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 740,
+      "view_count": 6900,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "fJQR-KxcFdw",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=fJQR-KxcFdw",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Why everyone is fed up with AI",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/rclyE2LX_1g/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmZEZXPU_PBY1dU9B1Z-id8JianQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/rclyE2LX_1g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAssxuBrpymbCV8ZLOBelofW9MFDw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 604,
+      "view_count": 12000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "rclyE2LX_1g",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=rclyE2LX_1g",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Tech companies have a huge problem with AI",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/NS-QObrHFFg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAo6ZTlIsxI6zA_xmgXOudPHA46Tw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/NS-QObrHFFg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpW7rSFgDRqDYHmTs-jIajU5iNTQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 541,
+      "view_count": 12000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "NS-QObrHFFg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=NS-QObrHFFg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "When people let AI do all the work… and don't take responsibility",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/oIBMs88Njcw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAJfDGqfklcTt2pprMBU6H3mNs91w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/oIBMs88Njcw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB0zMTJU33MCdqs2uxgJCyPsxL2pQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 346,
+      "view_count": 4000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "oIBMs88Njcw",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=oIBMs88Njcw",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Productivity with AI has become a social scam",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/fcydc8L7F7w/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD43Dup5iydWlX5FpCUYzJStf7ZZg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/fcydc8L7F7w/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAecHyfSDJJP3MDS67UlI3HhKb6kQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 736,
+      "view_count": 24000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "fcydc8L7F7w",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=fcydc8L7F7w",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Claude Code… is everything public? (hacker?)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/5ooaoWffkQw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAGCQHbRtIIMFWvu9mWiTH9AOAFbQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/5ooaoWffkQw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyvEoYQhAI9OfXqMTlTOSYQF3qrg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 767,
+      "view_count": 12000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "5ooaoWffkQw",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=5ooaoWffkQw",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Thanks to the vibe coders? I warned you.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/mdouAIXvO4M/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCetNDn4qVqxQPgYrZv3yAFJaBNjw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/mdouAIXvO4M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZS0vWgif8GaQBqc7VAfMrxPPsvg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 649,
+      "view_count": 33000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "mdouAIXvO4M",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=mdouAIXvO4M",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "We're all going to end up disgusted.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/1H23IBjbOBA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZKc6lY19NOcSvC_IxFHVJI75jTA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/1H23IBjbOBA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAdiA42q6Ju8u0GhED0zAZ_8G9rzQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 755,
+      "view_count": 5300,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "1H23IBjbOBA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=1H23IBjbOBA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "AI was supposed to lighten the mental load",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/NFcPqilGLNM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAAD423xvzNQYJGx3Yc2MNAspgM2A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/NFcPqilGLNM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA77_X_wDo4Uq3O43ODIK5KQIdsXw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 395,
+      "view_count": 2800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "NFcPqilGLNM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=NFcPqilGLNM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "This is officially nonsense.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/3nOZOQw9OGo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDoONvxeKFrp3pG6WagK0cyDDtffg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/3nOZOQw9OGo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwSVl1kx1xNNUbWmd4Zvadk5_8xA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 507,
+      "view_count": 4900,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "3nOZOQw9OGo",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=3nOZOQw9OGo",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Coding with AI: the real workflow (full demo)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ny_C7oNWOrU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAtwHugwIqTy5kajMaNOaT5IUVGFA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ny_C7oNWOrU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBS8y4WsXhKdclA0qGgA-DGvMYBmA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 2644,
+      "view_count": 9300,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "ny_C7oNWOrU",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=ny_C7oNWOrU",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "They're making you believe you're behind in AI...",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Rqk6hoB5cio/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBsrNwLM8_ndGh-tB4-_WO-LLklmw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Rqk6hoB5cio/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFIfICmBXYUhsDnqiLChb6q4Wv3g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1095,
+      "view_count": 6400,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "Rqk6hoB5cio",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=Rqk6hoB5cio",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The truth about the developer market in 2026",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/TKxhHzh8BJg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLmOkv66vMot15Oit2D_vsSrRgTQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/TKxhHzh8BJg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEuGNTalGE0iaoXFxZtvumiVvMSA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 792,
+      "view_count": 37000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "TKxhHzh8BJg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=TKxhHzh8BJg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The new developer standard in 2026",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/sTAdRtFhXyQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCe8R4_PfnFWKKUhZ2dOrVClLOGiA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/sTAdRtFhXyQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDw8gWeU1BYN7TodsRoU_7YmxRjMA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 826,
+      "view_count": 6000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "sTAdRtFhXyQ",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=sTAdRtFhXyQ",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "We're there. Nobody reviews PRs anymore.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Zz89IO9XFQA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA0K-3CPI2AmKHJUrEAKyQnk7qoXQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Zz89IO9XFQA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBdTxox5U_47MzjRNwhH9qQaJB6qg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 426,
+      "view_count": 2500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "Zz89IO9XFQA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=Zz89IO9XFQA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "That's it. No one will pay for your SaaS anymore.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/hnpYJgDTiwE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqeMutUkcsOXx5cD7PwDpAAekwiQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/hnpYJgDTiwE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBfX-oaEC__GKCNqZo4pkhEiBC0pw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 697,
+      "view_count": 12000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "hnpYJgDTiwE",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=hnpYJgDTiwE",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Being bad at AI at work is going to cost you (a lot)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/qXhRmfb8jIk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDjal_cBu9n9KcK05CpFfPcoalI7w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/qXhRmfb8jIk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCUrJtnNM0wiTvxvNEqFNxlsgR59Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 990,
+      "view_count": 3500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "qXhRmfb8jIk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=qXhRmfb8jIk",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "If even that disappears too… I feel sorry for the juniors.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/S5Fbj8IRsvI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAScKwx8UghV-xi6wsqq1HECvs-Tg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/S5Fbj8IRsvI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB4e0Z98UByY_XHnnFRSjg88NLGhQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 657,
+      "view_count": 3600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "S5Fbj8IRsvI",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=S5Fbj8IRsvI",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "They all want you to believe that we're going to work less. It's the opposite.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/_DBWOYxC0BM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDbognFAZZPgInEmIgkhvXmHu0JFQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/_DBWOYxC0BM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBkr-bpQErkRJ3J-wYlTDcbIux-ig",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 695,
+      "view_count": 13000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "_DBWOYxC0BM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=_DBWOYxC0BM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The famous Vibe Coding guide from Y Combinator (Some good...and some not good at all)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/0dDUEHJh-_g/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCETqTgc0OlDhtaq9E-v4xcnmGvWg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/0dDUEHJh-_g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-PUx7ZVwO14NWwWvs8bPanQFNUg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 2379,
+      "view_count": 2200,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "0dDUEHJh-_g",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=0dDUEHJh-_g",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Why do I almost always get a call back when I apply (DEV)?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Gc54TUYy2IY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCgsdq4RgHLphzqklUNy1Mqn40sCA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Gc54TUYy2IY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDkQemUT8_WJYtn8xTxLYSEYkJLJQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1930,
+      "view_count": 5100,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "Gc54TUYy2IY",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=Gc54TUYy2IY",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Sony gave me the most stressful developer interview of my career",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/C3jZzF5Cwi4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZ2saK91tgrf6DLE6NSvYZw-tgeg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/C3jZzF5Cwi4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYAnjslxI5svvEa8e6z-O03OJS5g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1522,
+      "view_count": 2800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "C3jZzF5Cwi4",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=C3jZzF5Cwi4",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Karpathy says out loud what many people think about AI",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/jfpHzkgqN2Y/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCD_6krHSgxQ5qaaWrM85_owYaJVQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/jfpHzkgqN2Y/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPecO2QrPRb02lurahYOGx_AVLDQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1195,
+      "view_count": 12000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "jfpHzkgqN2Y",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=jfpHzkgqN2Y",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Why your SaaS has very little chance of succeeding (especially today)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/t84A9wFu8zg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpfX7DZbe3OKYkplwKuLH9dBQ92Q",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/t84A9wFu8zg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDJOruMZTcnl48WhjRC49PirJFWg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1192,
+      "view_count": 8400,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "t84A9wFu8zg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=t84A9wFu8zg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How developers become visible on Twitter",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/TqnwVcX6Oag/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZjwvgCBpZK2H6t75xRhEgCUluXg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/TqnwVcX6Oag/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJ8QxWaI2VZx9y9T-ncp-MAuwzhg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 842,
+      "view_count": 1700,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "TqnwVcX6Oag",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=TqnwVcX6Oag",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Learning to code in 2026: is it still worth it?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/q5DHYe96xU8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4NJ7UiVSFSd8ATE8qeQ286JnZ0Q",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/q5DHYe96xU8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAylTojFEr4snjJqvqWLPLMt_rmaA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 861,
+      "view_count": 11000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "q5DHYe96xU8",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=q5DHYe96xU8",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "All my developer tools and apps in 2026",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/G0PGj0CynxM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB1g_ElkBZ3qeOssEWptvpjze9utw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/G0PGj0CynxM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDXN80CXyY6HwZ3P4IG5qI9-mIMIg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1560,
+      "view_count": 5700,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "G0PGj0CynxM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=G0PGj0CynxM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "A new job for developers in 2026?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/1oJiCPF33nM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpd-pG5VtOpjHEjnufbr9t-BYZYw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/1oJiCPF33nM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmJ3IxManTKtr0P-NVACrTRaJ9BA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 434,
+      "view_count": 2500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "1oJiCPF33nM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=1oJiCPF33nM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Developers will hardly be coding anymore by 2026",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/nDvf9-as69w/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEN0xha2T1_w4HCZ8ffxZYycq8LQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/nDvf9-as69w/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8kkbc8JrPgP20CaSWBmK5lfvmWQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 885,
+      "view_count": 7500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "nDvf9-as69w",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=nDvf9-as69w",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Tech has changed for good: here's what I would do in 2026.",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/lk9ZoqmMWQk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA9HychO0UrMhwzrvg-P9f4is5QNQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lk9ZoqmMWQk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnd3E9tSb3I-Bkccd_D9W-SE_cvQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1152,
+      "view_count": 12000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "lk9ZoqmMWQk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=lk9ZoqmMWQk",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Why being a regular developer is no longer enough in 2026",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/w1aqWaInmrI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDA-OHjFZAugHnaa3annBZh7JZsUw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/w1aqWaInmrI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdrnMURcamiiIl9jz0wqseRKJgjg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 685,
+      "view_count": 4500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "w1aqWaInmrI",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=w1aqWaInmrI",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Everyone's talking about it, but nobody sees the REAL problem",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/7GnbPKhrgyY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBG2txXPhYy2pheNdzDFHnz7t2H9g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/7GnbPKhrgyY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZ8G107ZvxIdIQhCnJtR-SSTkqzQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 742,
+      "view_count": 2600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "7GnbPKhrgyY",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=7GnbPKhrgyY",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "All the developers are tired (and this is just the beginning)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/OERMIho7nOM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA5TP19z_SjD-u-lff72WsJpwmasw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/OERMIho7nOM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-X_lEVm4qYPg8Z31kAfRT-V6jsQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 552,
+      "view_count": 33000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "OERMIho7nOM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=OERMIho7nOM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "My current favorite AI tool (free trial)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/vEn6hMIQY5U/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLChb-HKlCZ5Lmd7omRqiyd10He6GA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/vEn6hMIQY5U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCI7R0zf7i53kNzix_K5XMDbECESg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 2318,
+      "view_count": 745,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "vEn6hMIQY5U",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=vEn6hMIQY5U",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How I would find a developer job in 2026",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/vHWe_k_zzCY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnZSeLA7_luocFAoy98Gf8VjSedw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/vHWe_k_zzCY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB8oNer3V4Qz8gM7H_PilwtdkMRIA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1076,
+      "view_count": 4100,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "vHWe_k_zzCY",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=vHWe_k_zzCY",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Finally, someone who dares to say that!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/WcdLfOo-ANk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBGrUiz35cnC-H3bj6om8ETgE3JaA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/WcdLfOo-ANk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASjVH6QD6ABybkPF_6XK7xoyntHA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 875,
+      "view_count": 2200,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "WcdLfOo-ANk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=WcdLfOo-ANk",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "10 SaaS to code in 2026 (Guide + GitHub)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/1ahq12X06OU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDZjoV59Bbjb59MbOkmTinz1OBuA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/1ahq12X06OU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDXYMJgAX8s7atiHI5kj55eJr7iSg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1955,
+      "view_count": 7800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "1ahq12X06OU",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=1ahq12X06OU",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Advice I wish I had followed back then",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/nVU_hGkSvc4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0moOE8myPRdTuiWvP8IIoFo7e0A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/nVU_hGkSvc4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCXXA5DuFjaKmlJKFecByzjMLXeKg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 901,
+      "view_count": 1700,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "nVU_hGkSvc4",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=nVU_hGkSvc4",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "What has changed to become a developer in 2026",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/x2XOehiir4U/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAlrxi97Erx4UE-VFRCxIfrfaWcIw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/x2XOehiir4U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9L21GrDzPUxUANfSTg9vIc_pgKg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 2523,
+      "view_count": 8800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "x2XOehiir4U",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=x2XOehiir4U",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Developer interviews have changed…",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ICz9JCz41jQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBoIp_fWEJZL1NoWfZaS2K54vkhMw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ICz9JCz41jQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNtqGAA4KOS--4xorWESZRnuI3Lw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 935,
+      "view_count": 1600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "ICz9JCz41jQ",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=ICz9JCz41jQ",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "10x Engineer, myth or reality?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/O4lQOLhwVDQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBuN8NrfhLYlmS8etIGSbyo_-eL7w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/O4lQOLhwVDQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAzO1I2wHjCnRiSBaNGADdXjjAh4A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1053,
+      "view_count": 1100,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "O4lQOLhwVDQ",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=O4lQOLhwVDQ",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "I thought it would take longer...",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/W8hpAJYEDN0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqF9duaNVg6XNtjC_bSrlcVvbwaQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/W8hpAJYEDN0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQSnJOq-3Wu3T6H0T2bZu6wC0_mQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 802,
+      "view_count": 8500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "W8hpAJYEDN0",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=W8hpAJYEDN0",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Why Cracking the Coding Interview is (almost) useless",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/pfZVH__nlKs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDV9Y0JJ8-xnKxvfkaBLN-NEJJcwg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/pfZVH__nlKs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDBj-LaDuxYJLMrS9ECFyWoq3Tcjg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 787,
+      "view_count": 521,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "pfZVH__nlKs",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=pfZVH__nlKs",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Live Code Technical Interview: Tabs in React JS",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/FJkQeKdh9C0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBahxxM0SGUvp0jo3jyD5h2kl0UXw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/FJkQeKdh9C0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBiUhTr10yIweuE9RxRtglqRYZ4cw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1384,
+      "view_count": 631,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "FJkQeKdh9C0",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=FJkQeKdh9C0",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "SaaS 2025: The Truth Nobody Is Telling",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/_y4I4jvygFs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYj0a_PAeIlwyL7AOAGHos1_avog",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/_y4I4jvygFs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByLIum52FAPtb2_8X2YRxAv11I3A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1075,
+      "view_count": 15000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "_y4I4jvygFs",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=_y4I4jvygFs",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Freelance or permanent contract as a developer? The real news",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/rsxfH2xMq5U/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLArVSQEVdTS4kyuVuLdlXa8Fcoq1w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/rsxfH2xMq5U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAaGM7OUvVuEqUVGRakd0_rmquLZQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 753,
+      "view_count": 1800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "rsxfH2xMq5U",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=rsxfH2xMq5U",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Ultra-simple local LLM with Ollama + Mistral (less than 10 min!)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/7x7GQPnUe0s/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCE6_vdajktmtO7fcvCNqBnti3ofQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/7x7GQPnUe0s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAleiIAJZ1tBvTAedmyZnQpyUtUvw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 574,
+      "view_count": 14000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "7x7GQPnUe0s",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=7x7GQPnUe0s",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Stop VIBE CODING if you're a JUNIOR - Now!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/yddzcnZEPx8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClKYzK2dzyGzan61tbLFihYy5zgQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/yddzcnZEPx8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDafRTIDGl96U_zRckbNVKHE3-XAg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 641,
+      "view_count": 24000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "yddzcnZEPx8",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=yddzcnZEPx8",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How I Code a Solo SaaS (Easy + AI)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/DAQJyGc4FdM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC4fGqEdftcDBbBLoDDhHLDl5_elA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/DAQJyGc4FdM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBGdtVVTQQakvnVe9f1HZ7pG1rJXQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1614,
+      "view_count": 16000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "DAQJyGc4FdM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=DAQJyGc4FdM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Forget Projects: Here's How to Land a Tech Job",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/w_p0VnphctA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCxuADUxLWPBNTkZTDDPCLB9YqI6A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/w_p0VnphctA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAG30LAgzguMR2kaYbgVkdgKczaSA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 608,
+      "view_count": 1800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "w_p0VnphctA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=w_p0VnphctA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Create a PERSONALIZED cover letter in just seconds with AI",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/OooBsq1cAOA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCRr42cPwfmaavyHfduDjlYtaLUnA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/OooBsq1cAOA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBv93Jf844nRBrqWxbMTwGY6oO5ew",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 862,
+      "view_count": 710,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "OooBsq1cAOA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=OooBsq1cAOA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "My ideal developer setup: it changed my life!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/HB543idenXE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfKhkVpzIef7tHTI8xUfRzr1IIBQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/HB543idenXE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDoTGh1ZOrnkHrTCTWiTB_9sqGbQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1201,
+      "view_count": 3400,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "HB543idenXE",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=HB543idenXE",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Create a complete portfolio in 1 quick step with Cursor AI!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/YP2TC4wfiV0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_0Wo6f9EUaf62rNgwS0sloyrM2w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/YP2TC4wfiV0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALnmXB3bM9y7VNMLZU2MY0ias-Mw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 994,
+      "view_count": 2300,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "YP2TC4wfiV0",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=YP2TC4wfiV0",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Building AI agents on Mistral is really SIMPLE and FAST",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/aQdsOUc4eYs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAifm81uHLLhLrsGAJiaW7gmZRZ1w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/aQdsOUc4eYs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDFgSlJkDD4WZxiiG80x58GHrIXw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 793,
+      "view_count": 41000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "aQdsOUc4eYs",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=aQdsOUc4eYs",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Se comparer aux autres : L'ERREUR qui peut ruiner ta carrière (100% vécu)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/pxIFB8KATXM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCVZPV0XiTxS1LedJnOYp8nYjZllw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/pxIFB8KATXM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2CbuKW4Xg2yGK5UxPQUZIi6Nv0Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 273,
+      "view_count": 508,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "pxIFB8KATXM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=pxIFB8KATXM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Mistral AI Full Review: I'm giving up on ChatGPT (really)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/R-WI3aUIRxs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCIgTnCr0-K9m5DqKTfP8Q_ULdRdg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/R-WI3aUIRxs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_KO36dH3jyH0Eci2RwV6MZM86yQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 659,
+      "view_count": 30000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "R-WI3aUIRxs",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=R-WI3aUIRxs",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The trick that got me hired at PlayStation as a Junior!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/02M7EhKJpGg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCiQl-gqQyux0C9ClpwRT1BUaiPdw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/02M7EhKJpGg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnRW8bJCJFA2T9-O-nJt1XznIjQQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 319,
+      "view_count": 1100,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "02M7EhKJpGg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=02M7EhKJpGg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Dev Interview 2025: 3 AI Questions You Absolutely Need to Know!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/k2Uzlp2IGXA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAhn_MTXxf9vxMvSlyRjy89aB6Ujw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/k2Uzlp2IGXA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4ebeM3qP9pDdwni4Qj2oEXrK8Jw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 409,
+      "view_count": 19000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "k2Uzlp2IGXA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=k2Uzlp2IGXA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Create a complete website in a single prompt with Cursor AI!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/NhU3OLT5nvo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBBlJrlxeapT4CkqcN-DYkO5HSbuw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/NhU3OLT5nvo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxOplunsAwf4_XLJPJyLiM9Swv8Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 697,
+      "view_count": 13000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "NhU3OLT5nvo",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=NhU3OLT5nvo",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Is Qwen more powerful than DeepSeek and ChatGPT? THE (surprising) TEST",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/f3yh_UVGpWA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDI0EMoM-yEpFNgL4ZJYYSkf3PhKQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/f3yh_UVGpWA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDf3fKjQc9iay1Syezliqdwt4gHCA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1030,
+      "view_count": 7000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "f3yh_UVGpWA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=f3yh_UVGpWA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Utiliser DeepSeek R1 avec Cursor Ai : Facile et SURPUISSANT",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ISQJVEa-l4k/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBscPSAPv6kHAiUxCOYb53T8rW1ow",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ISQJVEa-l4k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB6SoA9qXKxRswqungLbwbPF2OwAQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 356,
+      "view_count": 5800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "ISQJVEa-l4k",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=ISQJVEa-l4k",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How to Use DeepSeek R1 for Free: Easy Step-by-Step Guide",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/GXnnF121bKc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDLy5xn7Xy6D2_BId4qVIZCDp09zQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/GXnnF121bKc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBxJFeUC4suMjsQzuVZgUSrNd2Yjw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 365,
+      "view_count": 1200,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "GXnnF121bKc",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=GXnnF121bKc",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "DeepSeek vs ChatGPT vs Claude: Which choice for devs?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/jXb2-rsfYdE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBfUhqyloFpFuRIEzXWE_MBf6wO1A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/jXb2-rsfYdE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnp4KfrUjaKaAGSgcaAmJwIJr4Qg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 404,
+      "view_count": 3500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "jXb2-rsfYdE",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=jXb2-rsfYdE",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How to Create an AWS Budget Alarm in 3 Minutes!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/CpK-3_9K6Zo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByupdES90PNx1e21F0zkAb9BhUVg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/CpK-3_9K6Zo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnH3sGhsKEfwQtwkpqNLjDyu41uw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 230,
+      "view_count": 422,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "CpK-3_9K6Zo",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=CpK-3_9K6Zo",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Master DynamoDB in 15 minutes with Postman: Express Tutorial",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/IKgGQzWAkRY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCjPiMSn5jcwVQu76fSura6ql7Y9A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/IKgGQzWAkRY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCe0U9gf8ZcwEmixfVNhUovofj5Xw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1029,
+      "view_count": 746,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "IKgGQzWAkRY",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=IKgGQzWAkRY",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How to create your AWS account in less than 5 minutes!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/jGd1oGd_zpk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARY1IAg-pa_V49ot3_l5-E0yOUeA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/jGd1oGd_zpk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwJ3N-32ORQ4TYxEXlNeozaUj65Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 316,
+      "view_count": 2400,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "jGd1oGd_zpk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=jGd1oGd_zpk",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The Best Keyboard for Developers in 2025! TOP 5",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/nyl8dVs4pAA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBxpS9Q3ZsJrXtR75Qou33yIEMiCw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/nyl8dVs4pAA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA1oQ4Ym6e1SOzad2e92DqbDTtyMw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 853,
+      "view_count": 9900,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "nyl8dVs4pAA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=nyl8dVs4pAA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Organisation Made Simple in JUST 5 Minutes a Day!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/EY23lozZ2oo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAg5u4LfIufj5i9_z8r8jQ8RL9USg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/EY23lozZ2oo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBkvAEzrw0VeoJLDDRbPgj-ecjytQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 384,
+      "view_count": 875,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "EY23lozZ2oo",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=EY23lozZ2oo",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "BUILD a Trading Terminal with Next.js and CSS - Step by Step",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/mwPCisFzSuc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJguRs7WrydZA8N3PuU1ZNnNYJwA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/mwPCisFzSuc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDIFjY8cB_GBGMErMO2DPP9-W5nYw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 5584,
+      "view_count": 759,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "mwPCisFzSuc",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=mwPCisFzSuc",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Comment vaincre le syndrome de l'imposteur en développement web",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/mXJ2NMAkTQA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCQM_ebfq4UM0YteIaJTyhRwz4hQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/mXJ2NMAkTQA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAtLiUlY5OgVQPqdF1JfYMWznZQ4Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 648,
+      "view_count": 734,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "mXJ2NMAkTQA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=mXJ2NMAkTQA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How to Create & Publish Your Chrome Extension - Complete Tutorial",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/2RVJLdNf_-o/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLADb97O1noTdHAxHjTt_jtMvMh-pg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/2RVJLdNf_-o/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD76foKDLmjrNT8DoHYVKXJI9cZtA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 4043,
+      "view_count": 2600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "2RVJLdNf_-o",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=2RVJLdNf_-o",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Combien je gagne sur YouTube (100% honnête)",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/avQB00OcrlA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB4PFOdlMyr8F8CfhKZzsw-ytxMBg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/avQB00OcrlA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBdornoX-okguM_eI9DztsIjZU2gQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 466,
+      "view_count": 380,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "avQB00OcrlA",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=avQB00OcrlA",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "AI and Developers in the Enterprise: Revolution or Danger?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/wKiiyQ2MYOg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDgQOMCyEzj6coXpPL5uaE4H7O1bw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/wKiiyQ2MYOg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD8vGe0cYlv7Q8I7OMtKoKAIHpAPg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 515,
+      "view_count": 757,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "wKiiyQ2MYOg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=wKiiyQ2MYOg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Comment Dépasser la compétition avec ton Portfolio en 2024 ?",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/S05lZNk8b8E/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHHFjZ5Rwt75OGi-V48OHs9Tfr-A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/S05lZNk8b8E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqUtWZwKlT0QrY6sf6V9Uc0Eu3xQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 603,
+      "view_count": 994,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "S05lZNk8b8E",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=S05lZNk8b8E",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "J'ai fait un Bootcamp pour devenir Dev : Voici la Réalité",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/rezJMNlPx7U/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAcLAwch7oejst_SKcj6wgge99AAg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/rezJMNlPx7U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC3cDmz3E8LL6ZvIZGCpe7T_tS0fQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 762,
+      "view_count": 3900,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "rezJMNlPx7U",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=rezJMNlPx7U",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "TOP 10 Questions HTML en Entretien",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/UxNS93zbksY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-JWqGzLpghqJAPRpqG3X-B3wQkA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/UxNS93zbksY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAXfAFjL0Kk2Y2j0FWeQZ5gM35sSA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 197,
+      "view_count": 672,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "UxNS93zbksY",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=UxNS93zbksY",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Nailing Your Developer Job Application: Essential Tips!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/d4vikz-fiZI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7yiPx5ElgOIlUG5-3DA3jKZP9AQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/d4vikz-fiZI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAgPqoZteAmwiEm3C0mYF2I9lMQEQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1095,
+      "view_count": 1500,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "d4vikz-fiZI",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=d4vikz-fiZI",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "TOP 10 JavaScript Interview Questions",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/7o5lFf7sLnc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDgH9hCPEIgOG1fX7XUm3TmT6eOFw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/7o5lFf7sLnc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA57src2aN36xmKQ3B9Q4dxVL6A8g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 767,
+      "view_count": 11000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "7o5lFf7sLnc",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=7o5lFf7sLnc",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Setup Développeur : Mes 10 Incontournables",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/1F6BEmt-w0o/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6sNT1iz3326zwllZn6u6HpbM7-A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/1F6BEmt-w0o/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD49ngQs9K0GdrHKMrM2CXQCs2hvA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 734,
+      "view_count": 8800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "1F6BEmt-w0o",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=1F6BEmt-w0o",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "TOP 15 APIs for DEVS PORTFOLIO",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/8pklH0cYAFE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQbq2_GJp9aFSk6AT-tCFbdgnttw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/8pklH0cYAFE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDl55Jf16qLsFuUpWm9pojJKF5i9w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 429,
+      "view_count": 3900,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "8pklH0cYAFE",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=8pklH0cYAFE",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The 5 mistakes I see on every dev resume",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/jrLHWgHYQHM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDM2FBPTkOrjgLLdrH9NccWZyYjkw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/jrLHWgHYQHM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9mnDi4tODFG0N10GHU-f3AXAt-g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 688,
+      "view_count": 1600,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "jrLHWgHYQHM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=jrLHWgHYQHM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How I was recruited by PLAYSTATION as a Software Engineer",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/wa_S6AaLrbI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLmJaR1fPUx9iaJF7EkHWb1juFRg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/wa_S6AaLrbI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrwhAL2dIYh9sPGItjHvn3Pa47Mw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 2684,
+      "view_count": 1200,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "wa_S6AaLrbI",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=wa_S6AaLrbI",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Responsive Navbar in HTML CSS | Step by Step",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/kcIjkl3whfg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDS6WSdpzO0yNJ6QdvkymqV8h-SCA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/kcIjkl3whfg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAODpQKQqZfsPLOq09DROX2gHhvQg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 2128,
+      "view_count": 29000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "kcIjkl3whfg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=kcIjkl3whfg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Top 10 React interview questions!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/0mLKUr42EkQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCR9mlH9O8IDldhpd4veYxSB0fLNQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/0mLKUr42EkQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBhP0_cJHkGqA54ly9YkUlJ74P1Cg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 608,
+      "view_count": 17000,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "0mLKUr42EkQ",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=0mLKUr42EkQ",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "AWS S3: Host your website in under 5 minutes!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/1KU8E7m4VIk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA51N0HapS2krhhflXaFo2d1e0H4w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/1KU8E7m4VIk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtzFHFdL7X7Ft2Xjs_t4KzMcorlQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 241,
+      "view_count": 7700,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "1KU8E7m4VIk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=1KU8E7m4VIk",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "When CHATGPT codes GROGU! I wasn't expecting that...",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/vqR4qxDWRok/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCT4wYwGwNmxl82Jz_ms8DqRBnAvw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/vqR4qxDWRok/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDi4ffw3ng6mbMAp2-D7ACEaY0jfQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 38,
+      "view_count": 596,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "vqR4qxDWRok",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=vqR4qxDWRok",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Chat GPT: TOP 5 TIPS for developers - Improve your productivity!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/0O0jna_vHlU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAlpsiFt78vL9hKtTJjJRQMTKitQg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/0O0jna_vHlU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCW4wXHGrPC3qVCouKtAa14IbyCag",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1054,
+      "view_count": 1800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "0O0jna_vHlU",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=0O0jna_vHlU",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "AWS Lambda and API Gateway in 10 min!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/xuPozRSzhPM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDK6DeKzn1yRALiQ7p1ZI8J6qBPgg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/xuPozRSzhPM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGzgWbY1hsnvunVBjvoT3QmYk5Rw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 630,
+      "view_count": 5300,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "xuPozRSzhPM",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=xuPozRSzhPM",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How To Build a React News App With CSS FlexBox! Part-03 - LAST",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/I_XeIjlXUsk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEn4HXakrnWk15FY2nMQH8RXo9NA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/I_XeIjlXUsk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBTAlh0sPhGQ50jcY5HaGtYVLUpxw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 3570,
+      "view_count": 912,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "I_XeIjlXUsk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=I_XeIjlXUsk",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How To Build a React News App With CSS FlexBox! Part-02",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/dWyT-9fxdHg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEYEO2z24VIllMslVEuOfZGcbW7w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/dWyT-9fxdHg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA1VPs1BfBJG1QuLF_XZxPjHcn7uQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 790,
+      "view_count": 803,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "dWyT-9fxdHg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=dWyT-9fxdHg",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "How To Build a React News App With CSS FlexBox! Part-01",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/mpJsxE4QuMk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDfcaVelvpmiPPptMiQebOjoSFqbQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/mpJsxE4QuMk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCYdGo6tThh--rgwDRSMcMSTe46tw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1465,
+      "view_count": 2300,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "mpJsxE4QuMk",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=mpJsxE4QuMk",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "Box Shadow CSS - Quick & No talk",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/zwex-PhsV9Q/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAjUVkt7NU2g17OBC4q2IkIdMs9ig",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/zwex-PhsV9Q/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDMgpybprRyJVkhMMVdZmxhj_okDA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 106,
+      "view_count": 411,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "zwex-PhsV9Q",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=zwex-PhsV9Q",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "CSS : Your CARD using FlexBox!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/7cEALVvEjJU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgBXCEoat3fc9NVCJiKdgLk9zukA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/7cEALVvEjJU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_jLY1dKo3NXEn3Jb6cfqOYYYV1Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 1344,
+      "view_count": 7700,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "7cEALVvEjJU",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=7cEALVvEjJU",
+      "__x_forwarded_for_ip": null
+    },
+    {
+      "title": "The 5 JavaScript Array Methods You Need to Know!",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/N5oQx_a2Dxg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCuIfqdI9JMT28ANZT7tNjxnGeJuQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/N5oQx_a2Dxg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBy2EiT32x67ZUbyOmz16r4c4JqJQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "duration": 396,
+      "view_count": 1800,
+      "timestamp": null,
+      "live_status": null,
+      "availability": null,
+      "channel_url": null,
+      "uploader_url": null,
+      "creators": null,
+      "ie_key": "Youtube",
+      "id": "N5oQx_a2Dxg",
+      "_type": "url",
+      "url": "https://www.youtube.com/watch?v=N5oQx_a2Dxg",
+      "__x_forwarded_for_ip": null
+    }
+  ],
+  "extractor_key": "YoutubeTab",
+  "extractor": "youtube:tab",
+  "webpage_url": "https://www.youtube.com/@devart-studio/videos",
+  "original_url": "https://www.youtube.com/@devart-studio/videos",
+  "webpage_url_basename": "videos",
+  "webpage_url_domain": "youtube.com",
+  "release_year": null,
+  "epoch": 1793566472
+}

@@ -2,6 +2,8 @@
 
 `check_repository.py` contrôle les fichiers suivis par Git, y compris les ajouts forcés. Il refuse les médias d'épisode, les exports, les bases et les anciens emplacements de livrables. Le logo commun et la bannière du README sont les deux images autorisées ; les gabarits SVG et le code restent partageables.
 
+Lou a demandé le 5 novembre 2026 une exception pour le skill autonome `.claude/skills/haxprox-youtube-thumbnail-loop/` : ses portraits, son corpus et ses exemples approuvés sont partageables sous `assets/identity/`, `assets/corpus/` et `assets/examples/`. Les contrôles autorisent seulement PNG, JPG et WebP dans ces emplacements. Les autres médias, ZIP et états locaux restent exclus. Le skill inclut son propre contrôle de fichiers et d'empreintes, exécuté en CI.
+
 Depuis la racine :
 
 ```powershell
@@ -15,6 +17,8 @@ La [structure du dépôt et la migration locale](../../docs/organisation.md) pr�
 ## Skills SANDBOX et collections externes
 
 `sync_skills.py` vérifie les skills `sandbox-*` de `.agents/skills/` et génère leurs petites entrées Claude dans `.claude/skills/` (`--write`). Les collections externes restent dans `.agents/vendor/`, sous leurs noms amont, sans entrée découverte automatiquement ; l'onboarding vidéo les charge par leur chemin.
+
+`haxprox-youtube-thumbnail-loop` est enregistré comme skill autonome dans `.claude/skills/` ; le synchroniseur vérifie son nom et conserve son contenu sans générer de renvoi externe.
 
 `vendor_skills.py` gère ces collections à partir de `.agents/vendor/skills-lock.json` :
 

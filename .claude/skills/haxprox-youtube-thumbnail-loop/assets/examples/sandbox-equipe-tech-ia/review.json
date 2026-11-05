@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-05",
+  "reviewer": "Auto-revue visuelle dans la même session",
+  "ctr_measured": false,
+  "checked_files": {
+    "fullsize": [
+      "exports/A.jpg",
+      "exports/B.jpg",
+      "exports/C.jpg"
+    ],
+    "preview_320": [
+      "exports/A-320.jpg",
+      "exports/B-320.jpg",
+      "exports/C-320.jpg"
+    ],
+    "preview_160": [
+      "exports/A-160.jpg",
+      "exports/B-160.jpg",
+      "exports/C-160.jpg"
+    ]
+  },
+  "source_reference": "Exemples fournis par Lou dans ce chat ; visages de Lou, Nicolas et Loïc demandés explicitement.",
+  "history": {
+    "reviewer": "Auto-revue visuelle dans cette session, sans validation humaine ni mesure de CTR",
+    "blind_read_v1": {
+      "A": "Trois intervenants présentent une équipe organisée autour de l'IA, avec DEV, PO et QA. Le schéma et le titre dominent à gauche, les visages à droite.",
+      "B": "Trois intervenants interrogent le rôle des autres métiers quand les développeurs utilisent l'IA. L'ordinateur montre DEV relié à PO et QA.",
+      "C": "Trois intervenants discutent de l'IA en équipe et de la personne qui fixe les règles. L'accroche noire et la question se lisent sur fond blanc."
+    },
+    "observed_defects_v1": {
+      "A": [],
+      "B": [
+        "Le schéma peut se lire DEV puis PO/QA, alors que le cadrage du besoin par le PO précède le développement. L'entonnoir s'élargit et n'exprime pas nettement le goulot d'étranglement visé."
+      ],
+      "C": []
+    },
+    "correction_B": "Conserver toute l'image, remplacer uniquement l'écran par PO (ambre) puis DEV (vert) puis QA (ambre), avec une petite restriction rouge avant QA. Même texte et mêmes trois portraits."
+  },
+  "variants": {
+    "A": {
+      "master": "masters/A-v1.png",
+      "identity": "Lou : barbe poivre et sel, cheveux et chemise vert sauge cohérents avec le portrait choisi. Loïc : cheveux courts clairs, moustache et barbe courte. Nicolas : cheveux bruns, barbe plus fournie. Trois personnes distinctes et reconnaissables.",
+      "anatomy": "Deux mains de Lou observées : doigts séparés plausibles, pas de doigt surnuméraire visible. Pas de défaut bloquant sur les visages.",
+      "literal_text": "ÉQUIPE TECH / AUGMENTÉE / IA / DEV / PO / QA correctement affichés et accentués.",
+      "mobile_readability": "Accroche, bloc IA et trois rôles lisibles à 320x180 et 160x90. Les trois visages restent distincts ; Lou domine.",
+      "truthfulness": "Schéma illustratif de coordination de l'équipe ; pas de capture factice présentée comme résultat ni de gain chiffré.",
+      "hierarchy": "Titre en haut à gauche, panneau blanc au-dessous, Lou au premier plan à droite ; marge de durée libre de texte utile.",
+      "reference_fit": "Schéma blanc sur fond sombre et portrait serré, comme le premier exemple utilisateur ; logique de connexions du corpus Sdiri.",
+      "distinctness": "Seule variante avec carte hiérarchique claire, Lou en chemise vert sauge et mains ouvertes.",
+      "observed_defects": [],
+      "correction": "Aucune correction nécessaire après examen des exports.",
+      "status": "ready"
+    },
+    "B": {
+      "master": "masters/B-v2.png",
+      "identity": "Lou en veste en jean noire avec sourcil relevé ; Nicolas et Loïc distincts et conformes aux photos. La correction du schéma a conservé les caractéristiques des trois visages.",
+      "anatomy": "Pas de mains à examiner. Têtes et épaules cohérentes, yeux et bouches sans défaut visible bloquant.",
+      "literal_text": "DEVS + IA / ET LES AUTRES ? / PO / DEV / QA correctement affichés.",
+      "mobile_readability": "Deux lignes d'accroche lisibles à 160x90 ; trois rôles visibles mais secondaires. Traits des trois intervenants reconnaissables.",
+      "truthfulness": "Discussion des écarts d'adoption entre métiers. Schéma conceptuel PO vers DEV vers QA ; aucune métrique inventée.",
+      "hierarchy": "Trio à gauche, titre et bandeau à droite, ordinateur en bas à droite sans texte utile sous la zone de durée.",
+      "reference_fit": "Bandeau corail, ordinateur et studio chaud adaptés du deuxième exemple utilisateur.",
+      "distinctness": "Disposition inversée par rapport à A, objet ordinateur et question sur le reste de l'équipe.",
+      "observed_defects": [],
+      "correction": "v1 conservée ; v2 remplace DEV vers PO/QA par PO puis DEV puis QA. Examen final : ordre correct et flèches vers la droite.",
+      "status": "ready"
+    },
+    "C": {
+      "master": "masters/C-v1.png",
+      "identity": "Lou en chemise indigo, main près du menton, visage conforme au portrait sélectionné. Nicolas et Loïc conservent leurs traits respectifs.",
+      "anatomy": "Main visible de Lou : position et doigts plausibles ; pas de défaut bloquant observé.",
+      "literal_text": "L'IA EN ÉQUIPE / Qui fixe les règles ? correctement rendus. Apostrophe typographique dans le graphisme.",
+      "mobile_readability": "Titre et question lisibles à 320x180 et 160x90. Trois visages identifiables malgré la superposition.",
+      "truthfulness": "Question de la responsabilité des instructions et skills abordée dans l'épisode ; aucune réponse inventée dans l'image.",
+      "hierarchy": "Grand titre noir et question à gauche, groupe à droite ; fond blanc calme et forte séparation.",
+      "reference_fit": "Fond blanc, titre éditorial et champ de question reprennent le quatrième exemple utilisateur.",
+      "distinctness": "Seule composition claire sans schéma ni ordinateur, avec question sur les règles.",
+      "observed_defects": [],
+      "correction": "Aucune correction nécessaire après examen des exports.",
+      "status": "ready"
+    }
+  },
+  "recommendation": {
+    "variant": "A",
+    "reason": "C'est la plus fidèle au titre général : le schéma montre immédiatement une organisation commune pour DEV, PO et QA."
+  },
+  "limitations": [
+    "Les portraits composites sont des illustrations de miniature, pas des photographies documentaires de l'épisode.",
+    "Aucune mesure de performance YouTube ni validation de Lou n'a été effectuée."
+  ],
+  "pre_delivery_human_validation": false,
+  "user_approval": {
+    "date": "2026-11-05",
+    "variants": [
+      "A",
+      "B",
+      "C"
+    ],
+    "quote": "Elle sont parfaite ces miniatures, met à jour mon skill pour pouvoir faire aussi bien la prochaine fois",
+    "scope": "Validation esthétique des trois miniatures livrées ; aucune mesure de CTR."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "reviewer": "Auto-revue visuelle dans cette session, sans validation humaine ni mesure de CTR",
+  "blind_read_v1": {
+    "A": "Trois intervenants présentent une équipe organisée autour de l'IA, avec DEV, PO et QA. Le schéma et le titre dominent à gauche, les visages à droite.",
+    "B": "Trois intervenants interrogent le rôle des autres métiers quand les développeurs utilisent l'IA. L'ordinateur montre DEV relié à PO et QA.",
+    "C": "Trois intervenants discutent de l'IA en équipe et de la personne qui fixe les règles. L'accroche noire et la question se lisent sur fond blanc."
+  },
+  "observed_defects_v1": {
+    "A": [],
+    "B": [
+      "Le schéma peut se lire DEV puis PO/QA, alors que le cadrage du besoin par le PO précède le développement. L'entonnoir s'élargit et n'exprime pas nettement le goulot d'étranglement visé."
+    ],
+    "C": []
+  },
+  "correction_B": "Conserver toute l'image, remplacer uniquement l'écran par PO (ambre) puis DEV (vert) puis QA (ambre), avec une petite restriction rouge avant QA. Même texte et mêmes trois portraits."
+}

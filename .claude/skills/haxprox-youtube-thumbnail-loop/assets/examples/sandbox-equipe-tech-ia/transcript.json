@@ -1,0 +1,4018 @@
+{
+  "engine": "faster-whisper",
+  "model": "large-v3",
+  "language": "fr",
+  "duration": 1737.0026875,
+  "segments": [
+    {
+      "start": 1.01,
+      "end": 15.15,
+      "text": "Comment construire une équipe tech augmentée par l'IA ? C'est la question qu'on va se poser aujourd'hui. On voit qu'on se met tous à utiliser des outils IA en entreprise. Nous, les développeurs, on a tendance à utiliser Claude Code, Open Code, Codex, etc."
+    },
+    {
+      "start": 15.15,
+      "end": 26.81,
+      "text": "Un petit peu de notre côté, on a souvent nos propres outils individuellement, les commerciaux, les PO, les PM, ils utilisent tous un petit peu, ils ont tous leurs propres habitudes."
+    },
+    {
+      "start": 27.45,
+      "end": 40.07,
+      "text": "Mais comment on fait pour justement harmoniser cette utilisation, avoir un contexte, des connaissances centralisées de l'entreprise, des workflows structurés, harmonisés ?"
+    },
+    {
+      "start": 40.07,
+      "end": 44.27,
+      "text": "C'est la question à laquelle on va tenter de répondre aujourd'hui avec Loïc et Lou."
+    },
+    {
+      "start": 45.15,
+      "end": 47.99,
+      "text": "qui sont avec moi, les gars, salut !"
+    },
+    {
+      "start": 47.99,
+      "end": 49.99,
+      "text": "Salut à tous !"
+    },
+    {
+      "start": 49.99,
+      "end": 53.03,
+      "text": "Qu'est-ce que vous pensez de ce sujet alors ?"
+    },
+    {
+      "start": 53.03,
+      "end": 55.55,
+      "text": "Ouais, question assez vaste, assez large."
+    },
+    {
+      "start": 56.71,
+      "end": 58.21,
+      "text": "Je te laisse commencer Loïc."
+    },
+    {
+      "start": 59.81,
+      "end": 63.59,
+      "text": "Je pense que, ouais, en fait, effectivement, c'est une phase qui est importante"
+    },
+    {
+      "start": 63.59,
+      "end": 72.87,
+      "text": "et qui va surtout nécessiter de la communication plus qu'un choix d'outil en particulier."
+    },
+    {
+      "start": 72.87,
+      "end": 88.53,
+      "text": "Enfin, même si l'outil est important, mais je pense qu'après, il suffit de faire un harnais d'entreprise que tout le monde puisse piloter et gérer un petit peu à sa manière en ajoutant ses propres skills et ses outils complémentaires pour son scope."
+    },
+    {
+      "start": 88.53,
+      "end": 95.61,
+      "text": "Je pense que le plus important, c'est d'avoir une phase préalable"
+    },
+    {
+      "start": 95.61,
+      "end": 102.63,
+      "text": "où il y a une présentation de ce qui est à mettre en place,"
+    },
+    {
+      "start": 102.77,
+      "end": 106.27,
+      "text": "de comment tu dois utiliser l'outil, le harnais de l'entreprise,"
+    },
+    {
+      "start": 107.39,
+      "end": 112.51,
+      "text": "et ce que tu dois faire et ne pas faire par rapport à ton utilisation habituelle."
+    },
+    {
+      "start": 113.09,
+      "end": 115.53,
+      "text": "C'est quoi que tu appelles le harnais de l'entreprise ?"
+    },
+    {
+      "start": 115.53,
+      "end": 117.65,
+      "text": "c'est un système centralisé"
+    },
+    {
+      "start": 117.65,
+      "end": 118.47,
+      "text": "qui gère"
+    },
+    {
+      "start": 118.47,
+      "end": 121.25,
+      "text": "tous les agents de la même manière"
+    },
+    {
+      "start": 121.25,
+      "end": 123.35,
+      "text": "un petit peu, où tu peux partager"
+    },
+    {
+      "start": 123.35,
+      "end": 124.73,
+      "text": "les connaissances, les informations,"
+    },
+    {
+      "start": 125.41,
+      "end": 127.53,
+      "text": "les promptes, le contexte."
+    },
+    {
+      "start": 128.85,
+      "end": 129.93,
+      "text": "C'est un client lourd"
+    },
+    {
+      "start": 129.93,
+      "end": 131.55,
+      "text": "ou c'est un"
+    },
+    {
+      "start": 131.55,
+      "end": 133.53,
+      "text": "repo GitHub avec des instructions ?"
+    },
+    {
+      "start": 134.65,
+      "end": 135.49,
+      "text": "Non, c'est ni l'un"
+    },
+    {
+      "start": 135.49,
+      "end": 136.95,
+      "text": "ni l'autre. Je pense que c'est plus un serveur"
+    },
+    {
+      "start": 136.95,
+      "end": 140.05,
+      "text": "où tu centralises"
+    },
+    {
+      "start": 140.05,
+      "end": 140.47,
+      "text": "justement"
+    },
+    {
+      "start": 140.47,
+      "end": 143.09,
+      "text": "tes connexions à tes modèles,"
+    },
+    {
+      "start": 143.09,
+      "end": 144.11,
+      "text": "tes créations d'agents"
+    },
+    {
+      "start": 144.11,
+      "end": 146.49,
+      "text": "et ton tas de documentation, etc."
+    },
+    {
+      "start": 147.15,
+      "end": 148.77,
+      "text": "Et comment aller l'utiliser après ?"
+    },
+    {
+      "start": 148.77,
+      "end": 151.65,
+      "text": "Par exemple, moi j'utilise Codex sur mon ordi,"
+    },
+    {
+      "start": 152.41,
+      "end": 153.35,
+      "text": "fourni par l'entreprise."
+    },
+    {
+      "start": 153.51,
+      "end": 156.31,
+      "text": "Comment je profite de ce serveur dont tu parles ?"
+    },
+    {
+      "start": 156.31,
+      "end": 159.03,
+      "text": "Après, tu peux faire une interface web"
+    },
+    {
+      "start": 159.03,
+      "end": 162.47,
+      "text": "à laquelle chacun puisse accéder."
+    },
+    {
+      "start": 163.03,
+      "end": 164.21,
+      "text": "Mais ton Codex,"
+    },
+    {
+      "start": 164.33,
+      "end": 168.01,
+      "text": "il appelle un modèle GPT,"
+    },
+    {
+      "start": 168.01,
+      "end": 170.45,
+      "text": "un modèle OpenAI derrière."
+    },
+    {
+      "start": 170.45,
+      "end": 171.85,
+      "text": "ouais"
+    },
+    {
+      "start": 171.85,
+      "end": 174.27,
+      "text": "c'est déjà un harnais en fait ton codex"
+    },
+    {
+      "start": 174.27,
+      "end": 175.49,
+      "text": "ouais"
+    },
+    {
+      "start": 175.49,
+      "end": 178.63,
+      "text": "mais codex c'est un logiciel"
+    },
+    {
+      "start": 178.63,
+      "end": 181.15,
+      "text": "c'est un client lourd"
+    },
+    {
+      "start": 181.15,
+      "end": 183.21,
+      "text": "donc ta solution"
+    },
+    {
+      "start": 183.21,
+      "end": 184.45,
+      "text": "elle remplacerait le client lourd"
+    },
+    {
+      "start": 184.45,
+      "end": 187.59,
+      "text": "c'est pas juste un serveur"
+    },
+    {
+      "start": 187.59,
+      "end": 189.25,
+      "text": "comme tu disais ça devient le client lourd"
+    },
+    {
+      "start": 189.25,
+      "end": 191.19,
+      "text": "non ton client lourd"
+    },
+    {
+      "start": 191.19,
+      "end": 193.53,
+      "text": "ça voudrait dire que tu installes une application sur ton poste"
+    },
+    {
+      "start": 193.53,
+      "end": 195.39,
+      "text": "moi je parlais plus d'une interface web"
+    },
+    {
+      "start": 195.39,
+      "end": 197.85,
+      "text": "mais après tu peux avoir des clients lourds aussi"
+    },
+    {
+      "start": 197.85,
+      "end": 199.69,
+      "text": "oui sachant que"
+    },
+    {
+      "start": 199.69,
+      "end": 213.05,
+      "text": "Sachant que Loïc, il y aurait forcément un truc que tu installerais sur ton ordi, sur ta workstation, parce que pour certains profils, pour certains métiers, ça peut se faire sur une page web."
+    },
+    {
+      "start": 213.05,
+      "end": 228.43,
+      "text": "Mais dans pas mal de cas, les agents ont besoin de créer des choses, de travailler avec des fichiers, de trier des fichiers, de consulter des fichiers Excel, de créer des PowerPoints et de créer des fichiers de code et les exécuter, par exemple pour faire des tests."
+    },
+    {
+      "start": 228.43,
+      "end": 231.55,
+      "text": "donc dans ce cas là on peut pas se contenter seulement"
+    },
+    {
+      "start": 231.55,
+      "end": 232.65,
+      "text": "d'une interface web"
+    },
+    {
+      "start": 232.65,
+      "end": 234.75,
+      "text": "pour moi sauf si on peut"
+    },
+    {
+      "start": 234.75,
+      "end": 237.63,
+      "text": "est-ce qu'ils ont forcément besoin d'avoir un accès"
+    },
+    {
+      "start": 237.63,
+      "end": 239.93,
+      "text": "à ta machine en fait parce que la création de documents"
+    },
+    {
+      "start": 239.93,
+      "end": 241.81,
+      "text": "ou ce genre de trucs ils peuvent les faire directement"
+    },
+    {
+      "start": 241.81,
+      "end": 243.71,
+      "text": "sur une VM sur leur serveur"
+    },
+    {
+      "start": 243.71,
+      "end": 243.99,
+      "text": "en fait"
+    },
+    {
+      "start": 243.99,
+      "end": 247.49,
+      "text": "c'est vrai que c'est plus pénible de drag and drop"
+    },
+    {
+      "start": 247.49,
+      "end": 249.57,
+      "text": "tous les trucs à chaque fois que dans ta conversation"
+    },
+    {
+      "start": 249.57,
+      "end": 251.73,
+      "text": "si ça peut être connecté directement"
+    },
+    {
+      "start": 251.73,
+      "end": 253.73,
+      "text": "à un dossier où par exemple t'as tous les logos"
+    },
+    {
+      "start": 253.73,
+      "end": 256.15,
+      "text": "de la boîte, toutes les documentations"
+    },
+    {
+      "start": 256.15,
+      "end": 258.31,
+      "text": "tout tout tout"
+    },
+    {
+      "start": 258.43,
+      "end": 261.65,
+      "text": "En fait, peu importe la conversation que tu fais dans les projets que tu veux,"
+    },
+    {
+      "start": 262.85,
+      "end": 264.91,
+      "text": "ça ramène la même base de connaissances."
+    },
+    {
+      "start": 265.07,
+      "end": 268.69,
+      "text": "Tu n'es pas obligé à chaque fois de redonner les connaissances à ton projet, tu vois."
+    },
+    {
+      "start": 269.27,
+      "end": 272.19,
+      "text": "Mais imaginons, je suis d'accord, mais imaginons, je ne sais pas,"
+    },
+    {
+      "start": 272.53,
+      "end": 276.23,
+      "text": "un data analyst ou je ne sais pas, peu importe le profil,"
+    },
+    {
+      "start": 276.23,
+      "end": 280.11,
+      "text": "mais il a besoin de sortir un rapport de statistiques"
+    },
+    {
+      "start": 280.11,
+      "end": 284.47,
+      "text": "sur une trentaine de fichiers qu'il a sur son poste."
+    },
+    {
+      "start": 284.47,
+      "end": 287.01,
+      "text": "Il ne va pas mettre les 30 fichiers qu'il a sur son poste"
+    },
+    {
+      "start": 287.01,
+      "end": 288.71,
+      "text": "dans le composeur de sa conversation."
+    },
+    {
+      "start": 289.47,
+      "end": 290.79,
+      "text": "Là, il est obligé d'avoir"
+    },
+    {
+      "start": 290.79,
+      "end": 295.09,
+      "text": "un agent qui tourne sur son PC"
+    },
+    {
+      "start": 295.09,
+      "end": 296.57,
+      "text": "et qui va manipuler ses fichiers"
+    },
+    {
+      "start": 296.57,
+      "end": 298.27,
+      "text": "pour en sortir des statistiques."
+    },
+    {
+      "start": 299.31,
+      "end": 300.11,
+      "text": "Ouais, je dis pareil que toi."
+    },
+    {
+      "start": 300.77,
+      "end": 301.49,
+      "text": "On dit la même chose."
+    },
+    {
+      "start": 302.93,
+      "end": 304.39,
+      "text": "Et ça, ça ne marche pas en web ?"
+    },
+    {
+      "start": 304.39,
+      "end": 306.67,
+      "text": "C'est ça que vous dites ?"
+    },
+    {
+      "start": 306.67,
+      "end": 308.85,
+      "text": "Si, ça marcherait en web. Techniquement, ça pourrait"
+    },
+    {
+      "start": 308.85,
+      "end": 310.41,
+      "text": "marcher, mais ce n'est pas adapté."
+    },
+    {
+      "start": 310.53,
+      "end": 312.73,
+      "text": "On ne va pas envoyer des centaines de fichiers dans notre"
+    },
+    {
+      "start": 312.73,
+      "end": 314.73,
+      "text": "conversation. Ça pose"
+    },
+    {
+      "start": 314.73,
+      "end": 316.99,
+      "text": "des problématiques. Les fichiers, ils arrivent où ?"
+    },
+    {
+      "start": 317.01,
+      "end": 322.61,
+      "text": "Ensuite, ils sont stockés sur quel serveur ?"
+    },
+    {
+      "start": 322.61,
+      "end": 324.25,
+      "text": "Ça veut dire avoir une machine centralisée"
+    },
+    {
+      "start": 324.25,
+      "end": 326.19,
+      "text": "qui gère des espèces de sandbox,"
+    },
+    {
+      "start": 326.63,
+      "end": 329.41,
+      "text": "parce que les agents ont besoin d'avoir un espace de travail"
+    },
+    {
+      "start": 329.41,
+      "end": 330.29,
+      "text": "sur lequel travailler."
+    },
+    {
+      "start": 331.01,
+      "end": 333.77,
+      "text": "Donc, ils font un espace de sandbox centralisé."
+    },
+    {
+      "start": 333.95,
+      "end": 334.73,
+      "text": "Ça peut se faire aussi."
+    },
+    {
+      "start": 335.09,
+      "end": 337.65,
+      "text": "On peut imaginer que ce fameux système,"
+    },
+    {
+      "start": 338.77,
+      "end": 339.87,
+      "text": "pour certains profils,"
+    },
+    {
+      "start": 340.49,
+      "end": 343.69,
+      "text": "ça soit une petite sandbox disponible."
+    },
+    {
+      "start": 344.17,
+      "end": 346.81,
+      "text": "Oui, du coup, sandbox, je vois bien le problème."
+    },
+    {
+      "start": 347.01,
+      "end": 351.51,
+      "text": "Et après, ça va dépendre, je pense, aussi de comment est structurée ton entreprise."
+    },
+    {
+      "start": 351.51,
+      "end": 357.45,
+      "text": "Si vous êtes tous sur des sites différents et que tu as besoin de partager rapidement"
+    },
+    {
+      "start": 357.45,
+      "end": 359.99,
+      "text": "l'ensemble des documents ou l'ensemble des trucs,"
+    },
+    {
+      "start": 360.77,
+      "end": 364.55,
+      "text": "parce que potentiellement, tu peux bosser en équipe avec du partage de documents"
+    },
+    {
+      "start": 364.55,
+      "end": 367.81,
+      "text": "et peut-être que tes documents que tu as sur ton poste,"
+    },
+    {
+      "start": 367.81,
+      "end": 372.91,
+      "text": "ils pourraient être aussi bien sur un serveur pour faire de l'analyse par d'autres personnes."
+    },
+    {
+      "start": 372.91,
+      "end": 374.49,
+      "text": "bien sûr"
+    },
+    {
+      "start": 374.49,
+      "end": 377.73,
+      "text": "mais ça c'est dans le cas"
+    },
+    {
+      "start": 377.73,
+      "end": 378.79,
+      "text": "où tu travailles directement"
+    },
+    {
+      "start": 378.79,
+      "end": 381.03,
+      "text": "sur une autre machine"
+    },
+    {
+      "start": 381.03,
+      "end": 383.35,
+      "text": "là tu veux dire"
+    },
+    {
+      "start": 383.35,
+      "end": 384.81,
+      "text": "que tu travaillerais sur une autre machine"
+    },
+    {
+      "start": 384.81,
+      "end": 386.63,
+      "text": "et que"
+    },
+    {
+      "start": 386.63,
+      "end": 389.17,
+      "text": "du coup ta workstation"
+    },
+    {
+      "start": 389.17,
+      "end": 390.95,
+      "text": "serait sur une autre machine pour travailler"
+    },
+    {
+      "start": 390.95,
+      "end": 393.17,
+      "text": "ce serait l'équivalent"
+    },
+    {
+      "start": 393.17,
+      "end": 394.95,
+      "text": "des mainframes nouvelle génération"
+    },
+    {
+      "start": 394.95,
+      "end": 395.85,
+      "text": "je comprends rien à ce que vous racontez"
+    },
+    {
+      "start": 395.85,
+      "end": 398.35,
+      "text": "je pense qu'on s'est éparpillé moi aussi"
+    },
+    {
+      "start": 398.35,
+      "end": 399.27,
+      "text": "je me suis éparpillé"
+    },
+    {
+      "start": 399.27,
+      "end": 402.13,
+      "text": "mais en gros les gars"
+    },
+    {
+      "start": 402.13,
+      "end": 408.19,
+      "text": "Si j'ai bien compris, la première chose, c'est de définir les outils"
+    },
+    {
+      "start": 408.19,
+      "end": 412.43,
+      "text": "dans une sorte de socle d'outils que vous appelez le harnais"
+    },
+    {
+      "start": 412.43,
+      "end": 414.41,
+      "text": "qu'on met sur un serveur, peu importe,"
+    },
+    {
+      "start": 415.19,
+      "end": 417.33,
+      "text": "et qu'on donne accès à tout le monde au même outil."
+    },
+    {
+      "start": 417.63,
+      "end": 420.17,
+      "text": "Tout le monde a à peu près le même logiciel pour travailler,"
+    },
+    {
+      "start": 420.29,
+      "end": 421.67,
+      "text": "qu'il soit en web ou sur l'ordinateur."
+    },
+    {
+      "start": 422.33,
+      "end": 424.11,
+      "text": "Ils ont tous le même front, on va dire."
+    },
+    {
+      "start": 424.93,
+      "end": 427.33,
+      "text": "Après, derrière, ils auront accès en fonction du rôle."
+    },
+    {
+      "start": 427.47,
+      "end": 430.17,
+      "text": "Par exemple, si tu es QA, tu n'auras peut-être pas les mêmes modèles."
+    },
+    {
+      "start": 430.17,
+      "end": 431.99,
+      "text": "après on pourrait peut-être adapter les modèles"
+    },
+    {
+      "start": 431.99,
+      "end": 433.45,
+      "text": "peut-être qu'un commercial"
+    },
+    {
+      "start": 433.45,
+      "end": 435.35,
+      "text": "ça sert à rien de lui mettre du Astra"
+    },
+    {
+      "start": 435.35,
+      "end": 438.09,
+      "text": "et du Opus peut-être qu'il a juste besoin"
+    },
+    {
+      "start": 438.09,
+      "end": 439.81,
+      "text": "de sonner et de sol"
+    },
+    {
+      "start": 439.81,
+      "end": 440.35,
+      "text": "j'en sais rien"
+    },
+    {
+      "start": 440.35,
+      "end": 443.53,
+      "text": "donc il y aurait un peu ça"
+    },
+    {
+      "start": 443.53,
+      "end": 445.39,
+      "text": "et après au niveau de la sécurité"
+    },
+    {
+      "start": 445.39,
+      "end": 447.71,
+      "text": "du coup ce qui est bien c'est que"
+    },
+    {
+      "start": 447.71,
+      "end": 449.35,
+      "text": "ton harnais entre guillemets"
+    },
+    {
+      "start": 449.35,
+      "end": 452.13,
+      "text": "tu pourrais définir toute la sécurité"
+    },
+    {
+      "start": 452.13,
+      "end": 454.25,
+      "text": "et est-ce que"
+    },
+    {
+      "start": 454.25,
+      "end": 455.79,
+      "text": "ça pourrait pas être intéressant"
+    },
+    {
+      "start": 455.79,
+      "end": 457.27,
+      "text": "au niveau de la SDLC"
+    },
+    {
+      "start": 457.27,
+      "end": 459.71,
+      "text": "il y a tout un cycle"
+    },
+    {
+      "start": 459.71,
+      "end": 461.67,
+      "text": "d'actions réglementaires"
+    },
+    {
+      "start": 461.67,
+      "end": 463.41,
+      "text": "à faire à chaque fois que tu"
+    },
+    {
+      "start": 463.41,
+      "end": 464.93,
+      "text": "développes un truc."
+    },
+    {
+      "start": 466.55,
+      "end": 467.59,
+      "text": "Donc, je pense"
+    },
+    {
+      "start": 467.59,
+      "end": 469.31,
+      "text": "qu'on peut même mettre une courbe chronologique."
+    },
+    {
+      "start": 469.71,
+      "end": 470.89,
+      "text": "Le début d'un développement, c'est"
+    },
+    {
+      "start": 470.89,
+      "end": 473.61,
+      "text": "une demande. Et la fin"
+    },
+    {
+      "start": 473.61,
+      "end": 475.59,
+      "text": "du développement, c'est la"
+    },
+    {
+      "start": 475.59,
+      "end": 477.31,
+      "text": "mise en prod, on va dire. Et sur"
+    },
+    {
+      "start": 477.31,
+      "end": 479.47,
+      "text": "toute cette courbe chronologique, tu dois créer"
+    },
+    {
+      "start": 479.47,
+      "end": 481.11,
+      "text": "un ticket Jira, créer une PR,"
+    },
+    {
+      "start": 481.61,
+      "end": 483.15,
+      "text": "mettre une documentation dans"
+    },
+    {
+      "start": 483.15,
+      "end": 485.49,
+      "text": "un confluence ou dans peu importe l'outil."
+    },
+    {
+      "start": 486.25,
+      "end": 487.43,
+      "text": "Tu as tout un système"
+    },
+    {
+      "start": 487.43,
+      "end": 489.65,
+      "text": "de suivi, tu as des tests, des trucs de sécurité"
+    },
+    {
+      "start": 489.65,
+      "end": 491.57,
+      "text": "à faire, des trucs"
+    },
+    {
+      "start": 491.57,
+      "end": 493.23,
+      "text": "de CI, de SNIC,"
+    },
+    {
+      "start": 493.37,
+      "end": 494.53,
+      "text": "tous ces trucs-là à faire."
+    },
+    {
+      "start": 495.21,
+      "end": 497.03,
+      "text": "Tout ça aussi, on pourrait l'automatiser"
+    },
+    {
+      "start": 497.03,
+      "end": 499.41,
+      "text": "dans ce harnais pour que les gens,"
+    },
+    {
+      "start": 499.47,
+      "end": 501.39,
+      "text": "ça soit transparent, ils ne se rendent pas compte qu'il y a tout ça"
+    },
+    {
+      "start": 501.39,
+      "end": 502.01,
+      "text": "qui se passe derrière."
+    },
+    {
+      "start": 502.95,
+      "end": 504.89,
+      "text": "C'est possible, ça, ou pas ?"
+    },
+    {
+      "start": 504.89,
+      "end": 507.05,
+      "text": "Oui, mais je pense qu'il faut"
+    },
+    {
+      "start": 507.05,
+      "end": 509.35,
+      "text": "qu'au début, on dise"
+    },
+    {
+      "start": 509.35,
+      "end": 511.37,
+      "text": "quel est le problème, pourquoi on veut faire ça,"
+    },
+    {
+      "start": 511.59,
+      "end": 512.87,
+      "text": "pourquoi on veut harmoniser."
+    },
+    {
+      "start": 513.21,
+      "end": 514.57,
+      "text": "Ça, je ne l'ai peut-être pas assez dit"
+    },
+    {
+      "start": 514.57,
+      "end": 517.07,
+      "text": "dans l'intro."
+    },
+    {
+      "start": 517.97,
+      "end": 519.19,
+      "text": "Quel problème ça pose ?"
+    },
+    {
+      "start": 519.19,
+      "end": 520.79,
+      "text": "ça pourrait ne pas poser de problème que tout le monde"
+    },
+    {
+      "start": 520.79,
+      "end": 522.81,
+      "text": "utilise ses outils, tu vois."
+    },
+    {
+      "start": 524.35,
+      "end": 524.85,
+      "text": "Non, mais moi,"
+    },
+    {
+      "start": 524.97,
+      "end": 526.79,
+      "text": "j'ai une vision claire"
+    },
+    {
+      "start": 526.79,
+      "end": 528.89,
+      "text": "sur la question"
+    },
+    {
+      "start": 528.89,
+      "end": 529.91,
+      "text": "que tu poses, c'est que"
+    },
+    {
+      "start": 529.91,
+      "end": 532.35,
+      "text": "d'après ce que j'ai vu aujourd'hui,"
+    },
+    {
+      "start": 533.47,
+      "end": 534.67,
+      "text": "dans la majorité des boîtes,"
+    },
+    {
+      "start": 535.87,
+      "end": 536.91,
+      "text": "l'IA, elle n'est pas..."
+    },
+    {
+      "start": 536.91,
+      "end": 537.99,
+      "text": "Là, on parle des boîtes où"
+    },
+    {
+      "start": 537.99,
+      "end": 540.73,
+      "text": "la boîte n'a pas porté la démocratisation"
+    },
+    {
+      "start": 540.73,
+      "end": 542.45,
+      "text": "de l'IA. Elle est en train"
+    },
+    {
+      "start": 542.45,
+      "end": 544.79,
+      "text": "de semi-porter,"
+    },
+    {
+      "start": 544.91,
+      "end": 546.71,
+      "text": "quoi. Elle ne porte pas"
+    },
+    {
+      "start": 546.71,
+      "end": 548.55,
+      "text": "vraiment. Donc, elle a donné quelques"
+    },
+    {
+      "start": 548.55,
+      "end": 549.73,
+      "text": "accès à certaines personnes"
+    },
+    {
+      "start": 549.73,
+      "end": 552.27,
+      "text": "t'en as qui"
+    },
+    {
+      "start": 552.27,
+      "end": 553.59,
+      "text": "utilisent l'IA"
+    },
+    {
+      "start": 553.59,
+      "end": 556.21,
+      "text": "sur des trucs qui sont pas déclarés"
+    },
+    {
+      "start": 556.21,
+      "end": 558.17,
+      "text": "donc ils ont pris des comptes de leur côté"
+    },
+    {
+      "start": 558.17,
+      "end": 559.33,
+      "text": "c'est pas vraiment déclaré"
+    },
+    {
+      "start": 559.33,
+      "end": 562.43,
+      "text": "t'en as qui utilisent l'IA sur des trucs déclarés par l'entreprise"
+    },
+    {
+      "start": 562.43,
+      "end": 564.63,
+      "text": "mais l'entreprise elle a pas vraiment pris le temps"
+    },
+    {
+      "start": 564.63,
+      "end": 566.85,
+      "text": "elle a juste créé un compte sur chat.gpt"
+    },
+    {
+      "start": 566.85,
+      "end": 568.61,
+      "text": "ou créé un compte sur opencode"
+    },
+    {
+      "start": 568.61,
+      "end": 570.73,
+      "text": "elle a donné des clés à 10 personnes"
+    },
+    {
+      "start": 570.73,
+      "end": 572.27,
+      "text": "à 10% de l'entreprise"
+    },
+    {
+      "start": 572.27,
+      "end": 574.67,
+      "text": "et t'as des mecs qui testent"
+    },
+    {
+      "start": 574.67,
+      "end": 576.33,
+      "text": "et en fait le problème de tout ça"
+    },
+    {
+      "start": 576.33,
+      "end": 578.33,
+      "text": "c'est qu'on se retrouve avec"
+    },
+    {
+      "start": 578.33,
+      "end": 579.53,
+      "text": "une disparité"
+    },
+    {
+      "start": 579.53,
+      "end": 582.05,
+      "text": "de l'efficacité des gens"
+    },
+    {
+      "start": 582.05,
+      "end": 585.03,
+      "text": "donc tu as des bottlenecks"
+    },
+    {
+      "start": 585.03,
+      "end": 586.09,
+      "text": "qui se créent dans les équipes"
+    },
+    {
+      "start": 586.09,
+      "end": 587.57,
+      "text": "où il y a la moitié des gens qui utilisent l'IA"
+    },
+    {
+      "start": 587.57,
+      "end": 588.75,
+      "text": "et la moitié des gens qui n'utilisent pas l'IA"
+    },
+    {
+      "start": 588.75,
+      "end": 591.47,
+      "text": "il y a aussi une disparité de performance"
+    },
+    {
+      "start": 591.47,
+      "end": 593.55,
+      "text": "entre une équipe qui n'utilise pas du tout l'IA"
+    },
+    {
+      "start": 593.55,
+      "end": 595.31,
+      "text": "et une qui l'utilise"
+    },
+    {
+      "start": 595.31,
+      "end": 597.05,
+      "text": "et du coup"
+    },
+    {
+      "start": 597.05,
+      "end": 599.93,
+      "text": "on ne profite pas du tout de l'IA"
+    },
+    {
+      "start": 599.93,
+      "end": 602.25,
+      "text": "parce que imaginons que dans une équipe"
+    },
+    {
+      "start": 602.25,
+      "end": 603.87,
+      "text": "tu donnes l'IA que aux développeurs"
+    },
+    {
+      "start": 603.87,
+      "end": 605.13,
+      "text": "pas au PO, pas à la QA"
+    },
+    {
+      "start": 605.13,
+      "end": 607.01,
+      "text": "les développeurs vont super vite"
+    },
+    {
+      "start": 607.01,
+      "end": 609.25,
+      "text": "sauf que le mec qui fait les tickets"
+    },
+    {
+      "start": 609.25,
+      "end": 611.29,
+      "text": "il est toujours avec son papier"
+    },
+    {
+      "start": 611.29,
+      "end": 613.37,
+      "text": "son silex et son burin"
+    },
+    {
+      "start": 613.37,
+      "end": 615.63,
+      "text": "en train de graver dans Jira des tickets"
+    },
+    {
+      "start": 615.63,
+      "end": 617.51,
+      "text": "qui met 1000 ans à faire"
+    },
+    {
+      "start": 617.51,
+      "end": 619.59,
+      "text": "donc les développeurs ils attendent tout le temps les tickets"
+    },
+    {
+      "start": 619.59,
+      "end": 621.41,
+      "text": "et les développeurs"
+    },
+    {
+      "start": 621.41,
+      "end": 623.57,
+      "text": "ils génèrent beaucoup de choses à tester"
+    },
+    {
+      "start": 623.57,
+      "end": 625.03,
+      "text": "la QA ils utilisent pas l'IA"
+    },
+    {
+      "start": 625.03,
+      "end": 626.79,
+      "text": "donc ils mettent énormément de temps à tester"
+    },
+    {
+      "start": 626.79,
+      "end": 629.65,
+      "text": "donc en fait sur un cycle de sprint"
+    },
+    {
+      "start": 629.65,
+      "end": 631.23,
+      "text": "t'as 2 jours de dev"
+    },
+    {
+      "start": 631.23,
+      "end": 633.45,
+      "text": "et 10 jours de"
+    },
+    {
+      "start": 633.45,
+      "end": 634.45,
+      "text": "spec et de test"
+    },
+    {
+      "start": 634.45,
+      "end": 636.57,
+      "text": "donc tu profites pas du tout du truc"
+    },
+    {
+      "start": 636.57,
+      "end": 638.77,
+      "text": "et à contrario avec d'autres équipes"
+    },
+    {
+      "start": 638.77,
+      "end": 639.65,
+      "text": "où il n'y a pas du tout l'IA"
+    },
+    {
+      "start": 639.65,
+      "end": 642.61,
+      "text": "ça ne change rien par rapport à d'habitude"
+    },
+    {
+      "start": 642.61,
+      "end": 644.75,
+      "text": "sauf que tous les concurrents"
+    },
+    {
+      "start": 644.75,
+      "end": 645.45,
+      "text": "qui utilisent l'IA"
+    },
+    {
+      "start": 645.45,
+      "end": 649.03,
+      "text": "ils délivrent beaucoup plus vite"
+    },
+    {
+      "start": 649.03,
+      "end": 650.29,
+      "text": "donc tu es en train de perdre la course"
+    },
+    {
+      "start": 650.29,
+      "end": 653.09,
+      "text": "au capitalisme et à la startup nation"
+    },
+    {
+      "start": 653.09,
+      "end": 655.59,
+      "text": "et voilà le problème"
+    },
+    {
+      "start": 655.59,
+      "end": 657.21,
+      "text": "donc je pense que"
+    },
+    {
+      "start": 657.21,
+      "end": 657.83,
+      "text": "si on veut"
+    },
+    {
+      "start": 657.83,
+      "end": 659.87,
+      "text": "mettre de l'IA"
+    },
+    {
+      "start": 659.87,
+      "end": 661.53,
+      "text": "ça doit se faire entièrement"
+    },
+    {
+      "start": 661.53,
+      "end": 664.39,
+      "text": "je pense que l'expérimentation"
+    },
+    {
+      "start": 664.39,
+      "end": 666.45,
+      "text": "de tester l'IA c'était en 2025"
+    },
+    {
+      "start": 666.45,
+      "end": 668.13,
+      "text": "depuis 2026"
+    },
+    {
+      "start": 668.13,
+      "end": 669.27,
+      "text": "il fallait prendre des décisions"
+    },
+    {
+      "start": 669.27,
+      "end": 671.53,
+      "text": "2026"
+    },
+    {
+      "start": 671.53,
+      "end": 672.51,
+      "text": "les entreprises"
+    },
+    {
+      "start": 672.51,
+      "end": 673.11,
+      "text": "elles ont commencé"
+    },
+    {
+      "start": 673.11,
+      "end": 673.91,
+      "text": "à prendre des décisions"
+    },
+    {
+      "start": 673.91,
+      "end": 675.09,
+      "text": "donc tous les leaders"
+    },
+    {
+      "start": 675.09,
+      "end": 675.59,
+      "text": "du marché"
+    },
+    {
+      "start": 675.59,
+      "end": 676.87,
+      "text": "nous par exemple"
+    },
+    {
+      "start": 676.87,
+      "end": 677.83,
+      "text": "on est dans la fintech"
+    },
+    {
+      "start": 677.83,
+      "end": 678.59,
+      "text": "les leaders du marché"
+    },
+    {
+      "start": 678.59,
+      "end": 679.17,
+      "text": "c'est Alan"
+    },
+    {
+      "start": 679.17,
+      "end": 681.23,
+      "text": "j'ai vu qu'en 2026"
+    },
+    {
+      "start": 681.23,
+      "end": 682.41,
+      "text": "ils sont 100% IA"
+    },
+    {
+      "start": 682.41,
+      "end": 684.31,
+      "text": "et les PO"
+    },
+    {
+      "start": 684.31,
+      "end": 685.47,
+      "text": "ils font de la maquette"
+    },
+    {
+      "start": 685.47,
+      "end": 686.71,
+      "text": "ils font même des PR"
+    },
+    {
+      "start": 686.71,
+      "end": 688.29,
+      "text": "ils poussent même du code"
+    },
+    {
+      "start": 688.29,
+      "end": 688.83,
+      "text": "en prod"
+    },
+    {
+      "start": 688.83,
+      "end": 689.83,
+      "text": "les PO maintenant"
+    },
+    {
+      "start": 689.83,
+      "end": 691.31,
+      "text": "tout le monde"
+    },
+    {
+      "start": 691.31,
+      "end": 692.39,
+      "text": "est à full IA"
+    },
+    {
+      "start": 692.39,
+      "end": 693.71,
+      "text": "et tout ça en fait"
+    },
+    {
+      "start": 693.71,
+      "end": 695.87,
+      "text": "c'est un système"
+    },
+    {
+      "start": 695.87,
+      "end": 698.25,
+      "text": "qui est construit et qui évolue"
+    },
+    {
+      "start": 698.25,
+      "end": 698.99,
+      "text": "de jour en jour,"
+    },
+    {
+      "start": 699.73,
+      "end": 701.07,
+      "text": "mais qui est"
+    },
+    {
+      "start": 701.07,
+      "end": 702.61,
+      "text": "vivant."
+    },
+    {
+      "start": 703.41,
+      "end": 706.13,
+      "text": "On met en place un process, c'est comme ça,"
+    },
+    {
+      "start": 706.77,
+      "end": 707.95,
+      "text": "et on refera"
+    },
+    {
+      "start": 707.95,
+      "end": 709.63,
+      "text": "des analyses dans six mois,"
+    },
+    {
+      "start": 710.05,
+      "end": 712.35,
+      "text": "on remettra en place des réunions dans six mois pour voir comment ça marche."
+    },
+    {
+      "start": 712.75,
+      "end": 713.81,
+      "text": "Non, non, c'est pas comme ça du tout."
+    },
+    {
+      "start": 714.31,
+      "end": 715.35,
+      "text": "Tout le monde utilise IA,"
+    },
+    {
+      "start": 715.85,
+      "end": 717.85,
+      "text": "c'est open bar, et par contre,"
+    },
+    {
+      "start": 717.85,
+      "end": 719.47,
+      "text": "tous les quinze jours, on fait une réunion"
+    },
+    {
+      "start": 719.47,
+      "end": 721.45,
+      "text": "et on structure qu'est-ce qui se passe bien,"
+    },
+    {
+      "start": 721.53,
+      "end": 723.59,
+      "text": "qu'est-ce qui se passe pas bien, et on met en place"
+    },
+    {
+      "start": 723.59,
+      "end": 725.49,
+      "text": "des process en flux tendu au fur et à mesure."
+    },
+    {
+      "start": 725.87,
+      "end": 730.05,
+      "text": "pour arriver, au bout de six mois, à avoir une première organisation structurée."
+    },
+    {
+      "start": 730.65,
+      "end": 734.57,
+      "text": "Et il y a des rétrospectives, de l'analyse de comment ça marche, des RECs,"
+    },
+    {
+      "start": 735.01,
+      "end": 735.89,
+      "text": "et ça progresse comme ça."
+    },
+    {
+      "start": 736.25,
+      "end": 737.23,
+      "text": "Moi, je vois ça comme ça."
+    },
+    {
+      "start": 737.61,
+      "end": 738.51,
+      "text": "C'est de l'IAGIL, quoi."
+    },
+    {
+      "start": 740.97,
+      "end": 744.95,
+      "text": "Je pense que le dernier moment où l'AGILITÉ sert encore à quelque chose,"
+    },
+    {
+      "start": 745.67,
+      "end": 748.69,
+      "text": "c'est pour accompagner la structuration d'une boîte à l'IA."
+    },
+    {
+      "start": 749.11,
+      "end": 751.57,
+      "text": "Oui, effectivement, je suis d'accord."
+    },
+    {
+      "start": 751.57,
+      "end": 752.35,
+      "text": "Je suis d'accord."
+    },
+    {
+      "start": 752.35,
+      "end": 753.49,
+      "text": "mais après"
+    },
+    {
+      "start": 753.49,
+      "end": 757.55,
+      "text": "il y a quand même un truc qui m'a fait tiquer"
+    },
+    {
+      "start": 757.55,
+      "end": 758.17,
+      "text": "c'est compliqué quoi"
+    },
+    {
+      "start": 758.17,
+      "end": 761.09,
+      "text": "genre les PO qui poussent"
+    },
+    {
+      "start": 761.09,
+      "end": 763.35,
+      "text": "du code en prod"
+    },
+    {
+      "start": 763.35,
+      "end": 765.27,
+      "text": "ça quand même"
+    },
+    {
+      "start": 765.27,
+      "end": 767.33,
+      "text": "il y a vraiment chez Alan"
+    },
+    {
+      "start": 767.33,
+      "end": 769.89,
+      "text": "des mecs qui poussent du code en prod"
+    },
+    {
+      "start": 769.89,
+      "end": 771.25,
+      "text": "il faudra que je re-regarde"
+    },
+    {
+      "start": 771.25,
+      "end": 772.83,
+      "text": "mais après je pense qu'il y a plein de"
+    },
+    {
+      "start": 772.83,
+      "end": 775.29,
+      "text": "peut-être qui travaillent d'une manière"
+    },
+    {
+      "start": 775.29,
+      "end": 777.73,
+      "text": "peut-être que c'est des PO"
+    },
+    {
+      "start": 777.73,
+      "end": 778.77,
+      "text": "qui étaient développeurs"
+    },
+    {
+      "start": 778.77,
+      "end": 780.05,
+      "text": "qui viennent de passer PO"
+    },
+    {
+      "start": 780.05,
+      "end": 782.87,
+      "text": "peut-être que c'est un mec comme vous"
+    },
+    {
+      "start": 782.87,
+      "end": 783.61,
+      "text": "qui est devenu PO"
+    },
+    {
+      "start": 783.61,
+      "end": 786.77,
+      "text": "mais j'ai entendu le mec qui témoignait"
+    },
+    {
+      "start": 786.77,
+      "end": 787.31,
+      "text": "qui disait ça"
+    },
+    {
+      "start": 787.31,
+      "end": 791.51,
+      "text": "mais je vois pas mon code passer en prod moi personnellement"
+    },
+    {
+      "start": 791.51,
+      "end": 792.35,
+      "text": "ouais"
+    },
+    {
+      "start": 792.35,
+      "end": 794.67,
+      "text": "moi je pense que ça peut être possible un truc comme ça"
+    },
+    {
+      "start": 794.67,
+      "end": 797.39,
+      "text": "mais moyennant du gros process"
+    },
+    {
+      "start": 797.39,
+      "end": 799.53,
+      "text": "des process"
+    },
+    {
+      "start": 799.53,
+      "end": 800.35,
+      "text": "bien huilés quoi"
+    },
+    {
+      "start": 800.35,
+      "end": 803.05,
+      "text": "c'est à dire le mec pousse un truc"
+    },
+    {
+      "start": 803.05,
+      "end": 805.79,
+      "text": "il y a une IA qui vérifie déjà la qualité du code"
+    },
+    {
+      "start": 805.79,
+      "end": 807.75,
+      "text": "une IA qui vérifie"
+    },
+    {
+      "start": 807.75,
+      "end": 808.89,
+      "text": "le fonctionnel"
+    },
+    {
+      "start": 808.89,
+      "end": 812.11,
+      "text": "voir si, à priori, le PO connaît bien le fonctionnel,"
+    },
+    {
+      "start": 812.27,
+      "end": 814.21,
+      "text": "donc ce n'est pas forcément le plus important,"
+    },
+    {
+      "start": 815.01,
+      "end": 819.95,
+      "text": "mais que le code est en accord avec les principes de l'entreprise,"
+    },
+    {
+      "start": 820.07,
+      "end": 821.67,
+      "text": "la façon de faire de l'entreprise."
+    },
+    {
+      "start": 822.83,
+      "end": 826.63,
+      "text": "Et donc, ça nécessite des connaissances sur les conventions de l'entreprise,"
+    },
+    {
+      "start": 827.31,
+      "end": 830.01,
+      "text": "la qualité attendue par l'entreprise, etc."
+    },
+    {
+      "start": 830.73,
+      "end": 835.47,
+      "text": "Donc, on en revient à une question de centralisation des workflows"
+    },
+    {
+      "start": 835.47,
+      "end": 836.77,
+      "text": "et des process"
+    },
+    {
+      "start": 836.77,
+      "end": 839.75,
+      "text": "qu'on doit établir de manière centralisée"
+    },
+    {
+      "start": 839.75,
+      "end": 841.59,
+      "text": "et pas chacun de son côté"
+    },
+    {
+      "start": 841.59,
+      "end": 843.63,
+      "text": "parce que voilà, moi perso"
+    },
+    {
+      "start": 843.63,
+      "end": 845.57,
+      "text": "je me suis fait mes propres règles"
+    },
+    {
+      "start": 845.57,
+      "end": 846.49,
+      "text": "et mes propres workflows"
+    },
+    {
+      "start": 846.49,
+      "end": 849.35,
+      "text": "en accord avec"
+    },
+    {
+      "start": 849.35,
+      "end": 851.83,
+      "text": "ce qu'attend"
+    },
+    {
+      "start": 851.83,
+      "end": 853.29,
+      "text": "la boîte en fait"
+    },
+    {
+      "start": 853.29,
+      "end": 855.11,
+      "text": "les tests"
+    },
+    {
+      "start": 855.11,
+      "end": 858.05,
+      "text": "les design systems"
+    },
+    {
+      "start": 858.05,
+      "end": 859.37,
+      "text": "les tickets, etc"
+    },
+    {
+      "start": 859.37,
+      "end": 861.71,
+      "text": "tout ça, c'est des trucs"
+    },
+    {
+      "start": 861.71,
+      "end": 863.37,
+      "text": "que j'ai mis en place, mais idéalement"
+    },
+    {
+      "start": 863.37,
+      "end": 864.95,
+      "text": "il faudrait le mettre en place de façon globale"
+    },
+    {
+      "start": 864.95,
+      "end": 867.21,
+      "text": "il faudrait centraliser cette manière de faire"
+    },
+    {
+      "start": 867.21,
+      "end": 868.39,
+      "text": "c'est ça"
+    },
+    {
+      "start": 868.39,
+      "end": 870.15,
+      "text": "mais tu as répondu au problème"
+    },
+    {
+      "start": 870.15,
+      "end": 872.85,
+      "text": "le truc qui t'a fait tiquer tu as trouvé la réponse toi même"
+    },
+    {
+      "start": 872.85,
+      "end": 874.29,
+      "text": "c'est qu'à partir du moment"
+    },
+    {
+      "start": 874.29,
+      "end": 877.17,
+      "text": "où c'est un peu ce que nous on essaye de faire"
+    },
+    {
+      "start": 877.17,
+      "end": 878.93,
+      "text": "avec le projet dans lequel on travaille"
+    },
+    {
+      "start": 878.93,
+      "end": 879.87,
+      "text": "avec Loïc"
+    },
+    {
+      "start": 879.87,
+      "end": 882.97,
+      "text": "c'est que l'objectif c'est de mettre en place tout un cadre"
+    },
+    {
+      "start": 882.97,
+      "end": 884.21,
+      "text": "dans un harnais"
+    },
+    {
+      "start": 884.21,
+      "end": 887.21,
+      "text": "où tu as comme tu dis toutes les conventions, toute la norme"
+    },
+    {
+      "start": 887.21,
+      "end": 889.07,
+      "text": "toutes les règles de bonne conduite"
+    },
+    {
+      "start": 889.07,
+      "end": 890.99,
+      "text": "toute la structure"
+    },
+    {
+      "start": 890.99,
+      "end": 892.23,
+      "text": "toute l'architecture"
+    },
+    {
+      "start": 892.23,
+      "end": 894.01,
+      "text": "tout ça c'est dans des skills"
+    },
+    {
+      "start": 894.01,
+      "end": 895.85,
+      "text": "c'est dans des capacités, c'est dans des instructions"
+    },
+    {
+      "start": 895.85,
+      "end": 896.63,
+      "text": "t'as des agents"
+    },
+    {
+      "start": 896.63,
+      "end": 899.73,
+      "text": "et en fait avant quand on codait"
+    },
+    {
+      "start": 899.73,
+      "end": 901.17,
+      "text": "on avait un système d'autocomplétion"
+    },
+    {
+      "start": 901.17,
+      "end": 903.21,
+      "text": "il y avait des trucs qui t'aidaient"
+    },
+    {
+      "start": 903.21,
+      "end": 905.53,
+      "text": "mais là l'autocomplétion en fait tu dis juste"
+    },
+    {
+      "start": 905.53,
+      "end": 906.67,
+      "text": "moi je veux faire ça"
+    },
+    {
+      "start": 906.67,
+      "end": 909.35,
+      "text": "et l'IA elle va faire ça comme si c'était le CTO"
+    },
+    {
+      "start": 909.35,
+      "end": 910.89,
+      "text": "qui codait en fait"
+    },
+    {
+      "start": 910.89,
+      "end": 913.43,
+      "text": "et qui est garant de ces règles ?"
+    },
+    {
+      "start": 913.43,
+      "end": 915.61,
+      "text": "qui est garant de ces conventions, de ces process ?"
+    },
+    {
+      "start": 915.61,
+      "end": 918.27,
+      "text": "qui contribue et qui les valide ?"
+    },
+    {
+      "start": 918.27,
+      "end": 919.23,
+      "text": "tu vois ça c'est aussi une question"
+    },
+    {
+      "start": 919.23,
+      "end": 921.99,
+      "text": "c'est les tech leads de la boîte"
+    },
+    {
+      "start": 921.99,
+      "end": 924.43,
+      "text": "t'as une équipe"
+    },
+    {
+      "start": 924.43,
+      "end": 925.65,
+      "text": "pluridisciplinaire"
+    },
+    {
+      "start": 925.65,
+      "end": 927.79,
+      "text": "enfin même pas pluridisciplinaire, t'as une équipe"
+    },
+    {
+      "start": 927.79,
+      "end": 929.75,
+      "text": "d'experts, des développeurs"
+    },
+    {
+      "start": 929.75,
+      "end": 931.81,
+      "text": "ouais, mais pour moi justement"
+    },
+    {
+      "start": 931.81,
+      "end": 933.43,
+      "text": "ça passe par, je sais pas"
+    },
+    {
+      "start": 933.43,
+      "end": 936.11,
+      "text": "une équipe dédiée à la transformation"
+    },
+    {
+      "start": 936.11,
+      "end": 938.03,
+      "text": "de ces process"
+    },
+    {
+      "start": 938.03,
+      "end": 939.91,
+      "text": "vers de l'agentique"
+    },
+    {
+      "start": 939.91,
+      "end": 941.99,
+      "text": "donc je pense qu'une boîte elle doit quand même"
+    },
+    {
+      "start": 941.99,
+      "end": 943.53,
+      "text": "créer une équipe dédiée à cette"
+    },
+    {
+      "start": 943.53,
+      "end": 946.47,
+      "text": "à cette transformation"
+    },
+    {
+      "start": 946.47,
+      "end": 948.31,
+      "text": "pour la phase de mise en place"
+    },
+    {
+      "start": 948.31,
+      "end": 949.81,
+      "text": "je pense que c'est nécessaire en fait"
+    },
+    {
+      "start": 949.81,
+      "end": 952.19,
+      "text": "peut-être des référents qui viennent expliquer aux gens"
+    },
+    {
+      "start": 952.19,
+      "end": 954.07,
+      "text": "déjà qu'ils viennent prendre"
+    },
+    {
+      "start": 954.07,
+      "end": 955.89,
+      "text": "les infos"
+    },
+    {
+      "start": 955.89,
+      "end": 957.77,
+      "text": "au niveau des différentes équipes pour savoir"
+    },
+    {
+      "start": 957.77,
+      "end": 958.63,
+      "text": "qu'est-ce qu'ils font"
+    },
+    {
+      "start": 958.63,
+      "end": 961.75,
+      "text": "c'est un produit, en fait c'est juste un produit"
+    },
+    {
+      "start": 961.75,
+      "end": 962.85,
+      "text": "donc il faut une équipe produite"
+    },
+    {
+      "start": 962.85,
+      "end": 965.45,
+      "text": "mais il faut un PM"
+    },
+    {
+      "start": 965.45,
+      "end": 967.65,
+      "text": "c'est un produit interne"
+    },
+    {
+      "start": 967.65,
+      "end": 969.93,
+      "text": "mais il faut de la communication"
+    },
+    {
+      "start": 969.93,
+      "end": 972.01,
+      "text": "il faut une stratégie de communication interne"
+    },
+    {
+      "start": 972.01,
+      "end": 974.25,
+      "text": "il faut une stratégie de formation interne"
+    },
+    {
+      "start": 974.25,
+      "end": 975.79,
+      "text": "il faut tout"
+    },
+    {
+      "start": 975.79,
+      "end": 977.33,
+      "text": "comme un vrai produit"
+    },
+    {
+      "start": 977.33,
+      "end": 979.53,
+      "text": "parce que les gens derrière t'as des RH"
+    },
+    {
+      "start": 979.53,
+      "end": 980.25,
+      "text": "qu'ils vont utiliser"
+    },
+    {
+      "start": 980.25,
+      "end": 981.29,
+      "text": "t'as des gens"
+    },
+    {
+      "start": 981.29,
+      "end": 982.37,
+      "text": "de tout âge"
+    },
+    {
+      "start": 982.37,
+      "end": 983.01,
+      "text": "dans une boîte"
+    },
+    {
+      "start": 983.01,
+      "end": 984.23,
+      "text": "donc c'est pas que"
+    },
+    {
+      "start": 984.23,
+      "end": 985.43,
+      "text": "un produit pour les devs"
+    },
+    {
+      "start": 985.43,
+      "end": 985.85,
+      "text": "les devs"
+    },
+    {
+      "start": 985.85,
+      "end": 986.65,
+      "text": "ils vont vite comprendre"
+    },
+    {
+      "start": 986.65,
+      "end": 987.93,
+      "text": "un produit tech"
+    },
+    {
+      "start": 987.93,
+      "end": 989.85,
+      "text": "mais ouais"
+    },
+    {
+      "start": 989.85,
+      "end": 990.87,
+      "text": "il faut faire exactement"
+    },
+    {
+      "start": 990.87,
+      "end": 992.01,
+      "text": "comme si on développait"
+    },
+    {
+      "start": 992.01,
+      "end": 992.33,
+      "text": "un produit"
+    },
+    {
+      "start": 992.33,
+      "end": 993.61,
+      "text": "c'est pour ça"
+    },
+    {
+      "start": 993.61,
+      "end": 993.95,
+      "text": "qu'au début"
+    },
+    {
+      "start": 993.95,
+      "end": 994.47,
+      "text": "je disais"
+    },
+    {
+      "start": 994.47,
+      "end": 995.29,
+      "text": "l'important"
+    },
+    {
+      "start": 995.29,
+      "end": 995.97,
+      "text": "c'est pas forcément"
+    },
+    {
+      "start": 995.97,
+      "end": 996.43,
+      "text": "le produit"
+    },
+    {
+      "start": 996.43,
+      "end": 997.17,
+      "text": "qui sera mis en place"
+    },
+    {
+      "start": 997.17,
+      "end": 998.25,
+      "text": "c'est plus la com"
+    },
+    {
+      "start": 998.25,
+      "end": 999.13,
+      "text": "que tu vas faire en amont"
+    },
+    {
+      "start": 999.13,
+      "end": 1001.19,
+      "text": "il faut qu'il y ait"
+    },
+    {
+      "start": 1001.19,
+      "end": 1001.65,
+      "text": "une partie"
+    },
+    {
+      "start": 1001.65,
+      "end": 1003.29,
+      "text": "il faut qu'il y ait"
+    },
+    {
+      "start": 1003.29,
+      "end": 1003.63,
+      "text": "une grosse"
+    },
+    {
+      "start": 1003.63,
+      "end": 1005.61,
+      "text": "des grosses sessions"
+    },
+    {
+      "start": 1005.61,
+      "end": 1006.31,
+      "text": "de discussion"
+    },
+    {
+      "start": 1006.31,
+      "end": 1007.35,
+      "text": "pour expliquer"
+    },
+    {
+      "start": 1007.35,
+      "end": 1008.89,
+      "text": "à chacun"
+    },
+    {
+      "start": 1008.89,
+      "end": 1010.15,
+      "text": "c'est quoi le but"
+    },
+    {
+      "start": 1010.15,
+      "end": 1012.29,
+      "text": "qu'est-ce que tu vois faire exactement"
+    },
+    {
+      "start": 1012.29,
+      "end": 1014.63,
+      "text": "et qu'est-ce que ça va changer pour eux"
+    },
+    {
+      "start": 1014.63,
+      "end": 1015.95,
+      "text": "déjà parce qu'il faut aussi"
+    },
+    {
+      "start": 1015.95,
+      "end": 1017.91,
+      "text": "entraîner les gens"
+    },
+    {
+      "start": 1017.91,
+      "end": 1019.55,
+      "text": "t'as peut-être des gens qui sont réticents"
+    },
+    {
+      "start": 1019.55,
+      "end": 1021.81,
+      "text": "qui veulent pas passer à l'IA et il faut quand même les porter"
+    },
+    {
+      "start": 1021.81,
+      "end": 1024.47,
+      "text": "avant de mettre en place"
+    },
+    {
+      "start": 1024.47,
+      "end": 1026.35,
+      "text": "ta solution"
+    },
+    {
+      "start": 1026.35,
+      "end": 1027.39,
+      "text": "IA interne"
+    },
+    {
+      "start": 1027.39,
+      "end": 1029.85,
+      "text": "faut que t'aies au moins réussi à porter"
+    },
+    {
+      "start": 1029.85,
+      "end": 1031.07,
+      "text": "80% de ta boîte"
+    },
+    {
+      "start": 1031.07,
+      "end": 1033.51,
+      "text": "pour les amener à utiliser le truc"
+    },
+    {
+      "start": 1033.51,
+      "end": 1035.77,
+      "text": "et ça ça peut être compliqué"
+    },
+    {
+      "start": 1035.77,
+      "end": 1037.97,
+      "text": "faut trouver un moyen de pouvoir"
+    },
+    {
+      "start": 1037.97,
+      "end": 1039.89,
+      "text": "faire cohabiter aussi ceux qui ne veulent pas"
+    },
+    {
+      "start": 1039.89,
+      "end": 1041.79,
+      "text": "utiliser l'IA. Parce qu'à mon avis, il y a"
+    },
+    {
+      "start": 1041.79,
+      "end": 1043.79,
+      "text": "très peu de boîtes qui sont prêtes"
+    },
+    {
+      "start": 1043.79,
+      "end": 1045.33,
+      "text": "à dire, on passe à l'IA,"
+    },
+    {
+      "start": 1046.21,
+      "end": 1047.79,
+      "text": "si vous ne voulez pas passer"
+    },
+    {
+      "start": 1047.79,
+      "end": 1049.81,
+      "text": "à l'IA, prenez"
+    },
+    {
+      "start": 1049.81,
+      "end": 1050.79,
+      "text": "un chèque et bonne journée."
+    },
+    {
+      "start": 1051.61,
+      "end": 1053.65,
+      "text": "À mon avis, il n'y a pas beaucoup de boîtes en France qui vont faire ça."
+    },
+    {
+      "start": 1054.77,
+      "end": 1055.91,
+      "text": "Le problème, c'est qu'une"
+    },
+    {
+      "start": 1055.91,
+      "end": 1057.95,
+      "text": "boîte qui décide de passer, on va dire"
+    },
+    {
+      "start": 1057.95,
+      "end": 1058.89,
+      "text": "à 100% à l'IA,"
+    },
+    {
+      "start": 1059.29,
+      "end": 1062.21,
+      "text": "qu'est-ce qu'elle fait des gens qui ne veulent pas utiliser l'IA ?"
+    },
+    {
+      "start": 1062.21,
+      "end": 1063.63,
+      "text": "On ne va pas garder les gens,"
+    },
+    {
+      "start": 1063.63,
+      "end": 1065.69,
+      "text": "enfin, on peut décider de garder"
+    },
+    {
+      "start": 1065.69,
+      "end": 1067.49,
+      "text": "les gens qui ne veulent pas utiliser l'IA, mais"
+    },
+    {
+      "start": 1067.49,
+      "end": 1068.43,
+      "text": "Et du coup, qu'est-ce qu'ils vont faire ?"
+    },
+    {
+      "start": 1068.43,
+      "end": 1069.45,
+      "text": "Ils ne vont pas rentrer dans les process."
+    },
+    {
+      "start": 1070.71,
+      "end": 1072.27,
+      "text": "Et tu ne peux pas laisser des gens"
+    },
+    {
+      "start": 1072.27,
+      "end": 1073.27,
+      "text": "qui sont hors process"
+    },
+    {
+      "start": 1073.27,
+      "end": 1075.89,
+      "text": "contribuer au développement"
+    },
+    {
+      "start": 1075.89,
+      "end": 1078.53,
+      "text": "ou à l'architecture de ton truc."
+    },
+    {
+      "start": 1079.45,
+      "end": 1080.33,
+      "text": "De ce que j'ai vu"
+    },
+    {
+      "start": 1080.33,
+      "end": 1081.47,
+      "text": "au Microsoft,"
+    },
+    {
+      "start": 1081.73,
+      "end": 1083.09,
+      "text": "ils ont proposé, je crois,"
+    },
+    {
+      "start": 1083.17,
+      "end": 1084.73,
+      "text": "il y a 40 000 personnes"
+    },
+    {
+      "start": 1084.73,
+      "end": 1086.95,
+      "text": "à qui ils ont proposé un chèque"
+    },
+    {
+      "start": 1086.95,
+      "end": 1089.83,
+      "text": "pour leur en proposer de partir"
+    },
+    {
+      "start": 1089.83,
+      "end": 1091.37,
+      "text": "avec un gros chèque."
+    },
+    {
+      "start": 1092.69,
+      "end": 1094.27,
+      "text": "C'est une sorte d'une rupture conventionnelle."
+    },
+    {
+      "start": 1095.55,
+      "end": 1096.03,
+      "text": "Et ce n'est pas"
+    },
+    {
+      "start": 1096.03,
+      "end": 1096.73,
+      "text": "qu'aux Etats-Unis."
+    },
+    {
+      "start": 1096.73,
+      "end": 1099.77,
+      "text": "ce que j'avais vu c'est dans plusieurs pays d'Europe"
+    },
+    {
+      "start": 1099.77,
+      "end": 1101.65,
+      "text": "mais c'est quoi la raison pour laquelle"
+    },
+    {
+      "start": 1101.65,
+      "end": 1103.41,
+      "text": "les gens ne voudraient pas utiliser l'IA pour vous"
+    },
+    {
+      "start": 1103.41,
+      "end": 1104.71,
+      "text": "justement parlons-en"
+    },
+    {
+      "start": 1104.71,
+      "end": 1106.51,
+      "text": "ça peut être quoi ces raisons"
+    },
+    {
+      "start": 1106.51,
+      "end": 1108.45,
+      "text": "c'est peut-être un autre sujet"
+    },
+    {
+      "start": 1108.45,
+      "end": 1111.05,
+      "text": "j'ai eu deux cas, non mais c'est intéressant t'as raison"
+    },
+    {
+      "start": 1111.05,
+      "end": 1112.87,
+      "text": "moi j'ai eu deux cas, j'ai eu un cas où"
+    },
+    {
+      "start": 1112.87,
+      "end": 1115.51,
+      "text": "quelqu'un a essayé genre dans Cursor"
+    },
+    {
+      "start": 1115.51,
+      "end": 1116.55,
+      "text": "ou dans un outil de merde"
+    },
+    {
+      "start": 1116.55,
+      "end": 1119.49,
+      "text": "et du coup il a constaté"
+    },
+    {
+      "start": 1119.49,
+      "end": 1120.87,
+      "text": "que c'était un outil de merde et il s'est dit"
+    },
+    {
+      "start": 1120.87,
+      "end": 1121.67,
+      "text": "l'IA c'est de la merde"
+    },
+    {
+      "start": 1121.67,
+      "end": 1125.05,
+      "text": "voilà donc c'est un manque de connaissances sur le sujet"
+    },
+    {
+      "start": 1125.05,
+      "end": 1128.29,
+      "text": "il y a le premier truc c'est manque de connaissances"
+    },
+    {
+      "start": 1128.29,
+      "end": 1129.83,
+      "text": "il avait pas envie, il a testé vite fait"
+    },
+    {
+      "start": 1129.83,
+      "end": 1130.57,
+      "text": "il a pas envie"
+    },
+    {
+      "start": 1130.57,
+      "end": 1133.03,
+      "text": "le deuxième c'est ceux qui disent"
+    },
+    {
+      "start": 1133.03,
+      "end": 1135.47,
+      "text": "l'écologie ça pollue"
+    },
+    {
+      "start": 1135.47,
+      "end": 1136.81,
+      "text": "c'est pas responsable"
+    },
+    {
+      "start": 1136.81,
+      "end": 1139.43,
+      "text": "tout ce qui est éthique, écologie"
+    },
+    {
+      "start": 1139.43,
+      "end": 1142.13,
+      "text": "donc c'est manque de connaissances"
+    },
+    {
+      "start": 1142.13,
+      "end": 1142.59,
+      "text": "et puis"
+    },
+    {
+      "start": 1142.59,
+      "end": 1145.19,
+      "text": "l'éthique et l'écologie"
+    },
+    {
+      "start": 1145.19,
+      "end": 1147.35,
+      "text": "c'est ce que j'ai pu constater personnellement"
+    },
+    {
+      "start": 1147.35,
+      "end": 1149.31,
+      "text": "je pense qu'il y a aussi d'autres cas"
+    },
+    {
+      "start": 1149.31,
+      "end": 1151.59,
+      "text": "t'as aussi des gens qui sont hyper pointus"
+    },
+    {
+      "start": 1151.59,
+      "end": 1153.93,
+      "text": "et qui ont l'impression de devenir inutiles d'un coup"
+    },
+    {
+      "start": 1153.93,
+      "end": 1158.43,
+      "text": "parce qu'en fait, ils pensaient qu'ils apportaient de la valeur"
+    },
+    {
+      "start": 1158.43,
+      "end": 1161.75,
+      "text": "parce qu'ils avaient des connaissances pointues sur un sujet spécifique."
+    },
+    {
+      "start": 1162.59,
+      "end": 1163.27,
+      "text": "Donc, la perte de sens."
+    },
+    {
+      "start": 1164.17,
+      "end": 1167.61,
+      "text": "Oui, ils sont dépassés, c'est l'IA qui prend leur taf"
+    },
+    {
+      "start": 1167.61,
+      "end": 1169.35,
+      "text": "et du coup, ils ont l'impression de ne plus servir à rien."
+    },
+    {
+      "start": 1171.19,
+      "end": 1174.49,
+      "text": "Après, tu as des gens aussi qui justement, eux, n'étaient pas pointus."
+    },
+    {
+      "start": 1175.53,
+      "end": 1177.99,
+      "text": "Ils ne maîtrisaient pas grand-chose et ils arrivaient à le masquer"
+    },
+    {
+      "start": 1177.99,
+      "end": 1182.03,
+      "text": "parce qu'ils se débrouillaient, c'était des bons tchatcheurs."
+    },
+    {
+      "start": 1182.03,
+      "end": 1185.29,
+      "text": "et le problème c'est que là l'IA prend la place"
+    },
+    {
+      "start": 1185.29,
+      "end": 1186.77,
+      "text": "elle fait le développement, ça fonctionne"
+    },
+    {
+      "start": 1186.77,
+      "end": 1188.55,
+      "text": "mais eux ils sont incapables d'expliquer"
+    },
+    {
+      "start": 1188.55,
+      "end": 1190.55,
+      "text": "comment ça fonctionne, qu'est-ce qu'il y a derrière"
+    },
+    {
+      "start": 1190.55,
+      "end": 1192.93,
+      "text": "donc ça fait ressortir justement"
+    },
+    {
+      "start": 1192.93,
+      "end": 1194.69,
+      "text": "le fait qu'ils n'étaient pas forcément aussi bons"
+    },
+    {
+      "start": 1194.69,
+      "end": 1195.87,
+      "text": "qu'ils le laissaient paraître"
+    },
+    {
+      "start": 1195.87,
+      "end": 1197.63,
+      "text": "En tout cas là ce que je vois"
+    },
+    {
+      "start": 1197.63,
+      "end": 1199.33,
+      "text": "pour le problème"
+    },
+    {
+      "start": 1199.33,
+      "end": 1202.39,
+      "text": "que le premier profil"
+    },
+    {
+      "start": 1202.39,
+      "end": 1204.35,
+      "text": "a remonté loup, donc le mec"
+    },
+    {
+      "start": 1204.35,
+      "end": 1206.43,
+      "text": "qui a testé son cloud"
+    },
+    {
+      "start": 1206.43,
+      "end": 1208.01,
+      "text": "et qui dit c'est de la merde, ça marche pas"
+    },
+    {
+      "start": 1208.01,
+      "end": 1209.11,
+      "text": "c'est un peu de la merde"
+    },
+    {
+      "start": 1209.11,
+      "end": 1210.57,
+      "text": "c'est un problème"
+    },
+    {
+      "start": 1210.57,
+      "end": 1213.35,
+      "text": "de méconnaissance, de manque d'expérience"
+    },
+    {
+      "start": 1213.35,
+      "end": 1215.13,
+      "text": "qui peut se régler facilement par de la pédagogie"
+    },
+    {
+      "start": 1215.13,
+      "end": 1217.55,
+      "text": "donc ça veut dire justement dans cette fameuse"
+    },
+    {
+      "start": 1217.55,
+      "end": 1219.43,
+      "text": "équipe IA un peu Avengers"
+    },
+    {
+      "start": 1219.43,
+      "end": 1221.71,
+      "text": "qui irait transformer un peu la boîte"
+    },
+    {
+      "start": 1221.71,
+      "end": 1222.39,
+      "text": "en"
+    },
+    {
+      "start": 1222.39,
+      "end": 1225.79,
+      "text": "qui irait augmenter"
+    },
+    {
+      "start": 1225.79,
+      "end": 1227.49,
+      "text": "la boîte avec de l'IA, je pense qu'il y a une"
+    },
+    {
+      "start": 1227.49,
+      "end": 1228.73,
+      "text": "grosse partie pédagogie"
+    },
+    {
+      "start": 1228.73,
+      "end": 1231.11,
+      "text": "voire même la plus grosse partie"
+    },
+    {
+      "start": 1231.11,
+      "end": 1233.49,
+      "text": "ça serait de la pédagogie pour former les gens"
+    },
+    {
+      "start": 1233.49,
+      "end": 1235.25,
+      "text": "à l'IA. Ah bah clairement"
+    },
+    {
+      "start": 1235.25,
+      "end": 1237.31,
+      "text": "clairement. En fait il faut"
+    },
+    {
+      "start": 1237.31,
+      "end": 1238.47,
+      "text": "obliger en plus parce qu'en fait"
+    },
+    {
+      "start": 1238.47,
+      "end": 1240.93,
+      "text": "le problème c'est que les gens en entreprise"
+    },
+    {
+      "start": 1240.93,
+      "end": 1242.91,
+      "text": "ils sont pris, ils sont sous l'eau"
+    },
+    {
+      "start": 1242.91,
+      "end": 1245.13,
+      "text": "donc ils vont pas prendre sur leur temps libre"
+    },
+    {
+      "start": 1245.13,
+      "end": 1246.89,
+      "text": "pour aller faire un truc qu'ils ont pas envie de faire déjà"
+    },
+    {
+      "start": 1246.89,
+      "end": 1248.81,
+      "text": "donc en fait il faudrait limiter"
+    },
+    {
+      "start": 1248.81,
+      "end": 1249.55,
+      "text": "c'est comme à l'école"
+    },
+    {
+      "start": 1249.55,
+      "end": 1252.69,
+      "text": "tous les jours de 11h à midi"
+    },
+    {
+      "start": 1252.69,
+      "end": 1254.51,
+      "text": "tu rejoins le call teams"
+    },
+    {
+      "start": 1254.51,
+      "end": 1256.25,
+      "text": "et t'as un Nicolas"
+    },
+    {
+      "start": 1256.25,
+      "end": 1258.47,
+      "text": "qui te fait comme une vidéo Youtube"
+    },
+    {
+      "start": 1258.47,
+      "end": 1260.63,
+      "text": "tu fais comme une vidéo Youtube où il y a tout le monde"
+    },
+    {
+      "start": 1260.63,
+      "end": 1261.79,
+      "text": "ou un live stream"
+    },
+    {
+      "start": 1261.79,
+      "end": 1264.05,
+      "text": "tu leur dis aujourd'hui je vais vous montrer comment"
+    },
+    {
+      "start": 1264.05,
+      "end": 1265.85,
+      "text": "j'utilise des MCP"
+    },
+    {
+      "start": 1265.85,
+      "end": 1267.97,
+      "text": "je vous montre moi comment je m'organise"
+    },
+    {
+      "start": 1267.97,
+      "end": 1270.35,
+      "text": "ce que ça me permet. Le lendemain, tu lui dis"
+    },
+    {
+      "start": 1270.35,
+      "end": 1272.33,
+      "text": "je vais... Voilà, regardez, là,"
+    },
+    {
+      "start": 1272.37,
+      "end": 1274.39,
+      "text": "il y a un bug qui vient de remonter, je vais vous montrer comment je le"
+    },
+    {
+      "start": 1274.39,
+      "end": 1276.39,
+      "text": "corrige avec l'IA. Et tu fais"
+    },
+    {
+      "start": 1276.39,
+      "end": 1278.45,
+      "text": "tous les jours un sujet comme ça, pendant"
+    },
+    {
+      "start": 1278.45,
+      "end": 1280.95,
+      "text": "un mois, et à la fin, normalement, t'as 99%"
+    },
+    {
+      "start": 1280.95,
+      "end": 1282.59,
+      "text": "des gens, ils sont in. Et le 1%,"
+    },
+    {
+      "start": 1282.59,
+      "end": 1284.37,
+      "text": "en fait, c'est... Tu pourras"
+    },
+    {
+      "start": 1284.37,
+      "end": 1285.03,
+      "text": "jamais rien y faire."
+    },
+    {
+      "start": 1286.15,
+      "end": 1288.41,
+      "text": "Est-ce que... Moi, j'ai une vision,"
+    },
+    {
+      "start": 1288.55,
+      "end": 1289.99,
+      "text": "c'est est-ce que des gens, ils peuvent pas se rendre"
+    },
+    {
+      "start": 1289.99,
+      "end": 1292.53,
+      "text": "compte avec l'IA ? C'est un peu ce que disait Loïc,"
+    },
+    {
+      "start": 1293.33,
+      "end": 1294.43,
+      "text": "qu'au final, ils servent à rien."
+    },
+    {
+      "start": 1294.57,
+      "end": 1296.49,
+      "text": "Enfin, qu'ils servent à rien, et ça peut être..."
+    },
+    {
+      "start": 1296.49,
+      "end": 1302.25,
+      "text": "Et juste, ça peut être, comment dire ?"
+    },
+    {
+      "start": 1302.25,
+      "end": 1303.43,
+      "text": "Pour changer de métier, du coup."
+    },
+    {
+      "start": 1304.33,
+      "end": 1305.81,
+      "text": "Non, avec un peu..."
+    },
+    {
+      "start": 1305.81,
+      "end": 1307.93,
+      "text": "Si je n'étais pas allé chercher un peu plus loin,"
+    },
+    {
+      "start": 1308.21,
+      "end": 1309.95,
+      "text": "en voyant qu'une IaaS avait codé à ma place,"
+    },
+    {
+      "start": 1310.07,
+      "end": 1312.65,
+      "text": "si je m'étais arrêté là, j'aurais pu me dire, je ne sers plus à rien."
+    },
+    {
+      "start": 1313.87,
+      "end": 1315.45,
+      "text": "Il faut que je change de métier, tu vois."
+    },
+    {
+      "start": 1316.13,
+      "end": 1317.67,
+      "text": "Plutôt que d'aller chercher plus loin et de me dire,"
+    },
+    {
+      "start": 1317.67,
+      "end": 1320.99,
+      "text": "en fait, l'IaaS, c'est ce qu'on appelle un rabbit hole."
+    },
+    {
+      "start": 1321.23,
+      "end": 1322.35,
+      "text": "C'est qu'il y a plein de trucs à apprendre"
+    },
+    {
+      "start": 1322.35,
+      "end": 1324.61,
+      "text": "et plein de trucs qui permettent d'orchestrer,"
+    },
+    {
+      "start": 1324.61,
+      "end": 1326.93,
+      "text": "de faire plus de choses et de produire plus"
+    },
+    {
+      "start": 1326.93,
+      "end": 1328.65,
+      "text": "toujours en étant"
+    },
+    {
+      "start": 1328.65,
+      "end": 1330.69,
+      "text": "une seule personne"
+    },
+    {
+      "start": 1330.69,
+      "end": 1332.95,
+      "text": "c'est ça aussi qui est intéressant dans la suite"
+    },
+    {
+      "start": 1332.95,
+      "end": 1334.13,
+      "text": "du métier de développeur pour moi"
+    },
+    {
+      "start": 1334.13,
+      "end": 1335.97,
+      "text": "c'est arriver à t'organiser"
+    },
+    {
+      "start": 1335.97,
+      "end": 1337.91,
+      "text": "et à augmenter un petit peu"
+    },
+    {
+      "start": 1337.91,
+      "end": 1340.65,
+      "text": "ta manière de travailler pour pouvoir"
+    },
+    {
+      "start": 1340.65,
+      "end": 1343.05,
+      "text": "produire plus en moins de temps"
+    },
+    {
+      "start": 1343.05,
+      "end": 1344.49,
+      "text": "et avec la même qualité"
+    },
+    {
+      "start": 1344.49,
+      "end": 1345.43,
+      "text": "voire une meilleure qualité"
+    },
+    {
+      "start": 1345.43,
+      "end": 1348.49,
+      "text": "ça pour moi c'est la suite en gros"
+    },
+    {
+      "start": 1348.49,
+      "end": 1349.65,
+      "text": "du métier de développeur"
+    },
+    {
+      "start": 1349.65,
+      "end": 1352.79,
+      "text": "les gens ils vont pas trouver forcément"
+    },
+    {
+      "start": 1352.79,
+      "end": 1353.89,
+      "text": "ça tu vois je sais pas"
+    },
+    {
+      "start": 1353.89,
+      "end": 1356.61,
+      "text": "je sais pas, j'ai pas d'exemple"
+    },
+    {
+      "start": 1356.61,
+      "end": 1358.79,
+      "text": "sous la main là, mais c'est possible qu'il y a des gens"
+    },
+    {
+      "start": 1358.79,
+      "end": 1361.03,
+      "text": "qui se disent, bah ça y est mon métier il est résolu"
+    },
+    {
+      "start": 1361.03,
+      "end": 1363.05,
+      "text": "on a plus"
+    },
+    {
+      "start": 1363.05,
+      "end": 1364.31,
+      "text": "besoin de moi, et donc"
+    },
+    {
+      "start": 1364.31,
+      "end": 1366.91,
+      "text": "à ces gens là qu'est-ce qu'on leur dit, tu vois une personne qui se rende"
+    },
+    {
+      "start": 1366.91,
+      "end": 1369.35,
+      "text": "compte qu'elle faisait une tâche très répétitive"
+    },
+    {
+      "start": 1369.35,
+      "end": 1370.69,
+      "text": "toute la journée, genre je sais pas"
+    },
+    {
+      "start": 1370.69,
+      "end": 1372.89,
+      "text": "prendre un fichier Excel ou récolter"
+    },
+    {
+      "start": 1372.89,
+      "end": 1374.95,
+      "text": "des fiches, imagine"
+    },
+    {
+      "start": 1374.95,
+      "end": 1377.09,
+      "text": "je sais pas, une meuf qui son métier"
+    },
+    {
+      "start": 1377.09,
+      "end": 1378.79,
+      "text": "c'est de regarder des factures et de les rentrer"
+    },
+    {
+      "start": 1378.79,
+      "end": 1380.01,
+      "text": "dans un tableau Excel"
+    },
+    {
+      "start": 1380.01,
+      "end": 1381.81,
+      "text": "l'IA"
+    },
+    {
+      "start": 1381.81,
+      "end": 1384.93,
+      "text": "la meuf maintenant elle scanne ses factures"
+    },
+    {
+      "start": 1384.93,
+      "end": 1386.37,
+      "text": "et il y a fait tout son travail"
+    },
+    {
+      "start": 1386.37,
+      "end": 1388.57,
+      "text": "en je sais pas en"
+    },
+    {
+      "start": 1388.57,
+      "end": 1390.05,
+      "text": "10 minutes alors qu'elle le faisait"
+    },
+    {
+      "start": 1390.05,
+      "end": 1391.77,
+      "text": "en une journée"
+    },
+    {
+      "start": 1391.77,
+      "end": 1394.83,
+      "text": "la meuf qu'est-ce qu'elle va faire"
+    },
+    {
+      "start": 1394.83,
+      "end": 1395.83,
+      "text": "est-ce qu'elle va se trouver"
+    },
+    {
+      "start": 1395.83,
+      "end": 1398.85,
+      "text": "tu lui dis trouve quelque chose d'autre à faire pour améliorer la boîte"
+    },
+    {
+      "start": 1398.85,
+      "end": 1401.21,
+      "text": "maintenant que ça ça te prend 10 minutes sur le reste de ton temps"
+    },
+    {
+      "start": 1401.21,
+      "end": 1402.37,
+      "text": "essaie de faire d'autres choses"
+    },
+    {
+      "start": 1402.37,
+      "end": 1403.91,
+      "text": "prends des initiatives"
+    },
+    {
+      "start": 1403.91,
+      "end": 1406.95,
+      "text": "comment tu gères ce genre de profil"
+    },
+    {
+      "start": 1406.95,
+      "end": 1408.95,
+      "text": "ouais voilà"
+    },
+    {
+      "start": 1408.95,
+      "end": 1411.05,
+      "text": "comment tu gères ce genre de profil"
+    },
+    {
+      "start": 1411.05,
+      "end": 1411.73,
+      "text": "pour moi"
+    },
+    {
+      "start": 1411.73,
+      "end": 1413.33,
+      "text": "il y a quand même"
+    },
+    {
+      "start": 1413.33,
+      "end": 1413.85,
+      "text": "des profils"
+    },
+    {
+      "start": 1413.85,
+      "end": 1414.81,
+      "text": "qui vont poser problème"
+    },
+    {
+      "start": 1414.81,
+      "end": 1415.47,
+      "text": "à un moment donné"
+    },
+    {
+      "start": 1415.47,
+      "end": 1416.43,
+      "text": "et à juste titre"
+    },
+    {
+      "start": 1416.43,
+      "end": 1416.67,
+      "text": "tu vois"
+    },
+    {
+      "start": 1416.67,
+      "end": 1417.47,
+      "text": "c'est pas de leur faute"
+    },
+    {
+      "start": 1417.47,
+      "end": 1419.27,
+      "text": "et comment"
+    },
+    {
+      "start": 1419.27,
+      "end": 1420.29,
+      "text": "comment tu gères ça"
+    },
+    {
+      "start": 1420.29,
+      "end": 1421.43,
+      "text": "alors c'était pas le sujet"
+    },
+    {
+      "start": 1421.43,
+      "end": 1421.77,
+      "text": "mais"
+    },
+    {
+      "start": 1421.77,
+      "end": 1423.51,
+      "text": "ça rentre dans le cadre"
+    },
+    {
+      "start": 1423.51,
+      "end": 1425.43,
+      "text": "c'est pas de leur faute"
+    },
+    {
+      "start": 1425.43,
+      "end": 1426.05,
+      "text": "je suis d'accord"
+    },
+    {
+      "start": 1426.05,
+      "end": 1427.21,
+      "text": "et après"
+    },
+    {
+      "start": 1427.21,
+      "end": 1427.95,
+      "text": "on a aussi"
+    },
+    {
+      "start": 1427.95,
+      "end": 1428.49,
+      "text": "biaisé"
+    },
+    {
+      "start": 1428.49,
+      "end": 1428.97,
+      "text": "parce que nous"
+    },
+    {
+      "start": 1428.97,
+      "end": 1430.27,
+      "text": "on est développeurs"
+    },
+    {
+      "start": 1430.27,
+      "end": 1431.15,
+      "text": "mais on aime ça en fait"
+    },
+    {
+      "start": 1431.15,
+      "end": 1432.15,
+      "text": "je connais pas mal"
+    },
+    {
+      "start": 1432.15,
+      "end": 1433.03,
+      "text": "de développeurs en fait"
+    },
+    {
+      "start": 1433.03,
+      "end": 1434.19,
+      "text": "qui"
+    },
+    {
+      "start": 1434.19,
+      "end": 1435.27,
+      "text": "avec le temps"
+    },
+    {
+      "start": 1435.27,
+      "end": 1435.57,
+      "text": "en fait"
+    },
+    {
+      "start": 1435.57,
+      "end": 1436.69,
+      "text": "finissent par être"
+    },
+    {
+      "start": 1436.69,
+      "end": 1437.31,
+      "text": "un petit peu"
+    },
+    {
+      "start": 1437.31,
+      "end": 1438.09,
+      "text": "pas dégoûtés"
+    },
+    {
+      "start": 1438.09,
+      "end": 1438.43,
+      "text": "mais tu vois"
+    },
+    {
+      "start": 1438.43,
+      "end": 1439.13,
+      "text": "ils perdent un petit peu"
+    },
+    {
+      "start": 1439.13,
+      "end": 1440.43,
+      "text": "le goût"
+    },
+    {
+      "start": 1440.43,
+      "end": 1441.87,
+      "text": "qu'ils avaient du développement au début"
+    },
+    {
+      "start": 1441.87,
+      "end": 1443.25,
+      "text": "ouais"
+    },
+    {
+      "start": 1443.25,
+      "end": 1445.69,
+      "text": "et du coup en fait"
+    },
+    {
+      "start": 1445.69,
+      "end": 1448.49,
+      "text": "on leur retire le seul taf"
+    },
+    {
+      "start": 1448.49,
+      "end": 1450.23,
+      "text": "pour lequel il y avait un sens"
+    },
+    {
+      "start": 1450.23,
+      "end": 1452.87,
+      "text": "parce que c'est le taf pour lequel ils reçoivent un salaire"
+    },
+    {
+      "start": 1452.87,
+      "end": 1454.35,
+      "text": "et ils ont pas envie"
+    },
+    {
+      "start": 1454.35,
+      "end": 1455.99,
+      "text": "de chercher"
+    },
+    {
+      "start": 1455.99,
+      "end": 1458.29,
+      "text": "une nouvelle évolution dans leur travail"
+    },
+    {
+      "start": 1458.29,
+      "end": 1460.39,
+      "text": "eux ils voulaient faire"
+    },
+    {
+      "start": 1460.39,
+      "end": 1461.27,
+      "text": "juste ce qu'ils faisaient"
+    },
+    {
+      "start": 1461.27,
+      "end": 1464.35,
+      "text": "alors que nous on a une espèce de vision"
+    },
+    {
+      "start": 1464.35,
+      "end": 1466.55,
+      "text": "on se dit putain le truc peut prendre notre place"
+    },
+    {
+      "start": 1466.55,
+      "end": 1467.99,
+      "text": "trop bien"
+    },
+    {
+      "start": 1467.99,
+      "end": 1471.05,
+      "text": "je vais pouvoir faire 15 000 autres trucs à côté"
+    },
+    {
+      "start": 1471.05,
+      "end": 1473.33,
+      "text": "et je vais pouvoir aller plus loin"
+    },
+    {
+      "start": 1473.33,
+      "end": 1475.29,
+      "text": "et des trucs auxquels je rêvais"
+    },
+    {
+      "start": 1475.29,
+      "end": 1477.21,
+      "text": "et je me disais c'est pas possible"
+    },
+    {
+      "start": 1477.21,
+      "end": 1478.77,
+      "text": "de les faire, maintenant je vais pouvoir les faire"
+    },
+    {
+      "start": 1478.77,
+      "end": 1481.41,
+      "text": "non on peut les faire c'est ça, mais parce qu'on a un profil"
+    },
+    {
+      "start": 1481.41,
+      "end": 1483.09,
+      "text": "où on aime bien trouver des solutions"
+    },
+    {
+      "start": 1483.09,
+      "end": 1485.05,
+      "text": "à un problème, donc naturellement on va"
+    },
+    {
+      "start": 1485.05,
+      "end": 1485.89,
+      "text": "prendre des initiatives"
+    },
+    {
+      "start": 1485.89,
+      "end": 1488.85,
+      "text": "pour trouver d'autres solutions à d'autres problèmes"
+    },
+    {
+      "start": 1488.85,
+      "end": 1491.17,
+      "text": "maintenant qu'on a plus de temps tu vois, il y a peut-être ça"
+    },
+    {
+      "start": 1491.17,
+      "end": 1492.99,
+      "text": "et ça je pense que c'est pas le cas"
+    },
+    {
+      "start": 1492.99,
+      "end": 1494.73,
+      "text": "de tout le monde, sans vouloir dire"
+    },
+    {
+      "start": 1494.73,
+      "end": 1497.39,
+      "text": "oh on est mieux"
+    },
+    {
+      "start": 1497.39,
+      "end": 1498.25,
+      "text": "on est meilleur"
+    },
+    {
+      "start": 1498.25,
+      "end": 1499.29,
+      "text": "voilà tu vois"
+    },
+    {
+      "start": 1499.29,
+      "end": 1500.19,
+      "text": "sans vouloir tomber"
+    },
+    {
+      "start": 1500.19,
+      "end": 1500.67,
+      "text": "dans cette"
+    },
+    {
+      "start": 1500.67,
+      "end": 1502.83,
+      "text": "dans cette arrogance"
+    },
+    {
+      "start": 1502.83,
+      "end": 1503.17,
+      "text": "tu vois"
+    },
+    {
+      "start": 1503.17,
+      "end": 1504.07,
+      "text": "mais"
+    },
+    {
+      "start": 1504.07,
+      "end": 1505.31,
+      "text": "la majorité des gens"
+    },
+    {
+      "start": 1505.31,
+      "end": 1506.53,
+      "text": "c'est sûrement pas ça"
+    },
+    {
+      "start": 1506.53,
+      "end": 1506.93,
+      "text": "peut-être"
+    },
+    {
+      "start": 1506.93,
+      "end": 1507.79,
+      "text": "et que du coup"
+    },
+    {
+      "start": 1507.79,
+      "end": 1509.07,
+      "text": "à un moment donné"
+    },
+    {
+      "start": 1509.07,
+      "end": 1510.69,
+      "text": "il va y avoir des"
+    },
+    {
+      "start": 1510.69,
+      "end": 1513.03,
+      "text": "il y a des questions"
+    },
+    {
+      "start": 1513.03,
+      "end": 1513.65,
+      "text": "qui vont se poser"
+    },
+    {
+      "start": 1513.65,
+      "end": 1514.91,
+      "text": "des profils"
+    },
+    {
+      "start": 1514.91,
+      "end": 1515.73,
+      "text": "qui vont avoir du mal"
+    },
+    {
+      "start": 1515.73,
+      "end": 1516.27,
+      "text": "à s'adapter"
+    },
+    {
+      "start": 1516.27,
+      "end": 1517.53,
+      "text": "et"
+    },
+    {
+      "start": 1517.53,
+      "end": 1518.57,
+      "text": "potentiellement"
+    },
+    {
+      "start": 1518.57,
+      "end": 1519.35,
+      "text": "je sais pas"
+    },
+    {
+      "start": 1519.35,
+      "end": 1519.93,
+      "text": "je sais pas"
+    },
+    {
+      "start": 1519.93,
+      "end": 1520.47,
+      "text": "qu'est-ce qui"
+    },
+    {
+      "start": 1520.47,
+      "end": 1521.71,
+      "text": "pourrait se passer"
+    },
+    {
+      "start": 1521.71,
+      "end": 1522.15,
+      "text": "mais"
+    },
+    {
+      "start": 1522.15,
+      "end": 1523.21,
+      "text": "il y aura forcément"
+    },
+    {
+      "start": 1523.21,
+      "end": 1523.99,
+      "text": "des reconversions"
+    },
+    {
+      "start": 1523.99,
+      "end": 1524.53,
+      "text": "de toute façon"
+    },
+    {
+      "start": 1524.53,
+      "end": 1525.65,
+      "text": "qui seront nécessaires"
+    },
+    {
+      "start": 1525.65,
+      "end": 1527.21,
+      "text": "c'est comme les moindres copies"
+    },
+    {
+      "start": 1527.21,
+      "end": 1527.79,
+      "text": "à un moment"
+    },
+    {
+      "start": 1527.79,
+      "end": 1531.03,
+      "text": "quand t'as eu l'imprimerie et il fallait changer de taf"
+    },
+    {
+      "start": 1531.03,
+      "end": 1533.05,
+      "text": "ouais c'est ça mais là"
+    },
+    {
+      "start": 1533.05,
+      "end": 1534.99,
+      "text": "tu vois on est pas dans un métier qui va forcément"
+    },
+    {
+      "start": 1534.99,
+      "end": 1536.53,
+      "text": "créer d'autres travails"
+    },
+    {
+      "start": 1536.53,
+      "end": 1539.23,
+      "text": "ailleurs tu vois, on pourrait se dire que là"
+    },
+    {
+      "start": 1539.23,
+      "end": 1541.35,
+      "text": "l'IA"
+    },
+    {
+      "start": 1541.35,
+      "end": 1542.99,
+      "text": "elle va remplacer certains métiers"
+    },
+    {
+      "start": 1542.99,
+      "end": 1545.09,
+      "text": "un petit peu longs et rébarbatifs etc"
+    },
+    {
+      "start": 1545.09,
+      "end": 1547.03,
+      "text": "et en créer d'autres"
+    },
+    {
+      "start": 1547.03,
+      "end": 1549.19,
+      "text": "tu vois, donc libérer un peu"
+    },
+    {
+      "start": 1549.19,
+      "end": 1551.11,
+      "text": "permettre aux gens qui perdaient du temps"
+    },
+    {
+      "start": 1551.11,
+      "end": 1552.45,
+      "text": "sur des choses de faire d'autres choses"
+    },
+    {
+      "start": 1552.45,
+      "end": 1555.43,
+      "text": "est-ce que ça va vraiment être le cas ?"
+    },
+    {
+      "start": 1555.43,
+      "end": 1557.89,
+      "text": "tu peux te retrouver à écrire des skills"
+    },
+    {
+      "start": 1557.89,
+      "end": 1559.83,
+      "text": "parce que t'as des compétences"
+    },
+    {
+      "start": 1559.83,
+      "end": 1561.75,
+      "text": "justement hyper pointues sur des trucs"
+    },
+    {
+      "start": 1561.75,
+      "end": 1563.83,
+      "text": "et du coup tu vas être préposé aux skills"
+    },
+    {
+      "start": 1563.83,
+      "end": 1566.39,
+      "text": "sur ton corps de métier"
+    },
+    {
+      "start": 1566.39,
+      "end": 1567.71,
+      "text": "pendant un temps"
+    },
+    {
+      "start": 1567.71,
+      "end": 1569.63,
+      "text": "mais après du coup peut-être que"
+    },
+    {
+      "start": 1569.63,
+      "end": 1571.23,
+      "text": "à force d'écrire des skills tu vas dire"
+    },
+    {
+      "start": 1571.23,
+      "end": 1573.89,
+      "text": "j'arrive, je suis devenu"
+    },
+    {
+      "start": 1573.89,
+      "end": 1575.73,
+      "text": "super balèze pour décomposer des tâches"
+    },
+    {
+      "start": 1575.73,
+      "end": 1577.77,
+      "text": "complexes et l'expliquer"
+    },
+    {
+      "start": 1577.77,
+      "end": 1579.49,
+      "text": "aux agents et peut-être que finalement"
+    },
+    {
+      "start": 1579.49,
+      "end": 1580.79,
+      "text": "c'est mon kiff"
+    },
+    {
+      "start": 1580.79,
+      "end": 1582.49,
+      "text": "tu vas passer développeur"
+    },
+    {
+      "start": 1582.49,
+      "end": 1586.93,
+      "text": "Non, tu vas faire de l'interview"
+    },
+    {
+      "start": 1586.93,
+      "end": 1588.91,
+      "text": "des gens qui avaient des compétences"
+    },
+    {
+      "start": 1588.91,
+      "end": 1590.03,
+      "text": "sur des points spécifiques"
+    },
+    {
+      "start": 1590.03,
+      "end": 1592.29,
+      "text": "et du coup, tu vas récupérer"
+    },
+    {
+      "start": 1592.29,
+      "end": 1594.45,
+      "text": "leurs infos pour que toi, tu puisses"
+    },
+    {
+      "start": 1594.45,
+      "end": 1596.47,
+      "text": "l'interpréter de manière à ce que l'agent"
+    },
+    {
+      "start": 1596.47,
+      "end": 1598.33,
+      "text": "dans un skill, il puisse"
+    },
+    {
+      "start": 1598.33,
+      "end": 1600.67,
+      "text": "le mettre en place. Mais il y a plein"
+    },
+    {
+      "start": 1600.67,
+      "end": 1602.13,
+      "text": "de trucs auxquels on ne pense pas."
+    },
+    {
+      "start": 1602.89,
+      "end": 1604.23,
+      "text": "Le truc, c'est que ce n'est peut-être pas qu'il n'y a plus"
+    },
+    {
+      "start": 1604.23,
+      "end": 1606.67,
+      "text": "de métier pour nous. C'est peut-être juste que pour l'instant,"
+    },
+    {
+      "start": 1606.67,
+      "end": 1608.13,
+      "text": "on n'a pas encore pensé"
+    },
+    {
+      "start": 1608.13,
+      "end": 1610.11,
+      "text": "au type de métier qu'on pourrait mettre en place"
+    },
+    {
+      "start": 1610.11,
+      "end": 1611.65,
+      "text": "grâce à l'IA."
+    },
+    {
+      "start": 1612.49,
+      "end": 1615.83,
+      "text": "c'est possible qu'il y ait des trucs qui émergent aussi"
+    },
+    {
+      "start": 1615.83,
+      "end": 1618.59,
+      "text": "je pense qu'on pourrait"
+    },
+    {
+      "start": 1618.59,
+      "end": 1620.13,
+      "text": "carrément faire une discussion sur"
+    },
+    {
+      "start": 1620.13,
+      "end": 1622.47,
+      "text": "est-ce qu'on va être remplacé par l'IA"
+    },
+    {
+      "start": 1622.47,
+      "end": 1624.05,
+      "text": "je suis d'accord que c'est un autre sujet"
+    },
+    {
+      "start": 1624.05,
+      "end": 1625.03,
+      "text": "on a un petit peu dérivé"
+    },
+    {
+      "start": 1625.03,
+      "end": 1629.35,
+      "text": "je pense qu'on a quand même pas mal dévié"
+    },
+    {
+      "start": 1629.35,
+      "end": 1631.27,
+      "text": "mais qu'on a quand même eu quelques"
+    },
+    {
+      "start": 1631.27,
+      "end": 1632.95,
+      "text": "sujets intéressants"
+    },
+    {
+      "start": 1632.95,
+      "end": 1635.11,
+      "text": "quelques points de vue intéressants"
+    },
+    {
+      "start": 1635.11,
+      "end": 1637.27,
+      "text": "je pense que ce sera l'occasion de"
+    },
+    {
+      "start": 1637.27,
+      "end": 1639.27,
+      "text": "peut-être repartir"
+    },
+    {
+      "start": 1639.27,
+      "end": 1641.15,
+      "text": "sur ces points-là"
+    },
+    {
+      "start": 1641.15,
+      "end": 1642.03,
+      "text": "sur un autre sujet"
+    },
+    {
+      "start": 1642.03,
+      "end": 1643.25,
+      "text": "carrément"
+    },
+    {
+      "start": 1643.25,
+      "end": 1644.05,
+      "text": "merci à tous"
+    },
+    {
+      "start": 1644.05,
+      "end": 1648.07,
+      "text": "salut à tous"
+    },
+    {
+      "start": 1648.07,
+      "end": 1649.41,
+      "text": "à la prochaine"
+    },
+    {
+      "start": 1649.41,
+      "end": 1651.39,
+      "text": "bonne journée bye"
+    },
+    {
+      "start": 1651.39,
+      "end": 1666.93,
+      "text": "j'ai compté des fiches"
+    },
+    {
+      "start": 1666.93,
+      "end": 1667.13,
+      "text": "des"
+    },
+    {
+      "start": 1667.13,
+      "end": 1669.63,
+      "text": "il y a ton bruit de clavier"
+    },
+    {
+      "start": 1669.63,
+      "end": 1674.04,
+      "text": "désolé"
+    },
+    {
+      "start": 1674.04,
+      "end": 1675.28,
+      "text": "mon bruit de clavier ça m'a"
+    },
+    {
+      "start": 1675.28,
+      "end": 1678.31,
+      "text": "pour certains profils"
+    },
+    {
+      "start": 1678.31,
+      "end": 1680.91,
+      "text": "une petite sandbox"
+    },
+    {
+      "start": 1680.91,
+      "end": 1682.17,
+      "text": "disponible"
+    },
+    {
+      "start": 1682.17,
+      "end": 1688.3,
+      "text": "ouais ouais"
+    },
+    {
+      "start": 1688.3,
+      "end": 1689.14,
+      "text": "ça pourrait être ça"
+    },
+    {
+      "start": 1689.14,
+      "end": 1691.54,
+      "text": "T'es mis à bâiller pendant que je parlais, écoute."
+    },
+    {
+      "start": 1693.24,
+      "end": 1694.24,
+      "text": "Ce sera cut."
+    },
+    {
+      "start": 1694.74,
+      "end": 1695.74,
+      "text": "C'est pas grave."
+    },
+    {
+      "start": 1697.64,
+      "end": 1699.04,
+      "text": "Faut que c'est moi qui bâille."
+    },
+    {
+      "start": 1699.64,
+      "end": 1703.04,
+      "text": "Bah arrête, à chaque fois c'est toi qui bâille, je fuis des cuts à chaque fois sur les..."
+    },
+    {
+      "start": 1707.56,
+      "end": 1710.89,
+      "text": "Encore un cut."
+    }
+  ]
+}

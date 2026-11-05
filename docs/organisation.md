@@ -17,6 +17,8 @@ tools/               Moteurs de la factory et contrôles du dépôt
 
 Les projets éditables contiennent leur code et leurs paramètres de référence. Leurs images d'épisode, pistes audio, portraits, captures et rendus ne font pas partie du clone. Le logo commun et la bannière du README sont les deux images autorisées comme ressources du dépôt. Les gabarits graphiques restent des sources SVG.
 
+Exception demandée par Lou le 5 novembre 2026 : le dossier `.claude/skills/haxprox-youtube-thumbnail-loop/` doit pouvoir être partagé seul avec un collègue. Ses sources d'identité, son corpus visuel et les trois exemples approuvés sont inclus sous `assets/identity/`, `assets/corpus/` et `assets/examples/`. Cette exception porte sur les PNG, JPG et WebP de référence du skill ; ses nouvelles productions et archives restent locales. Les ressources internes utilisent des chemins relatifs et un contrôle d'intégrité accompagne le dossier.
+
 Les rapports de validation et les références éditoriales documentées peuvent rester dans `docs/`. Ils ne remplacent pas les fichiers de travail ni la base d'un poste.
 
 ## Où la factory écrit

@@ -1,0 +1,11 @@
+{
+  "channels": [
+    {"slug":"theyo","url":"https://www.youtube.com/@THEYO_/videos"},
+    {"slug":"yassine-sdiri","url":"https://www.youtube.com/@yassine-sdiri/videos"},
+    {"slug":"jon-gregor","url":"https://www.youtube.com/@JonGregor_IA/videos"},
+    {"slug":"ludo-salenne","url":"https://www.youtube.com/@LudovicSalenne/videos"},
+    {"slug":"devart-studio","url":"https://www.youtube.com/@devart-studio/videos"},
+    {"slug":"parlons-cyber","url":"https://www.youtube.com/@ParlonsCyber/videos"},
+    {"slug":"toms-basement","url":"https://www.youtube.com/@TomsBasement/videos"}
+  ]
+}

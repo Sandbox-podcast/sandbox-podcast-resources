@@ -72,6 +72,18 @@ class RepositoryPolicyTests(unittest.TestCase):
             with patch('builtins.print'):
                 self.assertEqual(policy.main(), 1)
 
+    def test_portable_thumbnail_skill_has_a_scoped_image_exception(self):
+        base = '.claude/skills/haxprox-youtube-thumbnail-loop/assets/'
+        for name in ('identity/lou/portraits/png/portrait.png', 'corpus/frozen/channel/images/example.jpg',
+                     'examples/approved/exports/A.jpg', 'identity/loic/original.webp'):
+            with self.subTest(name=name):
+                self.assertFalse(policy.local_only(base+name))
+        for name in ('examples/episode.mp4', 'examples/pack.zip', 'examples/.local/portrait.png',
+                     'examples/output/A.jpg', '../other/portrait.png', 'new-episode.jpg'):
+            with self.subTest(name=name):
+                self.assertTrue(policy.local_only(base+name))
+        self.assertTrue(policy.local_only('.claude/skills/another-skill/assets/portrait.png'))
+
 
 if __name__ == '__main__':
     unittest.main()

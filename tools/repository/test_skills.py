@@ -45,3 +45,32 @@ class SkillsTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "non géré"):
                 sync(root, write=True)
             self.assertEqual(target.read_text(encoding="utf-8"), "Entrée personnalisée")
+
+    def test_registered_portable_skill_is_preserved_without_a_canonical_wrapper(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / '.agents/skills/sandbox-test/SKILL.md'
+            source.parent.mkdir(parents=True)
+            source.write_text('---\nname: sandbox-test\ndescription: Test.\n---\n', encoding='utf-8')
+            target = root / '.claude/skills/haxprox-youtube-thumbnail-loop/SKILL.md'
+            target.parent.mkdir(parents=True)
+            content = '---\nname: haxprox-youtube-thumbnail-loop\ndescription: Skill autonome.\n---\n\nConsignes locales.\n'
+            target.write_text(content, encoding='utf-8')
+            self.assertEqual(sync(root, write=True), 1)
+            self.assertEqual(target.read_text(encoding='utf-8'), content)
+            self.assertFalse((root / '.agents/skills/haxprox-youtube-thumbnail-loop').exists())
+            target.write_text(content.replace('name: haxprox-youtube-thumbnail-loop', 'name: wrong'), encoding='utf-8')
+            with self.assertRaisesRegex(ValueError, 'autonome invalide'):
+                sync(root)
+
+    def test_unregistered_orphan_still_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / '.agents/skills/sandbox-test/SKILL.md'
+            source.parent.mkdir(parents=True)
+            source.write_text('---\nname: sandbox-test\ndescription: Test.\n---\n', encoding='utf-8')
+            orphan = root / '.claude/skills/unregistered/SKILL.md'
+            orphan.parent.mkdir(parents=True)
+            orphan.write_text('Consignes.', encoding='utf-8')
+            with self.assertRaisesRegex(ValueError, 'sans skill canonique'):
+                sync(root, write=True)

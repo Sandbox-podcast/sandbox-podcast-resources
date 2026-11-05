@@ -1,0 +1,118 @@
+{
+  "video_id": "sandbox-2026-11-04",
+  "subject": "Comment construire une équipe tech augmentée par l'IA",
+  "audience": "Responsables tech, développeurs, Product Owners, QA et équipes qui organisent l'utilisation de l'IA",
+  "verified_result": "Discussion, sans démonstration ni gain mesuré, sur le contexte partagé, les règles et skills communs, la coordination dev/PO/QA, la formation et les responsabilités.",
+  "evidence_paths": [
+    "assets/examples/sandbox-equipe-tech-ia/transcript.json"
+  ],
+  "title": "Comment construire une équipe tech augmentée par l'IA ?",
+  "user_reference": "assets/examples/sandbox-equipe-tech-ia/user-reference.png",
+  "variants": {
+    "A": {
+      "intent": "Mécanisme simplifié : un contexte commun pour toute l'équipe.",
+      "literal_text": [
+        "ÉQUIPE TECH",
+        "AUGMENTÉE",
+        "IA",
+        "DEV",
+        "PO",
+        "QA"
+      ],
+      "reference_ids": [
+        "yassine-sdiri/y4AAFTlA6ak",
+        "parlons-cyber/8NewbH_MQ6M"
+      ],
+      "composition": "Titre supérieur gauche et schéma blanc à trois rôles ; trio à droite, Lou au premier plan.",
+      "portrait_source": "assets/identity/lou/portraits/png/21-enthousiaste-chemise-vert-sauge.png",
+      "portrait_selection_reason": "Sourire posé et mains ouvertes pour présenter une organisation commune ; chemise vert sauge distincte des autres variantes.",
+      "identity_sources": [
+        "assets/identity/lou/originals/lou-studio-hd-original.png",
+        "assets/identity/nicolas/original.webp",
+        "assets/identity/loic/original.webp"
+      ],
+      "pose": "Sourire posé et mains ouvertes pour présenter une organisation commune ; chemise vert sauge distincte des autres variantes.",
+      "assets": [
+        "assets/examples/sandbox-equipe-tech-ia/user-reference.png",
+        "assets/identity/lou/portraits/png/21-enthousiaste-chemise-vert-sauge.png",
+        "assets/identity/lou/originals/lou-studio-hd-original.png",
+        "assets/identity/nicolas/original.webp",
+        "assets/identity/loic/original.webp"
+      ],
+      "prompt": "Create ONE finished professional French YouTube thumbnail, horizontal 16:9, preferably 2048x1152 or larger native 16:9. Crisp premium photography, editorial graphic design with exceptional mobile readability. This is a SANDBOX discussion on organizing an entire tech team with AI, sharing context, common instructions/skills and including Product Owners and QA. No actual product demonstration or measured productivity result is being claimed.\n\nINPUT ROLES: image 1 is the USER'S collage of thumbnail examples, a STYLE/COMPOSITION reference ONLY. Do NOT reproduce the creators' faces or copy their Claude Code wording. Image 2 is the SELECTED PORTRAIT OF LOU to integrate faithfully, preserving this exact face, expression, hair, apparent age, beard and clothing. Image 3 is Lou's original photographic identity anchor only; do NOT copy its black clothing or headphones onto image 2. Image 4 is the photographic identity reference of NICOLAS: brown tousled hair, full short brown/salt beard. Image 5 is the photographic identity reference of LOIC: short light grey-blond hair, light grey-blue eyes, grey moustache and stubble. Preserve their distinct actual faces; do not blend the three people or invent a fourth. Remove the studio backgrounds and microphones from Nicolas and Loic, show real looking heads/necks/shoulders, black shirts; headphones may be removed. Exactly THREE recognizable men, one instance of each, Lou dominant. Their heads must be large enough to recognize at 160x90. Close framing, no abdomen, no legs, no tiny full bodies. Maintain lifelike skin and ages, no beauty-filter faces.\n\nStyle should directly follow the user's examples: very large bold text, restrained orange accent, clean white information card against a warm dark background or a clean white editorial page as specified below; extremely simple visual story. White text on dark, black on white, very strong contrast. Keep all text at least 4 percent from image edges. Avoid anything important at bottom right (timestamp overlay). No YouTube timestamp, no video player chrome, no watermarks, no fabricated real interface, no financial or numerical performance claim, no robots, no pile of tiny logos. All visible writing must be exactly the requested French copy, no extra tiny words.\n\nVARIANT A: Closely echo the FIRST example in the user's collage: warm almost-black background with subtle fine orange grid, large bold heading at the upper left and a WHITE ROUNDED DIAGRAM PANEL below, portraits on the right. Text: huge first line \"ÉQUIPE TECH\" in white, second line \"AUGMENTÉE\" in a warm coral-orange, compact strong grotesk sans serif. These two lines occupy roughly the left 57% width and top 28% height. Below at left a clean oversized white rounded panel with a minimal black outlined diagram: orange top tile \"IA\", branching clean black connector lines to THREE large lower tiles labelled \"DEV\", \"PO\", \"QA\" in dark bold text. The diagram is conceptual, not a software screenshot, no extra symbols needed. Keep the three bottom tiles nearly equal width and clear.\n\nOn the right 43% form a tight photographic group of three HEADS: LOU in front, larger, sage-green shirt and friendly engaged expression exactly from image 2, his hands may be partly visible near lower frame but do not shrink his face to fit them. NICOLAS slightly behind at upper right and LOIC slightly behind to the inner left, their faces unobstructed. Let portrait shoulders overlap the white panel slightly like the user's reference, but never obscure words or diagram labels. Highest head may reach near top. Warm orange rim light, soft realistic separation, strong visual weight in faces. No repeated portraits.",
+      "comparison_hypothesis": "Le schéma des rôles rend le sujet collectif plus immédiat que des logos d'outils.",
+      "associated_title": "Comment construire une équipe tech augmentée par l'IA ?",
+      "final_master": "masters/A-v1.png",
+      "final_export": "exports/A.jpg"
+    },
+    "B": {
+      "intent": "Question précise : éviter les goulots d'étranglement entre développement, PO et QA.",
+      "literal_text": [
+        "DEVS + IA",
+        "ET LES AUTRES ?",
+        "DEV",
+        "PO",
+        "QA"
+      ],
+      "reference_ids": [
+        "devart-studio/i-L6qD5Rr_Y",
+        "theyo/nFyxQ01EjW0"
+      ],
+      "composition": "Trio à gauche ; accroche et bandeau corail en haut à droite ; ordinateur avec pipeline PO puis DEV puis QA.",
+      "portrait_source": "assets/identity/lou/portraits/png/11-sceptique-veste-jean-noire.png",
+      "portrait_selection_reason": "Sourcil relevé et expression sceptique cohérents avec la question des métiers qui ne suivent pas la même cadence ; veste en jean noire.",
+      "identity_sources": [
+        "assets/identity/lou/originals/lou-studio-hd-original.png",
+        "assets/identity/nicolas/original.webp",
+        "assets/identity/loic/original.webp"
+      ],
+      "pose": "Sourcil relevé et expression sceptique cohérents avec la question des métiers qui ne suivent pas la même cadence ; veste en jean noire.",
+      "assets": [
+        "assets/examples/sandbox-equipe-tech-ia/user-reference.png",
+        "assets/identity/lou/portraits/png/11-sceptique-veste-jean-noire.png",
+        "assets/identity/lou/originals/lou-studio-hd-original.png",
+        "assets/identity/nicolas/original.webp",
+        "assets/identity/loic/original.webp"
+      ],
+      "prompt": "Create ONE finished professional French YouTube thumbnail, horizontal 16:9, preferably 2048x1152 or larger native 16:9. Crisp premium photography, editorial graphic design with exceptional mobile readability. This is a SANDBOX discussion on organizing an entire tech team with AI, sharing context, common instructions/skills and including Product Owners and QA. No actual product demonstration or measured productivity result is being claimed.\n\nINPUT ROLES: image 1 is the USER'S collage of thumbnail examples, a STYLE/COMPOSITION reference ONLY. Do NOT reproduce the creators' faces or copy their Claude Code wording. Image 2 is the SELECTED PORTRAIT OF LOU to integrate faithfully, preserving this exact face, expression, hair, apparent age, beard and clothing. Image 3 is Lou's original photographic identity anchor only; do NOT copy its black clothing or headphones onto image 2. Image 4 is the photographic identity reference of NICOLAS: brown tousled hair, full short brown/salt beard. Image 5 is the photographic identity reference of LOIC: short light grey-blond hair, light grey-blue eyes, grey moustache and stubble. Preserve their distinct actual faces; do not blend the three people or invent a fourth. Remove the studio backgrounds and microphones from Nicolas and Loic, show real looking heads/necks/shoulders, black shirts; headphones may be removed. Exactly THREE recognizable men, one instance of each, Lou dominant. Their heads must be large enough to recognize at 160x90. Close framing, no abdomen, no legs, no tiny full bodies. Maintain lifelike skin and ages, no beauty-filter faces.\n\nStyle should directly follow the user's examples: very large bold text, restrained orange accent, clean white information card against a warm dark background or a clean white editorial page as specified below; extremely simple visual story. White text on dark, black on white, very strong contrast. Keep all text at least 4 percent from image edges. Avoid anything important at bottom right (timestamp overlay). No YouTube timestamp, no video player chrome, no watermarks, no fabricated real interface, no financial or numerical performance claim, no robots, no pile of tiny logos. All visible writing must be exactly the requested French copy, no extra tiny words.\n\nVARIANT B: Closely echo the SECOND and LAST examples in the user's collage, with giant white/orange typography, a warm blurred studio and a large tangible laptop object. FLIP the layout from A: portraits on LEFT, title and laptop on RIGHT. Top right large bold white headline \"DEVS + IA\"; immediately below an ORANGE RECTANGULAR BANNER with exact large white words \"ET LES AUTRES ?\". Very high contrast, no other headline. Right lower half a large cinematic laptop angled gently towards camera, nearly front facing, dark screen with a SIMPLE CONCEPTUAL WORKFLOW, not a real software UI: \"DEV\" in one green block, followed by a thick rightward arrow ending at an orange traffic bottleneck / narrowing, then \"PO\" and \"QA\" as two distinct amber blocks waiting. Prefer just three large labels and minimal geometric connectors, no code, no tiny text, no numeric timing. This graph must read as the rest of the workflow waiting, not as tools being compared.\n\nLeft 45% a tight trio, LOU at the front dominant with the EXACT skeptical raised-eyebrow face and black denim jacket over white tee from image 2. NICOLAS and LOIC slightly behind above left and above right, all THREE faces individually recognizable. Show only head neck and shoulders, no whole bodies. Warm orange backlight outlines them, natural skin, keep original distinguishing hair/beards. A cinematic depth-of-field room behind, almost black around text, warm amber table beneath laptop. Large clean elements, no blue neon, no robots or invented logos. Keep lower right quiet for timestamp.",
+      "comparison_hypothesis": "L'interpellation sur le reste de l'équipe peut attirer les responsables qui constatent une adoption inégale.",
+      "associated_title": "Comment construire une équipe tech augmentée par l'IA ?",
+      "correction_record": "correction-B-v2.json",
+      "final_master": "masters/B-v2.png",
+      "final_export": "exports/B.jpg"
+    },
+    "C": {
+      "intent": "Question précise : décider qui écrit et valide les instructions et les skills partagés.",
+      "literal_text": [
+        "L'IA EN ÉQUIPE",
+        "Qui fixe les règles ?"
+      ],
+      "reference_ids": [
+        "ludo-salenne/nHXND_R4Jy8",
+        "devart-studio/i-L6qD5Rr_Y"
+      ],
+      "composition": "Page blanche épurée, titre noir et champ de question à gauche ; trois visages à droite, Lou légèrement en avant.",
+      "portrait_source": "assets/identity/lou/portraits/png/38-interesse-chemise-indigo.png",
+      "portrait_selection_reason": "Main proche du menton et expression attentive pour une question sur la responsabilité des règles ; chemise indigo.",
+      "identity_sources": [
+        "assets/identity/lou/originals/lou-studio-hd-original.png",
+        "assets/identity/nicolas/original.webp",
+        "assets/identity/loic/original.webp"
+      ],
+      "pose": "Main proche du menton et expression attentive pour une question sur la responsabilité des règles ; chemise indigo.",
+      "assets": [
+        "assets/examples/sandbox-equipe-tech-ia/user-reference.png",
+        "assets/identity/lou/portraits/png/38-interesse-chemise-indigo.png",
+        "assets/identity/lou/originals/lou-studio-hd-original.png",
+        "assets/identity/nicolas/original.webp",
+        "assets/identity/loic/original.webp"
+      ],
+      "prompt": "Create ONE finished professional French YouTube thumbnail, horizontal 16:9, preferably 2048x1152 or larger native 16:9. Crisp premium photography, editorial graphic design with exceptional mobile readability. This is a SANDBOX discussion on organizing an entire tech team with AI, sharing context, common instructions/skills and including Product Owners and QA. No actual product demonstration or measured productivity result is being claimed.\n\nINPUT ROLES: image 1 is the USER'S collage of thumbnail examples, a STYLE/COMPOSITION reference ONLY. Do NOT reproduce the creators' faces or copy their Claude Code wording. Image 2 is the SELECTED PORTRAIT OF LOU to integrate faithfully, preserving this exact face, expression, hair, apparent age, beard and clothing. Image 3 is Lou's original photographic identity anchor only; do NOT copy its black clothing or headphones onto image 2. Image 4 is the photographic identity reference of NICOLAS: brown tousled hair, full short brown/salt beard. Image 5 is the photographic identity reference of LOIC: short light grey-blond hair, light grey-blue eyes, grey moustache and stubble. Preserve their distinct actual faces; do not blend the three people or invent a fourth. Remove the studio backgrounds and microphones from Nicolas and Loic, show real looking heads/necks/shoulders, black shirts; headphones may be removed. Exactly THREE recognizable men, one instance of each, Lou dominant. Their heads must be large enough to recognize at 160x90. Close framing, no abdomen, no legs, no tiny full bodies. Maintain lifelike skin and ages, no beauty-filter faces.\n\nStyle should directly follow the user's examples: very large bold text, restrained orange accent, clean white information card against a warm dark background or a clean white editorial page as specified below; extremely simple visual story. White text on dark, black on white, very strong contrast. Keep all text at least 4 percent from image edges. Avoid anything important at bottom right (timestamp overlay). No YouTube timestamp, no video player chrome, no watermarks, no fabricated real interface, no financial or numerical performance claim, no robots, no pile of tiny logos. All visible writing must be exactly the requested French copy, no extra tiny words.\n\nVARIANT C: Closely follow the FOURTH example in the user's collage: clean WHITE BACKGROUND, elegant black editorial heading, a very simple rounded prompt/search field, large photographic portraits on the right. NO dark backdrop. No diagram or laptop; this variant must be much cleaner and brighter. Upper left, very large black headline on TWO lines: \"L'IA\" then \"EN ÉQUIPE\". Use a confident editorial serif for \"L'IA\", bold clean black sans serif for \"EN ÉQUIPE\"; understated orange accent may underline \"ÉQUIPE\". This headline takes the left half from 9% to 50% image height. Lower left one huge softly raised white rounded prompt field with a thin pale-grey border, realistic delicate shadow, and exact BLACK question \"Qui fixe les règles ?\" in a LARGE perfectly readable sans serif; a single tiny orange send-arrow shape at its right end is allowed. The field may overlap the lower shoulders but never the faces.\n\nRight half: a layered group of THREE real-looking close-up heads, LOU in front as principal at roughly right 68% center, his indigo shirt, attentive thoughtful expression and hand near chin from image 2 preserved exactly; NICOLAS behind to upper left of Lou and LOIC behind to upper right, both large enough to read. Don't make it a horizontal strip of tiny heads: Lou's face 60% image height and the other two 43-48% image height, all fully visible, their shoulders cropped by bottom frame. Keep left headline and field entirely unobstructed. Natural daylight portrait lighting and fine cutout edges against white, no distracting outline glow, retain all people's apparent age and face geometry. No product logo, no extra copy, no timestamp or fake UI details.",
+      "comparison_hypothesis": "La simplicité du fond blanc et de la question peut rendre le sujet plus accessible que les schémas techniques.",
+      "associated_title": "Comment construire une équipe tech augmentée par l'IA ?",
+      "final_master": "masters/C-v1.png",
+      "final_export": "exports/C.jpg"
+    }
+  },
+  "source_note": "Vidéo fournie par Lou : épisode SANDBOX du 4 novembre 2026. La transcription utilisée est incluse ; le fichier vidéo de 1,6 Go n'est pas requis pour reproduire les compositions."
+}

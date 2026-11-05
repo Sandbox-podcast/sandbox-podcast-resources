@@ -1,0 +1,56 @@
+[
+  {
+    "variant": "A",
+    "source": "assets/examples/sandbox-equipe-tech-ia/masters/A-v1.png",
+    "source_size": [
+      1672,
+      941
+    ],
+    "source_sha256": "86ba37a37e62819a1040e98ae10b2569b0e467c40bf5001d93ea438d639233fe",
+    "output": "assets/examples/sandbox-equipe-tech-ia/exports/A.jpg",
+    "output_size": [
+      1280,
+      720
+    ],
+    "bytes": 464750,
+    "jpeg_quality": 95,
+    "upscaled": false,
+    "visual_review": "not_performed_by_this_script"
+  },
+  {
+    "variant": "B",
+    "source": "assets/examples/sandbox-equipe-tech-ia/masters/B-v2.png",
+    "source_size": [
+      1672,
+      941
+    ],
+    "source_sha256": "b08694fa0a7175573d32c1a93baf738835f14e33d8e40be98fcede78bf2aa7f3",
+    "output": "assets/examples/sandbox-equipe-tech-ia/exports/B.jpg",
+    "output_size": [
+      1280,
+      720
+    ],
+    "bytes": 445726,
+    "jpeg_quality": 95,
+    "upscaled": false,
+    "visual_review": "not_performed_by_this_script"
+  },
+  {
+    "variant": "C",
+    "source": "assets/examples/sandbox-equipe-tech-ia/masters/C-v1.png",
+    "source_size": [
+      1672,
+      941
+    ],
+    "source_sha256": "0e2a01ac6dc82772a86d8b8864e1f810410ac31c5409d6e8b813deccb367e2a6",
+    "output": "assets/examples/sandbox-equipe-tech-ia/exports/C.jpg",
+    "output_size": [
+      1280,
+      720
+    ],
+    "bytes": 362745,
+    "jpeg_quality": 95,
+    "upscaled": false,
+    "visual_review": "not_performed_by_this_script"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "method": "Auto-revue des PNG sur planches à environ 312 pixels par portrait, comparés aux photos originales. Les trois premiers portraits ont aussi été affichés en grand pendant leur génération. Les planches seules sont compositées sur gris; les PNG restent transparents.",
+  "scope": "Portraits générés pour miniatures; aucune validation humaine revendiquée.",
+  "reference_boards_examined": [
+    "assets/corpus/2026-11-01/theyo-examples.jpg",
+    "assets/corpus/2026-11-01/yassine-sdiri-examples.jpg",
+    "assets/corpus/2026-11-01/jon-gregor-examples.jpg",
+    "assets/corpus/2026-11-01/ludo-salenne-examples.jpg",
+    "assets/corpus/2026-11-01/devart-studio-examples.jpg",
+    "assets/corpus/2026-11-01/parlons-cyber-examples.jpg",
+    "assets/corpus/2026-11-01/toms-basement-examples.jpg"
+  ],
+  "boards_reviewed": [
+    "planche-01.jpg",
+    "planche-02.jpg",
+    "planche-03.jpg",
+    "planche-04.jpg",
+    "les-40-portraits.jpg"
+  ],
+  "partially_reviewed": null,
+  "identity": "Ligne des cheveux, yeux, nez, proportions et barbe poivre et sel restent cohérents avec les originaux sur les 40 portraits examinés.",
+  "framing": "Cadrages tête, cou, épaules et haut de poitrine. Certaines mains près des épaules élargissent la silhouette, sans montrer la taille.",
+  "variation": "Vêtements et combinaisons d'expression, regard, angle de tête et geste différents. Plusieurs sourires et surprises forment des familles proches; il ne s'agit pas de 40 types d'émotions distincts.",
+  "hands": "Gestes des portraits 02, 08, 10, 12, 15, 18, 21, 24, 26, 28, 30, 33, 35 et 38 examinés sur planche; pas de défaut bloquant visible.",
+  "alpha": "Contrôle technique dans manifest.json. Les 40 fichiers ont des pixels transparents. Aucun fichier identique selon SHA-256.",
+  "blocking_defects_observed": [],
+  "status": "ready"
+}

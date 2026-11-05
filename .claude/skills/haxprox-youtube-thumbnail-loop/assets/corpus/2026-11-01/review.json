@@ -1,0 +1,475 @@
+{
+  "date": "2026-11-01",
+  "scope": "All 32 contact sheets reviewed in chat; 21 representative descriptions. No claim of individual full-resolution annotation of every image.",
+  "boards": [
+    {
+      "channel": "theyo",
+      "path": "theyo/boards/theyo-001.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "theyo",
+      "path": "theyo/boards/theyo-002.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "theyo",
+      "path": "theyo/boards/theyo-003.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "theyo",
+      "path": "theyo/boards/theyo-004.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "theyo",
+      "path": "theyo/boards/theyo-005.jpg",
+      "count": 3,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "yassine-sdiri",
+      "path": "yassine-sdiri/boards/yassine-sdiri-001.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "yassine-sdiri",
+      "path": "yassine-sdiri/boards/yassine-sdiri-002.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "yassine-sdiri",
+      "path": "yassine-sdiri/boards/yassine-sdiri-003.jpg",
+      "count": 34,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "jon-gregor",
+      "path": "jon-gregor/boards/jon-gregor-001.jpg",
+      "count": 30,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-001.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-002.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-003.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-004.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-005.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-006.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-007.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-008.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-009.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-010.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-011.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "ludo-salenne",
+      "path": "ludo-salenne/boards/ludo-salenne-012.jpg",
+      "count": 17,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "devart-studio",
+      "path": "devart-studio/boards/devart-studio-001.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "devart-studio",
+      "path": "devart-studio/boards/devart-studio-002.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "devart-studio",
+      "path": "devart-studio/boards/devart-studio-003.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "devart-studio",
+      "path": "devart-studio/boards/devart-studio-004.jpg",
+      "count": 16,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "parlons-cyber",
+      "path": "parlons-cyber/boards/parlons-cyber-001.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "parlons-cyber",
+      "path": "parlons-cyber/boards/parlons-cyber-002.jpg",
+      "count": 19,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "toms-basement",
+      "path": "toms-basement/boards/toms-basement-001.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "toms-basement",
+      "path": "toms-basement/boards/toms-basement-002.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "toms-basement",
+      "path": "toms-basement/boards/toms-basement-003.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "toms-basement",
+      "path": "toms-basement/boards/toms-basement-004.jpg",
+      "count": 40,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    },
+    {
+      "channel": "toms-basement",
+      "path": "toms-basement/boards/toms-basement-005.jpg",
+      "count": 9,
+      "status": "visually_reviewed_contact_sheet",
+      "reviewer": "Codex, current chat",
+      "individual_annotation": false
+    }
+  ],
+  "examples": [
+    {
+      "channel": "theyo",
+      "index": 1,
+      "id": "uqjTVioVEtg",
+      "url": "https://www.youtube.com/watch?v=uqjTVioVEtg",
+      "image": "assets/corpus/2026-11-01/theyo/images/uqjTVioVEtg.jpg",
+      "family": "objet-cinematographique",
+      "observed": "Portrait central, objet vert lumineux à gauche, fond noir, texte presque absent.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "theyo",
+      "index": 9,
+      "id": "nFyxQ01EjW0",
+      "url": "https://www.youtube.com/watch?v=nFyxQ01EjW0",
+      "image": "assets/corpus/2026-11-01/theyo/images/nFyxQ01EjW0.jpg",
+      "family": "objet-cinematographique",
+      "observed": "Portrait serré à droite, Claude Skills en sérif claire à gauche, objet lumineux en main et profondeur chaude.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "theyo",
+      "index": 26,
+      "id": "nVBp6p78iPo",
+      "url": "https://www.youtube.com/watch?v=nVBp6p78iPo",
+      "image": "assets/corpus/2026-11-01/theyo/images/nVBp6p78iPo.jpg",
+      "family": "resultat-visible",
+      "observed": "Deux interfaces de téléphone à gauche, portrait surpris à droite, résultat visible avant lecture du titre.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "yassine-sdiri",
+      "index": 1,
+      "id": "sVul67gL1fk",
+      "url": "https://www.youtube.com/watch?v=sVul67gL1fk",
+      "image": "assets/corpus/2026-11-01/yassine-sdiri/images/sVul67gL1fk.jpg",
+      "family": "question-objet",
+      "observed": "Visage frontal central, objet sphérique bleu en main, logos à gauche et question blanche en haut.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "yassine-sdiri",
+      "index": 23,
+      "id": "y4AAFTlA6ak",
+      "url": "https://www.youtube.com/watch?v=y4AAFTlA6ak",
+      "image": "assets/corpus/2026-11-01/yassine-sdiri/images/y4AAFTlA6ak.jpg",
+      "family": "mecanisme-outil",
+      "observed": "Panneau clair Claude Skills à gauche, visage souriant à droite, logos de services reliés au logo principal.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "yassine-sdiri",
+      "index": 72,
+      "id": "vxKtbHQXWEk",
+      "url": "https://www.youtube.com/watch?v=vxKtbHQXWEk",
+      "image": "assets/corpus/2026-11-01/yassine-sdiri/images/vxKtbHQXWEk.jpg",
+      "family": "comparaison",
+      "observed": "Deux images de canette, séparation avant/après rouge et verte, portrait central, comparaison immédiate.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "jon-gregor",
+      "index": 2,
+      "id": "bYj8kcfytTo",
+      "url": "https://www.youtube.com/watch?v=bYj8kcfytTo",
+      "image": "assets/corpus/2026-11-01/jon-gregor/images/bYj8kcfytTo.jpg",
+      "family": "resultat-visible",
+      "observed": "Fond très clair, portrait à gauche, ordinateur montrant une app à droite, flèche verte, texte sombre en haut.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "jon-gregor",
+      "index": 8,
+      "id": "r-TWRLk8Wwg",
+      "url": "https://www.youtube.com/watch?v=r-TWRLk8Wwg",
+      "image": "assets/corpus/2026-11-01/jon-gregor/images/r-TWRLk8Wwg.jpg",
+      "family": "resultat-visible",
+      "observed": "Même famille idée vers app, portrait à gauche pointant vers le laptop, fond clair et courbe verte.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "jon-gregor",
+      "index": 14,
+      "id": "ifJfGyQ3y0E",
+      "url": "https://www.youtube.com/watch?v=ifJfGyQ3y0E",
+      "image": "assets/corpus/2026-11-01/jon-gregor/images/ifJfGyQ3y0E.jpg",
+      "family": "alerte",
+      "observed": "Fond sombre, portrait à droite avec sourcils froncés, bloc blanc puis rouge à gauche, logo ChatGPT.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "ludo-salenne",
+      "index": 3,
+      "id": "fhj7wALyiKo",
+      "url": "https://www.youtube.com/watch?v=fhj7wALyiKo",
+      "image": "assets/corpus/2026-11-01/ludo-salenne/images/fhj7wALyiKo.jpg",
+      "family": "mecanisme-outil",
+      "observed": "Portrait souriant à gauche qui désigne une chaîne de trois panneaux outils ; gros texte blanc et IA jaune en haut.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "ludo-salenne",
+      "index": 16,
+      "id": "nHXND_R4Jy8",
+      "url": "https://www.youtube.com/watch?v=nHXND_R4Jy8",
+      "image": "assets/corpus/2026-11-01/ludo-salenne/images/nHXND_R4Jy8.jpg",
+      "family": "guide-outil",
+      "observed": "Fond blanc, texte TOUT CLAUDE noir/orange à gauche, visage à droite et petit guide débutant.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "ludo-salenne",
+      "index": 28,
+      "id": "Sz7pWrYWpHs",
+      "url": "https://www.youtube.com/watch?v=Sz7pWrYWpHs",
+      "image": "assets/corpus/2026-11-01/ludo-salenne/images/Sz7pWrYWpHs.jpg",
+      "family": "comparaison",
+      "observed": "Deux logos comparés, croix rouge et coche verte, flèche rouge, MIGRER en blanc, portrait à droite.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "devart-studio",
+      "index": 1,
+      "id": "i-L6qD5Rr_Y",
+      "url": "https://www.youtube.com/watch?v=i-L6qD5Rr_Y",
+      "image": "assets/corpus/2026-11-01/devart-studio/images/i-L6qD5Rr_Y.jpg",
+      "family": "editorial",
+      "observed": "Composition de presse noir et blanc, gros titre en haut, marques sur papiers, portrait pensif à droite.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "devart-studio",
+      "index": 3,
+      "id": "rxVPmEck2wY",
+      "url": "https://www.youtube.com/watch?v=rxVPmEck2wY",
+      "image": "assets/corpus/2026-11-01/devart-studio/images/rxVPmEck2wY.jpg",
+      "family": "resultat-visible",
+      "observed": "Titre MON IA PRIVÉE à gauche, interface sombre sur laptop et téléphone, visage à droite, accent bleu.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "devart-studio",
+      "index": 95,
+      "id": "YP2TC4wfiV0",
+      "url": "https://www.youtube.com/watch?v=YP2TC4wfiV0",
+      "image": "assets/corpus/2026-11-01/devart-studio/images/YP2TC4wfiV0.jpg",
+      "family": "resultat-visible",
+      "observed": "Portfolio web et téléphone à gauche, portrait à droite, flèche blanche et petites étiquettes outil.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "parlons-cyber",
+      "index": 5,
+      "id": "8NewbH_MQ6M",
+      "url": "https://www.youtube.com/watch?v=8NewbH_MQ6M",
+      "image": "assets/corpus/2026-11-01/parlons-cyber/images/8NewbH_MQ6M.jpg",
+      "family": "mecanisme-outil",
+      "observed": "Titre blanc jaune vert en haut, mascotte détective en bas à gauche, interface centrale, grosse flèche jaune.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "parlons-cyber",
+      "index": 20,
+      "id": "ITTwEqPyqJ0",
+      "url": "https://www.youtube.com/watch?v=ITTwEqPyqJ0",
+      "image": "assets/corpus/2026-11-01/parlons-cyber/images/ITTwEqPyqJ0.jpg",
+      "family": "mecanisme-outil",
+      "observed": "Titre agents locaux en haut, mascotte à gauche qui pointe, workflow central, logos n8n Docker Ollama en bas.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "parlons-cyber",
+      "index": 54,
+      "id": "gXUXN6oCjrg",
+      "url": "https://www.youtube.com/watch?v=gXUXN6oCjrg",
+      "image": "assets/corpus/2026-11-01/parlons-cyber/images/gXUXN6oCjrg.jpg",
+      "family": "transformation",
+      "observed": "Deux icônes de fichier EXE et PNG, une flèche jaune entre elles, fond noir et masque, texte court en bas.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "toms-basement",
+      "index": 17,
+      "id": "skkcLVn7bhU",
+      "url": "https://www.youtube.com/watch?v=skkcLVn7bhU",
+      "image": "assets/corpus/2026-11-01/toms-basement/images/skkcLVn7bhU.jpg",
+      "family": "objet-reel",
+      "observed": "Objet électronique tenu vers la caméra, visage à gauche, atelier chaud flou, flèche orange et label présence réelle.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "toms-basement",
+      "index": 19,
+      "id": "pAjoZYqHKQk",
+      "url": "https://www.youtube.com/watch?v=pAjoZYqHKQk",
+      "image": "assets/corpus/2026-11-01/toms-basement/images/pAjoZYqHKQk.jpg",
+      "family": "comparaison",
+      "observed": "Deux impressions photographiées en gros plan sur tapis vert, comparaison gauche/droite et flèche rouge.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    },
+    {
+      "channel": "toms-basement",
+      "index": 26,
+      "id": "1ra6VcNIJv4",
+      "url": "https://www.youtube.com/watch?v=1ra6VcNIJv4",
+      "image": "assets/corpus/2026-11-01/toms-basement/images/1ra6VcNIJv4.jpg",
+      "family": "objet-reel",
+      "observed": "Petit ordinateur tenu en main au premier plan, visage à gauche, atelier chaud, question sur IA locale.",
+      "basis": "contact sheet and enlarged representative strip both reviewed in this chat"
+    }
+  ],
+  "ctr_measured": false
+}

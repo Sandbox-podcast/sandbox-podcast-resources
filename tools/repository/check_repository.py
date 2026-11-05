@@ -5,6 +5,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 SHARED_IMAGES = frozenset({'assets/brand/logo.png', 'docs/readme/hero.png'})
+PORTABLE_SKILL_ASSETS = PurePosixPath('.claude/skills/haxprox-youtube-thumbnail-loop/assets')
+PORTABLE_IMAGE_SUFFIXES = frozenset({'.png', '.jpg', '.webp'})
 MEDIA_SUFFIXES = frozenset({
     '.mp4', '.mov', '.mkv', '.webm', '.avi', '.mp3', '.m4a', '.aac', '.wav',
     '.flac', '.ogg', '.opus', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif',
@@ -22,6 +24,13 @@ def local_only(name: str) -> bool:
     path = PurePosixPath(name.replace('\\', '/'))
     if path.as_posix() in SHARED_IMAGES:
         return False
+    # Lou explicitly requested this self-contained skill with its reusable visual references.
+    if path.is_relative_to(PORTABLE_SKILL_ASSETS):
+        relative = path.relative_to(PORTABLE_SKILL_ASSETS)
+        if (relative.parts and relative.parts[0] in {'identity', 'corpus', 'examples'}
+                and path.suffix.lower() in PORTABLE_IMAGE_SUFFIXES
+                and not set(path.parts) & (LOCAL_PARTS | {'..'})):
+            return False
     # Pinned external skills are text only; their upstream folder names may collide with local output names.
     if path.parts[:2] == ('.agents', 'vendor') and path.suffix.lower() not in MEDIA_SUFFIXES:
         return False

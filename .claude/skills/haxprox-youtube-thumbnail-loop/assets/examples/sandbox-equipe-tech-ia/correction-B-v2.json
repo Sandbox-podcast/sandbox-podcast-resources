@@ -1,0 +1,15 @@
+{
+  "variant": "B",
+  "version": "v2",
+  "args": {
+    "referenced_image_paths": [
+      "assets/examples/sandbox-equipe-tech-ia/masters/B-v1.png",
+      "assets/identity/lou/portraits/png/11-sceptique-veste-jean-noire.png",
+      "assets/identity/lou/originals/lou-studio-hd-original.png",
+      "assets/identity/nicolas/original.webp",
+      "assets/identity/loic/original.webp"
+    ],
+    "transparent_background": false,
+    "prompt": "Edit IMAGE 1 with ONE LOCALIZED CHANGE ONLY: replace the diagram INSIDE the LAPTOP SCREEN. Preserve everything outside the screen pixel-faithfully: identical 16:9 composition, all three actual portraits and their expressions and clothing, the exact headline \"DEVS + IA\", the exact orange banner \"ET LES AUTRES ?\", their sizes, colors, margins, the black laptop hardware and table, warm background, skin texture, and orange lighting. Do not recrop, recolor or regenerate the faces. Images 2 and 3 are Lou's chosen portrait and identity anchor; images 4 and 5 are Nicolas and Loic identity anchors to preserve.\n\nThe current branching DEV-to-PO/QA diagram could wrongly suggest that product definition comes after development. REPLACE THE SCREEN GRAPHIC with a LARGE, CLEAR LEFT-TO-RIGHT HORIZONTAL PIPELINE:\none rounded AMBER block labelled exactly \"PO\", then a simple white arrow pointing RIGHT to a rounded GREEN block labelled exactly \"DEV\", then a simple white arrow pointing RIGHT to a rounded AMBER block labelled exactly \"QA\".\nThus exact order from left to right: PO, DEV, QA.\nNo branching, no duplicated labels, no other words. All three labels very large bold BLACK uppercase, perfectly spelled and readable on mobile. Center this pipeline on the dark laptop screen, with enough spacing. Between DEV and QA, the connector can include a SHORT red narrowing as a conceptual bottleneck, but keep it understated and do not obscure the arrow or labels.\nThis is a simple conceptual illustration, no fabricated real UI, no metrics, no logos. Keep the image a polished finished YouTube thumbnail with the original three clearly recognizable faces. Return one full landscape 16:9 image, same framing as image 1."
+  }
+}

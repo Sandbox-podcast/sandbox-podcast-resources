@@ -67,6 +67,12 @@ projects/relay-kits/**/production/captions/
 !assets/brand/logo.png
 !docs/readme/hero.png
 
+# Skill autonome partagé à la demande de Lou le 5 novembre 2026.
+# Uniquement ses portraits, références visuelles et exemples approuvés.
+!/.claude/skills/haxprox-youtube-thumbnail-loop/assets/**/*.png
+!/.claude/skills/haxprox-youtube-thumbnail-loop/assets/**/*.jpg
+!/.claude/skills/haxprox-youtube-thumbnail-loop/assets/**/*.webp
+
 # Anciens emplacements : les copies locales sont dans .local/legacy/.
 /Episode 2/
 /SANDBOX_LinkedIn_Kit/

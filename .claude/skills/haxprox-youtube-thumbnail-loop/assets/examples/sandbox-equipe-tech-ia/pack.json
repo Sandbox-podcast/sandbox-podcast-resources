@@ -1,0 +1,31 @@
+{
+  "video": "sandbox-2026-11-04",
+  "title": "Comment construire une équipe tech augmentée par l'IA ?",
+  "generated_with": "native imagegen",
+  "delivery": {
+    "format": "JPEG",
+    "size": [
+      1280,
+      720
+    ],
+    "maximum_bytes": 2000000
+  },
+  "variants": {
+    "A": {
+      "image": "assets/examples/sandbox-equipe-tech-ia/exports/A.jpg",
+      "master": "assets/examples/sandbox-equipe-tech-ia/masters/A-v1.png"
+    },
+    "B": {
+      "image": "assets/examples/sandbox-equipe-tech-ia/exports/B.jpg",
+      "master": "assets/examples/sandbox-equipe-tech-ia/masters/B-v2.png"
+    },
+    "C": {
+      "image": "assets/examples/sandbox-equipe-tech-ia/exports/C.jpg",
+      "master": "assets/examples/sandbox-equipe-tech-ia/masters/C-v1.png"
+    }
+  },
+  "comparison": "assets/examples/sandbox-equipe-tech-ia/exports/comparison.jpg",
+  "brief": "assets/examples/sandbox-equipe-tech-ia/brief.json",
+  "prompts": "assets/examples/sandbox-equipe-tech-ia/generation-log.json",
+  "review": "assets/examples/sandbox-equipe-tech-ia/review.json"
+}

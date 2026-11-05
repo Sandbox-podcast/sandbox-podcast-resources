@@ -1,0 +1,653 @@
+{
+  "count": 40,
+  "assets": [
+    {
+      "file": "01-etonne-jean.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "beee5c00dfdf4a0af8e96de74c482031b4fa056759f3c7db697c54cc33904350",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 660751,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "02-amuse-rouille.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "a9bed16a9d7ef82d4dc3371fbf44206a742a42578fcc6e9bfa0aa229ba761cb6",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 651551,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "03-sceptique-marine.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "87cba3ed6aaae040cbbe636c4ca616449f0042df8a2001a230af6c0c556a2899",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 617429,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "04-sourire-polo-ecru.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "be75c057cf7e21b188004a0015c1a9cd61871ef8b6cfbde68039542fdd17ac60",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 662924,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "05-surpris-tshirt-bordeaux.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "478abfe31ac2d92977b458c81469a8fa6d6cafb28c52ae81643c157e283b04a1",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 644706,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "06-doute-chemise-olive.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "fc66af830f86c63a749e83b7b91af933c7540a82a6f078f1ddc35b4df2ce6363",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 658078,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "07-rire-chemise-bleue.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "adeaa31765139ea81fb16e2ccd5a05ba5310bc480ddf5d7ad895a9aaedb9b19d",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 648179,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "08-reflexion-pull-beige.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "85755287cc1698aedcd981a7c531a4ae6db5d23335be3e5b5f2c6552638b168e",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 569930,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "09-serieux-polo-marine.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "ab2f34879f94b28182ce1b05ffc5b9d1ac7a22630201e8d272002293a75f7870",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 679883,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "10-enthousiaste-tshirt-vert.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "a6789078cd5562d468f75213e0cba1752bfa32b3209709ab5a6fb64730d72c73",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 605653,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "11-sceptique-veste-jean-noire.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "d909a87ac723e674335ae884b80c5be721a545d36e0cab9f62d222583389eae5",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 652825,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "12-explication-chemise-blanche.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "6531836c17d11fa121999102e1ca59171e46ffe2e6e37f27e22b196e892c1e8d",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 616603,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "13-stupefait-pull-rouille.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "15a1279fafcd34ed21f3c725e9485660515ce61b85cfd37f81c04f4373915263",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 708925,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "14-satisfait-polo-bleu.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "b33f0e21638839f888772b4f54fe653f78d3c50d87e55b51562bc18168293577",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 680794,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "15-perplexe-surchemise-sable.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "b4a4176ff2388e12a64bf4d19b6c2314517405b38c09505d6e628f9908bf932d",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 613201,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "16-clin-oeil-tshirt-noir.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "167fbc89cd051d545055048d9bd756ef5152ac79c5a2e922091b01694f97e7d6",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 679266,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "17-concentre-chemise-grise.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "6ece437c58b9e8ed493baa8a72e94b57c0fb2e2a2afc8d7e33562d957311e896",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 660755,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "18-surprise-polo-olive.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "3e3b00d9aebb48f9529c6827afdfc7e50f419704036eab344a428b62173a3f3f",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 601409,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "19-sourire-surchemise-bordeaux.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "902918d09a2ebfb6f84ac2760caa7caa114d539fe2a3a262d097dd8f68f0c48c",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 654810,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "20-dubitatif-pull-marine.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "068507efa4d50c69d08eb6edb171ee8e16532042d783aa7b0197bea2ceedb83b",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 624905,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "21-enthousiaste-chemise-vert-sauge.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "a947921b030ff9bf92e50a9be2efc8af67fbedc25a19345e0a5297567181c5b2",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 594234,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "22-reflexion-tshirt-bleu.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "9acbc44b7609fb79a34006c816fa863b64e4096f5da08efccf22fe85552b1ce5",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 656315,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "23-rire-polo-bordeaux.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "dbfefbf776360bed17daf92f173792291c33f4991c7f3dc23976c5de7a069c70",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 660290,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "24-attention-surchemise-grise.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "7a75099a6ad7ea29de74587a24352b345d708abd8096c6e5a449f1549b4e3db9",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 590849,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "25-curieux-pull-ecru.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "e832db91197754960e484bd9f0282f1547533068518b5d12266ddba6c62e18b7",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 607004,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "26-sourire-chemise-terre-cuite.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "f8c3a49afdb0c8d7ac1a5e1dd51db69c09abea894c59fb488c9b09d25b57f3ce",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 617802,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "27-incredule-polo-gris.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "f1ded5e68bafc04bdb9a7d6f3849940628be6c587954cf0e96471cae2bacca17",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 655931,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "28-content-tshirt-prune.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "2bacb92c21e30b14df5e59d3869da53b3fffa70963190a9ac90452bbd7ef527c",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 647881,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "29-analyse-veste-bleue.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "edcb545f28cde981818ae81a69939d02f8ebca1bc83d54f9977da2a3dd13cda0",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 615695,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "30-surpris-chemise-carreaux.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "ed99e285ae7d115ed1cdbeb4d5efb8d17a9e5113f5f7860ed9de36b6718d7fa0",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 632643,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "31-desaccord-pull-vert.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "2ca388e47553a2c70a56874ec2550f14901a856d565f244a220e2c18ce3eabd0",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 662380,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "32-complice-chemise-denim-claire.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "731d6d8110c391a23f1ec74af43ac70e36e27772c461c996e69669e9916d307e",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 649720,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "33-eureka-tshirt-moutarde.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "f8a6125a2e3b1aba2c7c1ee3a9e4fef21a60d69ff8e3b0cfa2f0a444fdb18553",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 620924,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "34-perplexe-polo-brun.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "bb1416a3b60ec094fe1a590eeb4f10e7b006ce63fabba64459a1745d5aead3ec",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 686605,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "35-rassurant-pull-bleu.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "79791005a560797281f04c3b03ffb405700b542cd3a29c729cda44c03f7c375b",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 589651,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "36-rire-surchemise-olive.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "c93761b19a69925bd0d19820a1ccc7f299f43309a38bfd4ac1d193bd36fb4388",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 612924,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "37-sceptique-tshirt-ecru.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "8428b566c6788c97072a5b36d7c13b5a67e9cfafdc7ee065870802d8c9b12722",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 682002,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "38-interesse-chemise-indigo.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "c41e45c4bafb8362bfe907a7a381a4b07e39c45ea6be83ea479d540bf83f16b2",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 634953,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "39-sourire-polo-saumon.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "7597e34d4af9dfb2a3ef62fdc402c1c0e929bcb3711541914e4ed2c7429350eb",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 655781,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    },
+    {
+      "file": "40-surprise-veste-velours.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "0159668f3e9aedc8996e6e9bef4ed53c2cd361519dac4a5facd594c8fa04de37",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 649475,
+      "type": "generated_derivative",
+      "source_role": "Original user photos anchor identity; generated expression and clothing"
+    }
+  ],
+  "notes": "PNG originals preserved. Contact sheets alone composite transparency on light grey for review. Generated portraits, not documentary photographs.",
+  "sources": [
+    "assets/identity/lou/originals/lou-streetwear-original.png",
+    "assets/identity/lou/originals/lou-studio-original.png",
+    "assets/identity/lou/originals/lou-studio-hd-original.png"
+  ],
+  "generation_tool": "native imagegen, one generation per portrait",
+  "review_file": "review.json"
+}
