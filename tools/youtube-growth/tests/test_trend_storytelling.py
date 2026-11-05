@@ -107,15 +107,31 @@ class StorytellingHandoffTests(unittest.TestCase):
         environment = dict(os.environ, PYTHONUTF8="1")
         source = str(Path(__file__).resolve().parents[1] / "src")
         environment["PYTHONPATH"] = os.pathsep.join(filter(None, (source, environment.get("PYTHONPATH"))))
-        completed = subprocess.run([sys.executable, "-m", "youtube_growth.trend_hunter", "--state-dir", str(self.store.directory),
-                                    "storytelling", "1", "--run", self.report["run_id"], "--selected-by", "Lou (fixture)",
-                                    "--selection-note", "Celle-ci me plaît", "--research-dossier", str(self.root / "dossier.json")],
-                                   capture_output=True, text=True, encoding="utf-8", env=environment, timeout=30)
-        self.assertEqual(completed.returncode, 0, completed.stderr)
-        result = json.loads(completed.stdout)
-        self.assertEqual(result["status"], "ready_for_storytelling_framing")
-        self.assertTrue(Path(result["brief"]).is_file())
-        self.assertFalse(list(self.store.directory.rglob("factory.sqlite3")))
+        # The CLI runs in another interpreter: the fixture clock must cross that boundary.
+        # Patch only the test process, retaining the real entrypoint and freshness checks.
+        script = r'''
+import runpy, sys
+from unittest.mock import patch
+from youtube_growth.trend_hunter.core import stamp
+now = sys.argv.pop(1)
+with patch("youtube_growth.trend_hunter.core.stamp", side_effect=lambda value=None: stamp(now if value is None else value)):
+    runpy.run_module("youtube_growth.trend_hunter", run_name="__main__")
+'''
+        for now, expected in ((NOW, "ready_for_storytelling_framing"),
+                              (NOW+timedelta(days=8), "research_required")):
+            with self.subTest(now=now.isoformat()):
+                completed = subprocess.run([sys.executable, "-c", script, now.isoformat(),
+                                            "--state-dir", str(self.store.directory), "storytelling", "1",
+                                            "--run", self.report["run_id"], "--selected-by", "Lou (fixture)",
+                                            "--selection-note", "Celle-ci me plaît", "--research-dossier", str(self.root / "dossier.json")],
+                                           capture_output=True, text=True, encoding="utf-8", env=environment, timeout=30)
+                self.assertEqual(completed.returncode, 0, completed.stderr)
+                result = json.loads(completed.stdout)
+                self.assertEqual(result["status"], expected)
+                self.assertTrue(Path(result["brief"]).is_file())
+                selection = load_json(Path(result["brief"]).parent / "selection.json")
+                self.assertEqual(selection["selected_at"], now.isoformat())
+                self.assertFalse(list(self.store.directory.rglob("factory.sqlite3")))
 
     def test_actual_pr19_framing_source_import_and_authoring_request(self):
         root = os.environ.get("STORYTELLING_CONTRACT_ROOT")
