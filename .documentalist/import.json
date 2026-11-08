@@ -1,0 +1,8 @@
+{
+  "repository": "Sandbox-podcast/sandbox-podcast-resources",
+  "branch": "main",
+  "path": "docs/documentalist/reference",
+  "format": "auto",
+  "locale": "fr",
+  "learnPath": "docs/documentalist/learn"
+}
