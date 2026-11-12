@@ -142,7 +142,7 @@ Le [tutoriel complet](docs/factory/storytelling-generator.md) détaille les sept
 
 ## Les skills
 
-Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 12 skills SANDBOX et cinq collections externes qui totalisent 196 entrées, choisies pour faire des vidéos YouTube sur l'IA.
+Un skill donne à l'agent (Codex ou Claude Code) les consignes d'une tâche précise. Le dépôt contient 18 skills SANDBOX et cinq collections externes qui totalisent 196 entrées, choisies pour faire des vidéos YouTube sur l'IA.
 
 ### Skills SANDBOX
 
@@ -162,6 +162,12 @@ Dans Codex, appelle un skill avec `$nom-du-skill` ; dans Claude Code, avec `/nom
 | [sandbox-thumbnail](.agents/skills/sandbox-thumbnail/SKILL.md) | Crée des miniatures sobres avec les visages de l’équipe, des tenues et attitudes variées, une phrase courte et un fond uni. |
 | [sandbox-diffusion](.agents/skills/sandbox-diffusion/SKILL.md) | Planifie, suspend, reprend ou simule le calendrier entre la disponibilité de l'épisode et le prochain tournage. Rien n'est publié. |
 | [sandbox-resultats](.agents/skills/sandbox-resultats/SKILL.md) | Collecte ou importe les performances, compare contenus et expériences, prépare le bilan et le brief du cycle suivant. |
+| [sandbox-veille-chaines](.agents/skills/sandbox-veille-chaines/SKILL.md) | Lit 46 chaînes YouTube IA, repère les vidéos qui surperforment et propose les sujets de la semaine ou une alerte Radar. |
+| [sandbox-sujet-episode](.agents/skills/sandbox-sujet-episode/SKILL.md) | Transforme un sujet en brief d'épisode : thèse, positions de chacun, accroche, démo, moments pour les Shorts. |
+| [sandbox-titres-youtube](.agents/skills/sandbox-titres-youtube/SKILL.md) | Écrit titres, texte de miniature, description, chapitres et plan de test A/B selon les règles mesurées sur 1 729 vidéos. |
+| [sandbox-miniature-series](.agents/skills/sandbox-miniature-series/SKILL.md) | Applique le gabarit de miniature de la série (Clash, Build, Radar) avec `haxprox-youtube-thumbnail-loop`. |
+| [sandbox-shorts-youtube](.agents/skills/sandbox-shorts-youtube/SKILL.md) | Choisit les Shorts d'un épisode, leurs titres et leur ordre de publication. |
+| [sandbox-bilan-youtube](.agents/skills/sandbox-bilan-youtube/SKILL.md) | Relève les chiffres YouTube Studio à J+2 et J+7, les compare aux objectifs et décide de la suite. |
 
 Le skill `sandbox-thumbnail` inclut les règles du trio et des touches bleu nuit/cyan validées, ainsi qu'un [manifeste de portraits et une procédure portable](.agents/skills/sandbox-thumbnail/references/portraits.md). Son script récupère les trois photos publiques épinglées et vérifie leurs empreintes ; les médias restent locaux.
 
@@ -231,6 +237,7 @@ GitHub contient le code, les projets éditables et la documentation. Les masters
 
 | Emplacement | Ce que tu y trouves |
 | --- | --- |
+| [projects/ligne-editoriale/](projects/ligne-editoriale/README.md) | Guide de ligne éditoriale YouTube, script de veille, modèles de brief et de bilan. |
 | [assets/brand/](assets/brand/) | Logo commun, gabarits SVG et consignes de l'identité SANDBOX. |
 | [projects/](projects/) | Sources éditables des vidéos, jingles, expériences et kits. |
 | [tools/](tools/) | Outils de production, de croissance YouTube et de gestion des réseaux sociaux. |

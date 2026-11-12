@@ -1,0 +1,875 @@
+<title>Ligne éditoriale SANDBOX</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Mise en page : un conducteur d'émission. Une colonne de lecture, des graphiques pleine largeur, le studio SANDBOX en fond nuit. */
+:root {
+  color-scheme: dark;
+  --bg: #04121A;
+  --surface: #071A24;
+  --surface-2: #0C2531;
+  --line: #17323F;
+  --fg: #E6F1F5;
+  --fg-2: #A7BEC8;
+  --fg-3: #7895A2;
+  --accent: #1FB6D9;
+  --s1: #1A9FC0;
+  --s2: #DB7339;
+  --mute: #3B5866;
+  --good: #3FB37F;
+  --warn: #E0A93B;
+  --font-display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --r: 6px;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: #F2F6F8; --surface: #FFFFFF; --surface-2: #E6EEF2; --line: #D0DDE3;
+    --fg: #06202B; --fg-2: #3D5965; --fg-3: #5F7C88; --accent: #0B7FA0;
+    --s1: #0B7FA0; --s2: #C9541A; --mute: #AFC2CB; --good: #1E8A57; --warn: #A86E00;
+  }
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #F2F6F8; --surface: #FFFFFF; --surface-2: #E6EEF2; --line: #D0DDE3;
+  --fg: #06202B; --fg-2: #3D5965; --fg-3: #5F7C88; --accent: #0B7FA0;
+  --s1: #0B7FA0; --s2: #C9541A; --mute: #AFC2CB; --good: #1E8A57; --warn: #A86E00;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, [tabindex]:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.1; }
+h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); font-weight: 800; font-stretch: 85%; letter-spacing: -0.01em; }
+h3 { font-size: 1.15rem; font-weight: 700; font-stretch: 95%; }
+p { margin: 0; max-width: 68ch; }
+.num, td.n, .tab { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+.eyebrow { font-family: var(--font-data); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-3); }
+.lead { color: var(--fg-2); font-size: 1.05rem; }
+.small { font-size: 0.85rem; color: var(--fg-3); }
+
+/* En-tête */
+header.hero { padding-block: 56px 40px; border-bottom: 1px solid var(--line); }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: end; }
+.hero h1 { font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 900; font-stretch: 80%; letter-spacing: -0.02em; line-height: 0.95; }
+.hero h1 span { color: var(--accent); }
+.hero .lead { margin-top: 20px; }
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.tile { background: var(--surface); padding: 16px 18px; display: grid; gap: 4px; align-content: start; }
+.tile .v { font-family: var(--font-display); font-weight: 800; font-stretch: 85%; font-size: 2.2rem; line-height: 1; }
+.tile .l { font-size: 0.85rem; color: var(--fg-2); }
+
+/* Navigation */
+nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+nav.toc .wrap { display: flex; gap: 4px; overflow-x: auto; padding-block: 10px; scrollbar-width: thin; }
+nav.toc a { white-space: nowrap; text-decoration: none; color: var(--fg-2); font-size: 0.85rem; padding: 4px 10px; border-radius: 999px; }
+nav.toc a:hover { background: var(--surface-2); color: var(--fg); }
+
+/* Sections */
+section { padding-block: 64px; border-bottom: 1px solid var(--line); scroll-margin-top: 56px; }
+.sec-head { display: grid; gap: 12px; margin-bottom: 32px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grid-2 > *, .grid-3 > * { min-width: 0; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; display: grid; gap: 14px; align-content: start; min-width: 0; }
+.panel h3 + p { margin-top: -6px; }
+.stack { display: grid; gap: 24px; }
+
+/* Graphiques */
+.chart-title { font-weight: 600; font-size: 1rem; }
+.chart-sub { color: var(--fg-2); font-size: 0.9rem; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--fg-2); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.hb { display: grid; gap: 6px; }
+.hb-row { display: grid; grid-template-columns: minmax(120px, 34%) 1fr; gap: 12px; align-items: center; font-size: 0.86rem; }
+.hb-label { color: var(--fg-2); line-height: 1.25; }
+.hb-track { position: relative; height: 22px; margin-right: 56px; }
+.axis-row .axis { margin-right: 56px; }
+.axis span { white-space: nowrap; }
+.axis span:last-child:not(:first-child) { transform: translateX(-100%); }
+.db-track { margin-right: 8px; }
+.hb-bar { position: absolute; left: 0; top: 2px; height: 18px; border-radius: 0 4px 4px 0; min-width: 2px; }
+.hb-val { position: absolute; top: 1px; font-family: var(--font-data); font-size: 0.78rem; color: var(--fg); white-space: nowrap; padding-left: 6px; }
+.hb-base { position: absolute; top: -4px; bottom: -4px; width: 0; border-left: 1px solid var(--fg-3); }
+.hb-base-label { font-family: var(--font-data); font-size: 0.72rem; color: var(--fg-3); }
+.axis-row { display: grid; grid-template-columns: minmax(120px, 34%) 1fr; gap: 12px; }
+.axis { position: relative; height: 18px; border-top: 1px solid var(--line); font-family: var(--font-data); font-size: 0.7rem; color: var(--fg-3); }
+.axis span { position: absolute; top: 2px; transform: translateX(-50%); }
+.axis span:first-child { transform: none; }
+
+.cols { position: relative; height: 220px; display: flex; align-items: flex-end; gap: 2px; padding-left: 36px; border-bottom: 1px solid var(--fg-3); }
+.cols .grid { position: absolute; left: 36px; right: 0; border-top: 1px solid var(--line); }
+.cols .grid span { position: absolute; left: -36px; top: -8px; width: 30px; text-align: right; font-family: var(--font-data); font-size: 0.7rem; color: var(--fg-3); }
+.col { flex: 1; display: flex; justify-content: center; align-items: flex-end; height: 100%; position: relative; z-index: 1; }
+.col b { display: block; width: 100%; max-width: 24px; border-radius: 4px 4px 0 0; }
+.col.young b { opacity: 0.55; }
+.xlabels { display: flex; gap: 2px; padding-left: 36px; font-family: var(--font-data); font-size: 0.68rem; color: var(--fg-3); }
+.xlabels span { flex: 1; text-align: center; white-space: nowrap; overflow: visible; }
+
+.seg { display: flex; gap: 2px; height: 34px; }
+.seg div { border-radius: 3px; display: flex; align-items: center; padding: 0 10px; font-family: var(--font-data); font-size: 0.8rem; white-space: nowrap; overflow: hidden; }
+.seg .a { background: var(--s2); color: #0B0B0B; }
+.seg .b { background: var(--mute); color: var(--fg); }
+
+.db { display: grid; gap: 4px; }
+.db-row { display: grid; grid-template-columns: minmax(130px, 34%) 1fr; gap: 12px; align-items: center; font-size: 0.86rem; }
+.db-track { position: relative; height: 26px; }
+.db-line { position: absolute; top: 12px; height: 2px; background: var(--line); }
+.db-dot { position: absolute; top: 7px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; box-shadow: 0 0 0 2px var(--surface); }
+.db-val { position: absolute; top: 3px; font-family: var(--font-data); font-size: 0.75rem; color: var(--fg-2); white-space: nowrap; }
+
+details.data { font-size: 0.85rem; }
+details.data summary { cursor: pointer; color: var(--fg-3); }
+.tbl-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 600; color: var(--fg-2); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+td.n, th.n { text-align: right; white-space: nowrap; }
+tr.us td { color: var(--fg); background: color-mix(in srgb, var(--s1) 12%, transparent); }
+
+#tip { position: fixed; z-index: 20; pointer-events: none; background: var(--surface-2); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font-size: 0.8rem; max-width: 280px; box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+#tip b { display: block; font-weight: 600; margin-bottom: 2px; }
+
+/* Constats */
+.facts { display: grid; gap: 0; counter-reset: f; }
+.fact { display: grid; grid-template-columns: 7.5rem 1fr; gap: 16px; padding-block: 14px; border-top: 1px solid var(--line); align-items: baseline; }
+.fact .k { font-family: var(--font-display); font-weight: 800; font-stretch: 85%; font-size: 1.6rem; line-height: 1; color: var(--accent); }
+
+/* Formats */
+.fmt { display: grid; gap: 10px; align-content: start; }
+.fmt .tag { justify-self: start; font-family: var(--font-data); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; background: var(--surface-2); color: var(--fg-2); }
+.fmt dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; font-size: 0.88rem; }
+.fmt dt { color: var(--fg-3); }
+.fmt dd { margin: 0; }
+.fmt .ex { font-family: var(--font-display); font-weight: 700; font-stretch: 95%; font-size: 1.05rem; line-height: 1.25; }
+
+/* Miniatures maquettes */
+.thumb { position: relative; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 8px; overflow: hidden; container-type: inline-size; }
+.thumb .logo { position: absolute; left: 4%; top: 6%; font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: 4.2cqw; letter-spacing: 0.04em; }
+.thumb .dur { position: absolute; right: 3%; bottom: 5%; background: rgba(0,0,0,0.8); color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 3.6cqw; padding: 0.3% 1.6%; border-radius: 4px; }
+.thumb .words { position: absolute; font-family: var(--font-display); font-weight: 900; font-stretch: 78%; text-transform: uppercase; line-height: 0.92; }
+.thumb svg.p { position: absolute; bottom: 0; }
+.t-clash { background: #E0662E; color: #FFFFFF; }
+.t-clash .logo { color: #FFFFFF; }
+.t-build { background: #062A3A; color: #FFFFFF; }
+.t-build .logo { color: #1FB6D9; }
+.t-radar { background: #F4F1EC; color: #0A0A0A; }
+.t-radar .logo { color: #0A0A0A; }
+.shot { position: absolute; left: 6%; top: 22%; width: 50%; height: 62%; background: #0F4157; border: 2px solid #1FB6D9; border-radius: 6px; display: grid; place-items: center; font-family: var(--font-data); font-size: 3.4cqw; color: #BFEFFA; }
+.thumb-cap { font-size: 0.85rem; color: var(--fg-2); }
+
+/* Calendrier */
+.week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.day { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 10px; display: grid; gap: 6px; align-content: start; min-height: 150px; }
+.day h3 { font-size: 0.95rem; font-family: var(--font-data); font-weight: 500; color: var(--fg-3); text-transform: uppercase; letter-spacing: 0.08em; }
+.ev { font-size: 0.8rem; line-height: 1.3; padding: 6px 8px; border-radius: 4px; background: var(--surface-2); border-left: 3px solid var(--mute); }
+.ev.pub { border-left-color: var(--accent); }
+.ev.rec { border-left-color: var(--s2); }
+.ev.auto { border-left-color: var(--fg-3); color: var(--fg-2); }
+
+/* Pipeline */
+.pipe { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; counter-reset: step; }
+.step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; display: grid; gap: 6px; align-content: start; position: relative; }
+.step::before { counter-increment: step; content: counter(step, decimal-leading-zero); font-family: var(--font-data); font-size: 0.75rem; color: var(--fg-3); }
+.step h3 { font-size: 1.02rem; }
+.step .who { font-family: var(--font-data); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.step .who.agent { color: var(--accent); }
+.step .who.team { color: var(--s2); }
+.step code, .chk code, td code, p code, li code { font-family: var(--font-data); font-size: 0.82em; background: var(--surface-2); padding: 1px 5px; border-radius: 3px; }
+.step .t { font-family: var(--font-data); font-size: 0.8rem; color: var(--fg-2); }
+.loop { margin-top: 12px; font-size: 0.9rem; color: var(--fg-2); }
+
+/* Avant / après titres */
+.ba td:first-child { color: var(--fg-3); }
+.ba td:nth-child(2) { font-weight: 600; }
+
+/* Checklist */
+.chk { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+.chk li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 12px; padding-block: 10px; border-top: 1px solid var(--line); font-size: 0.92rem; }
+.pill { justify-self: start; font-family: var(--font-data); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; height: fit-content; }
+.pill.done { color: var(--good); }
+.pill.todo { color: var(--warn); }
+.pill.later { color: var(--fg-3); }
+
+ul.plain { margin: 0; padding-left: 1.1rem; display: grid; gap: 6px; }
+ul.plain li { max-width: 68ch; }
+.quote { font-family: var(--font-display); font-weight: 800; font-stretch: 85%; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.15; max-width: 30ch; }
+.quote span { color: var(--accent); }
+footer { padding-block: 40px 64px; color: var(--fg-3); font-size: 0.85rem; }
+
+@media (max-width: 880px) {
+  .hero-grid, .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .pipe { grid-template-columns: 1fr 1fr; }
+  .week { grid-template-columns: 1fr 1fr; }
+  .day { min-height: 0; }
+}
+@media (max-width: 520px) {
+  .pipe { grid-template-columns: 1fr; }
+  .week { grid-template-columns: 1fr; }
+  .fact { grid-template-columns: 1fr; gap: 4px; }
+  .hb-row, .db-row, .axis-row { grid-template-columns: 1fr; gap: 2px; }
+  .axis-row > span:first-child { display: none; }
+  .tiles { grid-template-columns: 1fr 1fr; }
+  .tile .v { font-size: 1.8rem; }
+  .chk li { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hb-bar, .col b { transition: opacity .15s; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="person" viewBox="0 0 100 110"><circle cx="50" cy="34" r="22"/><path d="M6 110c0-28 20-48 44-48s44 20 44 48z"/></symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Sandbox Podcast, chaîne @SandboxFR, relevé du 12 novembre 2026</p>
+      <h1>Ligne éditoriale <span>SANDBOX</span></h1>
+      <p class="lead">En 31 jours, la chaîne a publié 105 vidéos. Les vidéos longues font une médiane de 54 vues, et 2,1 % des gens qui voient leur miniature cliquent. Le rythme est déjà là. Ce guide fixe les sujets, les formats, les titres, les miniatures et la chaîne d'outils qui les produit, à partir de 1 729 vidéos de 45 chaînes IA et de nos propres statistiques.</p>
+    </div>
+    <div class="tiles" aria-label="Chiffres clés de la chaîne">
+      <div class="tile"><span class="v num">126</span><span class="l">abonnés, dont 108 gagnés sur les 28 derniers jours</span></div>
+      <div class="tile"><span class="v num">2,1 %</span><span class="l">taux de clics des vidéos longues, sur 15 800 impressions</span></div>
+      <div class="tile"><span class="v num">5:10</span><span class="l">durée moyenne de visionnage des vidéos longues</span></div>
+      <div class="tile"><span class="v num">82 %</span><span class="l">des vues de Shorts viennent d'un seul Short</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sommaire">
+  <div class="wrap">
+    <a href="#diagnostic">Diagnostic</a>
+    <a href="#marche">Ce qui marche</a>
+    <a href="#ligne">La ligne</a>
+    <a href="#rythme">Rythme</a>
+    <a href="#titres">Titres</a>
+    <a href="#miniatures">Miniatures</a>
+    <a href="#pipeline">Pipeline</a>
+    <a href="#veille">Veille</a>
+    <a href="#sujets">Sujets</a>
+    <a href="#objectifs">Objectifs</a>
+    <a href="#chantier">À mettre en place</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="diagnostic">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">Notre chaîne</p>
+      <h2>Beaucoup de vidéos, peu de clics, personne ne revient</h2>
+      <p class="lead">Données YouTube Studio sur 28 jours (15 octobre au 11 novembre) et relevé public de chaque vidéo le 12 novembre.</p>
+    </div>
+
+    <div class="panel">
+      <div>
+        <p class="chart-title">Vues de chaque vidéo longue, dans l'ordre de publication</p>
+        <p class="chart-sub">Les extraits de 8 à 15 minutes publiés fin octobre font une médiane de 33 vues. Les vidéos de 19 minutes et plus font 158 vues (228 sans les trois qui ont moins de 3 jours).</p>
+      </div>
+      <div class="legend"><span><i style="background:var(--s1)"></i>Vidéo de 19 min et plus</span><span><i style="background:var(--s2)"></i>Extrait de 8 à 15 min</span><span><i style="background:var(--s1);opacity:.55"></i>Moins de 3 jours</span></div>
+      <div id="chart-sb"></div>
+      <details class="data"><summary>Voir les données</summary><div class="tbl-wrap" id="tbl-sb"></div></details>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <p class="chart-title">75 462 vues de Shorts, 85 Shorts</p>
+        <p class="chart-sub">"Du texte invisible dans un CV pour piéger les IA" (33 secondes) fait 62 183 vues. Les 84 autres se partagent le reste, avec une médiane de 54 vues.</p>
+        <div class="seg" role="img" aria-label="62 183 vues pour un Short, 13 279 pour les 84 autres">
+          <div class="a" style="flex:62183">1 Short : 62 183</div>
+          <div class="b" style="flex:13279">84 Shorts : 13 279</div>
+        </div>
+        <p class="small">Les Shorts ont apporté 63 des 108 abonnés du mois. 89 % de leurs vues viennent du flux Shorts.</p>
+      </div>
+      <div class="panel">
+        <p class="chart-title">Qui regarde, d'où il vient</p>
+        <div class="tbl-wrap"><table>
+          <tr><td>Nouveaux spectateurs</td><td class="n">97 %</td></tr>
+          <tr><td>Spectateurs réguliers</td><td class="n">0 %</td></tr>
+          <tr><td>Vidéos longues trouvées par l'accueil et le fil</td><td class="n">64,7 %</td></tr>
+          <tr><td>Par les suggestions</td><td class="n">10,0 %</td></tr>
+          <tr><td>Par la recherche YouTube</td><td class="n">6,5 %</td></tr>
+          <tr><td>Profil principal</td><td class="n">Hommes 35-44 ans</td></tr>
+        </table></div>
+        <p class="small">Le profil principal correspond à la cible de la vision SANDBOX : CTO, tech leads, PM seniors.</p>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><span class="k num">105</span><p>vidéos en 31 jours, dont 20 longues. Les chaînes du top 20 mondial publient 2,6 vidéos longues par semaine (médiane). Le volume n'est pas le frein.</p></div>
+      <div class="fact"><span class="k num">12 / 20</span><p>de nos titres longs sont des questions ("Faut-il...", "tu codes ou tu pilotes ?"). Sur les 1 729 vidéos du marché, 8 % des titres en sont, et ils percent presque trois fois moins souvent.</p></div>
+      <div class="fact"><span class="k num">5 / 8</span><p>des dernières miniatures posent aussi une question, et on y voit cinq constructions différentes. Un spectateur ne peut pas reconnaître SANDBOX dans son fil.</p></div>
+      <div class="fact"><span class="k num">0 %</span><p>de spectateurs réguliers. Chaque vidéo repart de zéro : pas de série identifiable, pas de rendez-vous.</p></div>
+      <div class="fact"><span class="k num">62 k</span><p>vues pour le Short sur le CV. Il raconte un fait précis et surprenant qui concerne tout le monde, sans question ni jargon. C'est le modèle à reproduire.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="marche">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">Le marché</p>
+      <h2>Ce qui perce sur 45 chaînes IA</h2>
+      <p class="lead">Les 40 dernières vidéos de chaque chaîne : le top 20 mondial, 11 talk-shows américains et 14 chaînes françaises, soit 1 729 vidéos longues. Une vidéo perce quand elle fait au moins 2 fois la médiane de sa chaîne. C'est le cas de 15 % d'entre elles.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div>
+          <p class="chart-title">Part des vidéos qui percent, par thème</p>
+          <p class="chart-sub">Le métier de dev, les skills et le vibe coding font mieux que la moyenne. Les annonces Google et le business font moins bien.</p>
+        </div>
+        <div class="legend"><span><i style="background:var(--s1)"></i>Territoire SANDBOX</span><span><i style="background:var(--mute)"></i>Actu de marque et business</span><span><i style="background:transparent;border-left:1px solid var(--fg-3);border-radius:0;width:1px"></i>Moyenne 15 %</span></div>
+        <div id="chart-topics"></div>
+        <details class="data"><summary>Voir les données</summary><div class="tbl-wrap" id="tbl-topics"></div></details>
+      </div>
+      <div class="panel">
+        <div>
+          <p class="chart-title">Part des vidéos qui percent, selon le titre</p>
+          <p class="chart-sub">Un titre en question perce presque trois fois moins souvent. Le récit à la première personne et le chiffre aident.</p>
+        </div>
+        <div class="legend"><span><i style="background:var(--s1);border-radius:50%"></i>Titre avec</span><span><i style="background:var(--mute);border-radius:50%"></i>Titre sans</span></div>
+        <div id="chart-titles"></div>
+        <details class="data"><summary>Voir les données</summary><div class="tbl-wrap" id="tbl-titles"></div></details>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div>
+          <p class="chart-title">Vues par vidéo rapportées aux abonnés, selon le rythme</p>
+          <p class="chart-sub">Au-delà de 4 vidéos longues par semaine, chaque vidéo touche deux fois moins de monde par abonné.</p>
+        </div>
+        <div id="chart-freq"></div>
+        <p class="small">Médiane des vues d'une vidéo divisée par le nombre d'abonnés, 44 chaînes. Rythme estimé sur les 40 dernières vidéos.</p>
+      </div>
+      <div class="panel">
+        <div>
+          <p class="chart-title">Talk-shows : part des épisodes qui percent, selon la durée</p>
+          <p class="chart-sub">Les épisodes de 40 minutes et plus percent plus de deux fois plus souvent que ceux de 25 à 40 minutes. Les extraits courts postés sur la chaîne principale percent peu, comme chez nous.</p>
+        </div>
+        <div id="chart-dur"></div>
+        <p class="small">11 talk-shows américains et 5 français, 608 vidéos. Entre parenthèses, le nombre de vidéos.</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div>
+        <p class="chart-title">En France, le sujet a un public</p>
+        <p class="chart-sub">Underscore_ fait 524 k vues médianes avec des discussions de 30 minutes. Les podcasts tech filmés titrés par numéro ou par thème restent sous 1 000 vues.</p>
+      </div>
+      <div class="tbl-wrap" id="tbl-fr"></div>
+      <p class="small">Même thème que nos épisodes : "On ne paie plus les développeurs pour écrire du code ? (même le code critique, à une condition)" fait 1,5 M de vues chez Underscore_, "Le vibecoding, c'est (déjà) fini." 167 k chez Benjamin Code. Underscore_ titre ses épisodes comme des histoires ("Il a laissé l'IA gérer sa vie pendant 6 mois", 836 k).</p>
+    </div>
+  </div>
+</section>
+
+<section id="ligne">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">La ligne</p>
+      <h2>Le talk-show de ceux qui construisent avec l'IA</h2>
+      <p class="lead">On garde la cible de la vision SANDBOX : CTO, tech leads, PM et devs expérimentés. On élargit la porte d'entrée. Le titre et la miniature parlent à toute personne qui travaille avec l'IA ; la discussion garde le niveau pro, avec deux devs et un PM qui testent en vrai.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <h3>Nos thèmes, dans l'ordre</h3>
+        <ul class="plain">
+          <li>Le métier de dev et l'emploi : juniors, recrutement, ce qui reste à faire quand l'IA code (26 % de vidéos qui percent).</li>
+          <li>Skills, agents et workflows au quotidien, montrés à l'écran (21 %).</li>
+          <li>Vibe coding et qualité en production (18 %).</li>
+          <li>Tests de modèles sur nos vrais projets : Claude, Fable, GPT, Codex. Dans la moyenne (15 %), ils portent le format Build.</li>
+          <li>IA locale : ce que vaut un modèle sur nos machines pour coder (23 %).</li>
+          <li>Une fois par mois, La Bêta : le futur du métier, les IA qui s'améliorent seules (29 %).</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>À éviter</h3>
+        <ul class="plain">
+          <li>L'actu business, les levées de fonds, les valorisations (10 % de vidéos qui percent).</li>
+          <li>Une annonce Google ou Gemini sans test (7 %).</li>
+          <li>Les sujets de niche métier (fleuristes, boulangers, coiffeurs) en vidéo longue. Ils peuvent marcher en Short : celui sur les coiffeurs fait 712 vues.</li>
+          <li>Les extraits de 8 à 15 minutes publiés comme vidéos longues. Ils deviennent des Shorts ou restent dans l'épisode.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <article class="panel fmt">
+        <span class="tag">Série 1</span>
+        <h3>Le Clash</h3>
+        <p>Une affirmation qui divise. Chacun défend sa position avec ce qu'il a vécu, vote final.</p>
+        <dl><dt>Durée</dt><dd>35 à 50 min</dd><dt>Rythme</dt><dd>1 par semaine</dd><dt>Miniature</dt><dd>les trois, expressions qui s'opposent</dd></dl>
+        <p class="ex">"Le dev junior va disparaître des recrutements"</p>
+      </article>
+      <article class="panel fmt">
+        <span class="tag">Série 2</span>
+        <h3>Le Build</h3>
+        <p>On teste un outil ou une méthode sur un vrai projet et on montre le résultat, même raté.</p>
+        <dl><dt>Durée</dt><dd>15 à 25 min</dd><dt>Rythme</dt><dd>1 par semaine</dd><dt>Miniature</dt><dd>un visage et le résultat</dd></dl>
+        <p class="ex">"On a demandé 100 fois à Claude d'améliorer notre app"</p>
+      </article>
+      <article class="panel fmt">
+        <span class="tag">Série 3</span>
+        <h3>Le Radar</h3>
+        <p>Une sortie ou une annonce qui change quelque chose pour une équipe tech, testée et publiée dans les 48 heures.</p>
+        <dl><dt>Durée</dt><dd>15 à 25 min</dd><dt>Rythme</dt><dd>quand l'alerte tombe</dd><dt>Miniature</dt><dd>le produit en très grand</dd></dl>
+        <p class="ex">"On a joué au FPS que Fable 5.2 a codé en 8 heures"</p>
+      </article>
+    </div>
+    <div class="panel">
+      <h3>Les Shorts</h3>
+      <p>5 à 7 par épisode, 30 à 45 secondes, un par jour. Un fait ou une histoire qui se comprend sans l'épisode, dit dans les deux premières secondes. Titre = le fait, jamais la question : "Il envoie une photo à Claude, qui lui modélise son canapé" (plus de 500 vues le jour de sa sortie) plutôt que "Claude peut-il modéliser un canapé ?".</p>
+    </div>
+  </div>
+</section>
+
+<section id="rythme">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">Rythme et durée</p>
+      <h2>Trois vidéos longues par semaine, un Short par jour</h2>
+      <p class="lead">Une vidéo par jour, pas tout de suite. SANDBOX publie déjà presque une vidéo longue par jour et les vues ne suivent pas, et les chaînes au-delà de 4 vidéos par semaine font deux fois moins de vues par abonné. On met le temps gagné dans le sujet, le titre et la miniature. On remonte le rythme quand le taux de clics dépasse 5 %.</p>
+    </div>
+    <div class="week" role="list" aria-label="Semaine type">
+      <div class="day" role="listitem"><h3>Lun</h3><div class="ev auto">8 h : rapport de veille automatique</div><div class="ev">Choix des sujets, 15 min</div><div class="ev">Bilan J+7 de la semaine passée</div><div class="ev pub">Short</div></div>
+      <div class="day" role="listitem"><h3>Mar</h3><div class="ev rec">Tournage du Clash</div><div class="ev pub">Short</div></div>
+      <div class="day" role="listitem"><h3>Mer</h3><div class="ev pub">Sortie du Clash</div><div class="ev pub">Short</div></div>
+      <div class="day" role="listitem"><h3>Jeu</h3><div class="ev rec">Tournage du Build</div><div class="ev">Bilan J+2 du Clash</div><div class="ev pub">Short</div></div>
+      <div class="day" role="listitem"><h3>Ven</h3><div class="ev pub">Sortie du Build</div><div class="ev pub">Short</div></div>
+      <div class="day" role="listitem"><h3>Sam</h3><div class="ev pub">Short</div></div>
+      <div class="day" role="listitem"><h3>Dim</h3><div class="ev pub">Short</div><div class="ev rec">Radar si alerte, sortie sous 48 h</div></div>
+    </div>
+    <div class="legend"><span><i style="background:var(--accent)"></i>Publication</span><span><i style="background:var(--s2)"></i>Tournage</span><span><i style="background:var(--fg-3)"></i>Automatique</span></div>
+    <p class="small">Les jours sont à caler sur les disponibilités de Lou, Nicolas et Loïc. Ce qui compte : un jour de sortie fixe par série, toujours à la même heure.</p>
+  </div>
+</section>
+
+<section id="titres">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">Titres</p>
+      <h2>Affirmer un fait, raconter ce qu'on a fait</h2>
+    </div>
+    <div class="grid-2">
+      <div class="panel">
+        <h3>Les règles</h3>
+        <ul class="plain">
+          <li>Pas de point d'interrogation, pas de "Faut-il...". 5,9 % des titres en question percent, 16,2 % des autres.</li>
+          <li>Moins de 55 caractères, le nom connu ou le chiffre dans les 30 premiers.</li>
+          <li>Raconter : "On a", "J'ai", "Il a laissé". Pas de "tu" ni de "vous" (10,6 % contre 15,8 %).</li>
+          <li>Ni "| SANDBOX #3" ni deux-points : le numéro va dans la description et la playlist.</li>
+          <li>Fort mais vrai : chaque titre renvoie à un moment précis de la vidéo.</li>
+          <li>Trois titres par vidéo, testés dans YouTube Studio.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Formules qui marchent</h3>
+        <div class="tbl-wrap"><table>
+          <tr><th>Formule</th><th>Exemple</th><th class="n">Score</th></tr>
+          <tr><td>Le récit</td><td>Il a laissé l'IA gérer sa vie pendant 6 mois (Underscore_)</td><td class="n">836 k</td></tr>
+          <tr><td>L'expérience</td><td>J'ai fait créer la même app à GPT-6 Astra et Fable 5.1 (Shubham SHARMA)</td><td class="n">x7,5</td></tr>
+          <tr><td>Le verdict</td><td>Le vibecoding, c'est (déjà) fini. (Benjamin Code)</td><td class="n">x3,0</td></tr>
+          <tr><td>Trop loin</td><td>I Told Claude to "Make it better" 100 Times (It Went Too Far) (Nate Herk)</td><td class="n">x5,7</td></tr>
+        </table></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Nos trois derniers épisodes, retitrés</h3>
+      <p class="chart-sub">Chaque nouveau titre vient du contenu décrit dans la description de l'épisode. À tester en variante, sans toucher à la vidéo.</p>
+      <div class="tbl-wrap"><table class="ba">
+        <tr><th>Titre actuel</th><th>Proposition</th><th class="n">Vues</th></tr>
+        <tr><td>Les agents IA, expliqués simplement</td><td>Il a laissé un agent IA gérer l'achat de son appartement</td><td class="n">63</td></tr>
+        <tr><td>Je teste Fable 5.2, le meilleur modèle au monde ?</td><td>On a joué au FPS que Fable 5.2 a codé en 8 heures</td><td class="n">77</td></tr>
+        <tr><td>Vibe coding : pourquoi l'IA peut nous épuiser</td><td>L'IA code à notre place et on n'a jamais été aussi fatigués</td><td class="n">207</td></tr>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<section id="miniatures">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">Miniatures</p>
+      <h2>Une construction par série, trois mots au plus</h2>
+      <p class="lead">Underscore_ garde le même fond bleu, un visage, un objet et deux ou trois mots entre guillemets. Shubham SHARMA met un visage serré, un ou deux mots et le sujet en image. Chez nous, cinq constructions sur les huit dernières miniatures, et des phrases en question.</p>
+    </div>
+    <div class="grid-3">
+      <figure class="stack" style="gap:8px;margin:0">
+        <div class="thumb t-clash" role="img" aria-label="Maquette de miniature Clash">
+          <span class="logo">SANDBOX</span>
+          <span class="words" style="left:5%;top:24%;font-size:12cqw;max-width:52%">Junior<br>c'est fini</span>
+          <svg class="p" viewBox="0 0 100 110" style="right:30%;width:28%;color:#7A2E10"><use href="#person" fill="currentColor"/></svg>
+          <svg class="p" viewBox="0 0 100 110" style="right:-2%;width:28%;color:#7A2E10"><use href="#person" fill="currentColor"/></svg>
+          <svg class="p" viewBox="0 0 100 110" style="right:12%;width:38%;color:#2B0F05"><use href="#person" fill="currentColor"/></svg>
+          <span class="dur">42:10</span>
+        </div>
+        <figcaption class="thumb-cap"><b>Clash.</b> Les trois, un au premier plan. Fond orange sur toute la série.</figcaption>
+      </figure>
+      <figure class="stack" style="gap:8px;margin:0">
+        <div class="thumb t-build" role="img" aria-label="Maquette de miniature Build">
+          <span class="logo">SANDBOX</span>
+          <div class="shot">version 100</div>
+          <span class="words" style="left:8%;bottom:6%;font-size:9cqw;color:#FFD34D">100 fois</span>
+          <svg class="p" viewBox="0 0 100 110" style="right:2%;width:40%;color:#1FB6D9"><use href="#person" fill="currentColor"/></svg>
+          <span class="dur">18:42</span>
+        </div>
+        <figcaption class="thumb-cap"><b>Build.</b> Un visage et le résultat montré dans la vidéo. Fond nuit.</figcaption>
+      </figure>
+      <figure class="stack" style="gap:8px;margin:0">
+        <div class="thumb t-radar" role="img" aria-label="Maquette de miniature Radar">
+          <span class="logo">SANDBOX</span>
+          <span class="words" style="left:5%;top:26%;font-size:17cqw">Fable<br>5.2</span>
+          <span class="words" style="left:5%;bottom:8%;font-size:6cqw;color:#C9541A">8 h pour un FPS</span>
+          <svg class="p" viewBox="0 0 100 110" style="right:2%;width:40%;color:#222"><use href="#person" fill="currentColor"/></svg>
+          <span class="dur">21:05</span>
+        </div>
+        <figcaption class="thumb-cap"><b>Radar.</b> Le produit en très grand, une réaction. Fond clair.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-2">
+      <div class="panel">
+        <h3>Les règles</h3>
+        <ul class="plain">
+          <li>Lisible à 160 x 90 pixels : c'est la taille dans le fil sur téléphone.</li>
+          <li>Trois mots au plus, qui complètent le titre sans le répéter.</li>
+          <li>Des expressions réelles, prises une fois en séance photo. Pas de grimace générée.</li>
+          <li>Le logo SANDBOX petit, toujours dans le même coin.</li>
+          <li>Trois variantes par vidéo dans Tester et comparer de YouTube Studio.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>De 2 heures à 20 minutes</h3>
+        <p>Les trois gabarits ci-dessus, une banque de 15 expressions par personne et la skill <code>sandbox-miniature-series</code> branchée sur <code>haxprox-youtube-thumbnail-loop</code> (corpus de 1 128 miniatures, portraits de Lou, Nicolas et Loïc). Il reste à choisir les mots et l'expression.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pipeline">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">Pipeline</p>
+      <h2>De la veille au bilan, une skill par étape</h2>
+      <p class="lead">Aujourd'hui, une miniature prend 2 heures et les titres 2 heures. Avec la pipeline, tout le temps humain d'un épisode hors tournage et montage passe sous 2 heures, du choix du sujet au bilan.</p>
+    </div>
+    <div class="pipe">
+      <div class="step"><h3>Veille</h3><span class="who agent">Agent, chaque matin</span><code>sandbox-veille-chaines</code><span class="t">0 min humain</span></div>
+      <div class="step"><h3>Choix du sujet</h3><span class="who team">Équipe, lundi</span><code>modeles/backlog-sujets.md</code><span class="t">15 min</span></div>
+      <div class="step"><h3>Brief</h3><span class="who agent">Agent + équipe</span><code>sandbox-sujet-episode</code><span class="t">20 min</span></div>
+      <div class="step"><h3>Titres provisoires</h3><span class="who agent">Agent, avant tournage</span><code>sandbox-titres-youtube</code><span class="t">10 min</span></div>
+      <div class="step"><h3>Tournage</h3><span class="who team">Équipe</span><span class="t">OBS ou Meet</span></div>
+      <div class="step"><h3>Montage</h3><span class="who agent">Agent</span><code>montage-video</code><span class="t">relecture équipe</span></div>
+      <div class="step"><h3>Pack final</h3><span class="who agent">Agent</span><code>sandbox-titres-youtube</code><span class="t">15 min de relecture</span></div>
+      <div class="step"><h3>3 miniatures</h3><span class="who agent">Agent</span><code>sandbox-miniature-series</code><span class="t">20 min de choix</span></div>
+      <div class="step"><h3>Publication et test</h3><span class="who team">Équipe dans Studio</span><span class="t">10 min</span></div>
+      <div class="step"><h3>Shorts</h3><span class="who agent">Agent</span><code>sandbox-shorts-youtube</code><span class="t">1 par jour</span></div>
+      <div class="step"><h3>Bilan J+2 et J+7</h3><span class="who agent">Agent + équipe</span><code>sandbox-bilan-youtube</code><span class="t">10 min</span></div>
+      <div class="step"><h3>Backlog</h3><span class="who team">Équipe</span><span class="t">les sujets à plus de 3 fois notre médiane se déclinent</span></div>
+    </div>
+    <p class="loop">Le bilan nourrit le backlog, la veille du lundi suivant repart de là.</p>
+  </div>
+</section>
+
+<section id="veille">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">Agents de veille</p>
+      <h2>Repérer aux États-Unis ce que la France n'a pas encore traité</h2>
+      <p class="lead">Deux sujets qui ont percé aux États-Unis ont percé en France quelques semaines plus tard, chez Shubham SHARMA. Ce délai est la fenêtre où SANDBOX peut arriver premier en français.</p>
+    </div>
+    <div class="panel">
+      <div class="tbl-wrap"><table>
+        <tr><th>Sujet</th><th>États-Unis</th><th>France</th></tr>
+        <tr><td>L'outil viral qui copie n'importe quelle app</td><td>Nick Saraev, x14,4, 1,7 M vues, il y a 1 mois</td><td>Shubham SHARMA, x3,4, 318 k vues, il y a 3 semaines</td></tr>
+        <tr><td>La même app à chaque niveau d'effort</td><td>Nate Herk, x4,4, 594 k vues, il y a 1 mois</td><td>Shubham SHARMA, x2,5, 230 k vues, il y a 3 semaines</td></tr>
+      </table></div>
+    </div>
+    <div class="grid-3">
+      <div class="panel"><span class="pill done">prêt</span><h3>Veille quotidienne</h3><p>46 chaînes lues chaque matin, score de chaque vidéo, rapport des sujets qui percent. Script <code>projects/ligne-editoriale/scripts/veille.py</code>, sans clé d'API.</p></div>
+      <div class="panel"><span class="pill todo">à brancher</span><h3>Alerte Radar</h3><p>Deux chaînes US sur le même sujet à x1,5 en 72 heures : message à l'équipe avec l'angle et la date limite. La règle est écrite dans <code>sandbox-veille-chaines</code>, il reste à choisir le canal.</p></div>
+      <div class="panel"><span class="pill todo">à brancher</span><h3>Bilan hebdo</h3><p>Taux de clics, durée moyenne et abonnés de chaque vidéo, comparés aux objectifs. Manuel dans Studio avec <code>sandbox-bilan-youtube</code>, automatique avec l'API YouTube Analytics.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sujets">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">Veille du 12 novembre 2026</p>
+      <h2>Ce qui perce en ce moment</h2>
+      <p class="lead">Vidéos des 30 derniers jours, classées par score (vues divisées par la médiane de la chaîne). La vague Fable 5.2 est en cours. SANDBOX a sorti son épisode dans les mêmes jours que les chaînes américaines ; il lui a manqué le titre et la miniature.</p>
+    </div>
+    <div class="panel"><div class="tbl-wrap" id="tbl-hot"></div></div>
+    <div class="panel">
+      <h3>Proposé pour les deux prochaines semaines</h3>
+      <div class="tbl-wrap"><table>
+        <tr><th>Série</th><th>Titre provisoire</th><th>Signal</th></tr>
+        <tr><td>Build</td><td>On a demandé 100 fois à Claude d'améliorer notre app</td><td>Nate Herk, x5,7</td></tr>
+        <tr><td>Clash</td><td>Le dev junior va disparaître des recrutements</td><td>Thème emploi, 26 % de vidéos qui percent</td></tr>
+        <tr><td>Build</td><td>On a codé une semaine avec une IA en local</td><td>Tina Huang x9,3, Alex Ziskind x4,8</td></tr>
+        <tr><td>Clash (Bêta)</td><td>L'IA qui s'améliore toute seule est déjà là</td><td>Thème futur, 29 % ; Latent Space x5,1</td></tr>
+        <tr><td>Shorts</td><td>Série pièges et astuces, dans la lignée du CV</td><td>Notre Short à 62 k vues</td></tr>
+      </table></div>
+      <p class="small">Propositions à valider par l'équipe. Chaque sujet doit avoir au moins un de nous qui le défend ou l'a vécu. Liste complète dans <code>modeles/backlog-sujets.md</code>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="objectifs">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">Objectifs</p>
+      <h2>Cinq chiffres à suivre chaque lundi</h2>
+      <p class="lead">Les objectifs sont fixés par ce guide. Ce ne sont pas des moyennes YouTube mesurées. Si un palier n'est pas atteint à sa date, on change de sujets ou de format, pas les réglages.</p>
+    </div>
+    <div class="panel"><div class="tbl-wrap"><table>
+      <tr><th>Indicateur</th><th class="n">Aujourd'hui</th><th class="n">15 déc. 2026</th><th class="n">15 fév. 2027</th></tr>
+      <tr><td>Taux de clics des vidéos longues</td><td class="n">2,1 %</td><td class="n">4 %</td><td class="n">6 %</td></tr>
+      <tr><td>Durée moyenne de visionnage</td><td class="n">5 min 10</td><td class="n">7 min</td><td class="n">10 min</td></tr>
+      <tr><td>Vues d'une vidéo longue à 7 jours (médiane)</td><td class="n">54</td><td class="n">300</td><td class="n">1 500</td></tr>
+      <tr><td>Spectateurs réguliers</td><td class="n">0 %</td><td class="n">3 %</td><td class="n">8 %</td></tr>
+      <tr><td>Abonnés</td><td class="n">126</td><td class="n">500</td><td class="n">2 000</td></tr>
+    </table></div></div>
+    <div class="grid-2">
+      <div class="panel">
+        <h3>Lire les chiffres</h3>
+        <ul class="plain">
+          <li>Moins de 3 % de clics après 48 heures : changer la miniature ou le titre.</li>
+          <li>Bonne rétention, peu de clics : le contenu est bon, l'emballage ne vend pas.</li>
+          <li>Beaucoup de clics, départ avant 30 secondes : l'accroche ne tient pas la promesse du titre.</li>
+          <li>Une vidéo à plus de 3 fois notre médiane : décliner le sujet.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <p class="quote">Une vidéo réussie, c'est un sujet que <span>les gens cherchent</span>, vendu par un titre et une miniature, tenu par les 30 premières secondes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="chantier">
+  <div class="wrap stack">
+    <div class="sec-head">
+      <p class="eyebrow">À mettre en place</p>
+      <h2>Ce qui est prêt, ce qu'il reste à faire</h2>
+    </div>
+    <ul class="chk">
+      <li><span class="pill done">fait</span><span>Script de veille sur 46 chaînes, premier rapport du 12 novembre (<code>rapports/veille-2026-11-12.md</code>).</span></li>
+      <li><span class="pill done">fait</span><span>Six skills dans <code>.agents/skills</code> : <code>sandbox-veille-chaines</code>, <code>sandbox-sujet-episode</code>, <code>sandbox-titres-youtube</code>, <code>sandbox-miniature-series</code>, <code>sandbox-shorts-youtube</code>, <code>sandbox-bilan-youtube</code>.</span></li>
+      <li><span class="pill done">fait</span><span>Modèle de brief d'épisode, backlog de neuf idées issues de la veille.</span></li>
+      <li><span class="pill todo">semaine 1</span><span>Séance photo : 15 expressions chacun, fond neutre, cadrage tête et épaules.</span></li>
+      <li><span class="pill todo">semaine 1</span><span>Trois gabarits de miniature (Clash, Build, Radar) et trois playlists du même nom.</span></li>
+      <li><span class="pill todo">semaine 1</span><span>Tester les nouveaux titres des trois derniers épisodes dans YouTube Studio.</span></li>
+      <li><span class="pill todo">semaine 1</span><span>Planifier la veille chaque matin à 8 h et choisir le canal de l'alerte Radar.</span></li>
+      <li><span class="pill todo">semaine 2</span><span>Passer à trois vidéos longues et un Short par jour. Plus d'extraits de 8 à 15 minutes en vidéo longue.</span></li>
+      <li><span class="pill todo">semaine 2</span><span>Nicolas et Loïc clonent le dépôt sandbox-podcast-resources : les skills et la veille y sont.</span></li>
+            <li><span class="pill later">ensuite</span><span>Clé YouTube Data API pour fiabiliser la veille, accès YouTube Analytics pour automatiser le bilan.</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap stack" style="gap:8px">
+    <p>Sources : relevé public de 46 chaînes avec yt-dlp le 12 novembre 2026 (40 dernières vidéos longues par chaîne), YouTube Studio de @SandboxFR sur 28 jours, vision SANDBOX. Les âges au-delà de 4 semaines sont approximatifs (YouTube affiche "il y a 1 mois"). Les écarts entre titres et thèmes sont des corrélations sur 1 729 vidéos, pas des lois.</p>
+    <p>Dossier : <code>projects/ligne-editoriale/</code> et six skills dans <code>.agents/skills/</code>.</p>
+  </div>
+</footer>
+
+<div id="tip" hidden></div>
+
+<script>
+const SB = [
+  ["2026-10-12","Sandbox #1 (pilote) Mistral Large 4, Claude Haiku 5.5, Gemini at Work, Sillage et les harnais IA",78,320,"long"],
+  ["2026-10-18","Restaurateurs, artisans, commerçants : que peut faire l'IA pour vous ? | SANDBOX #2",125,242,"long"],
+  ["2026-10-21","Faut-il encore lire les tickets quand on code avec l'IA ?",13,46,"cut"],
+  ["2026-10-22","Comment utiliser l'IA quand on est artisan ou commerçant ?",15,16,"cut"],
+  ["2026-10-23","Faut-il réécrire le code legacy avec l'IA ?",8,26,"cut"],
+  ["2026-10-24","Codex, Claude Code, OpenCode : pourquoi le harnais compte",10,92,"cut"],
+  ["2026-10-25","Vibe coding en production : jusqu'où faire confiance à l'IA ? | SANDBOX #3",102,329,"long"],
+  ["2026-10-25","Sillage : piloter ses agents de code depuis son téléphone",12,39,"cut"],
+  ["2026-10-27","Copilot Studio : qui contrôle un agent qui envoie des mails ?",9,26,"cut"],
+  ["2026-10-28","Cinq fois plus de commits : est-ce vraiment plus de valeur ?",12,17,"cut"],
+  ["2026-10-29","Agents vocaux : la latence change toute la conversation",8,40,"cut"],
+  ["2026-10-30","Un catalogue produit dans un agent IA : comment le structurer ?",14,24,"cut"],
+  ["2026-10-30","11 idées pour utiliser l'IA dans ton commerce",31,44,"long"],
+  ["2026-10-31","Vibe coding en production : que faut-il vérifier ?",8,120,"cut"],
+  ["2026-11-04","Développeur avec l'IA : tu codes ou tu pilotes ?",20,108,"long"],
+  ["2026-11-05","Tes devs vont plus vite avec l'IA. Et le reste de l'équipe ?",29,228,"long"],
+  ["2026-11-09","Vibe coding : pourquoi l'IA peut nous épuiser",36,207,"long"],
+  ["2026-11-10","J'ai transformé mon appartement en jeu vidéo avec l'IA pour tester ma déco",33,29,"young"],
+  ["2026-11-10","Les agents IA, expliqués simplement",34,63,"young"],
+  ["2026-11-11","Je teste Fable 5.2, le meilleur modèle au monde ?",28,77,"young"]
+];
+const TOPICS = [
+  ["Futur, AGI, risques",28.6,42,true],["Métier de dev, emploi",25.6,90,true],["IA locale, hardware",22.7,110,true],
+  ["Skills, MCP, workflows",20.5,73,true],["Vibe coding, créer une app",18.2,22,true],["Claude, Anthropic",16.3,301,false],
+  ["OpenAI, ChatGPT",16.1,217,false],["Agents IA",15.8,120,true],["Comparatif de modèles",15.4,52,true],
+  ["Claude Code, agents de code",14.7,68,true],["Chine",13.3,75,false],["Argent, business",9.8,122,false],["Google, Gemini",7.2,97,false]
+];
+const TITLES = [
+  ["Point d'interrogation",5.9,16.2,136],["Tu ou vous",10.6,15.8,142],["Mot en capitales",12.5,16.5,473],
+  ["Barre verticale ou deux-points",12.9,16.2,418],["Un chiffre",17.3,13.8,768],["Première personne",18.2,14.8,308],["Mot choc (enfin, fou, insane)",18.7,15.0,166]
+];
+const FREQ = [["Moins de 1,5 par semaine (19 chaînes)",0.28,false],["De 1,5 à 4 par semaine (16 chaînes)",0.29,false],["4 et plus par semaine (9 chaînes)",0.15,true]];
+const DUR = [["Moins de 15 min (26)",7.7],["15 à 25 min (40)",10.0],["25 à 40 min (130)",7.7],["40 à 70 min (145)",20.0],["70 min et plus (267)",18.4]];
+const FR = [
+  ["Underscore_",970000,524000,31,"0,8"],["Micode",2010000,2700000,30,"0,2"],["Shubham SHARMA",330000,94000,17,"0,8"],
+  ["Yassine Sdiri",299000,112000,21,"1,2"],["Defend Intelligence",211000,142000,21,"0,2"],["Benjamin Code",162000,55000,20,"0,8"],
+  ["Melvynx",68000,10500,20,"9,3"],["Comptoir IA",11000,928,67,"0,7"],["If This Then Dev",2000,124,56,"1,6"],["SANDBOX",126,45,17,"4,7"]
+];
+const HOT = [
+  [14.4,"1,7 M","1 mois","Nick Saraev","I Tested The Viral Github Repo That Reverse Engineers Anything","dAzs_rU6080"],
+  [10.2,"1,2 M","8 j","Nick Saraev","31 Life-Changing Ways to Use Claude in 2027","KDyPHt4lW60"],
+  [9.3,"2,2 M","1 mois","Tina Huang","Every Size Local AI In 24 Minutes","rPGJhrunbxo"],
+  [6.7,"998 k","1 mois","Wes Roth","OpenAI's \"Alien Math\" Is Freaking People Out","rxpV3QLV-pg"],
+  [5.7,"765 k","12 j","Nate Herk","I Told Claude to \"Make it better\" 100 Times (It Went Too Far)","DByAR5Su1Yw"],
+  [4.8,"563 k","1 mois","Nick Saraev","What I'd Learn Instead of AI Automation in 2027","638GQZ9UZ4w"],
+  [4.7,"302 k","9 j","David Ondrej","This DeepSeek v4.1 is powerful and uncensored, let's run it","9tOu4r-FiQI"],
+  [4.4,"594 k","1 mois","Nate Herk","I Had Opus 5.5 Build me the Same App at Every Effort Level","QCkHIyEPIYo"],
+  [3.7,"434 k","27 j","Nick Saraev","How to Survive the Next 2 Years of AI","X1ObmRAgp5A"],
+  [3.6,"424 k","2 j","Nick Saraev","Anthropic Is Out Of Control (Fable 5.2)","foCBPrpbO68"],
+  [3.5,"311 k","1 mois","AI Explained","Opus 5.5: How Close Are We to Automated AI Research?","R9momwXV9w4"],
+  [2.0,"296 k","2 j","Matthew Berman","All software is solved... (Fable 5.2)","0vNyVMDFdkg"]
+];
+
+const nf = new Intl.NumberFormat("fr-FR");
+const dec = (x, d = 1) => x.toFixed(d).replace(".", ",");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+const tip = document.getElementById("tip");
+function place(x, y) {
+  const r = tip.getBoundingClientRect();
+  let left = x + 14, top = y + 14;
+  if (left + r.width > innerWidth - 8) left = x - r.width - 14;
+  if (top + r.height > innerHeight - 8) top = y - r.height - 14;
+  tip.style.left = Math.max(8, left) + "px";
+  tip.style.top = Math.max(8, top) + "px";
+}
+function bindTip(el, html, label) {
+  el.tabIndex = 0;
+  el.setAttribute("aria-label", label);
+  el.addEventListener("pointerenter", e => { tip.innerHTML = html; tip.hidden = false; place(e.clientX, e.clientY); });
+  el.addEventListener("pointermove", e => place(e.clientX, e.clientY));
+  el.addEventListener("pointerleave", () => { tip.hidden = true; });
+  el.addEventListener("focus", () => { const r = el.getBoundingClientRect(); tip.innerHTML = html; tip.hidden = false; place(r.right, r.top); });
+  el.addEventListener("blur", () => { tip.hidden = true; });
+}
+function table(el, head, rows, numCols = []) {
+  const h = "<tr>" + head.map((t, i) => `<th${numCols.includes(i) ? ' class="n"' : ""}>${esc(t)}</th>`).join("") + "</tr>";
+  const b = rows.map(r => "<tr" + (r.cls ? ` class="${r.cls}"` : "") + ">" + r.cells.map((c, i) => `<td${numCols.includes(i) ? ' class="n"' : ""}>${c}</td>`).join("") + "</tr>").join("");
+  el.innerHTML = "<table>" + h + b + "</table>";
+}
+function hbar(el, rows, o) {
+  const box = document.createElement("div");
+  box.className = "hb";
+  rows.forEach(r => {
+    const row = document.createElement("div");
+    row.className = "hb-row";
+    const w = Math.max(0.5, r.v / o.max * 100);
+    row.innerHTML = `<span class="hb-label">${esc(r.label)}</span><div class="hb-track">${o.base != null ? `<span class="hb-base" style="left:${o.base / o.max * 100}%"></span>` : ""}<div class="hb-bar" style="width:${w}%;background:var(--${r.color})"></div><span class="hb-val" style="left:${w}%">${esc(o.fmt(r.v))}</span></div>`;
+    bindTip(row.querySelector(".hb-bar"), r.tip, r.label + " : " + o.fmt(r.v));
+    box.appendChild(row);
+  });
+  if (o.ticks) {
+    const ax = document.createElement("div");
+    ax.className = "axis-row";
+    ax.innerHTML = `<span></span><div class="axis">${o.ticks.map(t => `<span style="left:${t / o.max * 100}%">${esc(o.tickFmt(t))}</span>`).join("")}</div>`;
+    box.appendChild(ax);
+  }
+  el.appendChild(box);
+}
+
+/* SANDBOX : colonnes chronologiques */
+(function () {
+  const el = document.getElementById("chart-sb");
+  const max = 350;
+  const wrap = document.createElement("div");
+  wrap.className = "cols";
+  [0, 100, 200, 300].forEach(t => {
+    const g = document.createElement("div");
+    g.className = "grid";
+    g.style.bottom = (t / max * 100) + "%";
+    g.innerHTML = `<span>${t}</span>`;
+    wrap.appendChild(g);
+  });
+  const labels = document.createElement("div");
+  labels.className = "xlabels";
+  const show = new Set([0, 6, 14, 19]);
+  SB.forEach((d, i) => {
+    const [date, title, dur, views, kind] = d;
+    const c = document.createElement("div");
+    c.className = "col" + (kind === "young" ? " young" : "");
+    const color = kind === "cut" ? "var(--s2)" : "var(--s1)";
+    c.innerHTML = `<b style="height:${views / max * 100}%;background:${color}"></b>`;
+    const dd = date.slice(8) + "/" + date.slice(5, 7);
+    bindTip(c, `<b>${esc(title)}</b>${views} vues, ${dur} min, publié le ${dd}`, `${title}, ${views} vues`);
+    wrap.appendChild(c);
+    const s = document.createElement("span");
+    s.textContent = show.has(i) ? dd : "";
+    labels.appendChild(s);
+  });
+  el.appendChild(wrap);
+  el.appendChild(labels);
+  table(document.getElementById("tbl-sb"), ["Date", "Titre", "Durée", "Vues"],
+    SB.map(d => ({ cells: [d[0].slice(8) + "/" + d[0].slice(5, 7), esc(d[1]), d[2] + " min", nf.format(d[3])] })), [2, 3]);
+})();
+
+hbar(document.getElementById("chart-topics"),
+  TOPICS.map(t => ({ label: t[0], v: t[1], color: t[3] ? "s1" : "mute", tip: `<b>${esc(t[0])}</b>${dec(t[1])} % des ${t[2]} vidéos percent` })),
+  { max: 32, base: 15.4, fmt: v => dec(v) + " %", ticks: [0, 10, 20, 30], tickFmt: t => t + " %" });
+table(document.getElementById("tbl-topics"), ["Thème", "Vidéos", "Qui percent"],
+  TOPICS.map(t => ({ cells: [esc(t[0]), t[2], dec(t[1]) + " %"] })).concat([{ cells: ["Toutes vidéos", "1 729", "15,4 %"] }]), [1, 2]);
+
+(function () {
+  const el = document.getElementById("chart-titles");
+  const max = 21;
+  const box = document.createElement("div");
+  box.className = "db";
+  TITLES.forEach(t => {
+    const [label, yes, no, n] = t;
+    const a = yes / max * 100, b = no / max * 100;
+    const row = document.createElement("div");
+    row.className = "db-row";
+    const lo = Math.min(a, b), hi = Math.max(a, b);
+    const valSide = yes >= no ? `left:calc(${a}% + 10px)` : `right:calc(${100 - a}% + 10px)`;
+    row.innerHTML = `<span class="hb-label">${esc(label)}</span><div class="db-track"><span class="db-line" style="left:${lo}%;width:${hi - lo}%"></span><span class="db-dot" style="left:${b}%;background:var(--mute)"></span><span class="db-dot" style="left:${a}%;background:var(--s1)"></span><span class="db-val" style="${valSide}">${dec(yes)} %</span></div>`;
+    bindTip(row.querySelector(".db-track"), `<b>${esc(label)}</b>Avec : ${dec(yes)} % (${n} vidéos)<br>Sans : ${dec(no)} %`, `${label} : ${dec(yes)} % avec, ${dec(no)} % sans`);
+    box.appendChild(row);
+  });
+  const ax = document.createElement("div");
+  ax.className = "axis-row";
+  ax.innerHTML = `<span></span><div class="axis">${[0, 5, 10, 15, 20].map(t => `<span style="left:${t / max * 100}%">${t} %</span>`).join("")}</div>`;
+  box.appendChild(ax);
+  el.appendChild(box);
+  table(document.getElementById("tbl-titles"), ["Caractéristique", "Vidéos avec", "Percent avec", "Percent sans"],
+    TITLES.map(t => ({ cells: [esc(t[0]), t[3], dec(t[1]) + " %", dec(t[2]) + " %"] })), [1, 2, 3]);
+})();
+
+hbar(document.getElementById("chart-freq"),
+  FREQ.map(f => ({ label: f[0], v: f[1], color: f[2] ? "s2" : "s1", tip: `<b>${esc(f[0])}</b>Une vidéo fait en médiane ${dec(f[1], 2)} vue par abonné` })),
+  { max: 0.35, fmt: v => dec(v, 2), ticks: [0, 0.1, 0.2, 0.3], tickFmt: t => dec(t, 1) });
+
+hbar(document.getElementById("chart-dur"),
+  DUR.map(d => ({ label: d[0], v: d[1], color: d[1] >= 15 ? "s1" : "mute", tip: `<b>${esc(d[0])}</b>${dec(d[1])} % des épisodes percent` })),
+  { max: 24, base: 15.4, fmt: v => dec(v) + " %", ticks: [0, 10, 20], tickFmt: t => t + " %" });
+
+table(document.getElementById("tbl-fr"), ["Chaîne", "Abonnés", "Vues médianes", "Durée médiane", "Vidéos / sem."],
+  FR.map(f => ({ cls: f[0] === "SANDBOX" ? "us" : "", cells: [esc(f[0]), nf.format(f[1]), nf.format(f[2]), f[3] + " min", f[4]] })), [1, 2, 3, 4]);
+
+table(document.getElementById("tbl-hot"), ["Score", "Vues", "Âge", "Chaîne", "Titre"],
+  HOT.map(h => ({ cells: ["x" + dec(h[0]), h[1], h[2], esc(h[3]), `<a href="https://www.youtube.com/watch?v=${h[5]}" target="_blank" rel="noopener">${esc(h[4])}</a>`] })), [0, 1, 2]);
+</script>
