@@ -1,0 +1,36 @@
+# Lecture complémentaire : hooks expliqués et vidéos moins vues
+
+Complément du 17 novembre 2026 au [top 20](corpus-antoine-bouganne.md). Douze vidéos ont été choisies dans l'inventaire des 147 Shorts avant la lecture de leurs transcriptions : six titres sur les hooks, cinq sur les rencontres ou idées de business et un sur une expérience de publication. Onze transcriptions françaises automatiques étaient accessibles et ont été lues intégralement. Une vidéo sans sous-titres reste signalée et exclue de l'analyse textuelle.
+
+Cet échantillon raisonné n'est ni représentatif ni apparié au top 20 sur l'ancienneté. Il sert à chercher des contre-exemples et à comprendre ce que l'auteur dit de sa pratique. Les vues ci-dessous sont les compteurs publics précis du 17 novembre ; les rangs viennent de l'inventaire arrondi du 16. Aucun taux de rétention n'est disponible. L'analyse reste textuelle, sans audit des images ou validation humaine des paroles.
+
+## Observation qui corrige la lecture initiale
+
+Dans [TikTok qui paye toujours plus les hooks les plus fou](https://www.youtube.com/shorts/3j0I2ZumaVE), le narrateur commence par une réparation de Mac et une rencontre. Vers 35 à 38 secondes, les sous-titres indiquent : "Ce que je suis en train de vous raconter est faux." Il dit aussi avoir déjà publié un récit inventé qui a fait deux millions de vues sur TikTok. Cette déclaration ne permet pas d'identifier avec certitude chaque anecdote du top 20 comme vraie ou fausse.
+
+Conséquence : employer "récit présenté à la première personne", pas "expérience authentique" sur la seule base d'un transcript. La structure peut être analysée sans prendre les anecdotes comme preuves de résultats économiques. Pour Lou, travailler à partir des faits du pitch, d'une démonstration ou d'une hypothèse explicite.
+
+## Les douze cas
+
+| Rang initial, vidéo et publication | Vues relevées | Observation ou statut | Conséquence pour le skill |
+|---|---:|---|---|
+| 29. [Les meilleurs mots à choisir pour percer sur TikTok](https://www.youtube.com/shorts/y-Fzad60isE), 10/03/2025 | 12 852 | L'auteur décompose un exemple en business class et utilise un avertissement dont le sens se révèle ensuite : le confort rendrait difficile le retour en économique. | Une inversion peut organiser une attente ; elle doit rester fidèle au sujet. L'avertissement ne se transpose pas automatiquement à un outil. |
+| 38. [La chose à savoir avant de tourner un short viral](https://www.youtube.com/shorts/oQDN7l8E7PM), 22/05/2025 | 9 562 | Après un début long, l'auteur attribue une partie de ses variations de résultat à son état et à sa disponibilité créative. | C'est son interprétation personnelle, pas une expérience qui isole la cause des vues. Les mots du hook ne sont pas la seule variable. |
+| 52. [Le pdg qui m'explique comment devenir riche](https://www.youtube.com/shorts/L1I_5dmaAqc), 08/10/2025 | 6 968 | Aucun sous-titre disponible lors de la collecte. | Aucune analyse de paroles ni déduction de structure à partir du seul titre. |
+| 53. [Ce mec m'a donné la meilleure idée de business](https://www.youtube.com/shorts/6jXmWjyDQ78), 01/04/2025 | 6 913 | Avion, attente de rencontre et conseil attribué à Gary Vaynerchuk. Longue préparation avant la leçon sur la publication répétée. | Une scène de rencontre peut aussi accompagner un score bien inférieur au top. La présence d'une célébrité n'est pas un mécanisme à fabriquer. |
+| 70. [J'ai posté un TikTok toutes les heures pendant vingt-quatre heures](https://www.youtube.com/shorts/6J2F5NDU1Cw), 08/12/2025 | 5 149 | Un commentaire contestant ses résultats lance une expérience. L'auteur annonce ensuite le résultat et renvoie à une vidéo longue sur la méthode. | Une objection précise peut lancer un test réel. Garder séparés protocole, résultat rapporté et interprétation. |
+| 72. [Les hooks TikTok qui paye le plus](https://www.youtube.com/shorts/t6lXzGvnxX0), 18/02/2026 | 5 039 | L'auteur décrit des objets intrigants, des gestes satisfaisants et des situations familières. Il explique chercher une réaction puis apporter une leçon. | Le texte n'est qu'une partie du dispositif. Un hook lu par Lou doit aussi fonctionner sans geste trompeur ni accessoire fabriqué comme preuve. |
+| 91. [La meilleure idée de business ?](https://www.youtube.com/shorts/7Tm0qURyovk), 01/10/2025 | 4 052 | Avion, marqueurs de richesse, rencontre puis découverte du live commerce. | Les mêmes décors et fonctions narratives existent hors des plus grands scores. Ne pas leur attribuer une causalité sur les vues. |
+| 94. [Les hooks pour percer dans le format short](https://www.youtube.com/shorts/YrCrqTd-sbI), 04/02/2026 | 3 966 | Le créateur oppose des annonces de programme à des situations concrètes. Il conseille de montrer un résultat utile et évoque aussi un compte bancaire reconstitué sur Canva. | Reprendre la précision et la destination du tuto. Une maquette explicative doit rester distincte d'une preuve réelle. |
+| 96. [TikTok qui paye toujours plus les hooks les plus fou](https://www.youtube.com/shorts/3j0I2ZumaVE), 27/06/2025 | 3 954 | Récit Apple puis déclaration qu'il vient d'inventer l'histoire ; propos sur la répétition de concepts. | La forme testimoniale n'atteste pas les faits. Ne pas copier cette fabrication dans le workflow de Lou. |
+| 104. [Les mots magiques à utiliser pour faire percer une vidéo](https://www.youtube.com/shorts/xfGJf5r-D3s), 04/03/2026 | 3 439 | L'auteur raconte ses essais de ton, de provocation, d'identification et de comparaisons. | Choisir une intention différente entre variantes. Les résultats rapportés n'isolent pas l'effet d'un mot. |
+| 141. [Le jour où un youtubeur connu m'a donné son astuce business](https://www.youtube.com/shorts/D93cn0s2KnE), 21/07/2025 | 2 276 | Anecdote de match, suspense sur la réaction puis conseil sur titre et miniature. | La structure narrative continue au-delà de l'ouverture, sans garantir un score élevé. La promesse et la présentation travaillent ensemble. |
+| 147. [Le gars me donne vraiment la meilleure idée de business ?](https://www.youtube.com/shorts/ki2wr9J3CzY), 22/07/2025 | 1 070 | Course, fatigue, rencontre puis méthode de prospection avec travail offert. Le récit décrit aussi une aide publicitaire cachée. | La structure rejoint celle de plusieurs succès, avec un compteur très inférieur. Exclure les résultats maquillés et garder le mécanisme d'explication, si le pitch le justifie. |
+
+## Ce que l'on peut en tirer
+
+Des formes présentes dans le top 20 existent aussi dans des Shorts moins vus. Cela invalide une lecture suffisante du type "une rencontre dans un lieu familier garantit un succès". L'échantillon ne permet pas de mesurer la taille d'un éventuel effet de cette structure.
+
+Les vidéos où l'auteur explique sa pratique éclairent son intention : identification, résultat visible, comparaison, surprise et réaction. Elles constituent des propos de créateur, pas des essais contrôlés. Les reconstitutions et la fiction doivent être reconnues comme telles.
+
+La v2 se concentre donc sur le choix de la matière, l'attente précise, sa progression et la continuité avec la démonstration. Elle garde les données scientifiques au bon niveau de preuve. Les métadonnées et empreintes du complément sont dans [comparison-collection.json](comparison-collection.json).

@@ -1,0 +1,4 @@
+interface:
+  display_name: "hook_by_louk v4"
+  short_description: "Une promesse concrète, un hook de 15 à 20 secondes"
+  default_prompt: "Utilise $hook_by_louk_v4 pour écrire un hook de 15 à 20 secondes à partir de mon pitch : choisis ce que le spectateur veut obtenir ou comprendre, puis donne le texte prêt à lire avec sa durée estimée."
